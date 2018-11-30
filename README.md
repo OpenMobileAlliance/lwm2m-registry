@@ -11,6 +11,9 @@ This is a public repository dedicated to store and register new LwM2M Objects.
   * [LwM2M v1.1 Schema](http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd)
   
 # Registration Process  
+
+
+
 1. Create an **[Issue](https://github.com/OpenMobileAlliance/lwm2m-registry)** before submitting your ```Objects``` or ```Reusable Resources``` for Registration.
 
     > Note: Submissions of ```PRs``` that are not linked to an open Issue will be rejected.
