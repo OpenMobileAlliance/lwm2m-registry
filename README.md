@@ -1,4 +1,4 @@
-# Lwm2m Registry
+# LwM2M Registry
 This is a public repository dedicated to store and register new LwM2M Objects.
 
 # Reference Material
@@ -9,3 +9,5 @@ This is a public repository dedicated to store and register new LwM2M Objects.
   * [LwM2M Registry API](https://wiki.openmobilealliance.org/display/TOOL/Registry+API)
   * [LwM2M v1.0 Schema](http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd)
   * [LwM2M v1.1 Schema](http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd)
+  
+# Registration Process  
