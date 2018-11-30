@@ -12,8 +12,6 @@ This is a public repository dedicated to store and register new LwM2M Objects.
   
 # Registration Process  
 
-
-
 1. Create an **[Issue](https://github.com/OpenMobileAlliance/lwm2m-registry)** before submitting your ```Objects``` or ```Reusable Resources``` for Registration.
 
     > Note: Submissions of ```PRs``` that are not linked to an open Issue will be rejected.
@@ -29,3 +27,7 @@ This is a public repository dedicated to store and register new LwM2M Objects.
   >       Keep tune, OMA members will provide their feedback and suggestion on your submission.
   
 5. Once your submission has been accepted it will be incorporated in the *["master"](https://github.com/OpenMobileAlliance/lwm2m-registry/tree/master)* branch.  
+
+
+
+
