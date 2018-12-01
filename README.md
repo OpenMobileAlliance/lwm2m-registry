@@ -12,23 +12,27 @@ This is a public repository dedicated to store and register new LwM2M Objects.
   
 # Registration Process  
 
-![image](https://user-images.githubusercontent.com/3258579/49317774-ae425300-f4aa-11e8-8b92-27e3fccacb53.png)
+![image](https://user-images.githubusercontent.com/3258579/49321895-7e517a80-f4bf-11e8-9337-9ff1fd027432.png)
 
 1. Create an **[Issue](https://github.com/OpenMobileAlliance/lwm2m-registry)** before submitting your ```Objects``` or ```Reusable Resources``` for Registration.
 
-    > Note: Submissions of ```PRs``` that are not linked to an open Issue will be rejected.
-2. OMA staff will create a new branch in this repository where you can submit your new ```Object(s)``` | ```Reusable Resource(s)```.
+2. OMNA staff will validate the submission. If it failed, the submitter will be notified.
    
-   > Note: The staff will send you a notification when your new branch is ready.
+   > Note: Submissions of ```PRs``` that are not linked to an open Issue will be rejected.
    
-3. To create successful ```Object(s)``` | ```Reusable Resource(s)``` use the provided **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** and follow the **[Guidelines](http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-Guidelines_Creation_Registration_LwM2M_Objects_Resources-V1_0-20180209-A.pdf)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**.   
+3. If the Issue is accepted the OMNA staff will create a new branch, in this repository, where the user can submit new ```Object(s)``` | ```Reusable Resource(s)```.
    
-4. Submit your ```Pull Request(s),(PRs)```, containing your ```Object(s)``` | ```Reusable Resource(s)``` registrations against the allocated branch.
+   > Note: The staff will send a notification indicating that the new topic branch is ready.
+   
+4. To create successful ```Object(s)``` | ```Reusable Resource(s)``` use the provided **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** and follow the **[Guidelines](http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-Guidelines_Creation_Registration_LwM2M_Objects_Resources-V1_0-20180209-A.pdf)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**.   
+   
+5. Submit your ```Pull Request(s),(PRs)```, containing your ```Object(s)``` | ```Reusable Resource(s)``` registrations against the allocated branch.
   
   > Note: The OMA staff will [close]() any ```PR(s)``` submitted against the incorrect branch. 
-  >       Keep tune, OMA members will provide their feedback and suggestion on your submission.
   
-5. Once your submission has been accepted it will be incorporated in the *["master"](https://github.com/OpenMobileAlliance/lwm2m-registry/tree/master)* branch.  
+6. Participate in the feedback provided by the Technical Working Group. The Group will provide comments to help you to improve your registration.   
+  
+7. Once your submission has been accepted it will be incorporated into the *["master"](https://github.com/OpenMobileAlliance/lwm2m-registry/tree/master)* branch and publised in the repository.
 
 
 
