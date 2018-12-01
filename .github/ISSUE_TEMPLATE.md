@@ -14,7 +14,7 @@
 
 Concept            | Description
 :----------------|:------------------------------
-Number of ```Object(s)``` or ```Reusable Resource(s)``` to register  |
-Name of SDO, Company or individual    |
-Object Name (as defined in the .xml file) |
-Short Object description, to be used in the pubic registry (max 134 characteres) |
+Number of ```Object(s)``` or ```Reusable Resource(s)``` to register  | <your text>
+Name of SDO, Company or individual    | <your text>
+Object Name (as defined in the .xml file) |  <your text>
+Short Object description, to be used in the pubic registry (max 134 characteres) | <your text>
