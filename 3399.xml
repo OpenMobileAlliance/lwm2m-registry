@@ -19,7 +19,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 		<Description1><![CDATA[The 'oA_Physical_Light-Point_Actuator' represents a physical light-point actuator. All logical light-point actuators (object instances of 'oA Light-Point Actuator') are mapped to one physical light-point actuator.]]></Description1>
 		<ObjectID>3399</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3399</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
@@ -30,8 +30,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-16</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-16 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
 			</Item>
 			<Item ID="901">
@@ -40,8 +40,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
 			<Item ID="907">
@@ -49,8 +49,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Opaque</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Hardware_Error, 1: Execution_Limit_LED_Temp, 2: Execution_Limit_Power_Restrictions,3: Light-Point_Malfunction]]></Description>
 			</Item>
@@ -60,8 +60,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1..64</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>1..64 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Describes the location of the device within the building. The content of the string is site specific.]]></Description>
 			</Item>
 			<Item ID="5850">
@@ -89,8 +89,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Remaining approximated time of any ongoing 'Set Intensity', 'Step' or 'Switch' process which requires a variation of the light output over a period of time higher or equal to one 100ms interval. When the process is started, the value is equal to the time value selected for the process and it is continuously decreased until completed (time=0), or a 'Stop Dimming' request is received.\n\t\t\t\t\n**NOTE:** If during a request the process reaches the Maximum/Minimum Intensity limits, the time is automatically set to '0' as the process is stopped. Scaling is 100ms per unit]]></Description>
 			</Item>
@@ -99,8 +99,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-18446744073709551615</RangeEnumeration>
 				<Units>Ws</Units>
 				<Description><![CDATA[The total energy usage of the device (accumulated value)]]></Description>
 			</Item>
@@ -109,8 +109,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-4294967295</RangeEnumeration>
 				<Units>W</Units>
 				<Description><![CDATA[The actual power usage of the device. Scaling is 0.1W per unit]]></Description>
 			</Item>
@@ -120,8 +120,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-64</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-64 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[The accuracy class of the energy sensor on the device (using either % accuracy or a letter that defines the accuracy class)]]></Description>
 			</Item>
 			<Item ID="930">
@@ -129,8 +129,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-4294967295</RangeEnumeration>
 				<Units>h</Units>
 				<Description><![CDATA[The total operating hours where the light point is on.]]></Description>
 			</Item>
@@ -139,8 +139,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-4294967295</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The total operating hours adjusted by the dim level of the luminaire.]]></Description>
 			</Item>
@@ -179,7 +179,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>0: CONFIGURED_ON
 				1: FULL_ON
 				2: RECALL</RangeEnumeration>

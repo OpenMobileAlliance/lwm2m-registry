@@ -21,7 +21,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 		<Description1><![CDATA[The 'oA Logical Push-Button Sensor' represents the logical part of a standard, normally open, push-button input. The corresponding physical device is a button with a spring that returns the button to the un-pushed state once it is released.\nThe Object supports several events such as 'click', 'hold', 'double-click' and 'release'. It also indicates if the button is 'stuck'. For physical devices with multiple push-button inputs, an instance of this Object is required to map each input.]]></Description1>
 		<ObjectID>3395</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3395</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
@@ -32,7 +32,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0-16 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
 			</Item>
@@ -42,8 +42,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
 			<Item ID="202">
@@ -51,7 +51,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>0: RELEASE
 				1: CLICK
 				2: HOLD
@@ -65,7 +65,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>CoreLink</Type>
+				<Type>Corelnk</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)]]></Description>
@@ -75,7 +75,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>100..60000</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the maximum period of time the push-button can be pressed, in order to be recognized as 'click'. If the button is pressed longer than this time period, it is recognized as 'hold' press. See Resource description of Push-Button Event for details.\n*Note* the maximum limit for this value is 60s, as any press longer than that is considered 'stuck button'.]]></Description>
@@ -85,7 +85,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>300..60000</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the period of time between repetitions of push-button event reporting messages with 'hold' value. After the 'hold' event is triggered and the first message is sent, the 'hold' message is repeated every time the 'Hold Repeat Time' is past, and until a 'release' or 'button stuck' state is reached.This value should always be higher than 'Single Click Time' and small intervals may significantly affect network performance.\n*Note* the maximum limit for this value is 60s, as any press longer than that is considered 'stuck button'.]]></Description>
@@ -95,8 +95,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.]]></Description>
 			</Item>
@@ -105,7 +105,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>1..600</RangeEnumeration>
 				<Units>s</Units>
 				<Description><![CDATA[The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\nFor example: Status resend time is set to 10 seconds;\n* 00:00 status is sent\n* 00:05 status changes and is sent immediatly\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change]]></Description>
@@ -115,8 +115,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information]]></Description>
 			</Item>
@@ -135,10 +135,20 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
+				<Type>Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Defines the test events to be injected into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
+			</Item>
+			<Item ID="934">
+				<Name>Object Enabled</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Inject test events into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
+				<Description><![CDATA[When executed, a test event s specified in 906 will be injected \nIf an object instance is disabled it does process incoming events but does not create outgoing events.]]></Description>
 			</Item>
 			<Item ID="924">
 				<Name>Object Enabled</Name>

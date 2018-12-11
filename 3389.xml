@@ -21,7 +21,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 		<Description1><![CDATA[The 'oA Group' represents a group. It contains an application group ID, a security group ID and a list of multicast and unicast IP addresses that are used in the group. \nAdditionally it contains a list of all members of the group.]]></Description1>
 		<ObjectID>3389</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3389</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
@@ -32,8 +32,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-16</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-16 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
 			</Item>
 			<Item ID="901">
@@ -42,8 +42,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
 			<Item ID="600">
@@ -51,8 +51,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Identifier of the application group]]></Description>
 			</Item>
@@ -61,8 +61,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Identifier of the security group]]></Description>
 			</Item>
@@ -74,14 +74,14 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Type>Opaque</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[List of multicast and unicast addresses to be used for outgoing group messages]]></Description>
+				<Description><![CDATA[List of multicast and unicast IPv6 addresses to be used for outgoing group messages]]></Description>
 			</Item>
 			<Item ID="603">
 				<Name>Members</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>String</Type>
+				<Type>Corelnk</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Link to the local object instances (and/or single resources) that are members of that group in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)\nNote: instances and resources not listed here will not be addressable on this node through group messages of this group]]></Description>
