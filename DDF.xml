@@ -3167,4 +3167,99 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+        <Item>
+        <ObjectID>10300</ObjectID>
+        <URN>urn:oma:lwm2m:x:10300</URN>
+        <Name>Reserved</Name>
+        <Description>TBD.</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10300.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10300.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+        </Item>
+        <Item>
+        <ObjectID>10301</ObjectID>
+        <URN>urn:oma:lwm2m:x:10301</URN>
+        <Name>Voltage Transient</Name>
+        <Description>Object allows for high frequency sampling of Voltage input which can then be aggregated and logged before sending over the air.</Description>
+        <Owner>South East Water</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10301.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10301.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    </Item>
+        <Item>
+        <ObjectID>10302</ObjectID>
+        <URN>urn:oma:lwm2m:x:10302</URN>
+        <Name>Pressure Transient</Name>
+        <Description>Object for measuring and summarizing high frequency pressure readings.</Description>
+        <Owner>South East Water</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10302.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10302.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    </Item>
+        <Item>
+        <ObjectID>10303</ObjectID>
+        <URN>urn:oma:lwm2m:x:10303</URN>
+        <Name>Voltage Logging</Name>
+        <Description>Object for logging and recording voltages from any voltage source (for example cathodic test points).</Description>
+        <Owner>South East Water</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10303.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10303.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    </Item>
+        <Item>
+        <ObjectID>10304</ObjectID>
+        <URN>urn:oma:lwm2m:x:10304</URN>
+        <Name>WiFi Scan</Name>
+        <Description>Allow wi-fi scan data to be sent to the LWM2M server. The data can be used to provide crowd-sourced location lookup or setup.</Description>
+        <Owner>T-Mobile</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10304.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10304.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    </Item>
+        <Item>
+        <ObjectID>10305</ObjectID>
+        <URN>urn:oma:lwm2m:x:10305</URN>
+        <Name>Activity</Name>
+        <Description>Ability to report step counting and time information.</Description>
+        <Owner>T-Mobile</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10305.xml</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10305.xml</LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
 </DDFList>
