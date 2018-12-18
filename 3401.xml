@@ -93,8 +93,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[The debounce period in ms [50]. \nThe debounce period is used to remove the small ripple of current that forms when a mechanical switch is pushed in an electrical circuit and makes a series of short contacts.]]></Description>
 			</Item>
