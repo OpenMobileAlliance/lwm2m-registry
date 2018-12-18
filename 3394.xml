@@ -31,7 +31,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-16 bytes</RangeEnumeration>
+				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
 			</Item>
@@ -70,8 +70,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Delay from the detection state to the clear state in ms]]></Description>
 			</Item>
@@ -80,8 +80,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Delay from the clear state to the busy state in ms]]></Description>
 			</Item>
