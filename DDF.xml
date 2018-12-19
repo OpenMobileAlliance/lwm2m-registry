@@ -3184,7 +3184,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
      <Item>
          <ObjectID>10292</ObjectID>
          <URN>urn:oma:lwm2m:x:10292</URN>
-         <Name>Voltage Transient</Name>
+         <Name>Pressure Transient</Name>
          <Description>Object for measuring high frequency pressure readings and summarizing/logging them at defined intervals. This way, the raw data does not need to be sent over the air, and instead just the Average , Maximum and Minimum values for the interval</Description>
          <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
