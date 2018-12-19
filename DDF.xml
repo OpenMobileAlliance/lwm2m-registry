@@ -3150,8 +3150,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-    
+    </Item>  
      <Item>
          <ObjectID>10290</ObjectID>
          <URN>urn:oma:lwm2m:x:10290</URN>
@@ -3167,8 +3166,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <TS></TS>
          <TSLink>0</TSLink>
      </Item>
- 
-          <Item>
+     <Item>
          <ObjectID>10291</ObjectID>
          <URN>urn:oma:lwm2m:x:10291</URN>
          <Name>Voltage Transient</Name>
@@ -3182,9 +3180,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <DDFLink>1</DDFLink>
          <TS></TS>
          <TSLink>0</TSLink>
-     </Item>
- 
-        <Item>
+    </Item> 
+     <Item>
          <ObjectID>10292</ObjectID>
          <URN>urn:oma:lwm2m:x:10292</URN>
          <Name>Voltage Transient</Name>
@@ -3198,8 +3195,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <DDFLink>1</DDFLink>
          <TS></TS>
          <TSLink>0</TSLink>
-     </Item>
-    
+    </Item>    
     <Item>
         <ObjectID>10299</ObjectID>
         <URN>urn:oma:lwm2m:x:10299</URN>
