@@ -15,13 +15,13 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
 
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
 		<Name>oA Scene</Name>
 		<Description1><![CDATA[The 'oA Scene' represents a scene model. The scene holds defined values for each actuator in one group.]]></Description1>
 		<ObjectID>3404</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3404</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
@@ -32,8 +32,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-16</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
 			</Item>
 			<Item ID="901">
@@ -42,8 +42,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
 			<Item ID="650">
@@ -51,8 +51,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The ID that is used to recall the scene. This needs to be unique within one application group.]]></Description>
 			</Item>
@@ -61,8 +61,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The application group ID the scene definition applies to.]]></Description>
 			</Item>
@@ -81,10 +81,10 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration>0..60000</RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-60000</RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[Defines the transition time to be used for changing to this scene.]]></Description>
+				<Description><![CDATA[Defines the transition time to be used for changing to this scene. ]]></Description>
 			</Item>
 			<Item ID="653">
 				<Name>Scene Configuration</Name>
@@ -94,7 +94,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Type>Opaque</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Defines the list of output properties that are changed when a scene is recalled.]]></Description>
+				<Description><![CDATA[Defines the list of output properties that are changed when a scene is recalled. Complex Data comprising a Corelnk pointing to the resource, a payload that sets the resource and a boolean that says if POST or PUT should be applied]]></Description>
 			</Item>
 		</Resources>
 		<Description2><![CDATA[]]></Description2>

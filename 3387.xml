@@ -13,13 +13,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
 
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
 		<Name>oA Basic Control</Name>
 		<Description1><![CDATA[The 'oA Basic Control' represents a common basic interface for a Control Function. This allows to have vendor specific (executing) control functions using diverse object numbers to be interfaced for the basic functionality in a common way. The object provides the basic functionality required for an OpenAIS control object.]]></Description1>
 		<ObjectID>3387</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3387</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
@@ -40,8 +40,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256</RangeEnumeration>
-				<Units>byte</Units>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
 			<Item ID="800">
@@ -86,7 +86,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Configures if this control function instance is in ghost mode (see Ghost_Status).]]></Description>
 			</Item>
@@ -106,7 +106,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0-65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Application Group ID of the controlled actuators.]]></Description>
 			</Item>
@@ -115,8 +115,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Opaque</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Configures the reaction on button events: Bitwise: 0 (LSB): switch-on, 1: switch-off, 2: darker, 3: brighter, 4: save \n**Reaction on CLICK event:**\n* If the switch-on and switch-off bits are not set, the CLICK event is ignored.\n* If only the switch-on bit is set, the CLICK event always switches to On-State.\n* If only the switch-off bit is set, the CLICK event always switches to Off-State.\n* If the switch-on and switch-off bits are set, the CLICK event toggles between Off-State and On-State.\n\t\t\t\t\t\n**Reaction on HOLD event:**\n* If the darker and brighter bits are not set, the HOLD event is ignored.\n* If only the darker bit is set, the HOLD event always starts a dim darker process.\n* If only the brighter bit is set, the HOLD event always starts a dim brighter process.\n* If the darker and brighter bits are set, the HOLD event is allowed to toggle the dimming direction for each new dimming process.\n\t\t\t\t\t\n**Reaction on DOUBLE-CLICK event:**\n* If the save bit is not set, the DOUBLE-CLICK event is ignored.\n* If the save bit is set, the DOUBLE-CLICK event saves the current situation.]]></Description>
 			</Item>
@@ -125,8 +125,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Opaque</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Configures the reaction on presence sensor events: Bitwise: 0 (LSB): presence, 1: absence \n* The presence bit enables or disables activities based on the presence event.  \n *Note: This setting may allow to set the 'only off' behavior.*\n* The absence bit enables or disables activities based on the absence event.]]></Description>
 			</Item>
@@ -135,7 +135,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>String</Type>
+				<Type>Corelnk</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)]]></Description>
@@ -145,9 +145,9 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Units>s</Units>
 				<Description><![CDATA[This resource is used by active control functions (in the same application group) to take over the control functionality. By writing this resource, the IP address of the origin CoAP client is added to the Active-Controller-List.\nIf no heartbeat is received after the specified time the not sending controller is taken out of the active controller list again, if there are no more active controllers this controller takes over: This is a fall-back to normal or local operation, if superseding control fails/gets lost.\n\t\t\t\t\nIf the Ghost Configuration is TRUE, the Control Function Status changes to 'ghost' if a controller is active.\n\t\t\t\t\nIf operation mode is set to remote, it will be reset to normal if the active controller list gets empty.]]></Description>
 			</Item>
 			<Item ID="905">
@@ -162,13 +162,23 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 			</Item>
 			<Item ID="906">
 				<Name>Inject Test Event</Name>
-				<Operations>W</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Defines the test event to be injected into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
+			</Item>
+			<Item ID="934">
+				<Name>Execute Inject</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Inject test events into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
+				<Description><![CDATA[When executed, the test event defined in resource 906 will be injected]]></Description>
 			</Item>
 			<Item ID="924">
 				<Name>Object Enabled</Name>
