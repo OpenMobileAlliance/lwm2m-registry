@@ -3171,7 +3171,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>10308</ObjectID>
         <URN>urn:oma:lwm2m:x:10308</URN>
         <Name>AT&amp;T Connectivity Extension</Name>
-        <Description>The AT&T Device Management Object will be used to gather information describing the UE and the operating state of the UE.</Owner>
+        <Description>The AT&amp;T Device Management Object will be used to gather information describing the UE and the operating state of the UE.</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10308.xml</DDF>
