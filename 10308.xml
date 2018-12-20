@@ -3,8 +3,8 @@
   <Object ObjectType="MODefinition">
     <Name>AT&amp;T Connectivity Extension</Name>
     <Description1><![CDATA[The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.]]></Description1>
-    <ObjectID>0</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:abcd</ObjectURN>
+    <ObjectID>10308</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:x:10308</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion />
     <MultipleInstances>Multiple</MultipleInstances>
