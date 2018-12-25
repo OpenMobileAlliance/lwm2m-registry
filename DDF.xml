@@ -3275,30 +3275,30 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10304</ObjectID>
         <URN>urn:oma:lwm2m:x:10304</URN>
-        <Name>WiFi Scan</Name>
-        <Description>Allow wi-fi scan data to be sent to the LWM2M server. The data can be used to provide crowd-sourced location lookup or setup.</Description>
-        <Owner>T-Mobile</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10304.xml</DDF>
-        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10304.xml</LWM2M>
+        <DDF></DDF>
+        <LWM2M></LWM2M>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10305</ObjectID>
         <URN>urn:oma:lwm2m:x:10305</URN>
-        <Name>Activity</Name>
-        <Description>Ability to report step counting and time information.</Description>
-        <Owner>T-Mobile</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10305.xml</DDF>
-        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10305.xml</LWM2M>
+        <DDF></DDF>
+        <LWM2M></LWM2M>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
