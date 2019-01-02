@@ -3215,15 +3215,15 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10300</ObjectID>
         <URN>urn:oma:lwm2m:x:10300</URN>
-        <Name>Reserved</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>LwM2M Meta Object</Name>
+        <Description>A meta object to provide one or more locations for XML files defining vendor-specific objects.</Description>
+        <Owner>Tampere University of Technology</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
-        <LWM2M></LWM2M>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10300</DDF>
+        <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10300.xml</LWM2M>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
