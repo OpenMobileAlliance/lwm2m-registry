@@ -3215,7 +3215,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10300</ObjectID>
         <URN>urn:oma:lwm2m:x:10300</URN>
-        <Name>LwM2M Meta Object</Name>
+        <Name>LWM2M Meta Object</Name>
         <Description>A meta object to provide one or more locations for XML files defining vendor-specific objects.</Description>
         <Owner>Tampere University of Technology</Owner>
         <Source>2</Source>
