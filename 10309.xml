@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2018 Hua Xiang IOT. All rights reserved.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>DeviceDataContainer</Name>
+    <Description1><![CDATA[DeviceDataContainer Object of HuaXiang Company.]]></Description1>
+    <ObjectID>22222</ObjectID>
+    <ObjectURN>oma:lwm2m:x:22222:1.0</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="1">
+        <Name>BToothstate</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0-1</RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[BlueTooth State]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>LockState</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0-1</RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[Lock State]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>BatteryCapacity</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Float</Type>
+        <RangeEnumeration>0-100</RangeEnumeration>
+        <Units>%</Units>
+        <Description><![CDATA[Battery Capacity State]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>LightState</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0-1</RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[Light State]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>UpTime</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration>
+        </RangeEnumeration>
+        <Units>
+        </Units>
+        <Description><![CDATA[Up Time]]></Description>
+      </Item>
+    </Resources>
+    <Description2 />
+  </Object>
+</LWM2M>
