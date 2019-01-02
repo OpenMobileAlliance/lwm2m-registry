@@ -3220,7 +3220,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Tampere University of Technology</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10300</DDF>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10300.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10300.xml</LWM2M>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
