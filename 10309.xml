@@ -6,8 +6,8 @@
   <Object ObjectType="MODefinition">
     <Name>DeviceDataContainer</Name>
     <Description1><![CDATA[DeviceDataContainer Object of HuaXiang Company.]]></Description1>
-    <ObjectID>22222</ObjectID>
-    <ObjectURN>oma:lwm2m:x:22222:1.0</ObjectURN>
+    <ObjectID>10309</ObjectID>
+    <ObjectURN>oma:lwm2m:x:10309</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
