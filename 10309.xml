@@ -7,7 +7,7 @@
     <Name>DeviceDataContainer</Name>
     <Description1><![CDATA[DeviceDataContainer Object of HuaXiang Company.]]></Description1>
     <ObjectID>10309</ObjectID>
-    <ObjectURN>oma:lwm2m:x:10309</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:x:10309</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
