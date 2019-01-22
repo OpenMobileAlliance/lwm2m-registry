@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+MIT License
+
+Copyright (c) 2018 2018 Zumtobel Group.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, 
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+		<Name>oA Group</Name>
+		<Description1><![CDATA[The 'oA Group' represents a group. It contains an application group ID, a security group ID and a list of multicast and unicast IP addresses that are used in the group. \nAdditionally it contains a list of all members of the group.]]></Description1>
+		<ObjectID>3389</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3389</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="4001">
+				<Name>ObjectVersion</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[LWM2M Object versioning label.]]></Description>
+			</Item>
+			<Item ID="901">
+				<Name>Documentary Description</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
+			</Item>
+			<Item ID="600">
+				<Name>Application Group ID</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Identifier of the application group]]></Description>
+			</Item>
+			<Item ID="601">
+				<Name>Security Group ID</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0-65535</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Identifier of the security group]]></Description>
+			</Item>
+			<Item ID="602">
+				<Name>IP Addresses</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[List of multicast and unicast IPv6 addresses to be used for outgoing group messages]]></Description>
+			</Item>
+			<Item ID="603">
+				<Name>Members</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Corelnk</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Link to the local object instances (and/or single resources) that are members of that group in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)\nNote: instances and resources not listed here will not be addressable on this node through group messages of this group]]></Description>
+			</Item>
+		</Resources>
+		<Description2><![CDATA[]]></Description2>
+	</Object>
+</LWM2M>
