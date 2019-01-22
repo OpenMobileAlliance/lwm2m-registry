@@ -3134,7 +3134,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    
     <Item>
         <ObjectID>10286</ObjectID>
         <URN>urn:oma:lwm2m:x:10286</URN>
@@ -3150,52 +3150,53 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
+    </Item>  
      <Item>
          <ObjectID>10290</ObjectID>
          <URN>urn:oma:lwm2m:x:10290</URN>
-         <Name>TBC</Name>
-         <Description>TBC</Description>
-         <Owner>TBC</Owner>
+         <Name>Voltage Logging</Name>
+         <Description>Periodic voltage measurements that are logged into CBOR structure payload.</Description>
+         <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF></DDF>
-         <LWM2M></LWM2M>
+         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10290.xml</DDF>
+         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10290.xml</LWM2M>
          <Vorto></Vorto>
-         <DDFLink>0</DDFLink>
+         <DDFLink>1</DDFLink>
          <TS></TS>
          <TSLink>0</TSLink>
      </Item>
      <Item>
          <ObjectID>10291</ObjectID>
          <URN>urn:oma:lwm2m:x:10291</URN>
-         <Name>TBC</Name>
-         <Description>TBC</Description>
-         <Owner>TBC</Owner>
+         <Name>Voltage Transient</Name>
+         <Description>Object for sampling high frequency values (in this case Voltage readings) in order to aggregate them and summarize them (Avg, Max, Min) and to then time-stamp and log these aggregates for packaging and transmission to the server. This allows for efficient data transfer of high frequency data, without the need to send huge amounts of raw data over the air.</Description>
+         <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF></DDF>
-         <LWM2M></LWM2M>
+         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10291.xml</DDF>
+         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10291.xml</LWM2M>
          <Vorto></Vorto>
-         <DDFLink>0</DDFLink>
+         <DDFLink>1</DDFLink>
          <TS></TS>
          <TSLink>0</TSLink>
     </Item> 
      <Item>
          <ObjectID>10292</ObjectID>
          <URN>urn:oma:lwm2m:x:10292</URN>
-         <Name>TBC</Name>
-         <Description>TBC</Description>
-         <Owner>TBC</Owner>
+         <Name>Pressure Transient</Name>
+         <Description>Object for measuring high frequency pressure readings and summarizing/logging them at defined intervals. This way, the raw data does not need to be sent over the air, and instead just the Average , Maximum and Minimum values for the interval</Description>
+         <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF></DDF>
-         <LWM2M></LWM2M>
+         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10292.xml</DDF>
+         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10292.xml</LWM2M>
          <Vorto></Vorto>
-         <DDFLink>0</DDFLink>
+         <DDFLink>1</DDFLink>
          <TS></TS>
          <TSLink>0</TSLink>
-    </Item>       
+    </Item>    
+
     <Item>
         <ObjectID>10299</ObjectID>
         <URN>urn:oma:lwm2m:x:10299</URN>
