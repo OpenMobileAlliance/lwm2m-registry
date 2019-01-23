@@ -6,7 +6,7 @@
     <ObjectID>10308</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10308</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion />
+    <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
