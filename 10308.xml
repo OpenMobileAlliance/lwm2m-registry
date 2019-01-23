@@ -86,8 +86,7 @@
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>
-        </RangeEnumeration>
+        <RangeEnumeration></RangeEnumeration>
         <Units>
         </Units>
         <Description><![CDATA[This is the signal to noise ratio resource. This measurement should be measured over 10 sampled at a 400ms sample rate. Once the 10 samples are averaged the measurement should be reflected in the Signal to Noise Ratio resource.]]></Description>
