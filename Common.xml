@@ -383,7 +383,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the X axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
          <TS></TS>
         
@@ -405,7 +405,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the X axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -427,7 +427,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the Y axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -449,7 +449,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the Y axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -471,7 +471,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the Z axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -493,7 +493,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the Z axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
          <TS></TS>
         
@@ -1338,7 +1338,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The minimum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1361,7 +1361,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1384,7 +1384,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value that can be measured by the sensor, expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The minimum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1407,7 +1407,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value that can be measured by the sensor, expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The maximum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1476,7 +1476,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Last or Current Measured Value from the Sensor expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[Last or Current Measured Value from the Sensor expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1498,7 +1498,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Measurement Units Definition e.g. “Cel” for Temperature in degrees Celsius.]]></Description>
+        <Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
         
          <TS></TS>
         
@@ -1520,7 +1520,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the X axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1543,7 +1543,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Y axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
          <TS></TS>
         
@@ -1566,7 +1566,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Z axis expressed in the unit defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
@@ -1612,7 +1612,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[A string representing a value in the color space defined by the “Sensor Units” resource if present.]]></Description>
+        <Description><![CDATA[A string representing a value in the color space defined by the "Sensor Units" resource if present.]]></Description>
         
          <TS></TS>
         
@@ -1635,7 +1635,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance “Air Pressure”.]]></Description>
+        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance "Air Pressure".]]></Description>
         
         <TS></TS>
         
@@ -2325,7 +2325,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The setpoint value expressed in the unit defined by the “Sensor Units” resource if present..]]></Description>
+        <Description><![CDATA[The setpoint value expressed in the unit defined by the "Sensor Units" resource if present..]]></Description>
         
          <TS></TS>
         
