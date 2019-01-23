@@ -44,7 +44,7 @@
         </RangeEnumeration>
         <Units>
         </Units>
-        <Description><![CDATA[The MSISDN resource will indicate the MSISDN as assigned, if any, to the SIM card. In the case that no MSISDN is assigned to the SIM card the response should be NULL.]]></Description>
+        <Description><![CDATA[The MSISDN resource will indicate the MSISDN as assigned, if any, to the SIM card. In the case that no MSISDN is assigned to the SIM card the response should be zero.]]></Description>
       </Item>
       <Item ID="4">
         <Name>APN Retries</Name>
