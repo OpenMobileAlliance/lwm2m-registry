@@ -19,7 +19,7 @@ For information about these objects, please contact South East Water Corporation
         <Name>Daughter Board Failure Alarm</Name>
         <Description1><![CDATA[This binary status should indicate that the meter MCU can no longer communicate with a daughter board]]></Description1>
         <ObjectID>10282</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:ext:10282</ObjectURN>
+        <ObjectURN>urn:oma:lwm2m:x:10282</ObjectURN>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
