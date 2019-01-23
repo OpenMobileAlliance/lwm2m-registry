@@ -49,7 +49,7 @@ See the Event Log Payload for examples of each of these modes.
                 <Name>Alarm Realtime</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Yes</Mandatory>
+                <Mandatory>Mandatory</Mandatory>
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -59,7 +59,7 @@ See the Event Log Payload for examples of each of these modes.
                 <Name>Alarm State</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -69,7 +69,7 @@ See the Event Log Payload for examples of each of these modes.
                 <Name>Alarm Set Threshold</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -79,7 +79,7 @@ See the Event Log Payload for examples of each of these modes.
                 <Name>Alarm Set Operator</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -93,7 +93,7 @@ By setting the Set Operator to Less Than (1), when the measured value for this e
                 <Name>Alarm Clear Threshold</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -103,7 +103,7 @@ By setting the Set Operator to Less Than (1), when the measured value for this e
                 <Name>Alarm Clear Operator</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -117,7 +117,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Alarm Maximum Event Count</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -127,7 +127,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Alarm Maximum Event Period</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration>1-864000</RangeEnumeration>
                 <Units>Seconds</Units>
@@ -137,7 +137,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Latest Delivered Event Time</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -147,7 +147,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Latest Recorded Event Time</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Yes</Mandatory>
+                <Mandatory>Mandatory</Mandatory>
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -157,7 +157,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Alarm Clear</Name>
                 <Operations>E</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type></Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -167,7 +167,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Alarm Auto Clear</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>No</Mandatory>
+                <Mandatory>Optional</Mandatory>
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
@@ -177,7 +177,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Event Code</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Yes</Mandatory>
+                <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration>100-255</RangeEnumeration>
                 <Units></Units>
@@ -187,7 +187,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <Name>Latest Payload</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Yes</Mandatory>
+                <Mandatory>Mandatory</Mandatory>
                 <Type>Opaque</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
