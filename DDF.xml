@@ -3332,5 +3332,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>       
+    </Item>
+    <Item>
+        <ObjectID>10310</ObjectID>
+        <URN>urn:oma:lwm2m:x:10310</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <LWM2M></LWM2M>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>  
 </DDFList>
