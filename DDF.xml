@@ -3203,7 +3203,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Description>This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.</Description>
         <Owner>Verizon Wireless</Owner>
         <Source>2</Source>
-
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10299.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F10299.xml</LWM2M>
@@ -3217,7 +3216,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:x:10300</URN>
         <Name>LWM2M Meta Object</Name>
         <Description>A meta object to provide one or more locations for XML files defining vendor-specific objects.</Description>
-        <Owner>Tampere University of Technology</Owner>
+        <Owner>Tampere University</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10300.xml</DDF>
