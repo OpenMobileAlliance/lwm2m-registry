@@ -20,7 +20,7 @@ This specification defines version 1.0 of the IPSO Smart Objects specification w
 
 * Addition of more than a hundred new IPSO Objects.
 
-* Addition of all Reusable Resources
+* Addition of all Reusable Resources.
 
 ## References
 
