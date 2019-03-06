@@ -3320,8 +3320,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10309</ObjectID>
         <URN>urn:oma:lwm2m:x:10309</URN>
-        <Name>DeviceDataContainer</Name>
-        <Description>DeviceDataContainer Object of HuaXiang Company.</Description>
+        <Name>ShareParkingLock</Name>
+        <Description>This LwM2M Object provides the keying material of our technology product——ShareParkingLock.</Description>
         <Owner>HuaXiang</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
