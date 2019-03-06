@@ -35,7 +35,6 @@ This specification defines version 1.0 of the IPSO Smart Objects specification w
           <td><strong>[LwM2M-CORE]</strong></td>
           <td>Open Mobile Alliance, "Lightweight Machine to Machine Technical Specification: CORE"</td>
         </tr>
-
         <tr>
           <td><strong>[LwM2M-TRANSPORT]</strong></td>
           <td>Open Mobile Alliance, "Lightweight Machine to Machine Technical Specification: Transport Layer"</td>
