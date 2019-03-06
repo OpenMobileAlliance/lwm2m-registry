@@ -8,7 +8,7 @@
     <Description1><![CDATA[This LwM2M Object provides the keying material of our technology product——ShareParkingLock.]]></Description1>
     <ObjectID>10309</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10309</ObjectURN>
-    <LWM2MVersion>1.1</LWM2MVersion>
+    <LWM2MVersion>1.0</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
