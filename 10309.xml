@@ -2,22 +2,17 @@
 <!--Copyright 2018 Hua Xiang IOT. All rights reserved.
 
 -->
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_0.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
   <Object ObjectType="MODefinition">
     <Name>ShareParkingLock</Name>
     <Description1><![CDATA[This LwM2M Object provides the keying material of our technology product——ShareParkingLock.]]></Description1>
     <ObjectID>10309</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:x:10309:1.0</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:x:10309</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
-      
-  
-      
-      
-      
 			<Item ID="1">
 				<Name>LockID</Name>
 				<Operations>R</Operations>
