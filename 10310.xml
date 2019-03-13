@@ -73,12 +73,12 @@ See the License for the specific language governing permissions and
 limitations under the License.-->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
-    <Name>Air_Temperature_Humidity	</Name>
+    <Name>Air_Temperature_Humidity</Name>
     <Description1><![CDATA[Sensor to detect air temperature and humidity]]></Description1>
     <ObjectID>10310</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10310</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>0.1</ObjectVersion>
+    <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Mandatory</Mandatory>
     <Resources>
