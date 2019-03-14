@@ -89,7 +89,7 @@ limitations under the License.-->
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration>-100~100</RangeEnumeration>
-        <Units>C</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Air temperature]]></Description>
       </Item>
       <Item ID="2">
