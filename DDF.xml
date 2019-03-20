@@ -3009,12 +3009,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Item>
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Solar Radiation</Name>
+        <Description>This object is used to report solar radiation flux density measured by a pyranometer or similar sensor.</Description>
+        <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10311.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
