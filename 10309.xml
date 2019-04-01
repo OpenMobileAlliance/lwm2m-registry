@@ -64,9 +64,9 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>-30~-120</RangeEnumeration>
+				<RangeEnumeration>-30..-120</RangeEnumeration>
 				<Units>dBm</Units>
-				<Description><![CDATA[RadioSignalStrength.]]></Description>
+				<Description><![CDATA[Radio Received Signal Strength Indicator.]]></Description>
 			</Item>
 			<Item ID="5">
 				<Name>BatteryCapacity</Name>
@@ -74,9 +74,9 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
-				<Description><![CDATA[Current battery capacity.]]></Description>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%EL</Units>
+				<Description><![CDATA[Current battery capacity in percentage Energy Level (EL).]]></Description>
 			</Item>
 			<Item ID="6">
 				<Name>DataUpTime</Name>
