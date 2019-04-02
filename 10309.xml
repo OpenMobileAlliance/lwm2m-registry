@@ -2,7 +2,7 @@
 <!--
 MIT License
 
-Copyright (c) 2019 HuaXiang.
+Copyright (c) 2019 XiangYiIOT Technologies Co., Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, 
@@ -19,7 +19,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
   <Object ObjectType="MODefinition">
-    <Name>ShareParkingLock</Name>
+    <Name>Shareparkinglot</Name>
     <Description1><![CDATA[This LwM2M Object provides the keying material of our technology product——ShareParkingLock.]]></Description1>
     <ObjectID>10309</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10309</ObjectURN>
