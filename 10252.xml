@@ -216,7 +216,7 @@ limitations under the License.
         <Operations>E</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
-        <Type>String</Type>
+        <Type></Type>
         <RangeEnumeration>
         </RangeEnumeration>
         <Units>
