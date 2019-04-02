@@ -22,7 +22,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- Link that opens the object in the LwM2M Editor Tool -->
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2fLWM2M_Security-v1_0.xml</LWM2M>
         <!-- Link that opens the Object in the Vorto environment -->
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/0</Vorto>
+        <Vorto></Vorto>
         <!-- 0 => if link to object should not be visible, 1 => if object should be visible (default) -->
         <DDFLink>1</DDFLink>
         <!-- URL to the TS of the object, not visible, not used -->
@@ -58,7 +58,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Server-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Server-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/1</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -90,7 +90,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Access_Control-v1_0_2.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Access_Control-v1_0_2.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/2</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -106,7 +106,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Device-v1_0_3.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Device-v1_0_3.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -122,7 +122,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Connectivity_Monitoring-v1_0_2.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Connectivity_Monitoring-v1_0_2.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/4</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -154,7 +154,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Firmware_Update-v1_0_2.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Firmware_Update-v1_0_2.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/5</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -170,7 +170,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Location-v1_0_1.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Location-v1_0_1.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/6</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -186,7 +186,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Connectivity_Statistics-v1_0_3.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Connectivity_Statistics-v1_0_3.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/7</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -202,7 +202,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_LOCKWIPE-v1_0_1.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_LOCKWIPE-v1_0_1.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/8</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_1-20181003-A/OMA-TS-LWM2M_LockWipe-V1_0-20180615-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -217,7 +217,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Software_Management-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Software_Management-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/9</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -233,7 +233,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Cellular_connectivity-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Cellular_connectivity-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/10</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -249,7 +249,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_APN_connection_profile-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_APN_connection_profile-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/11</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -265,7 +265,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_WLAN_connectivity4-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2FLWM2M_WLAN_connectivity4-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/12</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -281,7 +281,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Bearer_selection-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Bearer_selection-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/13</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -297,7 +297,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Software_Component-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Software_Component-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/14</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -313,7 +313,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_DevCapMgmt-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_DevCapMgmt-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/15</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_2-20170308-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_2-20170308-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -329,7 +329,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/LWM2M_Portfolio-v1_0.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2ftech%2fprofiles%2fLWM2M_Portfolio-v1_0.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/16</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0-20171114-A/OMA-TS-LWM2M_PortfolioObj-V1_0-20171114-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -609,7 +609,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3200.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3200.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3200</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -626,7 +626,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3201.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3201.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3201</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -643,7 +643,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3202.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3202.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3202</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -660,7 +660,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3203.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3203.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3203</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -677,7 +677,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3300.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3300.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3300</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -694,7 +694,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3301.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3a%2f%2fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3301.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3301</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -711,7 +711,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3302.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3302.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3302</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -728,7 +728,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3303.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3303.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3303</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -745,7 +745,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3304.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3304.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3304</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -762,7 +762,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3305.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3305.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3305</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -779,7 +779,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3306.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3306.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3306</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -796,7 +796,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3308.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3308.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3308</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -813,7 +813,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3310.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3310.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3310</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -830,7 +830,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3311.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3311.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3311</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -847,7 +847,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3312.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3312.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3312</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -864,7 +864,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3313.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3313.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3313</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -881,7 +881,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3314.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3314.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3314</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -898,7 +898,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3315.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3315.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3315</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -915,7 +915,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3316.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3316.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3316</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -932,7 +932,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3317.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3317.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3317</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -949,7 +949,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3318.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3318.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3318</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -966,7 +966,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3319.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3319.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3319</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -983,7 +983,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3320.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3320.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3320</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1000,7 +1000,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3321.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3321.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3321</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1017,7 +1017,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3322.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3322.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3322</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1034,7 +1034,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3323.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3323.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3323</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1051,7 +1051,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3324.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3324.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3324</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1068,7 +1068,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3325.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3325.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3325</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1085,7 +1085,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3326.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3326.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3326</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1102,7 +1102,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3327.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3327.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3327</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1119,7 +1119,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3328.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3328.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3328</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1136,7 +1136,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3329.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3329.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3329</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1153,7 +1153,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3330.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3330.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3330</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1170,7 +1170,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3331.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3331.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3331</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1187,7 +1187,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3332.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3332.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3332</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1204,7 +1204,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3333.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3333.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3333</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1221,7 +1221,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3334.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3334.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3334</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1238,7 +1238,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3335.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3335.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3335</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1255,7 +1255,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3336.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3336.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3336</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1272,7 +1272,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3337.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3337.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3337</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1289,7 +1289,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3338.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3338.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3338</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1306,7 +1306,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3339.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3339.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3339</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1323,7 +1323,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3340.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3340.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3340</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1340,7 +1340,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3341.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3341.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3341</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1357,7 +1357,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3342.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3342.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3342</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1374,7 +1374,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3343.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3343.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3343</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1391,7 +1391,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3344.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3344.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3344</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1408,7 +1408,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3345.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3345.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3345</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1425,7 +1425,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3346.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3346.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3346</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1442,7 +1442,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3347.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3347.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3347</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1459,7 +1459,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3348.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3348.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3348</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1475,7 +1475,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3349.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3349.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3349</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
@@ -1491,7 +1491,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/3350.xml</DDF>
         <LWM2M>http://devtoolkit.openmobilealliance.org/OEditor/LWMOView?url=http%3A%2F%2Fwww.openmobilealliance.org%2Ftech%2Fprofiles%2flwm2m%2F3350.xml</LWM2M>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3350</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
