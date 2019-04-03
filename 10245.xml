@@ -18,7 +18,7 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
         <LWM2MVersion/>
         <ObjectVersion/>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Mandatory</Mandatory>
+        <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="0">
                 <Name>eNB Availability</Name>
