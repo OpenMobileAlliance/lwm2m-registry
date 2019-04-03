@@ -78,7 +78,6 @@ limitations under the License.-->
     <ObjectID>10299</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10299</ObjectURN>
     <LWM2MVersion>1.0</LWM2MVersion>
-	ObjectVersion/&gt;
 	<ObjectVersion>1.0</ObjectVersion>
       <MultipleInstances>Single</MultipleInstances>
       <Mandatory>Mandatory</Mandatory>
