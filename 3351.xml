@@ -79,7 +79,7 @@ limitations under the License.--><LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSch
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
-		<Mandatory>Mandatory</Mandatory>
+		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="0"><Name>deviceName</Name>
 				<Operations>R</Operations>
