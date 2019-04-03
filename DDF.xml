@@ -2997,10 +2997,10 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:x:10310</URN>
         <Name>Air_Temperature_Humidity</Name>
         <Description>Sensor to detect air temperature and humidity</Description>
-        <Owner>Golden maple data, co.ltd</Owner>
+        <Owner>Golden Maple Data</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>http://www.openmobilealliance.org/tech/profiles/lwm2m/10310.xml</DDF>
+        <DDF>10310.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
