@@ -18,7 +18,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
         <LWM2MVersion/>
         <ObjectVersion/>
         <MultipleInstances>Multiple</MultipleInstances>
-        <Mandatory>Mandatory</Mandatory>
+        <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="0">
                 <Name>Neighbour PCI</Name>
