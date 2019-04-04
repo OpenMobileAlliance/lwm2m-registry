@@ -80,7 +80,7 @@ limitations under the License.
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
-		<Mandatory>Mandatory</Mandatory>
+		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="6032"><Name>dlEarfcn</Name>
 				<Operations>R</Operations>

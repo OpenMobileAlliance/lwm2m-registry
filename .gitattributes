@@ -1,0 +1,12 @@
+# Declare text files that will be normalized and converted to native line endings on checkout
+*.md text
+
+# Declare files that will have CRLF line endings on checkout
+*.xml text eol=crlf
+*.xsd text eol=crlf
+*.txt text eol=crlf
+
+# Denote all files that should not be modified
+*.png binary
+*.jpg binary
+*.svg binary
