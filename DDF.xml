@@ -349,7 +349,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LwM2M_BinaryAppDataContainer-v1_0_1.xml</DDF>
+        <DDF>LwM2M_BinaryAppDataContainer-V1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_APPDATA/V1_0_1-20190221-A/OMA-TS-LWM2M_BinaryAppDataContainer-V1_0_1-20190221-A.pdf</TS>
