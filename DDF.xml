@@ -54,7 +54,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Server-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/1</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -84,7 +84,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Access_Control-v1_0_2.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/2</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -99,7 +99,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Device-v1_0_3.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/3</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -114,7 +114,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Connectivity_Monitoring-v1_0_2.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/4</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -144,7 +144,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Firmware_Update-v1_0_2.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/5</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -159,7 +159,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Location-v1_0_1.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/6</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -174,7 +174,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Connectivity_Statistics-v1_0_3.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/7</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -189,7 +189,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_LOCKWIPE-v1_0_1.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/8</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_1-20181003-A/OMA-TS-LWM2M_LockWipe-V1_0-20180615-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -203,7 +203,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Software_Management-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/9</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -218,7 +218,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Cellular_connectivity-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/10</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -233,7 +233,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_APN_connection_profile-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/11</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -248,7 +248,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_WLAN_connectivity4-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/12</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -263,7 +263,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Bearer_selection-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/13</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -278,7 +278,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Software_Component-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/14</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
         <TSLink>1</TSLink>
@@ -293,7 +293,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_DevCapMgmt-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/15</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_2-20170308-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_2-20170308-A.pdf</TS>
         <TSLink>1</TSLink>
