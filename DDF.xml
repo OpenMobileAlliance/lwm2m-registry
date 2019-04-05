@@ -20,7 +20,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- URL to the xml file describing the object -->
         <DDF>LWM2M_Security-v1_0.xml</DDF>
         <!-- Link that opens the Object in the Vorto environment -->
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/0</Vorto>
+        <Vorto></Vorto>
         <!-- 0 => if link to object should not be visible, 1 => if object should be visible (default) -->
         <DDFLink>1</DDFLink>
         <!-- URL to the TS of the object, not visible, not used -->
