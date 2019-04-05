@@ -308,7 +308,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>0</Source>
         <Ver>1.0</Ver>
         <DDF>LWM2M_Portfolio-v1_0.xml</DDF>
-        <Vorto>http://vorto.eclipse.org/resolve/lwm2m/Object/ObjectID/16</Vorto>
+        <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0-20171114-A/OMA-TS-LWM2M_PortfolioObj-V1_0-20171114-A.pdf</TS>
         <TSLink>1</TSLink>
