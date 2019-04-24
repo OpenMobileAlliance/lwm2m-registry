@@ -18,7 +18,7 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 		<LWM2MVersion />
 		<ObjectVersion />
 		<MultipleInstances>Multiple</MultipleInstances>
-		<Mandatory>Mandatory</Mandatory>
+		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="5905"><Name>Host Device Manufacturer</Name>
 				<Operations>R</Operations>

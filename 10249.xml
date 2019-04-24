@@ -17,7 +17,7 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
         <LWM2MVersion/>
         <ObjectVersion/>     
 		<MultipleInstances>Multiple</MultipleInstances>
-		<Mandatory>Mandatory</Mandatory>
+		<Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="0">
                 <Name>Connected User MMEC</Name>

@@ -80,7 +80,7 @@ limitations under the License.
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
-		<Mandatory>Mandatory</Mandatory>
+		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="0"><Name>timeScanStart</Name>
 				<Operations>R</Operations>
