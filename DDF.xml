@@ -2882,14 +2882,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10300</ObjectID>
         <URN>urn:oma:lwm2m:x:10300</URN>
-        <Name>LWM2M Meta Object</Name>
-        <Description>Use this meta object to provide one or more locations hosting XML data model definitions for reusable or private and vendor-specific devices, such as those in the range 26241-42768.</Description>
-        <Owner>Tampere University</Owner>
+        <Name>Reserved</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10300.xml</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3008,18 +3008,18 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Item>
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Solar Radiation</Name>
+        <Description>This object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 μm to 3 μm. For example, the application of solar radiation measurement can be meteorological networks and solar energy applications.</Description>
+        <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10311.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>10312</ObjectID>
         <URN>urn:oma:lwm2m:x:10312</URN>
         <Name>TBC</Name>
