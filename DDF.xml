@@ -2966,14 +2966,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10308</ObjectID>
         <URN>urn:oma:lwm2m:x:10308</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>AT&amp;T Connectivity Extension</Name>
+        <Description>The AT&amp;T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&amp;T Connectivity Extension Object is an open and standard object used by AT&amp;T.</Description>
+        <Owner>AT&amp;T</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10308.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
