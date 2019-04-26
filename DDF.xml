@@ -2465,7 +2465,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>10260</ObjectID>
         <URN>urn:oma:lwm2m:x:10260</URN>
         <Name>Runtime Database</Name>
-        <Description>This object allows manipulation of Runtime Database variables.</Description>
+        <Description>This object allows manipulation of Runtime Database variables. Object deprecated with version 2.0 due to incorrect Type/Operation combination.</Description>
         <Owner>NetComm Wireless Limited</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
