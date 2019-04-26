@@ -1754,7 +1754,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3380</ObjectID>
         <URN>urn:oma:lwm2m:ext:3380</URN>
         <Name>PrachReport</Name>
-        <Description>PRACH report information</Description>
+        <Description>PRACH report information. Deprecated by v2.0.</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1764,6 +1764,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+    <Item>
+        <ObjectID>3380</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3380:2.0</URN>
+        <Name>PrachReport</Name>
+        <Description>PRACH report information</Description>
+        <Owner>GSMA</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
+        <DDF>3380-2_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>    
     <Item>
         <ObjectID>3381</ObjectID>
         <URN>urn:oma:lwm2m:ext:3381</URN>
