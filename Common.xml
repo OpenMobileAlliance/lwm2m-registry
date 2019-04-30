@@ -3428,7 +3428,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Type></Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Submitter>South East Water Corporation</Submitter>
+        <Submitter></Submitter>
         <Description></Description>
         <TS></TS>
         <TSLink>0</TSLink>
