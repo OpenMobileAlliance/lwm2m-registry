@@ -3422,14 +3422,14 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-       Item ID="6041">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
+       <Item ID="6041">    
+        <Name>Sensor Warm-up time</Name>     
+        <Operations>RW</Operations>     
+        <Type>Integer</Type>
+        <RangeEnumeration>0-86400</RangeEnumeration>
+        <Units>seconds</Units>
         <Submitter></Submitter>
-        <Description></Description>
+        <Description>Warm-up (wait) time before sensor value is read</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
