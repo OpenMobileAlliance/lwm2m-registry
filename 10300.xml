@@ -73,7 +73,9 @@ For more information about this object, please contact Bilhanan.Silverajan@tuni.
         <Type>Objlnk</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description></Description>
+        <Description>
+          <![CDATA[The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bits unsigned integers following the Network Byte Order convention. The Most Significant Halfword is an ObjectID, the Least Significant Hafword is an ObjectInstance ID.An Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values (null link. Test 5]]>
+        </Description>
       </Item>
       <Item ID="2">
         <Name>URI</Name>
