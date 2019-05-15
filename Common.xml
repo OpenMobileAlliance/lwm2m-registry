@@ -3426,8 +3426,8 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Sensor Warm-up time</Name>     
         <Operations>RW</Operations>     
         <Type>Integer</Type>
-        <RangeEnumeration>0-86400</RangeEnumeration>
-        <Units>seconds</Units>
+        <RangeEnumeration>0...86400</RangeEnumeration>
+        <Units>s</Units>
         <Submitter>South East Water</Submitter>
         <Description>Warm-up (wait) time before sensor value is read</Description>
         <TS></TS>
