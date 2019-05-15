@@ -61,8 +61,8 @@ http://www.openmobilealliance.org/ipr.html
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>1-864000</RangeEnumeration>
-                <Units>Seconds</Units>
+                <RangeEnumeration>1..864000</RangeEnumeration>
+                <Units>s</Units>
                 <Description><![CDATA[The Interval Period resource is an Integer value representing the width in seconds of the intervals being managed by this interval data object. This resource is read only and can only be changed by resource 11 (Change Interval Configuration). It is recommended that the Interval Period be set to a devisor of 24 hours (86400 seconds) to provide a consistent interval period. Examples of Interval Period include:-
 30 = Every 30 seconds
 600 = Every 10 minutes
@@ -80,8 +80,8 @@ http://www.openmobilealliance.org/ipr.html
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-86399</RangeEnumeration>
-                <Units>Seconds</Units>
+                <RangeEnumeration>0..86399</RangeEnumeration>
+                <Units>s</Units>
                 <Description><![CDATA[The Interval Start Offset resource is a read only resource representing the number of seconds past midnight for which the first interval is recorded. If this resource is empty, it is assumed that the intervals are midnight aligned. This can be used to adjust interval boundaries. As an example, an Interval Period of 3600 seconds and an Interval Start time of 300 represents hourly interval data, starting at 00:05.]]></Description>
             </Item>
             <Item ID="6002">
@@ -258,12 +258,12 @@ If for some implementation specific reason, there are missing intervals in the s
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-86400</RangeEnumeration>
-				<Units>Seconds</Units>
+				<RangeEnumeration>0..86400</RangeEnumeration>
+				<Units>s</Units>
 				<Description><![CDATA[Warm-up (wait) time before sensor value is read]]></Description>
 			</Item>
         </Resources>
-        <Description2><![CDATA[new resource (nominally 6041) has yet to be added. This will be an integer value representing 0-86400 seconds for how long a sensor should wait/warm-up before a reading is taken]]></Description2>
+        <Description2></Description2>
     </Object>
 </LWM2M>
 
