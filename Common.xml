@@ -3438,7 +3438,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Quality</Name>     
         <Operations>R</Operations>     
         <Type>Integer</Type>
-        <RangeEnumeration>-8999 to 8999</RangeEnumeration>
+        <RangeEnumeration>-8999..8999</RangeEnumeration>
         <Units></Units>
         <Submitter>Vaisala</Submitter>
         <Description>Quality value indicates how reliable sensor measurement is. This coding is vendor specific.</Description>
