@@ -3414,7 +3414,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Sample Frequency</Name>     
         <Operations>RW</Operations>     
         <Type>Float</Type>
-        <RangeEnumeration>0.0-86400.0</RangeEnumeration>
+        <RangeEnumeration>0.0..86400.0</RangeEnumeration>
         <Units>Seconds</Units>
         <Submitter>South East Water Corporation</Submitter>
         <Description>How often the inputs are read/sampled.This value can be changed by doing a write command</Description>
@@ -3422,7 +3422,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-       Item ID="6041">    
+      <Item ID="6041">    
         <Name>Reserved</Name>     
         <Operations></Operations>     
         <Type></Type>
