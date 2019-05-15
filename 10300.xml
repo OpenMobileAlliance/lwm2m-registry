@@ -102,7 +102,7 @@ For more information about this object, please contact Bilhanan.Silverajan@tuni.
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-8</RangeEnumeration>
+        <RangeEnumeration>0..8</RangeEnumeration>
         <Units></Units>
         <Description>
 		  <![CDATA[
