@@ -2900,7 +2900,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Description>Use this meta object to provide one or more locations hosting XML data
  	  model definitions for reusable or private and vendor-specific devices,
  	  such as those in the range 26241-42768.</Description>
-        <Owner>TU</Owner>
+        <Owner>TAU</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>10300.xml</DDF>
