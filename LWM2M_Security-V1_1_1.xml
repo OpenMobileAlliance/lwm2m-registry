@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Security-V1_1_1-YYYYMMDD-A
+   File: OMA-SUP-XML_LWM2M_Security-V1_1_1-YYYYMMDD-D
    Type: xml
    Date: YYYY-MM-DD
 
@@ -21,10 +21,10 @@ NORMATIVE INFORMATION
   This is available at http://www.openmobilealliance.org/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
-	
+
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -54,7 +54,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd" >
