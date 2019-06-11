@@ -2,23 +2,34 @@
 
 <!--
 FILE INFORMATION
+
 OMA Permanent Document
    File: OMA-SUP-XML_LWM2M_Connectivity_Monitoring-V1_2-YYYYMMDD-D
    Type: xml
    Date: YYYY-MM-DD
+
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
    Name: LWM2M_Connectivity_Monitoring-v1_2.xml
+
 NORMATIVE INFORMATION
+
   Information about this file can be found in the latest revision of
+
   OMA-TS-LightweightM2M_Core-V1_1_1
+
   This is available at http://www.openmobilealliance.org/
+
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
 LEGAL DISCLAIMER
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+
+  Copyright 2019 Open Mobile Alliance.
+
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
   are met:
+
   1. Redistributions of source code must retain the above copyright
   notice, this list of conditions and the following disclaimer.
   2. Redistributions in binary form must reproduce the above copyright
@@ -27,6 +38,7 @@ LEGAL DISCLAIMER
   3. Neither the name of the copyright holder nor the names of its
   contributors may be used to endorse or promote products derived
   from this software without specific prior written permission.
+
   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
@@ -39,9 +51,11 @@ LEGAL DISCLAIMER
   LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
   ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
   POSSIBILITY OF SUCH DAMAGE.
+
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
@@ -106,9 +120,9 @@ More specifically:
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>dBm</Units>
+				<Units></Units>
 				<Description><![CDATA[Indicates the average value of the received signal strength indication used in the
-current network bearer (as indicated by Resource 0 of this Object). For the following network bearers the signal strength parameters indicated below are represented by this resource:
+current network bearer (as indicated by Resource 0 of this Object). The value is expressed in dBm. For the following network bearers the signal strength parameters indicated below are represented by this resource:
 GSM:    RSSI
 UMTS:   RSCP
 LTE:    RSRP
