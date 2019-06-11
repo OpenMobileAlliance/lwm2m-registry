@@ -25,7 +25,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -55,7 +55,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -76,7 +77,7 @@ LEGAL DISCLAIMER
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Deg</Units>
+				<Units>lat</Units>
 				<Description><![CDATA[The decimal notation of latitude, e.g. -43.5723 [World Geodetic System 1984].]]></Description>
 			</Item>
 			<Item ID="1">
@@ -86,7 +87,7 @@ LEGAL DISCLAIMER
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Deg</Units>
+				<Units>lon</Units>
 				<Description><![CDATA[The decimal notation of longitude, e.g. 153.21760 [World Geodetic System 1984].]]></Description>
 			</Item>
 			<Item ID="2">
@@ -135,7 +136,7 @@ LEGAL DISCLAIMER
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Meters per second</Units>
+				<Units>m/s</Units>
 				<Description><![CDATA[Speed is the time rate of change in position of a LwM2M Client without regard for direction: the scalar component of velocity.]]></Description>
 			</Item></Resources>
 		<Description2></Description2>
