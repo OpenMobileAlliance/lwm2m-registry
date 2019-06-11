@@ -64,7 +64,7 @@ LEGAL DISCLAIMER
 		<Description1><![CDATA[Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.]]></Description1>
 		<ObjectID>2</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:2</ObjectURN>
-		<LWM2MVersion>1.1</LWM2MVersion>
+		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
