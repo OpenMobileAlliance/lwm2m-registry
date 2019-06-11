@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Firmware_Update-V1_0_3-YYYYMMDD-A
+   File: OMA-SUP-XML_LWM2M_Firmware_Update-V1_0_3-YYYYMMDD-D
    Type: xml
    Date: YYYY-MM-DD
 
@@ -22,10 +22,10 @@ NORMATIVE INFORMATION
   This is available at http://www.openmobilealliance.org/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
-	
+
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -55,7 +55,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -90,7 +91,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
-				<Units>bytes</Units>
+				<Units></Units>
 				<Description><![CDATA[URI from where the device can download the firmware package by an alternative mechanism. As soon the device has received the Package URI it performs the download at the next practical opportunity. 
 The URI format is defined in RFC 3986. For example, coaps://example.org/firmware is a syntactically valid URI. The URI scheme determines the protocol to be used. For CoAP this endpoint MAY be a LwM2M Server but does not necessarily need to be. A CoAP server implementing block-wise transfer is sufficient as a server hosting a firmware repository and the expectation is that this server merely serves as a separate file server making firmware images available to LwM2M Clients.]]></Description>
 			</Item>
@@ -152,7 +153,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
-				<Units>bytes</Units>
+				<Units></Units>
 				<Description><![CDATA[Name of the Firmware Package]]></Description>
 			</Item>
 			<Item ID="7">
@@ -162,7 +163,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
-				<Units>bytes</Units>
+				<Units></Units>
 				<Description><![CDATA[Version of the Firmware package]]></Description>
 			</Item>
 			<Item ID="8">
