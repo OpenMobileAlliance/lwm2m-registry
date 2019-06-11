@@ -25,7 +25,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -55,7 +55,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
@@ -155,8 +156,8 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>mV</Units>
-				<Description><![CDATA[Present voltage for each Available Power Sources Resource Instance.]]></Description>
+				<Units></Units>
+				<Description><![CDATA[Present voltage for each Available Power Sources Resource Instance. The unit used for this resource is in mV.]]></Description>
 			</Item>
       <Item ID="8">
         <Name>Power Source Current</Name>
@@ -165,8 +166,8 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>mA</Units>
-        <Description><![CDATA[Present current for each Available Power Source.]]></Description>
+        <Units></Units>
+        <Description><![CDATA[Present current for each Available Power Source. The unit used for this resource is in mA.]]></Description>
       </Item>
       <Item ID="9">
         <Name>Battery Level</Name>
@@ -185,7 +186,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>KB</Units>
+        <Units></Units>
         <Description><![CDATA[Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
 	  </Item>
       <Item ID="11">
@@ -313,8 +314,8 @@ Status	Meaning	Description
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>kB</Units>
-				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device.]]></Description>
+				<Units></Units>
+				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
 			</Item>
 			<Item ID="22"><Name>ExtDevInfo</Name>
 				<Operations>R</Operations>
