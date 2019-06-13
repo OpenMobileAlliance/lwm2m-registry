@@ -286,7 +286,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-3</RangeEnumeration>
+        <RangeEnumeration>1..3</RangeEnumeration>
         
         <Units></Units>
 
@@ -354,7 +354,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-1</RangeEnumeration>
+        <RangeEnumeration>0..1</RangeEnumeration>
 
         <Units>s</Units>
 
@@ -781,7 +781,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-4</RangeEnumeration>
+        <RangeEnumeration>0..4</RangeEnumeration>
 
         <Units></Units>
 
@@ -897,7 +897,7 @@
  
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
         <Units>%</Units>
 
@@ -1012,7 +1012,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
         
         <Units>%</Units>
 
@@ -1241,7 +1241,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
         <Units>%</Units>
 
@@ -1447,7 +1447,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-1</RangeEnumeration>
+        <RangeEnumeration>0..1</RangeEnumeration>
 
         <Units></Units>
 
@@ -1583,7 +1583,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-360</RangeEnumeration>
+        <RangeEnumeration>0..360</RangeEnumeration>
 
         <Units>degree</Units>
 
@@ -2135,7 +2135,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-3</RangeEnumeration>
+        <RangeEnumeration>0..3</RangeEnumeration>
 
         <Units></Units>
 
@@ -2158,7 +2158,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
         <Units>%</Units>
 
@@ -2181,7 +2181,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
         <Units>%</Units>
 
@@ -2227,7 +2227,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
         <Units>%</Units>
 
@@ -2544,7 +2544,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-864000</RangeEnumeration>
+        <RangeEnumeration>1..864000</RangeEnumeration>
         
         <Units>Seconds</Units>
         
@@ -2566,7 +2566,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-86399</RangeEnumeration>
+        <RangeEnumeration>0..86399</RangeEnumeration>
         
          <Units>Seconds</Units>
         
@@ -2966,9 +2966,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
  
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-864000</RangeEnumeration>
+        <RangeEnumeration>1..864000</RangeEnumeration>
         
-        <Units>Seconds</Units>
+        <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
@@ -3076,7 +3076,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>100-255</RangeEnumeration>
+        <RangeEnumeration>100..255</RangeEnumeration>
         
         <Units></Units>
         
@@ -3414,8 +3414,8 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Sample Frequency</Name>     
         <Operations>RW</Operations>     
         <Type>Float</Type>
-        <RangeEnumeration>0.0-86400.0</RangeEnumeration>
-        <Units>Seconds</Units>
+        <RangeEnumeration>0.0..86400.0</RangeEnumeration>
+        <Units>s</Units>
         <Submitter>South East Water Corporation</Submitter>
         <Description>How often the inputs are read/sampled.This value can be changed by doing a write command</Description>
         <TS></TS>
