@@ -4,9 +4,9 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Access_Control-V1_0_3-YYYYMMDD-C
+   File: OMA-SUP-XML_LWM2M_Access_Control-V1_0_3-20190617-A
    Type: xml
-   Date: YYYY-MMM-DD
+   Date: 2019-Jun-17
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
@@ -17,7 +17,7 @@ NORMATIVE INFORMATION
   Information about this file can be found in the latest revision of
 
     OMA-TS-LightweightM2M-V1_0_2
-    OMA-TS-LightweightM2M_Core-V1_1
+    OMA-TS-LightweightM2M_Core-V1_1_1
 
   This is available at http://www.openmobilealliance.org/
 
@@ -25,7 +25,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions

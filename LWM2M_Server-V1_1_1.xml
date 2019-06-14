@@ -4,9 +4,9 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Server-V1_1_1-YYYYMMDD-D
+   File: OMA-SUP-XML_LWM2M_Server-V1_1_1-20190617-A
    Type: xml
-   Date: YYYY-MM-DD
+   Date: 2019-Jun-17
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
@@ -73,7 +73,7 @@ LEGAL DISCLAIMER
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-65534</RangeEnumeration>
+				<RangeEnumeration>1..65534</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Used as link to associate server Object Instance.]]></Description>
 			</Item>
@@ -189,7 +189,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[If this resource is defined, it contains the most recent TLS / DTLS alert message received from the LwM2M Server respective represented by the AlertDescription defined in Section 7.2 of RFC 5246. This resource set by the LwM2M Client may help the LwM2M Bootstrap-Server to determine the cause of TLS/DTLS connection failure with the respective LwM2M Server.]]></Description>
 			</Item>			
