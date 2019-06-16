@@ -217,11 +217,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Cellular_connectivity-v1_0.xml</DDF>
+        <DDF>LWM2M_Cellular_connectivity-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
@@ -232,26 +232,26 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_APN_connection_profile-v1_0.xml</DDF>
+        <DDF>LWM2M_APN_connection_profile-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
         <ObjectID>12</ObjectID>
-        <URN>urn:oma:lwm2m:oma:12</URN>
+        <URN>urn:oma:lwm2m:oma:12:1.1</URN>
         <Name>WLAN connectivity</Name>
         <Description>It specifies resources to enable a device to connect to a WLAN bearer.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
-        <Ver>1.0</Ver>
-        <DDF>LWM2M_WLAN_connectivity4-v1_0.xml</DDF>
+        <Ver>1.1</Ver>
+        <DDF>LWM2M_WLAN_connectivity-v1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
@@ -262,11 +262,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Bearer_selection-v1_0.xml</DDF>
+        <DDF>LWM2M_Bearer_selection-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
