@@ -83,6 +83,8 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
       <Item ID="6043">
         <Name>Measured Particle Size</Name>
         <Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units>m</Units>
