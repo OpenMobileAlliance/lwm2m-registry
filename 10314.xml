@@ -34,7 +34,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Name>Min Measured Value</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
@@ -44,7 +44,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Name>Max Measured Value</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
@@ -54,7 +54,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Name>Max Range Value</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
@@ -64,7 +64,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Name>Sensor Units</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
@@ -74,7 +74,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Name>Reset Min and Max Measured Values</Name>
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
