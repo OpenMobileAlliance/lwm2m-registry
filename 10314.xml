@@ -12,7 +12,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Particulates</Name>
-		<Description1><![CDATA[This object should be used with a particulate air quality sensor to report a particulates measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.]]></Description1>
+		<Description1><![CDATA[This object should be used to report the concentration of particulates, for example a measurement of a particulates air quality sensor.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.]]></Description1>
 		<ObjectID>10314</ObjectID>
 		<ObjectURN>oma:lwm2mx10314</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
