@@ -70,6 +70,16 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Units></Units>
 				<Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
 			</Item>
+			<Item ID="5750">
+				<Name>Application Type</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The Application type of the device, for example “Particulate Sensor”.</Description>
+			</Item>
 			<Item ID="5605">
 				<Name>Reset Min and Max Measured Values</Name>
 				<Operations>E</Operations>
