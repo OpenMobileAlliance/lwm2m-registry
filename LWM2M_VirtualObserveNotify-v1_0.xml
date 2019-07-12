@@ -4,30 +4,30 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-LwM2M_VirtualObserveNotify-v1_0-20190711-A
+   File: OMA-SUP-LWM2M_VirtualObserveNotify-v1_0-20190711-A
    Type: xml
    Date: 2019-Jul-11
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LwM2M_VirtualObserveNotify-v1_0.xml
+   Name: LWM2M_VirtualObserveNotify-v1_0.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LwM2M_VirtualObserveNotify-v1_0
+    OMA-TS-LWM2M_VirtualObserveNotify-v1_0
 
   This is available at http://www.openmobilealliance.org/
 
-  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LWM2M_for_Developers/issues
 
 CHANGE HISTORY
 03022019 Agreed CR Ref# OMA-IPSO-2019-0003R01-CR_Bug_Fix_for_VirtualObserveNotify
 01032019 Agreed CR Ref# OMA-IPSO-2019-0031-CR_VirtualObserveNotify_Editorials
 03042019 File header updated including legal disclaimer
 03042019 Status changed to Candidate by IPSO WG ref # OMA-IPSO-2019-0049R01-MINUTES_01Apr2019_F2F_Porto
-11072019 Status changed to Approved by IPSO WG ref # OMA-IPSO-2019-0087-INP_LwM2M_Object_Virtual_Observe_Notify_v1.0_for_Final_Approval
+11072019 Status changed to Approved by IPSO WG ref # OMA-IPSO-2019-0087-INP_LWM2M_Object_Virtual_Observe_Notify_v1.0_for_Final_Approval
 
 LEGAL DISCLAIMER
 
