@@ -6,6 +6,6 @@ date: "DD MM 2019"
 documentName: "IPSO-Smart-Objects-V1_1-2019MMDD-A"
 files:
   - IPSO-Smart-Objects.md
-  - Appendix_Resources.md
-  - Appendix_Objects.md
+  - Appendix_A.md
+  - Appendix_B.md
 ---
