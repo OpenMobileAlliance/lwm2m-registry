@@ -15,7 +15,7 @@ This is a public repository dedicated to store and register new LwM2M Objects. S
    
    > Note: The staff will send a notification indicating that the new topic branch is ready.
    
-4. To create successful ```Object(s)``` | ```Reusable Resource(s)``` use the provided **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** and follow the **[Guidelines](http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-Guidelines_Creation_Registration_LwM2M_Objects_Resources-V1_0_1-20190115-A.pdf)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**.   
+4. To create successful ```Object(s)``` | ```Reusable Resource(s)``` use the provided **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** and follow the **[Guidelines](https://github.com/OpenMobileAlliance/lwm2m-registry/wiki/Guidelines)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**.   
    
 5. Submit your ```Pull Request(s),(PRs)```, containing your ```Object(s)``` | ```Reusable Resource(s)``` registrations against the allocated branch.
     > Note: The OMA staff will [close]() any ```PR(s)``` submitted against the incorrect branch. 
