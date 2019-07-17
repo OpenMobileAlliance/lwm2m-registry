@@ -3459,61 +3459,61 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6044">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Name>Battery Percentage</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
+        <RangeEnumeration>0.00-100.00</RangeEnumeration>
+        <Units>%</Units>
+        <Submitter>IoT Connectivity Alliance</Submitter>
+        <Description>Current remaining battery level</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6045">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+        <Name>RSSI</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Units>dBW</Units>
+        <Submitter>IoT Connectivity Alliance</Submitter>
+        <Description>Received Signal Strength Indicator</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6046">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
+        <Name>Smoke Sensor State</Name>     
+        <Operations>R</Operations>     
+        <Type>Boolean</Type>
+        <RangeEnumeration>Normal (0) or Smoke detected (1)</RangeEnumeration>
         <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Submitter>IoT Connectivity Alliance</Submitter>
+        <Description>Indicate current smoke sensor state</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6047">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Name>CO2</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
+        <RangeEnumeration>0.00-100.00</RangeEnumeration>
+        <Units>%</Units>
+        <Submitter>IoT Connectivity Alliance</Submitter>
+        <Description>Current detected CO2 percentage</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6048">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+        <Name>Decibel Value</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Units>dB</Units>
+        <Submitter>IoT Connectivity Alliance</Submitter>
+        <Description>Indicate the loudness of the alarm</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
