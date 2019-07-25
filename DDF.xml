@@ -418,15 +418,15 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>22</ObjectID>
         <URN>urn:oma:lwm2m:oma:22</URN>
         <Name>Virtual Observe Notify</Name>
-        <Description>Pending</Description>
+        <Description>The Virtual Observe Notify Object provides a main function to notify multiple resources to a LwM2M Server in one notification message whether the resources are in one object/object instance or across multiple objects. The Virtual Observe Notify Object also provides some functions to implement more efficient multi-resource report.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>LWM2M_VirtualObserveNotify-v1_0.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
+        <TSLink>1</TSLink>
     </Item>
 
     <Item>
@@ -2218,6 +2218,22 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
      </Item>
+    
+     <Item>
+        <ObjectID>3407</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3407</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+     </Item>
+    
     <Item>
         <ObjectID>10241</ObjectID>
         <URN>urn:oma:lwm2m:x:10241</URN>
