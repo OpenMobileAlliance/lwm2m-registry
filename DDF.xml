@@ -2247,7 +2247,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-     </Item>
+    </Item>
     
     <Item>
         <ObjectID>10241</ObjectID>
