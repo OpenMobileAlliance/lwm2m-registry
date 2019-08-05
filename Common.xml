@@ -3523,9 +3523,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Operations>R</Operations>     
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units></Units>
         <Submitter>Vaisala</Submitter>
-        <Description><![CDATA[Measurement quality level reported by a smart sensor. Value 100 means that the measured value is good, while value 0 means a rejected value that should not be used. Values between 0 and 100 indicate that the measured value may have quality issues. Smaller values indicate bad quality.]]></Description>
+        <Description><![CDATA[Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
