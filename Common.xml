@@ -3463,7 +3463,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Operations>R</Operations>     
         <Type>Float</Type>
         <RangeEnumeration>0.00-100.00</RangeEnumeration>
-        <Units>%</Units>
+        <Units></Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
         <Description>Current remaining battery level</Description>
         <TS></TS>
@@ -3495,7 +3495,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6047">    
-        <Name>CO2</Name>     
+        <Name>Detected CO2 percentage</Name>     
         <Operations>R</Operations>     
         <Type>Float</Type>
         <RangeEnumeration>0.00-100.00</RangeEnumeration>
@@ -3507,7 +3507,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6048">    
-        <Name>Decibel Value</Name>     
+        <Name>Alarm loudness</Name>     
         <Operations>R</Operations>     
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
