@@ -3486,7 +3486,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Smoke Sensor State</Name>     
         <Operations>R</Operations>     
         <Type>Boolean</Type>
-        <RangeEnumeration>Normal (0) or Smoke detected (1)</RangeEnumeration>
+        <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
         <Description>Indicate current smoke sensor state</Description>
