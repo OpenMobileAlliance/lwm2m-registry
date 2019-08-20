@@ -193,7 +193,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Celsius</Units>
+				<Units>Cel</Units>
 				<Description><![CDATA[Minimum temperature of the battery module]]></Description>
 			</Item>
 			<Item ID="21"><Name>Battery Module MaxTemp</Name>
@@ -202,7 +202,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Celsius</Units>
+				<Units>Cel</Units>
 				<Description><![CDATA[Maximum temperature of the battery module]]></Description>
 			</Item>
 			<Item ID="22"><Name>Battery Connection Status</Name>
@@ -230,7 +230,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Celsius</Units>
+				<Units>Cel</Units>
 				<Description><![CDATA[Temperature of MCU(motor control unit)]]></Description>
 			</Item>
 			<Item ID="26"><Name>Motor Speed</Name>
