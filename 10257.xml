@@ -226,7 +226,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>m^3 / s</Units>
+        <Units>m3/s</Units>
         <Description><![CDATA[The flow rate]]></Description>
       </Item>
       <Item ID="18">
@@ -236,7 +236,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>m^3 / s</Units>
+        <Units>m3/s</Units>
         <Description><![CDATA[The maximum flow measured by the meter ]]></Description>
       </Item>
       <Item ID="20">
@@ -246,7 +246,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>m^3</Units>
+        <Units>m3</Units>
         <Description><![CDATA[The cumulative flow volume measured on the flow pipe]]></Description>
       </Item>
       <Item ID="21">
@@ -256,7 +256,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>m^3</Units>
+        <Units>m3</Units>
         <Description><![CDATA[The cumulative flow volume measured on the return pipe]]></Description>
       </Item>
       <Item ID="5506">
