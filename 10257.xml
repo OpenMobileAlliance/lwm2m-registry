@@ -176,7 +176,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>Celcius</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Flow temperature]]></Description>
       </Item>
       <Item ID="13">
@@ -186,7 +186,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>Celcius</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[The maximum flow temperature measured by the meter]]></Description>
       </Item>
       <Item ID="14">
@@ -196,7 +196,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>Celcius</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Return temperature]]></Description>
       </Item>
       <Item ID="15">
@@ -206,7 +206,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>Celcius</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[The maximum return temperature measured by the meter ]]></Description>
       </Item>
       <Item ID="16">
