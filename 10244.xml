@@ -248,7 +248,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Celsius</Units>
+				<Units>Cel</Units>
 				<Description><![CDATA[Temperature of the motor]]></Description>
 			</Item>
 			<Item ID="28"><Name>Motor OT Warning</Name>
