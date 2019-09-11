@@ -62,7 +62,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-64 bytes</RangeEnumeration>
+				<RangeEnumeration>1..64 Bytes</RangeEnumeration>
 				<Units>B</Units>
 				<Description><![CDATA[Describes the location of the device within the building. The content of the string is site specific.]]></Description>
 			</Item>
