@@ -2546,7 +2546,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <RangeEnumeration>1..864000</RangeEnumeration>
         
-        <Units>Seconds</Units>
+        <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
@@ -2568,7 +2568,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <RangeEnumeration>0..86399</RangeEnumeration>
         
-         <Units>Seconds</Units>
+         <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
