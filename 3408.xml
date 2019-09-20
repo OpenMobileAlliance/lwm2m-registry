@@ -47,7 +47,7 @@ www.ica-alliance.org
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0―180</RangeEnumeration>
+				<RangeEnumeration>0..180</RangeEnumeration>
 				<Units>rad</Units>
 				<Description><![CDATA[The threshold of manhole cover's safety angle]]></Description>
 			</Item>
@@ -57,7 +57,7 @@ www.ica-alliance.org
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-180</RangeEnumeration>
+				<RangeEnumeration>0..180</RangeEnumeration>
 				<Units>rad</Units>
 				<Description><![CDATA[The tilt angle of a manhole cover]]></Description>
 			</Item>
