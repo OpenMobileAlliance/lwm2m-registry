@@ -3422,7 +3422,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-       <Item ID="6041">    
+      <Item ID="6041">    
         <Name>Reserved</Name>     
         <Operations></Operations>     
         <Type></Type>
@@ -3445,7 +3445,91 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
-
+      
+      <Item ID="6043">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6044">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6045">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6046">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6047">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6048">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6049">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
     </Resources>
 
   </Object>
