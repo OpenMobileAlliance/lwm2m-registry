@@ -3434,7 +3434,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-        <Item ID="6042">    
+      <Item ID="6042">    
         <Name>Measurement Quality Indicator</Name>     
         <Operations>R</Operations>     
         <Type>Integer</Type>
