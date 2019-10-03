@@ -39,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the application type of the actuator as a string, for instance, “Valve”</Description>
+				<Description>If present, the application type of the actuator as a string, for instance, "Valve"</Description>
 			</Item>
 			<Item ID="5603">
 				<Name>Min Range Value</Name>

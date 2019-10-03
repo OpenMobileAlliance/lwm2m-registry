@@ -49,7 +49,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The application type of the output as a string, for instance, “LED”</Description>
+				<Description>The application type of the output as a string, for instance, "LED"</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>
