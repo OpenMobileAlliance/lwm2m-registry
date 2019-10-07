@@ -1585,7 +1585,7 @@
 
         <RangeEnumeration>0..360</RangeEnumeration>
 
-        <Units>degree</Units>
+        <Units>deg</Units>
 
         <Submitter>IPSO</Submitter>
 

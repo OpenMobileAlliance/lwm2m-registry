@@ -59,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration>0-360</RangeEnumeration>
-                <Units>degree</Units>
+                <Units>deg</Units>
                 <Description>Measured Direction.</Description>
             </Item>
             <Item ID="5517">
