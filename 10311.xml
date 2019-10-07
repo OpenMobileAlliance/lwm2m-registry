@@ -111,7 +111,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
                 <RangeEnumeration/>
                 <Units/>
                 <Description>
-                    Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.
+                    Measurement Units Definition.
                 </Description>
             </Item>
             <Item ID="5750">

@@ -40,7 +40,7 @@ Specific object for a given range of sensors is described later in the document,
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Measurement Units Definition e.g. "Cel" for Temperature in Celsius.</Description>
+				<Description>Measurement Units Definition.</Description>
 			</Item>
 			<Item ID="5601">
 				<Name>Min Measured Value</Name>
