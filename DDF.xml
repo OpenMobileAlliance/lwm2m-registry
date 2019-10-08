@@ -240,7 +240,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10</ObjectID>
         <URN>urn:oma:lwm2m:oma:10</URN>
-        <Name>Cellular connectivity</Name>
+        <Name>LWM2M Cellular Connectivity</Name>
         <Description>This object specifies resources to enable a device to connect to a 3GPP or 3GPP2 bearer, including GPRS/EDGE, UMTS, LTE, NB-IoT, SMS. For cellular connectivity, this object focuses on Packet Switched (PS) connectivity and doesn’t aim to provide comprehensive Circuit Switched (CS) connectivity management.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
@@ -255,7 +255,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>11</ObjectID>
         <URN>urn:oma:lwm2m:oma:11</URN>
-        <Name>APN connection profile</Name>
+        <Name>LWM2M APN Connection Profile</Name>
         <Description>This object specifies resources to enable a device to connect to an APN.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
@@ -285,7 +285,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>13</ObjectID>
         <URN>urn:oma:lwm2m:oma:13</URN>
-        <Name>Bearer selection</Name>
+        <Name>LWM2M Bearer Selection</Name>
         <Description>This object specifies resources to enable a device to choose a PLMN/network on which to attach/register and what type of bearer to then connect.
 		This object allows via remote bearer and network configuration to overwrite automatic network and bearer selection e.g. as supported by the UICC. An equivalent example for overwriting automatic selection is a user doing manual network and bearer selection on a smart phone.</Description>
         <Owner>OMA</Owner>
