@@ -35,9 +35,9 @@ www.ica-alliance.org
 		<Name>Manhole Cover</Name>
 		<Description1><![CDATA[Describe the status of a manhole cover.]]></Description1>
 		<ObjectID>3408</ObjectID>
-		<ObjectURN></ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3408</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion />
+		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -49,7 +49,7 @@ www.ica-alliance.org
 				<Type>Integer</Type>
 				<RangeEnumeration>0..180</RangeEnumeration>
 				<Units>rad</Units>
-				<Description><![CDATA[The threshold of manhole cover's safety angle]]></Description>
+				<Description><![CDATA[The threshold of manhole cover's safety angle.]]></Description>
 			</Item>
 			<Item ID="2">
 				<Name>Manhole Cover Tilt</Name>
@@ -59,7 +59,7 @@ www.ica-alliance.org
 				<Type>Integer</Type>
 				<RangeEnumeration>0..180</RangeEnumeration>
 				<Units>rad</Units>
-				<Description><![CDATA[The tilt angle of a manhole cover]]></Description>
+				<Description><![CDATA[The tilt angle of a manhole cover.]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Cover Open Status</Name>
@@ -67,9 +67,9 @@ www.ica-alliance.org
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration>Not detected open (0) or Detected open (1)</RangeEnumeration>
+				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Indicate whether an open status of the manhole cover is detected]]></Description>
+				<Description><![CDATA[Indicate whether an open status of the manhole cover is detected. Not detected open [true] or Detected open [false].]]></Description>
 			</Item>
 			
 			
