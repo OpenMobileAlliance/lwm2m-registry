@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Buzzer</Name>
-        <Description1>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative loudness of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time a “1” is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is zero, writing a “1” to the On/Off resource will result in the alarm sounding continuously until a “0” is written to the On/Off resource.
+        <Description1>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative loudness of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time "true" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is "false", writing a "true" to the On/Off resource will result in the alarm sounding continuously until a "false" is written to the On/Off resource.
         </Description1>
         <ObjectID>3338</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3338</ObjectURN>
@@ -30,7 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>On/Off control, 0=OFF, 1=ON.</Description>
+                <Description>On/off control. Boolean value where True is On and False is Off.</Description>
             </Item>
             <Item ID="5548">
                 <Name>Level</Name>
