@@ -271,7 +271,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>12</ObjectID>
         <URN>urn:oma:lwm2m:oma:12</URN>
         <Name>WLAN connectivity</Name>
-        <Description>It specifies resources to enable a device to connect to a WLAN bearer.</Description>
+        <Description>This object specifies resources to enable a device to connect to a WLAN bearer.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
