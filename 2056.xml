@@ -22,7 +22,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Byte</Units>
+				<Units>B</Units>
 				<Description><![CDATA[Contains the max Buffer size of the CmdhBuffer Object Instance ]]></Description>
 			</Item>
 			<Item ID="2"><Name>StoragePriority</Name>

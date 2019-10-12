@@ -86,7 +86,7 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration>0..2^32-1</RangeEnumeration>
-                <Units>bytes</Units>
+                <Units>B</Units>
                 <Description>The total number of MAC bytes sent to the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field.</Description>
             </Item>
             <Item ID="7">
@@ -96,7 +96,7 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration>0..2^32-1</RangeEnumeration>
-                <Units>bytes</Units>
+                <Units>B</Units>
                 <Description>The total number of MAC bytes received from the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field.</Description>
             </Item>
             <Item ID="8">
