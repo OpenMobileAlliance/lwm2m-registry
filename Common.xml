@@ -2210,7 +2210,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[This resource represents an on/off actuator, which can be controlled, the setting of which is a Boolean value where True is On and False is Off.]]></Description>
+        <Description><![CDATA[On/off control. Boolean value where True is On and False is Off.]]></Description>
         
         <TS></TS>
         

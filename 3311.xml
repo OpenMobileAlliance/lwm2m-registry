@@ -29,7 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>This resource represents a light, which can be controlled, the setting of which is a Boolean value (1,0) where 1 is on and 0 is off.</Description>
+				<Description>On/off control. Boolean value where True is On and False is Off.</Description>
 			</Item>
 			<Item ID="5851">
 				<Name>Dimmer</Name>
