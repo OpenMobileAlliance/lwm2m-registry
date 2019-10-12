@@ -90,19 +90,16 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Units></Units>
 				<Description><![CDATA[Reset the Min and Max Measured Values to current value.]]></Description>
 			</Item>
-      <Item ID="6043">
-        <Name>Measured Particle Size</Name>
-        <Operations>R</Operations>
+			<Item ID="6043">
+				<Name>Measured Particle Size</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-        <Type>Float</Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units>m</Units>
-        <Submitter>OpenLX SP Ltd</Submitter>
-        <Description><![CDATA[Size of the particle that the sensor is measuring]]></Description>
-        <TS></TS>
-        <TSLink>0</TSLink>
-      </Item>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>m</Units>
+				<Description><![CDATA[Size of the particle that the sensor is measuring]]></Description>
+			 </Item>
 		</Resources>
 		<Description2><![CDATA[]]></Description2>
 	</Object>
