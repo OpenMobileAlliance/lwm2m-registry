@@ -3446,14 +3446,14 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-      <Item ID="6043">
-        <Name>Measured Particle Size</Name>
-        <Operations>R</Operations>
-        <Type>Float</Type>
+      <Item ID="6043">    
+        <Name>Reserved</Name>     
+        <Operations></Operations>     
+        <Type></Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units>m</Units>
-        <Submitter>OpenLX SP Ltd</Submitter>
-        <Description><![CDATA[Size of the particle that the sensor is measuring]]></Description>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
