@@ -2222,14 +2222,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
      <Item>
         <ObjectID>3407</ObjectID>
         <URN>urn:oma:lwm2m:ext:3407</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Smoke Alarm</Name>
+        <Description>This is an alarm that should be raised if the meter detects CO2 concentration above a pre-configured threshold.</Description>
+        <Owner>IoT Connectivity Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3407.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
      </Item>
