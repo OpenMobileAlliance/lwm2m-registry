@@ -3423,13 +3423,13 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6041">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Name>Sensor Warm-up Time</Name>     
+        <Operations>RW</Operations>     
+        <Type>Integer</Type>
+        <RangeEnumeration>0..86400</RangeEnumeration>
+        <Units>s</Units>
+        <Submitter>South East Water</Submitter>
+        <Description>Warm-up (wait) time before sensor value is read</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>

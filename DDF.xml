@@ -3124,21 +3124,21 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>10313</ObjectID>
         <URN>urn:oma:lwm2m:x:10313</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Gas Readings</Name>
+        <Description>Object to periodically log readings from any gas sensor (eg H2S, VOCx, methane etc)</Description>
+        <Owner>South East Water</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10313.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>10314</ObjectID>
         <URN>urn:oma:lwm2m:x:10314</URN>
         <Name>TBC</Name>
