@@ -3462,7 +3462,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Battery Percentage</Name>     
         <Operations>R</Operations>     
         <Type>Float</Type>
-        <RangeEnumeration>0.00-100.00</RangeEnumeration>
+        <RangeEnumeration>0.00..100.00</RangeEnumeration>
         <Units></Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
         <Description>Current remaining battery level</Description>
@@ -3498,7 +3498,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Detected CO2 percentage</Name>     
         <Operations>R</Operations>     
         <Type>Float</Type>
-        <RangeEnumeration>0.00-100.00</RangeEnumeration>
+        <RangeEnumeration>0.00..100.00</RangeEnumeration>
         <Units>%</Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
         <Description>Current level of detected CO2 as percentage (of what?)</Description>
