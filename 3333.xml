@@ -37,7 +37,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
-                <RangeEnumeration>0-1</RangeEnumeration>
+                <RangeEnumeration>0..1</RangeEnumeration>
                 <Units>s</Units>
                 <Description>For shorter times of a fraction of a second (i.e. 0.23).</Description>
             </Item>

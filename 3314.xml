@@ -55,7 +55,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0-360</RangeEnumeration>
+				<RangeEnumeration>0..360</RangeEnumeration>
 				<Units>deg</Units>
 				<Description>The compass direction</Description>
 			</Item>

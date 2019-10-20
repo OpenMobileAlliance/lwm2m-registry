@@ -57,7 +57,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description>The criticality of the event.  The device receiving the event will react in an appropriate fashion for the device.</Description>
 			</Item>
@@ -67,7 +67,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
+				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
 				<Description>Defines the maximum energy usage of the receivng device, as a percentage of the device's normal maximum energy usage.</Description>
 			</Item>
@@ -77,7 +77,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
+				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
 				<Description>Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.</Description>
 			</Item>

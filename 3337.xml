@@ -28,7 +28,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Float</Type>
-                <RangeEnumeration>0-100</RangeEnumeration>
+                <RangeEnumeration>0..100</RangeEnumeration>
                 <Units>%</Units>
                 <Description>Current position or desired position of a positioner actuator.</Description>
             </Item>

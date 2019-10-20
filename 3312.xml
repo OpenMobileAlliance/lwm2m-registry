@@ -37,7 +37,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
+				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
 				<Description>This resource represents a power dimmer setting, which has an Integer value between 0 and 100 as a percentage.</Description>
 			</Item>

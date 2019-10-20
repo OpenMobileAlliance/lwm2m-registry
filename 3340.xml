@@ -118,7 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-4</RangeEnumeration>
+                <RangeEnumeration>0..4</RangeEnumeration>
                 <Units></Units>
                 <Description>Type of timer pattern used by the patterns.</Description>
             </Item>
