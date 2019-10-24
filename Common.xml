@@ -360,7 +360,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Fractional part of the time when sub-second precision is used.]]></Description>
+        <Description><![CDATA[Fractional part of the time when sub-second precision is used (e.g., 0.23 for 230 ms).]]></Description>
         
         <TS></TS>
         
