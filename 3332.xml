@@ -30,7 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Type>Float</Type>
                 <RangeEnumeration>0..360</RangeEnumeration>
                 <Units>deg</Units>
-                <Description>This indicates the compass direction of some phenomenon (i.e. direction of travel, wind direction...).</Description>
+                <Description>The measured compass direction.</Description>
             </Item>
             <Item ID="5601">
                 <Name>Min Measured Value</Name>

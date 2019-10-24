@@ -1589,7 +1589,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The compass direction.]]></Description>
+        <Description><![CDATA[The measured compass direction.]]></Description>
         
         <TS></TS>
         

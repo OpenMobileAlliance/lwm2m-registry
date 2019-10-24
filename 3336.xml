@@ -60,7 +60,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Type>Float</Type>
                 <RangeEnumeration>0..360</RangeEnumeration>
                 <Units>deg</Units>
-                <Description>Measured Direction.</Description>
+                <Description>The measured compass direction.</Description>
             </Item>
             <Item ID="5517">
                 <Name>Velocity</Name>
