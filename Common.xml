@@ -2118,7 +2118,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The duration of the load control event.]]></Description>
+        <Description><![CDATA[The duration of the event in minutes.]]></Description>
         
          <TS></TS>
         
