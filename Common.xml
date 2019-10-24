@@ -2095,7 +2095,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Time when the load control event will start started.]]></Description>
+        <Description><![CDATA[Time when the event started.]]></Description>
         
         <TS></TS>
         

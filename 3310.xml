@@ -39,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Time when the load control event will start started.</Description>
+				<Description>Time when the event started.</Description>
 			</Item>
 			<Item ID="5825">
 				<Name>Duration In Min</Name>
