@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Positioner</Name>
-        <Description1>This IPSO object should be used with a generic position actuator from 0 to 100%. This resource optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.
+        <Description1>This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.
         </Description1>
         <ObjectID>3337</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3337</ObjectURN>
