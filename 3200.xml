@@ -50,7 +50,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The polarity of the digital input as a Boolean (0 = Normal, 1= Reversed)</Description>
+				<Description>The polarity of the digital input as a Boolean (False = Normal, True = Reversed).</Description>
 			</Item>
 			<Item ID="5503">
 				<Name>Digital Input Debounce</Name>

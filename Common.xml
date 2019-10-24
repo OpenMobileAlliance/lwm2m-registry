@@ -246,7 +246,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The polarity of a digital input as a Boolean (0 = Normal, 1= Reversed).]]></Description>
+        <Description><![CDATA[The polarity of the digital input as a Boolean (False = Normal, True = Reversed).]]></Description>
         
         <TS></TS>
         
