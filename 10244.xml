@@ -40,7 +40,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description><![CDATA[Current position of the accelerator pedal.]]></Description>
 			</Item>
 			<Item ID="4"><Name>Vehicle Power</Name>
@@ -157,7 +157,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description><![CDATA[SOC(state of charge) of the battery pack]]></Description>
 			</Item>
 			<Item ID="17"><Name>Battery Pack SOH</Name>
@@ -166,7 +166,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description><![CDATA[SOH(state of health) of the battery pack]]></Description>
 			</Item>
 			<Item ID="18"><Name>Battery Cell MinVolt</Name>

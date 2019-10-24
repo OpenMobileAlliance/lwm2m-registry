@@ -68,7 +68,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Defines the maximum energy usage of the receivng device, as a percentage of the device's normal maximum energy usage.</Description>
 			</Item>
 			<Item ID="5828">
@@ -78,7 +78,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.</Description>
 			</Item>
 		</Resources>
