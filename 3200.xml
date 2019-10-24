@@ -60,7 +60,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description>The debounce period in ms. .</Description>
+				<Description>The debounce period in ms.</Description>
 			</Item>
 			<Item ID="5504">
 				<Name>Digital Input Edge Selection</Name>
