@@ -80,7 +80,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>The timestamp of when the location measurement was performed.</Description>
+                <Description>The timestamp of when the measurement was performed.</Description>
             </Item>
             <Item ID="5750">
                 <Name>Application Type</Name>
