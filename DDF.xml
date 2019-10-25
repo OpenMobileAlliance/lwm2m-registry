@@ -718,7 +718,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3305</ObjectID>
         <URN>urn:oma:lwm2m:ext:3305</URN>
         <Name>Power Measurement</Name>
-        <Description>This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. Il also provides resources for cumulative energy, calibration, and the power factor.</Description>
+        <Description>This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -898,7 +898,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3319</ObjectID>
         <URN>urn:oma:lwm2m:ext:3319</URN>
         <Name>Depth</Name>
-        <Description>This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm) or in fathoms (fth).</Description>
+        <Description>This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm).</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1168,7 +1168,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3337</ObjectID>
         <URN>urn:oma:lwm2m:ext:3337</URN>
         <Name>Positioner</Name>
-        <Description>This IPSO object should be used with a generic position actuator from 0 to 100%.</Description>
+        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
