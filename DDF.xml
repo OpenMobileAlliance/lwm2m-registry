@@ -3141,14 +3141,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Item>
         <ObjectID>10314</ObjectID>
         <URN>urn:oma:lwm2m:x:10314</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Particulates</Name>
+        <Description>This object should be used to report the concentration of particulates, for example a measurement of a particulates air quality sensor.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.</Description>
+        <Owner>OpenLX SP Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10314.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
