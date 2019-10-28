@@ -68,7 +68,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
+				<Description><![CDATA[Measurement Units Definition e.g. "ug/m3" for concentration in micrograms per cubic metre.]]></Description>
 			</Item>
 			<Item ID="5750">
 				<Name>Application Type</Name>
@@ -97,7 +97,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>m</Units>
+				<Units>um</Units>
 				<Description><![CDATA[Size of the particle that the sensor is measuring]]></Description>
 			 </Item>
 		</Resources>
