@@ -129,7 +129,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>1-864000</RangeEnumeration>
+                <RangeEnumeration>1..864000</RangeEnumeration>
                 <Units>s</Units>
                 <Description><![CDATA[Maximum Event Period is a readable and writable resource used in conjunction with the Maximum Event Count resource to control the number of events that can be raised in a given period. Maximum Event Period is an integer value representing the number of seconds for which the Maximum Event Count is measured. If no Maximum Event Period is set, the number of events recorded is unconstrained. The intent of this resource is to control the number of events reported, particularly in the case of a faulty sensor.]]></Description>
             </Item>
@@ -179,7 +179,7 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>100-255</RangeEnumeration>
+                <RangeEnumeration>100..255</RangeEnumeration>
                 <Units></Units>
                 <Description><![CDATA[Event Code is a read-only resource used as an identifier to represent this class of event. The allocation of event codes is implementation specific but ideally be unique across the implementation. Event Codes use vendor specific LogClass value 100...255]]></Description>
             </Item>

@@ -65,7 +65,7 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-65535</RangeEnumeration>
+                <RangeEnumeration>0..65535</RangeEnumeration>
                 <Units></Units>
                 <Description>The cumulative timing advance signalled by the eNB to each currently connected UE. This is the sum of the initial timing advance signalled in the MAC payload of the Random Access Response (11 bits, 0 .. 1282) and subsequent adjustments signalled in the MAC PDU of DL-SCH transmissions (6 bits, -31 .. 32). See TS 36.321 for details.</Description>
             </Item>
