@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0-1</RangeEnumeration>
+				<RangeEnumeration>0..1</RangeEnumeration>
 				<Units></Units>
 				<Description>The current state of the analogue output.</Description>
 			</Item>
