@@ -59,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Integer</Type>
 				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
-				<Description>The criticality of the event.  The device receiving the event will react in an appropriate fashion for the device.</Description>
+				<Description>The criticality of the event. The device receiving the event will react in an appropriate fashion for the device.</Description>
 			</Item>
 			<Item ID="5827">
 				<Name>Avg Load AdjPct</Name>
@@ -69,7 +69,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>%</Units>
-				<Description>Defines the maximum energy usage of the receivng device, as a percentage of the device's normal maximum energy usage.</Description>
+				<Description>Defines the maximum energy usage of the receiving device, as a percentage of the device's normal maximum energy usage.</Description>
 			</Item>
 			<Item ID="5828">
 				<Name>Duty Cycle</Name>
