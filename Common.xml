@@ -3537,7 +3537,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration>0..1</RangeEnumeration>
         <Units>s</Units>
         <Submitter>Vaisala</Submitter>
-        <Description><![CDATA[The timestamp fraction when the measurement was performed (i.e. 0.62).]]></Description>
+        <Description><![CDATA[Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
