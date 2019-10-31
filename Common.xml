@@ -606,7 +606,7 @@
 
         <Description>
 
-          <![CDATA[The timestamp of when the measurement was performed.]]>
+          <![CDATA[The timestamp of when the location measurement was performed.]]>
 
         </Description>
         
