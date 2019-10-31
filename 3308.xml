@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Set Point</Name>
-		<Description1>Description: This IPSO object should be used to set a desired value to a controller, such as a thermostat. This object enables a setpoint to be expressed units defined in the UCUM specification, to match an associated sensor or measurement value. A special resource is added to set the colour of an object.</Description1>
+		<Description1>This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.</Description1>
 		<ObjectID>3308</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3308</ObjectURN>
 	        <LWM2MVersion>1.0</LWM2MVersion>
@@ -39,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the type of sensor defined as the UCUM Unit Definition e.g. "Cel" for Temperature in Celcius.</Description>
+				<Description>Measurement Units Definition.</Description>
 			</Item>
 			<Item ID="5706">
 				<Name>Colour</Name>

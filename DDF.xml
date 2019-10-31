@@ -643,7 +643,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3300</ObjectID>
         <URN>urn:oma:lwm2m:ext:3300</URN>
         <Name>Generic Sensor</Name>
-        <Description>This IPSO object allow the description of a generic sensor. It is based on the description of a value and a unit according to the UCUM specification. Thus, any type of value defined within this specification can be reporting using this object. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>This IPSO object allow the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reporting using this object. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -658,7 +658,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3301</ObjectID>
         <URN>urn:oma:lwm2m:ext:3301</URN>
         <Name>Illuminance</Name>
-        <Description>This IPSO object should be used over a luminosity sensor to report a remote luminosity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the luminosity sensor. The unit used here is Lux (ucum:lx).</Description>
+        <Description>This IPSO object should be used over a luminosity sensor to report a remote luminosity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the luminosity sensor. The unit used here is Lux.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -688,7 +688,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3303</ObjectID>
         <URN>urn:oma:lwm2m:ext:3303</URN>
         <Name>Temperature</Name>
-        <Description>This IPSO object should be used over a temperature sensor to report a remote temperature measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. The unit used here is degree Celsius (ucum:Cel).</Description>
+        <Description>This IPSO object should be used over a temperature sensor to report a remote temperature measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. The unit used here is degree Celsius.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -703,7 +703,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3304</ObjectID>
         <URN>urn:oma:lwm2m:ext:3304</URN>
         <Name>Humidity</Name>
-        <Description>This IPSO object should be used over a humidity sensor to report a remote humidity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. The unit used here is relative humidity as a percentage (ucum:%).</Description>
+        <Description>This IPSO object should be used over a humidity sensor to report a remote humidity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. The unit used here is relative humidity as a percentage.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -718,7 +718,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3305</ObjectID>
         <URN>urn:oma:lwm2m:ext:3305</URN>
         <Name>Power Measurement</Name>
-        <Description>This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. Il also provides resources for cumulative energy, calibration, and the power factor.</Description>
+        <Description>This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -748,7 +748,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3308</ObjectID>
         <URN>urn:oma:lwm2m:ext:3308</URN>
         <Name>Set Point</Name>
-        <Description>This IPSO object should be used to set a desired value to a controller, such as a thermostat. This object enables a setpoint to be expressed units defined in the UCUM specification, to match an associated sensor or measurement value. A special resource is added to set the colour of an object.</Description>
+        <Description>This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -853,7 +853,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3316</ObjectID>
         <URN>urn:oma:lwm2m:ext:3316</URN>
         <Name>Voltage</Name>
-        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts (ucum: V).</Description>
+        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -898,7 +898,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3319</ObjectID>
         <URN>urn:oma:lwm2m:ext:3319</URN>
         <Name>Depth</Name>
-        <Description>This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm) or in fathoms (fth).</Description>
+        <Description>This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm).</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -928,7 +928,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3321</ObjectID>
         <URN>urn:oma:lwm2m:ext:3321</URN>
         <Name>Altitude</Name>
-        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters (ucum: m).</Description>
+        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1093,7 +1093,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3332</ObjectID>
         <URN>urn:oma:lwm2m:ext:3332</URN>
         <Name>Direction</Name>
-        <Description>This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees (ucum:deg).</Description>
+        <Description>This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1168,7 +1168,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3337</ObjectID>
         <URN>urn:oma:lwm2m:ext:3337</URN>
         <Name>Positioner</Name>
-        <Description>This IPSO object should be used with a generic position actuator from 0 to 100%.</Description>
+        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>

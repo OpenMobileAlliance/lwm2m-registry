@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Barometer</Name>
-		<Description1>Description: This IPSO object should be used with an air pressure sensor to report a barometer measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor. An example measurement unit is kPa (ucum:kPa).</Description1>
+		<Description1>This IPSO object should be used with an air pressure sensor to report a barometer measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor. An example measurement unit is pascals.</Description1>
 		<ObjectID>3315</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3315</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -79,7 +79,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the type of sensor defined as the UCUM Unit Definition e.g. "Cel" for Temperature in Celcius.</Description>
+				<Description>Measurement Units Definition.</Description>
 			</Item>
 			<Item ID="5605">
 				<Name>Reset Min and Max Measured Values</Name>

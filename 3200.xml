@@ -50,7 +50,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The polarity of the digital input as a Boolean (0 = Normal, 1= Reversed)</Description>
+				<Description>The polarity of the digital input as a Boolean (False = Normal, True = Reversed).</Description>
 			</Item>
 			<Item ID="5503">
 				<Name>Digital Input Debounce</Name>
@@ -60,7 +60,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description>The debounce period in ms. .</Description>
+				<Description>The debounce period in ms.</Description>
 			</Item>
 			<Item ID="5504">
 				<Name>Digital Input Edge Selection</Name>
@@ -68,7 +68,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-3</RangeEnumeration>
+				<RangeEnumeration>1..3</RangeEnumeration>
 				<Units></Units>
 				<Description>The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).</Description>
 			</Item>

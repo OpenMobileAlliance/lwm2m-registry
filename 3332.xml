@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">    
     <Object ObjectType="MODefinition">
         <Name>Direction</Name>
-        <Description1>This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees (ucum:deg).
+        <Description1>This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.
         </Description1>
         <ObjectID>3332</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3332</ObjectURN>
@@ -28,9 +28,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Float</Type>
-                <RangeEnumeration>0-360</RangeEnumeration>
-                <Units>degree</Units>
-                <Description>This indicates the compass direction of some phenomenon (i.e. direction of travel, wind direction…).</Description>
+                <RangeEnumeration>0..360</RangeEnumeration>
+                <Units>deg</Units>
+                <Description>The measured compass direction.</Description>
             </Item>
             <Item ID="5601">
                 <Name>Min Measured Value</Name>

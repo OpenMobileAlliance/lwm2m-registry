@@ -18,7 +18,7 @@
         <Submitter>OMA</Submitter>
         <!-- Description of the reusable resource -->
         <Description>
-          <![CDATA[The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bit unsigned integers following the Network Byte Order convention. The Most Significant Halfword is an Object ID, the Least Significant Halfword is an Object Instance ID. An Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values.]>
+          <![CDATA[The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bit unsigned integers following the Network Byte Order convention. The Most Significant Halfword is an Object ID, the Least Significant Halfword is an Object Instance ID. An Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values.]]>
         </Description>
         <!-- Link to the technical specification (word, pdf etc.) -->
         <TS></TS>
@@ -246,7 +246,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The polarity of a digital input as a Boolean (0 = Normal, 1= Reversed).]]></Description>
+        <Description><![CDATA[The polarity of the digital input as a Boolean (False = Normal, True = Reversed).]]></Description>
         
         <TS></TS>
         
@@ -360,7 +360,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[For shorter times of a fraction of a second (i.e. 0.23).]]></Description>
+        <Description><![CDATA[Fractional part of the time when sub-second precision is used (e.g., 0.23 for 230 ms).]]></Description>
         
         <TS></TS>
         
@@ -606,7 +606,7 @@
 
         <Description>
 
-          <![CDATA[The timestamp of when the location measurement was performed.]]>
+          <![CDATA[The timestamp of when the measurement was performed.]]>
 
         </Description>
         
@@ -699,7 +699,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Audio Clip that is playable (i.e. short audio recording indicating the floor in an elevator).]]></Description>
+        <Description><![CDATA[Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).]]></Description>
         
         <TS></TS>
         
@@ -1293,7 +1293,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The polarity of a digital input as a Boolean (False = Normal, True = Reversed).]]></Description>
+        <Description><![CDATA[The polarity of the digital output as a Boolean (False = Normal, True = Reversed).]]></Description>
         
         <TS></TS>
         
@@ -1498,7 +1498,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
+        <Description><![CDATA[Measurement Units Definition.]]></Description>
         
          <TS></TS>
         
@@ -1585,11 +1585,11 @@
 
         <RangeEnumeration>0..360</RangeEnumeration>
 
-        <Units>degree</Units>
+        <Units>deg</Units>
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The compass direction.]]></Description>
+        <Description><![CDATA[The measured compass direction.]]></Description>
         
         <TS></TS>
         
@@ -2095,7 +2095,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Time when the load control event will start started.]]></Description>
+        <Description><![CDATA[Time when the event started.]]></Description>
         
         <TS></TS>
         
@@ -2118,7 +2118,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The duration of the load control event.]]></Description>
+        <Description><![CDATA[The duration of the event in minutes.]]></Description>
         
          <TS></TS>
         
