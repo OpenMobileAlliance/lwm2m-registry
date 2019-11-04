@@ -3529,8 +3529,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10342</ObjectID>
         <URN>urn:oma:lwm2m:x:10342</URN>
@@ -3544,8 +3543,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10343</ObjectID>
         <URN>urn:oma:lwm2m:x:10343</URN>
@@ -3559,8 +3557,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10344</ObjectID>
         <URN>urn:oma:lwm2m:x:10344</URN>
@@ -3574,8 +3571,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10345</ObjectID>
         <URN>urn:oma:lwm2m:x:10345</URN>
@@ -3589,8 +3585,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10346</ObjectID>
         <URN>urn:oma:lwm2m:x:10346</URN>
@@ -3605,7 +3600,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10347</ObjectID>
         <URN>urn:oma:lwm2m:x:10347</URN>
@@ -3620,7 +3614,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10348</ObjectID>
         <URN>urn:oma:lwm2m:x:10348</URN>
@@ -3634,8 +3627,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10349</ObjectID>
         <URN>urn:oma:lwm2m:x:10349</URN>
@@ -3649,8 +3641,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10350</ObjectID>
         <URN>urn:oma:lwm2m:x:10350</URN>
@@ -3664,8 +3655,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10351</ObjectID>
         <URN>urn:oma:lwm2m:x:10351</URN>
@@ -3679,8 +3669,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10352</ObjectID>
         <URN>urn:oma:lwm2m:x:10352</URN>
@@ -3694,8 +3683,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10353</ObjectID>
         <URN>urn:oma:lwm2m:x:10353</URN>
@@ -3709,10 +3697,23 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10354</ObjectID>
+        <URN>urn:oma:lwm2m:x:10354</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>	
+    <Item>
+        <ObjectID>10355</ObjectID>
         <URN>urn:oma:lwm2m:x:10355</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
@@ -3724,8 +3725,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10356</ObjectID>
         <URN>urn:oma:lwm2m:x:10356</URN>
@@ -3739,8 +3739,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10357</ObjectID>
         <URN>urn:oma:lwm2m:x:10357</URN>
@@ -3754,10 +3753,23 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10358</ObjectID>
+        <URN>urn:oma:lwm2m:x:10358</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>	
+    <Item>
+        <ObjectID>10359</ObjectID>
         <URN>urn:oma:lwm2m:x:10359</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
@@ -3769,8 +3781,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10360</ObjectID>
         <URN>urn:oma:lwm2m:x:10360</URN>
@@ -3784,8 +3795,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10361</ObjectID>
         <URN>urn:oma:lwm2m:x:10361</URN>
@@ -3799,8 +3809,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10362</ObjectID>
         <URN>urn:oma:lwm2m:x:10362</URN>
@@ -3814,8 +3823,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10363</ObjectID>
         <URN>urn:oma:lwm2m:x:10363</URN>
@@ -3829,8 +3837,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
-	
+    </Item>	
     <Item>
         <ObjectID>10364</ObjectID>
         <URN>urn:oma:lwm2m:x:10364</URN>
@@ -3845,7 +3852,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10365</ObjectID>
         <URN>urn:oma:lwm2m:x:10365</URN>
@@ -3860,7 +3866,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10366</ObjectID>
         <URN>urn:oma:lwm2m:x:10366</URN>
