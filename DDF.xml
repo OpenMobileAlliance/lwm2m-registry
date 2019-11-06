@@ -3169,14 +3169,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10316</ObjectID>
         <URN>urn:oma:lwm2m:x:10316</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>RCU</Name>
+        <Description>This LWM2M Object includes RCU(Robotic Control Unit) information and the link to RCU APPs.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10316.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
