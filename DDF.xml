@@ -3156,7 +3156,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>10315</ObjectID>
         <URN>urn:oma:lwm2m:x:10315</URN>
         <Name>Robot</Name>
-        <Description>his LWM2M Object includes robot information and links to the location object.</Description>
+        <Description>This LWM2M Object includes robot information and links to the location object.</Description>
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
