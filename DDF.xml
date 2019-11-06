@@ -3440,9 +3440,9 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>TBC</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink></DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
