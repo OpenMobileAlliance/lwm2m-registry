@@ -3463,6 +3463,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10337</ObjectID>
         <URN>urn:oma:lwm2m:x:10337</URN>
+        <Name>Speaker</Name>
+        <Description>This LWM2M Object includes speaker information.</Description>
+        <Owner>CloudMinds</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10337.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10338</ObjectID>
+        <URN>urn:oma:lwm2m:x:10338</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
@@ -3471,20 +3485,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF></DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10338</ObjectID>
-        <URN>urn:oma:lwm2m:x:10338</URN>
-        <Name>Speaker</Name>
-        <Description>This LWM2M Object includes speaker information.</Description>
-        <Owner>CloudMinds</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF>10338.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
