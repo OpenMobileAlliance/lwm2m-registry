@@ -3617,14 +3617,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10348</ObjectID>
         <URN>urn:oma:lwm2m:x:10348</URN>
-        <Name>Fan PM</Name>
-        <Description>This LWM2M Object includes all PM items belongs to Fans.</Description>
-        <Owner>CloudMinds</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10348.xml</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
@@ -3754,17 +3754,16 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
-    <Item>
         <ObjectID>10358</ObjectID>
         <URN>urn:oma:lwm2m:x:10358</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Fan PM</Name>
+        <Description>This LWM2M Object includes all PM items belongs to Fans.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10358.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
