@@ -36,7 +36,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <Description1><![CDATA[Here lists all items of an alarm reported by the robot.]]></Description1>
     <ObjectID>10334</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10334</ObjectURN>
-    <LWM2MVersion>1.1</LWM2MVersion>
+    <LWM2MVersion>1.0</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
