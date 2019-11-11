@@ -60,7 +60,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>°C</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Battery Temperature.]]></Description>
       </Item>	  
 	  <Item ID="301">
@@ -142,7 +142,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>M/H</Units>
+        <Units>m/h</Units>
         <Description><![CDATA[The speed of the robot.]]></Description>
       </Item>
 	  <Item ID="602">
@@ -183,7 +183,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>°C</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Robot surface temperature, for example: the RCU temperature.]]></Description>
       </Item>
 	  <Item ID="608">
@@ -324,7 +324,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>M</Units>
+        <Units>m</Units>
         <Description><![CDATA[How long has the robot gone, for CloudCleanX and CloudPatrol.]]></Description>
       </Item>
 	  <Item ID="1114">
