@@ -85,7 +85,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<Mandatory>Mandatory</Mandatory>
 			<Type>Float</Type>
 			<RangeEnumeration>-100.0..100.0</RangeEnumeration>
-			<Units>°C</Units>
+			<Units>Cel</Units>
 			<Description>The Highest Temperature of the thermal imager.</Description>
 		</Item>
 		<Item ID="2">
@@ -95,7 +95,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<Mandatory>Mandatory</Mandatory>
 			<Type>Float</Type>
 			<RangeEnumeration>-100.0..100.0</RangeEnumeration>
-			<Units>°C</Units>
+			<Units>Cel</Units>
 			<Description>The Lowest Temperature of the thermal imager.</Description>
 		</Item>
 		<Item ID="3">
@@ -105,7 +105,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<Mandatory>Mandatory</Mandatory>
 			<Type>Float</Type>
 			<RangeEnumeration>-100.0..100.0</RangeEnumeration>
-			<Units>°C</Units>
+			<Units>Cel</Units>
 			<Description>The Average Temperature of the thermal imager.</Description>
 		</Item>
     </Resources>
