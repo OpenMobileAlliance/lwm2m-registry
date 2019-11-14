@@ -162,7 +162,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion phase 1 (Tension)]]>
             </Description>
@@ -174,7 +174,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonig Distortion phase 1 (Current)]]>
             </Description>
@@ -282,7 +282,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion phase 2 (Tension)]]>
             </Description>
@@ -294,7 +294,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion phase 2 (Current)]]>
             </Description>
@@ -402,7 +402,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion phase 3 (Tension)]]>
             </Description>
@@ -414,7 +414,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion phase 3 (Current)]]>
             </Description>

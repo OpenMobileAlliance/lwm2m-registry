@@ -12,7 +12,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-15</RangeEnumeration>
+				<RangeEnumeration>0..15</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The UI state of the vehicle. 0: idle 1: driving 2: charging 3: limp-home 4-15: reserved for future use]]></Description>
 			</Item>
@@ -30,7 +30,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Current shift status of the vehicle. 0: Neutral 1: Forward 2: Reverse]]></Description>
 			</Item>
@@ -39,8 +39,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>
 				<Description><![CDATA[Current position of the accelerator pedal.]]></Description>
 			</Item>
 			<Item ID="4"><Name>Vehicle Power</Name>
@@ -93,7 +93,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-15</RangeEnumeration>
+				<RangeEnumeration>0..15</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Charging status of the vehicle. 1: non-charge mode 2: charging 3: charge completed 4: charging abort abnormally ]]></Description>
 			</Item>
@@ -156,8 +156,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>			
 				<Description><![CDATA[SOC(state of charge) of the battery pack]]></Description>
 			</Item>
 			<Item ID="17"><Name>Battery Pack SOH</Name>
@@ -165,8 +165,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>
 				<Description><![CDATA[SOH(state of health) of the battery pack]]></Description>
 			</Item>
 			<Item ID="18"><Name>Battery Cell MinVolt</Name>
