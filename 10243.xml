@@ -162,7 +162,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion (Tension)]]>
             </Description>
@@ -174,7 +174,7 @@
             <Mandatory>Optional</Mandatory>
             <Type>Float</Type>
             <RangeEnumeration/>
-            <Units>%</Units>
+            <Units>/100</Units>
             <Description>
                 <![CDATA[Total Harmonic Distortion (Current)]]>
             </Description>

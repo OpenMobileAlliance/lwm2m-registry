@@ -89,7 +89,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration>0..100</RangeEnumeration>
-                <Units>%</Units>
+                <Units>/100</Units>
                 <Description>Brightness control, integer value between 0 and 100 as a percentage.</Description>
             </Item>
             <Item ID="5531">
@@ -99,7 +99,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration>0..100</RangeEnumeration>
-                <Units>%</Units>
+                <Units>/100</Units>
                 <Description>Proportional control, integer value between 0 and 100 as a percentage.</Description>
             </Item>
             <Item ID="5750">

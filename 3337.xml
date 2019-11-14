@@ -29,7 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Float</Type>
                 <RangeEnumeration>0..100</RangeEnumeration>
-                <Units>%</Units>
+                <Units>/100</Units>
                 <Description>Current position or desired position of a positioner actuator.</Description>
             </Item>
             <Item ID="5537">
