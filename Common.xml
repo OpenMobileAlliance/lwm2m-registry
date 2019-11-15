@@ -3446,14 +3446,14 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item>
       
-      <Item ID="6043">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+      <Item ID="6043">
+        <Name>Measured Particle Size</Name>
+        <Operations>R</Operations>
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description></Description>
+        <Units>m</Units>
+        <Submitter>OpenLX SP Ltd</Submitter>
+        <Description><![CDATA[Size of the particle that the sensor is measuring]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
@@ -3526,6 +3526,18 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Units></Units>
         <Submitter>Vaisala</Submitter>
         <Description><![CDATA[Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      
+      <Item ID="6050">    
+        <Name>Fractional Timestamp</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
+        <RangeEnumeration>0..1</RangeEnumeration>
+        <Units>s</Units>
+        <Submitter>Vaisala</Submitter>
+        <Description><![CDATA[Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
