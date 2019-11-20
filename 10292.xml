@@ -167,7 +167,7 @@
       <MultipleInstances>Single</MultipleInstances>
       <Mandatory>Mandatory</Mandatory>
        <Type>Float</Type>
-      <RangeEnumeration>0.0-86400.0</RangeEnumeration>
+      <RangeEnumeration>0.0..86400.0</RangeEnumeration>
       <Units>s</Units>
       <Description>How often the inputs are read/sampled.This value can be changed by doing a write command</Description>
       </Item>
