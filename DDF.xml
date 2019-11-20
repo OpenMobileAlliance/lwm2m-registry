@@ -2527,7 +2527,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:x:10259</URN>
         <Name>System Log</Name>
         <Description>This object provides read access to log buffers as well as limited configuration of logging services.</Description>
-        <Owner>NetComm Wireless Limited</Owner>
+        <Owner>Casa Systems</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>10259.xml</DDF>
@@ -2541,7 +2541,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:x:10260</URN>
         <Name>Runtime Database</Name>
         <Description>This object allows manipulation of Runtime Database variables. Object deprecated with version 2.0 due to incorrect Type/Operation combination.</Description>
-        <Owner>NetComm Wireless Limited</Owner>
+        <Owner>Casa Systems</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>10260.xml</DDF>
@@ -2555,7 +2555,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:x:10260:2.0</URN>
         <Name>RDB</Name>
         <Description>This object allows manipulation of Runtime Database variables.</Description>
-        <Owner>NetComm Wireless Limited</Owner>
+        <Owner>Casa Systems</Owner>
         <Source>2</Source>
         <Ver>2.0</Ver>
         <DDF>10260-2_0.xml</DDF>
@@ -3869,6 +3869,34 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10366</ObjectID>
         <URN>urn:oma:lwm2m:x:10366</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10367</ObjectID>
+        <URN>urn:oma:lwm2m:x:10367</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10368</ObjectID>
+        <URN>urn:oma:lwm2m:x:10368</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
