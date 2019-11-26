@@ -3069,6 +3069,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>10308</ObjectID>
+        <URN>urn:oma:lwm2m:x:10308:2.0</URN>
+        <Name>AT&amp;T Connectivity Extension</Name>
+        <Description>The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.</Description>
+        <Owner>AT&amp;T</Owner>
+        <Source>2</Source>
+        <Ver>2.0</Ver>
+        <DDF>10308-2_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>	
+    <Item>
         <ObjectID>10309</ObjectID>
         <URN>urn:oma:lwm2m:x:10309</URN>
         <Name>Shareparkinglot</Name>
@@ -3869,20 +3883,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10366</ObjectID>
         <URN>urn:oma:lwm2m:x:10366</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10367</ObjectID>
-        <URN>urn:oma:lwm2m:x:10367</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
