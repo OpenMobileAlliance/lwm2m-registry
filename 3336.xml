@@ -79,9 +79,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
-                <RangeEnumeration>0-360</RangeEnumeration>
-                <Units>degree</Units>
-                <Description>Measured Direction.</Description>
+                <RangeEnumeration>0..360</RangeEnumeration>
+                <Units>deg</Units>
+                <Description>The measured compass direction.</Description>
             </Item>
             <Item ID="5517">
                 <Name>Velocity</Name>
@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>The timestamp of when the location measurement was performed.</Description>
+                <Description>The timestamp of when the measurement was performed.</Description>
             </Item>
             <Item ID="5750">
                 <Name>Application Type</Name>

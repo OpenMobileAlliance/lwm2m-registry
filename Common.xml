@@ -18,7 +18,7 @@
         <Submitter>OMA</Submitter>
         <!-- Description of the reusable resource -->
         <Description>
-          <![CDATA[The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bits unsigned integers following the Network Byte Order convention. The Most Significant Halfword is an ObjectID, the Least Significant Hafword is an ObjectInstance ID.An Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values (null link. Test 5]]>
+          <![CDATA[The object link is used to refer an Instance of a given Object. An Object link value is composed of two concatenated 16-bit unsigned integers following the Network Byte Order convention. The Most Significant Halfword is an Object ID, the Least Significant Halfword is an Object Instance ID. An Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values.]]>
         </Description>
         <!-- Link to the technical specification (word, pdf etc.) -->
         <TS></TS>
@@ -246,7 +246,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The polarity of a digital input as a Boolean (0 = Normal, 1= Reversed)]]></Description>
+        <Description><![CDATA[The polarity of the digital input as a Boolean (False = Normal, True = Reversed).]]></Description>
         
         <TS></TS>
         
@@ -286,13 +286,13 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-3</RangeEnumeration>
+        <RangeEnumeration>1..3</RangeEnumeration>
         
         <Units></Units>
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge)]]></Description>
+        <Description><![CDATA[The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).]]></Description>
         
         <TS></TS>
         
@@ -315,7 +315,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Reset the Counter value]]></Description>
+        <Description><![CDATA[Reset the Counter value.]]></Description>
         
          <TS></TS>
         
@@ -354,13 +354,13 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-1</RangeEnumeration>
+        <RangeEnumeration>0..1</RangeEnumeration>
 
         <Units>s</Units>
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[For shorter times of a fraction of a second (i.e. 0.23).]]></Description>
+        <Description><![CDATA[Fractional part of the time when sub-second precision is used (e.g., 0.23 for 230 ms).]]></Description>
         
         <TS></TS>
         
@@ -606,7 +606,7 @@
 
         <Description>
 
-          <![CDATA[The timestamp of when the location measurement was performed.]]>
+          <![CDATA[The timestamp of when the measurement was performed.]]>
 
         </Description>
         
@@ -699,7 +699,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Audio Clip that is playable (i.e. short audio recording indicating the floor in an elevator).]]></Description>
+        <Description><![CDATA[Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).]]></Description>
         
         <TS></TS>
         
@@ -781,7 +781,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-4</RangeEnumeration>
+        <RangeEnumeration>0..4</RangeEnumeration>
 
         <Units></Units>
 
@@ -897,9 +897,9 @@
  
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -1012,9 +1012,9 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
         
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -1241,9 +1241,9 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -1270,7 +1270,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The current state of a digital output]]></Description>
+        <Description><![CDATA[The current state of a digital output.]]></Description>
         
          <TS></TS>
         
@@ -1293,7 +1293,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The polarity of a digital input as a Boolean (False = Normal, True = Reversed)]]></Description>
+        <Description><![CDATA[The polarity of the digital output as a Boolean (False = Normal, True = Reversed).]]></Description>
         
         <TS></TS>
         
@@ -1447,7 +1447,7 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-1</RangeEnumeration>
+        <RangeEnumeration>0..1</RangeEnumeration>
 
         <Units></Units>
 
@@ -1498,7 +1498,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
+        <Description><![CDATA[Measurement Units Definition.]]></Description>
         
          <TS></TS>
         
@@ -1583,13 +1583,13 @@
 
         <Type>Float</Type>
 
-        <RangeEnumeration>0-360</RangeEnumeration>
+        <RangeEnumeration>0..360</RangeEnumeration>
 
-        <Units>degree</Units>
+        <Units>deg</Units>
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The compass direction.]]></Description>
+        <Description><![CDATA[The measured compass direction.]]></Description>
         
         <TS></TS>
         
@@ -1658,7 +1658,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The type of the sensor (for instance PIR type)]]></Description>
+        <Description><![CDATA[The type of the sensor (for instance PIR type).]]></Description>
         
         <TS></TS>
         
@@ -1681,7 +1681,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The current active power]]></Description>
+        <Description><![CDATA[The current active power.]]></Description>
         
         <TS></TS>
         
@@ -1704,7 +1704,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum active power measured by the sensor since it is ON]]></Description>
+        <Description><![CDATA[The minimum active power measured by the sensor since it is ON.]]></Description>
         
         <TS></TS>
         
@@ -1727,7 +1727,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum active power measured by the sensor since it is ON]]></Description>
+        <Description><![CDATA[The maximum active power measured by the sensor since it is ON.]]></Description>
         
         <TS></TS>
         
@@ -1750,7 +1750,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum active power that can be measured by the sensor]]></Description>
+        <Description><![CDATA[The minimum active power that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1773,7 +1773,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum active power that can be measured by the sensor]]></Description>
+        <Description><![CDATA[The maximum active power that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1796,7 +1796,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The cumulative active power since the last cumulative energy reset or device start]]></Description>
+        <Description><![CDATA[The cumulative active power since the last cumulative energy reset or device start.]]></Description>
         
         <TS></TS>
         
@@ -1842,7 +1842,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The current reactive power]]></Description>
+        <Description><![CDATA[The current reactive power.]]></Description>
         
          <TS></TS>
         
@@ -1865,7 +1865,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum reactive power measured by the sensor since it is ON]]></Description>
+        <Description><![CDATA[The minimum reactive power measured by the sensor since it is ON.]]></Description>
         
         <TS></TS>
         
@@ -1888,7 +1888,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum reactive power measured by the sensor since it is ON]]></Description>
+        <Description><![CDATA[The maximum reactive power measured by the sensor since it is ON.]]></Description>
         
        <TS></TS>
         
@@ -1911,7 +1911,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum active power that can be measured by the sensor]]></Description>
+        <Description><![CDATA[The minimum active power that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1934,7 +1934,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum reactive power that can be measured by the sensor]]></Description>
+        <Description><![CDATA[The maximum reactive power that can be measured by the sensor.]]></Description>
         
          <TS></TS>
         
@@ -1957,7 +1957,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The cumulative reactive power since the last cumulative energy reset or device start]]></Description>
+        <Description><![CDATA[The cumulative reactive power since the last cumulative energy reset or device start.]]></Description>
         
          <TS></TS>
         
@@ -2026,7 +2026,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Read or Write the current calibration coefficient]]></Description>
+        <Description><![CDATA[Read or Write the current calibration coefficient.]]></Description>
         
         <TS></TS>
         
@@ -2049,7 +2049,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Reset both cumulative active/reactive power]]></Description>
+        <Description><![CDATA[Reset both cumulative active/reactive power.]]></Description>
         
         <TS></TS>
         
@@ -2095,7 +2095,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Time when the load control event will start started.]]></Description>
+        <Description><![CDATA[Time when the event started.]]></Description>
         
         <TS></TS>
         
@@ -2118,7 +2118,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The duration of the load control event.]]></Description>
+        <Description><![CDATA[The duration of the event in minutes.]]></Description>
         
          <TS></TS>
         
@@ -2135,7 +2135,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-3</RangeEnumeration>
+        <RangeEnumeration>0..3</RangeEnumeration>
 
         <Units></Units>
 
@@ -2158,9 +2158,9 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -2181,9 +2181,9 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -2210,7 +2210,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[This resource represents an on/off actuator, which can be controlled, the setting of which is a Boolean value where True is On and False is Off. ]]></Description>
+        <Description><![CDATA[On/off control. Boolean value where True is On and False is Off.]]></Description>
         
         <TS></TS>
         
@@ -2227,9 +2227,9 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-100</RangeEnumeration>
+        <RangeEnumeration>0..100</RangeEnumeration>
 
-        <Units>%</Units>
+        <Units>/100</Units>
 
         <Submitter>IPSO</Submitter>
 
@@ -2279,7 +2279,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[A string describing a state for multiple level output such as Pilot Wire]]></Description>
+        <Description><![CDATA[A string describing a state for multiple level output such as Pilot Wire.]]></Description>
         
          <TS></TS>
         
@@ -2325,7 +2325,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The setpoint value expressed in the unit defined by the "Sensor Units" resource if present..]]></Description>
+        <Description><![CDATA[The setpoint value expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
          <TS></TS>
         
@@ -2348,7 +2348,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Delay from the detection state to the clear state in ms]]></Description>
+        <Description><![CDATA[Delay from the detection state to the clear state in ms.]]></Description>
         
         <TS></TS>
         
@@ -2459,7 +2459,7 @@
 
         <Submitter>ATT</Submitter>
 
-        <Description><![CDATA[Current software version of the host device. (manufacturer specified string).]]></Description>
+        <Description><![CDATA[Current software version of the host device (manufacturer specified string).]]></Description>
         
         <TS></TS>
         
@@ -2504,7 +2504,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Reset the Bitmap Input value]]></Description>
+        <Description><![CDATA[Reset the Bitmap Input value.]]></Description>
         
         <TS></TS>
         
@@ -2527,7 +2527,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc]]></Description>
+        <Description><![CDATA[The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc.]]></Description>
         
          <TS></TS>
         
@@ -2544,9 +2544,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-864000</RangeEnumeration>
+        <RangeEnumeration>1..864000</RangeEnumeration>
         
-        <Units>Seconds</Units>
+        <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
@@ -2566,9 +2566,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>0-86399</RangeEnumeration>
+        <RangeEnumeration>0..86399</RangeEnumeration>
         
-         <Units>Seconds</Units>
+         <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
@@ -2966,9 +2966,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
  
         <Type>Integer</Type>
 
-        <RangeEnumeration>1-864000</RangeEnumeration>
+        <RangeEnumeration>1..864000</RangeEnumeration>
         
-        <Units>Seconds</Units>
+        <Units>s</Units>
         
         <Submitter>South East Water Corporation</Submitter>
 
@@ -3076,7 +3076,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>100-255</RangeEnumeration>
+        <RangeEnumeration>100..255</RangeEnumeration>
         
         <Units></Units>
         
@@ -3414,8 +3414,8 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Name>Sample Frequency</Name>     
         <Operations>RW</Operations>     
         <Type>Float</Type>
-        <RangeEnumeration>0.0-86400.0</RangeEnumeration>
-        <Units>Seconds</Units>
+        <RangeEnumeration>0.0..86400.0</RangeEnumeration>
+        <Units>s</Units>
         <Submitter>South East Water Corporation</Submitter>
         <Description>How often the inputs are read/sampled.This value can be changed by doing a write command</Description>
         <TS></TS>

@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The polarity of a digital ouput as a Boolean (0 = Normal, 1= Reversed).</Description>
+				<Description>The polarity of the digital output as a Boolean (False = Normal, True = Reversed).</Description>
 			</Item>
 			<Item ID="5750">
 				<Name>Application Type</Name>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The application type of the output as a string, for instance, “LED”</Description>
+				<Description>The application type of the output as a string, for instance, "LED"</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

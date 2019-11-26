@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The polarity of the digital input as a Boolean (0 = Normal, 1= Reversed)</Description>
+				<Description>The polarity of the digital input as a Boolean (False = Normal, True = Reversed).</Description>
 			</Item>
 			<Item ID="5503">
 				<Name>Digital Input Debounce</Name>
@@ -81,7 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description>The debounce period in ms. .</Description>
+				<Description>The debounce period in ms.</Description>
 			</Item>
 			<Item ID="5504">
 				<Name>Digital Input Edge Selection</Name>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-3</RangeEnumeration>
+				<RangeEnumeration>1..3</RangeEnumeration>
 				<Units></Units>
 				<Description>The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).</Description>
 			</Item>
@@ -111,7 +111,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The application type of the sensor or actuator as a string, for instance, “Air Pressure”</Description>
+				<Description>The application type of the sensor or actuator as a string, for instance, "Air Pressure"</Description>
 			</Item>
 			<Item ID="5751">
 				<Name>Sensor Type</Name>

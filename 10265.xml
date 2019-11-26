@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-3</RangeEnumeration>
+                <RangeEnumeration>0..3</RangeEnumeration>
                 <Units></Units>
                 <Description><![CDATA[Detection Mode is a readable and writeable resource used to indicate which mode to run the leak detection sensor. Values are one of:-
 0. Disabled
@@ -96,7 +96,7 @@ All Frequency Values(3)  for this mode, all frequency values for all frequency b
                 <MultipleInstances>Multiple</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-999</RangeEnumeration>
+                <RangeEnumeration>0..999</RangeEnumeration>
                 <Units></Units>
                 <Description><![CDATA[Frequency Thresholds is a multiple value readable and writeable resource used to represent upper bound thresholds for each of the frequency bands configured on the daughter board. Being a multiple value resource, this resource only needs to contain the values that are required to override the default values provided by the daughter board firmware.  As an example if the frequency threshold for band 7 and band 52 needs to be overridden, then this resource should just contain those two values:-
 /TBD/0/4/7 = 123

@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Load Control</Name>
-		<Description1>Description: This Object is used for demand-response load control and other load control in automation application (not limited to power).</Description1>
+		<Description1>This Object is used for demand-response load control and other load control in automation application (not limited to power).</Description1>
 		<ObjectID>3310</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3310</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Time when the load control event will start started.</Description>
+				<Description>Time when the event started.</Description>
 			</Item>
 			<Item ID="5825">
 				<Name>Duration In Min</Name>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>min</Units>
-				<Description>The duration of the load control event.</Description>
+				<Description>The duration of the event in minutes.</Description>
 			</Item>
 			<Item ID="5826">
 				<Name>Criticality Level</Name>
@@ -78,9 +78,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-3</RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
-				<Description>The criticality of the event.  The device receiving the event will react in an appropriate fashion for the device.</Description>
+				<Description>The criticality of the event. The device receiving the event will react in an appropriate fashion for the device.</Description>
 			</Item>
 			<Item ID="5827">
 				<Name>Avg Load AdjPct</Name>
@@ -88,9 +88,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
-				<Description>Defines the maximum energy usage of the receivng device, as a percentage of the device's normal maximum energy usage.</Description>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>
+				<Description>Defines the maximum energy usage of the receiving device, as a percentage of the device's normal maximum energy usage.</Description>
 			</Item>
 			<Item ID="5828">
 				<Name>Duty Cycle</Name>
@@ -98,8 +98,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>
 				<Description>Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.</Description>
 			</Item>
 		</Resources>

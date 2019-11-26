@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Timer</Name>
-        <Description1>This IPSO object is used to time events and actions, using patterns common to industrial timers. A POST to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (tmode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.
+        <Description1>This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.
         </Description1>
         <ObjectID>3340</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3340</ObjectURN>
@@ -91,7 +91,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>On/off control for the timer input, 0=OFF, 1=ON.</Description>
+                <Description>On/off control. Boolean value where True is On and False is Off.</Description>
             </Item>
             <Item ID="5501">
                 <Name>Digital Input Counter</Name>
@@ -139,7 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0-4</RangeEnumeration>
+                <RangeEnumeration>0..4</RangeEnumeration>
                 <Units></Units>
                 <Description>Type of timer pattern used by the patterns.</Description>
             </Item>

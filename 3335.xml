@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Measurement Units Definition e.g. “Cel” for Temperature in Celsius.</Description>
+                <Description>Measurement Units Definition.</Description>
             </Item>
             <Item ID="5750">
                 <Name>Application Type</Name>

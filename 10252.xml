@@ -105,7 +105,7 @@ limitations under the License.
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-8</RangeEnumeration>
+        <RangeEnumeration>0..8</RangeEnumeration>
         <Units>
         </Units>
         <Description><![CDATA[Current state of manifest processing
@@ -126,7 +126,7 @@ limitations under the License.
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0-19</RangeEnumeration>
+        <RangeEnumeration>0..19</RangeEnumeration>
         <Units>
         </Units>
         <Description><![CDATA[Final result of the device processing a manifest.

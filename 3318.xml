@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Frequency</Name>
-        <Description1>This IPSO object should be used to report frequency measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts (ucum: Hz).
+        <Description1>This IPSO object should be used to report frequency measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is hertz.
         </Description1>
         <ObjectID>3318</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3318</ObjectURN>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Measurement Units Definition e.g. “Cel” for Temperature in Celsius</Description>
+                <Description>Measurement Units Definition.</Description>
             </Item>
             <Item ID="5601">
                 <Name>Min Measured Value</Name>

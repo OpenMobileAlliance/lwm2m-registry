@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0-1</RangeEnumeration>
+				<RangeEnumeration>0..1</RangeEnumeration>
 				<Units></Units>
 				<Description>The current state of the analogue output.</Description>
 			</Item>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the application type of the actuator as a string, for instance, “Valve”</Description>
+				<Description>If present, the application type of the actuator as a string, for instance, "Valve"</Description>
 			</Item>
 			<Item ID="5603">
 				<Name>Min Range Value</Name>

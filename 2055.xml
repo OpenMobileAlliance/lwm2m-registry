@@ -31,7 +31,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>Byte</Units>
+				<Units>B</Units>
 				<Description><![CDATA[Minimum amount of data that needs to be aggregated before any of the Underlying Networks matching with the targetNetwork Resource of the current Instance of the  CmdhNwAccessRule Object can be used for forwarding information to other CSEs.]]></Description>
 			</Item>
 			<Item ID="3"><Name>BackOffParameters</Name>

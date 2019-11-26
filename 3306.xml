@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>On/Off</Description>
+				<Description>On/off control. Boolean value where True is On and False is Off.</Description>
 			</Item>
 			<Item ID="5851">
 				<Name>Dimmer</Name>
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-100</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>/100</Units>
 				<Description>This resource represents a light dimmer setting, which has an Integer value between 0 and 100 as a percentage.</Description>
 			</Item>
 			<Item ID="5852">
@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The Application type of the device, for example “Motion Closure”.</Description>
+				<Description>The Application type of the device, for example "Motion Closure".</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

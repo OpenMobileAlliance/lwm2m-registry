@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>On/Off control for the stopwatch, True=ON, False=OFF.</Description>
+				<Description>On/off control. Boolean value where True is On and False is Off.</Description>
 			</Item>
 			<Item ID="5501">
 				<Name>Digital Input Counter</Name>

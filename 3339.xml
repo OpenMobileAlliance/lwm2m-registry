@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Opaque</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Audio Clip that is playable (i.e. short audio recording indicating the floor in an elevator).</Description>
+                <Description>Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).</Description>
             </Item>
             <Item ID="5523">
                 <Name>Trigger</Name>
@@ -68,8 +68,8 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Float</Type>
-                <RangeEnumeration>0-100</RangeEnumeration>
-                <Units>%</Units>
+                <RangeEnumeration>0..100</RangeEnumeration>
+                <Units>/100</Units>
                 <Description>Audio volume control, float value between 0 and 100 as a percentage.</Description>
             </Item>
             <Item ID="5524">
