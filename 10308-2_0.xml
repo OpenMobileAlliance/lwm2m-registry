@@ -37,9 +37,9 @@ www.att.com
         <Name>AT&amp;T Connectivity Extension</Name>
         <Description1><![CDATA[The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.]]></Description1>
         <ObjectID>10308</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10308</ObjectURN>
+        <ObjectURN>urn:oma:lwm2m:x:10308:2.0</ObjectURN>
         <LWM2MVersion>1.0</LWM2MVersion>
-        <ObjectVersion>1.0</ObjectVersion>
+        <ObjectVersion>2.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
