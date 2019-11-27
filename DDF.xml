@@ -3072,7 +3072,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>10308</ObjectID>
         <URN>urn:oma:lwm2m:x:10308:2.0</URN>
         <Name>AT&amp;T Connectivity Extension</Name>
-        <Description>The AT&T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&T Connectivity Extension Object is an open and standard object used by AT&T.</Description>
+        <Description>The AT&amp;T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&amp;T Connectivity Extension Object is an open and standard object used by AT&amp;T.</Description>
         <Owner>AT&amp;T</Owner>
         <Source>2</Source>
         <Ver>2.0</Ver>
