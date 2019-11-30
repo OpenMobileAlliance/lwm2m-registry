@@ -180,7 +180,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>°C</Units>
+        <Units>Cel</Units>
         <Description><![CDATA[Battery Temperature.]]></Description>
       </Item>
     </Resources>
