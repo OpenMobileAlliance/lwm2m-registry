@@ -109,7 +109,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>M/H</Units>
+        <Units>m/h</Units>
         <Description><![CDATA[The moving speed of the robot.]]></Description>
       </Item>
 	  <Item ID="8">
