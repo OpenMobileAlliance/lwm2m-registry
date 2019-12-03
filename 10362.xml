@@ -80,7 +80,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<Operations>E</Operations>
 			<MultipleInstances>Single</MultipleInstances>
 			<Mandatory>Mandatory</Mandatory>
-			<Type/>
+			<Type>Boolean</Type>
 			<RangeEnumeration/>
 			<Units/>
 			<Description><![CDATA[Enable/Disable Drop Detection: Parameter: 1:Enable, 0:Disable]]></Description>
