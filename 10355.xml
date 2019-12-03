@@ -33,7 +33,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
   <Object ObjectType="MODefinition">
     <Name>General Info</Name>
-    <Description1><![CDATA[This LWM2M Object contains the referrence to all general info objects.]]></Description1>
+    <Description1><![CDATA[This LWM2M Object contains the referrence to all general info objects of the robot.]]></Description1>
     <ObjectID>10355</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10355</ObjectURN>
     <LWM2MVersion>1.0</LWM2MVersion>
@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<RangeEnumeration/>
 		<Units/>
 		<Description>
-		  <![CDATA[Contains the reference to the Robot.]]>
+		  <![CDATA[Contains the reference to the Robot General Info.]]>
 		</Description>
 	  </Item>
 	  <Item ID="101">
@@ -62,7 +62,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<RangeEnumeration/>
 		<Units/>
 		<Description>
-		  <![CDATA[Contains the reference to the RCU of the Robot.]]>
+		  <![CDATA[Contains the reference to the RCU General info of the Robot.]]>
 		</Description>
 	  </Item>
 	  <Item ID="102">
@@ -74,7 +74,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<RangeEnumeration/>
 		<Units/>
 		<Description>
-		  <![CDATA[Contains the reference to CCUs of the Robot.]]>
+		  <![CDATA[Contains the reference to general info of CCUs of the Robot.]]>
 		</Description>
 	  </Item>
 	  <Item ID="103">
@@ -86,7 +86,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<RangeEnumeration/>
 		<Units/>
 		<Description>
-		  <![CDATA[Contains the reference to ECUs of the Robot.]]>
+		  <![CDATA[Contains the reference to general info of ECUs of the Robot.]]>
 		</Description>
 	  </Item>
     </Resources>
