@@ -79,7 +79,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Total Memory Size of the CCU (expressed in gigabyte).]]></Description>
       </Item>	  
 	  <Item ID="5">
@@ -89,7 +89,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Total storage of the CCU.]]></Description>
       </Item>
 	  <Item ID="6">
@@ -99,7 +99,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Available storage of the CCU.]]></Description>
       </Item>
 	  
