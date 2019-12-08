@@ -48,7 +48,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The CPU usage of the RCU.]]></Description>
       </Item>
 	  <Item ID="2">
@@ -58,7 +58,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Max CPU Usage of the RCU.]]></Description>
       </Item>
       <Item ID="3">
@@ -68,7 +68,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Memory Usage of the RCU.]]></Description>
       </Item>
       <Item ID="4">
@@ -78,7 +78,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Storage Usage of the RCU.]]></Description>
       </Item>
 	  
@@ -89,7 +89,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The Battery Level of the RCU.]]></Description>
       </Item>
       <Item ID="52">
@@ -159,7 +159,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Packet Loss Rate in percentage.]]></Description>
       </Item>
       <Item ID="59">
