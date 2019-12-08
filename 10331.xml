@@ -89,7 +89,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>String</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The Volume of the speaker.]]></Description>
       </Item>	  
       <Item ID="6">
