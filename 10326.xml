@@ -48,7 +48,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Referrence to a PM item, similar with Corelnk in LwM2M 1.1, 
 			&lt;/object ID/object instance ID/resoure ID&gt;, for example:&lt;/10315/0/2&gt;]]></Description>
       </Item>
@@ -80,7 +80,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Environment Humidity.]]></Description>
       </Item>
       <Item ID="303">
@@ -133,8 +133,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Units>ug/m3</Units>
         <Description><![CDATA[PM10 of the environment.]]></Description>
       </Item>
-	  
-	  
       <Item ID="601">
         <Name>Speed</Name>
         <Operations>R</Operations>
@@ -152,7 +150,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The percentage of water used for CloudCleanX.]]></Description>
       </Item>
 	  <Item ID="603">
@@ -162,7 +160,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The percentage of Dust Box Space used for CloudCleanX.]]></Description>
       </Item>
 	  <Item ID="604">
@@ -193,7 +191,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The Confidence Index of the robot.]]></Description>
       </Item>	  
 	  
