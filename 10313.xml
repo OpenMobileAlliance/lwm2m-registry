@@ -33,11 +33,11 @@ POSSIBILITY OF SUCH DAMAGE.
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
-        <Name>Daily Maximum Flow Rate Readings</Name>
-        <Description1><![CDATA[Measures the maximum flow rate and its time stamp for specified period]]></Description1>
-        <ObjectID>10267</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10267</ObjectURN>
-        <MultipleInstances>Multiple</MultipleInstances>
+        <Name>Gas Readings</Name>
+        <Description1><![CDATA[Object to periodically log readings from any gas sensor (eg H2S, VOCx, methane etc)]]></Description1>
+        <ObjectID>10313</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:x:10313</ObjectURN><LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion><MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="6000">
@@ -237,8 +237,17 @@ The payload data can be provided in an implementation specific serialisation, bu
 If for some implementation specific reason, there are missing intervals in the sequence, the payload may consist of multiple blocks of the above serialised data (appended into a single binary opaque value), each block representing a continuous series of interval data.
 ]]></Description>
             </Item>
+			<Item ID="6041">
+				<Name>Sensor Warm-up Time</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..86400</RangeEnumeration>
+				<Units>s</Units>
+				<Description><![CDATA[Warm-up (wait) time before sensor value is read]]></Description>
+			</Item>
         </Resources>
         <Description2></Description2>
     </Object>
 </LWM2M>
-

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- BSD-3 Clause License
-
-Copyright 2019 Open Mobile Alliance. 
+<?xml version="1.0" encoding="utf-8"?><!--Copyright 2019 ICA. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -29,50 +25,55 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
 LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
--->
 
-<LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+The above license is used as a license under copyright only. Please
+reference the company patent licensing terms:
+www.ica-alliance.org 
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Digital Output</Name>
-		<Description1>Generic digital output for non-specific actuators</Description1>
-		<ObjectID>3201</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3201</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
-                <ObjectVersion>1.0</ObjectVersion>
+		<Name>Manhole Cover</Name>
+		<Description1><![CDATA[Describe the status of a manhole cover.]]></Description1>
+		<ObjectID>3408</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3408</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
-			<Item ID="5550">
-				<Name>Digital Output State</Name>
-				<Operations>RW</Operations>
+			<Item ID="1">
+				<Name>Safety Angle Threshold</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..180</RangeEnumeration>
+				<Units>rad</Units>
+				<Description><![CDATA[The threshold of manhole cover's safety angle.]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>Manhole Cover Tilt</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..180</RangeEnumeration>
+				<Units>rad</Units>
+				<Description><![CDATA[The tilt angle of a manhole cover.]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>Cover Open Status</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The current state of a digital output.</Description>
+				<Description><![CDATA[Indicate whether an open status of the manhole cover is detected. Not detected open [true] or Detected open [false].]]></Description>
 			</Item>
-			<Item ID="5551">
-				<Name>Digital Output Polarity</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description>The polarity of the digital output as a Boolean (False = Normal, True = Reversed).</Description>
-			</Item>
-			<Item ID="5750">
-				<Name>Application Type</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description>The application type of the output as a string, for instance, "LED"</Description>
-			</Item>
+			
+			
 		</Resources>
-		<Description2></Description2>
+		<Description2 />
 	</Object>
 </LWM2M>
