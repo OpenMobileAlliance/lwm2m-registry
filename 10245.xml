@@ -68,7 +68,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration>-180..180</RangeEnumeration>
-                <Units>degrees</Units>
+                <Units>deg</Units>
                 <Description>Orientation of CrowdBox with respect to magnetic north. The reference orientation of the CrowdBox shall be the pointing direction of the eNB antenna(s) or, in the case of an omni-directional CrowdBox antenna, as defined in the accompanying product documentation.</Description>
             </Item>
             <Item ID="3">
