@@ -35,7 +35,7 @@ www.ica-alliance.org
 		<Name>Smoke Alarm</Name>
 		<Description1><![CDATA[This is an alarm that should be raised if the meter detects CO2 concentration above a pre-configured threshold.]]></Description1>
 		<ObjectID>3407</ObjectID>
-		<ObjectURN></ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3407</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion />
 		<MultipleInstances>Multiple</MultipleInstances>
@@ -47,8 +47,8 @@ www.ica-alliance.org
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0.00-100.00</RangeEnumeration>
-				<Units>%</Units>
+				<RangeEnumeration>0.00..100.00</RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Current remaining battery level]]></Description>
 			</Item>
 			<Item ID="6045">
@@ -67,22 +67,22 @@ www.ica-alliance.org
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration>Normal (0) or Smoke detected (1)</RangeEnumeration>
+				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Indicate current smoke sensor state]]></Description>
 			</Item>
 			<Item ID="6047">
-				<Name>CO2</Name>
+				<Name>Detected CO2 percentage</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0.00-100.00</RangeEnumeration>
+				<RangeEnumeration>0.00..100.00</RangeEnumeration>
 				<Units>%</Units>
-				<Description><![CDATA[Current detected CO2 percentage]]></Description>
+				<Description><![CDATA[Current level of detected CO2 as a percentage of concentration]]></Description>
 			</Item>
 			<Item ID="6048">
-				<Name>Decibel Value</Name>
+				<Name>Alarm loudness</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
