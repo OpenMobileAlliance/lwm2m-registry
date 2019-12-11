@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0.00..100.00</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description><![CDATA[Current level of detected CO2 as a percentage of concentration]]></Description>
 			</Item>
 			<Item ID="6048">
