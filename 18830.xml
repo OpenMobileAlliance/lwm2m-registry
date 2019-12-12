@@ -122,7 +122,7 @@ https://ioterop.com/
             </Item>
             <Item ID="7">
                 <Name>Public Key or Identity</Name>
-                <Operations>W</Operations>
+                <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Opaque</Type>
@@ -132,7 +132,7 @@ https://ioterop.com/
             </Item>
             <Item ID="8">
                 <Name>MQTT Broker Public Key</Name>
-                <Operations>W</Operations>
+                <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Opaque</Type>
