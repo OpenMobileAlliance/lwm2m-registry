@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<RangeEnumeration>0..256 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Hardware_Error, 1: Execution_Limit_LED_Temp, 2: Execution_Limit_Power_Restrictions,3: Light-Point_Malfunction]]></Description>
 			</Item>
@@ -106,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Remaining approximated time of any ongoing 'Set Intensity', 'Step' or 'Switch' process which requires a variation of the light output over a period of time higher or equal to one 100ms interval. When the process is started, the value is equal to the time value selected for the process and it is continuously decreased until completed (time=0), or a 'Stop Dimming' request is received.\n\t\t\t\t\n**NOTE:** If during a request the process reaches the Maximum/Minimum Intensity limits, the time is automatically set to '0' as the process is stopped. Scaling is 100ms per unit]]></Description>
 			</Item>
@@ -116,9 +116,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-18446744073709551615</RangeEnumeration>
-				<Units>Ws</Units>
-				<Description><![CDATA[The total energy usage of the device (accumulated value)]]></Description>
+				<RangeEnumeration>0..18446744073709551615</RangeEnumeration>
+				<Units>J</Units>
+				<Description><![CDATA[The total energy usage of the device (accumulated value). J is equivalent to Watt-seconds.]]></Description>
 			</Item>
 			<Item ID="911">
 				<Name>Actual Power Usage</Name>
@@ -126,7 +126,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-4294967295</RangeEnumeration>
+				<RangeEnumeration>0..4294967295</RangeEnumeration>
 				<Units>W</Units>
 				<Description><![CDATA[The actual power usage of the device. Scaling is 0.1W per unit]]></Description>
 			</Item>
@@ -136,7 +136,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-64 bytes</RangeEnumeration>
+				<RangeEnumeration>0..64 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The accuracy class of the energy sensor on the device (using either % accuracy or a letter that defines the accuracy class)]]></Description>
 			</Item>
@@ -146,7 +146,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-4294967295</RangeEnumeration>
+				<RangeEnumeration>0..4294967295</RangeEnumeration>
 				<Units>h</Units>
 				<Description><![CDATA[The total operating hours where the light point is on.]]></Description>
 			</Item>
@@ -156,7 +156,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-4294967295</RangeEnumeration>
+				<RangeEnumeration>0..4294967295</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The total operating hours adjusted by the dim level of the luminaire.]]></Description>
 			</Item>
