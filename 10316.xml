@@ -108,7 +108,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[ROM Size of the RCU (expressed in gigabyte).]]></Description>
       </Item>
 	  <Item ID="8">
@@ -118,7 +118,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Available ROM Size of the RCU (expressed in gigabyte).]]></Description>
       </Item>
 	  <Item ID="9">
@@ -128,7 +128,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Total storage of the RCU SD card, for example: 128G.]]></Description>
       </Item>
 	  <Item ID="10">
@@ -138,7 +138,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>GB</Units>
+        <Units>gigaB</Units>
         <Description><![CDATA[Available storage of the RCU SD card, for example: 63G.]]></Description>
       </Item>
 	  <Item ID="11">
@@ -189,7 +189,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[The current Battery Level as a percentage (with a range from 0 to 100).]]></Description>
       </Item>
 	  
