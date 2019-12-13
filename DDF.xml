@@ -3895,8 +3895,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>18830</ObjectID>
-        <URN>urn:oma:lwm2m:x:18830</URN>
+        <ObjectID>10367</ObjectID>
+        <URN>urn:oma:lwm2m:x:10367</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
@@ -3909,8 +3909,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>18831</ObjectID>
-        <URN>urn:oma:lwm2m:x:18831</URN>
+        <ObjectID>10368</ObjectID>
+        <URN>urn:oma:lwm2m:x:10368</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
@@ -3919,6 +3919,48 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF></DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10369</ObjectID>
+        <URN>urn:oma:lwm2m:x:10369</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>18830</ObjectID>
+        <URN>urn:oma:lwm2m:x:18830</URN>
+        <Name>MQTT Broker</Name>
+        <Description>This LwM2M Object provides the information to connect to an MQTT Broker i.e. URI, configuration, and keying material.</Description>
+        <Owner>IoTerop</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>18830.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>18831</ObjectID>
+        <URN>urn:oma:lwm2m:x:18831</URN>
+        <Name>MQTT Publication</Name>
+        <Description>This LwM2M Object is used to configure data reporting over MQTT.</Description>
+        <Owner>IoTerop</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>18831.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
