@@ -99,7 +99,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>Mbps</Units>
+        <Units>Mbit/s</Units>
         <Description><![CDATA[Network Bandwidth of the RCU.]]></Description>
       </Item>
       <Item ID="53">
@@ -139,7 +139,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>Mbps</Units>
+        <Units>Mbit/s</Units>
         <Description><![CDATA[UpLink Rate of the network used by the RCU.]]></Description>
       </Item>	  
       <Item ID="57">
@@ -149,7 +149,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
         <RangeEnumeration/>
-        <Units>Mbps</Units>
+        <Units>Mbit/s</Units>
         <Description><![CDATA[DownLink Rate of the network used by the RCU.]]></Description>
       </Item>
       <Item ID="58">
