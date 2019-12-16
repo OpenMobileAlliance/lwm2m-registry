@@ -93,6 +93,21 @@
       <description>kibibyte</description>
       <note></note>
     </record>
+    <record date="2019-12-13">
+      <value>GB</value>
+      <description>gigabyte</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>Mbit/s</value>
+      <description>megabit per second</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>MB/s</value>
+      <description>megabyte per second</description>
+      <note></note>
+    </record>
     <record date="2019-12-06">
       <value>mV</value>
       <description>millivolt</description>
@@ -118,6 +133,11 @@
       <description>millimeter per hour</description>
       <note></note>
     </record>
+    <record date="2019-12-13">
+      <value>m/h</value>
+      <description>meter per hour</description>
+      <note></note>
+    </record>
     <record date="2019-12-06">
       <value>ppm</value>
       <description>part per million</description>
@@ -141,6 +161,11 @@
     <record date="2019-12-06">
       <value>mm</value>
       <description>millimeter</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>cm</value>
+      <description>centimeter</description>
       <note></note>
     </record>
     <record date="2019-12-06">
