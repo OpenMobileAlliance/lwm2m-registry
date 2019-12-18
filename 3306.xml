@@ -92,6 +92,26 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Units></Units>
 				<Description>The Application type of the device, for example "Motion Closure".</Description>
 			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+			<Item ID="6050">
+				<Name>Fractional Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units>s</Units>
+				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
+			</Item>
 		</Resources>
 		<Description2></Description2>
 	</Object>
