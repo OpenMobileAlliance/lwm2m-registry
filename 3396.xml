@@ -150,7 +150,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Unsigned Integer</Type>
 				<RangeEnumeration>0..18446744073709551615</RangeEnumeration>
 				<Units>Ws</Units>
-				<Description><![CDATA[The total energy usage of the device (accumulated value).]]></Description>
+				<Description><![CDATA[The total energy usage of the device (accumulated value)]]></Description>
 			</Item>
 			<Item ID="911">
 				<Name>Actual Power Usage</Name>
