@@ -121,7 +121,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>m</Units>
+				<Units>min</Units>
 				<Description><![CDATA[Remaining charging time]]></Description>
 			</Item>
 			<Item ID="13"><Name>Battery Pack Voltage</Name>
@@ -239,7 +239,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>1/m</Units>
+				<Units>1/min</Units>
 				<Description><![CDATA[Rotational speed of the motor]]></Description>
 			</Item>
 			<Item ID="27"><Name>Motor Temperature</Name>
