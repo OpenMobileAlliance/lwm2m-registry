@@ -3465,7 +3465,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration>0.00..100.00</RangeEnumeration>
         <Units></Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
-        <Description>Current remaining battery level</Description>
+        <Description>Current remaining battery level.</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
@@ -3477,7 +3477,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration></RangeEnumeration>
         <Units>dBW</Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
-        <Description>Received Signal Strength Indicator</Description>
+        <Description>Received Signal Strength Indicator.</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
@@ -3489,7 +3489,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
-        <Description>Indicate current smoke sensor state</Description>
+        <Description>Indicate current smoke sensor state.</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
@@ -3499,9 +3499,9 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Operations>R</Operations>     
         <Type>Float</Type>
         <RangeEnumeration>0.00..100.00</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
-        <Description>Current level of detected CO2 as percentage (of what?)</Description>
+        <Description>Current level of detected CO2 as a percentage of concentration.</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
@@ -3513,7 +3513,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration></RangeEnumeration>
         <Units>dB</Units>
         <Submitter>IoT Connectivity Alliance</Submitter>
-        <Description>Indicate the loudness of the alarm</Description>
+        <Description>Indicate the loudness of the alarm.</Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
