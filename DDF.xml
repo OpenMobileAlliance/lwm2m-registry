@@ -3939,14 +3939,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10370</ObjectID>
         <URN>urn:oma:lwm2m:x:10370</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>RFID</Name>
+        <Description>Object to allow a LWM2M server to retrieve and store information in an RFID tag/device in range of the LWM2M host.</Description>
+        <Owner>Schreder Hyperion</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10370.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
