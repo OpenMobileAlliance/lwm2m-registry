@@ -3881,8 +3881,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10368</ObjectID>
-        <URN>urn:oma:lwm2m:x:10368</URN>
+        <ObjectID>10367</ObjectID>
+        <URN>urn:oma:lwm2m:x:10367</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
@@ -3895,8 +3895,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10369</ObjectID>
-        <URN>urn:oma:lwm2m:x:10369</URN>
+        <ObjectID>10368</ObjectID>
+        <URN>urn:oma:lwm2m:x:10368</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
