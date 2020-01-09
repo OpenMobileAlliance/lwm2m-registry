@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <ObjectID>10311</ObjectID>
         <ObjectURN>urn:oma:lwm2m:x:10311</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>

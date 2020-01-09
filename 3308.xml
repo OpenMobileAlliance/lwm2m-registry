@@ -38,7 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<ObjectID>3308</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3308</ObjectURN>
 	        <LWM2MVersion>1.0</LWM2MVersion>
-                <ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
