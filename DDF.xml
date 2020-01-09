@@ -3155,28 +3155,28 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10315</ObjectID>
         <URN>urn:oma:lwm2m:x:10315</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot</Name>
+        <Description>This LWM2M Object includes robot information and links to the location object.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10315.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10316</ObjectID>
         <URN>urn:oma:lwm2m:x:10316</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>RCU</Name>
+        <Description>This LWM2M Object includes RCU(Robotic Control Unit) information and the link to RCU APPs.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10316.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3197,42 +3197,42 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10318</ObjectID>
         <URN>urn:oma:lwm2m:x:10318</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>RCU PM</Name>
+        <Description>This LWM2M Object includes RCU(Robotic Control Unit) PM information(counter and guage).</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10318.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10319</ObjectID>
         <URN>urn:oma:lwm2m:x:10319</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>RCU Control</Name>
+        <Description>This LWM2M Object includes all operations on RCUs.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10319.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10320</ObjectID>
         <URN>urn:oma:lwm2m:x:10320</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>CCU</Name>
+        <Description>This LWM2M Object includes CCU(Central Control Unit) information and the link to CCU APPs.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10320.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3253,42 +3253,42 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10322</ObjectID>
         <URN>urn:oma:lwm2m:x:10322</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>CCU PM</Name>
+        <Description>This LWM2M Object includes CCU PM(counter and gauge).</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10322.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10323</ObjectID>
         <URN>urn:oma:lwm2m:x:10323</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>CCU Control</Name>
+        <Description>This LWM2M Object includes all operations on CCUs.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10323.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10324</ObjectID>
         <URN>urn:oma:lwm2m:x:10324</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>ECU</Name>
+        <Description>This LWM2M Object includes ECU(End Control Unit) information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10324.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3309,196 +3309,196 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10326</ObjectID>
         <URN>urn:oma:lwm2m:x:10326</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot PM</Name>
+        <Description>This LWM2M Object includes PM(counter and gauge) supported by all robots.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10326.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10327</ObjectID>
         <URN>urn:oma:lwm2m:x:10327</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Compressor</Name>
+        <Description>This LWM2M Object includes the Compressor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10327.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10328</ObjectID>
         <URN>urn:oma:lwm2m:x:10328</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>SCA PM</Name>
+        <Description>This LWM2M Object includes all PM items belongs to a specific SCA</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10328.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10329</ObjectID>
         <URN>urn:oma:lwm2m:x:10329</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot Control</Name>
+        <Description>This LWM2M Object includes all operations on robots.</Description>
+        <Owner>CloudMind</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10329.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10330</ObjectID>
         <URN>urn:oma:lwm2m:x:10330</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Network Info</Name>
+        <Description>This LWM2M Object includes network status related information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10330.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10331</ObjectID>
         <URN>urn:oma:lwm2m:x:10331</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot Service Info</Name>
+        <Description>This LWM2M Object includes robot service related information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10331.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10332</ObjectID>
         <URN>urn:oma:lwm2m:x:10332</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot Selfcheck Info</Name>
+        <Description>This LWM2M Object includes robot selfcheck result.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10332.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10333</ObjectID>
         <URN>urn:oma:lwm2m:x:10333</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>PM Threshold</Name>
+        <Description>Here defines all items needed in PM Threshold management.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10333.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10334</ObjectID>
         <URN>urn:oma:lwm2m:x:10334</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Robot Alarm</Name>
+        <Description>Here lists all items of an alarm reported by the robot.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10334.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10335</ObjectID>
         <URN>urn:oma:lwm2m:x:10335</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Event</Name>
+        <Description>Here lists all items of an event reported by the robot.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10335.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10336</ObjectID>
         <URN>urn:oma:lwm2m:x:10336</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>MIC</Name>
+        <Description>This LWM2M Object includes MIC array information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10336.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10337</ObjectID>
         <URN>urn:oma:lwm2m:x:10337</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>SCA</Name>
+        <Description>This LWM2M Object includes SCA information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10337.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10338</ObjectID>
         <URN>urn:oma:lwm2m:x:10338</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Speaker</Name>
+        <Description>This LWM2M Object includes speaker information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10338.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10339</ObjectID>
         <URN>urn:oma:lwm2m:x:10339</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Tripod Head</Name>
+        <Description>This LWM2M Object includes Tripod Head information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10339.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3519,356 +3519,370 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10341</ObjectID>
         <URN>urn:oma:lwm2m:x:10341</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>GPS</Name>
+        <Description>This LWM2M Object includes GPS information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10341.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10342</ObjectID>
         <URN>urn:oma:lwm2m:x:10342</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>IMU</Name>
+        <Description>This LWM2M Object includes IMU(Inertial Measurement Unit) information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10342.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10343</ObjectID>
         <URN>urn:oma:lwm2m:x:10343</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>LiDAR</Name>
+        <Description>This LWM2M Object includes LiDAR information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10343.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10344</ObjectID>
         <URN>urn:oma:lwm2m:x:10344</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Arm</Name>
+        <Description>This LWM2M Object includes arm information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10344.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10345</ObjectID>
         <URN>urn:oma:lwm2m:x:10345</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Leg</Name>
+        <Description>This LWM2M Object includes leg information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10345.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10346</ObjectID>
         <URN>urn:oma:lwm2m:x:10346</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Servomotor</Name>
+        <Description>This LWM2M Object includes Servomotor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10346.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10347</ObjectID>
         <URN>urn:oma:lwm2m:x:10347</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Screen</Name>
+        <Description>This LWM2M Object includes robot screen information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10347.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10348</ObjectID>
         <URN>urn:oma:lwm2m:x:10348</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Wheel</Name>
+        <Description>This LWM2M Object includes wheel information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10348.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10349</ObjectID>
         <URN>urn:oma:lwm2m:x:10349</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Chassis</Name>
+        <Description>This LWM2M Object includes chassis information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10349.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10350</ObjectID>
         <URN>urn:oma:lwm2m:x:10350</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Light</Name>
+        <Description>This LWM2M Object includes light information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10350.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10351</ObjectID>
         <URN>urn:oma:lwm2m:x:10351</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Door</Name>
+        <Description>is LWM2M Object includes the door information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10351.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10352</ObjectID>
         <URN>urn:oma:lwm2m:x:10352</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Thermal Imager</Name>
+        <Description>This LWM2M Object includes the Thermal Imager information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10352.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10353</ObjectID>
         <URN>urn:oma:lwm2m:x:10353</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Warning Light</Name>
+        <Description>This LWM2M Object includes Warning Light information.</Description>
+        <Owner>CoudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10353.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10354</ObjectID>
         <URN>urn:oma:lwm2m:x:10354</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>APP</Name>
+        <Description>This LWM2M Object includes the APP information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10354.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10355</ObjectID>
         <URN>urn:oma:lwm2m:x:10355</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>General Info</Name>
+        <Description>This LWM2M Object contains the referrence to all general info objects.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10355.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10356</ObjectID>
         <URN>urn:oma:lwm2m:x:10356</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Service Info</Name>
+        <Description>This LWM2M Object contains the referrence to all objects containing service info.</Description>
+        <Owner>CoudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10356.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10357</ObjectID>
         <URN>urn:oma:lwm2m:x:10357</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>PM</Name>
+        <Description>This LWM2M Object contains the referrence to all PM objects.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10357.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>	
-    <Item>
+    </Item>
+    <Item>	
         <ObjectID>10358</ObjectID>
         <URN>urn:oma:lwm2m:x:10358</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Fan PM</Name>
+        <Description>This LWM2M Object includes all PM items belongs to Fans.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10358.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10359</ObjectID>
         <URN>urn:oma:lwm2m:x:10359</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Lock</Name>
+        <Description>This LWM2M Object includes the Lock information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10359.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10360</ObjectID>
         <URN>urn:oma:lwm2m:x:10360</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Ultrasonic Sensor</Name>
+        <Description>This LWM2M Object includes Ultrasonic Sensor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10360.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10361</ObjectID>
         <URN>urn:oma:lwm2m:x:10361</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Collision Sensor</Name>
+        <Description>This LWM2M Object includes Collision Sensor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10361.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10362</ObjectID>
         <URN>urn:oma:lwm2m:x:10362</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Drop Sensor</Name>
+        <Description>This LWM2M Object includes Drop Sensor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10362.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10363</ObjectID>
         <URN>urn:oma:lwm2m:x:10363</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Temperature Sensor</Name>
+        <Description>This LWM2M Object includes Temperature Sensor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10363.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>	
     <Item>
         <ObjectID>10364</ObjectID>
         <URN>urn:oma:lwm2m:x:10364</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Humidity Sensor</Name>
+        <Description>This LWM2M Object includes Humidity Sensor information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10364.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10365</ObjectID>
         <URN>urn:oma:lwm2m:x:10365</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Gas-Dust Sensor</Name>
+        <Description>This LWM2M Object includes Gas-Dust information.</Description>
+        <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10365.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10366</ObjectID>
         <URN>urn:oma:lwm2m:x:10366</URN>
+        <Name>Fan</Name>
+        <Description>This LWM2M Object includes Fan information.</Description>
+        <Owner>CloudMinds</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10366.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10367</ObjectID>
+        <URN>urn:oma:lwm2m:x:10367</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
