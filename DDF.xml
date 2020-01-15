@@ -2127,7 +2127,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>3362</ObjectID>
         <URN>urn:oma:lwm2m:ext:3362</URN>
