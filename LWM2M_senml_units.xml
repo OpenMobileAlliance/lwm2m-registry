@@ -178,5 +178,10 @@
       <description>kilometer per hour</description>
       <note></note>
     </record>
+    <record date="2020-01-16">
+      <value>Ws</value>
+      <description>Watts per second</description>
+      <note>IPSO WG agreed to adopt Ws as per meeting minutes Jan 16, 2020</note>
+    </record>
   </registry>  
 </units>
