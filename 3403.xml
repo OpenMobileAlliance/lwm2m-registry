@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<RangeEnumeration>0..256 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>s</Units>
 				<Description><![CDATA[The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.]]></Description>
 			</Item>

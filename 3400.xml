@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<RangeEnumeration>0..256 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
@@ -68,7 +68,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Hardware_Error, 1: Temperature_Error, 2: Quality_Error]]></Description>
 			</Item>

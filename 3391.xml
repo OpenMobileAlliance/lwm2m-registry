@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<RangeEnumeration>0..256 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
@@ -68,7 +68,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>K</Units>
 				<Description><![CDATA[This Resource represents the target colour temperature requested to the Light Point. On reset this value should be set to 5000. On a Power cycle, the Target colour temperature is set according to 'On Behaviour'.]]></Description>
 			</Item>
@@ -88,7 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-5</RangeEnumeration>
+				<RangeEnumeration>0..5</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The priority of this Logical Object. If a Logical Object with a higher priority controlles the same physical object, this instance will hold its settings until its priority is sufficient again. \nIf the priorities are the same the last one is served.]]></Description>
 			</Item>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the time needed to change the light point from minimum colour temperature to maximum colour temperature. The resulting change rate is used for every colour temperature shift request. Scaling is 100ms per unit]]></Description>
 			</Item>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the default transition time to be used for 'Set_Colour_Temperature' and 'Step' requests, if that request has no value specified. A value of 0 means the transaction is immediate. Scaling is 100ms per unit]]></Description>
 			</Item>
@@ -118,7 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>K</Units>
 				<Description><![CDATA[Defines the default step size to be used for 'Step' requests, if that request has no value specified.]]></Description>
 			</Item>
@@ -128,7 +128,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.]]></Description>
 			</Item>
@@ -148,7 +148,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information]]></Description>
 			</Item>
@@ -208,7 +208,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[When written, the scene with the given ID is recalled.]]></Description>
 			</Item>
@@ -228,7 +228,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Defines the test events to be injected into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
 			</Item>
