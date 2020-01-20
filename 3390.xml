@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>0-256 bytes</RangeEnumeration>
+				<RangeEnumeration>0..256 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Resource to hold a documentary text description of the object.]]></Description>
 			</Item>
@@ -68,7 +68,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This Resource represents the target colour X value requested to the Light Point. Scale is: 0.001]]></Description>
 			</Item>
@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This Resource represents the target colour Y value requested to the Light Point. Scaling is 0.001 per Unit, Value conforms to CIE color definition]]></Description>
 			</Item>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-5</RangeEnumeration>
+				<RangeEnumeration>0..5</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The priority of this Logical Object. If a Logical Object with a higher priority controlles the same physical object, this instance will hold its settings until its priority is sufficient again. \nIf the priorities are the same the last one is served.]]></Description>
 			</Item>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the time needed to change the light point output from minimum hue/saturation to maximum hue/saturation. The resulting change rate is used for the relative changes of the colour request. Scaling is 100ms per Unit]]></Description>
 			</Item>
@@ -118,7 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units>ms</Units>
 				<Description><![CDATA[Defines the default transition time to be used for 'Set_Colour' and 'Step' requests, if that request has no value specified. A value of 0 means the transaction is immediate. Scaling is 100ms per unit]]></Description>
 			</Item>
@@ -128,7 +128,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Defines the default step size to be used for 'Hue Step' requests, if that request has no value specified. The Hue is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000.]]></Description>
 			</Item>
@@ -138,7 +138,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Defines the default step size to be used for 'Saturation Step' requests, if that request has no value specified. The Saturation is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000.]]></Description>
 			</Item>
@@ -148,7 +148,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations.]]></Description>
 			</Item>
@@ -168,7 +168,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information]]></Description>
 			</Item>
@@ -248,7 +248,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[When written, the scene with the given ID is recalled immediately.]]></Description>
 			</Item>
@@ -268,7 +268,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-65535</RangeEnumeration>
+				<RangeEnumeration>0..65535</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Defines a test event for injection into the system when debug mode is enabled. Event definition is vendor specific.]]></Description>
 			</Item>

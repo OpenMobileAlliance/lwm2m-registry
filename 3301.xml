@@ -110,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the type of sensor defined as the UCUM Unit Definition e.g. “Cel” for Temperature in Celcius.</Description>
+				<Description>Measurement Units Definition.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

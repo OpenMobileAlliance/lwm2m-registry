@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Energy</Name>
-        <Description1>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load. An example measurement unit is Watt Hours (ucum:W*h).
+        <Description1>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load. An example measurement unit is Watt Hours.
         </Description1>
         <ObjectID>3331</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3331</ObjectURN>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Measurement Units Definition e.g. “Cel” for Temperature in Celsius.</Description>
+                <Description>Measurement Units Definition.</Description>
             </Item>
             <Item ID="5822">
                 <Name>Reset Cumulative energy</Name>

@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M_senml_units.xsd">
+  <title>Additional SenML Units</title>
+  <hnote>This file provides an additional set of senml units in addition to the ones listed in the SenML Registry at https://www.iana.org/assignments/senml/senml.xml.</hnote>
+  <registry id="senml-units">
+    <record date="2019-12-06">
+        <value>VAs</value>
+        <description>volt-ampere second (Apparent Energy)</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>vars</value>
+        <description>volt-ampere reactive second (Reactive Energy)</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>kg/m3</value>
+        <description>kilogram per cubic meter (mass concentration)</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>deg</value>
+        <description>degree (angle)</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>ms</value>
+        <description>millisecond</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>min</value>
+        <description>minute</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>h</value>
+        <description>hour</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>kW</value>
+        <description>kilowatt</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>kVA</value>
+        <description>kilovolt-ampere</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>kvar</value>
+        <description>kilovar</description>
+        <note></note>
+      </record>
+      <record date="2019-12-06">
+        <value>Ah</value>
+        <description>ampere-hour</description>
+        <note></note>
+      </record>
+    <record date="2019-12-06">
+      <value>Wh</value>
+      <description>watt-hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>kWh</value>
+      <description>kilowatt-hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>varh</value>
+      <description>var-hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>kvarh</value>
+      <description>kilovar-hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>kVAh</value>
+      <description>kilovolt-ampere-hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>Wh/km</value>
+      <description>watt-hour per kilometer</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>KiB</value>
+      <description>kibibyte</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>GB</value>
+      <description>gigabyte</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>Mbit/s</value>
+      <description>megabit per second</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>MB/s</value>
+      <description>megabyte per second</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>mV</value>
+      <description>millivolt</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>mA</value>
+      <description>milliampere</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>dBm</value>
+      <description>decibel (milliwatt)</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>ug/m3</value>
+      <description>microgram per cubic meter</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>mm/h</value>
+      <description>millimeter per hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>m/h</value>
+      <description>meter per hour</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>ppm</value>
+      <description>part per million</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>/100</value>
+      <description>percent</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>/1000</value>
+      <description>permille</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>hPa</value>
+      <description>hectopascal</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>mm</value>
+      <description>millimeter</description>
+      <note></note>
+    </record>
+    <record date="2019-12-13">
+      <value>cm</value>
+      <description>centimeter</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>km</value>
+      <description>kilometer</description>
+      <note></note>
+    </record>
+    <record date="2019-12-06">
+      <value>km/h</value>
+      <description>kilometer per hour</description>
+      <note></note>
+    </record>
+    <record date="2020-01-16">
+      <value>Ws</value>
+      <description>Watts per second</description>
+      <note>IPSO WG agreed to adopt Ws as per meeting minutes Jan 16, 2020</note>
+    </record>
+  </registry>  
+</units>
