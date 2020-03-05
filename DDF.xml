@@ -1392,7 +1392,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3327</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3327:1.1</URN>
+        <Name>Conductivity</Name>
+        <Description>This IPSO object should be used to report a measurement of the electric conductivity of a medium or sample. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3327-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3328</ObjectID>
         <URN>urn:oma:lwm2m:ext:3328</URN>
@@ -1407,7 +1420,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3328</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3328:1.1</URN>
+        <Name>Power</Name>
+        <Description>This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3328-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3329</ObjectID>
         <URN>urn:oma:lwm2m:ext:3329</URN>
@@ -1422,7 +1448,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3329</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3329:1.1</URN>
+        <Name>Power Factor</Name>
+        <Description>This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3329-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3330</ObjectID>
         <URN>urn:oma:lwm2m:ext:3330</URN>
@@ -1437,7 +1476,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3330</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3330:1.1</URN>
+        <Name>Distance</Name>
+        <Description>This IPSO object should be used to report a distance measurement. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3330-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3331</ObjectID>
         <URN>urn:oma:lwm2m:ext:3331</URN>
@@ -1452,7 +1504,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3331</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3331:1.1</URN>
+        <Name>Energy</Name>
+        <Description>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3331-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3332</ObjectID>
         <URN>urn:oma:lwm2m:ext:3332</URN>
@@ -1467,7 +1532,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3332</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3332:1.1</URN>
+        <Name>Direction</Name>
+        <Description>This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3332-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3333</ObjectID>
         <URN>urn:oma:lwm2m:ext:3333</URN>
@@ -1482,7 +1560,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3333</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3333:1.1</URN>
+        <Name>Time</Name>
+        <Description>This IPSO object is used to report the current time in seconds since January 1, 1970 UTC. There is also a fractional time counter that has a range of less than one second.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3333-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3334</ObjectID>
         <URN>urn:oma:lwm2m:ext:3334</URN>
@@ -1497,7 +1588,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3334</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3334:1.1</URN>
+        <Name>Gyrometer</Name>
+        <Description>This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3334-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3335</ObjectID>
         <URN>urn:oma:lwm2m:ext:3335</URN>
@@ -1512,7 +1616,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3335</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3335:1.1</URN>
+        <Name>Colour</Name>
+        <Description>This IPSO object should be used to report the measured value of a colour sensor in some colour space described by the units resource.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3335-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3336</ObjectID>
         <URN>urn:oma:lwm2m:ext:3336</URN>
@@ -1527,7 +1644,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3336</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3336:1.1</URN>
+        <Name>Location</Name>
+        <Description>This IPSO object represents GPS coordinates. This object is compatible with the LWM2M management object for location, but uses reusable resources.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3336-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3337</ObjectID>
         <URN>urn:oma:lwm2m:ext:3337</URN>
@@ -1542,7 +1672,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3337</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3337:1.1</URN>
+        <Name>Positioner</Name>
+        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3337-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3338</ObjectID>
         <URN>urn:oma:lwm2m:ext:3338</URN>
@@ -1557,7 +1700,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3338</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3338:1.1</URN>
+        <Name>Buzzer</Name>
+        <Description>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3338-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3339</ObjectID>
         <URN>urn:oma:lwm2m:ext:3339</URN>
@@ -1617,7 +1773,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3342</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3342:1.1</URN>
+        <Name>On/Off switch</Name>
+        <Description>This IPSO object should be used with an On/Off switch to report the state of the switch.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3342-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3343</ObjectID>
         <URN>urn:oma:lwm2m:ext:3343</URN>
@@ -1677,7 +1846,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3346</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3346:1.1</URN>
+        <Name>Rate</Name>
+        <Description>This object type should be used to report a rate measurement,</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3346-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3347</ObjectID>
         <URN>urn:oma:lwm2m:ext:3347</URN>
@@ -1692,7 +1874,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3347</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3347:1.1</URN>
+        <Name>Push button</Name>
+        <Description>This IPSO object is used to report the state of a momentary action push button control and to count the number of times the control has been operated since the last observation.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3347-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>3348</ObjectID>
         <URN>urn:oma:lwm2m:ext:3348</URN>
@@ -1702,6 +1897,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3348.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3348</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3348:1.1</URN>
+        <Name>Multi-state Selector</Name>
+        <Description>This IPSO object is used to represent the state of a multistate selector switch with a number of fixed positions.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3348-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1722,6 +1931,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>3349</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3349:1.1</URN>
+        <Name>Bitmap</Name>
+        <Description>Summarize several digital inputs to one value by mapping each bit to a digital input.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3349-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>3350</ObjectID>
         <URN>urn:oma:lwm2m:ext:3350</URN>
         <Name>Stopwatch</Name>
@@ -1730,6 +1953,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3350.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+        <Item>
+        <ObjectID>3350</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3350:1.1</URN>
+        <Name>Stopwatch</Name>
+        <Description>An ascending timer that counts how long time has passed since the timer was started after reset.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
+        <DDF>3350-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1890,7 +2127,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>3362</ObjectID>
         <URN>urn:oma:lwm2m:ext:3362</URN>
