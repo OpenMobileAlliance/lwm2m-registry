@@ -1361,7 +1361,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum value measured by the sensor since power ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
         
         <TS></TS>
         
