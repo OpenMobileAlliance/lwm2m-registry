@@ -2233,7 +2233,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[This resource represents a light dimmer setting, which has an Integer value between 0 and 100 as a percentage.]]></Description>
+        <Description><![CDATA[This resource represents a dimmer setting, which has an Integer value between 0 and 100 as a percentage.]]></Description>
         
         <TS></TS>
         
