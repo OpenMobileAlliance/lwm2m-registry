@@ -1635,7 +1635,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance "Air Pressure".]]></Description>
+        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance, "Air Pressure".]]></Description>
         
         <TS></TS>
         
@@ -3280,7 +3280,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>Cell Identity</Description>
+        <Description>Cell ID</Description>
         
         <TS></TS>
         
