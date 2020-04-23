@@ -1520,7 +1520,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the X axis.]]></Description>
         
         <TS></TS>
         
@@ -1543,7 +1543,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Y axis.]]></Description>
         
          <TS></TS>
         
@@ -1566,7 +1566,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Z axis.]]></Description>
         
         <TS></TS>
         
