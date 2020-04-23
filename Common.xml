@@ -2256,7 +2256,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The time in seconds that the device has been turned on. Writing a value of 0 resets the counter.]]></Description>
+        <Description><![CDATA[The time in seconds that the device has been on. Writing a value of 0 resets the counter.]]></Description>
         
          <TS></TS>
         
