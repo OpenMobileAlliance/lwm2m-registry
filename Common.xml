@@ -1476,7 +1476,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Last or Current Measured Value from the Sensor expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[Last or Current Measured Value from the Sensor.]]></Description>
         
         <TS></TS>
         
