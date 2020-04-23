@@ -2302,7 +2302,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The time in seconds since the Off command was sent. Writing a value of 0 resets the counter.]]></Description>
+        <Description><![CDATA[The time in seconds in the off state. Writing a value of 0 resets the counter.]]></Description>
         
          <TS></TS>
         
