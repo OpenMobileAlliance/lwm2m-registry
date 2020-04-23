@@ -1338,7 +1338,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum value measured by the sensor since power ON or reset.]]></Description>
         
         <TS></TS>
         
@@ -1361,7 +1361,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum value measured by the sensor since power ON or reset.]]></Description>
         
         <TS></TS>
         
@@ -1384,7 +1384,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum value that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1407,7 +1407,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum value that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1430,7 +1430,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Reset the Min and Max Measured Values to current value.]]></Description>
+        <Description><![CDATA[Reset the Min and Max Measured Values to Current Value.]]></Description>
         
         <TS></TS>
         
