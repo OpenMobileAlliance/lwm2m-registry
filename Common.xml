@@ -3302,7 +3302,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>PCI (0..504)</Description>
+        <Description>PCI.</Description>
         
         <TS></TS>
         
