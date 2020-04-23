@@ -2527,7 +2527,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc.]]></Description>
+        <Description><![CDATA[The description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit.]]></Description>
         
          <TS></TS>
         
