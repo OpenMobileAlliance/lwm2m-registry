@@ -4,7 +4,7 @@
   <hnote>This file provides an additional set of senml units in addition to the ones listed in the SenML Registry at https://www.iana.org/assignments/senml/senml.xml.</hnote>
   <registry id="senml-units">
     <record date="2020-01-16">
-      <value>Wss</value>
+      <value>Ws</value>
       <description>Watts per second</description>
       <note>IPSO WG agreed to adopt Ws as per meeting minutes Jan 16, 2020</note>
     </record>
