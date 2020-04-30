@@ -1612,7 +1612,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[A string representing a value in the color space defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[A string representing a value in some color space.]]></Description>
         
          <TS></TS>
         
@@ -2325,7 +2325,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The setpoint value expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The setpoint value.]]></Description>
         
          <TS></TS>
         
