@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The maximum value measured by the sensor since power ON or reset</Description>
+				<Description>The maximum value measured by the sensor since power ON or reset.</Description>
 			</Item>
 			<Item ID="5603">
 				<Name>Min Range Value</Name>

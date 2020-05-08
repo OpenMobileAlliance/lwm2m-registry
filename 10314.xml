@@ -48,7 +48,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+				<Description><![CDATA[The maximum value measured by the sensor since power ON or reset.]]></Description>
 			</Item>
 			<Item ID="5604">
 				<Name>Max Range Value</Name>
