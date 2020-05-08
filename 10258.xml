@@ -71,7 +71,7 @@ IN THE SOFTWARE.
         <Type>String</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance, “Air Pressure”.]]></Description>
+        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance, "Air Pressure".]]></Description>
       </Item>
       <Item ID="5821">
         <Name>Current Calibration</Name>

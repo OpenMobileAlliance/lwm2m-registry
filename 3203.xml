@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>If present, the application type of the actuator as a string, for instance, "Valve"</Description>
+				<Description>The application type of the sensor or actuator as a string, for instance, "Air Pressure".</Description>
 			</Item>
 			<Item ID="5603">
 				<Name>Min Range Value</Name>

@@ -78,7 +78,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The Application type of the device, for example “Particulate Sensor”.</Description>
+				<Description>The application type of the sensor or actuator as a string, for instance, "Air Pressure".</Description>
 			</Item>
 			<Item ID="5605">
 				<Name>Reset Min and Max Measured Values</Name>
