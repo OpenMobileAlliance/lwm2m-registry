@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description>Delay from the clear state to the busy state in ms</Description>
+				<Description>Delay from the clear state to the busy state in ms.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>
