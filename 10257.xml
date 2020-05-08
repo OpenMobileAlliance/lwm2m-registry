@@ -157,7 +157,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units>W</Units>
-        <Description><![CDATA[The maximum active power measured by the sensor since it is ON]]></Description>
+        <Description><![CDATA[The maximum active power measured by the sensor since it is ON.]]></Description>
       </Item>
       <Item ID="5805">
         <Name>Cumulative active power</Name>
