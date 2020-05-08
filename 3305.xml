@@ -170,7 +170,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>varh</Units>
-				<Description>The cumulative reactive power since the last cumulative energy reset or device start</Description>
+				<Description>The cumulative reactive power since the last cumulative energy reset or device start.</Description>
 			</Item>
 			<Item ID="5816">
 				<Name>Reactive Power Calibration</Name>
