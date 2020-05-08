@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[A host device model identifier (manufacturer specified string)]]></Description>
+				<Description><![CDATA[A host device model identifier (manufacturer specified string).]]></Description>
 			</Item>
 			<Item ID="5907"><Name>Host Device Unique ID</Name>
 				<Operations>R</Operations>
