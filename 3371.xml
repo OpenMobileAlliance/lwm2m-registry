@@ -107,7 +107,7 @@ limitations under the License.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[PCI (0..504)]]></Description>
+				<Description><![CDATA[PCI.]]></Description>
 			</Item>
 			<Item ID="6035"><Name>rsrp</Name>
 				<Operations>R</Operations>
