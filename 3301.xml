@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The current value of the luminosity sensor.</Description>
+				<Description>Last or Current Measured Value from the Sensor.</Description>
 			</Item>
 			<Item ID="5601">
 				<Name>Min Measured Value</Name>

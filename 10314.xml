@@ -28,7 +28,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Last or Current Measured Value from the Sensor expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+				<Description><![CDATA[Last or Current Measured Value from the Sensor.]]></Description>
 			</Item>
 			<Item ID="5601">
 				<Name>Min Measured Value</Name>

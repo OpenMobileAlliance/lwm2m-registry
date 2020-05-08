@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Last or Current Measured Value from the Sensor</Description>
+                <Description>Last or Current Measured Value from the Sensor.</Description>
             </Item>
             <Item ID="5701">
                 <Name>Sensor Units</Name>

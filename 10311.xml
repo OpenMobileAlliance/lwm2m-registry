@@ -122,7 +122,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>Last or Current Measured Value from the Sensor expressed in the unit defined by the "Sensor Units" resource if present.</Description>
+                <Description>Last or Current Measured Value from the Sensor.</Description>
             </Item>
             <Item ID="5701">
                 <Name>Sensor Units</Name>
