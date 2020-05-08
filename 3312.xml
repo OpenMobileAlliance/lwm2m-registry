@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The power factor of the load.</Description>
+				<Description>If applicable, the power factor of the current consumption.</Description>
 			</Item>
                         <Item ID="5750">
                                 <Name>Application Type</Name>
