@@ -81,7 +81,7 @@ IN THE SOFTWARE.
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[Read or Write the current calibration coefficient]]></Description>
+        <Description><![CDATA[Read or Write the current calibration coefficient.]]></Description>
       </Item>
     </Resources>
     <Description2><![CDATA[]]></Description2>

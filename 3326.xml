@@ -121,7 +121,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Read or Write the current calibration coefficient</Description>
+                <Description>Read or Write the current calibration coefficient.</Description>
             </Item>
             <Item ID="5750">
                 <Name>Application Type</Name>
