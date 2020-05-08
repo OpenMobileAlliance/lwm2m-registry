@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>The number of times the input.</Description>
+                <Description>The cumulative value of active state detected.</Description>
             </Item>
             <Item ID="5544">
                 <Name>Cumulative Time</Name>

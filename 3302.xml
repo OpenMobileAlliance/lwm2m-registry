@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The current state of the presence sensor</Description>
+				<Description>The current state of a digital input.</Description>
 			</Item>
 			<Item ID="5501">
 				<Name>Digital Input Counter</Name>
