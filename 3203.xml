@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration>0..1</RangeEnumeration>
 				<Units></Units>
-				<Description>The current state of the analogue output.</Description>
+				<Description>The current value of the analog output.</Description>
 			</Item>
 			<Item ID="5750">
 				<Name>Application Type</Name>
