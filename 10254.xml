@@ -41,7 +41,7 @@ IN THE SOFTWARE.
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[The minimum value measured by the sensor since it is ON or Reset. Defined by “Units” resource.]]></Description>
+        <Description><![CDATA[The minimum value measured by the sensor since power ON or reset.]]></Description>
       </Item>
       <Item ID="5602">
         <Name>Max Measured Value</Name>
