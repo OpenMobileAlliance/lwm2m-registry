@@ -29,7 +29,7 @@ IN THE SOFTWARE.
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
-        <RangeEnumeration>3.8-20.5</RangeEnumeration>
+        <RangeEnumeration>3.8..20.5</RangeEnumeration>
         <Units>mA</Units>
         <Description><![CDATA[The current value of the current loop output.]]></Description>
       </Item>
