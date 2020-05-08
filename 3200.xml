@@ -121,7 +121,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The type of the sensor (for instance PIR type)</Description>
+				<Description>The type of the sensor (for instance PIR type).</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

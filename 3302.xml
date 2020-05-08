@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The type of the sensor (for instance PIR type)</Description>
+				<Description>The type of the sensor (for instance PIR type).</Description>
 			</Item>
 			<Item ID="5903">
 				<Name>Busy to Clear delay</Name>
