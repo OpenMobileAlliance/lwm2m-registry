@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Represents the sensor value of the presence sensor. \n* False: Absence is detected \n* True: Presence is detected]]></Description>
+				<Description><![CDATA[The current state of a digital input.]]></Description>
 			</Item>
 			<Item ID="909">
 				<Name>Executing Object</Name>
