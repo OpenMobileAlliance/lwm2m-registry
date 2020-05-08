@@ -160,7 +160,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>var</Units>
-				<Description>The maximum reactive power that can be measured by the sensor</Description>
+				<Description>The maximum reactive power that can be measured by the sensor.</Description>
 			</Item>
 			<Item ID="5815">
 				<Name>Cumulative reactive power</Name>
