@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <RangeEnumeration/>
                 <Units/>
                 <Description>
-                    Reset the Min and Max Measured Values to current value.
+                    Reset the Min and Max Measured Values to Current Value.
                 </Description>
             </Item>
             <Item ID="5518">

@@ -81,7 +81,7 @@ IN THE SOFTWARE.
         <Type></Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[Reset the Min and Max Measured Values to Current Value]]></Description>
+        <Description><![CDATA[Reset the Min and Max Measured Values to Current Value.]]></Description>
       </Item>
       <Item ID="5701">
         <Name>Sensor Units</Name>

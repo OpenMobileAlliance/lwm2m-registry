@@ -88,7 +88,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Reset the Min and Max Measured Values to current value.]]></Description>
+				<Description><![CDATA[Reset the Min and Max Measured Values to Current Value.]]></Description>
 			</Item>
 			<Item ID="6043">
 				<Name>Measured Particle Size</Name>
