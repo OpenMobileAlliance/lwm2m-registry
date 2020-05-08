@@ -167,7 +167,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units>Wh</Units>
-        <Description><![CDATA[The cumulative active power since the last cumulative energy reset or device start]]></Description>
+        <Description><![CDATA[The cumulative active power since the last cumulative energy reset or device start.]]></Description>
       </Item>
       <Item ID="12">
         <Name>Flow temperature</Name>

@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>Wh</Units>
-				<Description>The total power in Wh that the light has used.</Description>
+				<Description>The cumulative active power since the last cumulative energy reset or device start.</Description>
 			</Item>
 			<Item ID="5820">
 				<Name>Power factor</Name>

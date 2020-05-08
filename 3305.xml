@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>Wh</Units>
-				<Description>The cumulative active power since the last cumulative energy reset or device start</Description>
+				<Description>The cumulative active power since the last cumulative energy reset or device start.</Description>
 			</Item>
 			<Item ID="5806">
 				<Name>Active Power Calibration</Name>
