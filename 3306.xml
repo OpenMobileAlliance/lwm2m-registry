@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>A string describing a state for multiple level output such as Pilot Wire</Description>
+				<Description>A string describing a state for multiple level output such as Pilot Wire.</Description>
 			</Item>
 			<Item ID="5750">
 				<Name>Application Type</Name>
