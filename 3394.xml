@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[Delay from the detection state to the clear state in ms]]></Description>
+				<Description><![CDATA[Delay from the detection state to the clear state in ms.]]></Description>
 			</Item>
 			<Item ID="5904">
 				<Name>Clear to Busy delay</Name>
