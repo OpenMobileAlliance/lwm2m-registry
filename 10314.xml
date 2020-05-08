@@ -68,7 +68,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Measurement Units Definition e.g. "Cel" for Temperature in degrees Celsius.]]></Description>
+				<Description><![CDATA[Measurement Units Definition.]]></Description>
 			</Item>
 			<Item ID="5750">
 				<Name>Application Type</Name>
