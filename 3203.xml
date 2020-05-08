@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The minimum value that can be set for the output</Description>
+				<Description>The minimum value that can be measured by the sensor.</Description>
 			</Item>
 			<Item ID="5604">
 				<Name>Max Range Value</Name>

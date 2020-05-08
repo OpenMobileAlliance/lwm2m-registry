@@ -77,7 +77,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <RangeEnumeration/>
                 <Units/>
                 <Description>
-                    The minimum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.
+                    The minimum value that can be measured by the sensor.
                 </Description>
             </Item>
             <Item ID="5604">
