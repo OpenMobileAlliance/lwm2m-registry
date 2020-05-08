@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units>s</Units>
-                <Description>The time in seconds since the On command was sent. Writing a value of 0 resets the counter.</Description>
+                <Description>The time in seconds that the device has been on. Writing a value of 0 resets the counter.</Description>
             </Item>
             <Item ID="5854">
                 <Name>Off Time</Name>

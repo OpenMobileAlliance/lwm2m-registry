@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description>The time in seconds that the light has been on. Writing a value of 0 resets the counter.</Description>
+				<Description>The time in seconds that the device has been on. Writing a value of 0 resets the counter.</Description>
 			</Item>
 			<Item ID="5805">
 				<Name>Cumulative active power</Name>
