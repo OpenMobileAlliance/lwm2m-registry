@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Reset the Counter value</Description>
+				<Description>Reset the Counter value.</Description>
 			</Item>
 			<Item ID="5751">
 				<Name>Sensor Type</Name>
