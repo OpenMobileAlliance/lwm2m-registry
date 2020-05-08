@@ -47,7 +47,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Human readable host device manufacturer name]]></Description>
+				<Description><![CDATA[Human readable host device manufacturer name.]]></Description>
 			</Item>
 			<Item ID="5906"><Name>Host Device Model Number</Name>
 				<Operations>R</Operations>
