@@ -150,7 +150,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>var</Units>
-				<Description>The minimum active power that can be measured by the sensor</Description>
+				<Description>The minimum active power that can be measured by the sensor.</Description>
 			</Item>
 			<Item ID="5814">
 				<Name>Max Range reactive power</Name>
