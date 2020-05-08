@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
-				<Description>The minimum active power measured by the sensor since it is ON</Description>
+				<Description>The minimum active power measured by the sensor since it is ON.</Description>
 			</Item>
 			<Item ID="5802">
 				<Name>Max Measured active power</Name>
