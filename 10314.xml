@@ -58,7 +58,7 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[The maximum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+				<Description><![CDATA[The maximum value that can be measured by the sensor.]]></Description>
 			</Item>
 			<Item ID="5701">
 				<Name>Sensor Units</Name>

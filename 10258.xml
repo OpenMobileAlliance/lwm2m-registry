@@ -51,7 +51,7 @@ IN THE SOFTWARE.
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[The maximum value that can be measured by the sensor. Defined by “Units” resource.]]></Description>
+        <Description><![CDATA[The maximum value that can be measured by the sensor.]]></Description>
       </Item>
       <Item ID="5701">
         <Name>Sensor Units</Name>

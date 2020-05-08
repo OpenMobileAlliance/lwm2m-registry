@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>The maximum value that can be set for the output</Description>
+				<Description>The maximum value that can be measured by the sensor.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>
