@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Current software version of the host device. (manufacturer specified string).]]></Description>
+				<Description><![CDATA[Current software version of the host device (manufacturer specified string).]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>
