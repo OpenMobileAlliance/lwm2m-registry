@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
-				<Description>The maximum active power that can be measured by the sensor</Description>
+				<Description>The maximum active power that can be measured by the sensor.</Description>
 			</Item>
 			<Item ID="5805">
 				<Name>Cumulative active power</Name>
