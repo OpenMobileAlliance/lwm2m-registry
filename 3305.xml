@@ -130,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>var</Units>
-				<Description>The minimum reactive power measured by the sensor since it is ON</Description>
+				<Description>The minimum reactive power measured by the sensor since it is ON.</Description>
 			</Item>
 			<Item ID="5812">
 				<Name>Max Measured reactive power</Name>
