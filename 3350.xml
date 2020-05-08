@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description>The total time in seconds that the stopwatch has been on. Writing a 0 resets the time.</Description>
+				<Description>The total time in seconds that the timer input is true. Writing a 0 resets the time.</Description>
 			</Item>
 			<Item ID="5850">
 				<Name>On/Off</Name>
