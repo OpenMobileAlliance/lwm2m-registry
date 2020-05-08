@@ -147,7 +147,7 @@ This Object provides the information to represent a generic (district) heat or c
         <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units>W</Units>
-        <Description><![CDATA[The current active power]]></Description>
+        <Description><![CDATA[The current active power.]]></Description>
       </Item>
       <Item ID="5802">
         <Name>Max Measured active power</Name>

@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
-				<Description>The current active power</Description>
+				<Description>The current active power.</Description>
 			</Item>
 			<Item ID="5801">
 				<Name>Min Measured active power</Name>
