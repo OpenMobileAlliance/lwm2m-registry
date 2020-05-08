@@ -29,7 +29,7 @@ IN THE SOFTWARE.
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Float</Type>
-        <RangeEnumeration>0; 3.8-20.5</RangeEnumeration>
+        <RangeEnumeration>0; 3.8..20.5</RangeEnumeration>
         <Units>mA</Units>
         <Description><![CDATA[The current value of the current loop input. A value of 0 indicates the not-connected state and/or invalid (i.e. out-of-range) values.]]></Description>
       </Item>
