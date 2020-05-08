@@ -210,7 +210,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Reset both cumulative active/reactive power</Description>
+				<Description>Reset both cumulative active/reactive power.</Description>
 			</Item>
 			<Item ID="5605">
 				<Name>Reset Min and Max Measured Values</Name>
