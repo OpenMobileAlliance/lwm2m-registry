@@ -120,7 +120,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>var</Units>
-				<Description>The current reactive power</Description>
+				<Description>The current reactive power.</Description>
 			</Item>
 			<Item ID="5811">
 				<Name>Min Measured reactive power</Name>
