@@ -81,7 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units>s</Units>
-                <Description>The off time when On/Off control remains on.</Description>
+                <Description>The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).</Description>
             </Item>
             <Item ID="5750">
                 <Name>Application Type</Name>
