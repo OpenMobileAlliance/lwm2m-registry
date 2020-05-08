@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[Delay from the clear state to the busy state in ms]]></Description>
+				<Description><![CDATA[Delay from the clear state to the busy state in ms.]]></Description>
 			</Item>
 			<Item ID="903">
 				<Name>Application Group ID</Name>
