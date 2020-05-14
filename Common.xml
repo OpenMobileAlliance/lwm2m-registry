@@ -3280,7 +3280,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>Cell ID</Description>
+        <Description>Cell ID.</Description>
         
         <TS></TS>
         
