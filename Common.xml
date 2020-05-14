@@ -765,7 +765,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The off time when On/Off control remains on.]]></Description>
+        <Description><![CDATA[The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).]]></Description>
         
          <TS></TS>
         
