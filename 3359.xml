@@ -91,14 +91,14 @@ limitations under the License.
 				<Units></Units>
 				<Description><![CDATA[EARFCN - frequency]]></Description>
 			</Item>
-			<Item ID="6033"><Name>Cell ID.</Name>
+			<Item ID="6033"><Name>CellID</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[cell Identity]]></Description>
+				<Description><![CDATA[Cell ID.]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>
