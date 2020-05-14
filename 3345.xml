@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>The number of times the input transitions from 0 to 1.</Description>
+                <Description>The cumulative value of active state detected.</Description>
             </Item>
             <Item ID="5702">
                 <Name>X Value</Name>
@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>The application type of the sensor or actuator as a string depending on the use case.</Description>
+                <Description>The application type of the sensor or actuator as a string, for instance, "Air Pressure".</Description>
             </Item>
          </Resources>
         <Description2></Description2>

@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This Resource represents the current On/Off state of the Light Point, ON=true; OFF=false.\n\t\t\t\t\t\t\n* In the On state the Light Point is fully active:\n - it performs all possible operations on (R, W, E) on all its interfaces.\n - the light output behaves as configured and reacts to all valid and authorized IControl interface requests.\n* In the Off state the Light Point output is inactive:\n - Intensity of the light output is disconnected.\n - it only performs R and W operations on the IData and IConfig interface.\n - it only reacts to 'Switch On' requests on the IControl interface, all other E requests to this interface are discarded.]]></Description>
+				<Description><![CDATA[On/off control. Boolean value where True is On and False is Off.]]></Description>
 			</Item>
 			<Item ID="100">
 				<Name>Current Intensity</Name>
