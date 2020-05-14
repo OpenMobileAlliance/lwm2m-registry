@@ -3368,7 +3368,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>System Frame Number</Description>
+        <Description>System Frame Number.</Description>
         
        <TS></TS>
         
@@ -3390,7 +3390,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>Sub Frame Number</Description>
+        <Description>Sub Frame Number.</Description>
         
          <TS></TS>
         
