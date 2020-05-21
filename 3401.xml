@@ -102,7 +102,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[The polarity of the digital input as a Boolean (0 = Normal (action makes), 1 = Reversed (action breaks) the contact)]]></Description>
+				<Description><![CDATA[The polarity of the digital input as a Boolean (False = Normal, True = Reversed).]]></Description>
 			</Item>
 			<Item ID="5503">
 				<Name>Digital Input Debounce</Name>
@@ -112,7 +112,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[The debounce period in ms [50]. \nThe debounce period is used to remove the small ripple of current that forms when a mechanical switch is pushed in an electrical circuit and makes a series of short contacts.]]></Description>
+				<Description><![CDATA[The debounce period in ms.]]></Description>
 			</Item>
 		</Resources>
 		<Description2><![CDATA[]]></Description2>
