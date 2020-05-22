@@ -313,7 +313,7 @@ Status	Meaning	Description
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>KB</Units>
 				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
 			</Item>
 			<Item ID="22"><Name>ExtDevInfo</Name>
