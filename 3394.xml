@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Represents the sensor value of the presence sensor. \n* False: Absence is detected \n* True: Presence is detected]]></Description>
+				<Description><![CDATA[The current state of a digital input.]]></Description>
 			</Item>
 			<Item ID="909">
 				<Name>Executing Object</Name>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[Delay from the detection state to the clear state in ms]]></Description>
+				<Description><![CDATA[Delay from the detection state to the clear state in ms.]]></Description>
 			</Item>
 			<Item ID="5904">
 				<Name>Clear to Busy delay</Name>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ms</Units>
-				<Description><![CDATA[Delay from the clear state to the busy state in ms]]></Description>
+				<Description><![CDATA[Delay from the clear state to the busy state in ms.]]></Description>
 			</Item>
 			<Item ID="903">
 				<Name>Application Group ID</Name>

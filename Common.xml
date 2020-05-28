@@ -383,7 +383,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the X axis.]]></Description>
         
          <TS></TS>
         
@@ -405,7 +405,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the X axis.]]></Description>
         
         <TS></TS>
         
@@ -427,7 +427,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the Y axis.]]></Description>
         
         <TS></TS>
         
@@ -449,7 +449,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the Y axis.]]></Description>
         
         <TS></TS>
         
@@ -471,7 +471,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum measured value along the Z axis.]]></Description>
         
         <TS></TS>
         
@@ -493,7 +493,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum measured value along the Z axis.]]></Description>
         
          <TS></TS>
         
@@ -765,7 +765,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The off time when On/Off control remains on.]]></Description>
+        <Description><![CDATA[The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).]]></Description>
         
          <TS></TS>
         
@@ -1338,7 +1338,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum value measured by the sensor since power ON or reset.]]></Description>
         
         <TS></TS>
         
@@ -1361,7 +1361,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value measured by the sensor since it is ON or Reset, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum value measured by the sensor since power ON or reset.]]></Description>
         
         <TS></TS>
         
@@ -1384,7 +1384,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The minimum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The minimum value that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1407,7 +1407,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The maximum value that can be measured by the sensor, expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The maximum value that can be measured by the sensor.]]></Description>
         
         <TS></TS>
         
@@ -1430,7 +1430,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Reset the Min and Max Measured Values to current value.]]></Description>
+        <Description><![CDATA[Reset the Min and Max Measured Values to Current Value.]]></Description>
         
         <TS></TS>
         
@@ -1476,7 +1476,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[Last or Current Measured Value from the Sensor expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[Last or Current Measured Value from the Sensor.]]></Description>
         
         <TS></TS>
         
@@ -1520,7 +1520,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the X axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the X axis.]]></Description>
         
         <TS></TS>
         
@@ -1543,7 +1543,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Y axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Y axis.]]></Description>
         
          <TS></TS>
         
@@ -1566,7 +1566,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The measured value along the Z axis expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The measured value along the Z axis.]]></Description>
         
         <TS></TS>
         
@@ -1612,7 +1612,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[A string representing a value in the color space defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[A string representing a value in some color space.]]></Description>
         
          <TS></TS>
         
@@ -1635,7 +1635,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance "Air Pressure".]]></Description>
+        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance, "Air Pressure".]]></Description>
         
         <TS></TS>
         
@@ -2233,7 +2233,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[This resource represents a light dimmer setting, which has an Integer value between 0 and 100 as a percentage.]]></Description>
+        <Description><![CDATA[This resource represents a dimmer setting, which has an Integer value between 0 and 100 as a percentage.]]></Description>
         
         <TS></TS>
         
@@ -2256,7 +2256,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The time in seconds that the device has been turned on. Writing a value of 0 resets the counter.]]></Description>
+        <Description><![CDATA[The time in seconds that the device has been on. Writing a value of 0 resets the counter.]]></Description>
         
          <TS></TS>
         
@@ -2302,7 +2302,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The time in seconds since the Off command was sent. Writing a value of 0 resets the counter.]]></Description>
+        <Description><![CDATA[The time in seconds in the off state. Writing a value of 0 resets the counter.]]></Description>
         
          <TS></TS>
         
@@ -2325,7 +2325,7 @@
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The setpoint value expressed in the unit defined by the "Sensor Units" resource if present.]]></Description>
+        <Description><![CDATA[The setpoint value.]]></Description>
         
          <TS></TS>
         
@@ -2527,7 +2527,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
 
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The semantics / description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit, etc.]]></Description>
+        <Description><![CDATA[The description of each bit as a string. First instance describes the least significant bit, second instance the second least significant bit.]]></Description>
         
          <TS></TS>
         
@@ -3280,7 +3280,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>Cell Identity</Description>
+        <Description>Cell ID.</Description>
         
         <TS></TS>
         
@@ -3302,7 +3302,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>PCI (0..504)</Description>
+        <Description>PCI.</Description>
         
         <TS></TS>
         
@@ -3368,7 +3368,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>System Frame Number</Description>
+        <Description>System Frame Number.</Description>
         
        <TS></TS>
         
@@ -3390,7 +3390,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         
         <Submitter>GSMA</Submitter>
 
-        <Description>Sub Frame Number</Description>
+        <Description>Sub Frame Number.</Description>
         
          <TS></TS>
         
