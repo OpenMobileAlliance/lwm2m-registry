@@ -336,7 +336,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Portfolio-v1_0.xml</DDF>
+        <DDF>LWM2M_Portfolio-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0-20171114-A/OMA-TS-LWM2M_PortfolioObj-V1_0-20171114-A.pdf</TS>
