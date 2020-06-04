@@ -306,7 +306,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Software_Component-v1_0_1.xml</DDF>
+        <DDF>LWM2M_Software_Component-v1_0_1 t.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
@@ -321,7 +321,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_DevCapMgmt-v1_0.xml</DDF>
+        <DDF>LWM2M_DevCapMgmt-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_2-20170308-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_2-20170308-A.pdf</TS>
