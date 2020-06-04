@@ -429,6 +429,36 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
+	
+    <Item>
+        <ObjectID>500</ObjectID>
+        <URN>urn:oma:lwm2m:oma:500</URN>
+        <Name>CoAP Config</Name>
+        <Description>This object is used to configure the CoAP transmission parameters (RFC7252) and other parameters that affect CoAP transmission.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>500.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	
+    <Item>
+        <ObjectID>501</ObjectID>
+        <URN>urn:oma:lwm2m:oma:501</URN>
+        <Name>LTE-MTC Band Config</Name>
+        <Description>This object is used to configure the cellular band used by the device as well as to change the band. It is intended to be used on LTE bands, as in NB-IoT and LTE Cat M1 frequency bands.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>501.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
 
     <Item>
         <ObjectID>2048</ObjectID>
