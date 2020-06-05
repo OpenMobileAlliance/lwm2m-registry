@@ -429,7 +429,34 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>500</ObjectID>
+        <URN>urn:oma:lwm2m:oma:500</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>501</ObjectID>
+        <URN>urn:oma:lwm2m:oma:501</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>2048</ObjectID>
         <URN>urn:oma:lwm2m:ext:2048</URN>
