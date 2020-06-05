@@ -274,7 +274,38 @@ Key based mechanism can alternatively use for talking to the component server in
 				<RangeEnumeration>0..255 bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Password for access to SW Update Package in pull mode.]]></Description>
-			</Item></Resources>
+			</Item>
+			<Item ID="16">
+				<Name>Status Reason</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the status of the actions done by the client on the SW Component(s) referred by the present SW Update Package. The status is defined in Appendix B.]]></Description>
+			</Item>
+			<Item ID="17">
+				<Name>Software Component Link</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Objlnk</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Reference to SW Components downloaded and installed in scope of the present SW Update Package Note: When resource 17 objlink exist, resources 2, 3 and 12 in this table are ignored.]]></Description>
+			</Item>
+			<Item ID="18">
+				<Name>Software Component tree length</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..255</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Software Component tree length indicates the number of instances existing for this software package in the Software Component Object.]]></Description>
+			</Item>
+		</Resources>
 		<Description2><![CDATA[]]></Description2>
 	</Object>
 </LWM2M>
