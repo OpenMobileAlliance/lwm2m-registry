@@ -219,7 +219,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_LOCKWIPE-v1_0_2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_1-20181003-A/OMA-TS-LWM2M_LockWipe-V1_0-20180615-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_2-202006016-A/OMA-TS-LWM2M_LockWipe-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
     <Item>
@@ -233,7 +233,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_Software_Management-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200601-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -309,7 +309,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_Software_Component-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0-20180301-A/OMA-TS-LWM2M_SwMgmt-V1_0-20180301-A.pdf</TS>
+	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200601-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -324,7 +324,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_DevCapMgmt-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_2-20170308-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_2-20170308-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_3-20200616-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_3-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -339,7 +339,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_Portfolio-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0-20171114-A/OMA-TS-LWM2M_PortfolioObj-V1_0-20171114-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0_1-20200616-A/OMA-TS-LWM2M_PortfolioObj-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
     <Item>
@@ -385,7 +385,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TSLink>1</TSLink>
     </Item>
     <Item>
-
         <ObjectID>20</ObjectID>
         <URN>urn:oma:lwm2m:oma:20</URN>
         <Name>Event Log</Name>
@@ -397,7 +396,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LwM2M_EventLog-V1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V1_0-20180615-A/OMA-TS-LWM2M_EventLog-V1_0-20180615-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V1_0_1-20200616-A/OMA-TS-LWM2M_EventLog-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
         <Item>
