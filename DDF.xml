@@ -278,7 +278,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_WLAN_connectivity4-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_CONNMGMT/V1_0-20170314-A/OMA-TS-LWM2M_ConnMgmt-V1_0-20170314-A.pdf</TS>
+        <TS></TS>
         <TSLink>1</TSLink>
     </Item>
 
