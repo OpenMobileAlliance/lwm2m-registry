@@ -233,7 +233,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_Software_Management-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200601-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -309,7 +309,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>LWM2M_Software_Component-v1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200601-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
+	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
