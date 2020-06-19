@@ -83,7 +83,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
 				<Type>Integer</Type>
 				<RangeEnumeration>255</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[ Define the Log Event Class: 0: generic (default)  1: system   2: security  3: event   4: trace   5: panic   6: charging [7..99]: reserved [100..255]: vendor specific ]]></Description>
+				<Description><![CDATA[ Define the Log Event Class: 0: generic (default)  1: system   2: security  3: event   4: trace   5: panic   6: charging [7..99]: reserved [100-255]: vendor specific ]]></Description>
 			</Item>
 			<Item ID="4011"><Name>LogStart</Name>
 				<Operations>E</Operations>
@@ -114,7 +114,7 @@ Arguments definitions are described in the table below.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration>8-Bits</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th ..7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
 			</Item>
 			<Item ID="4014"><Name>LogData</Name>
 				<Operations>R</Operations>
