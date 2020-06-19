@@ -81,7 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[Last or Current Measured CO Value (in ppm) from the Sensor.]]></Description>
 			</Item>
 			<Item ID="4">
@@ -91,7 +91,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[The minimum value that can be measured by the sensor (in ppm).]]></Description>
 			</Item>
 			<Item ID="5">
@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[The maximum value that can be measured by the sensor.]]></Description>
 			</Item>
 			<Item ID="6">
@@ -111,7 +111,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[Indicate range of the accuracy for the temperature Sensor.]]></Description>
 			</Item>
 			<Item ID="7">
@@ -121,7 +121,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[The minimum CO value (in ppm) measured by the sensor since power ON or reset.]]></Description>
 			</Item>
 			<Item ID="8">
@@ -131,7 +131,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[The maximum CO value measured (in ppm) by the sensor since power ON or reset]]></Description>
 			</Item>
 			<Item ID="9">
@@ -141,7 +141,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>0..600</RangeEnumeration>
-				<Units></Units>
+				<Units>ppm</Units>
 				<Description><![CDATA[Indicate the Upper threshold for the CO Value (in ppm).]]></Description>
 			</Item>
 			<Item ID="10">
