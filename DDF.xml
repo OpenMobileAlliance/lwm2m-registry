@@ -3980,14 +3980,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10371</ObjectID>
         <URN>urn:oma:lwm2m:x:10371</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>CO Detector<</Name>
+        <Description>This is an alarm that should be raised if the sensor detects higher CO level.</Description>
+        <Owner>Qualcomm Technologies Inc.</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
