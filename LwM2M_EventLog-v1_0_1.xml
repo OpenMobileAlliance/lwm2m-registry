@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 FILE INFORMATION
@@ -9,15 +9,15 @@ OMA Permanent Document
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LwM2M_EventLog-V1_0_1.xml
+   Name: LwM2M_EventLog-v1_0_1.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LwM2M_EventLog-V1_0
+    OMA-TS-LwM2M_EventLog-V1_0_1
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
@@ -28,7 +28,7 @@ CHANGE HISTORY
 
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -59,6 +59,7 @@ LEGAL DISCLAIMER
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
   https://www.omaspecworks.org/about/intellectual-property-rights/
+  
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
