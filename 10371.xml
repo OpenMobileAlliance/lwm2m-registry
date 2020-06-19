@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>CO Detector</Name>
 		<Description1><![CDATA[This is an alarm that should be raised if the sensor detects higher CO level.]]></Description1>
 		<ObjectID>10371</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:10371</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10371</ObjectURN>
 		<LWM2MVersion></LWM2MVersion>
 		<ObjectVersion />
 		<MultipleInstances>Multiple</MultipleInstances>
