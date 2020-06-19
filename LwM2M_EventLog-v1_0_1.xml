@@ -83,7 +83,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
 				<Type>Integer</Type>
 				<RangeEnumeration>255</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[ Define the Log Event Class: 0: generic (default)  1: system   2: security  3: event   4: trace   5: panic   6: charging [7..99]: reserved [100-255]: vendor specific ]]></Description>
+				<Description><![CDATA[ Define the Log Event Class: 0: generic (default)  1: system   2: security  3: event   4: trace   5: panic   6: charging [7-99]: reserved [100-255]: vendor specific ]]></Description>
 			</Item>
 			<Item ID="4011"><Name>LogStart</Name>
 				<Operations>E</Operations>
