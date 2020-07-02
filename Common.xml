@@ -132,7 +132,7 @@
 
         <Submitter>OMA</Submitter>
 
-        <Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn’t contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+        <Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
         
          <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>
         
@@ -1635,7 +1635,7 @@
         
         <Submitter>IPSO</Submitter>
 
-        <Description><![CDATA[The application type of the sensor or actuator as a string, for instance, "Air Pressure".]]></Description>
+        <Description><![CDATA[The application type of the sensor or actuator as a string depending on the use case.]]></Description>
         
         <TS></TS>
         
