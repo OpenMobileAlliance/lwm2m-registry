@@ -150,7 +150,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Software_Management-v1_0_1.xml</DDF>
+        <DDF>9.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
@@ -165,7 +165,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Cellular_Connectivity-v1_0_1.xml</DDF>
+        <DDF>10.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -180,7 +180,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_APN_Connection_Profile-v1_0_1.xml</DDF>
+        <DDF>11.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -195,7 +195,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_WLAN_connectivity4-v1_0_1.xml</DDF>
+        <DDF>12.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -211,7 +211,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Bearer_Selection-v1_0_1.xml</DDF>
+        <DDF>13.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -226,7 +226,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Software_Component-v1_0_1.xml</DDF>
+        <DDF>14.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
 	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
@@ -241,7 +241,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_DevCapMgmt-v1_0_1.xml</DDF>
+        <DDF>15.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_3-20200616-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_3-20200616-A.pdf</TS>
@@ -256,7 +256,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Portfolio-v1_0_1.xml</DDF>
+        <DDF>16.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0_1-20200616-A/OMA-TS-LWM2M_PortfolioObj-V1_0_1-20200616-A.pdf</TS>
@@ -298,7 +298,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LwM2M_BinaryAppDataContainer-v1_0_1.xml</DDF>
+        <DDF>19.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_APPDATA/V1_0_1-20190221-A/OMA-TS-LWM2M_BinaryAppDataContainer-V1_0_1-20190221-A.pdf</TS>
@@ -313,7 +313,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LwM2M_EventLog-v1_0_1.xml</DDF>
+        <DDF>20.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V1_0_1-20200616-A/OMA-TS-LWM2M_EventLog-V1_0_1-20200616-A.pdf</TS>
@@ -327,7 +327,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_OSCORE-v1_0_1.xml</DDF>
+        <DDF>21.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -342,7 +342,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_VirtualObserveNotify-v1_0.xml</DDF>
+        <DDF>22.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
@@ -1742,20 +1742,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
-        <ObjectID>3380</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3380:2.0</URN>
-        <Name>PrachReport</Name>
-        <Description>PRACH report information</Description>
-        <Owner>GSMA</Owner>
-        <Source>1</Source>
-        <Ver>2.0</Ver>
-        <DDF>3380-2_0.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>    
+   
     <Item>
         <ObjectID>3381</ObjectID>
         <URN>urn:oma:lwm2m:ext:3381</URN>
@@ -2499,20 +2486,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
-        <ObjectID>10260</ObjectID>
-        <URN>urn:oma:lwm2m:x:10260:2.0</URN>
-        <Name>RDB</Name>
-        <Description>This object allows manipulation of Runtime Database variables.</Description>
-        <Owner>Casa Systems</Owner>
-        <Source>2</Source>
-        <Ver>2.0</Ver>
-        <DDF>10260-2_0.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
+
     <Item>
         <ObjectID>10262</ObjectID>
         <URN>urn:oma:lwm2m:x:10262</URN>
@@ -3017,20 +2991,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
-        <ObjectID>10308</ObjectID>
-        <URN>urn:oma:lwm2m:x:10308:2.0</URN>
-        <Name>AT&amp;T Connectivity Extension</Name>
-        <Description>The AT&amp;T Connectivity Extension Object will be used to gather information describing the UE and the operating state of the UE. The AT&amp;T Connectivity Extension Object is an open and standard object used by AT&amp;T.</Description>
-        <Owner>AT&amp;T</Owner>
-        <Source>2</Source>
-        <Ver>2.0</Ver>
-        <DDF>10308-2_0.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>	
+
     <Item>
         <ObjectID>10309</ObjectID>
         <URN>urn:oma:lwm2m:x:10309</URN>
