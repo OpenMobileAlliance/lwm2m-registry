@@ -280,3 +280,4 @@ If the value is set to 0, or if this resource is not instantiated, the Bootstrap
 			<Description2><![CDATA[]]></Description2>
 	</Object>
 </LWM2M>
+
