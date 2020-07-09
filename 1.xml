@@ -317,3 +317,4 @@ If false, the LwM2M Client Send Command capability is activated.]]></Description
 		<Description2></Description2>
 	</Object>
 </LWM2M>
+
