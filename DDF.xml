@@ -18,7 +18,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- Ver of the object, not visible, not used -->
         <Ver>1.0</Ver>
         <!-- URL to the xml file describing the object -->
-        <DDF>0.xml</DDF>
+        <DDF>rel-1/rel-1/0.xml</DDF>
         <!-- Link that opens the Object in the Vorto environment -->
         <Vorto></Vorto>
         <!-- 0 => if link to object should not be visible, 1 => if object should be visible (default) -->
@@ -36,7 +36,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>1.xml</DDF>
+        <DDF>rel-1/rel-1/1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
@@ -50,7 +50,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>2.xml</DDF>
+        <DDF>rel-1/rel-1/2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -65,7 +65,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>3.xml</DDF>
+        <DDF>rel-1/rel-1/3.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
@@ -79,7 +79,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>4.xml</DDF>
+        <DDF>rel-1/rel-1/4.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
@@ -93,7 +93,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>5.xml</DDF>
+        <DDF>rel-1/5.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -107,7 +107,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>6.xml</DDF>
+        <DDF>rel-1/6.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -121,7 +121,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>7.xml</DDF>
+        <DDF>rel-1/7.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -136,7 +136,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>8.xml</DDF>
+        <DDF>rel-1/8.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_2-20200616-A/OMA-TS-LWM2M_LockWipe-V1_0_1-20200616-A.pdf</TS>
@@ -150,7 +150,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>9.xml</DDF>
+        <DDF>rel-1/9.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
@@ -165,7 +165,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>10.xml</DDF>
+        <DDF>rel-1/10.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -180,7 +180,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>11.xml</DDF>
+        <DDF>rel-1/11.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -195,7 +195,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>12.xml</DDF>
+        <DDF>rel-1/12.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -211,7 +211,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>13.xml</DDF>
+        <DDF>rel-1/13.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -226,7 +226,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>14.xml</DDF>
+        <DDF>rel-1/14.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
 	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
@@ -241,7 +241,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>15.xml</DDF>
+        <DDF>rel-1/15.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt/V1_0_3-20200616-A/OMA-TS-LWM2M_DevCapMgmt-V1_0_3-20200616-A.pdf</TS>
@@ -256,7 +256,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>16.xml</DDF>
+        <DDF>rel-1/16.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LWM2M_PortfolioObj/V1_0_1-20200616-A/OMA-TS-LWM2M_PortfolioObj-V1_0_1-20200616-A.pdf</TS>
@@ -298,7 +298,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>19.xml</DDF>
+        <DDF>rel-1/19.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_APPDATA/V1_0_1-20190221-A/OMA-TS-LWM2M_BinaryAppDataContainer-V1_0_1-20190221-A.pdf</TS>
@@ -313,7 +313,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>20.xml</DDF>
+        <DDF>rel-1/20.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V1_0_1-20200616-A/OMA-TS-LWM2M_EventLog-V1_0_1-20200616-A.pdf</TS>
@@ -327,7 +327,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>21.xml</DDF>
+        <DDF>rel-1/21.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -342,7 +342,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>22.xml</DDF>
+        <DDF>rel-1/22.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
@@ -357,7 +357,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>500.xml</DDF>
+        <DDF>rel-1/500.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -372,7 +372,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>501.xml</DDF>
+        <DDF>rel-1/501.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -388,7 +388,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2048.xml</DDF>
+        <DDF>rel-1/2048.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -403,7 +403,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2049.xml</DDF>
+        <DDF>rel-1/2049.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -418,7 +418,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2050.xml</DDF>
+        <DDF>rel-1/2050.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -433,7 +433,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2051.xml</DDF>
+        <DDF>rel-1/2051.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -448,7 +448,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2052.xml</DDF>
+        <DDF>rel-1/2052.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -463,7 +463,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2053.xml</DDF>
+        <DDF>rel-1/2053.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -478,7 +478,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2054.xml</DDF>
+        <DDF>rel-1/2054.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -493,7 +493,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2055.xml</DDF>
+        <DDF>rel-1/2055.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -508,7 +508,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2056.xml</DDF>
+        <DDF>rel-1/2056.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -522,7 +522,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>2057.xml</DDF>
+        <DDF>rel-1/2057.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.onem2m.org/images/files/deliverables/TS-0005-Management_Enablement_(OMA)-V1_0_1.pdf</TS>
@@ -536,7 +536,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3200.xml</DDF>
+        <DDF>rel-1/3200.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -551,7 +551,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3201.xml</DDF>
+        <DDF>rel-1/3201.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -566,7 +566,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3202.xml</DDF>
+        <DDF>rel-1/3202.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -581,7 +581,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3203.xml</DDF>
+        <DDF>rel-1/3203.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -596,7 +596,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3300.xml</DDF>
+        <DDF>rel-1/3300.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -611,7 +611,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3301.xml</DDF>
+        <DDF>rel-1/3301.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -626,7 +626,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3302.xml</DDF>
+        <DDF>rel-1/3302.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -641,7 +641,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3303.xml</DDF>
+        <DDF>rel-1/3303.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -656,7 +656,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3304.xml</DDF>
+        <DDF>rel-1/3304.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -671,7 +671,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3305.xml</DDF>
+        <DDF>rel-1/3305.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -686,7 +686,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3306.xml</DDF>
+        <DDF>rel-1/3306.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -701,7 +701,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3308.xml</DDF>
+        <DDF>rel-1/3308.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -716,7 +716,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3310.xml</DDF>
+        <DDF>rel-1/3310.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -731,7 +731,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3311.xml</DDF>
+        <DDF>rel-1/3311.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -746,7 +746,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3312.xml</DDF>
+        <DDF>rel-1/3312.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -761,7 +761,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3313.xml</DDF>
+        <DDF>rel-1/3313.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -776,7 +776,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3314.xml</DDF>
+        <DDF>rel-1/3314.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -791,7 +791,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3315.xml</DDF>
+        <DDF>rel-1/3315.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -806,7 +806,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3316.xml</DDF>
+        <DDF>rel-1/3316.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -821,7 +821,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3317.xml</DDF>
+        <DDF>rel-1/3317.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -836,7 +836,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3318.xml</DDF>
+        <DDF>rel-1/3318.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -851,7 +851,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3319.xml</DDF>
+        <DDF>rel-1/3319.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -866,7 +866,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3320.xml</DDF>
+        <DDF>rel-1/3320.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -881,7 +881,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3321.xml</DDF>
+        <DDF>rel-1/3321.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -896,7 +896,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3322.xml</DDF>
+        <DDF>rel-1/3322.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -911,7 +911,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3323.xml</DDF>
+        <DDF>rel-1/3323.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -926,7 +926,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3324.xml</DDF>
+        <DDF>rel-1/3324.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -941,7 +941,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3325.xml</DDF>
+        <DDF>rel-1/3325.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -956,7 +956,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3326.xml</DDF>
+        <DDF>rel-1/3326.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -971,7 +971,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3327.xml</DDF>
+        <DDF>rel-1/3327.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -986,7 +986,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3328.xml</DDF>
+        <DDF>rel-1/3328.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1001,7 +1001,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3329.xml</DDF>
+        <DDF>rel-1/3329.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1016,7 +1016,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3330.xml</DDF>
+        <DDF>rel-1/3330.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1031,7 +1031,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3331.xml</DDF>
+        <DDF>rel-1/3331.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1046,7 +1046,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3332.xml</DDF>
+        <DDF>rel-1/3332.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1061,7 +1061,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3333.xml</DDF>
+        <DDF>rel-1/3333.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1076,7 +1076,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3334.xml</DDF>
+        <DDF>rel-1/3334.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1091,7 +1091,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3335.xml</DDF>
+        <DDF>rel-1/3335.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1106,7 +1106,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3336.xml</DDF>
+        <DDF>rel-1/3336.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1121,7 +1121,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3337.xml</DDF>
+        <DDF>rel-1/3337.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1136,7 +1136,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3338.xml</DDF>
+        <DDF>rel-1/3338.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1151,7 +1151,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3339.xml</DDF>
+        <DDF>rel-1/3339.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1166,7 +1166,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3340.xml</DDF>
+        <DDF>rel-1/3340.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1181,7 +1181,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3341.xml</DDF>
+        <DDF>rel-1/3341.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1196,7 +1196,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3342.xml</DDF>
+        <DDF>rel-1/3342.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1211,7 +1211,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3343.xml</DDF>
+        <DDF>rel-1/3343.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1226,7 +1226,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3344.xml</DDF>
+        <DDF>rel-1/3344.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1241,7 +1241,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3345.xml</DDF>
+        <DDF>rel-1/3345.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1256,7 +1256,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3346.xml</DDF>
+        <DDF>rel-1/3346.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1271,7 +1271,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3347.xml</DDF>
+        <DDF>rel-1/3347.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1286,7 +1286,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3348.xml</DDF>
+        <DDF>rel-1/3348.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1300,7 +1300,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3349.xml</DDF>
+        <DDF>rel-1/3349.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1314,7 +1314,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3350.xml</DDF>
+        <DDF>rel-1/3350.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1328,7 +1328,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3351.xml</DDF>
+        <DDF>rel-1/3351.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1342,7 +1342,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3352.xml</DDF>
+        <DDF>rel-1/3352.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1356,7 +1356,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3353.xml</DDF>
+        <DDF>rel-1/3353.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1371,7 +1371,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3354.xml</DDF>
+        <DDF>rel-1/3354.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1385,7 +1385,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3355.xml</DDF>
+        <DDF>rel-1/3355.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1399,7 +1399,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3356.xml</DDF>
+        <DDF>rel-1/3356.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1413,7 +1413,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3357.xml</DDF>
+        <DDF>rel-1/3357.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1427,7 +1427,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3358.xml</DDF>
+        <DDF>rel-1/3358.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1441,7 +1441,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3359.xml</DDF>
+        <DDF>rel-1/3359.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1455,7 +1455,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3360.xml</DDF>
+        <DDF>rel-1/3360.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1469,7 +1469,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3361.xml</DDF>
+        <DDF>rel-1/3361.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1484,7 +1484,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3362.xml</DDF>
+        <DDF>rel-1/3362.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1498,7 +1498,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3363.xml</DDF>
+        <DDF>rel-1/3363.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1512,7 +1512,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3364.xml</DDF>
+        <DDF>rel-1/3364.xml</DDF>
         <Vorto></Vorto>
         <DDFLink> 1</DDFLink>
         <TS></TS>
@@ -1526,7 +1526,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3365.xml</DDF>
+        <DDF>rel-1/3365.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1540,7 +1540,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3366.xml</DDF>
+        <DDF>rel-1/3366.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1554,7 +1554,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3367.xml</DDF>
+        <DDF>rel-1/3367.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1568,7 +1568,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3368.xml</DDF>
+        <DDF>rel-1/3368.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1582,7 +1582,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3369.xml</DDF>
+        <DDF>rel-1/3369.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1596,7 +1596,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3370.xml</DDF>
+        <DDF>rel-1/3370.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1610,7 +1610,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3371.xml</DDF>
+        <DDF>rel-1/3371.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1624,7 +1624,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3372.xml</DDF>
+        <DDF>rel-1/3372.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1638,7 +1638,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3373.xml</DDF>
+        <DDF>rel-1/3373.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1652,7 +1652,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3374.xml</DDF>
+        <DDF>rel-1/3374.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1666,7 +1666,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3375.xml</DDF>
+        <DDF>rel-1/3375.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1680,7 +1680,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3376.xml</DDF>
+        <DDF>rel-1/3376.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1694,7 +1694,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3377.xml</DDF>
+        <DDF>rel-1/3377.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1708,7 +1708,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3378.xml</DDF>
+        <DDF>rel-1/3378.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1722,7 +1722,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3379.xml</DDF>
+        <DDF>rel-1/3379.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1736,7 +1736,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3380.xml</DDF>
+        <DDF>rel-1/3380.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1751,7 +1751,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3381.xml</DDF>
+        <DDF>rel-1/3381.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1765,7 +1765,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3382.xml</DDF>
+        <DDF>rel-1/3382.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1779,7 +1779,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3383.xml</DDF>
+        <DDF>rel-1/3383.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1793,7 +1793,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3384.xml</DDF>
+        <DDF>rel-1/3384.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1807,7 +1807,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3385.xml</DDF>
+        <DDF>rel-1/3385.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1821,7 +1821,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3386.xml</DDF>
+        <DDF>rel-1/3386.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1838,7 +1838,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3387.xml</DDF>
+        <DDF>rel-1/3387.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1853,7 +1853,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3388.xml</DDF>
+        <DDF>rel-1/3388.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1868,7 +1868,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3389.xml</DDF>
+        <DDF>rel-1/3389.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1885,7 +1885,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3390.xml</DDF>
+        <DDF>rel-1/3390.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1903,7 +1903,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3391.xml</DDF>
+        <DDF>rel-1/3391.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1919,7 +1919,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3392.xml</DDF>
+        <DDF>rel-1/3392.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1937,7 +1937,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3393.xml</DDF>
+        <DDF>rel-1/3393.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1954,7 +1954,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3394.xml</DDF>
+        <DDF>rel-1/3394.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1972,7 +1972,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3395.xml</DDF>
+        <DDF>rel-1/3395.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -1988,7 +1988,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3396.xml</DDF>
+        <DDF>rel-1/3396.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2004,7 +2004,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3397.xml</DDF>
+        <DDF>rel-1/3397.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2020,7 +2020,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3398.xml</DDF>
+        <DDF>rel-1/3398.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2036,7 +2036,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3399.xml</DDF>
+        <DDF>rel-1/3399.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2052,7 +2052,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3400.xml</DDF>
+        <DDF>rel-1/3400.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2068,7 +2068,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3401.xml</DDF>
+        <DDF>rel-1/3401.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2085,7 +2085,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3402.xml</DDF>
+        <DDF>rel-1/3402.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2101,7 +2101,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3403.xml</DDF>
+        <DDF>rel-1/3403.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2116,7 +2116,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3404.xml</DDF>
+        <DDF>rel-1/3404.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2133,7 +2133,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3405.xml</DDF>
+        <DDF>rel-1/3405.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2149,7 +2149,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3406.xml</DDF>
+        <DDF>rel-1/3406.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2164,7 +2164,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IoT Connectivity Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3407.xml</DDF>
+        <DDF>rel-1/3407.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2179,7 +2179,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IoT Connectivity Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3408.xml</DDF>
+        <DDF>rel-1/3408.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2194,7 +2194,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2209,7 +2209,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>AT&amp;T</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10241.xml</DDF>
+        <DDF>rel-1/10241.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2224,7 +2224,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10242.xml</DDF>
+        <DDF>rel-1/10242.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2239,7 +2239,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10243.xml</DDF>
+        <DDF>rel-1/10243.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2254,7 +2254,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Works System</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10244.xml</DDF>
+        <DDF>rel-1/10244.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2268,7 +2268,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10245.xml</DDF>
+        <DDF>rel-1/10245.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2282,7 +2282,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10246.xml</DDF>
+        <DDF>rel-1/10246.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2296,7 +2296,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10247.xml</DDF>
+        <DDF>rel-1/10247.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2310,7 +2310,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10248.xml</DDF>
+        <DDF>rel-1/10248.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2324,7 +2324,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10249.xml</DDF>
+        <DDF>rel-1/10249.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2338,7 +2338,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Huawei Technologies Co., Ltd.</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10250.xml</DDF>
+        <DDF>rel-1/10250.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2352,7 +2352,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Cisco</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10251.xml</DDF>
+        <DDF>rel-1/10251.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2366,7 +2366,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>ARM Limited</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10252.xml</DDF>
+        <DDF>rel-1/10252.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2381,7 +2381,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Lab R&amp;D Atos Pessac</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10253.xml</DDF>
+        <DDF>rel-1/10253.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2395,7 +2395,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>World-Direct eBusiness</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10254.xml</DDF>
+        <DDF>rel-1/10254.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2409,7 +2409,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>ARM Limited</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10255.xml</DDF>
+        <DDF>rel-1/10255.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2424,7 +2424,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Huawei Technologies</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10256.xml</DDF>
+        <DDF>rel-1/10256.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2438,7 +2438,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Comsel System Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10257.xml</DDF>
+        <DDF>rel-1/10257.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2452,7 +2452,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>World-Direct eBusiness</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10258.xml</DDF>
+        <DDF>rel-1/10258.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2466,7 +2466,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Casa Systems</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10259.xml</DDF>
+        <DDF>rel-1/10259.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2480,7 +2480,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Casa Systems</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10260.xml</DDF>
+        <DDF>rel-1/10260.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2495,7 +2495,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10262.xml</DDF>
+        <DDF>rel-1/10262.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2509,7 +2509,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10263.xml</DDF>
+        <DDF>rel-1/10263.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2523,7 +2523,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10264.xml</DDF>
+        <DDF>rel-1/10264.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2537,7 +2537,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10265.xml</DDF>
+        <DDF>rel-1/10265.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2551,7 +2551,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10266.xml</DDF>
+        <DDF>rel-1/10266.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2565,7 +2565,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10267.xml</DDF>
+        <DDF>rel-1/10267.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2579,7 +2579,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10268.xml</DDF>
+        <DDF>rel-1/10268.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2593,7 +2593,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10269.xml</DDF>
+        <DDF>rel-1/10269.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2607,7 +2607,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10270.xml</DDF>
+        <DDF>rel-1/10270.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2621,7 +2621,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10271.xml</DDF>
+        <DDF>rel-1/10271.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2635,7 +2635,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10272.xml</DDF>
+        <DDF>rel-1/10272.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2649,7 +2649,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10273.xml</DDF>
+        <DDF>rel-1/10273.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2663,7 +2663,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10274.xml</DDF>
+        <DDF>rel-1/10274.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2681,7 +2681,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10275.xml</DDF>
+        <DDF>rel-1/10275.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2695,7 +2695,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10276.xml</DDF>
+        <DDF>rel-1/10276.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2709,7 +2709,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10277.xml</DDF>
+        <DDF>rel-1/10277.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2726,7 +2726,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10278.xml</DDF>
+        <DDF>rel-1/10278.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2743,7 +2743,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10279.xml</DDF>
+        <DDF>rel-1/10279.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2757,7 +2757,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10280.xml</DDF>
+        <DDF>rel-1/10280.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2771,7 +2771,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10281.xml</DDF>
+        <DDF>rel-1/10281.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2785,7 +2785,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10282.xml</DDF>
+        <DDF>rel-1/10282.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2799,7 +2799,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10283.xml</DDF>
+        <DDF>rel-1/10283.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2813,7 +2813,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10284.xml</DDF>
+        <DDF>rel-1/10284.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2828,7 +2828,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Huawei</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10286.xml</DDF>
+        <DDF>rel-1/10286.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2842,7 +2842,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF>10290.xml</DDF>
+         <DDF>rel-1/10290.xml</DDF>
          <Vorto></Vorto>
          <DDFLink>1</DDFLink>
          <TS></TS>
@@ -2856,7 +2856,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF>10291.xml</DDF>
+         <DDF>rel-1/10291.xml</DDF>
          <Vorto></Vorto>
          <DDFLink>1</DDFLink>
          <TS></TS>
@@ -2870,7 +2870,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
          <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
-         <DDF>10292.xml</DDF>
+         <DDF>rel-1/10292.xml</DDF>
          <Vorto></Vorto>
          <DDFLink>1</DDFLink>
          <TS></TS>
@@ -2885,7 +2885,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Verizon Wireless</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10299.xml</DDF>
+        <DDF>rel-1/10299.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2901,7 +2901,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TAU</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10300.xml</DDF>
+        <DDF>rel-1/10300.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -2915,7 +2915,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2929,7 +2929,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2943,7 +2943,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2957,7 +2957,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2971,7 +2971,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -2985,7 +2985,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>AT&amp;T</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10308.xml</DDF>
+        <DDF>rel-1/10308.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3000,7 +3000,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>XiangYiIOT Technologies</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10309.xml</DDF>
+        <DDF>rel-1/10309.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3014,7 +3014,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3028,7 +3028,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10311.xml</DDF>
+        <DDF>rel-1/10311.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3042,7 +3042,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3056,7 +3056,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>South East Water</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10313.xml</DDF>
+        <DDF>rel-1/10313.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3070,7 +3070,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OpenLX SP Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10314.xml</DDF>
+        <DDF>rel-1/10314.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3084,7 +3084,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10315.xml</DDF>
+        <DDF>rel-1/10315.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3098,7 +3098,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10316.xml</DDF>
+        <DDF>rel-1/10316.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3112,7 +3112,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3126,7 +3126,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10318.xml</DDF>
+        <DDF>rel-1/10318.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3140,7 +3140,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10319.xml</DDF>
+        <DDF>rel-1/10319.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3154,7 +3154,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10320.xml</DDF>
+        <DDF>rel-1/10320.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3168,7 +3168,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3182,7 +3182,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10322.xml</DDF>
+        <DDF>rel-1/10322.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3196,7 +3196,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10323.xml</DDF>
+        <DDF>rel-1/10323.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3210,7 +3210,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10324.xml</DDF>
+        <DDF>rel-1/10324.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3224,7 +3224,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3238,7 +3238,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10326.xml</DDF>
+        <DDF>rel-1/10326.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3252,7 +3252,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10327.xml</DDF>
+        <DDF>rel-1/10327.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3266,7 +3266,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10328.xml</DDF>
+        <DDF>rel-1/10328.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3280,7 +3280,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMind</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10329.xml</DDF>
+        <DDF>rel-1/10329.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3294,7 +3294,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10330.xml</DDF>
+        <DDF>rel-1/10330.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3308,7 +3308,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10331.xml</DDF>
+        <DDF>rel-1/10331.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3322,7 +3322,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10332.xml</DDF>
+        <DDF>rel-1/10332.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3336,7 +3336,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10333.xml</DDF>
+        <DDF>rel-1/10333.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3350,7 +3350,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10334.xml</DDF>
+        <DDF>rel-1/10334.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3364,7 +3364,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10335.xml</DDF>
+        <DDF>rel-1/10335.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3378,7 +3378,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10336.xml</DDF>
+        <DDF>rel-1/10336.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3392,7 +3392,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10337.xml</DDF>
+        <DDF>rel-1/10337.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3406,7 +3406,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10338.xml</DDF>
+        <DDF>rel-1/10338.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3420,7 +3420,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10339.xml</DDF>
+        <DDF>rel-1/10339.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3434,7 +3434,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10340.xml</DDF>
+        <DDF>rel-1/10340.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3448,7 +3448,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10341.xml</DDF>
+        <DDF>rel-1/10341.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3462,7 +3462,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10342.xml</DDF>
+        <DDF>rel-1/10342.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3476,7 +3476,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10343.xml</DDF>
+        <DDF>rel-1/10343.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3490,7 +3490,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10344.xml</DDF>
+        <DDF>rel-1/10344.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3504,7 +3504,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10345.xml</DDF>
+        <DDF>rel-1/10345.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3518,7 +3518,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10346.xml</DDF>
+        <DDF>rel-1/10346.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3532,7 +3532,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10347.xml</DDF>
+        <DDF>rel-1/10347.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3546,7 +3546,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10348.xml</DDF>
+        <DDF>rel-1/10348.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3560,7 +3560,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10349.xml</DDF>
+        <DDF>rel-1/10349.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3574,7 +3574,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10350.xml</DDF>
+        <DDF>rel-1/10350.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3588,7 +3588,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10351.xml</DDF>
+        <DDF>rel-1/10351.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3602,7 +3602,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10352.xml</DDF>
+        <DDF>rel-1/10352.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3616,7 +3616,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CoudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10353.xml</DDF>
+        <DDF>rel-1/10353.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3630,7 +3630,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10354.xml</DDF>
+        <DDF>rel-1/10354.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3644,7 +3644,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10355.xml</DDF>
+        <DDF>rel-1/10355.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3658,7 +3658,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CoudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10356.xml</DDF>
+        <DDF>rel-1/10356.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3672,7 +3672,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10357.xml</DDF>
+        <DDF>rel-1/10357.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3686,7 +3686,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10358.xml</DDF>
+        <DDF>rel-1/10358.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3700,7 +3700,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10359.xml</DDF>
+        <DDF>rel-1/10359.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3714,7 +3714,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10360.xml</DDF>
+        <DDF>rel-1/10360.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3728,7 +3728,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10361.xml</DDF>
+        <DDF>rel-1/10361.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3742,7 +3742,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10362.xml</DDF>
+        <DDF>rel-1/10362.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3756,7 +3756,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10363.xml</DDF>
+        <DDF>rel-1/10363.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3770,7 +3770,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10364.xml</DDF>
+        <DDF>rel-1/10364.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3784,7 +3784,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10365.xml</DDF>
+        <DDF>rel-1/10365.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3798,7 +3798,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10366.xml</DDF>
+        <DDF>rel-1/10366.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3812,7 +3812,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3826,7 +3826,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10368.xml</DDF>
+        <DDF>rel-1/10368.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3840,7 +3840,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10369.xml</DDF>
+        <DDF>rel-1/10369.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3854,7 +3854,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3868,7 +3868,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3882,7 +3882,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>TBC</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>rel-1/</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
@@ -3896,7 +3896,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IoTerop</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>18830.xml</DDF>
+        <DDF>rel-1/18830.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3910,7 +3910,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>IoTerop</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>18831.xml</DDF>
+        <DDF>rel-1/18831.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
