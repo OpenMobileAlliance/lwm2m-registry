@@ -2571,8 +2571,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    </Item>
-        <Item>
+
+    <Item>
         <ObjectID>10260</ObjectID>
         <URN>urn:oma:lwm2m:x:10260:2.0</URN>
         <Name>RDB</Name>
