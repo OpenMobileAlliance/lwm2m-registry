@@ -458,6 +458,36 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+	
+    <Item>
+        <ObjectID>502</ObjectID>
+        <URN>urn:oma:lwm2m:oma:502</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	
+    <Item>
+        <ObjectID>503</ObjectID>
+        <URN>urn:oma:lwm2m:oma:503</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
   
     <Item>
         <ObjectID>2048</ObjectID>
