@@ -462,14 +462,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>502</ObjectID>
         <URN>urn:oma:lwm2m:oma:502</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Name>CO Detector</Name>
+        <Description>This is an alarm that should be raised if the sensor detects a higher than threshold CO level.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>502.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -477,12 +477,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>503</ObjectID>
         <URN>urn:oma:lwm2m:oma:503</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Name>Fire Alarm</Name>
+        <Description>This is an alarm that should be raised if the sensor(s) detect fire, based on the values reported from Temperature, Humidity, Smoke (CO2).</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>503.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
