@@ -458,6 +458,36 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+	
+    <Item>
+        <ObjectID>502</ObjectID>
+        <URN>urn:oma:lwm2m:oma:502</URN>
+        <Name>CO Detector</Name>
+        <Description>This is an alarm that should be raised if the sensor detects a higher than threshold CO level.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>502.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	
+    <Item>
+        <ObjectID>503</ObjectID>
+        <URN>urn:oma:lwm2m:oma:503</URN>
+        <Name>Fire Alarm</Name>
+        <Description>This is an alarm that should be raised if the sensor(s) detect fire, based on the values reported from Temperature, Humidity, Smoke (CO2).</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>503.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
   
     <Item>
         <ObjectID>2048</ObjectID>
@@ -1435,7 +1465,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Description>serving cell information that the RRC decides to camp on</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
-        <Ver />
+        <Ver>1.0</Ver>
         <DDF>3353.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -2501,7 +2531,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Description><![CDATA[This object provides a range of information related to device metadata]]></Description>
         <Owner>ARM Limited</Owner>
         <Source>2</Source>
-        <Ver />
+        <Ver>1.0</Ver>
         <DDF>10255.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
