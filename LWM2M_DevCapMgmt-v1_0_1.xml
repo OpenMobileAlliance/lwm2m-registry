@@ -67,7 +67,8 @@ LEGAL DISCLAIMER
 		<Name>DevCapMgmt</Name>
 		<Description1><![CDATA[This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.]]></Description1>
 		<ObjectID>15</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:15</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:15:2.0</ObjectURN>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -153,7 +154,7 @@ In Enabled State, the Device Capability is allowed to work when it is attached t
 			</Item>
 			<Item ID="6"><Name>opDisable</Name>
 				<Operations>E</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
