@@ -38,7 +38,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>snapshots/0-1_1_1.xml</DDF>
+        <DDF>0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -53,7 +53,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Server-v1_0.xml</DDF>
+        <DDF>snapshots/1-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
@@ -68,7 +68,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>LWM2M_Server-v1_1_1.xml</DDF>
+        <DDF>1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -83,7 +83,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>LWM2M_Access_Control-v1_0_3.xml</DDF>
+        <DDF>2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
