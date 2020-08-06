@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><!--Apache License
+<?xml version="1.0" encoding="utf-8"?><!--Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
 
@@ -70,134 +70,61 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
---><LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+limitations under the License.--><LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>PrachReport</Name>
-		<Description1><![CDATA[PRACH report information]]></Description1>
-		<ObjectID>3380</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3380:2.0</ObjectURN>
+		<Name>powerupLog</Name>
+		<Description1><![CDATA[One time event sent by the device at power up.]]></Description1>
+		<ObjectID>3351</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3351</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>2.0</ObjectVersion>
+		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
-			<Item ID="6037"><Name>sysFrameNumber</Name>
+			<Item ID="0"><Name>deviceName</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[System Frame Number]]></Description>
+				<Description><![CDATA[Human-readable name of the device]]></Description>
 			</Item>
-			<Item ID="6038"><Name>subFrameNumber</Name>
+			<Item ID="1"><Name>toolVersion</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Sub Frame Number]]></Description>
+				<Description><![CDATA[The tool version that the device supports - used to determine the logging object/resource version to be used for parsing]]></Description>
 			</Item>
-			<Item ID="2"><Name>rachTxPower</Name>
+			<Item ID="2"><Name>IMEI</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[PRACH tx power in dB (-112..23)]]></Description>
+				<Description><![CDATA[IMEI of device]]></Description>
 			</Item>
-			<Item ID="3"><Name>zadOffSeqNum</Name>
+			<Item ID="3"><Name>IMSI</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[ZadOFF Sequence Number (0..837)]]></Description>
+				<Description><![CDATA[IMSI of device]]></Description>
 			</Item>
-			<Item ID="4"><Name>prachConfig</Name>
+			<Item ID="4"><Name>MSISDN</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Random access preamble timing for a range of preamble formats (0..64)]]></Description>
-			</Item>
-			<Item ID="5"><Name>preambleFormat</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Preamble Format (0..4)]]></Description>
-			</Item>
-			<Item ID="6"><Name>maxTransmissionMsg3</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Max number of HARQ re-transmissions from UE for RACH message 3 (1..8)]]></Description>
-			</Item>
-			<Item ID="7"><Name>raResponseWindowSize</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Window size for reception of RACH message 2 (2..10)]]></Description>
-			</Item>
-			<Item ID="8"><Name>RachRequestResult</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[RACH Request success/failure - 0=fail, 1=pass]]></Description>
-			</Item>
-			<Item ID="9"><Name>ce_mode</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[CE_mode]]></Description>
-			</Item>
-			<Item ID="10"><Name>ce_level</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[CE level]]></Description>
-			</Item>
-			<Item ID="11"><Name>num_prach_repetition</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Number of PRACH Repetitions]]></Description>
-			</Item>
-			<Item ID="12"><Name>prach_repetition_seq</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[PRACH Repetition seq]]></Description>
+				<Description><![CDATA[MSISDN of device]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>
