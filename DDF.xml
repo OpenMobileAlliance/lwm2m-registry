@@ -3121,7 +3121,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>AT&amp;T</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/10308-1-0.xml</DDF>
+        <DDF>version_history/10308-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
