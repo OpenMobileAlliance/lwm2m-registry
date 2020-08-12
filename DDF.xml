@@ -3169,7 +3169,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
         <Name>Solar Radiation</Name>
@@ -3183,8 +3183,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    </Item>
-        <Item>
+    <Item>
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311:1.1</URN>
         <Name>Solar Radiation</Name>
