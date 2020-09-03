@@ -3982,7 +3982,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>10371</ObjectID>
         <URN>urn:oma:lwm2m:x:10371</URN>
-        <Name>DeviceExt</Name>
+        <Name>Reboot Status</Name>
         <Description>This LWM2M object extends Device(3) from LWM2M core specification. It mainly provides features allowing better monitor of Reboot(/3/0/4) and Reset Factory(/3/0/5) operation available on LWM2M Device (3) Object. Without this extension this is really hard to know if a reboot or a reset factory is a success or a failure and why it failed. This is also strongly recommended to use separated response for those resources (/3/0/4 and /3/0/5) and to reboot or reset factory only after receiving the response ACK to avoid unexpected duplicate reboot.</Description>
         <Owner>Sierra Wireless</Owner>
         <Source>2</Source>
