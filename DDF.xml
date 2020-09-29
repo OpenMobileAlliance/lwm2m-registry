@@ -386,7 +386,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>12.xml</DDF>
+        <DDF>version_history/12-1_0_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
