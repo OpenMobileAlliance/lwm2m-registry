@@ -539,6 +539,19 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <TS>http://www.openmobilealliance.org/release/</TS>
         <TSLink>0</TSLink>
     </Item><Item>
+        <ObjectID>25</ObjectID>
+        <URN>urn:oma:lwm2m:oma:25</URN>
+        <Name>LwM2M Gateway</Name>
+        <Description>This object is used by a LwM2M Gateway to maintain the devices connected to the gateway.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>25.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/</TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
         <ObjectID>27</ObjectID>
         <URN>urn:oma:lwm2m:oma:27</URN>
         <Name>5GNR Connectivity</Name>
