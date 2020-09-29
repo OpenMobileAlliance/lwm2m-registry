@@ -4,28 +4,27 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Firmware_Update-V1_0_3-20190617-A
-   Type: xml
-   Date: 2019-Jun-17
+   File: OMA-SUP-XML_5-V1_1-YYYYMMDD-D
+   Path: http://www.openmobilealliance.org/release/ObjLwM2M_Firmware/
 
-Public Reachable Information
-   Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_Firmware_Update-v1_0_3.xml
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 5.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M-V1_0_2
-    OMA-TS-LightweightM2M_Core-V1_1_1
+    OMA-TS-LightweightM2M_Core-V1_2
+    OMA-TS-LightweightM2M_Core-V1_2
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -59,7 +58,7 @@ LEGAL DISCLAIMER
 
 -->
 
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Firmware Update</Name>
 		<Description1><![CDATA[This LwM2M Object enables management of firmware which is to be updated. This Object includes installing a firmware package, updating firmware, and performing actions after updating firmware. The firmware update MAY require to reboot the device; it will depend on a number of factors, such as the operating system architecture and the extent of the updated software.
@@ -68,9 +67,9 @@ A LwM2M Server may also instruct a LwM2M Client to fetch a firmware image from a
 A LwM2M Client MUST support block-wise transfer [CoAP_Blockwise] if it implements the Firmware Update object.
 A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/HTTPs, MAY also be used for downloading firmware updates (via the Package URI resource). For constrained devices it is, however, RECOMMENDED to use CoAP for firmware downloads to avoid the need for additional protocol implementations.]]></Description1>
 		<ObjectID>5</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:5</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectURN>urn:oma:lwm2m:oma:5:1.1</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -121,10 +120,12 @@ This Resource is only executable when the value of the State Resource is Downloa
 3: Updating
 If writing the firmware package to Package Resource has completed, or, if the device has downloaded the firmware package from the Package URI the state changes to Downloaded.
 Writing an empty string to Package URI Resource or setting the Package Resource to NULL (‘\0’), resets the Firmware Update State Machine: the State Resource value is set to Idle and the Update Result Resource value is set to 0.
-When in Downloaded state, and the executable Resource Update is triggered, the state changes to Updating.
-If the Update Resource failed, the state returns at Downloaded.
-If performing the Update Resource was successful, the state changes from Updating to Idle. 
-The firmware update state machine is illustrated in Figure 29 of the LwM2M version 1.0 specification (and also in Figure E.6.1-1 of this specification).]]></Description>
+The device should remove the downloaded firmware image when the state is reset to Idle.
+When in Downloaded state, and the executable Resource Update is triggered, the state changes to Updating if the update starts immediately. For devices that support a user interface and the deferred update functionality, the user may be allowed to defer the firmware update to a later time. In this case, the state stays in Downloaded state and the Update Result is set to 11. Once a user accepted the firmware update, the state changes to Updating.
+When the user deferred the update, the device will continue operations normally until the user approves the firmware update or an automatic update starts. It will not block any operation on the device.
+If the Update Resource failed, the state may return to either Downloaded or Idle depending on the underlying reason of update failure, e.g. Integrity Check Failure results in the client moving to the Idle state.
+If performing the Update or Cancel operation was successful, the state changes to Idle. 
+The firmware update state machine is illustrated in the respective LwM2M specification.]]></Description>
 			</Item>
 			<Item ID="5">
 				<Name>Update Result</Name>
@@ -132,7 +133,7 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
         <MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0..9</RangeEnumeration>
+				<RangeEnumeration>0..11</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Contains the result of downloading or updating the firmware
 0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value.
@@ -144,7 +145,9 @@ The firmware update state machine is illustrated in Figure 29 of the LwM2M versi
 6: Unsupported package type.
 7: Invalid URI.
 8: Firmware update failed.
-9: Unsupported protocol. A LwM2M client indicates the failure to retrieve the firmware image using the URI provided in the Package URI resource by writing the value 9 to the /5/0/5 (Update Result resource) when the URI contained a URI scheme unsupported by the client. Consequently, the LwM2M Client is unable to retrieve the firmware image using the URI provided by the LwM2M Server in the Package URI when it refers to an unsupported protocol.]]></Description>
+9: Unsupported protocol. A LwM2M client indicates the failure to retrieve the firmware image using the URI provided in the Package URI resource by writing the value 9 to the /5/0/5 (Update Result resource) when the URI contained a URI scheme unsupported by the client. Consequently, the LwM2M Client is unable to retrieve the firmware image using the URI provided by the LwM2M Server in the Package URI when it refers to an unsupported protocol.
+10: Firmware update cancelled. A Cancel operation has been executed successfully.
+11: Firmware update deferred.]]></Description>
 			</Item>
 			<Item ID="6">
 				<Name>PkgName</Name>
@@ -197,6 +200,54 @@ Additional values MAY be defined in the future. Any value not understood by the 
 0: Pull only
 1: Push only
 2: Both. In this case the LwM2M Server MAY choose the preferred mechanism for conveying the firmware image to the LwM2M Client.]]></Description>
+			</Item>
+			<Item ID="10">
+				<Name>Cancel</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Cancels firmware update.
+Cancel can be executed if the device has not initiated the Update process. If the device is in the process of installing the firmware or has already completed installation it MUST respond with Method Not Allowed error code.
+Upon successful Cancel operation, Update Result Resource is set to 10 and State is set to 0 by the device.]]></Description>
+			</Item>
+			<Item ID="11">
+				<Name>Severity</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..2</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Severity of the firmware image.
+0: Critical
+1: Mandatory
+2: Optional
+This information is useful when the device provides option for the deferred update. Default value is 1.]]></Description>
+			</Item>
+			<Item ID="12">
+				<Name>Last State Change Time</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This resource stores the time when the State resource is changed. Device updates this resource before making any change to the State.]]></Description>
+			</Item>
+			<Item ID="13">
+				<Name>Maximum Defer Period</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description><![CDATA[The number of seconds a user can defer the software update.
+When this time period is over, the device will not prompt the user for update and install it automatically.
+If the value is 0, a deferred update is not allowed.]]></Description>
 			</Item>
     </Resources>
 		<Description2><![CDATA[]]></Description2>

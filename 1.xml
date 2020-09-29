@@ -4,27 +4,26 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Server-V1_1_1-20190617-A
-   Type: xml
-   Date: 2019-Jun-17
+   File: OMA-SUP-XML_1-V1_2-YYYYMMDD-D
+   Path: http://www.openmobilealliance.org/release/ObjLwM2M_Server/
 
-Public Reachable Information
-   Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_Server-v1_1_1.xml
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 1.0.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M_Core-V1_1_1
+    OMA-TS-LightweightM2M_Core-V1_2
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
-	
+
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -63,13 +62,15 @@ LEGAL DISCLAIMER
 		<Name>LwM2M Server</Name>
 		<Description1><![CDATA[This LwM2M Objects provides the data related to a LwM2M Server. A Bootstrap-Server has no such an Object Instance associated to it.]]></Description1>
 		<ObjectID>1</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:1:1.1</ObjectURN><LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.1</ObjectVersion><MultipleInstances>Multiple</MultipleInstances>
+		<ObjectURN>urn:oma:lwm2m:oma:1:1.2</ObjectURN>
+		<LWM2MVersion>1.2</LWM2MVersion>
+		<ObjectVersion>1.2</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Mandatory</Mandatory>
 		<Resources>
 			<Item ID="0">
 				<Name>Short Server ID</Name>
-        <Operations>R</Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
@@ -79,17 +80,17 @@ LEGAL DISCLAIMER
 			</Item>
 			<Item ID="1">
 				<Name>Lifetime</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Integer</Type>
+				<Type>Unsigned Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description><![CDATA[Specify the lifetime of the registration in seconds (see Client Registration Interface).]]></Description>
+				<Description><![CDATA[Specify the lifetime of the registration in seconds (see Client Registration Interface). If the value is set to 0, the lifetime is infinite.]]></Description>
 			</Item>
 			<Item ID="2">
 				<Name>Default Minimum Period</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
@@ -100,7 +101,7 @@ If this Resource doesn’t exist, the default value is 0.]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Default Maximum Period</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
@@ -110,7 +111,7 @@ If this Resource doesn’t exist, the default value is 0.]]></Description>
 			</Item>
 			<Item ID="4">
 				<Name>Disable</Name>
-        <Operations>E</Operations>
+				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type></Type>
@@ -121,7 +122,7 @@ After the above process, the LwM2M Client MUST NOT send any message to the Serve
 			</Item>
 			<Item ID="5">
 				<Name>Disable Timeout</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
@@ -131,7 +132,7 @@ After the above process, the LwM2M Client MUST NOT send any message to the Serve
 			</Item>
 			<Item ID="6">
 				<Name>Notification Storing When Disabled or Offline</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Boolean</Type>
@@ -144,18 +145,18 @@ The maximum number of storing Notifications per Server is up to the implementati
 			</Item>
 			<Item ID="7">
 				<Name>Binding</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>The possible values are those listed in the LwM2M Core Specification</RangeEnumeration>
+				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This Resource defines the transport binding configured for the LwM2M Client.
+				<Description><![CDATA[The possible values are those listed in the LwM2M Core Specification. This Resource defines the transport binding configured for the LwM2M Client.
 If the LwM2M Client supports the binding specified in this Resource, the LwM2M Client MUST use that transport for the Current Binding Mode.]]></Description>
 			</Item>
 			<Item ID="8">
 				<Name>Registration Update Trigger</Name>
-        <Operations>E</Operations>
+				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type></Type>
@@ -165,7 +166,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="9">
 				<Name>Bootstrap-Request Trigger</Name>
-        <Operations>E</Operations>
+				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type></Type>
@@ -175,7 +176,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="10">
 				<Name>APN Link</Name>
-        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Objlnk</Type>
@@ -185,7 +186,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="11">
 				<Name>TLS-DTLS Alert Code</Name>	 			
-        <Operations>R</Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
@@ -193,9 +194,9 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<Units></Units>
 				<Description><![CDATA[If this resource is defined, it contains the most recent TLS / DTLS alert message received from the LwM2M Server respective represented by the AlertDescription defined in Section 7.2 of RFC 5246. This resource set by the LwM2M Client may help the LwM2M Bootstrap-Server to determine the cause of TLS/DTLS connection failure with the respective LwM2M Server.]]></Description>
 			</Item>			
-      <Item ID="12">
+			<Item ID="12">
 				<Name>Last Bootstrapped</Name>
-        <Operations>R</Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
@@ -205,7 +206,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>			
 			<Item ID="13">
 				<Name>Registration Priority Order</Name>
-        <Operations></Operations>
+			  <Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
@@ -215,17 +216,17 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="14">
 				<Name>Initial Registration Delay Timer</Name>
-        <Operations></Operations>
+			  <Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description><![CDATA[The delay before registration is attempted for this LwM2M Server based upon the completion of registration of the previous LwM2M Server in the registration order. This is only applied until the first successful registration after a successful bootstrapping sequence.]]></Description>
+				<Description><![CDATA[The delay, in seconds, before registration is attempted for this LwM2M Server based upon the completion of registration of the previous LwM2M Server in the registration order. This is only applied until the first successful registration after a successful bootstrapping sequence.]]></Description>
 			</Item>
 			<Item ID="15">
 				<Name>Registration Failure Block</Name>
-        <Operations></Operations>
+			  <Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
@@ -235,7 +236,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="16">
 				<Name>Bootstrap on Registration Failure</Name>
-        <Operations></Operations>
+			  <Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
@@ -245,7 +246,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="17">
 				<Name>Communication Retry Count</Name>
-        <Operations></Operations>
+			  <Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
@@ -255,27 +256,27 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="18">
 				<Name>Communication Retry Timer</Name>
-        <Operations></Operations>
+			  <Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description><![CDATA[The delay between successive communication attempts in a communication sequence. This value is multiplied by two to the power of the communication retry attempt minus one (2**(retry attempt-1)) to create an exponential back-off.]]></Description>
+				<Description><![CDATA[The delay, in seconds, between successive communication attempts in a communication sequence. This value is multiplied by two to the power of the communication retry attempt minus one (2**(retry attempt-1)) to create an exponential back-off.]]></Description>
 			</Item>
 			<Item ID="19">
 				<Name>Communication Sequence Delay Timer</Name>
-        <Operations></Operations>
+			  <Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[The delay between successive communication sequences. A communication sequence is defined as the exhaustion of the Communication Retry Count and Communication Retry Timer values. A communication sequence can be applied to server registrations or bootstrapping attempts. MAX_VALUE means do not perform another communication sequence.]]></Description>
+				<Units>s</Units>
+				<Description><![CDATA[The delay, in seconds, between successive communication sequences. A communication sequence is defined as the exhaustion of the Communication Retry Count and Communication Retry Timer values. A communication sequence can be applied to server registrations or bootstrapping attempts. MAX_VALUE means do not perform another communication sequence.]]></Description>
 			</Item>
 			<Item ID="20">
 				<Name>Communication Sequence Retry Count</Name>
-        <Operations></Operations>
+			  <Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
@@ -285,7 +286,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="21">
 				<Name>Trigger</Name>
-			        <Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
@@ -295,7 +296,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 			</Item>
 			<Item ID="22">
 				<Name>Preferred Transport</Name>
-        			<Operations>RW</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
@@ -313,6 +314,46 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<Description><![CDATA[If true or the Resource is not present, the LwM2M Client Send command capability is de-activated. 
 If false, the LwM2M Client Send Command capability is activated.]]></Description>
 			</Item>
+			<Item ID="24">
+				<Name>Alternate APN Links</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Objlnk</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[If this resource is defined, it provides links to alternate APN connection profile Object Instance (OMNA registered Object ID:11) to be used to communicate with this server if Resource 10 has configuration conflicts.]]></Description>
+			</Item>
+			<Item ID="25">
+				<Name>Supported Server Versions</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This resource provides the supported enabler versions of the server to the client as a set of strings. Format for each string is 1*DIGIT"."1*DIGIT"."1*DIGIT where the third DIGIT is optional.]]></Description>
+			</Item>
+			<Item ID="26">
+				<Name>Default Notification Mode</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This resource indicates the default mode for observations to be sent: 0 = Non-Confirmable, 1 = Confirmable.]]></Description>
+			</Item>
+			<Item ID="27">
+				<Name>Profile ID Hash Algorithm</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0..255</RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[If this resource is defined, it contains the hash algorithm the LwM2M Server would prefer the LwM2M Client to use with the dynamically generated mode of creating Profile IDs. The numerical ID value of the 'Suite Identifiers' registered by RFC 6920 is used in this Resource.]]></Description>
+                        </Item>
 		</Resources>
 		<Description2></Description2>
 	</Object>
