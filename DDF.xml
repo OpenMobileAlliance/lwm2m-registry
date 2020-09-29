@@ -82,7 +82,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>1.xml</DDF>
+        <DDF>version_history/1-1_1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
