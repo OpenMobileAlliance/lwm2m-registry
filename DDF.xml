@@ -56,7 +56,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-2020MMDD-A/OMA-TS-LightweightM2M_Core-V1_2-2020MMDD-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
@@ -99,7 +99,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-2020MMDD-A/OMA-TS-LightweightM2M_Core-V1_2-2020MMDD-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
@@ -563,7 +563,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-2020MMDD-A/OMA-TS-LightweightM2M_Core-V1_2-22020MMDD-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
 
       <Item>
