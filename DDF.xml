@@ -566,6 +566,19 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/</TS>
         <TSLink>0</TSLink>
     </Item><Item>
+        <ObjectID>26</ObjectID>
+        <URN>urn:oma:lwm2m:oma:26</URN>
+        <Name>LwM2M Gateway Routing</Name>
+        <Description>This object is used by a LwM2M Gateway to maintain the routing table.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>26.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/</TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
         <ObjectID>27</ObjectID>
         <URN>urn:oma:lwm2m:oma:27</URN>
         <Name>5GNR Connectivity</Name>
