@@ -323,6 +323,19 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>11</ObjectID>
+        <URN>urn:oma:lwm2m:oma:11:1.1</URN>
+        <Name>LWM2M APN Connection Profile</Name>
+        <Description>This object specifies resources to enable a device to connect to an APN.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>11.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
