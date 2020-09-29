@@ -308,6 +308,19 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>10</ObjectID>
+        <URN>urn:oma:lwm2m:oma:10:1.1</URN>
+        <Name>LWM2M Cellular Connectivity</Name>
+        <Description>This object specifies resources to enable a device to connect to a 3GPP or 3GPP2 bearer, including GPRS/EDGE, UMTS, LTE, NB-IoT, SMS. For cellular connectivity, this object focuses on Packet Switched (PS) connectivity and doesn't aim to provide comprehensive Circuit Switched (CS) connectivity management.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>10.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 
     <Item>
