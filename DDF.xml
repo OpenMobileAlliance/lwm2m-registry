@@ -394,7 +394,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
     </Item><Item>
         <ObjectID>12</ObjectID>
         <URN>urn:oma:lwm2m:oma:12:1.1</URN>
-        <Name>WLAN connectivity</Name>
+        <Name>LWM2M WLAN Connectivity</Name>
         <Description>This object specifies resources to enable a device to connect to a WLAN bearer.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
@@ -558,7 +558,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
 Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
-        <Ver>1.0</Ver>
+        <Ver>1.1</Ver>
         <DDF>21.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
