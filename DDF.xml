@@ -526,6 +526,19 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item><Item>
+        <ObjectID>23</ObjectID>
+        <URN>urn:oma:lwm2m:oma:23</URN>
+        <Name>LwM2M COSE</Name>
+        <Description>This Object provides the keying material and related information for use with COSE.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>23.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/</TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
         <ObjectID>27</ObjectID>
         <URN>urn:oma:lwm2m:oma:27</URN>
         <Name>5GNR Connectivity</Name>
