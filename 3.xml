@@ -4,28 +4,27 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Device-V1_1-20170617-A
-   Type: xml
-   Date: 2019-Jun-17
+   File: OMA-SUP-XML_3-V1_2-2020MMDD-D
+   Path: http://www.openmobilealliance.org/release/ObjLwM2M_Device/
 
-Public Reachable Information
-   Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_Device-v1_1.xml
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 3.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M-V1_0_2
-    OMA-TS-LightweightM2M_Core-V1_1_1
+    OMA-TS-LightweightM2M-V1_2
+    OMA-TS-LightweightM2M_Core-V1_2
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -64,9 +63,9 @@ LEGAL DISCLAIMER
 		<Name>Device</Name>
 		<Description1><![CDATA[This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.]]></Description1>
 		<ObjectID>3</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:3:1.1</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:3:1.2</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.1</ObjectVersion>
+		<ObjectVersion>1.2</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Mandatory</Mandatory>
 		<Resources>
@@ -176,7 +175,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..100</RangeEnumeration>
-        <Units>%</Units>
+        <Units>/100</Units>
         <Description><![CDATA[Contains the current battery level as a percentage (with a range from 0 to 100). This value is only valid for the Device internal Battery if present (one Available Power Sources Resource Instance is 1).]]></Description>
       </Item>
       <Item ID="10">
@@ -195,7 +194,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
-        <RangeEnumeration>0..8</RangeEnumeration>
+        <RangeEnumeration>0..32</RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[0=No error
 1=Low battery power
@@ -206,9 +205,11 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
 6=SMS failure
 7=IP connectivity failure
 8=Peripheral malfunction
+9..15=Reserved for future use
+16..32=Device specific error codes
 
 When the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created. When an error associated with a Resource Instance is no longer present, that Resource Instance is deleted. When the single existing error is no longer present, the LwM2M Client returns to the original no error state where Instance 0 has value 0.
-This error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client’s error report depends on the policy of the LwM2M Server.]]></Description>
+This error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client’s error report depends on the policy of the LwM2M Server. Error codes in between 16 and 32 are specific to the Device and may have different meanings among implementations.]]></Description>
       </Item>
       <Item ID="12">
         <Name>Reset Error Code</Name>
