@@ -43,6 +43,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>0</ObjectID>
+        <URN>urn:oma:lwm2m:oma:0:1.2</URN>
+        <Name>LWM2M Security</Name>
+        <Description>This LwM2M Object provides the keying material of a LwM2M Client appropriate to access a specified LwM2M Server. One Object Instance SHOULD address a LwM2M Bootstrap-Server.
+These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
+        <DDF>0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-2020MMDD-A/OMA-TS-LightweightM2M_Core-V1_2-2020MMDD-A.pdf</TS>
+        <TSLink>1</TSLink>
     </Item>
 
     <Item>
