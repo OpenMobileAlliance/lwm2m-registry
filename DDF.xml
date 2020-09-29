@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <DDFList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/DDF1.xsd">
     <Item>
         <!-- Integer -->
@@ -427,6 +427,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>27</ObjectID>
+        <URN>urn:oma:lwm2m:oma:27</URN>
+        <Name>5GNR Connectivity</Name>
+        <Description>This is a device management object that should be used for 5G-NR capable devices.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>27.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
 	
     <Item>
@@ -2541,7 +2554,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3386</ObjectID>
         <URN>urn:oma:lwm2m:ext:3386</URN>
         <Name>VoLTErtpPacketLoss</Name>
-        <Description>Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber > 1</Description>
+        <Description>Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber &gt; 1</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
