@@ -87,6 +87,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>1</ObjectID>
+        <URN>urn:oma:lwm2m:oma:1:1.2</URN>
+        <Name>LwM2M Server</Name>
+        <Description>This LwM2M Objects provides the data related to a LwM2M Server. A Bootstrap-Server has no such an Object Instance associated to it.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
+        <DDF>1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-2020MMDD-A/OMA-TS-LightweightM2M_Core-V1_2-2020MMDD-A.pdf</TS>
+        <TSLink>1</TSLink>
     </Item>
 
     <Item>
