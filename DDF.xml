@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <DDFList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/DDF1.xsd">
     <Item>
         <!-- Integer -->
@@ -2541,7 +2541,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3386</ObjectID>
         <URN>urn:oma:lwm2m:ext:3386</URN>
         <Name>VoLTErtpPacketLoss</Name>
-        <Description>Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber > 1</Description>
+        <Description>Log is generated at the receiving end of RTP flow when newReceivedSequenceNumber - lastReceivedSequenceNumber &gt; 1</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2913,6 +2913,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3409</ObjectID>
         <URN>urn:oma:lwm2m:ext:3409</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>3410</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3410</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>TBC</Owner>
