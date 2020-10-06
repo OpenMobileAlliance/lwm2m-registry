@@ -38,7 +38,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>version_history/0-1_1_1.xml</DDF>
+        <DDF>version_history/0-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -82,7 +82,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>version_history/1-1_1_1.xml</DDF>
+        <DDF>version_history/1-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -110,7 +110,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/2-1_0_3.xml</DDF>
+        <DDF>version_history/2-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -138,7 +138,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/3-1_0_3.xml</DDF>
+        <DDF>version_history/3-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
@@ -180,7 +180,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/4-1_0_2.xml</DDF>
+        <DDF>version_history/4-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
@@ -239,7 +239,7 @@ The goal of the Connectivity Monitoring Object is to carry information reflectin
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/5-1_0_3.xml</DDF>
+        <DDF>version_history/5-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
@@ -330,7 +330,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/10-1_0_1.xml</DDF>
+        <DDF>version_history/10-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -358,7 +358,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/11-1_0_1.xml</DDF>
+        <DDF>version_history/11-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -386,7 +386,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/12-1_0_1.xml</DDF>
+        <DDF>version_history/12-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -415,7 +415,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/13-1_0_1.xml</DDF>
+        <DDF>version_history/13-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -545,12 +545,13 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/21-1_0_1.xml</DDF>
+        <DDF>version_history/21-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>21</ObjectID>
         <URN>urn:oma:lwm2m:oma:21:1.1</URN>
         <Name>LWM2M OSCORE</Name>
