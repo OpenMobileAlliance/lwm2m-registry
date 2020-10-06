@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_5-V1_1-YYYYMMDD-D
+   File: OMA-SUP-XML_5-V1_1-20201019-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Firmware/
 
 OMNA LwM2M Registry
@@ -15,7 +15,7 @@ NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M_Core-V1_2
+    OMA-TS-LightweightM2M_Core-V1_0_2
     OMA-TS-LightweightM2M_Core-V1_2
 
   This is available at http://www.openmobilealliance.org/release/LightweightM2M/

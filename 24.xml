@@ -4,12 +4,11 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_24-V1_0-2020MMDD-D
+   File: OMA-SUP-XML_24-V1_0-20201019-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_MQTT_Server/
 
-
 OMNA LwM2M Registry
-   Path: http://www.openmobilealliance.org/tech/profiles
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 24.xml
 
 NORMATIVE INFORMATION

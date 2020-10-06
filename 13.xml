@@ -3,7 +3,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_13-V1_1-2020MMDD-D
+   File: OMA-SUP-XML_13-V1_1-20201019-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Bearer_Conn/
 
 OMNA LwM2M Registry
@@ -57,7 +57,7 @@ LEGAL DISCLAIMER
 		This object allows via remote bearer and network configuration to overwrite automatic network and bearer selection e.g. as supported by the UICC. An equivalent example for overwriting automatic selection is a user doing manual network and bearer selection on a smart phone.]]></Description1>
 		<ObjectID>13</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:13:1.1</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>

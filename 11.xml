@@ -3,7 +3,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_11-V1_1-YYYYMMDD-D
+   File: OMA-SUP-XML_11-V1_1-20201019-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_APN_Conn/
 
 OMNA LwM2M Registry
@@ -48,6 +48,7 @@ LEGAL DISCLAIMER
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
   https://www.omaspecworks.org/about/intellectual-property-rights/
+  
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
