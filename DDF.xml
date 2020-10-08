@@ -3186,12 +3186,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3430</ObjectID>
         <URN>urn:oma:lwm2m:ext:3430</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Global Navigation Satellite System</Name>
+        <Description>More than a positioning object, the uCIFI global navigation satellite system object provides all the information required to calculate a position/location.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3430.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
