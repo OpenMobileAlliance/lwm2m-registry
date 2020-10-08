@@ -3069,12 +3069,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3421</ObjectID>
         <URN>urn:oma:lwm2m:ext:3421</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Single-phase electrical meter</Name>
+        <Description>The uCIFI single-phase electrical meter measures the electrical consumption of loads on one electrical line, such as electrical cabinets in city infrastructures, street lighting networks, homes and buildings.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3421.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
