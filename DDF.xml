@@ -3017,12 +3017,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3417</ObjectID>
         <URN>urn:oma:lwm2m:ext:3417</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Luminaire asset</Name>
+        <Description>The uCIFI luminaire asset is an object that enables outdoor lighting control software to configure outdoor lamp controllers. It also enables outdoor lamp controllers to send Zhaga D4i or DALI attributes read from the control gears, to centrally managed outdoor lighting control software or asset management systems.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3417.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
