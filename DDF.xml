@@ -3121,12 +3121,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3425</ObjectID>
         <URN>urn:oma:lwm2m:ext:3425</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Irrigation valve</Name>
+        <Description>The uCIFI irrigation valve provides a way to control and monitor an irrigation valve.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3425.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
