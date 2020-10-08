@@ -2965,12 +2965,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3413</ObjectID>
         <URN>urn:oma:lwm2m:ext:3413</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Generic Actuator</Name>
+        <Description>The uCIFI generic actuator may be used for any actuator but not to replace Outdoor Lamp Controllers nor for an Irrigation Valves which have a specific device type in the uCIFI data model.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3413.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
