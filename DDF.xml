@@ -3043,12 +3043,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3419</ObjectID>
         <URN>urn:oma:lwm2m:ext:3419</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Photocell</Name>
+        <Description>A uCIFI photocell object is used for lighting control, particularly to identify when light should be switched ON/OFF.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3419.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
