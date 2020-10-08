@@ -3212,12 +3212,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3432</ObjectID>
         <URN>urn:oma:lwm2m:ext:3432</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Traffic Counter</Name>
+        <Description>The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3432.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
