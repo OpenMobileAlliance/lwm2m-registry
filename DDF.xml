@@ -2978,12 +2978,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3414</ObjectID>
         <URN>urn:oma:lwm2m:ext:3414</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Data bridge</Name>
+        <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device over a LwM2M compliant network.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3414.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
