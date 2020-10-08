@@ -3095,12 +3095,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     </Item><Item>
         <ObjectID>3423</ObjectID>
         <URN>urn:oma:lwm2m:ext:3423</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Gas meter</Name>
+        <Description>The uCIFI gas meter measures the volume of gas that was distributed through the gas meter, in pulse count and/or in m3. It also detects anomalies in the gas meter.</Description>
+        <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3423.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
