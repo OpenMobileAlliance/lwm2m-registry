@@ -185,7 +185,7 @@ The same Resource Instance ID MUST be used to associate a given Power Source (Re
         <Type>Integer</Type>
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
-        <Description><![CDATA[Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
+        <Description><![CDATA[Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes). Note: 1 kilobyte corresponds to 1000 bytes.]]></Description>
 	  </Item>
       <Item ID="11">
         <Name>Error Code</Name>
@@ -315,7 +315,7 @@ Status	Meaning	Description
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
+				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).  Note: 1 kilobyte corresponds to 1000 bytes.]]></Description>
 			</Item>
 			<Item ID="22"><Name>ExtDevInfo</Name>
 				<Operations>R</Operations>
