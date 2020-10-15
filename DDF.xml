@@ -106,7 +106,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>2</ObjectID>
         <URN>urn:oma:lwm2m:oma:2</URN>
         <Name>LwM2M Access Control</Name>
-        <Description>It is used to check whether the LWM2M Server has access right for performing a operation.</Description>
+        <Description>Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
