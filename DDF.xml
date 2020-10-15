@@ -134,7 +134,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3</URN>
         <Name>Device</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -148,7 +148,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3:1.1</URN>
         <Name>Device</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
