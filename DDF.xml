@@ -396,7 +396,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
     </Item><Item>
         <ObjectID>12</ObjectID>
         <URN>urn:oma:lwm2m:oma:12:1.1</URN>
-        <Name>WLAN Connectivity</Name>
+        <Name>WLAN connectivity</Name>
         <Description>This object specifies resources to enable a device to connect to a WLAN bearer.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
