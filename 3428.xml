@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Air quality</Name>
-		<Description1>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation..</Description1>
+		<Description1>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation.</Description1>
 		<ObjectID>3428</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3428</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -221,6 +221,46 @@ POSSIBILITY OF SUCH DAMAGE.
 				<RangeEnumeration></RangeEnumeration>
 				<Units>ppm</Units>
 				<Description>Average level of carbon dioxide measured by the sensor during the last 1 hour.</Description>
+			</Item>
+			<Item ID="19">
+				<Name>NO</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>ppm</Units>
+				<Description>Level of nitric oxide measured by the air quality sensor.</Description>
+			</Item>
+			<Item ID="20">
+				<Name>NO 1 hour average</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>ppm</Units>
+				<Description>Average level of nitric oxide measured by the sensor during the last 1 hour.</Description>
+			</Item>
+			<Item ID="21">
+				<Name>H2S</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>ppm</Units>
+				<Description>Level of hydrogen sulfid measured by the air quality sensor.</Description>
+			</Item>
+			<Item ID="22">
+				<Name>H2S 1 hour average</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>ppm</Units>
+				<Description>Average level of hydrogen sulfid measured by the sensor during the last 1 hour.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

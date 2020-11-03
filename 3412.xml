@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Communication</Name>
+		<Name>LPWAN Communication</Name>
 		<Description1>The uCIFI communication object provides attributes related to the communication on the LPWAN network, including multicast grouping.</Description1>
 		<ObjectID>3412</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3412</ObjectURN>
@@ -190,7 +190,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the device is a mesh node that should repeat incoming messages on a mesh network.</Description>
+				<Description>Set to True if the device is a mesh node that should repeat incoming messages on a mesh network.</Description>
 			</Item>
 			<Item ID="16">
 				<Name>Maximum repeat time</Name>
@@ -230,7 +230,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when the device can't communicate properly.</Description>
+				<Description>Set to True when the device can't communicate properly.</Description>
 			</Item>
 			<Item ID="20">
 				<Name>Received Signal Strength Indication</Name>

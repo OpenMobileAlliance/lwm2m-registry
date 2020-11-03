@@ -183,6 +183,6 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Current or last value of NH4 measured by the sensor.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

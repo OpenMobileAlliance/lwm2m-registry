@@ -333,7 +333,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the almanac is obtained via a cellular connection. Set to 0 otherwise.</Description>
+				<Description>Set to True if the almanac is obtained via a cellular connection. Set to False otherwise.</Description>
 			</Item>
 			<Item ID="26">
 				<Name>Power command</Name>

@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Command (e.g. manual override, scheduler) sent to the outdoor lamp controller.</Description>
 			</Item>
 			<Item ID="2">
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>For outdoor lighting applications, the command in action (this resource) may differ from a command that was sent (resource ID: 1), due to LPWAN network constraints and/or light adjustments within the lamp’s control gear (e.g. virtual power settings). The command in action is the actual value of the command in action in the outdoor lamp controller.</Description>
 			</Item>
 			<Item ID="3">
@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Dimming level (0 for OFF and 100% for ON) measured on the outdoor lamp controller.</Description>
 			</Item>
 			<Item ID="4">
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>The default dimming level that the outdoor lamp controller applies when the device is powered ON.</Description>
 			</Item>
 			<Item ID="5">
@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the outdoor lamp controller detects that the lamp is not producing light while it is expected to (e.g. the lamp is broken).</Description>
+				<Description>Set to True if the outdoor lamp controller detects that the lamp is not producing light while it is expected to (e.g. the lamp is broken).</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Lamp failure reason</Name>
@@ -110,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 in case the control gear has a failure. Outdoor lamp controllers may read the control gear failure from a DALI bus or by analyzing a 0-10 volts interface to the control gear.</Description>
+				<Description>Set to True in case the control gear has a failure. Outdoor lamp controllers may read the control gear failure from a DALI bus or by analyzing a 0-10 volts interface to the control gear.</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Control gear failure reason</Name>
@@ -130,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the outdoor lamp controller detects that its relay is not operating as it is expected to.</Description>
+				<Description>Set to True if the outdoor lamp controller detects that its relay is not operating as it is expected to.</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Day burner</Name>
@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 in case the lamp is ON while it should be OFF (e.g. day burner).</Description>
+				<Description>Set to True in case the lamp is ON while it should be OFF (e.g. day burner).</Description>
 			</Item>
 			<Item ID="11">
 				<Name>Cycling failure</Name>
@@ -150,7 +150,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the outdoor lamp controller detects that the lamp is switching ON and OFF too often.</Description>
+				<Description>Set to True if the outdoor lamp controller detects that the lamp is switching ON and OFF too often.</Description>
 			</Item>
 			<Item ID="12">
 				<Name>Control gear communication failure</Name>
@@ -160,7 +160,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 in case the control gear (e.g. LED driver) does not answer on the DALI bus.</Description>
+				<Description>Set to True in case the control gear (e.g. LED driver) does not answer on the DALI bus.</Description>
 			</Item>
 			<Item ID="13">
 				<Name>Scheduler ID</Name>
@@ -180,7 +180,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when one of the schedulers can’t be executed or is not supported by the outdoor lamp controller. Otherwise equal to 0.</Description>
+				<Description>Set to True when one of the schedulers can’t be executed or is not supported by the outdoor lamp controller. Otherwise set to False.</Description>
 			</Item>
 			<Item ID="15">
 				<Name>Lamp operating hours</Name>
@@ -260,7 +260,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the control gear has derated the light source due to high temperature.</Description>
+				<Description>Set to True if the control gear has derated the light source due to high temperature.</Description>
 			</Item>
 			<Item ID="23">
 				<Name>Control gear thermal derating counter</Name>
@@ -290,7 +290,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the control gear has shut the light source down due to high temperature.</Description>
+				<Description>Set to True if the control gear has shut the light source down due to high temperature.</Description>
 			</Item>
 			<Item ID="26">
 				<Name>Control gear thermal shutdown counter</Name>
@@ -330,7 +330,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the outdoor lamp controller should keep its relay closed (control gear is powered ON) when command and/or dimming level is equal to 0. Set to 0 if the outdoor lamp controller should open its relay (control gear is not powered ON) when command and/or dimming level is equal to 0.</Description>
+				<Description>Set to True if the outdoor lamp controller should keep its relay closed (control gear is powered ON) when command and/or dimming level is equal to 0. Set to False if the outdoor lamp controller should open its relay (control gear is not powered ON) when command and/or dimming level is equal to 0.</Description>
 			</Item>
 			<Item ID="30">
 				<Name>Constant light output</Name>
@@ -340,7 +340,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 to activate Constant Light Output dimming correction on the outdoor lamp controller. Set to 0 to deactivate Constant Light Output.</Description>
+				<Description>Set to True to activate Constant Light Output dimming correction on the outdoor lamp controller. Set to False to deactivate Constant Light Output.</Description>
 			</Item>
 			<Item ID="31">
 				<Name>Cleaning factor enabled</Name>
@@ -350,7 +350,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Light output of a luminaire may depend on the lamp cleaning factor. Cleaning factor may be used as a light output compensation. Set to 1 to activate lamp cleaning correction on the outdoor lamp controller. Set to 0 to deactivate the lamp cleaning correction.</Description>
+				<Description>Light output of a luminaire may depend on the lamp cleaning factor. Cleaning factor may be used as a light output compensation. Set to True to activate lamp cleaning correction on the outdoor lamp controller. Set to False to deactivate the lamp cleaning correction.</Description>
 			</Item>
 			<Item ID="32">
 				<Name>Cleaning period</Name>
@@ -369,7 +369,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Initial lamp cleaning correction factor to multiply to the command when the luminaire is cleaned, at the lamp cleaning date.</Description>
 			</Item>
 			<Item ID="34">
@@ -409,7 +409,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Minimum dimming level under which the lamp will most probably not operate.</Description>
 			</Item>
 			<Item ID="38">
@@ -449,7 +449,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Percentage of nominal power at which the light source should be set when the Command is set to 100%.</Description>
 			</Item>
 			<Item ID="42">

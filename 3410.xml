@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 while software within the device is being updated.</Description>
+				<Description>Set to True while software within the device is being updated.</Description>
 			</Item>
 			<Item ID="7">
 				<Name>Maintenance</Name>
@@ -110,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when the device is in maintenance mode.</Description>
+				<Description>Set to True when the device is in maintenance mode.</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Configuration reset</Name>

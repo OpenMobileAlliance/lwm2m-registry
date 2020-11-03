@@ -390,9 +390,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.</Description>
+				<Description>Set to True if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Edge computing time condition</Name>
+		<Name>Edge computing generic condition</Name>
 		<Description1>The uCIFI edge computing generic condition object defines a vendor-specific condition (e.g. when a resource or an object is equal to a particular value) at which a particular script should be executed by the device.</Description1>
 		<ObjectID>3439</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3439</ObjectURN>
@@ -70,9 +70,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the device can’t support the condition.</Description>
+				<Description>Set to True if the device can’t support the condition.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

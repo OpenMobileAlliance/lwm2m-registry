@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
-				<Description>Set to 1 when voltage is below low voltage threshold.</Description>
+				<Description>Set to True when voltage is below low voltage threshold.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Low voltage</Name>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when voltage is below low voltage threshold.</Description>
+				<Description>Set to True when voltage is below low voltage threshold.</Description>
 			</Item>
 			<Item ID="4">
 				<Name>High voltage threshold</Name>
@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
-				<Description>Threshold above which the high voltage resource is set to 1.</Description>
+				<Description>Threshold above which the high voltage resource is set to True.</Description>
 			</Item>
 			<Item ID="5">
 				<Name>High voltage</Name>
@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when voltage is above high voltage threshold.</Description>
+				<Description>Set to True when voltage is above high voltage threshold.</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Current</Name>
@@ -110,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
-				<Description>Threshold below which the low current resource is set to 1.</Description>
+				<Description>Threshold below which the low current resource is set to True.</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Low current</Name>
@@ -120,7 +120,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when current is below low current threshold.</Description>
+				<Description>Set to True when current is below low current threshold.</Description>
 			</Item>
 			<Item ID="9">
 				<Name>High current threshold</Name>
@@ -130,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
-				<Description>Threshold above which the high current resource is set to 1.</Description>
+				<Description>Threshold above which the high current resource is set to True.</Description>
 			</Item>
 			<Item ID="10">
 				<Name>High current</Name>
@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when current is above high current threshold.</Description>
+				<Description>Set to True when current is above high current threshold.</Description>
 			</Item>
 			<Item ID="11">
 				<Name>Frequency</Name>
@@ -180,7 +180,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Threshold below which the low power factor resource is set to 1</Description>
+				<Description>Threshold below which the low power factor resource is set to True.</Description>
 			</Item>
 			<Item ID="15">
 				<Name>Low power factor</Name>
@@ -190,7 +190,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when power factor is below low power factor threshold.</Description>
+				<Description>Set to True when power factor is below low power factor threshold.</Description>
 			</Item>
 			<Item ID="16">
 				<Name>Active power+ (QI+QIV)</Name>
@@ -570,7 +570,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.</Description>
+				<Description>Set to True if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.</Description>
 			</Item>
 			<Item ID="54">
 				<Name>CT Numerator Parameter</Name>
@@ -613,6 +613,6 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Transformer ratio – voltage (denominator).</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

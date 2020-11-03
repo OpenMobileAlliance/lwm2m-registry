@@ -172,7 +172,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Units></Units>
 				<Description>Luminaire identification as per DiiA/D4i specification part 251 (MB1 extension): 60 ascii character string.</Description>
 			</Item>
-			<Item ID="13">
+			<Item ID="14">
 				<Name>Luminaire identification number</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>

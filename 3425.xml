@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Default status (level of opening of the valve from 0 to 100%) that is applied when the device is powered ON.</Description>
 			</Item>
 			<Item ID="2">
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Actual level of opening of the valve (from 0 to 100%).</Description>
 			</Item>
 			<Item ID="3">
@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Command (e.g. manual override, scheduler) sent to the irrigation valve.</Description>
 			</Item>
 			<Item ID="4">
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>For devices connected on slow LPWAN networks, the command in action (this resource) may differ from a command that was sent (resource ID: 3). The command in action is the actual value of the command in action on the irrigation valve.</Description>
 			</Item>
 			<Item ID="5">
@@ -100,9 +100,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when one of the schedulers can’t be executed or is not supported by this irrigation valve. Otherwise equal to 0.</Description>
+				<Description>Set to True when one of the schedulers can’t be executed or is not supported by this irrigation valve. Otherwise set to False.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

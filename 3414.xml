@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the device detects a difference in a received payload and the hash.</Description>
+				<Description>Set to True if the device detects a difference in a received payload and the hash.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

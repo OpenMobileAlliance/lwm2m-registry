@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 in case the latest time synchronization operation failed. Set to 0 in case the last operation succeeded.</Description>
+				<Description>Set to True in case the latest time synchronization operation failed. Set to False in case the last operation succeeded.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

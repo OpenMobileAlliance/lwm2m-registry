@@ -93,6 +93,6 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Vendor-specific resource to share the capabilities of the devices as regards to edge computing.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

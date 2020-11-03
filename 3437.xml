@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the script is not supported or if the device has identified errors in the script.</Description>
+				<Description>Set to True if the script is not supported or if the device has identified errors in the script.</Description>
 			</Item>
 			<Item ID="7">
 				<Name>Non authorized script</Name>
@@ -110,9 +110,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the hash/signature is not correct.</Description>
+				<Description>Set to True if the hash/signature is not correct.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

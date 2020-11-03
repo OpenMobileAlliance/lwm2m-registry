@@ -130,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the power factor is below threshold. This is an absolute value threshold.</Description>
+				<Description>Set to True if the power factor is below threshold. This is an absolute value threshold.</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Low power threshold</Name>
@@ -160,7 +160,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the power is below threshold. Vendor may consider the “Low power threshold at low dim level” to set this resource to 1 taking into account the lamp dim level.</Description>
+				<Description>Set to True if the power is below threshold. Vendor may consider the Low power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="13">
 				<Name>High power threshold</Name>
@@ -190,7 +190,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the power is above threshold. Vendor may consider the “High power threshold at low dim level” to set this resource to 1 taking into account the lamp dim level.</Description>
+				<Description>Set to True if the power is above threshold. Vendor may consider the High power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="16">
 				<Name>Low current threshold</Name>
@@ -210,7 +210,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the current is below threshold.</Description>
+				<Description>Set to True if the current is below threshold.</Description>
 			</Item>
 			<Item ID="18">
 				<Name>High current threshold</Name>
@@ -230,7 +230,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the current is above threshold.</Description>
+				<Description>Set to True if the current is above threshold.</Description>
 			</Item>
 			<Item ID="20">
 				<Name>Low voltage threshold</Name>
@@ -250,7 +250,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the voltage is below threshold.</Description>
+				<Description>Set to True if the voltage is below threshold.</Description>
 			</Item>
 			<Item ID="22">
 				<Name>High voltage threshold</Name>
@@ -270,7 +270,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the voltage is above threshold.</Description>
+				<Description>Set to True if the voltage is above threshold.</Description>
 			</Item>
 			<Item ID="24">
 				<Name>Critical inrush threshold</Name>
@@ -290,7 +290,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the inrush current is above threshold.</Description>
+				<Description>Set to True if the inrush current is above threshold.</Description>
 			</Item>
 			<Item ID="26">
 				<Name>Minimum inrush Current</Name>

@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Percentage of container filled with content.</Description>
 			</Item>
 			<Item ID="3">
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Threshold above which the container is considered full.</Description>
 			</Item>
 			<Item ID="5">
@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the actual filling percentage is above the high threshold.</Description>
+				<Description>Set to True if the actual filling percentage is above the high threshold.</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Low threshold</Name>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Threshold below which the container is considered empty.</Description>
 			</Item>
 			<Item ID="7">
@@ -110,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the actual filling percentage is below the low threshold.</Description>
+				<Description>Set to True if the actual filling percentage is below the low threshold.</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Average filling speed</Name>
@@ -119,7 +119,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>%</Units>
+				<Units>/100</Units>
 				<Description>Average percentage filled per day.</Description>
 			</Item>
 			<Item ID="9">
@@ -160,9 +160,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the container is not at the location where it should be.</Description>
+				<Description>Set to True if the container is not at the location where it should be.</Description>
 			</Item>
-			<Item ID="11">
+			<Item ID="13">
 				<Name>Container out of position</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -170,7 +170,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if the container is not in correct upright position.</Description>
+				<Description>Set to True if the container is not in correct upright position.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

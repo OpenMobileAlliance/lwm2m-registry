@@ -130,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if gas leak is suspected.</Description>
+				<Description>Set to True if gas leak is suspected.</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Leak detected</Name>
@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if gas leak is detected.</Description>
+				<Description>Set to True if gas leak is detected.</Description>
 			</Item>
 			<Item ID="11">
 				<Name>High temperature</Name>
@@ -150,9 +150,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if high temperature is detected around the gas meter.</Description>
+				<Description>Set to True if high temperature is detected around the gas meter.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

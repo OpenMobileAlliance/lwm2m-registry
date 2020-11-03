@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if a water leak is detected by the sensor.</Description>
+				<Description>Set to True if a water leak is detected by the sensor.</Description>
 			</Item>
 			<Item ID="4">
 				<Name>Hammer effect detected</Name>
@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if hammer effect is detected in the water pipeline.</Description>
+				<Description>Set to True if hammer effect is detected in the water pipeline.</Description>
 			</Item>
 			<Item ID="5">
 				<Name>Minimum measured pressure value</Name>
@@ -133,6 +133,6 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Set the minimum and maximum measured values to current value.</Description>
 			</Item>
 		</Resources>
-		<Description2 />
+		<Description2></Description2>
 	</Object>
 </LWM2M>

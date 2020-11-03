@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 if lux level is below ON lux level. Set to 0 if lux level is above OFF lux.</Description>
+				<Description>Set to True if lux level is below ON lux level. Set to False if lux level is above OFF lux.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

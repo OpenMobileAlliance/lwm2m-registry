@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when a gunshot is detected.</Description>
+				<Description>Set to True when a gunshot is detected.</Description>
 			</Item>
 			<Item ID="2">
 				<Name>Abnormal noise detected</Name>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Set to 1 when an abnormal noise is detected.</Description>
+				<Description>Set to True when an abnormal noise is detected.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Sensor Value</Name>
