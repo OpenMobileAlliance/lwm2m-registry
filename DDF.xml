@@ -2955,7 +2955,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3412</ObjectID>
         <URN>urn:oma:lwm2m:ext:3412</URN>
-        <Name>Communication</Name>
+        <Name>LPWAN Communication</Name>
         <Description>The uCIFI communication object provides attributes related to the communication on the LPWAN network, including multicast grouping.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
@@ -2969,7 +2969,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3413</ObjectID>
         <URN>urn:oma:lwm2m:ext:3413</URN>
-        <Name>Generic Actuator</Name>
+        <Name>>uCIFI Generic Actuator</Name>
         <Description>The uCIFI generic actuator may be used for any actuator but not to replace Outdoor Lamp Controllers nor for an Irrigation Valves which have a specific device type in the uCIFI data model.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
@@ -3333,7 +3333,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3439</ObjectID>
         <URN>urn:oma:lwm2m:ext:3439</URN>
-        <Name>Edge computing time condition</Name>
+        <Name>Edge computing generic condition</Name>
         <Description>The uCIFI edge computing generic condition object defines a vendor-specific condition (e.g. when a resource or an object is equal to a particular value) at which a particular script should be executed by the device.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
