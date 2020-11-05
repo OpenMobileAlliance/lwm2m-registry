@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>0..65535</RangeEnumeration>
                 <Units></Units>
-                <Description>EARFCN currently used by the eNB. Highest valid value in 3GPP is currently 46589. If the requested EARFCN is not supported by the eNB, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>EARFCN currently used by the eNB. Highest valid value in 3GPP is currently 46589. If the requested EARFCN is not supported by the eNB, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="4">
                 <Name>eNB Bandwidth</Name>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>5, 10, 15, 20</RangeEnumeration>
                 <Units></Units>
-                <Description>Bandwidth of the currently used eNB carrier. If the requested bandwidth is not supported by the eNB, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>Bandwidth of the currently used eNB carrier. If the requested bandwidth is not supported by the eNB, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="5">
                 <Name>Backhaul Primary EARFCN</Name>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>0..65535</RangeEnumeration>
                 <Units></Units>
-                <Description>EARFCN of primary cell used for the backhaul. If the requested EARFCN is not supported by the CrowdBox UE, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>EARFCN of primary cell used for the backhaul. If the requested EARFCN is not supported by the CrowdBox UE, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="6">
                 <Name>Backhaul Secondary EARFCN</Name>
@@ -109,7 +109,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>0..65535</RangeEnumeration>
                 <Units></Units>
-                <Description>EARFCN of any secondary cells used for the backhaul, in the event that carrier aggregation is being used. If the requested EARFCN is not supported by the CrowdBox UE, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>EARFCN of any secondary cells used for the backhaul, in the event that carrier aggregation is being used. If the requested EARFCN is not supported by the CrowdBox UE, the response should be "Bad Request". The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="7">
                 <Name>Cumulative Measurement Window</Name>
@@ -159,7 +159,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>0..63</RangeEnumeration>
                 <Units>dBm</Units>
-                <Description>Maximum power for the eNB measured as the sum of input powers to all antenna connectors. The maximum power per antenna port is equal to the maximum eNB power divided by the number of antenna ports. If the requested power is above or below the maximum or minimum power levels of the eNB, then the power level should be set to the maximum or minimum respectively. The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>Maximum power for the eNB measured as the sum of input powers to all antenna connectors. The maximum power per antenna port is equal to the maximum eNB power divided by the number of antenna ports. If the requested power is above or below the maximum or minimum power levels of the eNB, then the power level should be set to the maximum or minimum respectively. The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="12">
                 <Name>Backhaul Primary q-OffsetFreq</Name>
