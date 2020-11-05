@@ -169,7 +169,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>-24..24</RangeEnumeration>
                 <Units>dB</Units>
-                <Description>q-OffsetFreq parameter for the backhaul primary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details. Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>q-OffsetFreq parameter for the backhaul primary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details. Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="13">
                 <Name>Backhaul Secondary q-OffsetFreq</Name>
@@ -179,7 +179,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>-24..24</RangeEnumeration>
                 <Units>dB</Units>
-                <Description>q-OffsetFreq parameter for the backhaul secondary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>q-OffsetFreq parameter for the backhaul secondary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="14">
                 <Name>Neighbour CrowdBox EARFCN</Name>
@@ -199,7 +199,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>-24..24</RangeEnumeration>
                 <Units>dB</Units>
-                <Description>q-OffsetFreq parameter of the Neighbour CrowdBox EARFCN in SIB5 of the Neighbour CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 Each instance of this resource relates to the same instance of resource ID 14. The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>q-OffsetFreq parameter of the Neighbour CrowdBox EARFCN in SIB5 of the Neighbour CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 Each instance of this resource relates to the same instance of resource ID 14. The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
             <Item ID="16">
                 <Name>Serving Macro eNB cellIndividualOffset</Name>
@@ -209,7 +209,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>-24..24</RangeEnumeration>
                 <Units>dB</Units>
-                <Description>Specifies the value of the cellIndividualOffset parameter applicable to the CrowdBox macro serving cell that is to be signalled to connected UEs in their measurement configuration information . See TS 36.331 for details. The CrowdBox shall only apply a change of this resource upon execution of the “Enable eNB” command.</Description>
+                <Description>Specifies the value of the cellIndividualOffset parameter applicable to the CrowdBox macro serving cell that is to be signalled to connected UEs in their measurement configuration information . See TS 36.331 for details. The CrowdBox shall only apply a change of this resource upon execution of the "Enable eNB" command.</Description>
             </Item>
         </Resources>
       <Description2></Description2>
