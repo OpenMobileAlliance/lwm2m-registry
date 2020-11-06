@@ -151,7 +151,7 @@ LEGAL DISCLAIMER
 				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description><![CDATA[Indicates whether resource “operator list” represents the allowed operator list (white list), or, the preferred operator list.
+				<Description><![CDATA[Indicates whether resource "operator list" represents the allowed operator list (white list), or, the preferred operator list.
 				0=preferred
 				1=allowed]]></Description>
 			</Item>
