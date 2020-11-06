@@ -548,6 +548,6 @@ The third octet is either " " (all environments), "O" (outside) or "I" (inside).
 				<Description><![CDATA[Links to a vendor specific object.]]></Description>
 			</Item></Resources>
 		<Description2><![CDATA[Notes:
-(1)	WEP is supported by this object for legacy devices. All encryption parameter resources are optional e.g. a Wifi Alliance “HotSpot 2.0” device would not support WEP related resources.]]></Description2>
+(1)	WEP is supported by this object for legacy devices. All encryption parameter resources are optional e.g. a Wifi Alliance "HotSpot 2.0" device would not support WEP related resources.]]></Description2>
 	</Object>
 </LWM2M>
