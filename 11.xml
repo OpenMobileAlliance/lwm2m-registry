@@ -137,7 +137,7 @@ LEGAL DISCLAIMER
 				<Type>String</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description><![CDATA[Comma separated list of retry delay values in seconds to be used in case of unsuccessful connection establishment attempts. e.g. “10,60,600,3600,86400”]]></Description>
+				<Description><![CDATA[Comma separated list of retry delay values in seconds to be used in case of unsuccessful connection establishment attempts. e.g. "10,60,600,3600,86400"]]></Description>
 			</Item>
 			<Item ID="8"><Name>Validity (MCC, MNC)</Name>
 				<Operations>RW</Operations>
@@ -402,7 +402,7 @@ LEGAL DISCLAIMER
 		<Description2><![CDATA[Notes:
 (1)	For each activated PDP context request, the device may store at least one value of ‘Connection establishment time’, ‘connection establishment result’, ‘Connection end time’ and if activation is unsuccessful then a ‘connection establishment reject cause’.   It is a device decision how many instances to keep.
 (2)	These resources are used in case IP related parameters are defined statically, can also be used to reflect IP related parameters in case of dynamic IP address assignment.  The normal use case would be to have one IPv4 and one IPv6 address which have each associated a prefix length (IPv6 only), a subnet mask, a gateway, and a primary and secondary DNS address.
-(3)	For LTE a higher QoS may be established by setting up an additional bearer (“dedicated bearer”) in addition to the default bearer which is established to the default APN. A dedicated bearer which is set up by the network on request by the device containing a requested QCI value can either be established to the same APN as the default bearer or to another APN. The QoS of a dedicated bearer may be modified on request by the device. The association of QoS values and APNs for a subscriber is stored in the network and checked during the establishment of a bearer.
+(3)	For LTE a higher QoS may be established by setting up an additional bearer ("dedicated bearer") in addition to the default bearer which is established to the default APN. A dedicated bearer which is set up by the network on request by the device containing a requested QCI value can either be established to the same APN as the default bearer or to another APN. The QoS of a dedicated bearer may be modified on request by the device. The association of QoS values and APNs for a subscriber is stored in the network and checked during the establishment of a bearer.
 ]]></Description2>
 	</Object>
 </LWM2M>
