@@ -207,7 +207,7 @@ Including any channels in-use by access point itself.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[802.11d Regulatory Domain String. 
 First two octets are ISO/IEC 3166-1 two-character country code. 
-The third octet is either “ ” (all environments), “O” (outside) or “I” (inside).]]></Description>
+The third octet is either " " (all environments), "O" (outside) or "I" (inside).]]></Description>
 			</Item>
 			<Item ID="14"><Name>Standard</Name>
 				<Operations>RW</Operations>
