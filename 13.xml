@@ -142,7 +142,7 @@ LEGAL DISCLAIMER
 				<RangeEnumeration/>
 				<Units/>
 				<Description><![CDATA[Comma separated list of MCC+MNC of operators, in priority order.
-				Resource “operator list mode” indicates how to process this list.]]></Description>
+				Resource "operator list mode" indicates how to process this list.]]></Description>
 			</Item>
 			<Item ID="7"><Name>Operator list mode</Name>
 				<Operations>RW</Operations>
