@@ -580,7 +580,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Transformer ratio – current (numerator).</Description>
+				<Description>Transformer ratio - current (numerator).</Description>
 			</Item>
 			<Item ID="55">
 				<Name>CT Denominator Parameter</Name>
@@ -590,7 +590,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Transformer ratio – voltage (denominator).</Description>
+				<Description>Transformer ratio - voltage (denominator).</Description>
 			</Item>
 			<Item ID="56">
 				<Name>VT Numerator Parameter</Name>
