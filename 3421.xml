@@ -600,7 +600,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Transformer ratio – current (numerator).</Description>
+				<Description>Transformer ratio - current (numerator).</Description>
 			</Item>
 			<Item ID="57">
 				<Name>VT Denominator Parameter</Name>
