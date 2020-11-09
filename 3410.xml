@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 	xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Device Extension</Name>
-		<Description1>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called “ExtDevInfo” (resource ID 22).</Description1>
+		<Description1>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called "ExtDevInfo" (resource ID 22).</Description1>
 		<ObjectID>3410</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3410</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

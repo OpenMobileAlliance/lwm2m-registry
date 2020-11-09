@@ -390,7 +390,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration>0..13</RangeEnumeration>
 				<Units></Units>
-				<Description>Type of control system with whioch the outdoor lamp controller switches, dims and monitors the lamp. The possible control types are: 0: No dimming control, 1 : DALI part 201 – Device Type 0, 2 : DALI part 202 – Device Type 1, 3 : DALI part 203 – Device Type 2, 4 : DALI part 204 – Device Type 3, 5 : DALI part 205 – Device Type 4, 6 : DALI part 206 – Device Type 5, 7 : DALI part 207 – Device Type 6, 8 : DALI part 208 – Device Type 7, 9 : DALI part 209 – Device Type 8, 10 : 0-10V, 11 : PWM, 12 : PWM_N, 13 : Other</Description>
+				<Description>Type of control system with whioch the outdoor lamp controller switches, dims and monitors the lamp. The possible control types are: 0: No dimming control, 1 : DALI part 201 - Device Type 0, 2 : DALI part 202 - Device Type 1, 3 : DALI part 203 - Device Type 2, 4 : DALI part 204 - Device Type 3, 5 : DALI part 205 - Device Type 4, 6 : DALI part 206 - Device Type 5, 7 : DALI part 207 - Device Type 6, 8 : DALI part 208 - Device Type 7, 9 : DALI part 209 - Device Type 8, 10 : 0-10V, 11 : PWM, 12 : PWM_N, 13 : Other</Description>
 			</Item>
 			<Item ID="36">
 				<Name>Nominal Lamp wattage</Name>
