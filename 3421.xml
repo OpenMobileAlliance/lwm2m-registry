@@ -610,7 +610,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Transformer ratio – voltage (denominator).</Description>
+				<Description>Transformer ratio - voltage (denominator).</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>
