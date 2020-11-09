@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Edge computing script</Name>
-		<Description1>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a “Edge Computing Time Condition” or “Edge Computing Generic Condition” object.</Description1>
+		<Description1>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a "Edge Computing Time Condition" or "Edge Computing Generic Condition" object.</Description1>
 		<ObjectID>3437</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3437</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
