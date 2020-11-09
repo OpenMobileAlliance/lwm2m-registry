@@ -256,7 +256,7 @@ The third octet is either " " (all environments), "O" (outside) or "I" (inside).
 				<Type>String</Type>
 				<RangeEnumeration>64 B</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[WPA/WPA2 Key expressed as a hex string. Write – Only.]]></Description>
+				<Description><![CDATA[WPA/WPA2 Key expressed as a hex string. Write - Only.]]></Description>
 			</Item>
 			<Item ID="18"><Name>WPA Key Phrase</Name>
 				<Operations>W</Operations>
