@@ -146,7 +146,7 @@ LEGAL DISCLAIMER
 				<Type>String</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description><![CDATA[Coma separated mobile country code, then mobile network code – for which this APN is valid.]]></Description>
+				<Description><![CDATA[Coma separated mobile country code, then mobile network code - for which this APN is valid.]]></Description>
 			</Item>
 			<Item ID="9"><Name>Connection establishment time (1)</Name>
 				<Operations>R</Operations>
