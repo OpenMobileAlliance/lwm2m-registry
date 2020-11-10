@@ -111,7 +111,7 @@ LEGAL DISCLAIMER
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Indicates the Single â€“ Network Slice Selection Assistance Information for 5G Standalone mode
+				<Description><![CDATA[Indicates the Single - Network Slice Selection Assistance Information for 5G Standalone mode
 0 = eMBB
 1 = URLLC
 2 = MIoT
