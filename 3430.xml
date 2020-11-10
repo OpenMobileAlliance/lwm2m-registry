@@ -294,7 +294,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>dB</Units>
 				<Description>Strength of the signal for each satellite, also called carrier-to-noise.</Description>
 			</Item>
 			<Item ID="23">

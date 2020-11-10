@@ -33,8 +33,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Data bridge</Name>
-		<Description1>The uCIFI data bridge object may be used to transport data from a 3rd party device over a LwM2M compliant network.</Description1>
+		<Name>uCIFI data bridge</Name>
+		<Description1>The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.</Description1>
 		<ObjectID>3414</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3414</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Hash to check the consistency of the data payload.</Description>
+				<Description>Hash to check the consistency of the data payload. Hash mechanism and calculation is vendor-specific.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Cumulated daily data volume up</Name>

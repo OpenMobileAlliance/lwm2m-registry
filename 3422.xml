@@ -113,7 +113,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Minimum power factor measured on the 3 lines.</Description>
 			</Item>
 			<Item ID="8">
-				<Name>System kW: Inst. Value. ΣLi Active power+ (QI+QIV)</Name>
+				<Name>System kW: Inst. Value. Sum Li Active power+ (QI+QIV)</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>

@@ -139,7 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>B/s</Units>
 				<Description>Data rate of the communication used on the LPWAN network.</Description>
 			</Item>
 			<Item ID="11">
@@ -270,7 +270,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Device’s current communication operator.</Description>
+				<Description>Device’s current communication operator. Communication operators could be private operators. Thus this resource is free text format and does not use Mobile Network Code or equivalent.</Description>
 			</Item>
 			<Item ID="24">
 				<Name>Integrated Circuit Card Identifier</Name>
@@ -280,7 +280,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Unique identifier used to identify a communication SIM card.</Description>
+				<Description>Unique identifier used to identify a communication SIM card. The ICCID is defined by the ITU-T recommendation E.118 as the Primary Account Number, composed of 19 or 20 characters containing the ISO Industry Identifier, country code, issuer identity, account ID, and other data which allows the network operator to identify the card.</Description>
 			</Item>
 		</Resources>
 		<Description2></Description2>

@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Edge computing script</Name>
-		<Description1>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a "Edge Computing Time Condition" or "Edge Computing Generic Condition" object.</Description1>
+		<Description1>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a “Edge Computing Time Condition” or “Edge Computing Generic Condition” object.</Description1>
 		<ObjectID>3437</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3437</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Unique hash or signature associated to the script to be verified by the end-device before execution.</Description>
+				<Description>Unique hash or signature associated to the script to be verified by the end-device before execution. The format of the hash or signature is vendor-specific.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Version</Name>
@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Script format to enable the device to select the script interpreter in case it supports multiple (e.g. LUA).</Description>
+				<Description>Script format to enable the device to select the script interpreter in case it supports multiple (e.g. LUA). The format of this resource is free to support vendor-specific formats.</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Non supported script</Name>
