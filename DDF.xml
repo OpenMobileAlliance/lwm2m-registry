@@ -2983,7 +2983,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3414</ObjectID>
         <URN>urn:oma:lwm2m:ext:3414</URN>
-        <Name>Data bridge</Name>
+        <Name>uCIFI data bridge</Name>
         <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device over a LwM2M compliant network.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
@@ -3095,14 +3095,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3422</ObjectID>
         <URN>urn:oma:lwm2m:ext:3422</URN>
-        <Name>Three-phase electrical meter complement</Name>
-        <Description>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description>
-        <Owner>uCIFI</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3422.xml</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3306,7 +3306,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3437</ObjectID>
         <URN>urn:oma:lwm2m:ext:3437</URN>
         <Name>Edge computing script</Name>
-        <Description>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a “Edge Computing Time Condition” or “Edge Computing Generic Condition” object.</Description>
+        <Description>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a "Edge Computing Time Condition" or "Edge Computing Generic Condition" object.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
