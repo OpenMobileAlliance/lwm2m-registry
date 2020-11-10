@@ -207,7 +207,7 @@ Including any channels in-use by access point itself.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[802.11d Regulatory Domain String. 
 First two octets are ISO/IEC 3166-1 two-character country code. 
-The third octet is either “ ” (all environments), “O” (outside) or “I” (inside).]]></Description>
+The third octet is either " " (all environments), "O" (outside) or "I" (inside).]]></Description>
 			</Item>
 			<Item ID="14"><Name>Standard</Name>
 				<Operations>RW</Operations>
@@ -256,7 +256,7 @@ The third octet is either “ ” (all environments), “O” (outside) or “I�
 				<Type>String</Type>
 				<RangeEnumeration>64 B</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[WPA/WPA2 Key expressed as a hex string. Write – Only.]]></Description>
+				<Description><![CDATA[WPA/WPA2 Key expressed as a hex string. Write - Only.]]></Description>
 			</Item>
 			<Item ID="18"><Name>WPA Key Phrase</Name>
 				<Operations>W</Operations>
@@ -548,6 +548,6 @@ The third octet is either “ ” (all environments), “O” (outside) or “I�
 				<Description><![CDATA[Links to a vendor specific object.]]></Description>
 			</Item></Resources>
 		<Description2><![CDATA[Notes:
-(1)	WEP is supported by this object for legacy devices. All encryption parameter resources are optional e.g. a Wifi Alliance “HotSpot 2.0” device would not support WEP related resources.]]></Description2>
+(1)	WEP is supported by this object for legacy devices. All encryption parameter resources are optional e.g. a Wifi Alliance "HotSpot 2.0" device would not support WEP related resources.]]></Description2>
 	</Object>
 </LWM2M>
