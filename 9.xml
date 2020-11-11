@@ -132,7 +132,7 @@ Can be direct link to a single software component or link to archive file, execu
 				<Type>Objlnk</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Link to a "Checkpoint" object which allows to specify conditions/dependencies for a software update. E.g. power connected, sufficient memory, target system.]]></Description>
+				<Description><![CDATA[Link to a Checkpoint" object which allows to specify conditions/dependencies for a software update. E.g. power connected, sufficient memory, target system.]]></Description>
 			</Item>
 			<Item ID="6"><Name>Uninstall</Name>
 				<Operations>E</Operations>
