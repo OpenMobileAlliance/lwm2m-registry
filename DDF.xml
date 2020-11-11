@@ -2923,7 +2923,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3410</ObjectID>
         <URN>urn:oma:lwm2m:ext:3410</URN>
         <Name>Device Extension</Name>
@@ -2933,10 +2934,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3410.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3411</ObjectID>
         <URN>urn:oma:lwm2m:ext:3411</URN>
         <Name>Battery</Name>
@@ -2946,49 +2948,53 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3411.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3412</ObjectID>
         <URN>urn:oma:lwm2m:ext:3412</URN>
-        <Name>Communication</Name>
+        <Name>LPWAN Communication</Name>
         <Description>The uCIFI communication object provides attributes related to the communication on the LPWAN network, including multicast grouping.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3412.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3413</ObjectID>
         <URN>urn:oma:lwm2m:ext:3413</URN>
-        <Name>Generic Actuator</Name>
+        <Name>uCIFI Generic Actuator</Name>
         <Description>The uCIFI generic actuator may be used for any actuator but not to replace Outdoor Lamp Controllers nor for an Irrigation Valves which have a specific device type in the uCIFI data model.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3413.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3414</ObjectID>
         <URN>urn:oma:lwm2m:ext:3414</URN>
-        <Name>Data bridge</Name>
+        <Name>uCIFI data bridge</Name>
         <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device over a LwM2M compliant network.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3414.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3415</ObjectID>
         <URN>urn:oma:lwm2m:ext:3415</URN>
         <Name>Time synchronization</Name>
@@ -2998,10 +3004,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3415.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3416</ObjectID>
         <URN>urn:oma:lwm2m:ext:3416</URN>
         <Name>Outdoor lamp controller</Name>
@@ -3011,10 +3018,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3416.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3417</ObjectID>
         <URN>urn:oma:lwm2m:ext:3417</URN>
         <Name>Luminaire asset</Name>
@@ -3024,10 +3032,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3417.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3418</ObjectID>
         <URN>urn:oma:lwm2m:ext:3418</URN>
         <Name>Electrical monitor</Name>
@@ -3037,10 +3046,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3418.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3419</ObjectID>
         <URN>urn:oma:lwm2m:ext:3419</URN>
         <Name>Photocell</Name>
@@ -3050,10 +3060,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3419.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3420</ObjectID>
         <URN>urn:oma:lwm2m:ext:3420</URN>
         <Name>LED color light</Name>
@@ -3063,10 +3074,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3420.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3421</ObjectID>
         <URN>urn:oma:lwm2m:ext:3421</URN>
         <Name>Single-phase electrical meter</Name>
@@ -3076,23 +3088,25 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3421.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3422</ObjectID>
         <URN>urn:oma:lwm2m:ext:3422</URN>
-        <Name>Three-phase electrical meter complement</Name>
-        <Description>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description>
-        <Owner>uCIFI</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3422.xml</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3423</ObjectID>
         <URN>urn:oma:lwm2m:ext:3423</URN>
         <Name>Gas meter</Name>
@@ -3102,10 +3116,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3423.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3424</ObjectID>
         <URN>urn:oma:lwm2m:ext:3424</URN>
         <Name>Water meter</Name>
@@ -3115,10 +3130,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3424.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3425</ObjectID>
         <URN>urn:oma:lwm2m:ext:3425</URN>
         <Name>Irrigation valve</Name>
@@ -3128,10 +3144,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3425.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3426</ObjectID>
         <URN>urn:oma:lwm2m:ext:3426</URN>
         <Name>Water quality sensor</Name>
@@ -3141,10 +3158,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3426.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3427</ObjectID>
         <URN>urn:oma:lwm2m:ext:3427</URN>
         <Name>Pressure monitoring sensor</Name>
@@ -3154,10 +3172,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3427.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3428</ObjectID>
         <URN>urn:oma:lwm2m:ext:3428</URN>
         <Name>Air quality</Name>
@@ -3167,10 +3186,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3428.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3429</ObjectID>
         <URN>urn:oma:lwm2m:ext:3429</URN>
         <Name>Tilt sensor</Name>
@@ -3180,10 +3200,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3429.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3430</ObjectID>
         <URN>urn:oma:lwm2m:ext:3430</URN>
         <Name>Global Navigation Satellite System</Name>
@@ -3193,10 +3214,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3430.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3431</ObjectID>
         <URN>urn:oma:lwm2m:ext:3431</URN>
         <Name>Parking Sensor</Name>
@@ -3206,10 +3228,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3431.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3432</ObjectID>
         <URN>urn:oma:lwm2m:ext:3432</URN>
         <Name>Traffic Counter</Name>
@@ -3219,10 +3242,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3432.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3433</ObjectID>
         <URN>urn:oma:lwm2m:ext:3433</URN>
         <Name>Noise sensor</Name>
@@ -3232,10 +3256,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3433.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3434</ObjectID>
         <URN>urn:oma:lwm2m:ext:3434</URN>
         <Name>People counter</Name>
@@ -3245,10 +3270,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3434.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3435</ObjectID>
         <URN>urn:oma:lwm2m:ext:3435</URN>
         <Name>Filling level</Name>
@@ -3258,10 +3284,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3435.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3436</ObjectID>
         <URN>urn:oma:lwm2m:ext:3436</URN>
         <Name>Edge computing manager</Name>
@@ -3271,23 +3298,25 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3436.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3437</ObjectID>
         <URN>urn:oma:lwm2m:ext:3437</URN>
         <Name>Edge computing script</Name>
-        <Description>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a “Edge Computing Time Condition” or “Edge Computing Generic Condition” object.</Description>
+        <Description>The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a "Edge Computing Time Condition" or "Edge Computing Generic Condition" object.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3437.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3438</ObjectID>
         <URN>urn:oma:lwm2m:ext:3438</URN>
         <Name>Edge computing time condition</Name>
@@ -3297,23 +3326,25 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.0</Ver>
         <DDF>3438.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3439</ObjectID>
         <URN>urn:oma:lwm2m:ext:3439</URN>
-        <Name>Edge computing time condition</Name>
+        <Name>Edge computing generic condition</Name>
         <Description>The uCIFI edge computing generic condition object defines a vendor-specific condition (e.g. when a resource or an object is equal to a particular value) at which a particular script should be executed by the device.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3439.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3440</ObjectID>
         <URN>urn:oma:lwm2m:ext:3440</URN>
         <Name>TBC</Name>
