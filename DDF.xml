@@ -3095,12 +3095,12 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
     <Item>
         <ObjectID>3422</ObjectID>
         <URN>urn:oma:lwm2m:ext:3422</URN>
-        <Name>Three-phase electrical meter complement</Name>
-        <Description>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description>
-        <Owner>uCIFI</Owner>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF>3422.xml</DDF>
+        <DDF></DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
