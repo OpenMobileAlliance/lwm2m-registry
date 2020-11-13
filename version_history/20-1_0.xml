@@ -1,33 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_EventLog-V1_0-20180615-A
+   File: OMA-SUP-XML_LWM2M_EventLog-V1_0_1-20200616-A
    Type: xml
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LwM2M_EventLog-V1_0.xml
+   Name: LwM2M_EventLog-v1_0_1.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LwM2M_EventLog-V1_0
+    OMA-TS-LwM2M_EventLog-V1_0_1
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/
 
-  Send comments to technical-comments@mail.openmobilealliance.org
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
 CHANGE HISTORY
 
 15062018 Status changed to Approved by DM, Doc Ref # OMA-DM&SE-2018-0060-INP_LWM2M_EventLog_V1_0_ERP_for_final_Approval
+16062020 Status changed to Approved by DMSE - Ref # OMA-DM&SE-2020-0020-INP_LwM2M_EventLog_V1_0_1_ERP_for_Final_Approval
 
 LEGAL DISCLAIMER
 
-  Copyright 2018 Open Mobile Alliance All rights reserved.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -57,7 +58,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+  
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -112,7 +114,7 @@ Arguments definitions are described in the table below.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration>8-Bits</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn’t contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
 			</Item>
 			<Item ID="4014"><Name>LogData</Name>
 				<Operations>R</Operations>
