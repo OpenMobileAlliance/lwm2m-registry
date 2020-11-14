@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_1-V1_2-20201019-A.xml
+   File: OMA-SUP-XML_1-V1_2-20201110-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Server/
 
 OMNA LwM2M Registry
@@ -83,7 +83,7 @@ LEGAL DISCLAIMER
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
+				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
 				<Description><![CDATA[Specify the lifetime of the registration in seconds (see Client Registration Interface). If the value is set to 0, the lifetime is infinite.]]></Description>
@@ -117,7 +117,7 @@ If this Resource doesn’t exist, the default value is 0.]]></Description>
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If this Resource is executed, this LwM2M Server Object is disabled for a certain period defined in the Disabled Timeout Resource. After receiving “Execute” operation, LwM2M Client MUST send response of the operation and perform de-registration process, and underlying network connection between the Client and Server MUST be disconnected to disable the LwM2M Server account.
+				<Description><![CDATA[If this Resource is executed, this LwM2M Server Object is disabled for a certain period defined in the Disabled Timeout Resource. After receiving "Execute" operation, LwM2M Client MUST send response of the operation and perform de-registration process, and underlying network connection between the Client and Server MUST be disconnected to disable the LwM2M Server account.
 After the above process, the LwM2M Client MUST NOT send any message to the Server and ignore all the messages from the LwM2M Server for the period.]]></Description>
 			</Item>
 			<Item ID="5">
@@ -138,8 +138,8 @@ After the above process, the LwM2M Client MUST NOT send any message to the Serve
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If true, the LwM2M Client stores “Notify” operations to the LwM2M Server while the LwM2M Server account is disabled or the LwM2M Client is offline. After the LwM2M Server account is enabled or the LwM2M Client is online, the LwM2M Client reports the stored “Notify” operations to the Server.
-If false, the LwM2M Client discards all the “Notify” operations or temporarily disables the Observe function while the LwM2M Server is disabled or the LwM2M Client is offline.
+				<Description><![CDATA[If true, the LwM2M Client stores "Notify" operations to the LwM2M Server while the LwM2M Server account is disabled or the LwM2M Client is offline. After the LwM2M Server account is enabled or the LwM2M Client is online, the LwM2M Client reports the stored "Notify" operations to the Server.
+If false, the LwM2M Client discards all the "Notify" operations or temporarily disables the Observe function while the LwM2M Server is disabled or the LwM2M Client is offline.
 The default value is true.
 The maximum number of storing Notifications per Server is up to the implementation.]]></Description>
 			</Item>
@@ -162,7 +162,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If this Resource is executed the LwM2M Client MUST perform an “Update” operation with this LwM2M Server. The LwM2M Client can use a transport binding supported in the Current Binding Mode, Preferred Transport resource or the transport specified as an argument in the Registration Update Trigger.]]></Description>
+				<Description><![CDATA[If this Resource is executed the LwM2M Client MUST perform an "Update" operation with this LwM2M Server. The LwM2M Client can use a transport binding supported in the Current Binding Mode, Preferred Transport resource or the transport specified as an argument in the Registration Update Trigger.]]></Description>
 			</Item>
 			<Item ID="9">
 				<Name>Bootstrap-Request Trigger</Name>
