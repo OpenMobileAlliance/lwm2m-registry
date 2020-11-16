@@ -24,7 +24,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- 0 => if link to object should not be visible, 1 => if object should be visible (default) -->
         <DDFLink>1</DDFLink>
         <!-- URL to the TS of the object, not visible, not used -->
-        <TS>http://openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
         <!-- 0 => if link to TS should not be visible, 1 => if link to TS should be visible (default) -->
         <TSLink>1</TSLink>
     </Item>
@@ -38,10 +38,24 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>0.xml</DDF>
+        <DDF>version_history/0-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>0</ObjectID>
+        <URN>urn:oma:lwm2m:oma:0:1.2</URN>
+        <Name>LWM2M Security</Name>
+        <Description>This LwM2M Object provides the keying material of a LwM2M Client appropriate to access a specified LwM2M Server. One Object Instance SHOULD address a LwM2M Bootstrap-Server.
+These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
+        <DDF>0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -68,10 +82,23 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>1.xml</DDF>
+        <DDF>version_history/1-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>1</ObjectID>
+        <URN>urn:oma:lwm2m:oma:1:1.2</URN>
+        <Name>LwM2M Server</Name>
+        <Description>This LwM2M Objects provides the data related to a LwM2M Server. A Bootstrap-Server has no such an Object Instance associated to it.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
+        <DDF>1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -79,14 +106,27 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>2</ObjectID>
         <URN>urn:oma:lwm2m:oma:2</URN>
         <Name>LwM2M Access Control</Name>
-        <Description>It is used to check whether the LWM2M Server has access right for performing a operation.</Description>
+        <Description>Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>2.xml</DDF>
+        <DDF>version_history/2-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>2</ObjectID>
+        <URN>urn:oma:lwm2m:oma:2:1.1</URN>
+        <Name>LwM2M Access Control</Name>
+        <Description>Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>2.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -94,11 +134,11 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3</URN>
         <Name>Device</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/3-1_0_3.xml</DDF>
+        <DDF>version_history/3-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</TS>
@@ -108,14 +148,27 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3:1.1</URN>
         <Name>Device</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
-        <DDF>3.xml</DDF>
+        <DDF>version_history/3-1_1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>3</ObjectID>
+        <URN>urn:oma:lwm2m:oma:3:1.2</URN>
+        <Name>Device</Name>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
+        <DDF>3.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -127,7 +180,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>version_history/4-1_0_2.xml</DDF>
+        <DDF>version_history/4-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_0_2-20180209-A/OMA-TS-LightweightM2M-V1_0_2-20180209-A.pdf</TS>
@@ -156,10 +209,23 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.2</Ver>
-        <DDF>4.xml</DDF>
+        <DDF>version_history/4-1_2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>4</ObjectID>
+        <URN>urn:oma:lwm2m:oma:4:1.3</URN>
+        <Name>Connectivity Monitoring</Name>
+        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity. In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE). The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.3</Ver>
+        <DDF>4.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -167,14 +233,35 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>5</ObjectID>
         <URN>urn:oma:lwm2m:oma:5</URN>
         <Name>Firmware Update</Name>
-        <Description>It enables management of firmware which is to be updated. This Object includes installing firmware package, updating firmware, and performing actions after updating firmware</Description>
+        <Description>This LwM2M Object enables management of firmware which is to be updated. This Object includes installing a firmware package, updating firmware, and performing actions after updating firmware. The firmware update MAY require to reboot the device; it will depend on a number of factors, such as the operating system architecture and the extent of the updated software.
+The envisioned functionality is to allow a LwM2M Client to connect to any LwM2M Server to obtain a firmware image using the object and resource structure defined in this section experiencing communication security protection using TLS/DTLS. There are, however, other design decisions that need to be taken into account to allow a manufacturer of a device to securely install firmware on a device. Examples for such design decisions are how to manage the firmware update repository at the server side (which may include user interface considerations), the techniques to provide additional application layer security protection of the firmware image, how many versions of firmware images to store on the device, and how to execute the firmware update process considering the hardware specific details of a given IoT hardware product. These aspects are considered to be outside the scope of this version of the specification.
+A LwM2M Server may also instruct a LwM2M Client to fetch a firmware image from a dedicated server (instead of pushing firmware images to the LwM2M Client). The Package URI resource is contained in the Firmware object and can be used for this purpose.
+A LwM2M Client MUST support block-wise transfer [CoAP_Blockwise] if it implements the Firmware Update object.
+A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/HTTPs, MAY also be used for downloading firmware updates (via the Package URI resource). For constrained devices it is, however, RECOMMENDED to use CoAP for firmware downloads to avoid the need for additional protocol implementations.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>5.xml</DDF>
+        <DDF>version_history/5-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>5</ObjectID>
+        <URN>urn:oma:lwm2m:oma:5:1.1</URN>
+        <Name>Firmware Update</Name>
+        <Description>This LwM2M Object enables management of firmware which is to be updated. This Object includes installing a firmware package, updating firmware, and performing actions after updating firmware. The firmware update MAY require to reboot the device; it will depend on a number of factors, such as the operating system architecture and the extent of the updated software.
+The envisioned functionality is to allow a LwM2M Client to connect to any LwM2M Server to obtain a firmware image using the object and resource structure defined in this section experiencing communication security protection using TLS/DTLS. There are, however, other design decisions that need to be taken into account to allow a manufacturer of a device to securely install firmware on a device. Examples for such design decisions are how to manage the firmware update repository at the server side (which may include user interface considerations), the techniques to provide additional application layer security protection of the firmware image, how many versions of firmware images to store on the device, and how to execute the firmware update process considering the hardware specific details of a given IoT hardware product. These aspects are considered to be outside the scope of this version of the specification.
+A LwM2M Server may also instruct a LwM2M Client to fetch a firmware image from a dedicated server (instead of pushing firmware images to the LwM2M Client). The Package URI resource is contained in the Firmware object and can be used for this purpose.
+A LwM2M Client MUST support block-wise transfer [CoAP_Blockwise] if it implements the Firmware Update object.
+A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/HTTPs, MAY also be used for downloading firmware updates (via the Package URI resource). For constrained devices it is, however, RECOMMENDED to use CoAP for firmware downloads to avoid the need for additional protocol implementations.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>5.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -245,6 +332,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/10-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>10</ObjectID>
+        <URN>urn:oma:lwm2m:oma:10:1.1</URN>
+        <Name>LWM2M Cellular Connectivity</Name>
+        <Description>This object specifies resources to enable a device to connect to a 3GPP or 3GPP2 bearer, including GPRS/EDGE, UMTS, LTE, NB-IoT, SMS. For cellular connectivity, this object focuses on Packet Switched (PS) connectivity and doesn't aim to provide comprehensive Circuit Switched (CS) connectivity management.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
         <DDF>10.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -260,6 +360,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/11-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>11</ObjectID>
+        <URN>urn:oma:lwm2m:oma:11:1.1</URN>
+        <Name>LWM2M APN Connection Profile</Name>
+        <Description>This object specifies resources to enable a device to connect to an APN.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
         <DDF>11.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -275,6 +388,19 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/12-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>12</ObjectID>
+        <URN>urn:oma:lwm2m:oma:12:1.1</URN>
+        <Name>WLAN connectivity</Name>
+        <Description>This object specifies resources to enable a device to connect to a WLAN bearer.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
         <DDF>12.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -291,6 +417,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/13-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item><Item>
+        <ObjectID>13</ObjectID>
+        <URN>urn:oma:lwm2m:oma:13:1.1</URN>
+        <Name>LWM2M Bearer Selection</Name>
+        <Description>This object specifies resources to enable a device to choose a PLMN/network on which to attach/register and what type of bearer to then connect.
+		This object allows via remote bearer and network configuration to overwrite automatic network and bearer selection e.g. as supported by the UICC. An equivalent example for overwriting automatic selection is a user doing manual network and bearer selection on a smart phone.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
         <DDF>13.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -407,10 +547,24 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>21.xml</DDF>
+        <DDF>version_history/21-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>21</ObjectID>
+        <URN>urn:oma:lwm2m:oma:21:1.1</URN>
+        <Name>LWM2M OSCORE</Name>
+        <Description>This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server. Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>21.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -426,6 +580,71 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_0-20190711-A/OMA-TS-LWM2M_VirtualObserveNotify-V1_0-20190711-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>23</ObjectID>
+        <URN>urn:oma:lwm2m:oma:23</URN>
+        <Name>LwM2M COSE</Name>
+        <Description>This Object provides the keying material and related information for use with COSE.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>23.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>24</ObjectID>
+        <URN>urn:oma:lwm2m:oma:24</URN>
+        <Name>MQTT Server</Name>
+        <Description>This object defines configuration parameters for an MQTT client to interact with a MQTT server.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>24.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>25</ObjectID>
+        <URN>urn:oma:lwm2m:oma:25</URN>
+        <Name>LwM2M Gateway</Name>
+        <Description>This object is used by a LwM2M Gateway to maintain the devices connected to the gateway.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>25.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>26</ObjectID>
+        <URN>urn:oma:lwm2m:oma:26</URN>
+        <Name>LwM2M Gateway Routing</Name>
+        <Description>This object is used by a LwM2M Gateway to maintain the routing table.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>26.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>27</ObjectID>
+        <URN>urn:oma:lwm2m:oma:27</URN>
+        <Name>5GNR Connectivity</Name>
+        <Description>This is a device management object that should be used for 5G-NR capable devices.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>27.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 	

@@ -4,20 +4,19 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_OSCORE-V1_0-20180710-A
+   File: OMA-SUP-XML_LWM2M_OSCORE-V1_0_1-20190617-A
    Type: xml
-   Date: 2018-07-10
+   Date: 2019-Jun-17
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_OSCORE-v1_0.xml
+   Name: LWM2M_OSCORE-v1_0_1.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M_Core-V1_1
-
+    OMA-TS-LightweightM2M_Core-V1_1_1
 
   This is available at http://www.openmobilealliance.org/
 
@@ -25,7 +24,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2018 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -55,10 +54,11 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
 		<Name>LWM2M OSCORE</Name>
 		<Description1><![CDATA[This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.
@@ -93,7 +93,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource MUST store an OSCORE identifier for the LwM2M Client called the Recepient ID. ]]></Description>
+				<Description><![CDATA[This resource MUST store an OSCORE identifier for the LwM2M Client called the Recipient ID. ]]></Description>
 			</Item>
 			<Item ID="3"><Name>OSCORE AEAD Algorithm </Name>
 				<Operations></Operations>
