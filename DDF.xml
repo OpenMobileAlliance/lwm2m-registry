@@ -55,7 +55,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -98,7 +98,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>1.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -126,7 +126,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -168,7 +168,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>3.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -225,7 +225,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDF>4.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -261,7 +261,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>5.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -564,7 +564,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>21.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -592,7 +592,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>23.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item><Item>
         <ObjectID>24</ObjectID>
@@ -605,7 +605,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>24.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item><Item>
         <ObjectID>25</ObjectID>
@@ -618,7 +618,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>25.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item><Item>
         <ObjectID>26</ObjectID>
@@ -631,7 +631,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>26.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item><Item>
         <ObjectID>27</ObjectID>
@@ -644,7 +644,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>27.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201019-A/OMA-TS-LightweightM2M_Core-V1_2-20201019-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 	
@@ -3147,7 +3147,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3410</ObjectID>
         <URN>urn:oma:lwm2m:ext:3410</URN>
         <Name>Device Extension</Name>
-        <Description>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called “ExtDevInfo” (resource ID 22).</Description>
+        <Description>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called "ExtDevInfo" (resource ID 22).</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
