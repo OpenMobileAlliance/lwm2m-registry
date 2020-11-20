@@ -4,12 +4,12 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_WLAN_connectivity4_V1_0-20170314-A
+   File: OMA-SUP-XML_LWM2M_WLAN_connectivity4_V1_0_1-20200616-A
    Type: xml
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_WLAN_connectivity4-v1_0.xml
+   Name: LWM2M_WLAN_connectivity4-v1_0_1.xml
 
 NORMATIVE INFORMATION
 
@@ -17,17 +17,18 @@ NORMATIVE INFORMATION
 
     OMA-TS-LWM2M_ConnMgmt-V1_0
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/
 
-  Send comments to technical-comments@mail.openmobilealliance.org
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
 CHANGE HISTORY
 
 14032017 Status changed to Approved by TP, TP Ref # OMA-TP-2017-0019-INP_LWM2M_CONNMGMT-V1_0_RRP_for_Final_Approval
+16062020 Status changed to Approved by DMSE, Ref # OMA-DM&SE-2020-0024-INP_LwM2M_WLAN_connectivity4_V1_0_1_for_Final_Approval
 	
 LEGAL DISCLAIMER
 
-  Copyright 2017 Open Mobile Alliance All rights reserved.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -57,7 +58,7 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -134,7 +135,7 @@ When disabled radio must also be disabled]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-32 Bytes</RangeEnumeration>
+				<RangeEnumeration>1..32 Bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The Service Set Identifier for this interface.]]></Description>
 			</Item>
@@ -176,7 +177,7 @@ When disabled radio must also be disabled]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The current radio channel in use by this interface.
 0: Disabled
@@ -278,7 +279,7 @@ Write – Only.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-64 Bytes</RangeEnumeration>
+				<RangeEnumeration>1..64 Bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[WPA/WPA2 Key Phrase.
 Write Only.]]></Description>
@@ -308,7 +309,7 @@ Write Only.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-64 Bytes</RangeEnumeration>
+				<RangeEnumeration>1..64 Bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[WPA/WPA2 Key Phrase.
 Write Only.]]></Description>
@@ -362,7 +363,7 @@ Write Only.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-256 Bytes</RangeEnumeration>
+				<RangeEnumeration>1..256 Bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[RADIUS Authentication Server Address]]></Description>
 			</Item>
@@ -380,7 +381,7 @@ Write Only.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>1-256 Bytes</RangeEnumeration>
+				<RangeEnumeration>1..256 Bytes</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[RADIUS Shared Secret]]></Description>
 			</Item>
