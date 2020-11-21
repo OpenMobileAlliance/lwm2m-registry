@@ -1,33 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_DevCapMgmt-V1_0-20170308-A
+   File: OMA-SUP-XML_LWM2M_DevCapMgmt-V1_0_1-20200616-A
    Type: xml
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_DevCapMgmt-v1_0.xml
+   Name: LWM2M_DevCapMgmt-v1_0_1.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LWM2M_DevCapMngt-V1_0
+    OMA-TS-LWM2M_DevCapMgmt-V1_0_3
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/
 
-  Send comments to technical-comments@mail.openmobilealliance.org
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
 CHANGE HISTORY
 
 08032017 Status changed to Approved by TP, TP Ref # OMA-TP-2017-0021R01-INP_LWM2M_DevCapMgmt_1.0.2_for_Final_Approval_Notification
-	
+16062020 Status changed to Approved by DMSE, Doc Ref # OMA-DM&SE-2020-0018-INP_LWM2M_DevCapMgmt_V1_0_3_RRP_for_Final_Approval
+
 LEGAL DISCLAIMER
 
-  Copyright 2017 Open Mobile Alliance All rights reserved.
+  Copyright 2020 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -57,7 +58,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -87,7 +89,7 @@ executable Resource can work with.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0-15</RangeEnumeration>
+				<RangeEnumeration>0..15</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Group name of Device Capabilities
 0: SENSOR: luminosity, presence,temp,humidity
@@ -99,7 +101,7 @@ executable Resource can work with.
 6: SOUND: speaker, buzzer
 7: ANALOG_INPUT: generic input
 8: ANALOG_OUTPUT: generic output
-9-15: reserved
+9..15: reserved
 
 ]]></Description>
 			</Item>
@@ -122,9 +124,9 @@ executable Resource can work with.
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[When the resource doesn’t exist, it means the associated Device Capability is not removable.
-When this resource is “False”, it means the associated Device Capability is removable and is currently not attached to the device.
-When this resource is “True”, it means the associated Device Capability – if removable – is currently attached to the Device.
-When a Device Capability is not removable, and the “Attached” Resource is present, the “Attached” value but be set to “True”.
+When this resource is "False", it means the associated Device Capability is removable and is currently not attached to the device.
+When this resource is "True", it means the associated Device Capability - if removable - is currently attached to the Device.
+When a Device Capability is not removable, and the "Attached" Resource is present, the "Attached" value but be set to "True".
 ]]></Description>
 			</Item>
 			<Item ID="4"><Name>Enabled</Name>
@@ -134,7 +136,7 @@ When a Device Capability is not removable, and the “Attached” Resource is pr
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource indicates whether the Device Capability is enabled regardless whether the Device Capability is attached or not. If the value of this resource is “True” the Device Capability is in Enabled State. If the value is “False” the Device Capability is in Disabled State;
+				<Description><![CDATA[This resource indicates whether the Device Capability is enabled regardless whether the Device Capability is attached or not. If the value of this resource is "True" the Device Capability is in Enabled State. If the value is "False" the Device Capability is in Disabled State;
 The ‘Attached’ and ‘Enabled’ resources are independent. A Device Capability MAY have ‘True’ as value for ‘Enabled’ Resource while having ‘False’ as value for the ‘Attached’ Resource. That means the Device Capability is still not available and can’t be used until it is attached to the Device, but will be useable once the Device Capability is attached.
 ]]></Description>
 			</Item>
@@ -167,7 +169,7 @@ In Disabled state the Device Capability is not allowed to work.
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[When the Resources “Enabled” or “Attached” are under “Observation”, this resource specifies whether the LWM2M Server MUST be notified when the value of the Resource on “Observation” changed. If the Resource “NotifyEn” is not present or the value is ‘False’, the LWM2M Server will be not notified about this change. If the “NotifyEn” Resource is present and the value is ‘True’, the LWM2M Server will be notified.]]></Description>
+				<Description><![CDATA[When the Resources "Enabled" or "Attached" are under "Observation", this resource specifies whether the LWM2M Server MUST be notified when the value of the Resource on "Observation" changed. If the Resource "NotifyEn" is not present or the value is ‘False’, the LWM2M Server will be not notified about this change. If the "NotifyEn" Resource is present and the value is ‘True’, the LWM2M Server will be notified.]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>

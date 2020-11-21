@@ -1,22 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_Server-V1_1-20180710-A
+   File: OMA-SUP-XML_LWM2M_Server-V1_1_1-20190617-A
    Type: xml
-   Date: 2018-07-10
+   Date: 2019-Jun-17
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_Server-v1_1.xml
+   Name: LWM2M_Server-v1_1_1.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M_Core-V1_1
+    OMA-TS-LightweightM2M_Core-V1_1_1
 
   This is available at http://www.openmobilealliance.org/
 
@@ -24,7 +24,7 @@ NORMATIVE INFORMATION
 	
 LEGAL DISCLAIMER
 
-  Copyright 2018 Open Mobile Alliance All rights reserved.
+  Copyright 2019 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -54,7 +54,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
@@ -62,7 +63,7 @@ LEGAL DISCLAIMER
 		<Name>LwM2M Server</Name>
 		<Description1><![CDATA[This LwM2M Objects provides the data related to a LwM2M Server. A Bootstrap-Server has no such an Object Instance associated to it.]]></Description1>
 		<ObjectID>1</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:1:1.1</ObjectURN><LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectURN>urn:oma:lwm2m:oma:1:1.1</ObjectURN><LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.1</ObjectVersion><MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Mandatory</Mandatory>
 		<Resources>
@@ -72,7 +73,7 @@ LEGAL DISCLAIMER
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>1-65535</RangeEnumeration>
+				<RangeEnumeration>1..65534</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Used as link to associate server Object Instance.]]></Description>
 			</Item>
@@ -84,7 +85,7 @@ LEGAL DISCLAIMER
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
-				<Description><![CDATA[Specify the lifetime of the registration in seconds (see Section 5.3 Registration).]]></Description>
+				<Description><![CDATA[Specify the lifetime of the registration in seconds (see Client Registration Interface).]]></Description>
 			</Item>
 			<Item ID="2">
 				<Name>Default Minimum Period</Name>
@@ -188,7 +189,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0-255</RangeEnumeration>
+				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[If this resource is defined, it contains the most recent TLS / DTLS alert message received from the LwM2M Server respective represented by the AlertDescription defined in Section 7.2 of RFC 5246. This resource set by the LwM2M Client may help the LwM2M Bootstrap-Server to determine the cause of TLS/DTLS connection failure with the respective LwM2M Server.]]></Description>
 			</Item>			
@@ -290,7 +291,7 @@ If the LwM2M Client supports the binding specified in this Resource, the LwM2M C
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If true, the LwM2M Server expects that the LwM2M Client is reachable over SMS binding at any time. SMS Triggers do not expect a message back over SMS. Trigger Mode is independent of the other bindings and it can be used with one or more transports. The default value (resource not present) is false.]]></Description>
+				<Description><![CDATA[Using the Trigger Resource a LwM2M Client can indicate whether it is reachable over SMS (value set to 'true') or not (value set to 'false'). The default value (resource not present) is 'false'. When set to 'true' the LwM2M Server MAY, for example, request the LwM2M Client to perform operations, such as the "Update" operation by sending an "Execute" operation on "Registration Update Trigger" Resource via SMS. No SMS response is expected for such a message.]]></Description>
 			</Item>
 			<Item ID="22">
 				<Name>Preferred Transport</Name>

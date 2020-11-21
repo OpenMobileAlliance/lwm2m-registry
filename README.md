@@ -17,12 +17,12 @@ This is a public repository dedicated to store and register new LwM2M Objects. S
    
 4. To create successful ```Object(s)``` | ```Reusable Resource(s)``` use the provided **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** and follow the **[Guidelines](https://github.com/OpenMobileAlliance/lwm2m-registry/wiki/Guidelines)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**.   
    
-5. Submit your ```Pull Request(s),(PRs)```, containing your ```Object(s)``` | ```Reusable Resource(s)``` registrations against the allocated branch.
+5. Submit your ```Pull Request(s),(PRs)```, containing your ```Object(s)``` | ```Reusable Resource(s)``` registrations against the allocated branch - See **[Object PR submission guidelines](https://wiki.openmobilealliance.org/display/TOOL/Pull+Request+Object+submission)**.
     > Note: The OMA staff will [close]() any ```PR(s)``` submitted against the incorrect branch. 
   
 6. Participate in the feedback provided by the Technical Working Group. The Group will provide comments to help you to improve your registration.   
   
-7. Once your submission has been accepted it will be incorporated into the *["master"](https://github.com/OpenMobileAlliance/lwm2m-registry/tree/master)* branch and publised in the repository.
+7. Once your submission has been accepted it will be incorporated into the *["master"](https://github.com/OpenMobileAlliance/lwm2m-registry/tree/master)* branch and published in the repository.
 
 
 
