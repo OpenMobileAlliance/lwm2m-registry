@@ -709,14 +709,14 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
     </Item><Item>
         <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Name>Remote SIM Provisioning</Name>
+        <Description>This is a device management object that should be used for Remote SIM Provisioning</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>504.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
