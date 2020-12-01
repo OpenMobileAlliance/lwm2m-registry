@@ -46,7 +46,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <Object ObjectType="MODefinition">
 		<Name>Remote SIM Provisioning</Name>
 		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning]]></Description1>
-		<ObjectID>505</ObjectID>
+		<ObjectID>504</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:504</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion />
