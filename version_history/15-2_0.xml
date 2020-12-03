@@ -123,7 +123,7 @@ executable Resource can work with.
 				<Units></Units>
 				<Description><![CDATA[When the resource doesn’t exist, it means the associated Device Capability is not removable.
 When this resource is "False", it means the associated Device Capability is removable and is currently not attached to the device.
-When this resource is "True", it means the associated Device Capability – if removable – is currently attached to the Device.
+When this resource is "True", it means the associated Device Capability - if removable - is currently attached to the Device.
 When a Device Capability is not removable, and the "Attached" Resource is present, the "Attached" value but be set to "True".
 ]]></Description>
 			</Item>
