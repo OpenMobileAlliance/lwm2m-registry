@@ -151,7 +151,7 @@ In Enabled State, the Device Capability is allowed to work when it is attached t
 			</Item>
 			<Item ID="6"><Name>opDisable</Name>
 				<Operations>E</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
