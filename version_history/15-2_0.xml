@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-  File: OMA-SUP-XML_15-V1_0_2-20201124-D
+  File: OMA-SUP-XML_15-V2_0-20201208-A
   Path: http://www.openmobilealliance.org/release/LWM2M_DevCapMgmt
 
 OMNA LwM2M Registry
@@ -65,6 +65,7 @@ LEGAL DISCLAIMER
 		<Description1><![CDATA[This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.]]></Description1>
 		<ObjectID>15</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:15:2.0</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
