@@ -269,7 +269,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>6</ObjectID>
         <URN>urn:oma:lwm2m:oma:6</URN>
         <Name>Location</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of location telemetry related information which can be queried by the LwM2M Server.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
