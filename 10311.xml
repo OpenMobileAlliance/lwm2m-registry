@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Solar Radiation</Name>
-        <Description1>This object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meteorological networks and solar energy applications.</Description1>
+        <Description1>This Object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meterological networks and solar energy applications.</Description1>
         <ObjectID>10311</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:x:10311:1.1</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

@@ -4415,7 +4415,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
         <Name>Solar Radiation</Name>
-        <Description>This object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meteorological networks and solar energy applications.</Description>
+        <Description>This Object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meterological networks and solar energy applications.</Description>
         <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
