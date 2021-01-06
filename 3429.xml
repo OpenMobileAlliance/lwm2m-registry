@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Tilt sensor</Name>
-		<Description1>The uCIFI tilt sensor provides the angle between the object’s internal vertical and the perpendicular to the earth.</Description1>
+		<Description1>The uCIFI tilt sensor provides the angle between the object's internal vertical and the perpendicular to the earth.</Description1>
 		<ObjectID>3429</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3429</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
