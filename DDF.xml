@@ -176,7 +176,9 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4</URN>
         <Name>Connectivity Monitoring</Name>
-        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity. In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE). The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
+        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity.
+In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).
+The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -191,7 +193,9 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4:1.1</URN>
         <Name>Connectivity Monitoring</Name>
-        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity. In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE). The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
+        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity.
+In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).
+The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
@@ -205,7 +209,9 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4:1.2</URN>
         <Name>Connectivity Monitoring</Name>
-        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity. In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE). The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
+        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity.
+In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).
+The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.2</Ver>
@@ -218,7 +224,9 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4:1.3</URN>
         <Name>Connectivity Monitoring</Name>
-        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity. In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE). The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
+        <Description>This LwM2M Object enables monitoring of parameters related to network connectivity.
+In this general connectivity Object, the Resources are limited to the most general cases common to most network bearers. It is recommended to read the description, which refers to relevant standard development organizations (e.g. 3GPP, IEEE).
+The goal of the Connectivity Monitoring Object is to carry information reflecting the more up to date values of the current connection for monitoring purposes. Resources such as Link Quality, Radio Signal Strength, Cell ID are retrieved during connected mode at least for cellular networks.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.3</Ver>
@@ -269,7 +277,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>6</ObjectID>
         <URN>urn:oma:lwm2m:oma:6</URN>
         <Name>Location</Name>
-        <Description>It provides a range of device related information which can be queried by the LWM2M Server, and a device reboot and factory reset function.</Description>
+        <Description>This LwM2M Object provides a range of location telemetry related information which can be queried by the LwM2M Server.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -284,7 +292,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>7</ObjectID>
         <URN>urn:oma:lwm2m:oma:7</URN>
         <Name>Connectivity Statistics</Name>
-        <Description>This LWM2M Objects enables client to collect statistical information and enables the LWM2M Server to retrieve these information, set the collection duration and reset the statistical parameters.</Description>
+        <Description>This LwM2M Objects enables client to collect statistical information and enables the LwM2M Server to retrieve these information, set the collection duration and reset the statistical parameters.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -299,7 +307,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>8</ObjectID>
         <URN>urn:oma:lwm2m:oma:8</URN>
         <Name>Lock and Wipe</Name>
-        <Description>This LWM2M objects provides the resources needed to perform the lock and wipe operations</Description>
+        <Description>This LWM2M objects provides the resources needed to perform the lock and wipe operations.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -313,7 +321,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>9</ObjectID>
         <URN>urn:oma:lwm2m:oma:9</URN>
         <Name>LWM2M Software Management</Name>
-        <Description>This LWM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance</Description>
+        <Description>This LwM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -442,7 +450,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>14</ObjectID>
         <URN>urn:oma:lwm2m:oma:14</URN>
         <Name>LWM2M Software Component</Name>
-        <Description>The LWM2M software management object enables remote software management in M2M devices</Description>
+        <Description>If some Objects are not supported after software update, the LwM2M Client MUST delete all the Object Instances of the Objects that are not supported.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -457,7 +465,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>15</ObjectID>
         <URN>urn:oma:lwm2m:oma:15</URN>
         <Name>DevCapMgmt</Name>
-        <Description>It manages the device capabilities of a device e.g. sensors, communication, etc.</Description>
+        <Description>This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -514,7 +522,11 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>19</ObjectID>
         <URN>urn:oma:lwm2m:oma:19</URN>
         <Name>BinaryAppDataContainer</Name>
-        <Description>This LwM2M object provides the application service data related to a LwM2M Server, eg. Water meter data.</Description>
+        <Description>This LwM2M Objects provides the application service data related to a LwM2M Server, eg. Water meter data. 
+There are several methods to create instance to indicate the message direction based on the negotiation between Application and LwM2M. The Client and Server should negotiate the instance(s) used to exchange the data. For example:
+ - Using a single instance for both directions communication, from Client to Server and from Server to Client.
+ - Using an instance for communication from Client to Server and another one for communication from Server to Client
+ - Using several instances</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -528,8 +540,8 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>20</ObjectID>
         <URN>urn:oma:lwm2m:oma:20</URN>
         <Name>Event Log</Name>
-        <Description>The Event Log Object is a single Instance Object defined for logging data in a straightforward
-        and generic way. The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
+        <Description>The Event Log Object is a single Instance Object defined for logging data in a straightforward and generic way.
+The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -543,7 +555,8 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>21</ObjectID>
         <URN>urn:oma:lwm2m:oma:21</URN>
         <Name>LWM2M OSCORE</Name>
-        <Description>This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server. Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
+        <Description>This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.
+Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -557,7 +570,8 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>21</ObjectID>
         <URN>urn:oma:lwm2m:oma:21:1.1</URN>
         <Name>LWM2M OSCORE</Name>
-        <Description>This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server. Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
+        <Description>This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.
+Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
@@ -725,8 +739,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>2048</ObjectID>
         <URN>urn:oma:lwm2m:ext:2048</URN>
         <Name>CmdhPolicy</Name>
-        <Description>This Object provides links to a set of rules associated with a specific CSE that governs the behavior
-            of that CSE regarding rejecting, buffering and sending request or response messages via the Mcc reference point.</Description>
+        <Description>This Object provides links to a set of rules associated with a specific CSE that governs the behavior of that CSE regarding rejecting, buffering and sending request or response messages via the Mcc reference point.</Description>
         <Owner>oneM2M</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -874,7 +887,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3200</ObjectID>
         <URN>urn:oma:lwm2m:ext:3200</URN>
         <Name>Digital Input</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of digital input interface. Specific objects for a given range of sensors are described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>Generic digital input for non-specific sensors</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -888,7 +901,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3200</ObjectID>
         <URN>urn:oma:lwm2m:ext:3200:1.1</URN>
         <Name>Digital Input</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of digital input interface. Specific objects for a given range of sensors are described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>Generic digital input for non-specific sensors</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -902,7 +915,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3201</ObjectID>
         <URN>urn:oma:lwm2m:ext:3201</URN>
         <Name>Digital Output</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of digital output interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>>Generic digital output for non-specific actuators</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -916,7 +929,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3201</ObjectID>
         <URN>urn:oma:lwm2m:ext:3201:1.1</URN>
         <Name>Digital Output</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of digital output interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>Generic digital output for non-specific actuators</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -930,7 +943,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3202</ObjectID>
         <URN>urn:oma:lwm2m:ext:3202</URN>
         <Name>Analog Input</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of analogue input interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>Generic analog input for non-specific sensors</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -944,7 +957,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3202</ObjectID>
         <URN>urn:oma:lwm2m:ext:3202:1.1</URN>
         <Name>Analog Input</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of analogue input interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>Generic analog input for non-specific sensors</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -958,7 +971,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3203</ObjectID>
         <URN>urn:oma:lwm2m:ext:3203</URN>
         <Name>Analog Output</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of analogue input interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>This IPSO object is a generic object that can be used with any kind of analog output interface.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -972,7 +985,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3203</ObjectID>
         <URN>urn:oma:lwm2m:ext:3203:1.1</URN>
         <Name>Analog Output</Name>
-        <Description>This IPSO object is a generic object that can be used with any kind of analogue input interface. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>This IPSO object is a generic object that can be used with any kind of analog output interface.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -986,7 +999,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3300</ObjectID>
         <URN>urn:oma:lwm2m:ext:3300</URN>
         <Name>Generic Sensor</Name>
-        <Description>This IPSO object allow the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reporting using this object. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>This IPSO object allows the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reported using this object. This object may be used as a generic object if a dedicated one does not exist.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1000,7 +1013,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3300</ObjectID>
         <URN>urn:oma:lwm2m:ext:3300:1.1</URN>
         <Name>Generic Sensor</Name>
-        <Description>This IPSO object allow the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reporting using this object. Specific object for a given range of sensors is described later in the document, enabling to identify the type of sensors directly from its Object ID. This object may be used as a generic object if a dedicated one does not exist.</Description>
+        <Description>This IPSO object allows the description of a generic sensor. It is based on the description of a value and a unit according to the SenML specification. Thus, any type of value defined within this specification can be reported using this object. This object may be used as a generic object if a dedicated one does not exist.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1014,7 +1027,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3301</ObjectID>
         <URN>urn:oma:lwm2m:ext:3301</URN>
         <Name>Illuminance</Name>
-        <Description>This IPSO object should be used over a luminosity sensor to report a remote luminosity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the luminosity sensor. The unit used here is Lux.</Description>
+        <Description>Illuminance sensor, example units = lx</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1028,7 +1041,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3301</ObjectID>
         <URN>urn:oma:lwm2m:ext:3301:1.1</URN>
         <Name>Illuminance</Name>
-        <Description>This IPSO object should be used over a luminosity sensor to report a remote luminosity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the luminosity sensor. The unit used here is Lux.</Description>
+        <Description>Illuminance sensor, example units = lx</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1042,7 +1055,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3302</ObjectID>
         <URN>urn:oma:lwm2m:ext:3302</URN>
         <Name>Presence</Name>
-        <Description>This IPSO object should be used over a presence sensor to report a remote presence detection. It also provides resources to manage a counter, the type of sensor used (e.g the technology of the probe), and configuration for the delay between busy and clear detection state.</Description>
+        <Description>Presence sensor with digital sensing, optional delay parameters</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1056,7 +1069,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3302</ObjectID>
         <URN>urn:oma:lwm2m:ext:3302:1.1</URN>
         <Name>Presence</Name>
-        <Description>This IPSO object should be used over a presence sensor to report a remote presence detection. It also provides resources to manage a counter, the type of sensor used (e.g the technology of the probe), and configuration for the delay between busy and clear detection state.</Description>
+        <Description>Presence sensor with digital sensing, optional delay parameters</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1070,7 +1083,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3303</ObjectID>
         <URN>urn:oma:lwm2m:ext:3303</URN>
         <Name>Temperature</Name>
-        <Description>This IPSO object should be used over a temperature sensor to report a remote temperature measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. The unit used here is degree Celsius.</Description>
+        <Description>This IPSO object should be used with a temperature sensor to report a temperature measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. An example measurement unit is degrees Celsius.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1084,7 +1097,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3303</ObjectID>
         <URN>urn:oma:lwm2m:ext:3303:1.1</URN>
         <Name>Temperature</Name>
-        <Description>This IPSO object should be used over a temperature sensor to report a remote temperature measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. The unit used here is degree Celsius.</Description>
+        <Description>This IPSO object should be used with a temperature sensor to report a temperature measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. An example measurement unit is degrees Celsius.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1098,7 +1111,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3304</ObjectID>
         <URN>urn:oma:lwm2m:ext:3304</URN>
         <Name>Humidity</Name>
-        <Description>This IPSO object should be used over a humidity sensor to report a remote humidity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. The unit used here is relative humidity as a percentage.</Description>
+        <Description>This IPSO object should be used with a humidity sensor to report a humidity measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. An example measurement unit is relative humidity as a percentage.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1112,7 +1125,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3304</ObjectID>
         <URN>urn:oma:lwm2m:ext:3304:1.1</URN>
         <Name>Humidity</Name>
-        <Description>This IPSO object should be used over a humidity sensor to report a remote humidity measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. The unit used here is relative humidity as a percentage.</Description>
+        <Description>This IPSO object should be used with a humidity sensor to report a humidity measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the humidity sensor. An example measurement unit is relative humidity as a percentage.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1154,7 +1167,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3306</ObjectID>
         <URN>urn:oma:lwm2m:ext:3306</URN>
         <Name>Actuation</Name>
-        <Description>This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multistate output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.</Description>
+        <Description>This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multi-state output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1168,7 +1181,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3306</ObjectID>
         <URN>urn:oma:lwm2m:ext:3306:1.1</URN>
         <Name>Actuation</Name>
-        <Description>This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multistate output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.</Description>
+        <Description>This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multi-state output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1238,7 +1251,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3311</ObjectID>
         <URN>urn:oma:lwm2m:ext:3311</URN>
         <Name>Light Control</Name>
-        <Description>This Object is used to control a light source, such as a LED or other light. It allows a light to be turned on or off and its dimmer setting to be control as a % between 0 and 100.</Description>
+        <Description>This Object is used to control a light source, such as a LED or other light.  It allows a light to be turned on or off and its dimmer setting to be control as a % between 0 and 100. An optional colour setting enables a string to be used to indicate the desired colour.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1253,7 +1266,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3312</ObjectID>
         <URN>urn:oma:lwm2m:ext:3312</URN>
         <Name>Power Control</Name>
-        <Description>This Object is used to control a power source, such as a Smart Plug. It allows a power relay to be turned on or off and its dimmer setting to be control as a % between 0 and 100.</Description>
+        <Description>This Object is used to control a power source, such as a Smart Plug.  It allows a power relay to be turned on or off and its dimmer setting to be control as a % between 0 and 100.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1267,7 +1280,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3312</ObjectID>
         <URN>urn:oma:lwm2m:ext:3312:1.1</URN>
         <Name>Power Control</Name>
-        <Description>This Object is used to control a power source, such as a Smart Plug. It allows a power relay to be turned on or off and its dimmer setting to be control as a % between 0 and 100.</Description>
+        <Description>This Object is used to control a power source, such as a Smart Plug.  It allows a power relay to be turned on or off and its dimmer setting to be control as a % between 0 and 100.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1337,7 +1350,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3315</ObjectID>
         <URN>urn:oma:lwm2m:ext:3315</URN>
         <Name>Barometer</Name>
-        <Description>This IPSO object should be used with an air pressure sensor to report a remote barometer measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor.</Description>
+        <Description>This IPSO object should be used with an air pressure sensor to report a barometer measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor. An example measurement unit is pascals.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1351,7 +1364,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3315</ObjectID>
         <URN>urn:oma:lwm2m:ext:3315:1.1</URN>
         <Name>Barometer</Name>
-        <Description>This IPSO object should be used with an air pressure sensor to report a remote barometer measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor.</Description>
+        <Description>This IPSO object should be used with an air pressure sensor to report a barometer measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the barometer sensor. An example measurement unit is pascals.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1365,7 +1378,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3316</ObjectID>
         <URN>urn:oma:lwm2m:ext:3316</URN>
         <Name>Voltage</Name>
-        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts.</Description>
+        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points.  It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1379,7 +1392,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3316</ObjectID>
         <URN>urn:oma:lwm2m:ext:3316:1.1</URN>
         <Name>Voltage</Name>
-        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts.</Description>
+        <Description>This IPSO object should be used with voltmeter sensor to report measured voltage between two points.  It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is volts.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1501,11 +1514,11 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
+ <Item>
         <ObjectID>3321</ObjectID>
         <URN>urn:oma:lwm2m:ext:3321</URN>
         <Name>Altitude</Name>
-        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.</Description>
+        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure.  It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1519,7 +1532,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3321</ObjectID>
         <URN>urn:oma:lwm2m:ext:3321:1.1</URN>
         <Name>Altitude</Name>
-        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.</Description>
+        <Description>This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure.  It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1533,7 +1546,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3322</ObjectID>
         <URN>urn:oma:lwm2m:ext:3322</URN>
         <Name>Load</Name>
-        <Description>This IPSO object should be used with a load sensor (as in a scale) to report the applied weight or force. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used with a load sensor (as in a scale) to report the applied weight or force. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is kilograms.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1547,7 +1560,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3322</ObjectID>
         <URN>urn:oma:lwm2m:ext:3322:1.1</URN>
         <Name>Load</Name>
-        <Description>This IPSO object should be used with a load sensor (as in a scale) to report the applied weight or force. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used with a load sensor (as in a scale) to report the applied weight or force. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is kilograms.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1561,7 +1574,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3323</ObjectID>
         <URN>urn:oma:lwm2m:ext:3323</URN>
         <Name>Pressure</Name>
-        <Description>This IPSO object should be used to report pressure measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report pressure measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is pascals.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1575,7 +1588,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3323</ObjectID>
         <URN>urn:oma:lwm2m:ext:3323:1.1</URN>
         <Name>Pressure</Name>
-        <Description>This IPSO object should be used to report pressure measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report pressure measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is pascals.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1589,7 +1602,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3324</ObjectID>
         <URN>urn:oma:lwm2m:ext:3324</URN>
         <Name>Loudness</Name>
-        <Description>This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is decibels.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1603,7 +1616,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3324</ObjectID>
         <URN>urn:oma:lwm2m:ext:3324:1.1</URN>
         <Name>Loudness</Name>
-        <Description>This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is decibels.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1617,7 +1630,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3325</ObjectID>
         <URN>urn:oma:lwm2m:ext:3325</URN>
         <Name>Concentration</Name>
-        <Description>This IPSO object should be used to the particle concentration measurement of a medium. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to the particle concentration measurement of a medium. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is parts per million.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1631,7 +1644,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3325</ObjectID>
         <URN>urn:oma:lwm2m:ext:3325:1.1</URN>
         <Name>Concentration</Name>
-        <Description>This IPSO object should be used to the particle concentration measurement of a medium. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to the particle concentration measurement of a medium. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is parts per million.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1645,7 +1658,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3326</ObjectID>
         <URN>urn:oma:lwm2m:ext:3326</URN>
         <Name>Acidity</Name>
-        <Description>This IPSO object should be used to report an acidity measurement of a liquid. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report an acidity measurement of a liquid. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is pH.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1659,7 +1672,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3326</ObjectID>
         <URN>urn:oma:lwm2m:ext:3326:1.1</URN>
         <Name>Acidity</Name>
-        <Description>This IPSO object should be used to report an acidity measurement of a liquid. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report an acidity measurement of a liquid. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is pH.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1673,7 +1686,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3327</ObjectID>
         <URN>urn:oma:lwm2m:ext:3327</URN>
         <Name>Conductivity</Name>
-        <Description>This IPSO object should be used to report a measurement of the electric conductivity of a medium or sample. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report a measurement of the electric conductivity of a medium or sample. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Siemens.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1687,7 +1700,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3327</ObjectID>
         <URN>urn:oma:lwm2m:ext:3327:1.1</URN>
         <Name>Conductivity</Name>
-        <Description>This IPSO object should be used to report a measurement of the electric conductivity of a medium or sample. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report a measurement of the electric conductivity of a medium or sample. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Siemens.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1701,7 +1714,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3328</ObjectID>
         <URN>urn:oma:lwm2m:ext:3328</URN>
         <Name>Power</Name>
-        <Description>This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Watts. This object may be used for either real power or apparent power measurements.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1715,7 +1728,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3328</ObjectID>
         <URN>urn:oma:lwm2m:ext:3328:1.1</URN>
         <Name>Power</Name>
-        <Description>This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report power measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Watts. This object may be used for either real power or apparent power measurements.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1729,7 +1742,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3329</ObjectID>
         <URN>urn:oma:lwm2m:ext:3329</URN>
         <Name>Power Factor</Name>
-        <Description>This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load.</Description>
+        <Description>This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load. Power Factor is normally the ratio of non-reactive power to total power. This object also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1743,7 +1756,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3329</ObjectID>
         <URN>urn:oma:lwm2m:ext:3329:1.1</URN>
         <Name>Power Factor</Name>
-        <Description>This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load.</Description>
+        <Description>This IPSO object should be used to report a measurement or calculation of the power factor of a reactive electrical load. Power Factor is normally the ratio of non-reactive power to total power. This object also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1757,7 +1770,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3330</ObjectID>
         <URN>urn:oma:lwm2m:ext:3330</URN>
         <Name>Distance</Name>
-        <Description>This IPSO object should be used to report a distance measurement. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report a distance measurement. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Meters.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1771,7 +1784,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3330</ObjectID>
         <URN>urn:oma:lwm2m:ext:3330:1.1</URN>
         <Name>Distance</Name>
-        <Description>This IPSO object should be used to report a distance measurement. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor.</Description>
+        <Description>This IPSO object should be used to report a distance measurement. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is Meters.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1785,7 +1798,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3331</ObjectID>
         <URN>urn:oma:lwm2m:ext:3331</URN>
         <Name>Energy</Name>
-        <Description>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load.</Description>
+        <Description>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load. An example measurement unit is Watt Hours.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1799,7 +1812,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3331</ObjectID>
         <URN>urn:oma:lwm2m:ext:3331:1.1</URN>
         <Name>Energy</Name>
-        <Description>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load.</Description>
+        <Description>This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load. An example measurement unit is Watt Hours.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1869,7 +1882,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3334</ObjectID>
         <URN>urn:oma:lwm2m:ext:3334</URN>
         <Name>Gyrometer</Name>
-        <Description>This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes.</Description>
+        <Description>This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1883,7 +1896,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3334</ObjectID>
         <URN>urn:oma:lwm2m:ext:3334:1.1</URN>
         <Name>Gyrometer</Name>
-        <Description>This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes.</Description>
+        <Description>This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1953,7 +1966,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3337</ObjectID>
         <URN>urn:oma:lwm2m:ext:3337</URN>
         <Name>Positioner</Name>
-        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%.</Description>
+        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1967,7 +1980,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3337</ObjectID>
         <URN>urn:oma:lwm2m:ext:3337:1.1</URN>
         <Name>Positioner</Name>
-        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%.</Description>
+        <Description>This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -1981,7 +1994,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3338</ObjectID>
         <URN>urn:oma:lwm2m:ext:3338</URN>
         <Name>Buzzer</Name>
-        <Description>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm.</Description>
+        <Description>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative loudness of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time "true" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is "false", writing a "true" to the On/Off resource will result in the alarm sounding continuously until a "false" is written to the On/Off resource.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -1995,7 +2008,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3338</ObjectID>
         <URN>urn:oma:lwm2m:ext:3338:1.1</URN>
         <Name>Buzzer</Name>
-        <Description>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm.</Description>
+        <Description>This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative level of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time "true" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is "false", writing a "true" to the On/Off resource will result in the alarm sounding continuously until a "false" is written to the On/Off resource.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -2009,7 +2022,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3339</ObjectID>
         <URN>urn:oma:lwm2m:ext:3339</URN>
         <Name>Audio Clip</Name>
-        <Description>This IPSO object should be used for a speaker that plays a pre-recorded audio clip or an audio output that is sent elsewhere.</Description>
+        <Description>This IPSO object should be used for a speaker that plays a pre-recorded audio clip or an audio output that is sent elsewhere. For example, an elevator which announces the floor of the building. A resource is provided to store the clip, a dimmer resource controls the relative sound level of the playback, and a duration resource limits the maximum playback time. After the duration time is reached, any remaining samples in the clip are ignored, and the clip player will be ready to play another clip.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2024,7 +2037,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3340</ObjectID>
         <URN>urn:oma:lwm2m:ext:3340</URN>
         <Name>Timer</Name>
-        <Description>This IPSO object is used to time events and actions, using patterns common to industrial timers. A POST to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete.</Description>
+        <Description>This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2039,7 +2052,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3341</ObjectID>
         <URN>urn:oma:lwm2m:ext:3341</URN>
         <Name>Addressable Text Display</Name>
-        <Description>This IPSO object is used to send text to a text-only or text mode graphics display.</Description>
+        <Description>This IPSO object is used to send text to a text-only or text mode graphics display. Writing a string of text to the text resource causes it to be displayed at the selected X and Y locations on the display. If X or Y are set to a value greater than the size of the display, the position "wraps around" to the modulus of the setting and the display size. Likewise, if the text string overflows the display size, the text "wraps around" and displays on the next line down or, if the last line has been written, wraps around to the top of the display. Brightness and Contrast controls are provided to allow control of various display types including STN and DSTN type LCD character displays. Writing an empty payload to the Clear Display resource causes the display to be erased.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2097,7 +2110,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3344</ObjectID>
         <URN>urn:oma:lwm2m:ext:3344</URN>
         <Name>Up/Down Control</Name>
-        <Description>This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder.</Description>
+        <Description>This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2127,7 +2140,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3346</ObjectID>
         <URN>urn:oma:lwm2m:ext:3346</URN>
         <Name>Rate</Name>
-        <Description>This object type should be used to report a rate measurement,</Description>
+        <Description>This object type should be used to report a rate measurement, for example the speed of a vehicle, or the rotational speed of a drive shaft. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters per second (m/s).</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2141,7 +2154,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3346</ObjectID>
         <URN>urn:oma:lwm2m:ext:3346:1.1</URN>
         <Name>Rate</Name>
-        <Description>This object type should be used to report a rate measurement,</Description>
+        <Description>This object type should be used to report a rate measurement, for example the speed of a vehicle, or the rotational speed of a drive shaft. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters per second (m/s).</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -2183,7 +2196,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3348</ObjectID>
         <URN>urn:oma:lwm2m:ext:3348</URN>
         <Name>Multi-state Selector</Name>
-        <Description>This IPSO object is used to represent the state of a multistate selector switch with a number of fixed positions.</Description>
+        <Description>This IPSO object is used to represent the state of a Multi-state selector switch with a number of fixed positions.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2197,7 +2210,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3348</ObjectID>
         <URN>urn:oma:lwm2m:ext:3348:1.1</URN>
         <Name>Multi-state Selector</Name>
-        <Description>This IPSO object is used to represent the state of a multistate selector switch with a number of fixed positions.</Description>
+        <Description>This IPSO object is used to represent the state of a Multi-state selector switch with a number of fixed positions.</Description>
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
@@ -2465,7 +2478,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3365</ObjectID>
         <URN>urn:oma:lwm2m:ext:3365</URN>
         <Name>rachLatency_delay</Name>
-        <Description>RACH Latency and delay information</Description>
+        <Description>RACH Latency &amp; delay information</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2563,7 +2576,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3372</ObjectID>
         <URN>urn:oma:lwm2m:ext:3372</URN>
         <Name>TimingAdvance</Name>
-        <Description>Neighbor Cell Measurements</Description>
+        <Description>Timing Advance Information</Description>
         <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2788,9 +2801,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3387</ObjectID>
         <URN>urn:oma:lwm2m:ext:3387</URN>
         <Name>oA Basic Control</Name>
-        <Description>The 'oA Basic Control' represents a common basic interface for a Control Function.
-         This allows to have vendor specific (executing) control functions using diverse object numbers to be interfaced for the basic functionality in a common way.
-         The object provides the basic functionality required for an OpenAIS control object.</Description>
+        <Description>The 'oA Basic Control' represents a common basic interface for a Control Function. This allows to have vendor specific (executing) control functions using diverse object numbers to be interfaced for the basic functionality in a common way. The object provides the basic functionality required for an OpenAIS control object.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2835,9 +2846,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3390</ObjectID>
         <URN>urn:oma:lwm2m:ext:3390</URN>
         <Name>oA Logical Colour Light-Point Actuator</Name>
-        <Description>The 'oA Logical Colour Light Point Actuator' represents the logical part of an actuator model for a colour light point.
-         The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include absolute and relative colour setting.
-         Several device configuration parameters are mapped, which relate to behaviour or describe device limitations.</Description>
+        <Description>The 'oA Logical Colour Light Point Actuator' represents the logical part of an actuator model for a colour light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include absolute and relative colour setting. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2852,10 +2861,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3391</ObjectID>
         <URN>urn:oma:lwm2m:ext:3391</URN>
         <Name>oA Logical Colour Temperature Light-Point Actuator</Name>
-        <Description>The 'oA Logical Colour Temperature Light Point Actuator' represents the logical part of an actuator model for a tunable white light point.
-        The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include absolute and relative colour temperature setting.
-        Several device configuration parameters are mapped, which relate to behaviour or describe device limitations. Note that the overall intensity is not controlled by this object, it remains controlled by a logical light point object to ease dimming action across tuneable, coloured and non coloured lights.
-        Please note also, that the corresponding executing object does not need to be restricted to tuneable white operation.</Description>
+        <Description>The 'oA Logical Colour_Temperature Light Point Actuator' represents the logical part of an actuator model for a tunable white light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include absolute and relative colour temperature setting. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations. Note that the overall intensity is not controlled by this object, it remains controlled by a logical light point object to ease dimming action across tuneable, coloured and non coloured lights. Please note also, that the corresponding executing object does not need to be restricted to tuneable white operation.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2870,8 +2876,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3392</ObjectID>
         <URN>urn:oma:lwm2m:ext:3392</URN>
         <Name>oA Logical Illuminance Sensor</Name>
-        <Description>The 'oA Logical Illuminance Sensor' represents the logical part of an illuminance sensor.
-         The corresponding physical device is a sensor that detects illuminance in its detection area.</Description>
+        <Description>The 'oA Logical Illuminance Sensor' represents the logical part of an illuminance sensor. The corresponding physical device is a sensor that detects illuminance in its detection area.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2886,10 +2891,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3393</ObjectID>
         <URN>urn:oma:lwm2m:ext:3393</URN>
         <Name>oA Logical Light-Point Actuator</Name>
-        <Description>The 'oA Logical Light Point Actuator' represents the logical part of an actuator model for a dimmable light point.
-        The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include basic On/Off as well as Up/Down dimming.
-        Several device configuration parameters are mapped, which relate to behaviour or describe device limitations.
-        For multi-channel luminaires where the configuration per channel may vary significantly (e.g. different max/min values), multiple instances of this Object should be used.</Description>
+        <Description>The 'oA Logical Light Point Actuator' represents the logical part of an actuator model for a dimmable light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\nThe Object (module) supports several interactions that include basic On/Off as well as Up/Down dimming. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations. For multi-channel luminaires where the configuration per channel may vary significantly (e.g. different max/min values), multiple instances of this Object should be used.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2904,9 +2906,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3394</ObjectID>
         <URN>urn:oma:lwm2m:ext:3394</URN>
         <Name>oA Logical Presence Sensor</Name>
-        <Description>The 'oA Logical Presence Sensor' represents the logical part of a presence sensor.
-         The corresponding physical device is a sensor that detects presence in its detection area.
-         \nThe Object supports two states 'presence' and 'absence'.</Description>
+        <Description>The 'oA Logical Presence Sensor' represents the logical part of a presence sensor. The corresponding physical device is a sensor that detects presence in its detection area. \nThe Object supports two states 'presence' and 'absence'.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2921,10 +2921,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3395</ObjectID>
         <URN>urn:oma:lwm2m:ext:3395</URN>
         <Name>oA Logical Push-Button Sensor</Name>
-        <Description>The 'oA Logical Push-Button Sensor' represents the logical part of a standard, normally open, push-button input.
-         The corresponding physical device is a button with a spring that returns the button to the un-pushed state once it is released.
-         \nThe Object supports several events such as 'click', 'hold', 'double-click' and 'release'. It also indicates if the button is 'stuck'.
-         For physical devices with multiple push-button inputs, an instance of this Object is required to map each input.</Description>
+        <Description>The 'oA Logical Push-Button Sensor' represents the logical part of a standard, normally open, push-button input. The corresponding physical device is a button with a spring that returns the button to the un-pushed state once it is released.\nThe Object supports several events such as 'click', 'hold', 'double-click' and 'release'. It also indicates if the button is 'stuck'. For physical devices with multiple push-button inputs, an instance of this Object is required to map each input.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2939,8 +2936,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3396</ObjectID>
         <URN>urn:oma:lwm2m:ext:3396</URN>
         <Name>oA Physical Colour Light-Point Actuator</Name>
-        <Description>The 'oA Physical Colour Light-Point Actuator' represents a physical colour light-point actuator.
-        It is necessary to map at least on Logical Light Point Actuator to control the intensity and one Logical Colour Light-Point to control the colour to the Physical Colour Light-Point.</Description>
+        <Description>The 'oA_Physical_Colour_Light-Point_Actuator' represents a physical colour light-point actuator. It is necessary to map at least on Logical Light Point Actuator to control the intensity and one Logical Colour Light-Point to control the colour to the Physical Colour Light-Point.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2955,8 +2951,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3397</ObjectID>
         <URN>urn:oma:lwm2m:ext:3397</URN>
         <Name>oA Physical Colour Temperature Light-Point Actuator</Name>
-        <Description>The 'oA_Physical Colour Temperature Light-Point Actuator' represents a physical tunable white light-point actuator.
-        It is necessary to map at least on Logical Light Point Actuator to control the intensity and one Logical Colour Temperature Light-Point to control the colour temperature to the Physical Colour Temperature Light Point.</Description>
+        <Description>The 'oA_Physical_Colour_Temperature_Light-Point_Actuator' represents a physical tunable white light-point actuator. It is necessary to map at least on Logical Light Point Actuator to control the intensity and one Logical Colour Temperature Light-Point to control the colour temperature to the Physical Colour Temperature Light Point.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2971,8 +2966,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3398</ObjectID>
         <URN>urn:oma:lwm2m:ext:3398</URN>
         <Name>oA Physical Illuminance Sensor</Name>
-        <Description>The 'oA Physical Light-Point Actuator' represents a physical light-point actuator.
-        All logical light-point actuators (object instances of 'oA Light-Point Actuator') are mapped to one physical light-point actuator.</Description>
+        <Description>The 'oA_Physical_Illuminance_Sensor' represents the physical part of an illuminance sensor. All logical illuminance sensors (object instances of 'oA Illuminance Sensor') are mapped to one physical illuminance sensor.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -2987,8 +2981,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3399</ObjectID>
         <URN>urn:oma:lwm2m:ext:3399</URN>
         <Name>oA Physical Light-Point Actuator</Name>
-        <Description>The 'oA Physical Illuminance Sensor' represents the physical part of an illuminance sensor.
-         All logical illuminance sensors (object instances of 'oA Illuminance Sensor') are mapped to one physical illuminance sensor.</Description>
+        <Description>The 'oA_Physical_Light-Point_Actuator' represents a physical light-point actuator. All logical light-point actuators (object instances of 'oA Light-Point Actuator') are mapped to one physical light-point actuator.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3003,8 +2996,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3400</ObjectID>
         <URN>urn:oma:lwm2m:ext:3400</URN>
         <Name>oA Physical Presence Sensor</Name>
-        <Description>The 'oA Physical Presence Sensor' represents the physical part of a presence sensor.
-        All logical presence sensors (object instances of 'oA Presence Sensor') are mapped to one physical presence sensor</Description>
+        <Description>The 'oA_Physical_Presence_Sensor' represents the physical part of a presence sensor. All logical presence sensors (object instances of 'oA Presence Sensor') are mapped to one physical presence sensor.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3019,8 +3011,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3401</ObjectID>
         <URN>urn:oma:lwm2m:ext:3401</URN>
         <Name>oA Physical Push-Button Sensor</Name>
-        <Description>The 'oA Physical Push-Button Sensor' represents the physical part of a push-button sensor.
-        All logical push-button sensors (object instances of 'oA Push-Button Sensor') are mapped to one physical push-button sensor.</Description>
+        <Description>The 'oA_Physical_Push-Button_Sensor' represents the physical part of a push-button sensor. All logical push-button sensors (object instances of 'oA Push-Button Sensor') are mapped to one physical push-button sensor.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3035,9 +3026,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3402</ObjectID>
         <URN>urn:oma:lwm2m:ext:3402</URN>
         <Name>oA Receiving Object</Name>
-        <Description>The 'oA Receiving Object' provides a resource for sensors/actuators to report their status message to.
-         It is used with control objects as logical object that forwards the sensor and status data to the executing object.
-        \nIt is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.</Description>
+        <Description>The 'oA Receiving Object' provides a resource for sensors/actuators to report their status message to. It is used with control objects as logical object that forwards the sensor and status data to the executing object.\nIt is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3052,8 +3041,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3403</ObjectID>
         <URN>urn:oma:lwm2m:ext:3403</URN>
         <Name>oA Reporting Object</Name>
-        <Description>The 'oA Reporting Object' packs several status messages available at the node into a single, size optimized message,
-        as e.g. used with data collect or BMS interfacing.</Description>
+        <Description>The 'oA Reporting Object' packs several status messages available at the node into a single, size optimized message, as e.g. used with data collect or BMS interfacing.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3083,9 +3071,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3405</ObjectID>
         <URN>urn:oma:lwm2m:ext:3405</URN>
         <Name>oA OGC-Security</Name>
-        <Description>The 'oA Security' provides the keying material of a LWM2M Client appropriate to access a specified LWM2M Server in context of OpenAIS.
-         One Object Instance SHOULD address a LWM2M Bootstrap Server.
-         \nThese LWM2M Object Resources MUST only be changed by a LWM2M Bootstrap Server or Bootstrap from Smartcardand MUST NOT be accessible by any other LWM2M Server.</Description>
+        <Description>The 'OGC Security' provides the appropriate keying material for a specific OGC Application group in the context of OGC. The keying material will be provided by a key distribution server, and must not be readable by any instance outside the local node.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3100,8 +3086,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3406</ObjectID>
         <URN>urn:oma:lwm2m:ext:3406</URN>
         <Name>oA Status Report Structure</Name>
-        <Description>The 'oA Status Report Structure' describes the content of the status reports.
-         Its ID is always the first byte, the following bytes are defined by Keys.</Description>
+        <Description>The 'oA Status_Report_Structure' describes the content of the status reports. Its ID is always the first byte, the following bytes are defined by Keys.</Description>
         <Owner>OpenAIS</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3216,7 +3201,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3414</ObjectID>
         <URN>urn:oma:lwm2m:ext:3414</URN>
         <Name>uCIFI data bridge</Name>
-        <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device over a LwM2M compliant network.</Description>
+        <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3412,7 +3397,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3428</ObjectID>
         <URN>urn:oma:lwm2m:ext:3428</URN>
         <Name>Air quality</Name>
-        <Description>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation..</Description>
+        <Description>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3426,7 +3411,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>3429</ObjectID>
         <URN>urn:oma:lwm2m:ext:3429</URN>
         <Name>Tilt sensor</Name>
-        <Description>The uCIFI tilt sensor provides the angle between the object’s internal vertical and the perpendicular to the earth.</Description>
+        <Description>The uCIFI tilt sensor provides the angle between the object's internal vertical and the perpendicular to the earth.</Description>
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3610,7 +3595,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10242</ObjectID>
         <URN>urn:oma:lwm2m:x:10242</URN>
         <Name>3-Phase Power Meter</Name>
-        <Description>This Object provides the information to represent a generic 3-Phase Power Meter</Description>
+        <Description>This Object provides the information to represent a generic 3-Phase Power Meter.</Description>
         <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3625,7 +3610,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243</URN>
         <Name>Single-Phase Power Meter</Name>
-        <Description>This Object provides the information to represent a generic Single-Phase Power Meter</Description>
+        <Description>This Object provides the information to represent a generic Single-Phase Power Meter.</Description>
         <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3640,7 +3625,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10244</ObjectID>
         <URN>urn:oma:lwm2m:x:10244</URN>
         <Name>VehicleControlUnit</Name>
-        <Description>This Object provides the information to represent a generic VCU (vehicle control unit)</Description>
+        <Description>This Object provides the information to represent a generic VCU(vehicle control unit).</Description>
         <Owner>Works System</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3654,7 +3639,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10245</ObjectID>
         <URN>urn:oma:lwm2m:x:10245</URN>
         <Name>Relay Management</Name>
-        <Description>This LWM2M Object provides a range of eNB related measurements and parameters of which several are changeable. Furthermore, it includes Resources to enable/disable the eNB</Description>
+        <Description>This LWM2M Object provides a range of eNB related measurements and parameters of which several are changeable. Furthermore, it includes Resources to enable/disable the eNB.</Description>
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3682,7 +3667,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10247</ObjectID>
         <URN>urn:oma:lwm2m:x:10247</URN>
         <Name>Neighbour Cell Report</Name>
-        <Description>This LWM2M Object provides the neighbour cell report. The CrowdBox Measurements Object and the Connected UE Report Object have both Objlnk Resources pointing to this Object</Description>
+        <Description>This LWM2M Object provides the neighbour cell report. The CrowdBox Measurements Object and the Connected UE Report Object have both Objlnk Resources pointing to this Object.</Description>
         <Owner>Vodafone Group Services Ltd</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3752,7 +3737,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10252</ObjectID>
         <URN>urn:oma:lwm2m:x:10252</URN>
         <Name>Manifest</Name>
-        <Description><![CDATA[This object provides a range of information related to updating packages on a device]]></Description>
+        <Description>This object provides a range of information related to updating packages on a device</Description>
         <Owner>ARM Limited</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -3781,7 +3766,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10254</ObjectID>
         <URN>urn:oma:lwm2m:x:10254:1.0</URN>
         <Name>Current Loop Input</Name>
-        <Description>This LwM2M Object provides a representation of a current loop sensor, which indicates the value emitted by a current source.</Description>
+        <Description>This LWM2M Object provides a representation of a current loop sensor, which indicates the value emitted by a current source.</Description>
         <Owner>World-Direct eBusiness</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4076,11 +4061,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10275</ObjectID>
         <URN>urn:oma:lwm2m:x:10275</URN>
         <Name>Water Meter Tamper Alarm</Name>
-        <Description>
-            Detects interference from strong magnetic field or other electrical sources. If this is not relevant for
-            ultrasonic meters then the tamper alarm may be used to
-            indicate someone attempting to open the physical enclosure or other options the manufacturer may present.
-        </Description>
+        <Description>Detects interference from strong magnetic field or other electrical sources. If this is not relevant for ultrasonic meters then the tamper alarm may be used to indicate someone attempting to open the physical enclosure or other options the manufacturer may present.</Description>
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4122,10 +4103,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10278</ObjectID>
         <URN>urn:oma:lwm2m:x:10278</URN>
         <Name>High Temperature Alarm</Name>
-        <Description>
-            Where supported by the meter this is an alarm that should be raised if the meter detects temperature above a pre-configured threshold.
-            When the temperature drops below the clear threshold, the alarm should be cleared.
-        </Description>
+        <Description>Where supported by the meter this is an alarm that should be raised if the meter detects temperature above a pre-configured threshold. When the temperature drops below the clear threshold, the alarm should be cleared.</Description>
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4139,10 +4117,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10279</ObjectID>
         <URN>urn:oma:lwm2m:x:10279</URN>
         <Name>Low Temperature Alarm</Name>
-        <Description>
-            Where supported by the meter this is an alarm that should be raised if the meter detects temperature below a pre-configured threshold.
-            When the temperature rises above the clear threshold, the alarm should be cleared
-        </Description>
+        <Description>Where supported by the meter this is an alarm that should be raised if the meter detects temperature below a pre-configured threshold. When the temperature rises above the clear threshold, the alarm should be cleared</Description>
         <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4241,7 +4216,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
          <ObjectID>10290</ObjectID>
          <URN>urn:oma:lwm2m:x:10290</URN>
          <Name>Voltage Logging</Name>
-         <Description>Periodic voltage measurements that are logged into CBOR structure payload.</Description>
+         <Description>Periodic voltage measurements that are logged into CBOR structure payload</Description>
          <Owner>South East Water Corporation</Owner>
          <Source>2</Source>
          <Ver>1.0</Ver>
@@ -4298,9 +4273,9 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10300</ObjectID>
         <URN>urn:oma:lwm2m:x:10300</URN>
         <Name>LWM2M Meta Object</Name>
-        <Description>Use this meta object to provide one or more locations hosting XML data
- 	  model definitions for reusable or private and vendor-specific devices,
- 	  such as those in the range 26241-42768.</Description>
+        <Description> Use this meta object to provide one or more locations hosting XML data
+	  model definitions for reusable or private and vendor-specific devices,
+	  such as those in the range 26241-42768.</Description>
         <Owner>TAU</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4440,7 +4415,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
         <Name>Solar Radiation</Name>
-        <Description>This object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 μm to 3 μm. For example, the application of solar radiation measurement can be meteorological networks and solar energy applications.</Description>
+        <Description>This Object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meterological networks and solar energy applications.</Description>
         <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -4454,7 +4429,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311:1.1</URN>
         <Name>Solar Radiation</Name>
-        <Description>This object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 μm to 3 μm. For example, the application of solar radiation measurement can be meteorological networks and solar energy applications.</Description>
+        <Description>This Object is used to report solar irradiance (SI), i.e. power per unit area received from the Sun in the form of electromagnetic radiation, on a planar surface measured by a pyranometer or similar instrument. A pyranometer measures solar irradiance from the hemisphere above within a wavelength range 0.3 um to 3 um. For example, the application of solar radiation measurement can be meterological networks and solar energy applications.</Description>
         <Owner>Vaisala</Owner>
         <Source>2</Source>
         <Ver>1.1</Ver>
@@ -4692,7 +4667,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10328</ObjectID>
         <URN>urn:oma:lwm2m:x:10328</URN>
         <Name>SCA PM</Name>
-        <Description>This LWM2M Object includes all PM items belongs to a specific SCA</Description>
+        <Description>This LWM2M Object includes all PM items belongs to a specific SCA.</Description>
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -5014,7 +4989,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10351</ObjectID>
         <URN>urn:oma:lwm2m:x:10351</URN>
         <Name>Door</Name>
-        <Description>is LWM2M Object includes the door information.</Description>
+        <Description>This LWM2M Object includes the door information.</Description>
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -5070,7 +5045,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10355</ObjectID>
         <URN>urn:oma:lwm2m:x:10355</URN>
         <Name>General Info</Name>
-        <Description>This LWM2M Object contains the referrence to all general info objects.</Description>
+        <Description>This LWM2M Object contains the referrence to all general info objects of the robot.</Description>
         <Owner>CloudMinds</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
@@ -5294,7 +5269,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <ObjectID>10371</ObjectID>
         <URN>urn:oma:lwm2m:x:10371</URN>
         <Name>Reboot Status</Name>
-        <Description>This LWM2M object extends Device(3) from LWM2M core specification. It mainly provides features allowing better monitor of Reboot(/3/0/4) and Reset Factory(/3/0/5) operation available on LWM2M Device (3) Object. Without this extension this is really hard to know if a reboot or a reset factory is a success or a failure and why it failed. This is also strongly recommended to use separated response for those resources (/3/0/4 and /3/0/5) and to reboot or reset factory only after receiving the response ACK to avoid unexpected duplicate reboot.</Description>
+        <Description>This object provides features allowing to monitor Reboot and Reset Factory operation from LWM2M Device object.</Description>
         <Owner>Sierra Wireless</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
