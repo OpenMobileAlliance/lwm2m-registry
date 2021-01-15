@@ -47,7 +47,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 		<ObjectID>504</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:504</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion />
+		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
