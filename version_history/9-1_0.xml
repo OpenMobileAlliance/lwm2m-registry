@@ -4,9 +4,10 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_9-V1_0_2-20210119-A
+   File: OMA-SUP-XML_9-V1_0_2-20210119-A.xml
    Path: http://www.openmobilealliance.org/release/LWM2M_SWMGMT
 
+OMNA LwM2M Registry
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 9.xml
 
@@ -16,7 +17,7 @@ NORMATIVE INFORMATION
 
     OMA-TS-LightweightM2M-V1_0
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 
@@ -52,7 +53,8 @@ LEGAL DISCLAIMER
 
   The above license is used as a license under copyright only.  Please
   reference the OMA IPR Policy for patent licensing terms:
-  http://www.openmobilealliance.org/ipr.html
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -317,4 +319,3 @@ Key based mechanism can alternatively use for talking to the component server in
 		<Description2><![CDATA[]]></Description2>
 	</Object>
 </LWM2M>
-
