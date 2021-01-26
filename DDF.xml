@@ -314,7 +314,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>8.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_2-20200616-A/OMA-TS-LWM2M_LockWipe-V1_0_1-20200616-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/V1_0_3-20210119-A/OMA-TS-LWM2M_LockWipe-V1_0_2-20210119-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
     <Item>
@@ -328,7 +328,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>9.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_2-20210119-A/OMA-TS-LWM2M_SwMgmt-V1_0_2-20210119-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -457,7 +457,7 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>14.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_1-20200616-A/OMA-TS-LWM2M_SwMgmt-V1_0_1-20200616-A.pdf</TS>
+	<TS>http://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_2-20210119-A/OMA-TS-LWM2M_SwMgmt-V1_0_2-20210119-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
