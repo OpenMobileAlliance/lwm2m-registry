@@ -60,7 +60,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<RangeEnumeration/>
 			<Units/>
 			<Description><![CDATA[Referrence to a PM item, similar with Corelnk in LwM2M 1.1, 
-				'</object ID/object instance ID/resoure ID>', for example:/10322/2/4]]></Description>
+				< /object ID/object instance ID/resoure ID>, for example:/10322/2/4]]></Description>
 		</Item>
 		<Item ID="3">
 			<Name>High Threshold</Name>
