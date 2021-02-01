@@ -61,7 +61,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <Type>Integer</Type>
         <RangeEnumeration/>
         <Units/>
-        <Description><![CDATA[0:Normal, 1:Unknown, <0:Failed with error code(negative number).]]></Description>
+        <Description><![CDATA[0:Normal, 1:Unknown, 0:Failed with error code(negative number).]]></Description>
       </Item>
 	</Resources>
     <Description2 />
