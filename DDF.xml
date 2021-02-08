@@ -3629,7 +3629,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF>10243.xml</DDF>
+        <DDF>version_history/10243-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
@@ -3639,14 +3639,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243:2.0</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
+        <Name>Single-Phase Power Meter</Name>
+        <Description>This Object provides the information to represent a generic Single-Phase Power Meter.</Description>
+        <Owner>Odins</Owner>
         <Source>2</Source>
         <Ver>2.0</Ver>
-        <DDF></DDF>
+        <DDF>10243.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
