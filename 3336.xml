@@ -37,14 +37,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <Description1>This IPSO object represents GPS coordinates. This object is compatible with the LWM2M management object for location, but uses reusable resources.
         </Description1>
         <ObjectID>3336</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3336:1.1</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3336:1.2</ObjectURN>
         <LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.1</ObjectVersion>
+		<ObjectVersion>1.2</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="5514">
-                <Name>Latitude</Name>
+                <Name>String Latitude</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Description>The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).</Description>
             </Item>
             <Item ID="5515">
-                <Name>Longitude</Name>
+                <Name>String Longitude</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
@@ -62,13 +62,43 @@ POSSIBILITY OF SUCH DAMAGE.
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description>The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).</Description>
-            </Item>           
-            <Item ID="5516">
-                <Name>Uncertainty</Name>
+            </Item>
+	    <Item ID="5516">
+                <Name>String Uncertainty</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description>The accuracy of the position in meters.</Description>
+            </Item>
+	    <Item ID="XXXX">
+                <Name>Decimal Latitude</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description>The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).</Description>
+            </Item>
+	    <Item ID="XXXX">
+                <Name>Decimal Longitude</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description>The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).</Description>
+            </Item>
+            <Item ID="XXXX">
+                <Name>Decimal Uncertainty</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description>The accuracy of the position in meters.</Description>
