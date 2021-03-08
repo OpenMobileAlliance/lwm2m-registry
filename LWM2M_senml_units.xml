@@ -8,25 +8,5 @@
       <description>Watts per second</description>
       <note>IPSO WG agreed to adopt Ws as per meeting minutes Jan 16, 2020</note>
    </record>
-   <record date="2020-10-20">
-      <value>VAh</value>
-      <description>Volt-Amp-Hours</description>
-      <note>IPSO WG agreed to adopt VAh as per meeting minutes Oct 10, 2020</note>
-   </record>
-   <record date="2020-10-20">
-      <value>NTU</value>
-      <description>Nephelometric Turbidity unit</description>
-      <note>IPSO WG agreed to adopt NTU as per meeting minutes Oct 10, 2020</note>
-   </record>
-   <record date="2020-10-20">
-      <value>mg/l</value>
-      <description>milligrams per liter</description>
-      <note>IPSO WG agreed to adopt mg/l as per meeting minutes Oct 10, 2020</note>
-   </record>
-   <record date="2020-10-20">
-      <value>ppt</value>
-      <description>parts-per-trillion</description>
-      <note>IPSO WG agreed to adopt ppt as per meeting minutes Oct 10, 2020</note>
-   </record>
   </registry>  
 </units>
