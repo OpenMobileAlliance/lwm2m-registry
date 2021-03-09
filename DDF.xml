@@ -738,8 +738,23 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     </Item>
 	
     <Item>
-        <ObjectID>505</ObjectID>
+        <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	
+    <Item>
+        <ObjectID>505</ObjectID>
+        <URN>urn:oma:lwm2m:oma:505</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>OMA</Owner>
@@ -754,22 +769,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 	
     <Item>
         <ObjectID>506</ObjectID>
-        <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>OMA</Owner>
-        <Source>0</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-	
-    <Item>
-        <ObjectID>504</ObjectID>
-        <URN>urn:oma:lwm2m:oma:504</URN>
+        <URN>urn:oma:lwm2m:oma:506</URN>
         <Name>TBC</Name>
         <Description>TBC</Description>
         <Owner>OMA</Owner>
