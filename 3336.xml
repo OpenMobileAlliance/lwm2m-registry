@@ -34,43 +34,43 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Location</Name>
-        <Description1>This IPSO object represents GPS coordinates. This object is compatible with the LWM2M management object for location, but uses reusable resources.
+        <Description1>This IPSO object represents GPS coordinates. This object is compatible with the LwM2M management object for location, but uses reusable resources.
         </Description1>
         <ObjectID>3336</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3336:1.1</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3336:1.2</ObjectURN>
         <LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.1</ObjectVersion>
+		<ObjectVersion>1.2</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
         <Resources>
-            <Item ID="5514">
-                <Name>Latitude</Name>
+            <Item ID="6051">
+                <Name>Numeric Latitude</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
-                <Type>String</Type>
+                <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
-                <Units></Units>
+                <Units>lat</Units>
                 <Description>The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).</Description>
             </Item>
-            <Item ID="5515">
-                <Name>Longitude</Name>
+            <Item ID="6052">
+                <Name>Numeric Longitude</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
-                <Type>String</Type>
+                <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
-                <Units></Units>
+                <Units>lon</Units>
                 <Description>The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).</Description>
-            </Item>           
-            <Item ID="5516">
-                <Name>Uncertainty</Name>
+            </Item>
+            <Item ID="6053">
+                <Name>Numeric Uncertainty</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
-                <Type>String</Type>
+                <Type>Float</Type>
                 <RangeEnumeration></RangeEnumeration>
-                <Units></Units>
+                <Units>m</Units>
                 <Description>The accuracy of the position in meters.</Description>
             </Item>
             <Item ID="5705">
