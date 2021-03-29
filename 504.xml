@@ -43,7 +43,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 <Object ObjectType="MODefinition">
 		<Name>Remote SIM Provisioning</Name>
-		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning]]></Description1>
+		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning by an SM-DP+ server]]></Description1>
 		<ObjectID>504</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:504</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -288,7 +288,7 @@ the currently active profile is the first instance.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[Operator specific defined type of Profile. This is equivalent to the "Profile Description ID" as described in Annex B of GSMA SGP.21 [4]]]></Description>
 			</Item>
-			<Item ID="25">
+			<Item ID="17">
 				<Name>RSP Type</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -303,7 +303,7 @@ the currently active profile is the first instance.]]></Description>
 3: nuSIM
 4-24: Reserved for future use]]></Description>
 			</Item>
-			<Item ID="26">
+			<Item ID="18">
 				<Name>Selected ICCID for RSP operation</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -315,7 +315,7 @@ the currently active profile is the first instance.]]></Description>
 by the RSP implementation. In case of only support for a single profile at a time this resource is not required to be present for profile selection. After successful installation of
 a profile the value of this resource (if present) is updated to the ICCID of the installed profile.]]></Description>
 			</Item>
-			<Item ID="27">
+			<Item ID="19">
 				<Name>RSP Consent Reason</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -325,7 +325,7 @@ a profile the value of this resource (if present) is updated to the ICCID of the
 				<Units></Units>
 				<Description><![CDATA[Provides information on the requested user consent]]></Description>
 			</Item>
-			<Item ID="28">
+			<Item ID="20">
 				<Name>RSP User Consent</Name>
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -338,7 +338,7 @@ a profile the value of this resource (if present) is updated to the ICCID of the
 1: Rejected
 2-24: Reserved for future use]]></Description>
 			</Item>
-			<Item ID="29">
+			<Item ID="21">
 				<Name>RSP Confirmation Code</Name>
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -348,7 +348,7 @@ a profile the value of this resource (if present) is updated to the ICCID of the
 				<Units></Units>
 				<Description><![CDATA[Provides a confirmation code (see e.g. GSMA SGP.21/22)]]></Description>
 			</Item>
-			<Item ID="30">
+			<Item ID="22">
 				<Name>RSP Data Type</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -376,7 +376,7 @@ a profile the value of this resource (if present) is updated to the ICCID of the
 17: RSP formatted data request/response (RSP type specific)
 18-24: Reserved for future use]]></Description>
 			</Item>
-			<Item ID="31">
+			<Item ID="23">
 				<Name>Set RSP Data</Name>
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -387,7 +387,7 @@ a profile the value of this resource (if present) is updated to the ICCID of the
 				<Description><![CDATA[This resource is used to update the (e/i)UICC data / profile specific data of type according to resource 30.
 It is up to the RSP type whether update of the data is possible or not.]]></Description>
 			</Item>
-			<Item ID="32">
+			<Item ID="24">
 				<Name>Get RSP Data</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
