@@ -245,86 +245,6 @@ LwM2M Client.]]></Description>
 				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device]]></Description>
 			</Item>
 			<Item ID="14">
-				<Name>Supported LTE Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported LTE bands]]></Description>
-			</Item>
-			<Item ID="15">
-				<Name>Supported EGPRS Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported EGPRS bands]]></Description>
-			</Item>
-			<Item ID="16">
-				<Name>Supported TD-SCDMA Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported TD-SCDMA bands]]></Description>
-			</Item>
-			<Item ID="17">
-				<Name>Supported WCDMA Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported WCDMA bands]]></Description>
-			</Item>
-			<Item ID="18">
-				<Name>Supported CDMA-2000 Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported CDMA-2000 bands]]></Description>
-			</Item>
-			<Item ID="19">
-				<Name>Supported WiMAX Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported WiMAX bands]]></Description>
-			</Item>
-			<Item ID="20">
-				<Name>Supported NB-IoT Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported NB-IoT bands]]></Description>
-			</Item>
-			<Item ID="21">
-				<Name>Supported 5G Band Information</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Indicates the list of supported 5G-NR bands]]></Description>
-			</Item>
-			<Item ID="22">
 				<Name>Integrated Circuit Card Identifier (ICCID)</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -334,7 +254,7 @@ LwM2M Client.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[This EF provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1]]></Description>
 			</Item>
-			<Item ID="23">
+			<Item ID="15">
 				<Name>eUICC ID</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -344,7 +264,7 @@ LwM2M Client.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[eUICC-ID as defined in SGP.02 spec]]></Description>
 			</Item>
-			<Item ID="24">
+			<Item ID="16">
 				<Name>Profile Type</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
