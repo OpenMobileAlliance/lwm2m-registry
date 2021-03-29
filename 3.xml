@@ -326,6 +326,86 @@ Status	Meaning	Description
 				<Units></Units>
 				<Description><![CDATA[Reference to external "Device" object instance containing information. For example, such an external device can be a Host Device, which is a device into which the Device containing the LwM2M client is embedded. This Resource may be used to retrieve information about the Host Device.]]></Description>
 			</Item></Resources>
+			<Item ID="23">
+				<Name>Supported LTE Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported LTE bands]]></Description>
+			</Item>
+			<Item ID="24">
+				<Name>Supported EGPRS Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported EGPRS bands]]></Description>
+			</Item>
+			<Item ID="25">
+				<Name>Supported TD-SCDMA Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported TD-SCDMA bands]]></Description>
+			</Item>
+			<Item ID="26">
+				<Name>Supported WCDMA Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported WCDMA bands]]></Description>
+			</Item>
+			<Item ID="27">
+				<Name>Supported CDMA-2000 Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported CDMA-2000 bands]]></Description>
+			</Item>
+			<Item ID="28">
+				<Name>Supported WiMAX Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported WiMAX bands]]></Description>
+			</Item>
+			<Item ID="29">
+				<Name>Supported NB-IoT Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported NB-IoT bands]]></Description>
+			</Item>
+			<Item ID="30">
+				<Name>Supported 5G Band Information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the list of supported 5G-NR bands]]></Description>
+			</Item>
 			<Description2></Description2>
 	</Object>
 </LWM2M>
