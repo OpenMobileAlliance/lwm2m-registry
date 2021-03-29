@@ -709,8 +709,8 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
      </Item><Item>
         <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>Remote SIM Provisioning</Name>
-        <Description>This is a device management object that should be used for Remote SIM Provisioning</Description>
+        <Name>SM-DP+ Remote SIM Provisioning</Name>
+        <Description>This is a device management object that should be used for Remote SIM Provisioning by an SM-DP+ server</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
