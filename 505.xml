@@ -105,7 +105,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<Name>Profile URI</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
@@ -122,7 +122,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<Description><![CDATA[Updates profile by using the profile package stored in Package, or, by using the profile downloaded from the Package URI. This Resource is only executable when the value of the State Resource is Downloaded.]]></Description>
 			</Item>
 			<Item ID="6">
-				<Name>State</Name>
+				<Name>Update State</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
@@ -232,7 +232,7 @@ LwM2M Client.]]></Description>
 			<Item ID="14">
 				<Name>Integrated Circuit Card Identifier (ICCID)</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
@@ -244,10 +244,10 @@ LwM2M Client.]]></Description>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[eUICC-ID as defined in SGP.02 spec]]></Description>
+				<Description><![CDATA[eUICC-ID (a.k.a. EID), see GSMA SGP.02 and GSMA SGP.29 for definitions]]></Description>
 			</Item>
 			<Item ID="16">
 				<Name>Profile Type</Name>
