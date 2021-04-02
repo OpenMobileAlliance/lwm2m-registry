@@ -52,7 +52,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="0">
-				<Name>Current UIM Type</Name>
+				<Name>Current SIM Type</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
@@ -60,40 +60,26 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Provides the information about the currently being used SIM Type:
-0: Full Size
-1: Mini Size
-2: Micro
-3: Nano
-4: eSIM
-5: UICC
-6: Soft SIM
-7: Thin SIM
-8: eUICC
-9: iSIM
-10: iUICC
-11-24: Reserved for future use]]></Description>
+0: UICC (removable)
+1: eUICC (removable)
+2: eUICC (non-removable)
+3: iUICC
+4-24: Reserved for future use]]></Description>
 			</Item>
 			<Item ID="1">
 				<Name>Supported SIM Type</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Provides the information about the currently supported SIM Types: 
-0: Full Size
-1: Mini Size
-2: Micro
-3: Nano
-4: eSIM
-5: UICC
-6: Soft SIM
-7: Thin SIM
-8: eUICC
-9: iSIM
-10: iUICC
-11-24: Reserved for future use]]></Description>
+0: UICC (removable)
+1: eUICC (removable)
+2: eUICC (non-removable)
+3: iUICC
+4-24: Reserved for future use]]></Description>
 			</Item>
 			<Item ID="2">
 				<Name>Service Provider Name</Name>
@@ -109,7 +95,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<Name>Profile Package</Name>
 				<Operations>W</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Opaque</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
