@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_3-V1_2-20201110-A.xml
+   File: OMA-SUP-XML_3-V1_3-YYYYMMDD-C.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Device/
 
 OMNA LwM2M Registry
@@ -23,7 +23,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile Alliance.
+  Copyright 2021 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -62,9 +62,9 @@ LEGAL DISCLAIMER
 		<Name>Device</Name>
 		<Description1><![CDATA[This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.]]></Description1>
 		<ObjectID>3</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:3:1.2</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:3:1.3</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.2</ObjectVersion>
+		<ObjectVersion>1.3</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Mandatory</Mandatory>
 		<Resources>
