@@ -165,13 +165,26 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.2</Ver>
+        <DDF>version_history/3-1_2.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3</ObjectID>
+        <URN>urn:oma:lwm2m:oma:3:1.3</URN>
+        <Name>Device</Name>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.3</Ver>
         <DDF>3.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-
     <Item>
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4</URN>
