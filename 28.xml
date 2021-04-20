@@ -59,10 +59,10 @@ LEGAL DISCLAIMER
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Device</Name>
+		<Name>Device RF Capabilities</Name>
 		<Description1><![CDATA[This is a device management object that should be used for capturing the RF capabilities of the device.]]></Description1>
 		<ObjectID>28</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:28:1.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:28</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
