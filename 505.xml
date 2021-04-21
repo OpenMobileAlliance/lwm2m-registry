@@ -226,7 +226,7 @@ LwM2M Client.]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>bit</Units>
+				<Units>KiB</Units>
 				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device.]]></Description>
 			</Item>
 			<Item ID="14">
