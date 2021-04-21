@@ -43,7 +43,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 <Object ObjectType="MODefinition">
 		<Name>LwM2M Remote SIM Provisioning</Name>
-		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server]]></Description1>
+		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server.]]></Description1>
 		<ObjectID>505</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:505</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
@@ -72,14 +72,14 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Provides the information about the currently supported SIM Types: 
 0: UICC (removable)
 1: eUICC (removable)
 2: eUICC (non-removable)
 3: iUICC
-4-24: Reserved for future use]]></Description>
+]]></Description>
 			</Item>
 			<Item ID="2">
 				<Name>Service Provider Name</Name>
@@ -89,7 +89,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Provides the Service Provider Name using which LwM2M is currently communicating to the Server]]></Description>
+				<Description><![CDATA[Provides the Service Provider Name using which LwM2M is currently communicating to the Server.]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Profile Package</Name>
@@ -141,7 +141,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0..9</RangeEnumeration>
+				<RangeEnumeration>0..8</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Contains the result of downloading or updating the Profile 
 0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value. 
@@ -163,7 +163,7 @@ A LwM2M client indicates the failure to retrieve the Profile using the URI provi
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Name of the Profile Package]]></Description>
+				<Description><![CDATA[Name of the Profile Package.]]></Description>
 			</Item>
 			<Item ID="9">
 				<Name>Profile Package Version</Name>
@@ -173,7 +173,7 @@ A LwM2M client indicates the failure to retrieve the Profile using the URI provi
 				<Type>String</Type>
 				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Version of the Profile package]]></Description>
+				<Description><![CDATA[Version of the Profile package.]]></Description>
 			</Item>
 			<Item ID="10">
 				<Name>Profile Update Protocol Support</Name>
@@ -181,7 +181,7 @@ A LwM2M client indicates the failure to retrieve the Profile using the URI provi
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource indicates what protocols the LwM2M Client implements to retrieve Profiles. The LwM2M server uses this information to decide what URI to include in the Package URI. A LwM2M Server MUST NOT include a URI in the Package URI object that uses a protocol that is unsupported by the LwM2M client. For example, if a LwM2M client indicates that it supports CoAP and CoAPS then a LwM2M Server must not provide an HTTP URI in the Packet URI. The following values are defined by this version of the specification: 
 0: CoAP (as defined in RFC 7252) with the additional support for block-wise transfer. CoAP is the default setting. 
@@ -195,7 +195,7 @@ A LwM2M client indicates the failure to retrieve the Profile using the URI provi
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0..2</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The LwM2M Client uses this resource to
 indicate its support for transferring Profile
@@ -227,7 +227,7 @@ LwM2M Client.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>bit</Units>
-				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device]]></Description>
+				<Description><![CDATA[Total amount of storage space which can store data and software in the LwM2M Device.]]></Description>
 			</Item>
 			<Item ID="14">
 				<Name>Integrated Circuit Card Identifier (ICCID)</Name>
@@ -237,7 +237,7 @@ LwM2M Client.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This EF provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1]]></Description>
+				<Description><![CDATA[This EF provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1.]]></Description>
 			</Item>
 			<Item ID="15">
 				<Name>eUICC ID</Name>
@@ -247,7 +247,7 @@ LwM2M Client.]]></Description>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[eUICC-ID (a.k.a. EID), see GSMA SGP.02 and GSMA SGP.29 for definitions]]></Description>
+				<Description><![CDATA[eUICC-ID (a.k.a. EID), see GSMA SGP.02 and GSMA SGP.29 for definitions.]]></Description>
 			</Item>
 			<Item ID="16">
 				<Name>Profile Type</Name>
@@ -257,7 +257,7 @@ LwM2M Client.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Operator specific defined type of Profile. This is equivalent to the "Profile Description ID" as described in Annex B of SGP.21]]></Description>
+				<Description><![CDATA[Operator specific defined type of Profile. This is equivalent to the "Profile Description ID" as described in Annex B of SGP.21.]]></Description>
 			</Item>
 		</Resources>
 		<Description2 />
