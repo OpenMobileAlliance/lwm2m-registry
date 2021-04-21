@@ -57,14 +57,14 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Provides the information about the currently being used SIM Type:
 0: UICC (removable)
 1: eUICC (removable)
 2: eUICC (non-removable)
 3: iUICC
-4-24: Reserved for future use]]></Description>
+]]></Description>
 			</Item>
 			<Item ID="1">
 				<Name>Supported SIM Type</Name>
