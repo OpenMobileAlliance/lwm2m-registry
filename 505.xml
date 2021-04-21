@@ -112,7 +112,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<Description><![CDATA[URI from where the device can download the profile package by an alternative mechanism. As soon the device has received the Profile package URI it performs the download at the next practical opportunity. The URI format is defined in RFC 3986. For example, coaps://example.org/profile is a syntactically valid URI. The URI scheme determines the protocol to be used. For CoAP this endpoint MAY be a LwM2M Server but does not necessarily need to be. A CoAP server implementing block-wise transfer is sufficient as a server hosting a firmware repository and the expectation is that this server merely serves as a separate file server making profile images available to LwM2M Clients. This server can be the future carrier server as well from which IoT devices would like to use the service.]]></Description>
 			</Item>
 			<Item ID="5">
-				<Name>Profile Update</Name>
+				<Name>Update Profile</Name>
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
