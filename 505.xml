@@ -254,7 +254,7 @@ LwM2M Client.]]></Description>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Operator specific defined type of Profile. This is equivalent to the "Profile Description ID" as described in Annex B of SGP.21.]]></Description>
