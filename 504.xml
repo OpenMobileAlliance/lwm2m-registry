@@ -286,7 +286,7 @@ the currently active profile is the first instance.]]></Description>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Operator specific defined type of Profile. This is equivalent to the "Profile Description ID" as described in Annex B of GSMA SGP.21]]></Description>
+				<Description><![CDATA[Free optional text produced by the SM-DP+ server. This is equivalent to the "Profile Description ID" as described in Annex B of GSMA SGP.21]]></Description>
 			</Item>
 			<Item ID="17">
 				<Name>RSP Type</Name>
