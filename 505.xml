@@ -257,7 +257,7 @@ LwM2M Client.]]></Description>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Free optional text produced by the SM-DP+. This is equivalent to the "Profile Description ID" as described in Annex B of SGP.21.]]></Description>
+				<Description><![CDATA[Free optional text produced by the SM-DP+ server. This is equivalent to the "Profile Description ID" as described in Annex B of SGP.21.]]></Description>
 			</Item>
 		</Resources>
 		<Description2 />
