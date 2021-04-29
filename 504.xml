@@ -43,7 +43,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 <Object ObjectType="MODefinition">
 		<Name>GSMA Remote SIM Provisioning</Name>
-		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning according to GSMA]]></Description1>
+		<Description1><![CDATA[This is a device management object that should be used for Remote SIM Provisioning according to GSMA standards]]></Description1>
 		<ObjectID>504</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:504</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
