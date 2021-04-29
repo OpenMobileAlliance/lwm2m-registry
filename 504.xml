@@ -245,8 +245,7 @@ the currently active profile is the first instance.]]></Description>
 0: No RSP support
 1: GSMA eSIM for M2M devices
 2: GSMA eSIM for consumer devices
-3: nuSIM
-4-24: Reserved for future use]]></Description>
+3-24: Reserved for future use]]></Description>
 			</Item>
 			<Item ID="14">
 				<Name>Selected ICCID for RSP operation</Name>
