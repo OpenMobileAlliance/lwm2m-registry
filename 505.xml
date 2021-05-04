@@ -217,7 +217,7 @@ LwM2M Client.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>KiB</Units>
-				<Description><![CDATA[Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
+				<Description><![CDATA[Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kibibytes).]]></Description>
 			</Item>
 			<Item ID="13">
 				<Name>Total Memory on SIM</Name>
@@ -237,7 +237,7 @@ LwM2M Client.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This EF provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1.]]></Description>
+				<Description><![CDATA[This Elementary File (EF) provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1.]]></Description>
 			</Item>
 			<Item ID="15">
 				<Name>eUICC ID</Name>
