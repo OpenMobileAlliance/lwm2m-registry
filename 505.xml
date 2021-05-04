@@ -187,7 +187,7 @@ A LwM2M client indicates the failure to retrieve the Profile using the URI provi
 0: CoAP (as defined in RFC 7252) with the additional support for block-wise transfer. CoAP is the default setting. 
 1: CoAPS (as defined in RFC 7252) with the additional support for block-wise transfer 
 2: HTTP 1.1 (as defined in RFC 7230) 
-3 - HTTPS 1.1 (as defined in RFC 7230) Additional values MAY be defined in the future. Any value not understood by the LwM2M Server MUST be ignored.]]></Description>
+3: HTTPS 1.1 (as defined in RFC 7230) Additional values MAY be defined in the future. Any value not understood by the LwM2M Server MUST be ignored.]]></Description>
 			</Item>
 			<Item ID="11">
 				<Name>Profile Update Delivery Method</Name>
