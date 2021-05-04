@@ -740,8 +740,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>SM-DP+ Remote SIM Provisioning</Name>
-        <Description>This is a device management object that should be used for Remote SIM Provisioning by an SM-DP+ server</Description>
+        <Name>GSMA Remote SIM Provisioning</Name>
+        <Description>This is a device management object that should be used for Remote SIM Provisioning according to GSMA</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
