@@ -203,7 +203,7 @@ images to the client either via the Package
 Resource (=push) or via the Package URI
 Resource (=pull) mechanism.
 0: Pull only
-1 - Push only
+1: Push only
 2: Both. In this case the LwM2M Server
 MAY choose the preferred mechanism for
 conveying the profile image to the
