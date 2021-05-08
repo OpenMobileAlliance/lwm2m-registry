@@ -3,7 +3,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_25-V1_0-20201110-A.xml
+   File: OMA-SUP-XML_25-V2_0-202105XX-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Gateway/
 
 OMNA LwM2M Registry
@@ -22,7 +22,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile Alliance.
+  Copyright 2021 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -59,11 +59,11 @@ LEGAL DISCLAIMER
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>LwM2M Gateway</Name>
-		<Description1><![CDATA[This object is used by a LwM2M Gateway to maintain the devices connected to the gateway.]]></Description1>
+		<Description1><![CDATA[This object is used by a LwM2M Gateway to maintain the IoT Devices connected to the LwM2M Gateway.]]></Description1>
 		<ObjectID>25</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:25</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:25:2.0</ObjectURN>
 		<LWM2MVersion>1.2</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -75,28 +75,29 @@ LEGAL DISCLAIMER
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource identifies the device connected to the gateway.]]></Description>
+				<Description><![CDATA[This resource identifies the IoT Device connected to the LwM2M Gateway.]]></Description>
 			</Item>
 			<Item ID="1">
 				<Name>Prefix</Name>
-				<Operations>RW</Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource defines what prefix has to be used for access to objects of this device.]]></Description>
+				<Description><![CDATA[This resource defines what prefix MUST be used for access to LwM2M Objects of this IoT Device.]]></Description>
 			</Item>
-			<Item ID="2">
-				<Name>Routing Table Entry</Name>
+			<Item ID="3">
+				<Name>IoT Device Objects</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Objlnk</Type>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Corelnk</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource links to the Object Instance in the LwM2M Routing Object.]]></Description>
+				<Description><![CDATA[This resource contains the Objects and Object Instances exposed by the LwM2M Gateway on behalf of the IoT Device. It uses the same CoreLnk format as Registration Interface.]]></Description>
 			</Item>
+			
 		</Resources>
 		<Description2 />
 	</Object>
