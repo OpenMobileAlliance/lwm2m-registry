@@ -57,7 +57,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration>0..3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Provides the information about the currently being used SIM Type:
 0: UICC (removable)
