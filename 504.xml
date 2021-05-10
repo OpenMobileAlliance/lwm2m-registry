@@ -198,7 +198,7 @@ protocol.]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>bit</Units>
+				<Units>KiB</Units>
 				<Description><![CDATA[Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kibibytes).]]></Description>
 			</Item>
 			<Item ID="10">
