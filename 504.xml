@@ -107,8 +107,8 @@ The URI format is defined in RFC 3986.]]></Description>
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration>0..4</RangeEnumeration>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Executes one or more RSP actions. The actions are given as arguments and in case providing multiple actions comma separation is used, e.g. 0,1,2. The following values are possible:
 0: Download & install profile
