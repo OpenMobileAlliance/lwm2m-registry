@@ -165,11 +165,7 @@ The URI format is defined in RFC 3986.]]></Description>
 14: Failed to disable profile.
 15: Failed to delete profile.
 16: Failed to reset memory.
-17-24: Reserved for future use
-
-A LwM2M client indicates the failure to retrieve the Profile using the URI provided in the Download URI/Information resource by writing the value 8 to the /x/0/7 (Update Result resource) when the URI contained
-a URI scheme unsupported by the client. Consequently, the LwM2M Client is unable to retrieve the Profile using the URI provided by the LwM2M Server in the Download URI/Information when it refers to an unsupported
-protocol.]]></Description>
+17-24: Reserved for future use]]></Description>
 			</Item>
 			<Item ID="7">
 				<Name>Profile Name</Name>
