@@ -199,7 +199,7 @@ protocol.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>bit</Units>
-				<Description><![CDATA[Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kilobytes).]]></Description>
+				<Description><![CDATA[Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kibibytes).]]></Description>
 			</Item>
 			<Item ID="10">
 				<Name>Total Memory on SIM</Name>
