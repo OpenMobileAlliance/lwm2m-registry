@@ -675,6 +675,19 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>28</ObjectID>
+        <URN>urn:oma:lwm2m:oma:28</URN>
+        <Name>Device RF Capabilities</Name>
+        <Description>This is a device management object that should be used for capturing the RF capabilities of the device.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>28.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
+        <TSLink>1</TSLink>
     </Item>
 	
     <Item>
@@ -740,14 +753,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Name>GSMA Remote SIM Provisioning</Name>
+        <Description>This is a device management object that should be used for Remote SIM Provisioning according to GSMA standards</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>504.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -755,14 +768,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>505</ObjectID>
         <URN>urn:oma:lwm2m:oma:505</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Name>LwM2M nuSIM Provisioning</Name>
+        <Description>This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>505.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -2003,6 +2016,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>IPSO Alliance</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
+        <DDF>version_history/3336-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3336</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3336:2.0</URN>
+        <Name>Location</Name>
+        <Description>This IPSO object represents GPS coordinates. This object is compatible with the LwM2M management object for location, but uses reusable resources.</Description>
+        <Owner>IPSO Alliance</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3336.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
