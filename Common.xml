@@ -3543,37 +3543,37 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6051">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+        <Name>Numeric Latitude</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description>TBC</Description>
+        <Units>lat</Units>
+        <Submitter>IPSO</Submitter>
+        <Description><![CDATA[The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6052">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+        <Name>Numeric Longitude</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description>TBC</Description>
+        <Units>lon</Units>
+        <Submitter>IPSO</Submitter>
+        <Description><![CDATA[The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
       
       <Item ID="6053">    
-        <Name>Reserved</Name>     
-        <Operations></Operations>     
-        <Type></Type>
+        <Name>Numeric Uncertainty</Name>     
+        <Operations>R</Operations>     
+        <Type>Float</Type>
         <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description>TBC</Description>
+        <Units>m</Units>
+        <Submitter>IPSO</Submitter>
+        <Description><![CDATA[The accuracy of the position in meters.]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
