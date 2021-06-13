@@ -143,6 +143,28 @@ To provide maximum flexibility to the server the Notifications will not comprise
 
 •2: reserved value.]]></Description>
 			</Item>
+			<Item ID="5">
+				<Name>Virtual Observe Report Format</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[If present, it specifies the content format LwM2M Client will use to populate Virtual Observe Report Resource.
+Values will be either as per Tables 7.4.1 and 7.4.2 of LwM2M Core TS or another IANA registered Media Type.]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Virtual Observe Report</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[If present this resource is populated by the LwM2M Client following exactly the same rules as those used to populate Resource 4, Report Resource.
+The only difference is that this resource is formatted as defined by Resource 5]]></Description>
+			</Item>
 		</Resources>
 		<Description2><![CDATA[Notes:
 (1)	When the ResourceFilter is set to TRUE, this condition takes precedence over any pmax. Namely, when the LwM2M Server set the Resource ResourceFilter to TRUE, whatever the pmax attribute is attached to any resource included in the ObserveLinks, the Report is only populated by the LwM2M Client each time the resources included in the ObserveLinks are changed.
