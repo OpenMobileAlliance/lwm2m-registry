@@ -152,7 +152,7 @@ To provide maximum flexibility to the server the Notifications will not comprise
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[If present, it specifies the content format LwM2M Client will use to populate Virtual Observe Report Resource.
-Values will be either as per Tables 7.4.1 and 7.4.2 of LwM2M Core TS or another IANA registered Media Type.]]></Description>
+Values will be either as per Tables 7.4.1 and 7.4.2 of LwM2M Core TS or another IANA registered Media Type. Default value of SenML JSON is assumed when this resource is not present.]]></Description>
 			</Item>
 			<Item ID="6">
 				<Name>Virtual Observe Report</Name>
