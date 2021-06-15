@@ -10,7 +10,7 @@ OMA Permanent Document
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: LWM2M_VirtualObserveNotify-v1_0.xml
+   Name: 22-1_1.xml
 
 NORMATIVE INFORMATION
 
@@ -27,7 +27,7 @@ CHANGE HISTORY
 
 LEGAL DISCLAIMER
 
-  Copyright 2019 Open Mobile Alliance.
+  Copyright 2021 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -65,10 +65,10 @@ LEGAL DISCLAIMER
 	<Object ObjectType="MODefinition">
 		<Name>Virtual Observe Notify</Name>
 		<Description1><![CDATA[The Virtual Observe Notify Object provides a main function to notify multiple resources to a LwM2M Server in one notification message whether the resources are in one object/object instance or across multiple objects. The Virtual Observe Notify Object also provides some functions to implement more efficient multi-resource report.]]></Description1>
-		<ObjectID>22</ObjectID>
+		<ObjectID>22:1.1</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:22</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -142,6 +142,28 @@ To provide maximum flexibility to the server the Notifications will not comprise
 •1: AND 
 
 •2: reserved value.]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Virtual Observe Report Format</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[If present, it specifies the content format LwM2M Client will use to populate Virtual Observe Report Resource.
+Values will be either as per Tables 7.4.1 and 7.4.2 of LwM2M Core TS or another IANA registered Media Type. Default value of SenML JSON is assumed when this resource is not present.]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Virtual Observe Report</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[If present this resource is populated by the LwM2M Client following exactly the same rules as those used to populate Resource 4, Report Resource.
+The only difference is that this resource is formatted as defined by Resource 5]]></Description>
 			</Item>
 		</Resources>
 		<Description2><![CDATA[Notes:
