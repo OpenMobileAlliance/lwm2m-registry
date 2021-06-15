@@ -97,7 +97,7 @@ LEGAL DISCLAIMER
 				<Units></Units>
 				<Description><![CDATA[This resource contains the Objects and Object Instances exposed by the LwM2M Gateway on behalf of the IoT Device. It uses the same CoreLnk format as Registration Interface.]]></Description>
 			</Item>
-
+			
 		</Resources>
 		<Description2 />
 	</Object>
