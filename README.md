@@ -104,7 +104,7 @@ The next sections describe these steps in detail.
     * The content of the `0-1_1.xml` file is the same as conten of the file `0.xml` for version 1.1
       * IPSO keeps in the `version_history` folder a file for each Object in the registry, the file name indicates the ObjID and the version of the Object
 
-### 4.4 Update the `Common.xml` file **(if adding new Reusable Resources)**
+### 4.4 Update the `Common.xml` file (if adding new Reusable Resources)
  * If the request is to add one or more Reusable Resources, then for each Reusable Resource a new placeholder must be added to the `Common.xml` file
 
 **Example of Reusable Resource placeholder**
