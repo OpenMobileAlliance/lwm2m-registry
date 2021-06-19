@@ -8,13 +8,13 @@ Companies that would like to register a new Object or Reusable Resource should f
  1. Create an Issue
  2. The Maintainer will create a new branch based on the Issue
  3. Create a new Object or revise and existing one
- 4. Creat a Pull Request
+ 4. Create a Pull Request
 
 The steps are described below. 
 Please contact, helpdesk @ omaorg.org in case you encounter any problem during the submission
 
 ## 1. Create an Issue
-* The Submitter nees to create an **[Issue](https://github.com/OpenMobileAlliance/lwm2m-registry)** before registering your ```Objects``` or ```Reusable Resources```
+* The Submitter needs to create an **[Issue](https://github.com/OpenMobileAlliance/lwm2m-registry)** before registering your ```Objects``` or ```Reusable Resources```
 * In the Issue you must indicate what you would like to do:
   1. Create Version 1.0 of a new Object
   2. Create a new Version X.Y of an existing Object
@@ -54,7 +54,7 @@ The next sections describe these steps in detail.
       
         <URN>urn:oma:lwm2m:oma:0</URN>
         <!-- URN of the object 
-             for other versions than v1.0 the URN mus include the version, e.g., for v1.1 the URN is urn:oma:lwm2m:oma:0:1.1 -->
+             for other versions than v1.0 the URN must include the version, e.g., for v1.1 the URN is urn:oma:lwm2m:oma:0:1.1 -->
         <Name>LWM2M Security</Name>
         <!-- Name of the object -->
       
@@ -104,7 +104,7 @@ The next sections describe these steps in detail.
     * The content of the `0-1_1.xml` file is the same as conten of the file `0.xml` for version 1.1
       * IPSO keeps in the `version_history` folder a file for each Object in the registry, the file name indicates the ObjID and the version of the Object
 
-### 4.4 Updates the `Common.xml` file (if adding new Reusable Resources)**
+### 4.4 Update the `Common.xml` file (if adding new Reusable Resources)
  * If the request is to add one or more Reusable Resources, then for each Reusable Resource a new placeholder must be added to the `Common.xml` file
 
 **Example of Reusable Resource placeholder**
@@ -145,9 +145,9 @@ The next sections describe these steps in detail.
         <!--    0 => if link to TS should not be visible, 1 => if link to TS should be visible (default) -->
       </Item>
   ```
- ## 5. Autovalidation
- * As soon as the Pull Request is created against the designated branch, the LwM2M Validator will evaluate the conent of the Pull Request
- * At the end of the validation, the LwM2M Validator will insert a lable in the Pull Request indicating the result of the validation: `Failed Validation` or `Passed Validation`
+ ## 5. Auto-validation
+ * As soon as the Pull Request is created against the designated branch, the LwM2M Validator will evaluate the content of the Pull Request
+ * At the end of the validation, the LwM2M Validator will insert a label in the Pull Request indicating the result of the validation: `Failed Validation` or `Passed Validation`
  * If the validation failed, then the LwM2M Validator will insert a table with the list of errors identified during the validation
-   * The [Error Codes](https://wiki.openmobilealliance.org/display/TOOL/Validation+Error+Code), indicate who whould resolve the problem, the Submitter or the Maintainer
+   * The [Error Codes](https://wiki.openmobilealliance.org/display/TOOL/Validation+Error+Code), indicate who should resolve the problem, the Submitter or the Maintainer
  * If the validation passed, then a green label will be displayed and the IPSO group will be able to review your submission
