@@ -103,12 +103,9 @@ When the LwM2M Server write empty string to this Resource, the LwM2M Client stop
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Used by the LwM2M Server to indicate the LwM2M Client whether send all or changed resources. 
-
-•false: report all Resources, 
-
-•true: report only changed Resources.
-
+				<Description><![CDATA[Used by the LwM2M Server to indicate the LwM2M Client whether send all or changed resources.
+False: report all Resources,
+True: report only changed Resources.
 When it is absent, the LwM2M Client shall report all Resources as default.]]></Description>
 			</Item>
 			<Item ID="3">
