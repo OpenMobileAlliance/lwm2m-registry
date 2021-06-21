@@ -4,21 +4,21 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-LWM2M_VirtualObserveNotify-v1_0-20190711-A
+   File: OMA-SUP-LWM2M_VirtualObserveNotify-v1_1-20210621-D
    Type: xml
-   Date: 2019-Jul-11
+   Date: 2021-June-21
 
 Public Reachable Information
    Path: http://www.openmobilealliance.org/tech/profiles
-   Name: 22-1_1.xml
+   Name: 22.xml
 
 NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LWM2M_VirtualObserveNotify-V1_0
+    OMA-TS-LWM2M_VirtualObserveNotify-V1_1
 
-  This is available at http://www.openmobilealliance.org/
+  This is available at https://github.com/OpenMobileAlliance/lwm2m-registry
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LWM2M_for_Developers/issues
 
@@ -65,8 +65,8 @@ LEGAL DISCLAIMER
 	<Object ObjectType="MODefinition">
 		<Name>Virtual Observe Notify</Name>
 		<Description1><![CDATA[The Virtual Observe Notify Object provides a main function to notify multiple resources to a LwM2M Server in one notification message whether the resources are in one object/object instance or across multiple objects. The Virtual Observe Notify Object also provides some functions to implement more efficient multi-resource report.]]></Description1>
-		<ObjectID>22:1.1</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:22</ObjectURN>
+		<ObjectID>22</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:oma:22:1.1</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
