@@ -133,12 +133,9 @@ To provide maximum flexibility to the server the Notifications will not comprise
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Used by the server to indicate the AND/OR logic relationship combination between or among resources included in ObserveLinks Resource.
-
-•0: OR 
-
-•1: AND 
-
-•2: reserved value.]]></Description>
+0: OR
+1: AND
+2: reserved value.]]></Description>
 			</Item>
 			<Item ID="5">
 				<Name>Virtual Observe Report Format</Name>
