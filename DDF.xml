@@ -266,6 +266,23 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.1</Ver>
+        <DDF>version_history/5-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
+        <ObjectID>5</ObjectID>
+        <URN>urn:oma:lwm2m:oma:5:1.2</URN>
+        <Name>Firmware Update</Name>
+        <Description>This LwM2M Object enables management of firmware which is to be updated. This Object includes installing a firmware package, updating firmware, and performing actions after updating firmware. The firmware update MAY require to reboot the device; it will depend on a number of factors, such as the operating system architecture and the extent of the updated software.
+The envisioned functionality is to allow a LwM2M Client to connect to any LwM2M Server to obtain a firmware image using the object and resource structure defined in this section experiencing communication security protection using TLS/DTLS. There are, however, other design decisions that need to be taken into account to allow a manufacturer of a device to securely install firmware on a device. Examples for such design decisions are how to manage the firmware update repository at the server side (which may include user interface considerations), the techniques to provide additional application layer security protection of the firmware image, how many versions of firmware images to store on the device, and how to execute the firmware update process considering the hardware specific details of a given IoT hardware product. These aspects are considered to be outside the scope of this version of the specification.
+A LwM2M Server may also instruct a LwM2M Client to fetch a firmware image from a dedicated server (instead of pushing firmware images to the LwM2M Client). The Package URI resource is contained in the Firmware object and can be used for this purpose.
+A LwM2M Client MUST support block-wise transfer [CoAP_Blockwise] if it implements the Firmware Update object.
+A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/HTTPs, MAY also be used for downloading firmware updates (via the Package URI resource). For constrained devices it is, however, RECOMMENDED to use CoAP for firmware downloads to avoid the need for additional protocol implementations.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.2</Ver>
         <DDF>5.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
