@@ -47,8 +47,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Reset all resources of this object with
-                    their initial value.</Description>
+                <Description>Reset all resources of this object with their initial value.</Description>
             </Item>
             <Item ID="1">
                 <Name>Randomize values</Name>
@@ -58,9 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Set random value to all resources. For
-                    multiple value, the number of resource instances is
-                    also random.</Description>
+                <Description>Set random value to all resources. For multiple value, the number of resource instances is also random.</Description>
             </Item>
             <Item ID="2">
                 <Name>Clear values</Name>
@@ -144,9 +141,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be the time to an 1st,
-                    2000 in the UTC time zone. (Timestamp value :
-                    946684800)</Description>
+                <Description>Initial value must be the time to an 1st, 2000 in the UTC time zone. (Timestamp value : 946684800)</Description>
             </Item>
             <Item ID="70">
                 <Name>ObjLink Value</Name>
@@ -156,8 +151,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Objlnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be a link to instance 0
-                    of Device Object 3 (3:0).</Description>
+                <Description>Initial value must be a link to instance 0 of Device Object 3 (3:0).</Description>
             </Item>
             <Item ID="1010">
                 <Name>Multiple String Value</Name>
@@ -167,8 +161,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "initial value".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "initial value".</Description>
             </Item>
             <Item ID="1020">
                 <Name>Multiple Integer Value</Name>
@@ -178,8 +171,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "1024".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "1024".</Description>
             </Item>
             <Item ID="1030">
                 <Name>Multiple Float Value</Name>
@@ -189,8 +181,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "3.14159".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "3.14159".</Description>
             </Item>
             <Item ID="1040">
                 <Name>Multiple Boolean Value</Name>
@@ -200,8 +191,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Boolean</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "true".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "true".</Description>
             </Item>
             <Item ID="1050">
                 <Name>Multiple Opaque Value</Name>
@@ -211,8 +201,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Opaque</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "0x0123456789ABCDEF".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "0x0123456789ABCDEF".</Description>
             </Item>
             <Item ID="1060">
                 <Name>Multiple Time Value</Name>
@@ -222,9 +211,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value 1st, 2000 in the UTC time zone (Timestamp
-                    value : 946684800).</Description>
+                <Description>Initial value must be 1 instance with id 0 and value 1st, 2000 in the UTC time zone (Timestamp value : 946684800).</Description>
             </Item>
             <Item ID="1070">
                 <Name>Multiple ObjLink Value</Name>
@@ -234,8 +221,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Objlnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "3:0".</Description>
+                <Description>Initial value must be 1 instance with id 0 and value "3:0".</Description>
             </Item>
         </Resources>
         <Description2></Description2>
