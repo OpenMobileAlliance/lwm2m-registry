@@ -57,7 +57,14 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Set random value to all resources. For multiple value, the number of resource instances is also random.</Description>
+                <Description>
+<![CDATA[Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.
+Randomization should avoid to generate too big payload. We advice to limit value to something like : 
+ - 20 characters for String,
+ - 20 bytes for Opaque,
+ - 10 instances for multi-instance resources. 
+]]>
+                </Description>
             </Item>
             <Item ID="2">
                 <Name>Clear values</Name>
