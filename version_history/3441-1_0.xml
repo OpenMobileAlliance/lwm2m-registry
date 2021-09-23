@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
-        <Name>Test Object</Name>
+        <Name>LwM2M Specification Test Object</Name>
         <Description1><![CDATA[This object contains resources for each datatype allowing easy interoperability testing.]]></Description1>
         <ObjectID>3441</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3441</ObjectURN>
@@ -47,8 +47,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Reset all resources of this object with
-                    their initial value.</Description>
+                <Description>Reset all resources of this object with their initial value.</Description>
             </Item>
             <Item ID="1">
                 <Name>Randomize values</Name>
@@ -58,9 +57,14 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Set random value to all resources. For
-                    multiple value, the number of resource instances is
-                    also random.</Description>
+                <Description>
+<![CDATA[Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.
+Randomization should avoid to generate too big payload. We advice to limit value to something like : 
+ - 20 characters for String,
+ - 20 bytes for Opaque,
+ - 10 instances for multi-instance resources. 
+]]>
+                </Description>
             </Item>
             <Item ID="2">
                 <Name>Clear values</Name>
@@ -81,8 +85,34 @@ POSSIBILITY OF SUCH DAMAGE.
  - objlink to null link]]>
                 </Description>
             </Item>
-
-            <Item ID="10">
+            <Item ID="3">
+                <Name>Exec With Arguments</Name>
+                <Operations>E</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type></Type>
+                <RangeEnumeration />
+                <Units />
+                <Description>
+<![CDATA[This resources can be used to test "Execute Operation" with Arguments.
+Sent Arguments can be read via "Arguments List"(4) resource.
+E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
+     then /3441/0/4/3 will be 'stringValue' and /3441/0/4/4 will be an empty string.
+]]>
+                </Description>
+            </Item>
+             <Item ID="4">
+                <Name>Arguments List</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description> List of Arguments from last execute on "Exec With Arguments"(3) resource.
+                </Description>
+            </Item>
+            <Item ID="110">
                 <Name>String Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -93,7 +123,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Description>Initial value must be "initial value".
                 </Description>
             </Item>
-            <Item ID="20">
+            <Item ID="120">
                 <Name>Integer Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -104,7 +134,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Description> Initial value must be "1024".
                 </Description>
             </Item>
-            <Item ID="30">
+            <Item ID="130">
                 <Name>Float Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -115,7 +145,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Description>Initial value must be "3.14159".
                 </Description>
             </Item>
-            <Item ID="40">
+            <Item ID="140">
                 <Name>Boolean Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -125,7 +155,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Units />
                 <Description>Initial value must be "true".</Description>
             </Item>
-            <Item ID="50">
+            <Item ID="150">
                 <Name>Opaque Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -136,7 +166,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Description>Initial value must be "0x0123456789ABCDEF".
                 </Description>
             </Item>
-            <Item ID="60">
+            <Item ID="160">
                 <Name>Time Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -144,11 +174,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be the time to an 1st,
-                    2000 in the UTC time zone. (Timestamp value :
-                    946684800)</Description>
+                <Description>Initial value must be the time to an 1st, 2000 in the UTC time zone. (Timestamp value : 946684800)</Description>
             </Item>
-            <Item ID="70">
+            <Item ID="170">
                 <Name>ObjLink Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -156,10 +184,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Objlnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be a link to instance 0
-                    of Device Object 3 (3:0).</Description>
+                <Description>Initial value must be a link to instance 0 of Device Object 3 (3:0).</Description>
             </Item>
-            <Item ID="1010">
+            <Item ID="1110">
                 <Name>Multiple String Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -167,10 +194,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "initial value".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "initial value".</Description>
             </Item>
-            <Item ID="1020">
+            <Item ID="1120">
                 <Name>Multiple Integer Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -178,10 +204,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "1024".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "1024".</Description>
             </Item>
-            <Item ID="1030">
+            <Item ID="1130">
                 <Name>Multiple Float Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -189,10 +214,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Float</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "3.14159".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "3.14159".</Description>
             </Item>
-            <Item ID="1040">
+            <Item ID="1140">
                 <Name>Multiple Boolean Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -200,10 +224,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Boolean</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "true".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "true".</Description>
             </Item>
-            <Item ID="1050">
+            <Item ID="1150">
                 <Name>Multiple Opaque Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -211,10 +234,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Opaque</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "0x0123456789ABCDEF".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "0x0123456789ABCDEF".</Description>
             </Item>
-            <Item ID="1060">
+            <Item ID="1160">
                 <Name>Multiple Time Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -222,11 +244,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value 1st, 2000 in the UTC time zone (Timestamp
-                    value : 946684800).</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value 1st, 2000 in the UTC time zone (Timestamp value : 946684800).</Description>
             </Item>
-            <Item ID="1070">
+            <Item ID="1170">
                 <Name>Multiple ObjLink Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -234,8 +254,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Objlnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with id 0
-                    and value "3:0".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "3:0".</Description>
             </Item>
         </Resources>
         <Description2></Description2>
