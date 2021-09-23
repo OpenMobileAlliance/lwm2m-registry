@@ -86,7 +86,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 </Description>
             </Item>
 
-            <Item ID="10">
+            <Item ID="110">
                 <Name>String Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -97,7 +97,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Description>Initial value must be "initial value".
                 </Description>
             </Item>
-            <Item ID="20">
+            <Item ID="120">
                 <Name>Integer Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -108,7 +108,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Description> Initial value must be "1024".
                 </Description>
             </Item>
-            <Item ID="30">
+            <Item ID="130">
                 <Name>Float Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -119,7 +119,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Description>Initial value must be "3.14159".
                 </Description>
             </Item>
-            <Item ID="40">
+            <Item ID="140">
                 <Name>Boolean Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -129,7 +129,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be "true".</Description>
             </Item>
-            <Item ID="50">
+            <Item ID="150">
                 <Name>Opaque Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -140,7 +140,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Description>Initial value must be "0x0123456789ABCDEF".
                 </Description>
             </Item>
-            <Item ID="60">
+            <Item ID="160">
                 <Name>Time Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -150,7 +150,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be the time to an 1st, 2000 in the UTC time zone. (Timestamp value : 946684800)</Description>
             </Item>
-            <Item ID="70">
+            <Item ID="170">
                 <Name>ObjLink Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Single</MultipleInstances>
@@ -160,7 +160,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be a link to instance 0 of Device Object 3 (3:0).</Description>
             </Item>
-            <Item ID="1010">
+            <Item ID="1110">
                 <Name>Multiple String Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -170,7 +170,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "initial value".</Description>
             </Item>
-            <Item ID="1020">
+            <Item ID="1120">
                 <Name>Multiple Integer Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -180,7 +180,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "1024".</Description>
             </Item>
-            <Item ID="1030">
+            <Item ID="1130">
                 <Name>Multiple Float Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -190,7 +190,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "3.14159".</Description>
             </Item>
-            <Item ID="1040">
+            <Item ID="1140">
                 <Name>Multiple Boolean Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -200,7 +200,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "true".</Description>
             </Item>
-            <Item ID="1050">
+            <Item ID="1150">
                 <Name>Multiple Opaque Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -210,7 +210,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "0x0123456789ABCDEF".</Description>
             </Item>
-            <Item ID="1060">
+            <Item ID="1160">
                 <Name>Multiple Time Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
@@ -220,7 +220,7 @@ Randomization should avoid to generate too big payload. We advice to limit value
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value 1st, 2000 in the UTC time zone (Timestamp value : 946684800).</Description>
             </Item>
-            <Item ID="1070">
+            <Item ID="1170">
                 <Name>Multiple ObjLink Value</Name>
                 <Operations>RW</Operations>
                 <MultipleInstances>Multiple</MultipleInstances>
