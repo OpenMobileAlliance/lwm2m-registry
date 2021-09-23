@@ -85,7 +85,33 @@ Randomization should avoid to generate too big payload. We advice to limit value
  - objlink to null link]]>
                 </Description>
             </Item>
-
+            <Item ID="3">
+                <Name>Exec With Arguments</Name>
+                <Operations>E</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type></Type>
+                <RangeEnumeration />
+                <Units />
+                <Description>
+<![CDATA[This resources can be used to test "Execute Operation" with Arguments.
+Sent Arguments can be read via "Arguments List"(4) resource.
+E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
+     then /3441/0/4/3 will be 'stringValue' and /3441/0/4/4 will be an empty string.
+]]>
+                </Description>
+            </Item>
+             <Item ID="4">
+                <Name>Arguments List</Name>
+                <Operations>R</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description> List of Arguments from last execute on "Exec With Arguments"(3) resource.
+                </Description>
+            </Item>
             <Item ID="110">
                 <Name>String Value</Name>
                 <Operations>RW</Operations>
