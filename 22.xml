@@ -5,11 +5,10 @@ FILE INFORMATION
 
 OMA Permanent Document
    File: OMA-SUP-LWM2M_VirtualObserveNotify-v1_1-20210621-D
-   Type: xml
    Date: 2021-June-21
 
-Public Reachable Information
-   Path: http://www.openmobilealliance.org/tech/profiles
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 22.xml
 
 NORMATIVE INFORMATION
@@ -21,9 +20,6 @@ NORMATIVE INFORMATION
   This is available at https://github.com/OpenMobileAlliance/lwm2m-registry
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LWM2M_for_Developers/issues
-
-CHANGE HISTORY
-11072019 Status changed to Approved by IPSO WG ref # OMA-IPSO-2019-0087-INP_LWM2M_Object_Virtual_Observe_Notify_v1.0_for_Final_Approval
 
 LEGAL DISCLAIMER
 
