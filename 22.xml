@@ -3,19 +3,15 @@
 <!--
 FILE INFORMATION
 
-OMA Permanent Document
-   File: OMA-SUP-LWM2M_VirtualObserveNotify-v1_1-20210621-D
-   Date: 2021-June-21
-
 OMNA LwM2M Registry
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 22.xml
 
 NORMATIVE INFORMATION
 
-  Information about this file can be found in the latest revision of
+  Information about this file can be found in:
 
-    OMA-TS-LWM2M_VirtualObserveNotify-V1_1
+    http://www.openmobilealliance.org/release/LwM2M_VON/V1_1-20210621-D/
 
   This is available at https://github.com/OpenMobileAlliance/lwm2m-registry
 
