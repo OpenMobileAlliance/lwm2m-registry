@@ -783,7 +783,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>504</ObjectID>
         <URN>urn:oma:lwm2m:oma:504</URN>
-        <Name>GSMA Remote SIM Provisioning</Name>
+        <Name>Remote SIM Provisioning</Name>
         <Description>This is a device management object that should be used for Remote SIM Provisioning according to GSMA standards</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
@@ -798,7 +798,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>505</ObjectID>
         <URN>urn:oma:lwm2m:oma:505</URN>
-        <Name>LwM2M nuSIM Provisioning</Name>
+        <Name>LwM2M SIM Provisioning</Name>
         <Description>This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
@@ -3679,7 +3679,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    
+    <Item>
+        <ObjectID>3441</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3441</URN>
+        <Name>TBC</Name>
+        <Description>TBC</Description>
+        <Owner>TBC</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>10241</ObjectID>
         <URN>urn:oma:lwm2m:x:10241</URN>
