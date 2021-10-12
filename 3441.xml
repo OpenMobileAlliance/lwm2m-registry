@@ -163,7 +163,7 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <Type>Opaque</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be "0x0123456789ABCDEF".
+                <Description>Initial value must be the bytes sequence "0123456789ABCDEF" (Hexadecimal notation).
                 </Description>
             </Item>
             <Item ID="160">
@@ -234,7 +234,7 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <Type>Opaque</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>Initial value must be 1 instance with ID 0 and value "0x0123456789ABCDEF".</Description>
+                <Description>Initial value must be 1 instance with ID 0 and value "0123456789ABCDEF"(Hexadecimal notation of the bytes sequence).</Description>
             </Item>
             <Item ID="1160">
                 <Name>Multiple Time Value</Name>
