@@ -636,8 +636,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item>
-    <Item>
+    </Item><Item>
         <ObjectID>25</ObjectID>
         <URN>urn:oma:lwm2m:oma:25</URN>
         <Name>LwM2M Gateway</Name>
@@ -650,8 +649,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item>
-        <Item>
+    </Item><Item>
         <ObjectID>25</ObjectID>
         <URN>urn:oma:lwm2m:oma:25:2.0</URN>
         <Name>LwM2M Gateway</Name>
@@ -659,13 +657,25 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>2.0</Ver>
-        <DDF>25.xml</DDF>
+        <DDF>version_history/25-2_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_Gateway/V1_1-20210518-A/OMA-TS-LWM2M_Gateway-V1_1-20210518-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item>
-    <Item>
+    </Item><Item>
+        <ObjectID>25</ObjectID>
+        <URN>urn:oma:lwm2m:oma:25:3.0</URN>
+        <Name>LwM2M Gateway</Name>
+        <Description>This object is used by a LwM2M Gateway to maintain the IoT Devices connected to the LwM2M Gateway.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>3.0</Ver>
+        <DDF>25.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>1</TSLink>
+    </Item><Item>
         <ObjectID>26</ObjectID>
         <URN>urn:oma:lwm2m:oma:26</URN>
         <Name>LwM2M Gateway Routing</Name>
