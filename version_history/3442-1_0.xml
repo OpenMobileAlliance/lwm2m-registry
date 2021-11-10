@@ -28,13 +28,13 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
     <Object ObjectType="MODefinition">
-        <Name>LwM2M v1.0 Test Object</Name>
-        <Description1><![CDATA[This object aims to make easier to do interoperability tests about LWM2M v1.0. It contains resources for each available datatype.]]></Description1>
+        <Name>LwM2M v1.1 Test Object</Name>
+        <Description1><![CDATA[This object aims to make easier to do interoperability tests about LWM2M v1.1. It contains resources for each available datatype.]]></Description1>
         <ObjectID>3442</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3442</ObjectURN>
-        <LWM2MVersion>1.0</LWM2MVersion>
+        <LWM2MVersion>1.1</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
         <Mandatory>Optional</Mandatory>
