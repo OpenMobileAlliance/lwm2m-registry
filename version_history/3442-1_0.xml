@@ -134,6 +134,17 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <Description>Initial value must be "1024".
                 </Description>
             </Item>
+            <Item ID="125">
+                <Name>Unsigned Integer Value</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description>Initial value must be 2^63 (9223372036854775808).
+                </Description>
+            </Item>
             <Item ID="130">
                 <Name>Float Value</Name>
                 <Operations>RW</Operations>
@@ -186,6 +197,16 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <Units />
                 <Description>Initial value must be a link to instance 0 of Device Object 3 (3:0).</Description>
             </Item>
+            <Item ID="180">
+                <Name>CoreLnk Value</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Corelnk</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description><![CDATA[Initial value must be a the "</3342>".]]></Description>
+            </Item>
             <Item ID="1110">
                 <Name>Multiple String Value</Name>
                 <Operations>RW</Operations>
@@ -205,6 +226,17 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <RangeEnumeration />
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "1024".</Description>
+            </Item>
+            <Item ID="1125">
+                <Name>Multiple Unsigned Integer Value</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Unsigned Integer</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description>Initial value must be 1 instance with ID 0 and value 2^63 (9223372036854775808).
+                </Description>
             </Item>
             <Item ID="1130">
                 <Name>Multiple Float Value</Name>
@@ -255,6 +287,16 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <RangeEnumeration />
                 <Units />
                 <Description>Initial value must be 1 instance with ID 0 and value "3:0".</Description>
+            </Item>
+             <Item ID="1180">
+                <Name>Multiple CoreLnk Value</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Corelnk</Type>
+                <RangeEnumeration />
+                <Units />
+                <Description><![CDATA[Initial value must be 1 instance with ID 0 and value "</3342>".]]></Description>
             </Item>
         </Resources>
         <Description2></Description2>
