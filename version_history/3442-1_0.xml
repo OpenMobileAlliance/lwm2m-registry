@@ -32,8 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <Object ObjectType="MODefinition">
         <Name>LwM2M v1.0 Test Object</Name>
         <Description1><![CDATA[This object aims to make easier to do interoperability tests about LWM2M v1.0. It contains resources for each available datatype.]]></Description1>
-        <ObjectID>3441</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:ext:3441</ObjectURN>
+        <ObjectID>3442</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:3442</ObjectURN>
         <LWM2MVersion>1.0</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
