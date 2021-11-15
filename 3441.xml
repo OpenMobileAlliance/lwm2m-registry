@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
     xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>LwM2M v1.0 Test Object</Name>
-        <Description1><![CDATA[This object contains resources for each datatype allowing easy interoperability testing.]]></Description1>
+        <Description1><![CDATA[This object aims to make easier to do interoperability tests about LWM2M v1.0. It contains resources for each available datatype.]]></Description1>
         <ObjectID>3441</ObjectID>
         <ObjectURN>urn:oma:lwm2m:ext:3441</ObjectURN>
         <LWM2MVersion>1.0</LWM2MVersion>
