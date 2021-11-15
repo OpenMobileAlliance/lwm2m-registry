@@ -109,7 +109,7 @@ E.g. If you send an Exec /3441/0/3 with "3='stringValue',4" as arguments value,
                 <Type>String</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description>List of Arguments from last execute on "Exec With Arguments"(3) resource.
+                <Description>List of Arguments from last execute on "Exec With Arguments"(3) resource. This resource is not affected by "Randomize values"(1) executable resource.
                 </Description>
             </Item>
             <Item ID="110">
