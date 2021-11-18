@@ -233,7 +233,7 @@ Argument 1 must contain the request timeout in ms. e.g. 1='2000' for 2s timeout.
                 <Type>Corelnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description><![CDATA[Initial value must be a the "</3342>".]]></Description>
+                <Description><![CDATA[Initial value must be a the "</3442>".]]></Description>
             </Item>
             <Item ID="1110">
                 <Name>Multiple String Value</Name>
@@ -324,7 +324,7 @@ Argument 1 must contain the request timeout in ms. e.g. 1='2000' for 2s timeout.
                 <Type>Corelnk</Type>
                 <RangeEnumeration />
                 <Units />
-                <Description><![CDATA[Initial value must be 1 instance with ID 0 and value "</3342>".]]></Description>
+                <Description><![CDATA[Initial value must be 1 instance with ID 0 and value "</3442>".]]></Description>
             </Item>
         </Resources>
         <Description2></Description2>
