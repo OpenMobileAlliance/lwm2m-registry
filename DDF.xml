@@ -5456,28 +5456,28 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>10374</ObjectID>
         <URN>urn:oma:lwm2m:x:10374</URN>
-        <Name>TBD</Name>
-        <Description>TBC</Description>
-        <Owner>TBD</Owner>
+        <Name>Modbus Connection</Name>
+        <Description>This LwM2M Object is used to configure a Modbus protocol connection.</Description>
+        <Owner>AVSystem</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10374.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10375</ObjectID>
         <URN>urn:oma:lwm2m:x:10375</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
-        <Owner>TBD</Owner>
+        <Name>Modbus Register Cluster</Name>
+        <Description>This LwM2M Object represents a set of Modbus registers and acts as an interface to read and write their values.</Description>
+        <Owner>AVSystem</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10375.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
