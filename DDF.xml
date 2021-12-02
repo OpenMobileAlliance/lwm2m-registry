@@ -3669,7 +3669,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>3441</ObjectID>
         <URN>urn:oma:lwm2m:ext:3441</URN>
         <Name>LwM2M v1.0 Test Object</Name>
-        <Description>This object aims to make easier to do interoperability tests about LWM2M v1.0. It contains resources for each available datatype.</Description>
+        <Description>This object is for use in interoperability tests of the LwM2M v1.0 technical specification. It contains resources for each available datatype.</Description>
         <Owner>Eclipse Foundation</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
