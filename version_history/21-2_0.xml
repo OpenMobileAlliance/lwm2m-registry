@@ -52,7 +52,7 @@ LEGAL DISCLAIMER
 -->
 
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
-  <Object ObjectType="MODefinition">
+	<Object ObjectType="MODefinition">
 		<Name>LWM2M OSCORE</Name>
 		<Description1><![CDATA[This LwM2M Object provides the keying material and related information of a LwM2M Client appropriate to access a specified LwM2M Server using OSCORE. One Object Instance MAY address a LwM2M Bootstrap-Server. These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.
 Instances of this Object are linked from Instances of Object 0 using the OSCORE Security Mode Resource of Object 0. Instances of this Object MUST NOT be linked from more than one Instance of Object 0.]]></Description1>
@@ -63,7 +63,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
-			<Item ID="0"><Name>OSCORE Master Secret</Name>
+			<Item ID="0">
+				<Name>OSCORE Master Secret</Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
@@ -72,7 +73,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Units></Units>
 				<Description><![CDATA[This resource MUST be used to store the pre-shared key used in LwM2M Client and LwM2M Server/Bootstrap-Server, called the Master Secret.  ]]></Description>
 			</Item>
-			<Item ID="1"><Name>OSCORE Sender ID</Name>
+			<Item ID="1">
+				<Name>OSCORE Sender ID</Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
@@ -81,7 +83,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Units></Units>
 				<Description><![CDATA[This resource MUST store an OSCORE identifier for the LwM2M Client called the Sender ID. ]]></Description>
 			</Item>
-			<Item ID="2"><Name>OSCORE Recipient ID</Name>
+			<Item ID="2">
+				<Name>OSCORE Recipient ID</Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
@@ -90,7 +93,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Units></Units>
 				<Description><![CDATA[This resource MUST store an OSCORE identifier for the LwM2M Client called the Recipient ID. ]]></Description>
 			</Item>
-			<Item ID="3"><Name>OSCORE AEAD Algorithm </Name>
+			<Item ID="3">
+				<Name>OSCORE AEAD Algorithm </Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -99,7 +103,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Units></Units>
 				<Description><![CDATA[This resource MUST be used to store the encoding of the AEAD Algorithm as defined in Table 10 of RFC 8152. The AEAD is used by OSCORE for encryption and integrity protection of CoAP message fields.  ]]></Description>
 			</Item>
-			<Item ID="4"><Name>OSCORE HMAC Algorithm </Name>
+			<Item ID="4">
+				<Name>OSCORE HMAC Algorithm </Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -107,9 +112,10 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource MUST be used to store the encoding of the HMAC Algorithm used in the HKDF. The encoding of HMAC algorithms are defined in Table 7 of RFC 8152. The HKDF is used to derive the security context used by OSCORE. 
- ]]></Description>
+ ]]>				</Description>
 			</Item>
-			<Item ID="5"><Name>OSCORE Master Salt</Name>
+			<Item ID="5">
+				<Name>OSCORE Master Salt</Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -118,7 +124,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<Units></Units>
 				<Description><![CDATA[This resource MUST be used to store a non-secret random value called the Master Salt. The Master Salt is used to derive the security context used by OSCORE. ]]></Description>
 			</Item>
-	  		<Item ID="6"><Name> OSCORE ID Context</Name>
+			<Item ID="6">
+				<Name> OSCORE ID Context</Name>
 				<Operations></Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
@@ -126,7 +133,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource MUST be used to store an OSCORE identifier called ID Context. This identifier is used to identify the Common Context and derive the security context used by OSCORE.]]></Description>
-			</Item></Resources>
-			<Description2><![CDATA[]]></Description2>
+			</Item>
+		</Resources>
+		<Description2><![CDATA[]]></Description2>
 	</Object>
 </LWM2M>
