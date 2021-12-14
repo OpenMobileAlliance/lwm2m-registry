@@ -621,7 +621,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>22.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LwM2M_VON/V1_1-20210621-D/OMA-Guidelines-LwM2M_VirtualObserveNotify-V1_1-20210621-D.pdf</TS>
+        <TS>http://www.openmobilealliance.org/documents/guidelines/OMA-Guidelines-LwM2M_VirtualObserveNotify-V1_1-20211130-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
     <Item>
