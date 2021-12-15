@@ -4,7 +4,7 @@
 		<Name>nuSIM</Name>
 		<Description1><![CDATA[This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.]]></Description1>
 		<ObjectID>508</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:508</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:508</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
