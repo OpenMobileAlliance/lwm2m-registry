@@ -814,7 +814,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>507</ObjectID>
         <URN>urn:oma:lwm2m:oma:507</URN>
         <Name>TBC</Name>
-        <Description>TBC</Description>
+        <Description><![CDATA[This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.]]></Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
