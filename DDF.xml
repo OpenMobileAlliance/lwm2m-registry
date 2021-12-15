@@ -814,7 +814,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>507</ObjectID>
         <URN>urn:oma:lwm2m:oma:507</URN>
         <Name>nuSIM Profile</Name>
-        <Description><![CDATA[This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.]]></Description>
+        <Description>This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -828,7 +828,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>508</ObjectID>
         <URN>urn:oma:lwm2m:oma:508</URN>
         <Name>nuSIM</Name>
-        <Description><![CDATA[This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.]]></Description>
+        <Description>This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>

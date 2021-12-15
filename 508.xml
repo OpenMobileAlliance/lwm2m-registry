@@ -2,7 +2,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>nuSIM</Name>
-		<Description1><![CDATA[This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.]]></Description1>
+		<Description1>This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.</Description1>
 		<ObjectID>508</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:508</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
