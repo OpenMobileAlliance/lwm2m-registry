@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>nuSIM</Name>
+		<Description1><![CDATA[This device management object represents a nuSIM integrated SIM according to NTS.01 - nuSIM Integrated SIM Specification.]]></Description1>
+		<ObjectID>508</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:508</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>EID</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the unique identifier of the nuSIM.]]></Description>
+			</Item>
+			<Item ID="1">
+				<Name>ICCID</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the ICCID of the currently loaded nuSIM profile.]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>nuSIM Capabilities</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the supported nuSIM specification version and optional capabilities of the nuSIM.]]></Description>
+			</Item><Item ID="3">
+				<Name>nuSIM Cert</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the individual nuSIM certificate CERT.NUSIM.ECDSA, if available.]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>nuSIM Profile</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Objlnk</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Points to an instance of the nuSIM profile object which is to be loaded by executing Load Profile, see Resource 5.]]></Description>
+			</Item><Item ID="5">
+				<Name>Load Profile</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Loads the profile instance referenced in Resource 4 to nuSIM.]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Load Profile Result</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..255</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Contains the result of the last Load Profile operation: 0=successful, 1=not successful, other values are implementation-specific.]]></Description>
+			</Item>
+		</Resources>
+		<Description2 />
+	</Object>
+</LWM2M>
