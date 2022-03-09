@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<![CDATA[Generic interface to set up periodic activity like hourly sensor reading/load activation and mechanism to retrieve the periodic data.]]>
 		</Description1>
 		<ObjectID>10376</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:10376:1.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10376</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
