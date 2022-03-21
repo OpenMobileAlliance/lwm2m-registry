@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Copyright 2022 Ericsson. 
+<!-- BSD-3 Clause License
+
+Copyright 2022 Ericsson. 
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -30,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Edge Application Server Information</Name>
+		<Name>Edge Application Server Configuration</Name>
 		<Description1><![CDATA[This LwM2M Object used for UE to obtain information about Edge Application Server that it shall communicate through an Edge Data Network, refer to [3GPP TS 23.558].]]></Description1>
 		<ObjectID>10378</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:x:10378</ObjectURN>
@@ -40,29 +42,39 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Mandatory>Optional</Mandatory>
 		<Resources>
 			<Item ID="0">
-				<Name>EAS ID</Name>
+				<Name>Application Client ID</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Identity of the Application Client used to distinguish multiple ACs if applicable, refer to [3GPP TS 23.558].]]></Description>
+			</Item>
+			<Item ID="1">
+				<Name>EAS ID</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The identifier of the Edge Application Server, refer to [3GPP TS 23.558].]]></Description>
 			</Item>
-			<Item ID="1">
+			<Item ID="2">
 				<Name>EAS Endpoint</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The endpoint information (e.g. URI, FQDN, IP address) used to communicate with the Edge Application Server, refer to [3GPP TS 23.558].]]></Description>
 			</Item>
-			<Item ID="2">
+			<Item ID="3">
 				<Name>Type</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>1..2</RangeEnumeration>
@@ -71,16 +83,6 @@ POSSIBILITY OF SUCH DAMAGE.
 1: S-EAS
 2: T-EAS
 refer to [3GPP TS 23.558]]]></Description>
-			</Item>
-			<Item ID="3">
-				<Name>AC ID</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Identity of the Application Client used to distinguish multiple ACs if applicable, refer to [3GPP TS 23.558].]]></Description>
 			</Item>
 		</Resources>
 		<Description2><![CDATA[]]></Description2>
