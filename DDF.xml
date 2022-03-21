@@ -5553,7 +5553,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>10378</ObjectID>
         <URN>urn:oma:lwm2m:x:10378</URN>
-        <Name>Edge Application Server Information</Name>
+        <Name>Edge Application Server Configuration</Name>
         <Description>This LwM2M Object used for UE to obtain information about Edge Application Server that it shall communicate through an Edge Data Network, refer to [3GPP TS 23.558].</Description>
         <Owner>Ericsson</Owner>
         <Source>2</Source>
