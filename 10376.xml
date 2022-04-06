@@ -106,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>s</Units>
 				<Description><![CDATA[This resource represents the time interval between the run of consecutive activities. The next activity will run after Periodic Interval resource value has elapsed.]]>
 				</Description>
 			</Item>
