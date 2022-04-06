@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource represents activity's name or string reference declared by device. It cannot be modified externally. Device can support multiple activities by declaring multiple instances of Periodic Activity object.]]>
+				<Description><![CDATA[This resource represents activity's name declared by device. It cannot be modified externally. Device can support multiple activities by declaring multiple instances of Periodic Activity object.]]>
 				</Description>
 			</Item>
 			<Item ID="1">
@@ -96,7 +96,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				2) "------201801" the periodic activity will start at the next 20:18:01.
 				3) "------------" the periodic activity will start immediately.
 				4) "------20--00" the periodic activity will start between 8pm to 8.59pm at exactly 00 seconds.
-				5) "------01000000" the periodic activity will start at next 1st of the month at 12am.]]>
+				5) "------01000000" the periodic activity will start at next 1st of the month at 12am.
+				Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instance resource, or adjusted to UTC if the resource is not provided.]]>
 				</Description>
 			</Item>
 			<Item ID="4">
@@ -181,7 +182,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource represents the start time to deliver Record resource. If Record resource is currently being observed, this resource enables accumulation of the Record changes before being dispatch (rather than delivering Record immediatly as it changes). As per Start Mask, Dispatch Start Mask must adhere to following string format:
-				"YYMMDDHHmmss"
+				"YYMMDDHHmmss".
+				Dispatch Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instance resource, or adjusted to UTC if the resource is not provided.
 				If this resource is used together with Dispatch Interval resource, it is possible to automatically deliver Record resource at specific time. I.e.  dispatch accumulated record every 6 hours, at minute 5 (00:05, 06:05, 12:05, 18:05).]]>
 				</Description>
 			</Item>
