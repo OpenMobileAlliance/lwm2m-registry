@@ -158,7 +158,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource represents the index of the oldest record stored in device. This index is adjusted(incremented) by device based on it's memory space availability.]]>
+				<Description><![CDATA[This resource represents the index of the oldest record stored in device. This index is adjusted (incremented) by device based on its memory space availability.]]>
 				</Description>
 			</Item>
 			<Item ID="9">
