@@ -118,7 +118,7 @@ If this resource is not present, data sampling starts at device's specific imple
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>s</Units>
 				<Description><![CDATA[This resource represents the time interval between consecutive data samplings. After the sampling starts (via the start mask, if present), the next sampling will run after Data Sampling Interval resource value has elapsed.
 If this resource is not present, data sampling occurs at device's specific implementation.
 ]]></Description>
@@ -130,9 +130,9 @@ If this resource is not present, data sampling occurs at device's specific imple
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[This resource defines the period to run this data sampling. Data Sampling will stop when the Run Period has elapsed from the start time. Depending on the Data Sampling Start Mask's "don't care" field, sampling may re-start again.]]>
-				</Description>
+				<Units>s</Units>
+				<Description><![CDATA[This resource defines the period to run this data sampling. Data Sampling will stop when the Run Period has elapsed from the start time. Depending on the Data Sampling Start Mask's "don't care" field, sampling may re-start again.
+				]]></Description>
 			</Item>		
 			<Item ID="7">
 				<Name>Reference A</Name>
