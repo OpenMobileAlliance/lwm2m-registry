@@ -84,12 +84,12 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Units></Units>
 				<Description><![CDATA[This resource defines when to start the periodic activity. Start Mask needs to adhere to following string format:
 "YYMMDDHHmmss"
-YY = year, e.g 21
-MM = month, 01 to 12
-DD = day, 01 to 31
-HH = hour, 00 to 23
-mm = minute, 00 to 59
-ss = second, 00 to 59
+YY: year, e.g 21
+MM: month, 01 to 12
+DD: day, 01 to 31
+HH: hour, 00 to 23
+mm: minute, 00 to 59
+ss: second, 00 to 59
 
 Any of the above can be replaced by character '-' for "don't care" masking.
 
