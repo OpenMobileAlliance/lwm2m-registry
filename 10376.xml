@@ -117,7 +117,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>s</Units>
 				<Description><![CDATA[This resource defines the period to run this periodic activity. Periodic activity will stop when the Run Period has elapsed from the start time. Depending on the Start Mask's "don't care" field, this periodic activity may re-start again.]]>
 				</Description>
 			</Item>
