@@ -93,12 +93,12 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Units></Units>
 				<Description><![CDATA[This resource defines when to start data sampling. Data Sampling Start Mask needs to adhere to following string format:
 "YYMMDDHHmmss"
-YY = year, e.g 21
-MM = month, 01 to 12
-DD = day, 01 to 31
-HH = hour, 00 to 23
-mm = minute, 00 to 59
-ss = second, 00 to 59
+YY: year, e.g 21
+MM: month, 01 to 12
+DD: day, 01 to 31
+HH: hour, 00 to 23
+mm: minute, 00 to 59
+ss: second, 00 to 59
 
 Any of the above can be replaced by character '-' for "don't care" masking.
 
@@ -154,13 +154,13 @@ If this resource is not present, data sampling occurs at device's specific imple
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource represents the logical statement to compare Data resource against Reference A resource. The statements are encoded as following:
-0 = No Comparison
-1 = Data > Reference A
-2 = Data >= Reference A
-3 = Data < Reference A
-4 = Data <= Reference A
-5 = Data equals Reference A
-6 = Data not equal Reference A
+0: No Comparison
+1: Data > Reference A
+2: Data >= Reference A
+3: Data < Reference A
+4: Data <= Reference A
+5: Data equals Reference A
+6: Data not equal Reference A
 ]]></Description>
 			</Item>
 			<Item ID="9">
@@ -183,13 +183,13 @@ If this resource is not present, data sampling occurs at device's specific imple
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource represents the logical statement to compare Data resource against Reference B resource. The statements are encoded as following:
-0 = No Comparison
-1 = Data > Reference B
-2 = Data >= Reference B
-3 = Data < Reference B
-4 = Data <= Reference B
-5 = Data equals Reference B
-6 = Data not equal Reference B
+0: No Comparison
+1: Data > Reference B
+2: Data >= Reference B
+3: Data < Reference B
+4: Data <= Reference B
+5: Data equals Reference B
+6: Data not equal Reference B
 ]]></Description>
 			</Item>
 			<Item ID="11">
@@ -212,13 +212,13 @@ If this resource is not present, data sampling occurs at device's specific imple
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[This resource represents the logical statement to compare Data resource against Reference B resource. The statements are encoded as following:
-0 = No Comparison
-1 = Data > Reference C
-2 = Data >= Reference C
-3 = Data < Reference C
-4 = Data <= Reference C
-5 = Data equals Reference C
-6 = Data not equal Reference C
+0: No Comparison
+1: Data > Reference C
+2: Data >= Reference C
+3: Data < Reference C
+4: Data <= Reference C
+5: Data equals Reference C
+6: Data not equal Reference C
 ]]></Description>
 			</Item>
 			<Item ID="13">
@@ -237,10 +237,10 @@ This resource use CBOR format encoded as following:
 n. array(Result Index n, Result Timestamp n, Result Value n)	
 
 Result value is an integer containing bit flags described as per following:
-bit 0 = 0(Comparison A statement is false), 1(Comparison A statement is true)
-bit 1 = 0(Comparison B statement is false), 1(Comparison B statement is true)
-bit 2 = 0(Comparison C statement is false), 1(Comparison C statement is true)
-other bits = unused
+bit 0: 0(Comparison A statement is false), 1(Comparison A statement is true)
+bit 1: 0(Comparison B statement is false), 1(Comparison B statement is true)
+bit 2: 0(Comparison C statement is false), 1(Comparison C statement is true)
+other bits: unused
 New result will be added when there is a change of current Result Value. Result Timestamp is a 32-bit integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone, sampled when the change occurs. Result Index is the running number of the recorded changes. 
 Number of available results is up to device's implementation and maximum result that can be accumulated should be stated in Monitoring Description resource.
 ]]></Description>
