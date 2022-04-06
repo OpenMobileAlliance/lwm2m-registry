@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource describes activity's operation including it's supported options and data returned.]]>
+				<Description><![CDATA[This resource describes activity's operation including its supported options and data returned.]]>
 				</Description>
 			</Item>
 			<Item ID="2">
