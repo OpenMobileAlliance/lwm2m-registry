@@ -133,7 +133,7 @@ Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instanc
 				<Type>Opaque</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Record resource enable the accumulation of returned data(if any) when the activity is run/ called. The accumulated data or records is represented by a read-only serialised Opaque (Binary).
+				<Description><![CDATA[Record resource enable the accumulation of returned data (if any) when the activity is run/called. The accumulated data or records is represented by a read-only serialized Opaque (Binary) value.
 The number of records available in this serialised resource can be calculated by Record Head Index - Record Current Read Index. Nevertheless, the number of records serialised is limited by device's memory allocation. After successful record read (manual read, observation or dispatch), device will increment Record Current Read Index as per how many already read.
 
 The record use CBOR format encoded as following:
@@ -175,7 +175,7 @@ Record Timestamp is a 32-bit integer representing the number of seconds since Ja
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource represents the index of the last read record. Device will increment this index upon successful record delivery to server(via manual read or scheduled dispatch). Server may modify this index to traverse within available records in device.]]>
+				<Description><![CDATA[This resource represents the index of the last read record. Device will increment this index upon successful record delivery to server (via manual read or scheduled dispatch). Server may modify this index to traverse within available records in device.]]>
 				</Description>
 			</Item>	
 			<Item ID="10">
@@ -191,7 +191,7 @@ Record Timestamp is a 32-bit integer representing the number of seconds since Ja
 
 Dispatch Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instance resource, or adjusted to UTC if the resource is not provided.
 
-If this resource is used together with Dispatch Interval resource, it is possible to automatically deliver Record resource at specific time. I.e.  dispatch accumulated record every 6 hours, at minute 5 (00:05, 06:05, 12:05, 18:05).
+If this resource is used together with Dispatch Interval resource, it is possible to automatically deliver Record resource at specific time. For example, dispatch accumulated record every 6 hours, at minute 5 (00:05, 06:05, 12:05, 18:05).
 ]]></Description>
 			</Item>
 			<Item ID="11">
