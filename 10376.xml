@@ -191,7 +191,7 @@ Record Timestamp is a 32-bit integer representing the number of seconds since Ja
 
 Dispatch Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instance resource, or adjusted to UTC if the resource is not provided.
 
-If this resource is used together with Dispatch Interval resource, it is possible to automatically deliver Record resource at specific time. I.e.  dispatch accumulated record every 6 hours, at minute 5 (00:05, 06:05, 12:05, 18:05).
+If this resource is used together with Dispatch Interval resource, it is possible to automatically deliver Record resource at specific time. For example, dispatch accumulated record every 6 hours, at minute 5 (00:05, 06:05, 12:05, 18:05).
 ]]></Description>
 			</Item>
 			<Item ID="11">
