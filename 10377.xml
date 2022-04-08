@@ -229,7 +229,7 @@ If this resource is not present, data sampling occurs at device's specific imple
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Monitoring Results resource is a serialised accumulation of comparison results of data and the references, represented by a read-only serialised Opaque (Binary).
+				<Description><![CDATA[Monitoring Results resource is a serialized accumulation of comparison results of data and the references, represented by a read-only serialized Opaque (Binary).
 This resource use CBOR format encoded as following: 
 1. array(Result Index 1, Result Timestamp 1, Result Value 1)
 2. array(Result Index 2, Result Timestamp 2, Result Value 2)
