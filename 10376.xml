@@ -133,7 +133,7 @@ Start Mask is adjusted to UTC offset provided by Device [/3/0/14] object instanc
 				<Type>Opaque</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Record resource enable the accumulation of returned data(if any) when the activity is run/ called. The accumulated data or records is represented by a read-only serialised Opaque (Binary).
+				<Description><![CDATA[Record resource enable the accumulation of returned data (if any) when the activity is run/called. The accumulated data or records is represented by a read-only serialized Opaque (Binary) value.
 The number of records available in this serialised resource can be calculated by Record Head Index - Record Current Read Index. Nevertheless, the number of records serialised is limited by device's memory allocation. After successful record read (manual read, observation or dispatch), device will increment Record Current Read Index as per how many already read.
 
 The record use CBOR format encoded as following:
