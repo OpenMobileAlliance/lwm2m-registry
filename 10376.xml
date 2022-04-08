@@ -175,7 +175,7 @@ Record Timestamp is a 32-bit integer representing the number of seconds since Ja
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[This resource represents the index of the last read record. Device will increment this index upon successful record delivery to server(via manual read or scheduled dispatch). Server may modify this index to traverse within available records in device.]]>
+				<Description><![CDATA[This resource represents the index of the last read record. Device will increment this index upon successful record delivery to server (via manual read or scheduled dispatch). Server may modify this index to traverse within available records in device.]]>
 				</Description>
 			</Item>	
 			<Item ID="10">
