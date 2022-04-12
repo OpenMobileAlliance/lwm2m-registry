@@ -34,9 +34,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
     <Name>Vendor Specific Measurement Quality Reason</Name>
-    <Description1>This object contains description for vendor specific measurement quality reason codes. 
-Instances of this object define the mapping of vendor specific reason codes to 
-reason description in the scope of an individual device.</Description1>
+    <Description1>This object contains description for vendor specific measurement quality reason codes
+provided in object Measurement Metadata (10379). Instances of this object define the mapping of vendor 
+specific reason codes to reason description in the scope of an individual device.</Description1>
     <ObjectID>10380</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10380:1.0</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
@@ -45,16 +45,17 @@ reason description in the scope of an individual device.</Description1>
     <Mandatory>Optional</Mandatory>
     <Resources>
         <Item ID="0">
-            <Name>Measurement Quality Reason Code</Name>
+            <Name>Vendor Specific Quality Reason Code</Name>
             <Operations>R</Operations>
             <MultipleInstances>Single</MultipleInstances>
             <Mandatory>Mandatory</Mandatory>
             <Type>Integer</Type>
             <RangeEnumeration>65..1024</RangeEnumeration>
             <Units></Units>
-            <Description>Measurement quality reason code from IPSO sensor object resource Measurement Quality Reason. 
-This reason code is device specific. 65-128: vendor specific block #1, 
-129-255: reserved block, 256-1024: vendor specific block #2</Description>
+            <Description>Measurement quality degradation reason reported by a smart sensor. 
+Reason codes 0-64 are generic reason codes and they are 
+defined in Measurement Metadata object XML description. 
+65-128: vendor specific block #1, 129-255: reserved block, 256-1024: vendor specific block #2</Description>
         </Item>
         <Item ID="1">
             <Name>Quality Reason Name</Name>

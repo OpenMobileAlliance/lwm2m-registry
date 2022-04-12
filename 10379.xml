@@ -37,7 +37,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <Description1>This object contains measurement metadata for sensor objects. 
 The corresponding sensor is identified with an object link.
 Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
-values provided in IPSO sensor object.
+values provided in IPSO sensor object. If multiple object instances link to the same sensor object instance then 
+the metadata provided by the largest instance id takes precedence.</Description>
         </Description1>
         <ObjectID>10379</ObjectID>
         <ObjectURN>urn:oma:lwm2m:x:10379:1.0</ObjectURN>
@@ -54,8 +55,7 @@ values provided in IPSO sensor object.
                 <Type>Objlnk</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Link to the sensor object instance that provided the measurement.
-If multiple object instances link to the same destination then the metadata provided by the largest instance id takes precedence.</Description>
+                <Description>Link to the sensor object instance that this metadata relates to.
             </Item>
             <Item ID="1">
                 <Name>Measurement Quality Reason Code</Name>
