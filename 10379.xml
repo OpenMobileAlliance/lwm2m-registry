@@ -39,23 +39,23 @@ The corresponding sensor is identified with an object link.
 Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
 values provided in IPSO sensor object. If multiple object instances link to the same sensor object instance then 
 the metadata provided by the largest instance id takes precedence.</Description>
-        </Description1>
-        <ObjectID>10379</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10379:1.0</ObjectURN>
-        <LWM2MVersion>1.1</LWM2MVersion>
-        <ObjectVersion>1.0</ObjectVersion>
-        <MultipleInstances>Multiple</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Resources>
-            <Item ID="0">
-                <Name>Linked Sensor</Name>
-                <Operations>R</Operations>
-                <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Mandatory</Mandatory>
-                <Type>Objlnk</Type>
-                <RangeEnumeration></RangeEnumeration>
-                <Units></Units>
-                <Description>Link to the sensor object instance that this metadata relates to.
+    </Description1>
+    <ObjectID>10379</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:x:10379:1.0</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+        <Item ID="0">
+            <Name>Linked Sensor</Name>
+            <Operations>R</Operations>
+            <MultipleInstances>Single</MultipleInstances>
+            <Mandatory>Mandatory</Mandatory>
+            <Type>Objlnk</Type>
+            <RangeEnumeration></RangeEnumeration>
+            <Units></Units>
+            <Description>Link to the sensor object instance that this metadata relates to.
             </Item>
             <Item ID="1">
                 <Name>Measurement Quality Reason Code</Name>
@@ -76,38 +76,38 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
 12: HW_FAILURE Sensor hardware has failed, 13: LACK_OF_DATA_SAMPLES Data sampling is lossy, 
 14: OUT_OF_OPERATING_RANGE Environment conditions exceeded, 15: AUTO_CALIBRATION Auto calibration in progress, 
 16-64: reserved block, 65-128: vendor specific block #1, 129-255: reserved block, 256-1024: vendor specific block #2</Description>
-            </Item>
-            <Item ID="6042">
-                <Name>Measurement Quality Indicator</Name>
-                <Operations>R</Operations>
-                <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Optional</Mandatory>
-                <Type>Integer</Type>
-                <RangeEnumeration>0..23</RangeEnumeration>
-                <Units></Units>
-                <Description>Measurement quality indicator reported by a smart sensor. 
+</Item>
+<Item ID="6042">
+                    <Name>Measurement Quality Indicator</Name>
+                    <Operations>R</Operations>
+                    <MultipleInstances>Single</MultipleInstances>
+                    <Mandatory>Optional</Mandatory>
+                    <Type>Integer</Type>
+                    <RangeEnumeration>0..23</RangeEnumeration>
+                    <Units></Units>
+                    <Description>Measurement quality indicator reported by a smart sensor. 
 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 
 1: REJECTED WITH CERTAINTY The measured value is invalid. 
 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 
 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 
 4: ACCEPTED The measured value is OK. 
 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
-            </Item>
-            <Item ID="6049">
-                <Name>Measurement Quality Level</Name>
-                <Operations>R</Operations>
-                <MultipleInstances>Single</MultipleInstances>
-                <Mandatory>Optional</Mandatory>
-                <Type>Integer</Type>
-                <RangeEnumeration>0..100</RangeEnumeration>
-                <Units></Units>
-                <Description>Measurement quality level reported by a smart sensor. 
+                </Item>
+                <Item ID="6049">
+                    <Name>Measurement Quality Level</Name>
+                    <Operations>R</Operations>
+                    <MultipleInstances>Single</MultipleInstances>
+                    <Mandatory>Optional</Mandatory>
+                    <Type>Integer</Type>
+                    <RangeEnumeration>0..100</RangeEnumeration>
+                    <Units></Units>
+                    <Description>Measurement quality level reported by a smart sensor. 
 Quality level 100 means that the measurement has fully passed quality check algorithms. 
 Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. 
 The smaller the quality level, the more caution should be used by the application when using the measurement. 
 When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
-            </Item>
-        </Resources>
-        <Description2></Description2>
-    </Object>
-</LWM2M>
+                </Item>
+            </Resources>
+            <Description2></Description2>
+        </Object>
+    </LWM2M>
