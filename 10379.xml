@@ -41,7 +41,7 @@ values provided in IPSO sensor object. If multiple object instances link to the 
 the metadata provided by the largest instance id takes precedence.</Description>
     </Description1>
     <ObjectID>10379</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:x:10379:1.0</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:x:10379</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>

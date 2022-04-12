@@ -38,7 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 provided in object Measurement Metadata (10379). Instances of this object define the mapping of vendor 
 specific reason codes to reason description in the scope of an individual device.</Description1>
         <ObjectID>10380</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10380:1.0</ObjectURN>
+        <ObjectURN>urn:oma:lwm2m:x:10380</ObjectURN>
         <LWM2MVersion>1.1</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
