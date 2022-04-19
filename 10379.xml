@@ -100,9 +100,9 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
                 <Units></Units>
                 <Description>Measurement quality indicator reported by a smart sensor.
 0: UNCHECKED No quality checks were done because they do not exist or can not be applied.
-1: REJECTED_WITH_CERTAINTY The measured value is invalid.
-2: REJECTED_WITH_PROBABILITY The measured value is likely invalid.
-3: ACCEPTED_BUT_SUSPICIOUS The measured value is likely OK.
+1: REJECTED WITH CERTAINTY The measured value is invalid.
+2: REJECTED WITH PROBABILITY The measured value is likely invalid.
+3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK.
 4: ACCEPTED The measured value is OK.
 5-15: Reserved for future extensions.
 16-23: Vendor specific measurement quality.

@@ -5586,7 +5586,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Description>This object contains measurement metadata for sensor objects. 
 The corresponding sensor is identified with an object link.
 Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
-values provided in sensor object. If multiple object instances link to the same sensor object instance then 
+values provided in a sensor object. If multiple object instances link to the same sensor object instance then 
 the metadata provided by the largest instance id takes precedence.</Description>
         <Owner>Vaisala</Owner>
         <Source>2</Source>
