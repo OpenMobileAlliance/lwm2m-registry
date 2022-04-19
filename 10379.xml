@@ -92,7 +92,8 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 
 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 
 4: ACCEPTED The measured value is OK. 
-5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
+5-15: Reserved for future extensions. 
+16-23: Vendor specific measurement quality.</Description>
                 </Item>
                 <Item ID="6049">
                     <Name>Measurement Quality Level</Name>
