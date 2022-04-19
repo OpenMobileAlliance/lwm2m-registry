@@ -38,7 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 The corresponding sensor is identified with an object link.
 Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
 values provided in a sensor object. If multiple object instances link to the same sensor object instance then 
-the metadata provided by the largest instance id takes precedence.</Description>
+the metadata provided by the largest instance id takes precedence.
     </Description1>
     <ObjectID>10379</ObjectID>
     <ObjectURN>urn:oma:lwm2m:x:10379</ObjectURN>
