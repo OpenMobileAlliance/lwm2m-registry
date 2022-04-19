@@ -5580,6 +5580,40 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>10379</ObjectID>
+        <URN>urn:oma:lwm2m:x:10379</URN>
+        <Name>Measurement Metadata</Name>
+        <Description>This object contains measurement metadata for sensor objects. 
+The corresponding sensor is identified with an object link.
+Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
+values provided in IPSO sensor object. If multiple object instances link to the same sensor object instance then 
+the metadata provided by the largest instance id takes precedence.</Description>
+        <Owner>Vaisala</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10379.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10380</ObjectID>
+        <URN>urn:oma:lwm2m:x:10380</URN>
+        <Name>Vendor Specific Measurement Quality Reason</Name>
+        <Description>This object contains description for vendor specific measurement quality reason codes
+provided in object Measurement Metadata (10379). Instances of this object define the mapping of vendor 
+specific reason codes to reason description in the scope of an individual device.</Description>
+        <Owner>Vaisala</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10380.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
         <Name>MQTT Broker</Name>
