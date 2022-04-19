@@ -5484,14 +5484,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>10376</ObjectID>
         <URN>urn:oma:lwm2m:x:10376</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
-        <Owner>TBD</Owner>
+        <Name>Periodic Activity</Name>
+        <Description>Generic interface to set up periodic activity like hourly sensor reading/load activation and mechanism to retrieve the periodic data.</Description>
+        <Owner>G Kent Malaysia</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>10376.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
