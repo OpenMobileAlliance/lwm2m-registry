@@ -76,7 +76,7 @@ The name should be concise and unique in the localization scope.</Description>
             <Type>String</Type>
             <RangeEnumeration></RangeEnumeration>
             <Units></Units>
-            <Description>Plain English description of the quality reason. This text can be used if the localization is not found.</Description>
+            <Description>Description of the quality reason. This text can be used if the localization is not found.</Description>
         </Item>
     </Resources>
     <Description2></Description2>
