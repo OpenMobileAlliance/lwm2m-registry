@@ -55,7 +55,7 @@ the metadata provided by the largest instance id takes precedence.
             <Type>Objlnk</Type>
             <RangeEnumeration></RangeEnumeration>
             <Units></Units>
-            <Description>Link to the sensor object instance that this metadata relates to.
+            <Description>Link to the sensor object instance that this metadata relates to.</Description>
             </Item>
             <Item ID="1">
                 <Name>Measurement Quality Reason Code</Name>
