@@ -67,7 +67,8 @@ the metadata provided by the largest instance id takes precedence.
                 <Units></Units>
                 <Description>Measurement quality degradation reason reported by a smart sensor. 
 A degraded measurement has Measurement Quality Indicator value 1-3 or Measurement Quality Level < 100.
-0: UNKNOWN Reason is unkown, 1: UNDER_RANGE Measured value is under measurement range, 
+0: UNKNOWN Reason is unknown
+1: UNDER_RANGE Measured value is under measurement range 
 2: OVER_RANGE Measured value is over measurement range, 3: NOISY Measured value seems to change too quickly, 
 4: STUCK_VALUE Measured value seems to change too slowly, 5: STEP_TOO_HIGH Measured value has changed too much, 
 6: CALIBRATION_EXPIRED Sensor calibration has expired, 7: WARMING_UP Sensor is warming up, 
