@@ -81,7 +81,7 @@ The name should be concise and unique in the localization scope.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description>Description of the quality reason. This text can be used if the localization is not found.
+                <Description>Description of the quality reason. This text can be used if a localized version is not found.
                 </Description>
             </Item>
         </Resources>
