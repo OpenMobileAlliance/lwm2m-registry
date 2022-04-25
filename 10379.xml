@@ -34,11 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
         <Name>Measurement Metadata</Name>
-        <Description1>This object contains measurement metadata for sensor objects. 
-The corresponding sensor is identified with an object link.
-Measurement Quality Indicator and Measurement Quality Level values provided in this object have a precedence over 
-values provided in a sensor object. If multiple object instances link to the same sensor object instance then 
-the metadata provided by the largest instance id takes precedence.
+        <Description1>This object contains measurement metadata for sensor objects. The corresponding sensor is identified with an object link. If the LwM2M Client provides measurement quality information both inside the sensor objects and in the Measurement Metadata object, it MUST ensure that identical data is reported in corresponding object instances. The LwM2M Server SHOULD use the data from the Measurement Metadata object if both are available. The LwM2M Client also MUST ensure that no two Measurement Metadata object instances link to the same sensor object instance. If the LwM2M Server receives such non-conforming data, the Measurement Metadata object instance with largest Instance ID SHOULD be used.
         </Description1>
         <ObjectID>10379</ObjectID>
         <ObjectURN>urn:oma:lwm2m:x:10379</ObjectURN>
@@ -64,10 +60,9 @@ the metadata provided by the largest instance id takes precedence.
                 <MultipleInstances>Multiple</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0..1024</RangeEnumeration>
+                <RangeEnumeration>0..1023</RangeEnumeration>
                 <Units></Units>
-                <Description>Measurement quality degradation reason reported by a smart sensor. 
-A degraded measurement has Measurement Quality Indicator value 1-3 or Measurement Quality Level less than 100.
+                <Description>Measurement quality degradation reason reported by a smart sensor. A degraded measurement has Measurement Quality Indicator value 1-3 or Measurement Quality Level less than 100.
 0: UNKNOWN Reason is unknown.
 1: UNDER_RANGE Measured value is under measurement range. 
 2: OVER_RANGE Measured value is over measurement range.
@@ -84,10 +79,9 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
 13: LACK_OF_DATA_SAMPLES Data sampling is lossy.
 14: OUT_OF_OPERATING_RANGE Environment conditions exceeded.
 15: AUTO_CALIBRATION Auto calibration in progress. 
-16-64: RESERVED_GENERIC_BLOCK_1 Reserved block 1.
-65-128: VENDOR_SPECIFIC_BLOCK_1 Vendor specific block #1.
-129-255: RESERVED_VENDOR_BLOCK_2 Reserved block 2.
-256-1024: VENDOR_SPECIFIC_BLOCK_2 Vendor specific block #2.
+16-127: RESERVED_GENERIC_BLOCK Reserved generic block.
+128-511: VENDOR_SPECIFIC_BLOCK Vendor specific block.
+512-1023: RESERVED_VENDOR_BLOCK Reserved vendor specific block.
                 </Description>
             </Item>
             <Item ID="6042">
@@ -100,7 +94,7 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
                 <Units></Units>
                 <Description>Measurement quality indicator reported by a smart sensor.
 0: UNCHECKED No quality checks were done because they do not exist or can not be applied.
-1: REJECTED_WITH_CERTAINTY The measured value is invalid.
+1: REJECTED WITH CERTAINTY The measured value is invalid.
 2: REJECTED WITH PROBABILITY The measured value is likely invalid.
 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK.
 4: ACCEPTED The measured value is OK.
@@ -116,11 +110,7 @@ A degraded measurement has Measurement Quality Indicator value 1-3 or Measuremen
                 <Type>Integer</Type>
                 <RangeEnumeration>0..100</RangeEnumeration>
                 <Units></Units>
-                <Description>Measurement quality level reported by a smart sensor.
-Quality level 100 means that the measurement has fully passed quality check algorithms.
-Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms.
-The smaller the quality level, the more caution should be used by the application when using the measurement.
-When the quality level is 0 it means that the measurement should certainly be rejected.
+                <Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.
                 </Description>
             </Item>
         </Resources>
