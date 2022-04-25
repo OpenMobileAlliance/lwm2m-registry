@@ -55,7 +55,7 @@ specific reason codes to reason description in the scope of an individual device
                 <Units></Units>
                 <Description>Measurement quality degradation reason reported by a smart sensor.
 Reason codes 0-64 are generic reason codes and they are defined in Measurement Metadata object
-XML description.
+description.
 65-128: VENDOR_SPECIFIC_BLOCK_1 Vendor specific block #1.
 129-255: RESERVED_VENDOR_BLOCK_2 Reserved block 2.
 256-1024: VENDOR_SPECIFIC_BLOCK_2 Vendor specific block #2.
