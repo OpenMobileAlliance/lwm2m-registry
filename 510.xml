@@ -2,7 +2,7 @@
 
 <!-- BSD-3 Clause License
 
-Copyright 2022 Vaisala. 
+Copyright 2022 Open Mobile Alliance. 
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -36,8 +36,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <Name>Vendor Specific Measurement Quality Reason</Name>
         <Description1>This object contains description for vendor specific measurement quality reason codes provided in a Measurement Metadata (10379) object. Instances of this object define the mapping of vendor specific reason codes to reason description in the scope of an individual device.
         </Description1>
-        <ObjectID>10380</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10380</ObjectURN>
+        <ObjectID>510</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:oma:510</ObjectURN>
         <LWM2MVersion>1.1</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>

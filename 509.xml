@@ -2,7 +2,7 @@
 
 <!-- BSD-3 Clause License
 
-Copyright 2022 Vaisala. 
+Copyright 2022 Open Mobile Alliance. 
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -36,8 +36,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <Name>Measurement Metadata</Name>
         <Description1>This object contains measurement metadata for sensor objects. The corresponding sensor is identified with an object link. If the LwM2M Client provides measurement quality information both inside the sensor objects and in the Measurement Metadata object, it MUST ensure that identical data is reported in corresponding object instances. The LwM2M Server SHOULD use the data from the Measurement Metadata object if both are available. The LwM2M Client also MUST ensure that no two Measurement Metadata object instances link to the same sensor object instance. If the LwM2M Server receives such non-conforming data, the Measurement Metadata object instance with largest Instance ID SHOULD be used.
         </Description1>
-        <ObjectID>10379</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:x:10379</ObjectURN>
+        <ObjectID>509</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:oma:509</ObjectURN>
         <LWM2MVersion>1.1</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
