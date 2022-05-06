@@ -57,7 +57,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>255</RangeEnumeration>
+        <RangeEnumeration>0..255</RangeEnumeration>
         
         <Units></Units>
 
@@ -126,7 +126,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>8-Bits</RangeEnumeration>
+        <RangeEnumeration>0..255</RangeEnumeration>
         
         <Units></Units>
 
@@ -172,7 +172,7 @@
 
         <Type>Integer</Type>
 
-        <RangeEnumeration>255</RangeEnumeration>
+        <RangeEnumeration>0..255</RangeEnumeration>
         
         <Units></Units>
         
