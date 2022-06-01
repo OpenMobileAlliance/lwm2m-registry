@@ -2,17 +2,13 @@
 
 <!-- 
 FILE INFORMATION
-OMA Permanent Document
-   File: OMA-SUP-XML_502-V1_0_1-20210119-A
-   Path: https://www.openmobilealliance.org/release/ObjLwM2M_CO_Detector
-   Date: 2021-Jan-19
 Public Reachable Information
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 502.xml
 NORMATIVE INFORMATION
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 LEGAL DISCLAIMER
-Copyright 2021 Open Mobile Alliance. 
+Copyright 2022 Open Mobile Alliance. 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
 are met:
