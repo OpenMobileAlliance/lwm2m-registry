@@ -2,17 +2,13 @@
 
 <!-- 
 FILE INFORMATION
-OMA Permanent Document
-   File: OMA-SUP-XML_502-V1_0_1-20210119-A
-   Path: https://www.openmobilealliance.org/release/ObjLwM2M_CO_Detector
-   Date: 2021-Jan-19
 Public Reachable Information
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
    Name: 502.xml
 NORMATIVE INFORMATION
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 LEGAL DISCLAIMER
-Copyright 2021 Open Mobile Alliance. 
+Copyright 2022 Open Mobile Alliance. 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
 are met:
@@ -41,7 +37,7 @@ reference the OMA IPR Policy for patent licensing terms:
 https://www.omaspecworks.org/about/intellectual-property-rights/
 -->
 
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
     <Object ObjectType="MODefinition">
     	<Name>CO Detector</Name>
   	<Description1><![CDATA[This is an alarm that should be raised if the sensor detects a higher than threshold CO level.]]></Description1>
