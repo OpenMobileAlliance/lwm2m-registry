@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Edge Application Server Configuration</Name>
-		<Description1><![CDATA[This LwM2M Object used for UE to obtain information about Edge Application Server that it shall communicate through an Edge Data Network, refer to [3GPP TS 23.558].]]></Description1>
+		<Description1><![CDATA[This is used for UE to obtain information about suitable Edge Application Server in Edge Data Network, and to support service continuity for the UE to minimize service interruption.]]></Description1>
 		<ObjectID>10378</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:x:10378</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
