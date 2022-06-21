@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Name>Type</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>1..2</RangeEnumeration>
 				<Units></Units>
