@@ -101,7 +101,7 @@ limitations under the License.
 				<Description><![CDATA[Sub Frame Number.]]></Description>
 			</Item>
 			<Item ID="2"><Name>pucchTxPowerValue</Name>
-				<Operations></Operations>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
