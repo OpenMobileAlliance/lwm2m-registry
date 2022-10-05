@@ -47,7 +47,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Boolean</Type>
-                <RangeEnumeration>AVAILABLE; UNAVAILABLE</RangeEnumeration>
+                <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description>This field indicates to the CCC whether or not the eNB of the CrowdBox is available for activation: AVAILABLE = TRUE; UNAVAILABLE = FALSE This is set by the CrowdBox itself using an algorithm specific to the use case and based on parameters known to the CrowdBox which may not necessarily be signalled to the network. In the absence of a more specific algorithm, this parameter should be set to AVAILABLE, unless a fault is detected which would prevent activation of the eNB, in which case it should be set to UNAVAILABLE.</Description>
             </Item>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Boolean</Type>
-                <RangeEnumeration>UNSYNCHRONISED; SYNCHRONISED</RangeEnumeration>
+                <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description>States whether the CrowdBox GPS receiver is synchronised to GPS time or not: UNSYCHRONISED = FALSE; SYNCHRONISED = TRUE If more than one GPS receiver is used by the CrowdBox, then SYNCHRONISED should be reported only if all receivers are synchronised.</Description>
             </Item>
@@ -127,9 +127,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0..2^28-1</RangeEnumeration>
+                <RangeEnumeration>0..268435455</RangeEnumeration>
                 <Units></Units>
-                <Description>A 28 bit E-UTRAN Cell Identifier (ECI)</Description>
+                <Description>A 28 bit E-UTRAN Cell Identifier (ECI) (range 0..2^28-1)</Description>
             </Item>
             <Item ID="9">
                 <Name>eNB Status</Name>
