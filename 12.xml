@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_12-V1_1-20201110-A.xml
+   File: OMA-SUP-XML_12-V1_1_1-20221003-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_WLAN_Conn/
 
 OMNA LwM2M Registry
@@ -13,15 +13,13 @@ OMNA LwM2M Registry
 
 NORMATIVE INFORMATION
 
-  This file doesn't contain any Technical Specifications.
-
-  The file is also available at http://www.openmobilealliance.org/release/LightweightM2M/
+  This file does not reference any Technical Specifications.
 
   Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
 	
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile Alliance.
+  Copyright 2022 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -118,7 +116,7 @@ When disabled radio must also be disabled]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>12 bytes </RangeEnumeration>
+				<RangeEnumeration>12</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[The MAC address of the interface, in hexadecimal form.]]></Description>
 			</Item>
@@ -203,7 +201,7 @@ Including any channels in-use by access point itself.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>3 B</RangeEnumeration>
+				<RangeEnumeration>3</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[802.11d Regulatory Domain String. 
 First two octets are ISO/IEC 3166-1 two-character country code. 
@@ -254,7 +252,7 @@ The third octet is either " " (all environments), "O" (outside) or "I" (inside).
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>64 B</RangeEnumeration>
+				<RangeEnumeration>64</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[WPA/WPA2 Key expressed as a hex string. Write - Only.]]></Description>
 			</Item>
