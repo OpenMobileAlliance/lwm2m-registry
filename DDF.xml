@@ -824,21 +824,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
-    <Item>
-        <ObjectID>506</ObjectID>
-        <URN>urn:oma:lwm2m:oma:506</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>OMA</Owner>
-        <Source>0</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
     <Item>
         <ObjectID>507</ObjectID>
         <URN>urn:oma:lwm2m:oma:507</URN>
@@ -3300,21 +3285,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    
-    <Item>
-        <ObjectID>3409</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3409</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>1</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
     <Item>
         <ObjectID>3410</ObjectID>
         <URN>urn:oma:lwm2m:ext:3410</URN>
@@ -3480,20 +3450,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>3421.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>3422</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3422</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>1</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3736,20 +3692,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>3440</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3440</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>1</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>3441</ObjectID>
         <URN>urn:oma:lwm2m:ext:3441</URN>
         <Name>LwM2M v1.0 Test Object</Name>
@@ -3774,20 +3716,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>3442.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>3443</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3443</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
-        <Owner>TBD</Owner>
-        <Source>1</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -4516,76 +4444,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10301</ObjectID>
-        <URN>urn:oma:lwm2m:x:10301</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10302</ObjectID>
-        <URN>urn:oma:lwm2m:x:10302</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10303</ObjectID>
-        <URN>urn:oma:lwm2m:x:10303</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10304</ObjectID>
-        <URN>urn:oma:lwm2m:x:10304</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10305</ObjectID>
-        <URN>urn:oma:lwm2m:x:10305</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10308</ObjectID>
         <URN>urn:oma:lwm2m:x:10308</URN>
         <Name>AT&amp;T Connectivity Extension</Name>
@@ -4628,20 +4486,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>  
     <Item>
-        <ObjectID>10310</ObjectID>
-        <URN>urn:oma:lwm2m:x:10310</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10311</ObjectID>
         <URN>urn:oma:lwm2m:x:10311</URN>
         <Name>Solar Radiation</Name>
@@ -4666,20 +4510,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>10311.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10312</ObjectID>
-        <URN>urn:oma:lwm2m:x:10312</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -4740,20 +4570,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10317</ObjectID>
-        <URN>urn:oma:lwm2m:x:10317</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10318</ObjectID>
         <URN>urn:oma:lwm2m:x:10318</URN>
         <Name>RCU PM</Name>
@@ -4796,20 +4612,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10321</ObjectID>
-        <URN>urn:oma:lwm2m:x:10321</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10322</ObjectID>
         <URN>urn:oma:lwm2m:x:10322</URN>
         <Name>CCU PM</Name>
@@ -4848,20 +4650,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>10324.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10325</ObjectID>
-        <URN>urn:oma:lwm2m:x:10325</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -5440,20 +5228,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10367</ObjectID>
-        <URN>urn:oma:lwm2m:x:10367</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10368</ObjectID>
         <URN>urn:oma:lwm2m:x:10368</URN>
         <Name>SpringMotor</Name>
@@ -5482,20 +5256,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
-        <ObjectID>10370</ObjectID>
-        <URN>urn:oma:lwm2m:x:10370</URN>
-        <Name>TBC</Name>
-        <Description>TBC</Description>
-        <Owner>TBC</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
         <ObjectID>10371</ObjectID>
         <URN>urn:oma:lwm2m:x:10371</URN>
         <Name>Reboot Status</Name>
@@ -5506,34 +5266,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>10371.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10372</ObjectID>
-        <URN>urn:oma:lwm2m:x:10372</URN>
-        <Name>TBD</Name>
-        <Description>TBC</Description>
-        <Owner>TBD</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>10373</ObjectID>
-        <URN>urn:oma:lwm2m:x:10373</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
-        <Owner>TBD</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
