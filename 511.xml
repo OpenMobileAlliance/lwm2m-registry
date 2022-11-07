@@ -71,7 +71,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
                 <Type>Opaque</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>CBOR array of resource values in the same order as the links in the Target Links resource or empty value if there is error (e.g., link pointing to a resource that doesn't exist).</Description>
+                <Description>CBOR array of resource values in the same order as the links in the Target Links resource or empty value if there is error (e.g., link pointing to a resource that doesn't exist or is not allowed to be read because of access control rules).</Description>
             </Item>
             <Item ID="4023">
                 <Name>Description</Name>
