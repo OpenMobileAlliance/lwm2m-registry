@@ -47,7 +47,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
         <Name>Compact Composite</Name>
         <Description1>This Object enables collecting a set of Resource values from other Objects into a single resource representation with an array of values.</Description1>
         <ObjectID>511</ObjectID>
-        <ObjectURN>urn:oma:lwm2m:ext:511</ObjectURN>
+        <ObjectURN>urn:oma:lwm2m:oma:511</ObjectURN>
         <LWM2MVersion>1.1</LWM2MVersion>
         <ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>Multiple</MultipleInstances>
