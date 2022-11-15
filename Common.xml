@@ -165,28 +165,83 @@
       
 
       <Item ID="4015">
-
         <Name>LogDataFormat</Name>
-
         <Operations>RW</Operations>
-
         <Type>Integer</Type>
-
-        <RangeEnumeration>255</RangeEnumeration>
-        
-        <Units></Units>
-        
+        <RangeEnumeration>255</RangeEnumeration>       
+        <Units></Units>        
         <Submitter>OMA</Submitter>
-
         <Description> <![CDATA[ when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned. when retrieved by the Server, this Resource indicates which specific data format is used when the LogData Resource is returned to the Server 
-0  or Resource not present : no specific data format (sequence of bytes)1 : OMA-LwM2M TLV format2 : OMA-LwM2M JSON format3:  OMA-LwM2M CBOR format[4..99] reserved [100..255] vendor specific data format]]></Description>
-        
-        <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>
-        
+0  or Resource not present : no specific data format (sequence of bytes)1 : OMA-LwM2M TLV format2 : OMA-LwM2M JSON format3:  OMA-LwM2M CBOR format[4..99] reserved [100..255] vendor specific data format]]></Description>        
+        <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>       
         <TSLink>1</TSLink>
-
        </Item>
-
+      <Item ID="4020">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+      <Item ID="4021">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+      <Item ID="4022">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+      <Item ID="4023">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+      <Item ID="4024">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+      <Item ID="4025">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>TBD</Description>        
+        <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
 
        <Item ID="5500">
 
