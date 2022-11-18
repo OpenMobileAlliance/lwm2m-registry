@@ -27,10 +27,10 @@ Please contact helpdesk@omaorg.org in case you encounter any problem during the 
   * Reserve one or more Object IDs or/and Reusable Resource IDs based on the Issue
 
 ## 3. Create a new Object
-* For each Object to register, the Submitter requires to create a new Object file using the **[LwM2M Editor](http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx)** **[Guidelines](https://github.com/OpenMobileAlliance/lwm2m-registry/wiki/Guidelines)** & **[Best Practice](https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice)**
+* For each Object to register, the Submitter requires to create a new Object file using the <a href="http://devtoolkit.openmobilealliance.org/OEditor/Legal?back=default.aspx" target="_blank">LwM2M Editor</a>, <a href="https://github.com/OpenMobileAlliance/lwm2m-registry/wiki/Guidelines" target="_blank">Guidelines</a>& <a href="https://wiki.openmobilealliance.org/display/TOOL/LwM2M+Best+Practice" target="_blank">Best Practice</a>
 * This Object file will be used in step 4 when creating the Pull Request
 
-> Note: OMA provides an Editor toll called <a href="https://devtoolkit.openmobilealliance.org/OEditor/default.aspx" target="_blank">OMA LwM2M Editor / Validator</a>. The tool editor facilitate the create of a valid OMA LwM2M Object.
+> Note: OMA provides an Editor tool called <a href="https://devtoolkit.openmobilealliance.org/OEditor/default.aspx" target="_blank">OMA LwM2M Editor / Validator</a>. The editor facilitates the creation of a valid OMA LwM2M Object.
 
 ## 4. Create a Pull Request
 * The Submitter needs to create a Pull Request against the designated branch
