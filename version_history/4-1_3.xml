@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_4-V1_3-20201110-A.xml
+   File: OMA-SUP-XML_4-V1_3_1-20221209-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Conn_Mon/
 
 OMNA LwM2M Registry
@@ -15,7 +15,7 @@ NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-  OMA-TS-LightweightM2M_Core-V1_2
+  OMA-TS-LightweightM2M_Core-V1_2_1
 
   This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
@@ -23,7 +23,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile Alliance.
+  Copyright 2022 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -121,7 +121,7 @@ More specifically:
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Units>dBm</Units>
 				<Description><![CDATA[Indicates the average value of the received signal strength indication used in the
 current network bearer (as indicated by Resource 0 of this Object). The value is expressed in dBm. For the following network bearers the signal strength parameters indicated below are represented by this resource:
 GSM:    RSSI
