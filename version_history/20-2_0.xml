@@ -110,7 +110,7 @@ Arguments definitions are described in the table below.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration>8-Bits</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn’t contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
 			</Item>
 			<Item ID="4014"><Name>LogData</Name>
 				<Operations>R</Operations>
