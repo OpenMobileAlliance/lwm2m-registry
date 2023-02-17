@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>eSIM IoT</Name>
+		<Description1><![CDATA[The interface between eIM and IPA as described in GSMA SGP.32.]]></Description1>
+		<ObjectID>3443</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3443</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>State</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Status
+0 – ready to receive eIM message
+1 – not able to receive eIM message
+
+Note: In case value is >0 then writing to resource 2 shall not be possible]]></Description>
+			</Item>
+			<Item ID="1">
+				<Name>EID</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[EID of the eUICC that is target of the object]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>eIM message</Name>
+				<Operations>W</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The message from eIM to IPA. The message shall be in the ASN.1 DER format defined in SGP.32 Section 6.3.1]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>IPA message</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The message from IPA to eIM. The message shall be in the ASN.1 DER format defined in GSMA SGP.32 section 6.3.1]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Clear IPA message</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[In case Send or Confirmable Notifications is not used to deliver IPA messsage then execution of this resource will confirm delivery of the IPA message and clear the resource 3.]]></Description>
+			</Item>
+		</Resources>
+		<Description2 />
+	</Object>
+</LWM2M>
