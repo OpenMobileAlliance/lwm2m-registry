@@ -21,7 +21,7 @@
 				<Description><![CDATA[Status
 					0  ready to receive eIM message
 					1  not able to receive eIM message
-					Note: In case value is &gt;0 then writing to resource 2 shall not be possible]]></Description>
+					Note: In case value is >0 then writing to resource 2 shall not be possible]]></Description>
 			</Item>
 			<Item ID="1">
 				<Name>EID</Name>
