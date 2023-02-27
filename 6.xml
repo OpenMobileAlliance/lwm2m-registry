@@ -172,7 +172,7 @@ LEGAL DISCLAIMER
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Units>m</Units>
-				<Description><![CDATA[Distance threshold from the expected location beyond which the location changed resource will be set]]></Description>
+				<Description><![CDATA[Distance threshold from the expected location beyond which the location changed resource will be set. Ignored if 0 or NaN]]></Description>
 			</Item>
 			<Item ID="12">
 				<Name>Location Changed</Name>
