@@ -139,51 +139,6 @@ LEGAL DISCLAIMER
 				<Units>m/s</Units>
 				<Description><![CDATA[Speed is the time rate of change in position of a LwM2M Client without regard for direction: the scalar component of velocity.]]></Description>
 			</Item>
-			<Item ID="8">
-				<Name>Expected Latitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>lat</Units>
-				<Description><![CDATA[Expected latitude configured by the user]]></Description>
-			</Item>
-			<Item ID="9">
-				<Name>Expected Longitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>lon</Units>
-				<Description><![CDATA[Expected longitude configured by the user]]></Description>
-			</Item>
-			<Item ID="10">
-				<Name>Expected Altitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>m</Units>
-				<Description><![CDATA[Expected altitude configured by the user]]></Description>
-			</Item>
-			<Item ID="11">
-				<Name>Location Change Threshold</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>m</Units>
-				<Description><![CDATA[Distance threshold from the expected location beyond which the location changed resource will be set. Ignored if 0 or NaN]]></Description>
-			</Item>
-			<Item ID="12">
-				<Name>Location Changed</Name>
-				<Type>Boolean</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units/>
-				<Description><![CDATA[True if the current position is distant more than the configured threshold from the expected location]]></Description>
-			</Item>
 			</Resources>
 		<Description2></Description2>
 	</Object>
