@@ -3632,7 +3632,39 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
-      
+      <Item ID="6054">    
+        <Name>TBD</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>TBD</Submitter>
+        <Description><![CDATA[TBD]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      <Item ID="6055">    
+        <Name>TBD</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>TBD</Submitter>
+        <Description><![CDATA[TBD]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      <Item ID="6056">    
+        <Name>TBD</Name>     
+        <Operations></Operations>     
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>TBD</Submitter>
+        <Description><![CDATA[TBD]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>      
     </Resources>
 
   </Object>
