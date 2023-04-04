@@ -3634,10 +3634,10 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       <Item ID="6054">    
         <Name>TBD</Name>     
-        <Operations>TBD</Operations>     
+        <Operations></Operations>     
         <Type>TBD</Type>
         <RangeEnumeration>TBD</RangeEnumeration>
-        <Units>TBD</Units>
+        <Units></Units>
         <Submitter>TBD</Submitter>
         <Description><![CDATA[TBD]]></Description>
         <TS></TS>
@@ -3645,10 +3645,10 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       <Item ID="6055">    
         <Name>TBD</Name>     
-        <Operations>TBD</Operations>     
+        <Operations></Operations>     
         <Type>TBD</Type>
         <RangeEnumeration>TBD</RangeEnumeration>
-        <Units>TBD</Units>
+        <Units></Units>
         <Submitter>TBD</Submitter>
         <Description><![CDATA[TBD]]></Description>
         <TS></TS>
@@ -3656,10 +3656,10 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       <Item ID="6056">    
         <Name>TBD</Name>     
-        <Operations>TBD</Operations>     
+        <Operations></Operations>     
         <Type>TBD</Type>
         <RangeEnumeration>TBD</RangeEnumeration>
-        <Units>TBD</Units>
+        <Units></Units>
         <Submitter>TBD</Submitter>
         <Description><![CDATA[TBD]]></Description>
         <TS></TS>
