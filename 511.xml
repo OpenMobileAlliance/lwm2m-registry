@@ -62,7 +62,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
                 <Type>Corelnk</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>One or more CoRE Links to Resource instances from which the values will be stored in the Compact Data array. Each link results in a new item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc. For single-instance resources the Resource instance ID can be omitted from the link, but for multi-instance Resources it MUST be present.</Description>
+                <Description>One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Single Resources, from which the values will be stored in the Compact Data array. Each link results in a new item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.</Description>
             </Item>
             <Item ID="1">
                 <Name>Compact Data</Name>
