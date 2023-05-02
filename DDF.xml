@@ -3765,14 +3765,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>3443</ObjectID>
         <URN>urn:oma:lwm2m:ext:3443</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
-        <Owner>TBD</Owner>
+        <Name>eSIM IoT</Name>
+        <Description>The interface between eIM and IPA as described in GSMA SGP.32.</Description>
+        <Owner>GSMA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3443.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -3835,7 +3835,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>10241</ObjectID>
         <URN>urn:oma:lwm2m:x:10241</URN>
-        
         <Name>HostDeviceInfo</Name>
         <Description>This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.</Description>
         <Owner>AT&amp;T</Owner>
@@ -3847,7 +3846,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>10242</ObjectID>
         <URN>urn:oma:lwm2m:x:10242</URN>
@@ -3862,7 +3860,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243</URN>
@@ -3877,7 +3874,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243:2.0</URN>
