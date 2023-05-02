@@ -5453,6 +5453,34 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+<Item>
+        <ObjectID>10379</ObjectID>
+        <URN>urn:oma:lwm2m:x:10379</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10379 to 10478</Description>
+        <Owner>Itron</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10379.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+<Item>
+        <ObjectID>10478</ObjectID>
+        <URN>urn:oma:lwm2m:x:10478</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10379 to 10478</Description>
+        <Owner>Itron</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>10478.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
