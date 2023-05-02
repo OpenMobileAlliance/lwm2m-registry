@@ -233,7 +233,7 @@ The goal of the Connectivity Monitoring Object is to carry information reflectin
         <DDF>4.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
+        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2_1-20221209-A/OMA-TS-LightweightM2M_Core-V1_2_1-20221209-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
 
@@ -560,13 +560,28 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>20.xml</DDF>
+        <DDF>version_history/20-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V1_0_1-20200616-A/OMA-TS-LWM2M_EventLog-V1_0_1-20200616-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-        <Item>
+    <Item>
+        <ObjectID>20</ObjectID>
+        <URN>urn:oma:lwm2m:oma:20:2.0</URN>
+        <Name>Event Log</Name>
+        <Description>The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
+The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>2.0</Ver>
+        <DDF>20.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V2_0-20230131-A/OMA-TS-LWM2M_EventLog-V2_0-20230131-A.pdf</TS>
+        <TSLink>1</TSLink>
+    </Item>
+    <Item>
         <ObjectID>21</ObjectID>
         <URN>urn:oma:lwm2m:oma:21</URN>
         <Name>LWM2M OSCORE</Name>
@@ -3747,7 +3762,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>3443</ObjectID>
         <URN>urn:oma:lwm2m:ext:3443</URN>
         <Name>eSIM IoT</Name>
@@ -3762,9 +3777,64 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>3445</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3445</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3445 to 3480</Description>
+        <Owner>TBD</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3480</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3480</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3445 to 3480</Description>
+        <Owner>TBD</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3500</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3500</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3500 to 3599</Description>
+        <Owner>TBD</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3599</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3599</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3500 to 3599</Description>
+        <Owner>TBD</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>10241</ObjectID>
         <URN>urn:oma:lwm2m:x:10241</URN>
-
         <Name>HostDeviceInfo</Name>
         <Description>This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.</Description>
         <Owner>AT&amp;T</Owner>
@@ -3776,7 +3846,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>10242</ObjectID>
         <URN>urn:oma:lwm2m:x:10242</URN>
@@ -3791,7 +3860,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243</URN>
@@ -3806,7 +3874,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-	
     <Item>
         <ObjectID>10243</ObjectID>
         <URN>urn:oma:lwm2m:x:10243:2.0</URN>
@@ -5379,6 +5446,34 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDF>10378.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+<Item>
+        <ObjectID>10379</ObjectID>
+        <URN>urn:oma:lwm2m:x:10379</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10379 to 10478</Description>
+        <Owner>Itron</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+<Item>
+        <ObjectID>10478</ObjectID>
+        <URN>urn:oma:lwm2m:x:10478</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10379 to 10478</Description>
+        <Owner>Itron</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>

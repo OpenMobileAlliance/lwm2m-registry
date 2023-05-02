@@ -3632,7 +3632,39 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>
-      
+      <Item ID="6054">    
+        <Name>Calibrate Coefficient</Name>
+        <Operations>E</Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>AVSystem</Submitter>
+        <Description><![CDATA[Execute sensor calibration on device to recalculate Current Calibration resource value.]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      <Item ID="6055">
+        <Name>Calibration Offset</Name>
+        <Operations>RW</Operations>
+        <Type>Float</Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>AVSystem</Submitter>
+        <Description><![CDATA[Offset used by sensor.]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>
+      <Item ID="6056">
+        <Name>Calibrate Offset</Name>
+        <Operations>E</Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>AVSystem</Submitter>
+        <Description><![CDATA[Execute sensor calibration on device to recalculate Current Offset resource value.]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>      
     </Resources>
 
   </Object>

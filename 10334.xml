@@ -109,9 +109,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			<MultipleInstances>Single</MultipleInstances>
 			<Mandatory>Mandatory</Mandatory>
 			<Type>Integer</Type>
-			<RangeEnumeration>0..2^63-1</RangeEnumeration>
+			<RangeEnumeration>0..9223372036854775807</RangeEnumeration>
 			<Units></Units>
-			<Description><![CDATA[Sequence No of this alarm, used to detect alarm loss.]]></Description>
+			<Description><![CDATA[Sequence No of this alarm, used to detect alarm loss. A 63 bit value with range 0..2^63-1.]]></Description>
 		</Item>
 		<Item ID="8">
 			<Name>Additional Info</Name>

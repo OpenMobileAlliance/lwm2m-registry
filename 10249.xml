@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0..2^32-1</RangeEnumeration>
+                <RangeEnumeration>0..4294967295</RangeEnumeration>
                 <Units></Units>
                 <Description>M-TMSI signalled by the UE to the eNB in the RRCConnectionRequest message (see TS 36.331).</Description>
             </Item>
@@ -108,9 +108,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0..2^32-1</RangeEnumeration>
+                <RangeEnumeration>0..4294967295</RangeEnumeration>
                 <Units>B</Units>
-                <Description>The total number of MAC bytes sent to the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field.</Description>
+                <Description>The total number of MAC bytes sent to the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field. A 32 bit value with range 0..2^32-1.</Description>
             </Item>
             <Item ID="7">
                 <Name>Cumulative Uplink Throughput per Connected User</Name>
@@ -118,9 +118,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0..2^32-1</RangeEnumeration>
+                <RangeEnumeration>0..4294967295</RangeEnumeration>
                 <Units>B</Units>
-                <Description>The total number of MAC bytes received from the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field.</Description>
+                <Description>The total number of MAC bytes received from the connected user over the immediately preceding period specified by the "Cumulative Measurement Window" field. A 32 bit value with range 0..2^32-1.</Description>
             </Item>
             <Item ID="8">
                 <Name>Neighbour Cell Report</Name>
