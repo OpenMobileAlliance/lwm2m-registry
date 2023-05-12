@@ -45,7 +45,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
     <Object ObjectType="MODefinition">
         <Name>Compact Composite</Name>
-        <Description1>This Object enables collecting a set of Resource values from other Objects into a single resource representation with an array of values.</Description1>
+        <Description1>This Object enables collecting a set of Resource values from other Objects into a single resource representation.</Description1>
         <Description2/>
         <ObjectID>511</ObjectID>
         <ObjectURN>urn:oma:lwm2m:oma:511</ObjectURN>
@@ -62,17 +62,17 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
                 <Type>Corelnk</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>One or more CoRE Links to Resource instances from which the values will be stored in the Compact Data array. Each link results in a new item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc. For single-instance resources the Resource instance ID can be omitted from the link, but for multi-instance Resources it MUST be present.</Description>
+                <Description>One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Single Resources in the same LwM2M Client, from which the values will be stored in the Compact Data array. Each link corresponds to an item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.</Description>
             </Item>
             <Item ID="1">
                 <Name>Compact Data</Name>
-                <Operations>RW</Operations>
+                <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Opaque</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>CBOR array of resource values in the same order as the links in the Target Links resource or empty value if there is error (e.g., link pointing to a resource that doesn't exist or is not allowed to be read because of access control rules).</Description>
+                <Description>CBOR array of resource values in the same order as the links in the Target Links resource. CBOR simple value of undefined should be used as the array item if an error occurs while reading the value for the corresponding resource (e.g., link pointing to a resource that doesn't exist or the resource is not allowed to be read because of access control rules).</Description>
             </Item>
             <Item ID="2">
                 <Name>Description</Name>
