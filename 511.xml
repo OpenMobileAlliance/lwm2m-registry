@@ -62,7 +62,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
                 <Type>Corelnk</Type>
                 <RangeEnumeration/>
                 <Units/>
-                <Description>One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Single Resources in the same LwM2M Client, from which the values will be stored in the Compact Data array. Each link corresponds to an item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.</Description>
+                <Description>One or more CoRE Links to Readable Single Resources and/or Resource Instances of Readable Multiple Resources in the same LwM2M Client, from which the values will be stored in the Compact Data array. Each link corresponds to an item in the Compact Data array: first link points to the resource instance with the value for the first array item, second link to the instance with the second array item, etc.</Description>
             </Item>
             <Item ID="1">
                 <Name>Compact Data</Name>
