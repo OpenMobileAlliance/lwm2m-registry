@@ -45,7 +45,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
     <Object ObjectType="MODefinition">
         <Name>Compact Composite</Name>
-        <Description1>This Object enables collecting a set of Resource values from other Objects into a single resource representation.</Description1>
+        <Description1>This Object enables collecting a set of Resource values from other Objects into a single Resource representation.</Description1>
         <Description2/>
         <ObjectID>511</ObjectID>
         <ObjectURN>urn:oma:lwm2m:oma:511</ObjectURN>
