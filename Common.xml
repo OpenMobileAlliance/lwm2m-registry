@@ -3664,7 +3664,18 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Description><![CDATA[Execute sensor calibration on device to recalculate Current Offset resource value.]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
-      </Item>      
+      </Item> 
+      <Item ID="6057">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter></Submitter>
+        <Description><![CDATA[TBD]]></Description>
+        <TS></TS>
+        <TSLink>0</TSLink>
+      </Item>     
     </Resources>
 
   </Object>
