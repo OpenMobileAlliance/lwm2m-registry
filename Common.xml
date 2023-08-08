@@ -3672,7 +3672,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Submitter></Submitter>
-        <Description><![CDATA[]]></Description>
+        <Description><![CDATA[TBD]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>     
