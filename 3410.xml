@@ -33,9 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>Device Extension</Name>
 		<Description1>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called "ExtDevInfo" (resource ID 22).</Description1>
 		<ObjectID>3410</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3410</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3410:2.0</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
