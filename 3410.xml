@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- BSD-3 Clause License
 
 Copyright 2020 uCIFI Alliance
@@ -29,9 +28,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 -->
-
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Device Extension</Name>
 		<Description1>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called "ExtDevInfo" (resource ID 22).</Description1>
@@ -48,8 +45,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Standard global trade-in international number for the control device.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +55,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Unique identifier of the manufacturer of the control device, equivalent to IEEE's OUI (Organizational Unique Identifier). This value should be a Hexadecimal value. This value may be used by an online uCIFI product catalog server, for software modules to retrieve the data model of a device using this attribute associated with the model number on the "Device" (Id=3) object.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,8 +65,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>User-readable name of the device set by the user.</Description>
 			</Item>
 			<Item ID="4">
@@ -78,8 +75,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Identifier of the asset (e.g. meter, luminaire, container) that is controlled by the device.</Description>
 			</Item>
 			<Item ID="5">
@@ -88,18 +85,18 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Installation date of the device.</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Software update</Name>
-				<Operations>R</Operations>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True while software within the device is being updated.</Description>
 			</Item>
 			<Item ID="7">
@@ -108,8 +105,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when the device is in maintenance mode.</Description>
 			</Item>
 			<Item ID="8">
@@ -117,9 +114,9 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type></Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Type/>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Reset the configuration parameters (and only the configuration parameters) of the device. It does not clear any counter (e.g. kWh counter or operating hour counter).</Description>
 			</Item>
 			<Item ID="9">
@@ -128,7 +125,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>h</Units>
 				<Description>Cumulated number of hours during which the device has been powered on.</Description>
 			</Item>
@@ -138,11 +135,56 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Additional information about peripheral firmware versions. The format is left to the vendor.</Description>
 			</Item>
+			<Item ID="11">
+				<Name>DST Start</Name>
+				<Type>Time</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description>The precise date and UTC time during the year when Daylight Saving Time begins, represented as Unix Time.</Description>
+				<Units>s</Units>
+			</Item>
+			<Item ID="12">
+				<Name>DST End</Name>
+				<Type>Time</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description>The precise date and UTC time during the year when Daylight Saving Time ends, represented as Unix Time.</Description>
+				<Units/>
+			</Item>
+			<Item ID="13">
+				<Name>DST Offset</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description>The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as “ 01:00”</Description>
+				<Units/>
+			</Item>
+			<Item ID="14">
+				<Name>Uptime</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Number of seconds since the last reboot of the device.</Description>
+				<Units>s</Units>
+			</Item>
+			<Item ID="15">
+				<Name>RFD device</Name>
+				<Type>Boolean</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Set to true if the device is a Reduce Functional Device running on battery.</Description>
+				<Units/>
+			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>
