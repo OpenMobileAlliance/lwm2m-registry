@@ -5518,6 +5518,21 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+    </Item>
+    	<Item>
+        <ObjectID>10481</ObjectID>
+        <URN>urn:oma:lwm2m:x:10481</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10481</Description>
+        <Owner>Vodafone</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
