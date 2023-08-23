@@ -3671,7 +3671,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <Type>Float</Type>
         <RangeEnumeration>0.0..86400.0</RangeEnumeration>
         <Units>s</Units>
-        <Submitter></Submitter>
+        <Submitter>South East Water Corporation</Submitter>
         <Description><![CDATA[A value used to specify the time period over which data should be averaged.This value can be changed by doing a write command]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
