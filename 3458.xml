@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2022 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Program Monitor</Name>
+		<Description1/>
+		<ObjectID>3458</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3458</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Program Name</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Name of the program</Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Status</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Identifies the current status of the control program, taking the values: 0 - Disabled 1 - Inactive 2 - Running where 'Disabled' should be present whenever the CP has been administratively disabled. The state should be set to 'Inactive' if the calendar associated with the CP makes is NOT applicable for the current day. If the CP is administratively enabled, and either the associated calendar makes it valid for the current day or no Calendar is associated with it.</Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Error Conditions</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Bitmap
+Bit 0: Sensor syntax error
+Bit 1: Time syntax error
+Bit 2: Invalid program function 
+Bit 3..31: reserved for future use]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Clear errors</Name>
+				<Type/>
+				<Operations>E</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[When executed, clears temporary error conditions.
+To be noted that some of the errors may require to change the content of the corresponding program function object to be completely cleared.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Evaluation Counter</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Cumulative counter for the number of times the current control program has been evaluated</Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Execution Counter</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Cumulative counter for the number of times the current control program has ben executed after evaluation, triggering the corresponding action and output. With 'Execution counter' less than or equal to 'Evaluation counter'</Description>
+				<Units/>
+			</Item>
+			<Item ID="6">
+				<Name>Counter Reset</Name>
+				<Type/>
+				<Operations>E</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Reset all counters under the current object</Description>
+				<Units/>
+			</Item>
+			<Item ID="7">
+				<Name>Last Execution</Name>
+				<Type>Time</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Timestamp for the latest execution of the current CP</Description>
+				<Units/>
+			</Item>
+			<Item ID="8">
+				<Name>Last Control Output</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description>String identifying the control output enforced during last program execution. If the control program supports multiple ouputs, one instance of this resource should be created for each output.</Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>

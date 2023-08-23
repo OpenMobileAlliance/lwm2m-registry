@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2022 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Calendar Rule</Name>
+		<Description1/>
+		<ObjectID>3453</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3453</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Calendar Name</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Mnemonic name of the calendar]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Calendar Type</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[
+0 – Day time Gregorian calendar used to reference periods of 24h (00- 24h) during the year
+1 – Night time calendar, a variation of the Gregorian calendar proposed by uCiFi to reference “night” periods of 24h during a year.
+Measured from 12:00 of one Gregorian calendar day to 12:00 of the next day.
+If omitted, 0 shall be assumed]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Start Date</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Start date formatted as yyyy-mm-dd.
+To define the same start date every year: --mm-dd (e.g. --01-01 for Jan 1st every year).
+Start date is optional.
+If no start date, no end date should be mentioned, and the scheduler should apply every day of every year.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>End Date</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[End date formatted as yyyy-mm-dd.
+To define the same end date every year: --mm-dd (e.g. --03-31 for March 31st every year).
+End date is optional.
+If no start date is specified, no end date should be mentioned as well, and the scheduler should apply every day of every year.
+If the start date is specified but the end date is not, it shall be assumed to be equal to the start date]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Date Rule</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[
+Date string formatted as dom month dow, inspired from the CRON format without minutes and hours, that indicates the occurrence of the rule:
+dom = day of month (1-31)
+month = 1-12
+dow = day of week (0-7, where 0,7=Sunday)
+* * * means every day between “Start date” and “End date”
+1-10 * * means from the 1st to the 10th day of the month each month between “Start date” and “End date”
+* * 6,7 means every Saturday and Sunday, between “Start date” and “End date”
+The date rule is optional.
+If not present, it means every day between “Start date” and “End date”.
+If present, it would be applied in AND to every instance of Start date and End date]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>
