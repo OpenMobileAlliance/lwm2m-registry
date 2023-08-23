@@ -2,7 +2,7 @@
 
 <!-- BSD-3 Clause License
 
-Copyright 2020 uCIFI Alliance
+Copyright 2022 uCIFI Alliance
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -29,16 +29,14 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 -->
-
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Single-phase electrical meter</Name>
 		<Description1>The uCIFI single-phase electrical meter measures the electrical consumption of loads on one electrical line, such as electrical cabinets in city infrastructures, street lighting networks, homes and buildings.</Description1>
 		<ObjectID>3421</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3421</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3421:2.0</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -48,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Instantaneous voltage measured between line and neutral.</Description>
 			</Item>
@@ -58,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Set to True when voltage is below low voltage threshold.</Description>
 			</Item>
@@ -68,8 +66,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when voltage is below low voltage threshold.</Description>
 			</Item>
 			<Item ID="4">
@@ -78,7 +76,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Threshold above which the high voltage resource is set to True.</Description>
 			</Item>
@@ -88,8 +86,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when voltage is above high voltage threshold.</Description>
 			</Item>
 			<Item ID="6">
@@ -98,7 +96,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>A</Units>
 				<Description>Instantaneous current measured.</Description>
 			</Item>
@@ -108,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>A</Units>
 				<Description>Threshold below which the low current resource is set to True.</Description>
 			</Item>
@@ -118,8 +116,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when current is below low current threshold.</Description>
 			</Item>
 			<Item ID="9">
@@ -128,7 +126,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Threshold above which the high current resource is set to True.</Description>
 			</Item>
@@ -138,8 +136,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when current is above high current threshold.</Description>
 			</Item>
 			<Item ID="11">
@@ -148,7 +146,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>Hz</Units>
 				<Description>Instantaneous frequency measured.</Description>
 			</Item>
@@ -158,7 +156,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>deg</Units>
 				<Description>Instantaneous phase angle measured.</Description>
 			</Item>
@@ -168,8 +166,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Instantaneous power factor overall.</Description>
 			</Item>
 			<Item ID="14">
@@ -178,8 +176,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Threshold below which the low power factor resource is set to True.</Description>
 			</Item>
 			<Item ID="15">
@@ -188,8 +186,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True when power factor is below low power factor threshold.</Description>
 			</Item>
 			<Item ID="16">
@@ -198,7 +196,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Active power import</Description>
 			</Item>
@@ -208,7 +206,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Active power export.</Description>
 			</Item>
@@ -218,7 +216,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration />
+				<RangeEnumeration/>
 				<Units>var</Units>
 				<Description>Reactive power import.</Description>
 			</Item>
@@ -228,7 +226,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>var</Units>
 				<Description>Reactive power export</Description>
 			</Item>
@@ -238,7 +236,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>VA</Units>
 				<Description>Instantaneous apparent power import.</Description>
 			</Item>
@@ -248,7 +246,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration />
+				<RangeEnumeration/>
 				<Units>VA</Units>
 				<Description>Instantaneous apparent power export.</Description>
 			</Item>
@@ -258,7 +256,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Instantaneous active power.</Description>
 			</Item>
@@ -268,7 +266,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration />
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Instantaneous net active power.</Description>
 			</Item>
@@ -278,7 +276,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Measurement period of instantaneous value.</Description>
 			</Item>
@@ -288,7 +286,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>Wh</Units>
 				<Description>Active energy import (unified rate).</Description>
 			</Item>
@@ -298,7 +296,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>Wh</Units>
 				<Description>Active energy export (unified rate).</Description>
 			</Item>
@@ -308,7 +306,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>Wh</Units>
 				<Description>Active energy (|+A|+|-A|) Combined total.</Description>
 			</Item>
@@ -318,7 +316,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>Wh</Units>
 				<Description>Active energy (|+A|-|-A|) Combined total.</Description>
 			</Item>
@@ -328,7 +326,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy import (unified rate)</Description>
 			</Item>
@@ -338,7 +336,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy export (unified rate).</Description>
 			</Item>
@@ -348,7 +346,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy QI (+Ri) (unified rate).</Description>
 			</Item>
@@ -358,7 +356,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy QII (+Rc) (unified rate).</Description>
 			</Item>
@@ -368,7 +366,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration />
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy QIII (-Ri) (unified rate).</Description>
 			</Item>
@@ -378,7 +376,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>varh</Units>
 				<Description>Reactive energy QIV (-Rc) (unified rate).</Description>
 			</Item>
@@ -388,7 +386,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>VAh</Units>
 				<Description>Apparent energy import (unified rate).</Description>
 			</Item>
@@ -398,7 +396,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>VAh</Units>
 				<Description>Apparent energy export (unified rate).</Description>
 			</Item>
@@ -408,8 +406,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of power failures.</Description>
 			</Item>
 			<Item ID="38">
@@ -418,8 +416,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of long power failures.</Description>
 			</Item>
 			<Item ID="39">
@@ -428,7 +426,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time threshold for long power failure.</Description>
 			</Item>
@@ -438,7 +436,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Duration of last long power failure.</Description>
 			</Item>
@@ -448,7 +446,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Threshold for voltage sag.</Description>
 			</Item>
@@ -458,7 +456,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time threshold for voltage sag.</Description>
 			</Item>
@@ -468,8 +466,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of voltage sags.</Description>
 			</Item>
 			<Item ID="44">
@@ -478,7 +476,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Duration of last voltage sag.</Description>
 			</Item>
@@ -488,7 +486,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Magnitude of last voltage sag.</Description>
 			</Item>
@@ -498,7 +496,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Threshold for voltage sag.</Description>
 			</Item>
@@ -508,7 +506,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time threshold for voltage sag.</Description>
 			</Item>
@@ -518,8 +516,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of voltage sags.</Description>
 			</Item>
 			<Item ID="49">
@@ -528,7 +526,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Duration of last voltage sag.</Description>
 			</Item>
@@ -538,7 +536,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Magnitude of last voltage swell.</Description>
 			</Item>
@@ -548,7 +546,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Threshold for missing voltage (voltage cut).</Description>
 			</Item>
@@ -558,7 +556,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time threshold for voltage cut.</Description>
 			</Item>
@@ -568,8 +566,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.</Description>
 			</Item>
 			<Item ID="54">
@@ -578,8 +576,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Transformer ratio - current (numerator).</Description>
 			</Item>
 			<Item ID="55">
@@ -588,8 +586,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Transformer ratio - voltage (denominator).</Description>
 			</Item>
 			<Item ID="56">
@@ -598,8 +596,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Transformer ratio - current (numerator).</Description>
 			</Item>
 			<Item ID="57">
@@ -608,11 +606,60 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Transformer ratio - voltage (denominator).</Description>
 			</Item>
+			<Item ID="58">
+				<Name>Unexpected load</Name>
+				<Type>Boolean</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>True if an unexpected load is detected, e.g when current is consumed despite the load is supposed to be disconnected</Description>
+				<Units/>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+			<Item ID="6050">
+				<Name>Fractional Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>Seconds</Units>
+				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
+			</Item>
+			<Item ID="6042">
+				<Name>Measurement Quality Indicator</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
+			</Item>
+			<Item ID="6049">
+				<Name>Measurement Quality Level</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
+			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>
