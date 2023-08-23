@@ -1,218 +1,318 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- BSD-3 Clause License
 
-Copyright 2020 uCIFI Alliance
+  Copyright 2022 uCIFI Alliance
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-1. Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright
-notice, this list of conditions and the following disclaimer in the
-documentation and/or other materials provided with the distribution.
-3. Neither the name of the copyright holder nor the names of its
-contributors may be used to endorse or promote products derived
-from this software without specific prior written permission.
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
 
 -->
-
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Traffic Counter</Name>
 		<Description1>The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).</Description1>
 		<ObjectID>3432</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3432</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3432:2.0</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
+			<Item ID="0">
+				<Name>Vehicle type</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Identifies the Vehicle type(s) detected in conformance with DATEX II v3 specifications.
+The resource instance ID used here should match, the remaining resource IDs under this object for measurement taken by the device for the specified vehicle type. 
+Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any type)
+
+0=Vehicle normally used for agricultural purposes, e.g. tractor, combined harvester etc.
+1=Vehicle of any type.
+2=Articulated bus
+3=Articulated trolley bus
+4=Articulated vehicle.
+5=Bicycle.
+6=Bus.
+7=Vehicles designed and constructed for the carriage of passengers and comprising no more than eight seats in addition to the driver’s seat, and having a maximum mass (“technically permissible maximum laden mass”) not exceeding 3.5 tons (M1).
+8=Caravan.
+9=Car or light vehicle.
+10=Car towing a caravan.
+11=Car towing a trailer.
+12=Vehicle normally used for construction or maintenance purposes, e.g. digger, excavator, bulldozer, lorry mounted crane etc.
+13=Four wheel drive vehicle.
+14=Vehicles with a total weight above 3,500 kg (vehicle and load).
+15=Heavy goods vehicle with trailer
+16=A transporter for heavy duty (usually with abnormal dimensions).
+17=Vehicle whose weight means it should be classed as a heavy vehicle
+18=High sided vehicle.
+19=Vehicles for the carriage of goods and having a maximum mass not exceeding 3.5 tonnes (class N1).
+20=Large car
+21=Vehicles for the carriage of goods and having a maximum mass exceeding 3.5 tonnes (belonging to class N2 when not exceeding 12 tonnes, otherwise class N3).
+22=Light goods vehicle with trailer
+23=A heavy lorry that is longer than normal.
+24=Lorry of any type.
+25=Metro
+26=Vehicles designed and constructed for the carriage of passengers, comprising more than eight seats in addition to the driver’s seat, and having a maximum mass not exceeding 5 tonnes (class M2).
+27=Moped (a two wheeled motor vehicle characterized by a small engine typically less than 50cc and by normally having pedals).
+28=Motorcycle.
+29=Three wheeled vehicle comprising a motorcycle with an attached side car.
+30=Motorhome
+31=Motorscooter (a two wheeled motor vehicle characterized by a step-through frame and small diameter wheels).
+32=Passenger car
+33=Small car
+34=Vehicle with large tank for carrying bulk liquids.
+35=Three wheeled vehicle of unspecified type.
+36=Trailer.
+37=Tram.
+38=Trolley bus
+39=Two wheeled vehicle of unspecified type.
+40=Van.
+41=Vehicle (of unspecified type) towing a caravan.
+42=Vehicle with catalytic converter.
+43Vehicle without catalytic converter.
+44=Vehicle (of unspecified type) towing a trailer.
+45n=Vehicle with even numbered registration plate.
+46=Vehicle with odd numbered registration plate.
+99=Unknown.
+100=Other than as defined in this enumeration.]]></Description>
+				<Units/>
+			</Item>
 			<Item ID="1">
 				<Name>Cumulated number</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Cumulated number of vehicles counted since last reset.</Description>
 			</Item>
 			<Item ID="2">
 				<Name>Reset cumulated number</Name>
 				<Operations>E</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type></Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Type/>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Reset the cumulated number of vehicles.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Cumulated number today</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Cumulated number of vehicles counted today.</Description>
 			</Item>
 			<Item ID="4">
 				<Name>Measuring period 1</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time period 1 during which the counter shall provide number of vehicles (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="5">
 				<Name>Measuring period 2</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time period 2 during which the counter shall provide number of vehicles (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="6">
 				<Name>Measuring period 3</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>s</Units>
 				<Description>Time period 3 during which the counter shall provide number of vehicles (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="7">
 				<Name>Cumulated number during last period 1</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Cumulated number of vehicles counted during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Cumulated number during last period 2</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Cumulated number of vehicles counted during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="9">
 				<Name>Cumulated number during last period 3</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Cumulated number of vehicles counted during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Average speed during last period 1</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average speed measured on the vehicles during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="11">
 				<Name>Average speed during last period 2</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average speed measured on the vehicles during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="12">
 				<Name>Average speed during last period 3</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average speed measured on the vehicles during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="13">
 				<Name>Average distance during last period 1</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average distance between two vehicles measured during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="14">
 				<Name>Average distance during last period 2</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average distance between two vehicles measured during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="15">
 				<Name>Average distance during last period 3</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Average distance between two vehicles measured during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="16">
 				<Name>Speed limit threshold</Name>
 				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Speed limit threshold used to calculate the percentage of vehicles above speed limit.</Description>
 			</Item>
 			<Item ID="17">
 				<Name>Percentage above speed limit</Name>
 				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>Percentage of vehicles driving above speed limit.</Description>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+			<Item ID="6050">
+				<Name>Fractional Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units>s</Units>
+				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
+			</Item>
+			<Item ID="6042">
+				<Name>Measurement Quality Indicator</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description>Percentage of vehicles driving above speed limit.</Description>
+				<RangeEnumeration>0..23</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
+			</Item>
+			<Item ID="6049">
+				<Name>Measurement Quality Level</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>

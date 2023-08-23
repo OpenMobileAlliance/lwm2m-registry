@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- BSD-3 Clause License
 
-Copyright 2020 uCIFI Alliance
+Copyright 2022 uCIFI Alliance
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -29,16 +28,14 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 -->
-
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Air quality</Name>
 		<Description1>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation.</Description1>
 		<ObjectID>3428</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3428</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3428:2.0</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -48,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Level of PM10 measured by the air quality sensor.</Description>
 			</Item>
@@ -58,7 +55,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Average level of PM10 measured by the sensor during the last 24 hours.</Description>
 			</Item>
@@ -68,7 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Level of PM2.5 measured by the air quality sensor.</Description>
 			</Item>
@@ -78,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Average level of PM2.5 measured by the sensor during the last 24 hours.</Description>
 			</Item>
@@ -88,7 +85,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Level of PM1 measured by the air quality sensor.</Description>
 			</Item>
@@ -98,7 +95,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ug/m3</Units>
 				<Description>Average level of PM1 measured by the sensor during the last 24 hours.</Description>
 			</Item>
@@ -108,7 +105,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of carbon monoxide measured by the air quality sensor.</Description>
 			</Item>
@@ -118,7 +115,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of carbon monoxide measured by the sensor during the last 8 hours.</Description>
 			</Item>
@@ -128,7 +125,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of sulfur dioxide measured by the air quality sensor.</Description>
 			</Item>
@@ -138,7 +135,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of sulfur dioxide measured by the sensor during the last 1 hour.</Description>
 			</Item>
@@ -148,7 +145,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of sulfur dioxide measured by the sensor during the last 24 hours.</Description>
 			</Item>
@@ -158,7 +155,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of ozone measured by the air quality sensor.</Description>
 			</Item>
@@ -168,7 +165,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of ozone measured by the sensor during the last 1 hour.</Description>
 			</Item>
@@ -178,7 +175,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of ozone measured by the sensor during the last 8 hour.</Description>
 			</Item>
@@ -188,7 +185,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of nitrogen dioxide measured by the air quality sensor.</Description>
 			</Item>
@@ -198,7 +195,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of nitrogen dioxide measured by the sensor during the last 1 hour.</Description>
 			</Item>
@@ -208,7 +205,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of carbon dioxide measured by the air quality sensor.</Description>
 			</Item>
@@ -218,7 +215,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of carbon dioxide measured by the sensor during the last 1 hour.</Description>
 			</Item>
@@ -228,7 +225,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of nitric oxide measured by the air quality sensor.</Description>
 			</Item>
@@ -238,7 +235,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of nitric oxide measured by the sensor during the last 1 hour.</Description>
 			</Item>
@@ -248,7 +245,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Level of hydrogen sulfid measured by the air quality sensor.</Description>
 			</Item>
@@ -258,11 +255,71 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>ppm</Units>
 				<Description>Average level of hydrogen sulfid measured by the sensor during the last 1 hour.</Description>
 			</Item>
+			<Item ID="23">
+				<Name>VOC</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>ppm</Units>
+				<Description>Level of Volatile Organic Compounds measured by the air quality sensor.</Description>
+			</Item>
+			<Item ID="24">
+				<Name>VOC 1 hour average</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>ppm</Units>
+				<Description>Average level of Volatile Organic Compounds measured by the sensor during the last 1 hour.</Description>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+			<Item ID="6050">
+				<Name>Fractional Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units>s</Units>
+				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
+			</Item>
+			<Item ID="6042">
+				<Name>Measurement Quality Indicator</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..23</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
+			</Item>
+			<Item ID="6049">
+				<Name>Measurement Quality Level</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
+			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>
