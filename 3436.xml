@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Maximum number of scripts supported by the device.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of free slots to store new scripts.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,8 +68,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Maximum number of conditions supported by the device.</Description>
 			</Item>
 			<Item ID="4">
@@ -78,8 +78,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Number of free slots to store new conditions.</Description>
 			</Item>
 			<Item ID="5">
@@ -88,11 +88,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Vendor-specific resource to share the capabilities of the devices as regards to edge computing.</Description>
 			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>

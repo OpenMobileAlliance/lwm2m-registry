@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Date/time at which the script should be executed, formatted as a CRON rule.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Object URN/Resource ID of the script to apply to the times/days defined in the execution time/day resource.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,11 +68,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Set to True if the device can’t support the condition.</Description>
 			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>

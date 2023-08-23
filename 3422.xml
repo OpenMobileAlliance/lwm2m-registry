@@ -396,7 +396,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 1]]></Description>
-				<Units></Units>
+				<Units/>
 			</Item>
 			<Item ID="37">
 				<Name>L2 Meter Instance</Name>
@@ -405,7 +405,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 2]]></Description>
-				<Units></Units>
+				<Units/>
 			</Item>
 			<Item ID="38">
 				<Name>L3 Meter Instance</Name>
@@ -414,7 +414,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 3]]></Description>
-				<Units></Units>
+				<Units/>
 			</Item>
 			<Item ID="39">
 				<Name>Low power factor threshold</Name>

@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Global trade-in international number used in the Luminaire Asset controlled by the device.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Year of manufacture of the luminaire.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,8 +68,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Week of manufacture of the luminaire.</Description>
 			</Item>
 			<Item ID="4">
@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>lm</Units>
 				<Description>Nominal light output of the luminaire.</Description>
 			</Item>
@@ -88,8 +88,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Enumeration of possible light distribution type, using the Zhaga D4i enumeration. Please refer to ZD4i standard for more details.</Description>
 			</Item>
 			<Item ID="6">
@@ -98,8 +98,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Painting color of the luminaire.</Description>
 			</Item>
 			<Item ID="7">
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Nominal input power of the luminaire.</Description>
 			</Item>
@@ -118,7 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>W</Units>
 				<Description>Power at minimum dim level for the luminaire.</Description>
 			</Item>
@@ -128,7 +128,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Nominal max AC mains voltage for the luminaire to operate.</Description>
 			</Item>
@@ -138,7 +138,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>V</Units>
 				<Description>Nominal min AC mains voltage for the luminaire to operate.</Description>
 			</Item>
@@ -149,7 +149,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units></Units>
+				<Units/>
 				<Description>Color rendering index (0 to 100) of the luminaire.</Description>
 			</Item>
 			<Item ID="12">
@@ -158,7 +158,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration/>
 				<Units>K</Units>
 				<Description>Color temperature of the luminaire.</Description>
 			</Item>
@@ -168,8 +168,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Luminaire identification as per DiiA/D4i specification part 251 (MB1 extension): 60 ascii character string.</Description>
 			</Item>
 			<Item ID="14">
@@ -178,11 +178,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<RangeEnumeration/>
+				<Units/>
 				<Description>Luminaire identification number as per DiiA/D4i specification part 251 (MB1 extension): 20 digit number.</Description>
 			</Item>
 		</Resources>
-		<Description2></Description2>
+		<Description2/>
 	</Object>
 </LWM2M>
