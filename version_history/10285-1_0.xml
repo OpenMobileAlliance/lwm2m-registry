@@ -211,21 +211,6 @@ By setting the Clear Operator to Less Than (1), when the measured value for this
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description><![CDATA[The Latest Eventlog Payload resource is a read-only serialised Opaque (Binary) representation of all the Event Data between the Last Delivered Event Time and the Latest Recorded Event Time. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Latest Delivered Interval should be updated. When no new data exists, an empty Opaque value should be provided. The payload data can be provided in an implementation specific serialisation, but by default for fixed length values should use the OMA-LwM2M CBOR format encoded with one of these schemes:- Event Type = Alarm Current State (1) In this mode, only the current alarm state should be reported 1. 8-bit integer, value 2 representing OMA-LwM2M CBOR format. 2. Event Code [16-bit integer] 3. Event Type [8-bit Integer] - Alarm Current State (1) 4. Alarm Timestamp [32-bit unsigned integer] representing the number of seconds since Jan 1st, 1970 in the UTC time zone. 5. Alarm State [8-bit Integer] ]]></Description>
-
-The payload data can be provided in an implementation specific serialisation, but by default for fixed length values should use the OMA-LwM2M CBOR format encoded with one of these schemes:-
-
-Event Type = State Change Log (2)
-
-In this mode, The Latest Eventlog Payload will contain all alarm transitions since the previous delivery in this mode
-
-1. 8-bit integer, value 2 representing OMA-LwM2M CBOR format.
-2. Event Code [16-bit integer]
-3. Event Type [8-bit Integer] - State Change Log (2)
-4. Alarm Timestamp [32-bit unsigned integer] representing the number of seconds since Jan 1st, 1970 in the UTC time zone.
-5. Alarm State [8-bit Integer]
-6. Alarm Counter [16-bit integer]
-7. Measurement Quality Level (MQL) [8-bit Integer]
-]]></Description>
             </Item>
 			<Item ID="5501">
 				<Name>Digital Input Counter</Name>
