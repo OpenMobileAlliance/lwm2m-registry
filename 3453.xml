@@ -107,6 +107,15 @@ If not present, it means every day between “Start date” and “End date”.
 If present, it would be applied in AND to every instance of Start date and End date]]></Description>
 				<Units/>
 			</Item>
+			<Item ID="5">
+				<Name>Calendar Active</Name>
+				<Type>Boolean</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[True if the calendar rule is currently active]]></Description>
+				<Units/>
+			</Item>
 		</Resources>
 	</Object>
 </LWM2M>
