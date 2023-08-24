@@ -35,9 +35,9 @@
 		<Name>Three-phase electrical meter complement</Name>
 		<Description1>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description1>
 		<ObjectID>3422</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3422:1.1</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3422</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.1</ObjectVersion>
+		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
