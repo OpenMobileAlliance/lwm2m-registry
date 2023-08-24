@@ -198,7 +198,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>Seconds</Units>
+				<Units>s</Units>
 				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
 			</Item>
 			<Item ID="6042">
