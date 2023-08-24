@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Opaque</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Condition described in a vendor specific way.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Object URN/Resource ID of the script to apply to the time/days defined in the vendor condition resource.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,11 +68,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the device can’t support the condition.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

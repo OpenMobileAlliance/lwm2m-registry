@@ -48,11 +48,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Text string according to the RBG hexadecimal format with # (e.g. #FF0000 for 100% red).</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

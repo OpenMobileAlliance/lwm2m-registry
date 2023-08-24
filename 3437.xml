@@ -48,8 +48,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Name of the script.</Description>
 			</Item>
 			<Item ID="2">
@@ -58,8 +58,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Unique hash or signature associated to the script to be verified by the end-device before execution. The format of the hash or signature is vendor-specific.</Description>
 			</Item>
 			<Item ID="3">
@@ -68,8 +68,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Version of the script, as defined by the vendor.</Description>
 			</Item>
 			<Item ID="4">
@@ -78,8 +78,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Opaque</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Vendor-specific script.</Description>
 			</Item>
 			<Item ID="5">
@@ -88,8 +88,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Script format to enable the device to select the script interpreter in case it supports multiple (e.g. LUA). The format of this resource is free to support vendor-specific formats.</Description>
 			</Item>
 			<Item ID="6">
@@ -98,8 +98,8 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the script is not supported or if the device has identified errors in the script.</Description>
 			</Item>
 			<Item ID="7">
@@ -108,11 +108,11 @@ POSSIBILITY OF SUCH DAMAGE.
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the hash/signature is not correct.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>
