@@ -101,7 +101,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[PUBLISHER ONLY Sensor information to be included in the payload of the "Distributed Sensor Message" notifications sent within the group: 0: Sensor state information - Only the current state of a sensor is to be sent 1: All sensor information – A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example "sensor type", "reading timestamp", "hold time", etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]]]></Description>
+				<Description><![CDATA[PUBLISHER ONLY Sensor information to be included in the payload of the "Distributed Sensor Message" notifications sent within the group: 0: Sensor state information - Only the current state of a sensor is to be sent 1: All sensor information - A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example "sensor type", "reading timestamp", "hold time", etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="7">
