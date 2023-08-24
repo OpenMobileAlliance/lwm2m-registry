@@ -50,7 +50,7 @@
 				<Description><![CDATA[Specifies the capabilities supported by the device to manage and store remote sensors information retrieved from the sensor group as a Bit Mask:
 Bit 0: Dynamic mapping support - Remote sensors can be discovered as new messages are received. If explicit mapping is required, new corresponding object instances will be automatically created
 Bit 1: Implicit mapping support - Sensor state is maintained on an implementation specific internal database instead of being reflected into local objects
-Bit 2: Auto clear support – Automatic clear to the default value is supported after validity time is expired]]></Description>
+Bit 2: Auto clear support - Automatic clear to the default value is supported after validity time is expired]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="2">
@@ -88,7 +88,7 @@ Bit 1: AND
 Bit 2: ADD
 Bit 3: MAX
 Bit 4: MIN
-Bit 5: LAST – The last value reported by any sensor in the group becomes the group state value
+Bit 5: LAST - The last value reported by any sensor in the group becomes the group state value
 Bit 6: Reserved (Custom 1)
 Bit 7: Reserved (Custom 2)
 If the device supports no fusion capabilities, this resource should be set to 0.]]></Description>

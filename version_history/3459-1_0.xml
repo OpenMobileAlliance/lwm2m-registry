@@ -56,7 +56,7 @@
 				<Operations>R</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[SUBSCRIBER ONLY UNIX Timestamp for when the last activity in the group was recorded, either by the node sending a message to the group our retrieved from the “Publishing Timestamp” of the last message received from the group. [default=0]]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY UNIX Timestamp for when the last activity in the group was recorded, either by the node sending a message to the group our retrieved from the "Publishing Timestamp" of the last message received from the group. [default=0]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="2">
@@ -65,7 +65,7 @@
 				<Operations>R</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of Object/Instance/resource, retrieved from the “Remote Sensor State URI” field of the last received or sent group message. [default=empty]]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of Object/Instance/resource, retrieved from the "Remote Sensor State URI" field of the last received or sent group message. [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="3">
@@ -92,7 +92,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[PUBLISHER SUBSCRIBER A unique Identifier for the Group that should be present in every transmission of sensor data linked to the group. If specified, this identifier will be used as the Group ID in the “Distributed Group Message” payload, otherwise the Group address will be used. [default=empty]]]></Description>
+				<Description><![CDATA[PUBLISHER SUBSCRIBER A unique Identifier for the Group that should be present in every transmission of sensor data linked to the group. If specified, this identifier will be used as the Group ID in the "Distributed Group Message" payload, otherwise the Group address will be used. [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="6">
@@ -101,7 +101,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[PUBLISHER ONLY Sensor information to be included in the payload of the “Distributed Sensor Message” notifications sent within the group: 0: Sensor state information – Only the current state of a sensor is to be sent 1: All sensor information – A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example “sensor type”, “reading timestamp”, “hold time”, etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]]]></Description>
+				<Description><![CDATA[PUBLISHER ONLY Sensor information to be included in the payload of the "Distributed Sensor Message" notifications sent within the group: 0: Sensor state information – Only the current state of a sensor is to be sent 1: All sensor information – A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example "sensor type", "reading timestamp", "hold time", etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="7">
@@ -138,7 +138,7 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes, this resource limits the rate at which a sensor is allowed to broadcast messages to the sensor group. This is used to avoid message storming scenarios within the distributed sensor group. Ignored if 0 [default=0]]]></Description>
-				<Units>sec</Units>
+				<Units>s</Units>
 			</Item>
 			<Item ID="11">
 				<Name>Max Broadcast Period</Name>
@@ -147,7 +147,7 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes, this resource should be used when sensor Broadcast criteria is set to either 2 or 3, defining the maximum amount of time that can elapse before a sensor publishes is current state within the group. Ignored if 0 [default=0]]]></Description>
-				<Units>sec</Units>
+				<Units>s</Units>
 			</Item>
 			<Item ID="12">
 				<Name>Publisher Step interval</Name>
@@ -183,7 +183,7 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[PUBLISHER ONLY Time for which the published sensor state shall be considered valid If Auto-clear capability is supported by the publisher, this value will be included in the messages being sent Ignored if 0 [default=0]]]></Description>
-				<Units>sec</Units>
+				<Units>s</Units>
 			</Item>
 			<Item ID="16">
 				<Name>Auto Clear Default Value</Name>
@@ -236,7 +236,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[PUBLISHER ONLY The sensor ID that should be used to translate the instance specified within the corresponding “Local Sensor State URI“ when publishing new data. In most scenarios Sensor publisher ID should be unique within the Group (unless if some type of overlap/overwrite of the information provided by the different sensors is intended) [default=empty]]]></Description>
+				<Description><![CDATA[PUBLISHER ONLY The sensor ID that should be used to translate the instance specified within the corresponding "Local Sensor State URI" when publishing new data. In most scenarios Sensor publisher ID should be unique within the Group (unless if some type of overlap/overwrite of the information provided by the different sensors is intended) [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="22">

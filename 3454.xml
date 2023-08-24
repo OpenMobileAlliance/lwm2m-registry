@@ -61,7 +61,7 @@ Syntax of each condition is as follows:
 <time>,<sensor #1>,<sensor #2>,…,<sensor #n>
 
 hh:mm or S(unset), sun(R)ise /- minute offset
-Ranges are separated with a tilde character “~”
+Ranges are separated with a tilde character "~"
 Open ranges can be written as start~ (value >= start) or ~end (value <= end)
 
 Time should be a range, eg 18:00~04:00 or S~R
@@ -101,7 +101,7 @@ R-20 = sunrise minus 20 minutes]]></Description>
 				<Description><![CDATA[Sequence of arguments to be provided to the target.
 If strings have to be provided, they must be enclosed in double quotes
 e.g. 10;50;24
-“parking empty”;”parking full”
+"parking empty";"parking full"
 
 Any spacing provided outside double quotes can be safely ignored]]></Description>
 				<Units/>

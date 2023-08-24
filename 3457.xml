@@ -135,7 +135,7 @@ Can be eventually adjusted in order to reserve more or less memory.]]></Descript
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Max flash memory (in bytes) to be allocated.
 Can be eventually adjusted in order to reserve more or less memory]]></Description>
-				<Units>Bytes</Units>
+				<Units>B</Units>
 			</Item>
 			<Item ID="10">
 				<Name>Flash Memory Free</Name>
@@ -144,7 +144,7 @@ Can be eventually adjusted in order to reserve more or less memory]]></Descripti
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Free flash memory in bytes]]></Description>
-				<Units>Bytes</Units>
+				<Units>B</Units>
 			</Item>
 			<Item ID="11">
 				<Name>Error Conditions</Name>
@@ -201,7 +201,7 @@ Bit 9: Off when inactive]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Max RAM memory (in bytes) to be allocated.
 Can be eventually adjusted in order to reserve more or less memory]]></Description>
-				<Units>Bytes</Units>
+				<Units>B</Units>
 			</Item>
 			<Item ID="15">
 				<Name>Dynamic Memory Free</Name>
@@ -210,7 +210,7 @@ Can be eventually adjusted in order to reserve more or less memory]]></Descripti
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Free RAM memory in bytes]]></Description>
-				<Units>Bytes</Units>
+				<Units>B</Units>
 			</Item>
 			<Item ID="16">
 				<Name>Reset schedule objects</Name>

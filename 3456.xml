@@ -65,7 +65,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description>Defines the type of progression to occur to  transition the current target resource value to the value defined by the of the control program output. Current options: 0 - Immediate 1 - linear 2 – exponential 3 – Device internal mechanism</Description>
+				<Description>Defines the type of progression to occur to  transition the current target resource value to the value defined by the of the control program output. Current options: 0 - Immediate 1 - linear 2 - exponential 3 - Device internal mechanism</Description>
 				<Units/>
 			</Item>
 			<Item ID="3">
