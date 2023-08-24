@@ -110,7 +110,7 @@
 				<Type>Float</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Last or Current Measured Value from the WBGT sensor.</Description>
+				<Description>Last or Current Measured Value from the Sensor.</Description>
 			</Item>
 			<Item ID="5601">
 				<Name>Min Measured Value</Name>

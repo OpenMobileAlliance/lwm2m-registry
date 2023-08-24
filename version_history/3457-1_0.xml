@@ -222,5 +222,6 @@ Can be eventually adjusted in order to reserve more or less memory]]></Descripti
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

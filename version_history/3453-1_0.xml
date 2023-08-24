@@ -117,5 +117,6 @@ If present, it would be applied in AND to every instance of Start date and End d
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

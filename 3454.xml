@@ -166,5 +166,6 @@ If resource or specific entry is not specified, the default output filter, if pr
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

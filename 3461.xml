@@ -104,5 +104,6 @@ If the device supports no fusion capabilities, this resource should be set to 0.
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

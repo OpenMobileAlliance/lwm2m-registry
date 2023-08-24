@@ -128,5 +128,6 @@ To be noted that some of the errors may require to change the content of the cor
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

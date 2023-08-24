@@ -98,5 +98,6 @@ Otherwise, the real physical sensor instance can be used and the translation has
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>

@@ -162,5 +162,6 @@ Each target must be prepended with all the output instances to identify the full
 				<Units/>
 			</Item>
 		</Resources>
+		<Description2/>
 	</Object>
 </LWM2M>
