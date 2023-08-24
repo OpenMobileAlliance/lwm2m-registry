@@ -3350,6 +3350,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3411-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3411</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3411:1.1</URN>
+        <Name>Battery</Name>
+        <Description>The uCIFI battery object provides attributes to monitor battery level and activity.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3411.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3378,6 +3392,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3413-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3413</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3413:1.1</URN>
+        <Name>uCIFI Generic Actuator</Name>
+        <Description>The uCIFI generic actuator may be used for any actuator but not to replace Outdoor Lamp Controllers nor for an Irrigation Valves which have a specific device type in the uCIFI data model.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3413.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3462,6 +3490,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3419-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3419</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3419:1.1</URN>
+        <Name>Photocell</Name>
+        <Description>A uCIFI photocell object is used for lighting control, particularly to identify when light should be switched ON/OFF.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3419.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3504,6 +3546,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3423-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3423</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3423:1.1</URN>
+        <Name>Gas meter</Name>
+        <Description>The uCIFI gas meter measures the volume of gas that was distributed through the gas meter, in pulse count and/or in m3. It also detects anomalies in the gas meter.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3423.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3518,6 +3574,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3424-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3424</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3424:1.1</URN>
+        <Name>Water meter</Name>
+        <Description>The uCIFI water meter measures water volume that was distributed through a water meter, in pulse count as well as in m3. It also detects anomalies in the water meter.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3424.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3532,6 +3602,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3425-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3425</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3425:1.1</URN>
+        <Name>Irrigation valve</Name>
+        <Description>The uCIFI irrigation valve provides a way to control and monitor an irrigation valve.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3425.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3546,6 +3630,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3426-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3426</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3426:1.1</URN>
+        <Name>Water quality sensor</Name>
+        <Description>The uCIFI water quality sensor measures the quality of the water in the drinkable water distribution network, in water tanks or in lakes and rivers.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3426.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3560,6 +3658,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3427-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3427</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3427:1.1</URN>
+        <Name>Pressure monitoring sensor</Name>
+        <Description>The uCIFI water pressure monitoring sensor measures water pressure and help identify water leaks in water distribution pipelines.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3427.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3588,6 +3700,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3429-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3429</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3429:1.1</URN>
+        <Name>Tilt sensor</Name>
+        <Description>The uCIFI tilt sensor provides the angle between the object's internal vertical and the perpendicular to the earth.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3429.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3616,6 +3742,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3431-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3431</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3431:1.1</URN>
+        <Name>Parking Sensor</Name>
+        <Description>The uCIFI parking sensor provides actual and cumulated occupancy duration as well as forbidden parking detection.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3431.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3644,6 +3784,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3433-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3433</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3433:1.1</URN>
+        <Name>Noise sensor</Name>
+        <Description>The uCIFI noise sensor reports a noise measurement in decibel. It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the noise sensor and some specific alarms resulting from noise analysis by the device.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3433.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3658,6 +3812,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3434-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3434</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3434:1.1</URN>
+        <Name>People counter</Name>
+        <Description>The uCIFI people counter provides people counting information using Bluetooth beacon or any other method.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3434.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
