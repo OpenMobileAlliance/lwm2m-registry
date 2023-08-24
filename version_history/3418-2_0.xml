@@ -32,410 +32,359 @@
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>Global Navigation Satellite System</Name>
-		<Description1>More than a positioning object, the uCIFI global navigation satellite system object provides all the information required to calculate a position/location.</Description1>
-		<ObjectID>3430</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3430:2.0</ObjectURN>
+		<Name>Electrical monitor</Name>
+		<Description1>The uCIFI electrical monitor object provides attributes related to the analysis of electrical consumption in an outdoor luminaire or in a streetlight cabinet. It also identifies electrical anomalies.</Description1>
+		<ObjectID>3418</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3418:2.0</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>2.0</ObjectVersion>
-		<MultipleInstances>Single</MultipleInstances>
+		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
-			<Item ID="0">
-				<Name>Fix timestamp</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units>s</Units>
-				<Description>Timestamp of when the location measurement was performed.</Description>
-			</Item>
 			<Item ID="1">
-				<Name>Latitude</Name>
+				<Name>Supply voltage</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>lat</Units>
-				<Description>Decimal notation of latitude, e.g. -43.5723 [World Geodetic System 1984]. This value ranges from [-90, 90].</Description>
+				<Units>V</Units>
+				<Description>Electrical voltage supplied to the device.</Description>
 			</Item>
 			<Item ID="2">
-				<Name>Longitude</Name>
+				<Name>Supply current</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
+				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>lon</Units>
-				<Description>Decimal notation of longitude, e.g. 153.21760 [World Geodetic System 1984]. This value ranges from [-180, 180].</Description>
+				<Units>A</Units>
+				<Description>Electrical current supplied to the device.</Description>
 			</Item>
 			<Item ID="3">
-				<Name>Altitude</Name>
+				<Name>Frequency</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>m</Units>
-				<Description>Altitude above mean sea level in meters.</Description>
+				<Units>Hz</Units>
+				<Description>Frequency of the supply current to the device.</Description>
 			</Item>
 			<Item ID="4">
-				<Name>Speed</Name>
+				<Name>Active power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>m/s</Units>
-				<Description>Horizontal speed calculated by the device.</Description>
+				<Units>W</Units>
+				<Description>Active power consumed by the device and its electrical load.</Description>
 			</Item>
 			<Item ID="5">
-				<Name>Heading</Name>
+				<Name>Power factor</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
-				<Units>deg</Units>
-				<Description>Direction that the device is following</Description>
+				<RangeEnumeration>-1..1</RangeEnumeration>
+				<Units/>
+				<Description>Power factor is equal to active power divided by apparent power. The value is between -1 and  1.</Description>
 			</Item>
 			<Item ID="6">
-				<Name>Radius</Name>
+				<Name>Cumulated active energy</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>m</Units>
-				<Description>Radius of a circular area corresponding to the location’s uncertainty (GPS data precision). Negative values indicate that the radius is not available.</Description>
+				<Units>Wh</Units>
+				<Description>Cumulated number of Wh measured by the device and its load since last energy counter reset.</Description>
 			</Item>
 			<Item ID="7">
-				<Name>HDOP</Name>
-				<Operations>R</Operations>
+				<Name>Energy reset</Name>
+				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type/>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Horizontal dilution of precision.</Description>
+				<Description>Reset both cumulated active and reactive energy counter.</Description>
 			</Item>
 			<Item ID="8">
-				<Name>VDOP</Name>
-				<Operations>R</Operations>
+				<Name>Low power factor threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Vertical dilution of precision.</Description>
+				<Description>Threshold below which the device should trigger a low power factor event.</Description>
 			</Item>
 			<Item ID="9">
-				<Name>Estimated horizontal accuracy</Name>
+				<Name>Low power factor</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
-				<Units>m</Units>
-				<Description>Estimated horizontal accuracy.</Description>
+				<Units/>
+				<Description>Set to True if the power factor is below threshold. This is an absolute value threshold.</Description>
 			</Item>
 			<Item ID="10">
-				<Name>Estimated vertical accuracy</Name>
-				<Operations>R</Operations>
+				<Name>Low power threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>m</Units>
-				<Description>Estimated vertical accuracy.</Description>
+				<Units>W</Units>
+				<Description>Threshold below which the device should trigger a low power event.</Description>
 			</Item>
 			<Item ID="11">
-				<Name>Estimated speed accuracy</Name>
-				<Operations>R</Operations>
+				<Name>Low power threshold at low dim level</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>m/s</Units>
-				<Description>Estimated speed accuracy.</Description>
+				<Units>W</Units>
+				<Description>Threshold below which the device should trigger a low power event. This is an addition to the low power threshold to allow a separated threshold when dim level is low.</Description>
 			</Item>
 			<Item ID="12">
-				<Name>Estimated heading accuracy</Name>
+				<Name>Low power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
-				<Units>deg</Units>
-				<Description>Estimated heading accuracy.</Description>
+				<Units/>
+				<Description>Set to True if the power is below threshold. Vendor may consider the Low power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="13">
-				<Name>Fix type</Name>
-				<Operations>R</Operations>
+				<Name>High power threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description><![CDATA[Possible values are : 
-					0 = No fix
-					1 = Autonomous GNSS fix
-					2 = Differential GNSS fix
-					3 = GPS PPS
-					4 = RTK-fixed
-					5 = RTK-floated
-					6 = Estimated fix
-					7 = Dead reckoning fix
-					8 = Manual input, surveyed
-					9 = Simulated mode
-					If no fix is possible, but assisted position is provided, value can be returned as 8 = Manual input
-					]]>
-				</Description>
+				<Units>W</Units>
+				<Description>Threshold above which the device should trigger a high power event.</Description>
 			</Item>
 			<Item ID="14">
-				<Name>Fix dimension</Name>
-				<Operations>R</Operations>
+				<Name>High power threshold at low dim level</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description><![CDATA[Possible values are: 
-					0,1 = no fix
-					2 = 2D fix
-					3 = 3D fix 
-					As per NMEA-0183 GSA.]]>
-				</Description>
+				<Units>W</Units>
+				<Description>Threshold above which the device should trigger a high power event. This is an addition to the high power threshold to allow a separated threshold when dim level is low.</Description>
 			</Item>
 			<Item ID="15">
-				<Name>Used satellites</Name>
+				<Name>High power</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Number of satellites used for the fix.</Description>
+				<Description>Set to True if the power is above threshold. Vendor may consider the High power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="16">
-				<Name>Visible satellites</Name>
-				<Operations>R</Operations>
+				<Name>Low current threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description>Number of satellites viewed. Represent all the satellites seen but some of them cannot be in use (e.g. bad signal).</Description>
+				<Units>A</Units>
+				<Description>Threshold below which the device should trigger a low current event.</Description>
 			</Item>
 			<Item ID="17">
-				<Name>Satellite identifiers</Name>
+				<Name>Low current</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Identifier of the satellite.</Description>
+				<Description>Set to True if the current is below threshold.</Description>
 			</Item>
 			<Item ID="18">
-				<Name>Satellite identifiers</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<Name>High current threshold</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>deg</Units>
-				<Description>Elevation of the satellite.</Description>
+				<Units>A</Units>
+				<Description>Threshold above which the device should trigger a high current event.</Description>
 			</Item>
 			<Item ID="19">
-				<Name>Satellite azimuth</Name>
+				<Name>High current</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
-				<Units>deg</Units>
-				<Description>Azimuth of the satellite.</Description>
+				<Units/>
+				<Description>Set to True if the current is above threshold.</Description>
 			</Item>
 			<Item ID="20">
-				<Name>Almanac</Name>
-				<Operations>R</Operations>
+				<Name>Low voltage threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description><![CDATA[Validity of the almanac. Possible values are: 
-					0 = invalid
-					1 = valid
-					.]]>
-				</Description>
+				<Units>V</Units>
+				<Description>Threshold below which the device should trigger a low voltage event.</Description>
 			</Item>
 			<Item ID="21">
-				<Name>Ephemeris</Name>
+				<Name>Low voltage</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description><![CDATA[Validity of the ephemeris of each satellite. Possible values are : 
-					0 = invalid
-					1 = valid
-					.]]>
-				</Description>
+				<Description>Set to True if the voltage is below threshold.</Description>
 			</Item>
 			<Item ID="22">
-				<Name>Signal-to-noise ratio</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<Name>High voltage threshold</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
-				<Units>dB</Units>
-				<Description>Strength of the signal for each satellite, also called carrier-to-noise.</Description>
+				<RangeEnumeration>ON;OFF</RangeEnumeration>
+				<Units>V</Units>
+				<Description>Threshold above which the device should trigger a high voltage event.</Description>
 			</Item>
 			<Item ID="23">
-				<Name>GNSS</Name>
+				<Name>High voltage</Name>
 				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
+				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description><![CDATA[GNSS used for the fix. A mask is used with the following bit definition:
-					0 = GPS (USA)
-					1 = GALILEO (EU)
-					2 = GLONASS (Russia)
-					3 = BeiDou (China)
-					4 = QZSS (Japan)
-					5 = IRNSS/NAVIC (India)
-					A 0 indicates that the GNSS is not used a 1 indicates it is used.]]>
-				</Description>
+				<Description>Set to True if the voltage is above threshold.</Description>
 			</Item>
 			<Item ID="24">
-				<Name>Hardware RTC</Name>
-				<Operations>R</Operations>
+				<Name>Critical inrush threshold</Name>
+				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Time</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>s</Units>
-				<Description>Time of the internal clock of the GNSS hardware.</Description>
+				<Units>A</Units>
+				<Description>Threshold above which the device should trigger a critical inrush event.</Description>
 			</Item>
 			<Item ID="25">
-				<Name>Assisted GPS</Name>
-				<Operations>RW</Operations>
+				<Name>Critical inrush current</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Set to True if the almanac is obtained via a cellular connection. Set to False otherwise.</Description>
+				<Description>Set to True if the inrush current is above threshold.</Description>
 			</Item>
 			<Item ID="26">
-				<Name>Power command</Name>
-				<Operations>RW</Operations>
+				<Name>Minimum inrush Current</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description>Command to switch the hardware ON or OFF and status of the device.</Description>
+				<Units>A</Units>
+				<Description>Minimum inrush current since last configuration.</Description>
 			</Item>
 			<Item ID="27">
-				<Name>PDOP</Name>
+				<Name>Maximum inrush Current</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description>Dilution of precision (NMEA-0183 GSA).</Description>
+				<Units>A</Units>
+				<Description>Maximum inrush current since last configuration.</Description>
 			</Item>
 			<Item ID="28">
-				<Name>Status</Name>
+				<Name>Latest inrush Current</Name>
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>String</Type>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units/>
-				<Description>Status A=active or V=Void (NMEA-0183 RMC).</Description>
+				<Units>A</Units>
+				<Description>Latest inrush current measured since last time the relay switched ON.</Description>
 			</Item>
 			<Item ID="29">
-				<Name>Expected latitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
+				<Name>Reactive power</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Units>lat</Units>
-				<Description><![CDATA[Expected latitude configured by the user. Ignored if 0 or NaN]]></Description>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>var</Units>
+				<Description>Instantaneous reactive power measured by the device and its electrical load.</Description>
 			</Item>
 			<Item ID="30">
-				<Name>Expected longitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
+				<Name>Reactive energy</Name>
+				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
-				<Units>lon</Units>
-				<Description><![CDATA[Expected longitude configured by the user. Ignored if 0 or NaN]]></Description>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description>Cumulative reactive power measured by the device and its electrical load since last energy counter reset.</Description>
 			</Item>
 			<Item ID="31">
-				<Name>Expected altitude</Name>
+				<Name>Low power threshold at custom dim level</Name>
 				<Type>Float</Type>
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>m</Units>
-				<Description><![CDATA[Expected altitude configured by the user. Ignored if 0 or NaN]]></Description>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description/>
+				<Units>W</Units>
 			</Item>
 			<Item ID="32">
-				<Name>Expected location threshold</Name>
+				<Name>High power threshold at custom dim level</Name>
 				<Type>Float</Type>
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>m</Units>
-				<Description><![CDATA[Distance threshold from the expected location beyond which the location changed resource will be set. Ignored if 0 or NaN]]></Description>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description/>
+				<Units>W</Units>
 			</Item>
 			<Item ID="33">
-				<Name>Out of position</Name>
-				<Type>Boolean</Type>
+				<Name>Custom dim level min range</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description/>
+				<Units>/100</Units>
+			</Item>
+			<Item ID="34">
+				<Name>Custom dim level max range</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description/>
+				<Units>/100</Units>
+			</Item>
+			<Item ID="35">
+				<Name>Dimming level</Name>
+				<Type>Integer</Type>
 				<Operations>R</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Units/>
-				<Description><![CDATA[True if the current position is distant more than the configured threshold from the expected location]]></Description>
-			</Item>
-			<Item ID="34">
-				<Name>Assisted latitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>lat</Units>
-				<Description><![CDATA[Assisted latitude configured by the user, to be used in case of no coverage. Ignored if 0 or NaN]]></Description>
-			</Item>
-			<Item ID="35">
-				<Name>Assisted longitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>lon</Units>
-				<Description><![CDATA[Assisted longitude configured by the user, to be used in case of no coverage. Ignored if 0 or NaN]]></Description>
-			</Item>
-			<Item ID="36">
-				<Name>Assisted altitude</Name>
-				<Type>Float</Type>
-				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Units>m</Units>
-				<Description><![CDATA[Assisted altitude configured by the user, to be used in case of no coverage. Ignored if 0 or NaN]]></Description>
+				<Description/>
+				<Units>/100</Units>
 			</Item>
 			<Item ID="5518">
 				<Name>Timestamp</Name>
@@ -453,8 +402,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration>0..1</RangeEnumeration>
-				<Units>s</Units>
+				<RangeEnumeration/>
+				<Units>Seconds</Units>
 				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
 			</Item>
 			<Item ID="6042">
@@ -463,7 +412,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0..23</RangeEnumeration>
+				<RangeEnumeration/>
 				<Units/>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
@@ -473,7 +422,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration>0..100</RangeEnumeration>
+				<RangeEnumeration/>
 				<Units/>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
