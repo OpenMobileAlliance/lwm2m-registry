@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Input Filter</Name>
+		<Description1/>
+		<ObjectID>3455</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3455</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Input State</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Current state captured on the input source]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Input Source</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Example:
+Instance #0: /3302/0/5500
+Instance #1: /3302/1/5500]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Data Type</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[0 - opaque 1 - counter integer 2 - gauge integer 3 - gauge float 4 - Time 5 - String]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Evaluation Interval</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Sets the frequency at which the LwM2M resource identified as Source should be evaluated.
+Example, if set to 5000, the Program should evaluate the value reported by the LwM2M resource pointed by Source every 5 seconds.]]></Description>
+				<Units>s</Units>
+			</Item>
+			<Item ID="4">
+				<Name>Step Filter</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Sets a step interval, making the Program evaluate the LwM2M resource pointed by Source, only when its value changes by more than Step Filter.
+Example, if set to 1000, the Program should evaluate the value reported by the LwM2M resource pointed by Source only if it changes by more than 1000 units from the last evaluation.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5903">
+				<Name>Busy to Clear delay</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Delay from the detection state to the clear state in ms.]]></Description>
+				<Units>ms</Units>
+			</Item>
+			<Item ID="5904">
+				<Name>Clear to Busy delay</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Delay from the clear state to the busy state in ms.]]></Description>
+				<Units>ms</Units>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>

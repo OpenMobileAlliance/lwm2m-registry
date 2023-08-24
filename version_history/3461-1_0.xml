@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Sensor Group Device Capabilities</Name>
+		<Description1/>
+		<ObjectID>3461</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3461</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>Remote Sensor Management capabilities</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Specifies the capabilities supported by the device to manage and store remote sensors information retrieved from the sensor group as a Bit Mask:
+Bit 0: Dynamic mapping support - Remote sensors can be discovered as new messages are received. If explicit mapping is required, new corresponding object instances will be automatically created
+Bit 1: Implicit mapping support - Sensor state is maintained on an implementation specific internal database instead of being reflected into local objects
+Bit 2: Auto clear support – Automatic clear to the default value is supported after validity time is expired]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Max number of explicit sensors</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[The maximum number of sensors and sensor states the device can instantiate.
+This value is calculated by the count of all different sensor objects associated with a sensor groups.
+This value shall be set to 0 if explicit mapping is not supported
+On uCiFi compliant devices support for static explicit mapping is mandatory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Max number of implicit sensors</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[The maximum number of sensors and sensor states the device can keep in memory.
+This value is calculated by the count of all different sensor objects associated with a sensor groups.
+This value shall be set to 0 if implicit mapping is not supported.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Data Fusion Capabilities</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Specifies the data fusion algorithms supported by the device represented as a bitmask:
+Bit 0: OR
+Bit 1: AND
+Bit 2: ADD
+Bit 3: MAX
+Bit 4: MIN
+Bit 5: LAST – The last value reported by any sensor in the group becomes the group state value
+Bit 6: Reserved (Custom 1)
+Bit 7: Reserved (Custom 2)
+If the device supports no fusion capabilities, this resource should be set to 0.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Reset DSG objects</Name>
+				<Type/>
+				<Operations>E</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[When executed, trigger a complete wipe of the distributed sensor groups already commissioned]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>

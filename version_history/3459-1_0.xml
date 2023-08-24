@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Distributed Sensor Group</Name>
+		<Description1/>
+		<ObjectID>3459</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3459</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Group State</Name>
+				<Type>Float</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[The current output state of the sensor Group, derived either from the latest sensor state published to the group, or computed based on all sensor inputs when data Fusion Operation is used [default=NaN]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Most recent group activity</Name>
+				<Type>Time</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY UNIX Timestamp for when the last activity in the group was recorded, either by the node sending a message to the group our retrieved from the “Publishing Timestamp” of the last message received from the group. [default=0]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Most recent Sensor Notification</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of Object/Instance/resource, retrieved from the “Remote Sensor State URI” field of the last received or sent group message. [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Most recent Sensor Publisher ID</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY The publisher sensor ID associated to the last registered sensor notification [default=0]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Group  Address</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER SUBSCRIBER The address where all devices that wish to be part of the group, need to communicate with, either by publishing sensor data to the address or by subscribing to sensor data from the address. In case IP multicast is used for exchange of data within a distributed sensor group, than this resource would be used to store the IPv4 or IPv6 multicast group address [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Group ID</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER SUBSCRIBER A unique Identifier for the Group that should be present in every transmission of sensor data linked to the group. If specified, this identifier will be used as the Group ID in the “Distributed Group Message” payload, otherwise the Group address will be used. [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="6">
+				<Name>Shared Sensor information</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Sensor information to be included in the payload of the “Distributed Sensor Message” notifications sent within the group: 0: Sensor state information – Only the current state of a sensor is to be sent 1: All sensor information – A device publishing sensor updates into the group should include within the notification payload all sensor object resources. These will depend on the sensor but may include for example “sensor type”, “reading timestamp”, “hold time”, etc.. When not defined the only sensor information to be sent to the group MUST be its up-to-date state information, no other sensor related information is to be sent. [default=0]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="7">
+				<Name>Quality of service</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY If the underlying transport technology supports QoS, this resource can be used to set the buffering and forwarding priority of this sensor data within the network. [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="8">
+				<Name>Hop Limit</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes to set the hop limit to apply on the broadcast messages used to forward sensor information, in this way limiting the reach of the sensor data message forwarding within a group. [default=5]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="9">
+				<Name>Broadcast Criteria</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY 1 - On sensor state change, 2 – periodic, 3 – both [default=1]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="10">
+				<Name>Min Broadcast Period</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes, this resource limits the rate at which a sensor is allowed to broadcast messages to the sensor group. This is used to avoid message storming scenarios within the distributed sensor group. Ignored if 0 [default=0]]]></Description>
+				<Units>sec</Units>
+			</Item>
+			<Item ID="11">
+				<Name>Max Broadcast Period</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes, this resource should be used when sensor Broadcast criteria is set to either 2 or 3, defining the maximum amount of time that can elapse before a sensor publishes is current state within the group. Ignored if 0 [default=0]]]></Description>
+				<Units>sec</Units>
+			</Item>
+			<Item ID="12">
+				<Name>Publisher Step interval</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Used by publishers nodes, the resource works as a filter, allowing only significant variations on the reading provided by local sensor (minimum step interval) to be forwarded to the sensor group [default=1].]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="13">
+				<Name>Min Threshold</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Data is sent only if greater than or equal min threshold. Ignored if omitted or NaN [default=NaN]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="14">
+				<Name>Max Threshold</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Data is sent only if less than or equal max threshold. Ignored if omitted or NaN [default=NaN]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="15">
+				<Name>Auto Clear Validity Time</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Time for which the published sensor state shall be considered valid If Auto-clear capability is supported by the publisher, this value will be included in the messages being sent Ignored if 0 [default=0]]]></Description>
+				<Units>sec</Units>
+			</Item>
+			<Item ID="16">
+				<Name>Auto Clear Default Value</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY Default value to be restored when the validity time is expired. The publisher may not include the validity time when the sensor state is already equal (or equivalent) to the default state. If not specified 0/false has to be assumed [default=0]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="17">
+				<Name>Data Fusion Operation</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY The data fusion operation to be performed between resources pointed by local sensor state URIs and remote sensor state URIs (or their implicitly allocated equivalent value). To be noted that the operation is normally applicable to numerical values only (for Boolean values, 0 = false, 1 = true) 0: No fusion is to be performed 1: OR 2: AND 3: ADD 4: MAX 5: MIN 6: LAST - The last value reported by any sensor in the group becomes the group state value 7: Reserved (Custom 1) 8: Reserved (Custom 2)]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="18">
+				<Name>Remote Sensors Dynamic Mapping</Name>
+				<Type>Boolean</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY This resource controls how to locally map remote sensors and its configuration depends on the capabilities advertised within the Sensor Group Device Capabilities False: Static mapping is enforced. Only publishers listed in Remote Sensor State URI are accepted and take part into the fusion operation. True: Dynamic mapping is enforced. Any publisher belonging to the group is accepted and take part into the fusion operation [default=false]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="19">
+				<Name>Remote Sensors Implicit Mapping</Name>
+				<Type>Boolean</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY This resource controls how to locally map remote sensors and its configuration depends on the capabilities advertised within the Sensor Group Device Capabilities False: Explicit mapping is enforced. Remote sensor state is captured and maintained in the current device by updating local objects instances corresponding to remote publishers, allowing server endpoint visibility over individual remote sensor states. If dynamic mapping is not supported, object instances shall be created in advance True: Implicit mapping is enforced. Remote sensor state is captured and maintained on an implementation specific internal database. No external visibility is provided on the current state of remote sensor entries. [default=false]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="20">
+				<Name>Local Sensor State URI</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY URI in the format of ObjectID/instanceID/resourceID(/resourceInstanceID) pointing to the LwM2M resource instance holding the sensor state that the device should publish into the group. This uses the real address of a local physical sensor, e.g. 3302/0/5500 [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="21">
+				<Name>Local Sensor Publisher ID</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[PUBLISHER ONLY The sensor ID that should be used to translate the instance specified within the corresponding “Local Sensor State URI“ when publishing new data. In most scenarios Sensor publisher ID should be unique within the Group (unless if some type of overlap/overwrite of the information provided by the different sensors is intended) [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="22">
+				<Name>Remote Sensor State URI</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[SUBSCRIBER ONLY URI in the format of ObjectID/instanceID/resourceID(/resourceInstanceID) identifying the publishers to be accepted when using static mapping. This also reflects where the sensor state information retrieved from the Sensor Group should be locally stored into. [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="23">
+				<Name>Group Log</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[PUBLISHER SUBSCRIBER This resource can be used to provide vendor specific information related to the operativity of the group, such as the remote publishers dynamically mapped [default=empty]]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="24">
+				<Name>Group Description</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Custom user defined description.]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>
