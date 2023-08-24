@@ -77,7 +77,6 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
 				<Units/>
 				<Description>Describes the type of battery (e.g. Li-Ion rechargeable).</Description>
 			</Item>
@@ -147,7 +146,6 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type/>
-				<RangeEnumeration/>
 				<Units/>
 				<Description>Reset the supply loss counter.</Description>
 			</Item>
@@ -157,7 +155,6 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
 				<Units/>
 				<Description>Reason identified by the device why the device has lost mains supply (e.g. lightning if the device measured a high voltage, accident if the device identified a move with an accelerometer).</Description>
 			</Item>
