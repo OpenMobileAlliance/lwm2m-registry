@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Distributed Sensor Group</Name>
-		<Description1/>
+		<Description1>The uCIFI Distributed Sensor Group allows to configure a device to publish or subscribe to device-to-device communication.</Description1>
 		<ObjectID>3459</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3459</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

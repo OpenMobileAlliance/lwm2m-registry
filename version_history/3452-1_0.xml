@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Program Scheduler</Name>
-		<Description1/>
+		<Description1>Summary of the mapping between the various functions, eventual inputs and the target actuators, spanning multiple days or years.</Description1>
 		<ObjectID>3452</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3452</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

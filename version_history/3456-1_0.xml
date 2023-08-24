@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Output Filter</Name>
-		<Description1/>
+		<Description1>The uCIFI Output Filter can be used to fine tune the output commands in order, for example, to achieve a prolonged fade. To be used in conjunction with a Program Scheduler.</Description1>
 		<ObjectID>3456</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3456</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

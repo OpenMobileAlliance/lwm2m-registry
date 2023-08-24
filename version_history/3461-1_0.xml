@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Sensor Group Device Capabilities</Name>
-		<Description1/>
+		<Description1>This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.</Description1>
 		<ObjectID>3461</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3461</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

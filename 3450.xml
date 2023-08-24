@@ -58,7 +58,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>°C</Units>
+				<Units>Cel</Units>
 				<Description>Additional estimated measurement.</Description>
 			</Item>
 
@@ -69,7 +69,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>°C</Units>
+				<Units>Cel</Units>
 				<Description>If the calculated WBGT exceeds this value, the alarm is set. A value of 0 or less disables the alarm.</Description>
 			</Item>
 			<Item ID="4">
@@ -109,7 +109,7 @@
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>°C</Units>
+				<Units/>
 				<Description>Last or Current Measured Value from the WBGT sensor.</Description>
 			</Item>
 			<Item ID="5601">
