@@ -87,7 +87,7 @@
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description>Identifiers of the schedulers that are assigned to the Command of this irrigation valve.</Description>
 			</Item>
@@ -97,7 +97,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description>Set to True when one of the schedulers can’t be executed or is not supported by this irrigation valve. Otherwise set to False.</Description>
 			</Item>
@@ -107,7 +107,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
@@ -117,7 +117,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
 				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
 			</Item>
