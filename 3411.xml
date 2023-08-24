@@ -35,9 +35,9 @@
 		<Name>Battery</Name>
 		<Description1>The uCIFI battery object provides attributes to monitor battery level and activity.</Description1>
 		<ObjectID>3411</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3411:2.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3411:1.1</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>2.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>

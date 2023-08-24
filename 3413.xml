@@ -35,9 +35,9 @@
 		<Name>uCIFI Generic Actuator</Name>
 		<Description1>The uCIFI generic actuator may be used for any actuator but not to replace Outdoor Lamp Controllers nor for an Irrigation Valves which have a specific device type in the uCIFI data model.</Description1>
 		<ObjectID>3413</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3413:2.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3413:1.1</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>2.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
