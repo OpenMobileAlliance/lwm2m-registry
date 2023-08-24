@@ -3336,6 +3336,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3410-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3410</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3410:2.0</URN>
+        <Name>Device Extension</Name>
+        <Description>The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called "ExtDevInfo" (resource ID 22).</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3410.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3392,6 +3406,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3414-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3414</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3414:2.0</URN>
+        <Name>uCIFI data bridge</Name>
+        <Description>The uCIFI data bridge object may be used to transport data from a 3rd party device, operating a proprietary network or protocol, over a LwM2M compliant network.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3414.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3406,6 +3434,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3415-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3415</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3415:2.0</URN>
+        <Name>Time synchronization</Name>
+        <Description>The uCIFI time synchronization object enables a device to sync-up its internal clock with a remote NTP server.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3415.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3420,6 +3462,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3416-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3416</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3416:2.0</URN>
+        <Name>Outdoor lamp controller</Name>
+        <Description>The uCIFI outdoor lamp controller object provides attributes to control, command and monitor outdoor luminaires in streets, in tunnels, on roads and for illumination of park and gardens.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3416.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3448,6 +3504,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3418-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3418</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3418:2.0</URN>
+        <Name>Electrical monitor</Name>
+        <Description>The uCIFI electrical monitor object provides attributes related to the analysis of electrical consumption in an outdoor luminaire or in a streetlight cabinet. It also identifies electrical anomalies.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3418.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3490,6 +3560,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3421-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3421</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3421:2.0</URN>
+        <Name>Single-phase electrical meter</Name>
+        <Description>The uCIFI single-phase electrical meter measures the electrical consumption of loads on one electrical line, such as electrical cabinets in city infrastructures, street lighting networks, homes and buildings.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3421.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3574,6 +3658,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3428-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3428</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3428:2.0</URN>
+        <Name>Air quality</Name>
+        <Description>The uCIFI air quality sensor reports measurement required to calculate Air Quality Index (AIQ. It also provides resources for average calculation as per the IQ index calculation.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3428.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3602,6 +3700,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3430-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3430</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3430:2.0</URN>
+        <Name>Global Navigation Satellite System</Name>
+        <Description>More than a positioning object, the uCIFI global navigation satellite system object provides all the information required to calculate a position/location.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3430.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3630,6 +3742,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3432-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3432</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3432:2.0</URN>
+        <Name>Traffic Counter</Name>
+        <Description>The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3432.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -3672,6 +3798,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3435-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3435</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3435:2.0</URN>
+        <Name>Filling level</Name>
+        <Description>The uCIFI filling level sensor measures how full and/or how empty a container (e.g. waste, fuel) is and reports it either in percentage or in centimeters. The filling level sensor may be complemented with a temperature sensor to compose a waste filling sensor that can also identify waste container fire.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3435.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
