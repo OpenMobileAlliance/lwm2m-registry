@@ -57,8 +57,8 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[
-0 – Day time Gregorian calendar used to reference periods of 24h (00-24h) during the year
-1 – Night time calendar, a variation of the Gregorian calendar proposed by uCiFi to reference "night" periods of 24h during a year.
+0 - Day time Gregorian calendar used to reference periods of 24h (00-24h) during the year
+1 - Night time calendar, a variation of the Gregorian calendar proposed by uCiFi to reference "night" periods of 24h during a year.
 Measured from 12:00 of one Gregorian calendar day to 12:00 of the next day.
 If omitted, 0 shall be assumed]]></Description>
 				<Units/>
