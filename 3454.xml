@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Program Function</Name>
-		<Description1/>
+		<Description1>Describes the behavior that controls the associated target based on time or sensor status.</Description1>
 		<ObjectID>3454</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3454</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>

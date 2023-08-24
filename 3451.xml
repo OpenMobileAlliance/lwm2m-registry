@@ -33,7 +33,7 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
 		<Name>Roll over sensor</Name>
-		<Description1/>
+		<Description1>The uCIFI Roll Over Sensor is used to measure the roll component of displacement and can be useful in safety application, by complementing the existing IPSO Direction and uCIFI Tilt sensors.</Description1>
 		<ObjectID>3451</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3451</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
