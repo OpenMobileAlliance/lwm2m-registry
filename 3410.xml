@@ -165,7 +165,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description>The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as “ 01:00”</Description>
+				<Description>The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as "01:00"</Description>
 				<Units/>
 			</Item>
 			<Item ID="14">

@@ -58,7 +58,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 4=Articulated vehicle.
 5=Bicycle.
 6=Bus.
-7=Vehicles designed and constructed for the carriage of passengers and comprising no more than eight seats in addition to the driver’s seat, and having a maximum mass (“technically permissible maximum laden mass”) not exceeding 3.5 tons (M1).
+7=Vehicles designed and constructed for the carriage of passengers and comprising no more than eight seats in addition to the driver's seat, and having a maximum mass ("technically permissible maximum laden mass") not exceeding 3.5 tons (M1).
 8=Caravan.
 9=Car or light vehicle.
 10=Car towing a caravan.
@@ -77,7 +77,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 23=A heavy lorry that is longer than normal.
 24=Lorry of any type.
 25=Metro
-26=Vehicles designed and constructed for the carriage of passengers, comprising more than eight seats in addition to the driver’s seat, and having a maximum mass not exceeding 5 tonnes (class M2).
+26=Vehicles designed and constructed for the carriage of passengers, comprising more than eight seats in addition to the driver's seat, and having a maximum mass not exceeding 5 tonnes (class M2).
 27=Moped (a two wheeled motor vehicle characterized by a small engine typically less than 50cc and by normally having pedals).
 28=Motorcycle.
 29=Three wheeled vehicle comprising a motorcycle with an attached side car.
@@ -115,7 +115,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 			<Item ID="2">
 				<Name>Reset cumulated number</Name>
 				<Operations>E</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
+				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type/>
 				<RangeEnumeration/>

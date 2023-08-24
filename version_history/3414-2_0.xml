@@ -129,7 +129,7 @@
 				<Type>String</Type>
 				<RangeEnumeration/>
 				<Units/>
-				<Description>Indicates the data description (e.g. “Meter data”).</Description>
+				<Description>Indicates the data description (e.g. "Meter data").</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Data Format</Name>

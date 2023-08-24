@@ -347,7 +347,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description/>
+				<Description>If the measured power when the dimming is between "Custom dim level min range" and "Custom dim level max range" is below this threshold, a low power alarm is set.</Description>
 				<Units>W</Units>
 			</Item>
 			<Item ID="32">
@@ -356,7 +356,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description/>
+				<Description>If the measured power when the dimming is between "Custom dim level min range" and "Custom dim level max range" is above this threshold, a high power alarm is set.</Description>
 				<Units>W</Units>
 			</Item>
 			<Item ID="33">
@@ -365,7 +365,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description/>
+				<Description>Custom dimming range (lower bound) to allow specification of finer grain thresholds and alarms.</Description>
 				<Units>/100</Units>
 			</Item>
 			<Item ID="34">
@@ -374,7 +374,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description/>
+				<Description>Custom dimming range (upper bound) to allow specification of finer grain thresholds and alarms.</Description>
 				<Units>/100</Units>
 			</Item>
 			<Item ID="35">
@@ -383,7 +383,7 @@
 				<Operations>R</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description/>
+				<Description>Dimming level associated to current measurement.</Description>
 				<Units>/100</Units>
 			</Item>
 			<Item ID="5518">

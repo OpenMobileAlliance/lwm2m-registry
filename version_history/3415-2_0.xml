@@ -68,7 +68,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration/>
-				<Units>hours</Units>
+				<Units>h</Units>
 				<Description>Number of hours before which the device tries to reach the NTP server for time synchronization.</Description>
 			</Item>
 			<Item ID="4">

@@ -198,7 +198,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration/>
-				<Units>cm3</Units>
+				<Units>m3</Units>
 				<Description>The maximum volume available in the container for waste items.</Description>
 			</Item>
 			<Item ID="17">
