@@ -3497,6 +3497,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>3422</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3422</URN>
+        <Name>Three-phase electrical meter complement</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3422.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>3423</ObjectID>
         <URN>urn:oma:lwm2m:ext:3423</URN>
         <Name>Gas meter</Name>
@@ -3779,8 +3793,246 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>3445</ObjectID>
         <URN>urn:oma:lwm2m:ext:3445</URN>
+        <Name>Stream Gauge</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3445.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3446</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3446</URN>
+        <Name>Rain Gauge</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3446.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3447</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3447</URN>
+        <Name>LPWAN Mesh Connectivity</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3447.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3448</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3448</URN>
+        <Name>LPWAN Mesh Statistics</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3448.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3449</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3449</URN>
+        <Name>Anemometer</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3449.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3450</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3450</URN>
+        <Name>Wet Bulb Globe Temperature</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3450.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3451</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3451</URN>
+        <Name>Roll over sensor</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3451.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3452</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3452</URN>
+        <Name>Program Scheduler</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3452.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3453</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3453</URN>
+        <Name>Calendar Rule</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3453.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3454</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3454</URN>
+        <Name>Program Function</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3454.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3455</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3455</URN>
+        <Name>Input Filter</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3455.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3456</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3456</URN>
+        <Name>Output Filter</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3456.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3457</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3457</URN>
+        <Name>Program Manager</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3457.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3458</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3458</URN>
+        <Name>Program Monitor</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3458.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3459</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3459</URN>
+        <Name>Distributed Sensor Group</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3459.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3460</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3460</URN>
+        <Name>Distributed Sensor Message</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3460.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3461</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3461</URN>
+        <Name>Sensor Group Device Capabilities</Name>
+        <Description></Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3461.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3462</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3462</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3445 to 3480</Description>
+        <Description>Reservation from 3462 to 3480</Description>
         <Owner>TBD</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -3794,7 +4046,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>3480</ObjectID>
         <URN>urn:oma:lwm2m:ext:3480</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3445 to 3480</Description>
+        <Description>Reservation from 3462 to 3480</Description>
         <Owner>TBD</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
