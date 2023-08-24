@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Program Scheduler</Name>
+		<Description1/>
+		<ObjectID>3452</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3452</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Mandatory</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Schedule Name</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Unique key identifying the Schedule]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>State</Name>
+				<Type>Boolean</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[If disabled, the instance shall be ignored]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Priority</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Integer representing the priority of the program within all program object instances.
+Lower number (with sign) correspond to higher priorities.
+Higher priority programs have pre-eminence over lower priority program schedule to be running in parallel in same day.
+For example: Program #11 is scheduled to run every day between Jan 1st and Dec 31st with a priority 7
+Program #22 is scheduled to run every Saturday between March 1st and June 30th with priority 3
+Program #22 should apply for all Saturdays between March 1st and June 30th
+Program #11 for all other Saturdays in the year
+If compound operation is supported, functions are executed in a order based on this priority field]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Calendar Rules</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Number of Calendar Rule object(s) instance containing information on which days in the week, months, year(s) is the program scheduled to run.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Program Function</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Number of Program Function object instance containing information on how to control the output(s) based on time and sensor input(s)]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Input Sources</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[List of sensors or input filters that can be referenced within the associated program.
+If more than one sensor/input filter has to be checked, multiple instances shall be used.
+Each one may be assigned a different input filter
+
+For example:
+Instance 0: /3302/0/5500 (presence sensor #1)
+Instance 1: /3302/1/5500 (presence sensor #2)
+
+Or:
+Instance 0: /3455/0/0/0 (input filter #1)]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="6">
+				<Name>Output Instances</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[List of LWM2M object/instances that will be controlled by the associated program.
+If more than one object/instances pair shall be controlled, multiple instances shall be used.
+The target resource within each instance is specified in Output Targets.
+
+For example
+instance 0: /3416/0 (lamp #0)
+instance 1: /3416/1 (lamp #1)]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="7">
+				<Name>Output Targets</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[List of LWM2M resources that will be controlled by the associated program.
+If more than one resource shall be controlled, multiple instances shall be used.
+Each one may be assigned a different output filter
+
+For example
+instance 0: 1 (dimming)
+instance 1: 39 (colour temperature)
+
+Each target must be prepended with all the output instances to identify the full resource path]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="8">
+				<Name>Compound Operation</Name>
+				<Type>Boolean</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[The control Program is expected to be evaluated within a list of multiple control programs, where the evaluation occurs in an orderly fashion following the value set under its Priority resource. The compound operation resource, if set, will allow the output of the current control program acting on a given output#1 to be compounded with and output of a lower priority program acting on the same output #1. For example: 1) CP#1 priority 100, outputs 50% dimming level for light #1 with operation SET (compound flag is enabled) 2) CP#11 priority 500, outputs 10% dimming level for light #1 with operation ADD 3) Final light level on light#1 after CP list is executed is 60%]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="9">
+				<Name>Off when inactive</Name>
+				<Type>Boolean</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[If true, allows to force an OFF behavior (for actuators that would support it) in case the run condition is not met.]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>

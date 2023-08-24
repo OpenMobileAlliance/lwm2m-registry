@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Program Manager</Name>
+		<Description1/>
+		<ObjectID>3457</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3457</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Mandatory</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Max number of Program Schedulers</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of program schedulers supported by the device.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Current number of Program Schedulers</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Number of program schedulers currently allocated.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Max number of Program Functions</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of program functions supported by the device.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Current number of Program Functions</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Number of program functions currently allocated.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Max number of Calendars</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of calendars supported by the device.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Current number of Calendar</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Number of calendars currently allocated.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="6">
+				<Name>Max number of Actuators</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of target actuators supported.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="7">
+				<Name>Max number of Input Sources</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of input sources supported.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item><Item ID="8">
+				<Name>Max number of Dates in Calendar</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Maximum number of start/end date in Calendar supported.
+Can be eventually adjusted in order to reserve more or less memory.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="9">
+				<Name>Max Flash Memory Allocated</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Max flash memory (in bytes) to be allocated.
+Can be eventually adjusted in order to reserve more or less memory]]></Description>
+				<Units>Bytes</Units>
+			</Item>
+			<Item ID="10">
+				<Name>Flash Memory Free</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Free flash memory in bytes]]></Description>
+				<Units>Bytes</Units>
+			</Item>
+			<Item ID="11">
+				<Name>Error Conditions</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Bitmap
+Bit 0: No valid program 
+Bit 1: Missing configuration objects 
+Bit 2: Missing configuration resources 
+Bit 3: Invalid inputs
+Bit 4: Invalid outputs
+Bit 5: Invalid function format
+Bit 6: Out of storage memory
+Bit 7: Out of runtime memory
+Bit 8..31: reserved for future use]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="12">
+				<Name>Clear errors</Name>
+				<Type/>
+				<Operations>E</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[When executed, clears temporary error conditions.
+To be noted that some of the errors may require to change the content of other objects to be completely cleared.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="13">
+				<Name>Supported Capabilities</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Bitmap
+Bit 0: Astronomical Events
+Bit 1: Single sensor Inputs
+Bit 2: Multi Sensor Inputs
+Bit 3: Input Filters
+Bit 4: Output Filters
+Bit 5: Calendar
+Bit 6: Compound Operations
+Bit 7: Second granularity (for fixed time expressions)
+Bit 8: Astronomical Midnight
+Bit 9: Off when inactive]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="14">
+				<Name>Max Dynamic Memory Allocated</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Max RAM memory (in bytes) to be allocated.
+Can be eventually adjusted in order to reserve more or less memory]]></Description>
+				<Units>Bytes</Units>
+			</Item>
+			<Item ID="15">
+				<Name>Dynamic Memory Free</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Free RAM memory in bytes]]></Description>
+				<Units>Bytes</Units>
+			</Item>
+			<Item ID="16">
+				<Name>Reset schedule objects</Name>
+				<Type/>
+				<Operations>E</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[When executed, trigger a complete wipe of schedules already commissioned]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>

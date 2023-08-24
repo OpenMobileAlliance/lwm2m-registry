@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Output Filter</Name>
+		<Description1/>
+		<ObjectID>3456</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3456</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Operation</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>This resource defines an operation to be performed between the value of the Control Program output and the value currently store in the LwM2M resource pointed by 'Target'. Possible operations: 1 - set 2 - min 3 - max 4 - add 5 - subtract 6 - multiply When operation or filter is not defined the default output operation is set</Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Delay</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>When defined the control output is not immediately applied and transaction time = delay is implemented between the current target resource value and the value of the control program output.  This can be also associated to Fade Time in smart lighting scenario</Description>
+				<Units>s</Units>
+			</Item>
+			<Item ID="2">
+				<Name>Transaction</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Defines the type of progression to occur to  transition the current target resource value to the value defined by the of the control program output. Current options: 0 - Immediate 1 - linear 2 – exponential 3 – Device internal mechanism</Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Expiration Time</Name>
+				<Type>Float</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description>Limit the time period for which the output command should be considered valid. This is to be used in scenarios where Control Programs are not under continuous re-evaluation and for which the output control action is not continuously re-calculated. In such scenarios, the expiration time resource can be used to limit the time frame that the control output should be applied to the target resource.</Description>
+				<Units/>
+			</Item>
+		</Resources>
+	</Object>
+</LWM2M>
