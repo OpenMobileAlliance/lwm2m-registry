@@ -245,7 +245,6 @@ This information is useful when the device provides option for the deferred upda
 When this time period is over, the device will not prompt the user for update and install it automatically.
 If the value is 0, a deferred update is not allowed.]]></Description>
 			</Item>
-			</Item>
 			<Item ID="14">
 				<Name>Automatic Upgrade at Download</Name>
 				<Operations>RW</Operations>
