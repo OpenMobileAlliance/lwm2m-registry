@@ -288,8 +288,8 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <DDF>5.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
-        <TSLink>1</TSLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>6</ObjectID>
