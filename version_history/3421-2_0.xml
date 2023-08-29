@@ -217,7 +217,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration />
 				<Units>var</Units>
 				<Description>Reactive power import.</Description>
 			</Item>
@@ -247,7 +247,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration />
 				<Units>VA</Units>
 				<Description>Instantaneous apparent power export.</Description>
 			</Item>
@@ -267,7 +267,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration />
 				<Units>W</Units>
 				<Description>Instantaneous net active power.</Description>
 			</Item>
@@ -367,7 +367,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
+				<RangeEnumeration />
 				<Units>varh</Units>
 				<Description>Reactive energy QIII (-Ri) (unified rate).</Description>
 			</Item>
