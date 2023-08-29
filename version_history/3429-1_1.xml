@@ -47,7 +47,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>rad</Units>
 				<Description>Angle between the internal vertical line and the perpendicular to earth.</Description>
 			</Item>
@@ -57,7 +57,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>rad</Units>
 				<Description>Minimum angle measured by the tilt sensor since last reset or since power ON if no reset.</Description>
 			</Item>
@@ -67,7 +67,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>rad</Units>
 				<Description>Maximum angle measured by the tilt sensor since last reset or since power ON if no reset.</Description>
 			</Item>
@@ -76,9 +76,9 @@
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set the minimum and maximum measured angles to the current angle value.</Description>
 			</Item>
 			<Item ID="5">
@@ -87,7 +87,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>rad</Units>
 				<Description>The angle above which the device triggers an out of position event.</Description>
 			</Item>
@@ -97,8 +97,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the angle is above the out of position threshold.</Description>
 			</Item>
 			<Item ID="5518">
@@ -107,8 +107,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 			<Item ID="6050">
@@ -128,7 +128,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..23</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
 			<Item ID="6049">
@@ -138,10 +138,10 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>
