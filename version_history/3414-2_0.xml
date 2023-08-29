@@ -47,8 +47,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Opaque</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Content of the message that is to be transported.</Description>
 			</Item>
 			<Item ID="2">
@@ -57,8 +57,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Hash to check the consistency of the data payload. Hash mechanism and calculation is vendor-specific.</Description>
 			</Item>
 			<Item ID="3">
@@ -67,7 +67,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>B</Units>
 				<Description>Cumulated volume of data received by the device since beginning of the day. This information could be used for data invoicing.</Description>
 			</Item>
@@ -77,7 +77,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>B</Units>
 				<Description>Cumulated volume of data sent by the device since beginning of the day. This information could be used for data invoicing.</Description>
 			</Item>
@@ -87,7 +87,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>B</Units>
 				<Description>Cumulated volume of data sent and received by/from the device since beginning of the day. This information could be used for data invoicing.</Description>
 			</Item>
@@ -97,8 +97,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the device detects a difference in a received payload and the hash.</Description>
 			</Item>
 			<Item ID="7">
@@ -107,8 +107,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Indicates the Application data priority: 0:Immediate, 1:BestEffort, 2:Latest, 3-100: Reserved for future use. 101-254: Proprietary mode.</Description>
 			</Item>
 			<Item ID="8">
@@ -117,8 +117,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Indicates the data instance creation timestamp.</Description>
 			</Item>
 			<Item ID="9">
@@ -127,8 +127,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Indicates the data description (e.g. "Meter data").</Description>
 			</Item>
 			<Item ID="10">
@@ -137,8 +137,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Indicates the format of the Application Data. E.g. JSON compressed format from company XYZ.</Description>
 			</Item>
 			<Item ID="11">
@@ -147,8 +147,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Indicates the destination application identifier.</Description>
 			</Item>
 			<Item ID="5518">
@@ -157,8 +157,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 			<Item ID="6050">
@@ -178,7 +178,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..23</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
 			<Item ID="6049">
@@ -188,10 +188,10 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

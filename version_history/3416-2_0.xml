@@ -89,8 +89,8 @@ The command in action is the actual value of the command in action in the outdoo
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the outdoor lamp controller detects that the lamp is not producing light while it is expected to (e.g. the lamp is broken).]]></Description>
 			</Item>
 			<Item ID="6">
@@ -99,8 +99,8 @@ The command in action is the actual value of the command in action in the outdoo
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Description of the reason why the lamp failed (e.g. low power on a LED engine, no consumption detected while relay closed).]]></Description>
 			</Item>
 			<Item ID="7">
@@ -109,8 +109,8 @@ The command in action is the actual value of the command in action in the outdoo
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True in case the control gear has a failure.
 Outdoor lamp controllers may read the control gear failure from a DALI bus or by analyzing a 0-10 volts interface to the control gear.]]></Description>
 			</Item>
@@ -120,8 +120,8 @@ Outdoor lamp controllers may read the control gear failure from a DALI bus or by
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Description of the reason why the control gear failed.
 You may refer to the DiiA list of possible control gear failures.]]></Description>
 			</Item>
@@ -131,8 +131,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the outdoor lamp controller detects that its relay is not operating as it is expected to.]]></Description>
 			</Item>
 			<Item ID="10">
@@ -141,8 +141,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True in case the lamp is ON while it should be OFF (e.g. day burner).]]></Description>
 			</Item>
 			<Item ID="11">
@@ -151,8 +151,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the outdoor lamp controller detects that the lamp is switching ON and OFF too often.]]></Description>
 			</Item>
 			<Item ID="12">
@@ -161,8 +161,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True in case the control gear (e.g. LED driver) does not answer on the DALI bus.]]></Description>
 			</Item>
 			<Item ID="13">
@@ -171,8 +171,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Identifier(s) of the scheduler(s) that are assigned to the Command of this outdoor lamp controller.]]></Description>
 			</Item>
 			<Item ID="14">
@@ -181,8 +181,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True when one of the schedulers can’t be executed or is not supported by the outdoor lamp controller. Otherwise set to False.]]></Description>
 			</Item>
 			<Item ID="15">
@@ -191,7 +191,7 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>h</Units>
 				<Description><![CDATA[Cumulated number of hours during which the lamp has been ON with a strictly positive dimming level.]]></Description>
 			</Item>
@@ -200,9 +200,9 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Reset of the lamp operating hours counter.]]></Description>
 			</Item>
 			<Item ID="17">
@@ -211,8 +211,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Last date and time at which the lamp switched ON, i.e. from no light to light (e.g. power off to power on and/or dim level = 0 to dim level &gt; 0).]]></Description>
 			</Item>
 			<Item ID="18">
@@ -221,8 +221,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Number of times the lamp was switched from ON to OFF since the last lamp switch counter reset.]]></Description>
 			</Item>
 			<Item ID="19">
@@ -230,9 +230,9 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Reset the lamp switch counter.]]></Description>
 			</Item>
 			<Item ID="20">
@@ -241,8 +241,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Number of times the control gear was switched from ON to OFF.]]></Description>
 			</Item>
 			<Item ID="21">
@@ -251,7 +251,7 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>Cel</Units>
 				<Description><![CDATA[Temperature measured by the control gear and transmitted to the device through DALI, Zhaga D4i or equivalent.]]></Description>
 			</Item>
@@ -261,8 +261,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the control gear has derated the light source due to high temperature.]]></Description>
 			</Item>
 			<Item ID="23">
@@ -271,8 +271,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Number of time the control gear has derated the light source due to a high temperature, since last counter reset.]]></Description>
 			</Item>
 			<Item ID="24">
@@ -280,9 +280,9 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Reset of the control gear thermal derating counter.]]></Description>
 			</Item>
 			<Item ID="25">
@@ -291,8 +291,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the control gear has shut the light source down due to high temperature.]]></Description>
 			</Item>
 			<Item ID="26">
@@ -301,8 +301,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Number of times the control gear has shutdown the light source since last counter reset.]]></Description>
 			</Item>
 			<Item ID="27">
@@ -310,9 +310,9 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Reset of the control gear shutdown counter.]]></Description>
 			</Item>
 			<Item ID="28">
@@ -321,8 +321,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Address or reference of the output port (e.g. DALI port address or 1-10 volt output) in case of multiple control gears.]]></Description>
 			</Item>
 			<Item ID="29">
@@ -331,8 +331,8 @@ You may refer to the DiiA list of possible control gear failures.]]></Descriptio
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True if the outdoor lamp controller should keep its relay closed (control gear is powered ON) when command and/or dimming level is equal to 0.
 Set to False if the outdoor lamp controller should open its relay (control gear is not powered ON) when command and/or dimming level is equal to 0.]]></Description>
 			</Item>
@@ -342,8 +342,8 @@ Set to False if the outdoor lamp controller should open its relay (control gear 
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Set to True to activate Constant Light Output dimming correction on the outdoor lamp controller.
 Set to False to deactivate Constant Light Output.]]></Description>
 			</Item>
@@ -353,8 +353,8 @@ Set to False to deactivate Constant Light Output.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Light output of a luminaire may depend on the lamp cleaning factor.
 Cleaning factor may be used as a light output compensation.
 Set to True to activate lamp cleaning correction on the outdoor lamp controller.
@@ -366,8 +366,8 @@ Set to False to deactivate the lamp cleaning correction.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Number of days after which cleaning factor is back to 100%.]]></Description>
 			</Item>
 			<Item ID="33">
@@ -386,8 +386,8 @@ Set to False to deactivate the lamp cleaning correction.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description><![CDATA[Date at which the luminaire was last (or will be next) cleaned and the lamp cleaning factor should be set to the initial lamp cleaning factor.]]></Description>
 			</Item>
 			<Item ID="35">
@@ -397,7 +397,7 @@ Set to False to deactivate the lamp cleaning correction.]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..13</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description><![CDATA[Type of control system with which the outdoor lamp controller switches, dims and monitors the lamp.
 The possible control types are:
 0: No dimming control
@@ -421,7 +421,7 @@ The possible control types are:
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description><![CDATA[Active power of the light source at 100% dimming level.]]></Description>
 			</Item>
@@ -431,7 +431,7 @@ The possible control types are:
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>/100</Units>
 				<Description><![CDATA[Minimum dimming level under which the lamp will most probably not operate.]]></Description>
 			</Item>
@@ -441,7 +441,7 @@ The possible control types are:
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description><![CDATA[Expected active power of the light source at its minimum dimming level.
 This value may be used to detect failure at low dimming level.]]></Description>
@@ -452,7 +452,7 @@ This value may be used to detect failure at low dimming level.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>K</Units>
 				<Description><![CDATA[Latest light color temperature command sent to the lamp actuator.]]></Description>
 			</Item>
@@ -462,7 +462,7 @@ This value may be used to detect failure at low dimming level.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>K</Units>
 				<Description><![CDATA[The actual light color temperature of the light source.]]></Description>
 			</Item>
@@ -482,7 +482,7 @@ This value may be used to detect failure at low dimming level.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
 				<Description><![CDATA[Voltage level on the control port that corresponds to maximum dimming level.
 This applies only if Control Type = 0-10V.]]></Description>
@@ -493,7 +493,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
 				<Description><![CDATA[Voltage level on the control port that corresponds to minimum dimming level.
 This applies only if Control Type = 0-10V.]]></Description>
@@ -504,7 +504,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
 				<Description><![CDATA[Voltage (usually DC voltage) to the light source or generic load, measured at the output of the control gear.]]></Description>
 			</Item>
@@ -514,7 +514,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description><![CDATA[Current (usually DC current) delivered by the control gear to the light source or generic load, measured at the output of the control gear.]]></Description>
 			</Item>
@@ -524,7 +524,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description><![CDATA[Active power of the light source or generic load, measured at the output of the control gear.]]></Description>
 			</Item>
@@ -534,7 +534,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>kWh</Units>
 				<Description><![CDATA[Cumulated active energy consumption of the light source or generic load, measured at the output of the control gear.]]></Description>
 			</Item>
@@ -544,7 +544,7 @@ This applies only if Control Type = 0-10V.]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description><![CDATA[Maximum current (usually DC current) the control gear is able to deliver to the light source or generic load, measured at the output of the control gear.]]></Description>
 			</Item>
@@ -566,7 +566,7 @@ Default = 0]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored.
 Default = 0]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="51">
 				<Name>Manual override end time</Name>
@@ -576,7 +576,7 @@ Default = 0]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored. Setting this resource to 0 would in fact clear any pending override command. If this resource is not explicitly written, the device shall adjust this resource according to the default duration (when the command will expire).
 Default = 0]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="52">
 				<Name>Manual override fade</Name>
@@ -606,7 +606,7 @@ Default = vendor specific (e.g. 7200)]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Indicate if a manual override is currently active on the device]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="55">
 				<Name>Default Light color temperature</Name>
@@ -629,13 +629,13 @@ This resource MUST be used as a direct mapping for the Control Gear Operating Ti
 			</Item>
 			<Item ID="57">
 				<Name>Driver operating hours reset</Name>
-				<Type/>
+				<Type></Type>
 				<Operations>E</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Triggers the reset of the Driver operating hours.
 On drivers supporting DALI part 253, this should trigger the controller to reset the Control Gear Operating Time present in Memory bank 205.]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="58">
 				<Name>Manufacturer GTIN</Name>
@@ -644,7 +644,7 @@ On drivers supporting DALI part 253, this should trigger the controller to reset
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[GTIN associated to the driver manufacturer as retrieved from DALI Memory Bank 0]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="59">
 				<Name>Manufacturer Serial Number</Name>
@@ -653,7 +653,7 @@ On drivers supporting DALI part 253, this should trigger the controller to reset
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Identification number associated to the driver manufacturer as retrieved from DALI Memory Bank 0]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="60">
 				<Name>Firmware Version</Name>
@@ -662,7 +662,7 @@ On drivers supporting DALI part 253, this should trigger the controller to reset
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Firmware version of the bus unit]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="61">
 				<Name>DALI Version</Name>
@@ -671,7 +671,7 @@ On drivers supporting DALI part 253, this should trigger the controller to reset
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description><![CDATA[Version of DALI implementation as a string (to allow future extensions)]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="62">
 				<Name>Unit temperature</Name>
@@ -697,7 +697,7 @@ bit 4: Sensor Ready
 bit 5: Sensor Ready Extended Diagnostic
 bit 6: Sensor Ready Power Type: Total Energy
 bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="5518">
 				<Name>Timestamp</Name>
@@ -705,8 +705,8 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 			<Item ID="6050">
@@ -726,7 +726,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..23</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
 			<Item ID="6049">
@@ -736,10 +736,10 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

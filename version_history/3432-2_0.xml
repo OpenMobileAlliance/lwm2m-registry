@@ -100,7 +100,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 46=Vehicle with odd numbered registration plate.
 99=Unknown.
 100=Other than as defined in this enumeration.]]></Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="1">
 				<Name>Cumulated number</Name>
@@ -108,8 +108,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Cumulated number of vehicles counted since last reset.</Description>
 			</Item>
 			<Item ID="2">
@@ -117,9 +117,9 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Reset the cumulated number of vehicles.</Description>
 			</Item>
 			<Item ID="3">
@@ -128,8 +128,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Cumulated number of vehicles counted today.</Description>
 			</Item>
 			<Item ID="4">
@@ -138,7 +138,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
 				<Description>Time period 1 during which the counter shall provide number of vehicles (e.g. 1 hour).</Description>
 			</Item>
@@ -148,7 +148,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
 				<Description>Time period 2 during which the counter shall provide number of vehicles (e.g. 15 minutes).</Description>
 			</Item>
@@ -158,7 +158,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>s</Units>
 				<Description>Time period 3 during which the counter shall provide number of vehicles (e.g. 5 minutes).</Description>
 			</Item>
@@ -168,8 +168,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Cumulated number of vehicles counted during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="8">
@@ -178,8 +178,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Cumulated number of vehicles counted during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="9">
@@ -188,8 +188,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Cumulated number of vehicles counted during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="10">
@@ -198,8 +198,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average speed measured on the vehicles during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="11">
@@ -208,8 +208,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average speed measured on the vehicles during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="12">
@@ -218,8 +218,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average speed measured on the vehicles during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="13">
@@ -228,8 +228,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average distance between two vehicles measured during the last period 1 (e.g. 1 hour).</Description>
 			</Item>
 			<Item ID="14">
@@ -238,8 +238,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average distance between two vehicles measured during the last period 2 (e.g. 15 minutes).</Description>
 			</Item>
 			<Item ID="15">
@@ -248,8 +248,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Average distance between two vehicles measured during the last period 3 (e.g. 5 minutes).</Description>
 			</Item>
 			<Item ID="16">
@@ -258,8 +258,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Speed limit threshold used to calculate the percentage of vehicles above speed limit.</Description>
 			</Item>
 			<Item ID="17">
@@ -268,8 +268,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Percentage of vehicles driving above speed limit.</Description>
 			</Item>
 			<Item ID="5518">
@@ -278,8 +278,8 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 			<Item ID="6050">
@@ -299,7 +299,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..23</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
 			<Item ID="6049">
@@ -309,10 +309,10 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

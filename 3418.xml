@@ -47,7 +47,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
 				<Description>Electrical voltage supplied to the device.</Description>
 			</Item>
@@ -57,7 +57,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Electrical current supplied to the device.</Description>
 			</Item>
@@ -67,7 +67,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>Hz</Units>
 				<Description>Frequency of the supply current to the device.</Description>
 			</Item>
@@ -77,7 +77,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description>Active power consumed by the device and its electrical load.</Description>
 			</Item>
@@ -88,7 +88,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
 				<RangeEnumeration>-1..1</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Power factor is equal to active power divided by apparent power. The value is between -1 and  1.</Description>
 			</Item>
 			<Item ID="6">
@@ -97,7 +97,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>Wh</Units>
 				<Description>Cumulated number of Wh measured by the device and its load since last energy counter reset.</Description>
 			</Item>
@@ -106,9 +106,9 @@
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Reset both cumulated active and reactive energy counter.</Description>
 			</Item>
 			<Item ID="8">
@@ -117,8 +117,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Threshold below which the device should trigger a low power factor event.</Description>
 			</Item>
 			<Item ID="9">
@@ -127,8 +127,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the power factor is below threshold. This is an absolute value threshold.</Description>
 			</Item>
 			<Item ID="10">
@@ -137,7 +137,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description>Threshold below which the device should trigger a low power event.</Description>
 			</Item>
@@ -147,7 +147,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description>Threshold below which the device should trigger a low power event. This is an addition to the low power threshold to allow a separated threshold when dim level is low.</Description>
 			</Item>
@@ -157,8 +157,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the power is below threshold. Vendor may consider the Low power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="13">
@@ -167,7 +167,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description>Threshold above which the device should trigger a high power event.</Description>
 			</Item>
@@ -177,7 +177,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>W</Units>
 				<Description>Threshold above which the device should trigger a high power event. This is an addition to the high power threshold to allow a separated threshold when dim level is low.</Description>
 			</Item>
@@ -187,8 +187,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the power is above threshold. Vendor may consider the High power threshold at low dim level to set this resource to True, taking into account the lamp dim level.</Description>
 			</Item>
 			<Item ID="16">
@@ -197,7 +197,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Threshold below which the device should trigger a low current event.</Description>
 			</Item>
@@ -207,8 +207,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the current is below threshold.</Description>
 			</Item>
 			<Item ID="18">
@@ -217,7 +217,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Threshold above which the device should trigger a high current event.</Description>
 			</Item>
@@ -227,8 +227,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the current is above threshold.</Description>
 			</Item>
 			<Item ID="20">
@@ -237,7 +237,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>V</Units>
 				<Description>Threshold below which the device should trigger a low voltage event.</Description>
 			</Item>
@@ -247,8 +247,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the voltage is below threshold.</Description>
 			</Item>
 			<Item ID="22">
@@ -267,8 +267,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the voltage is above threshold.</Description>
 			</Item>
 			<Item ID="24">
@@ -277,7 +277,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Threshold above which the device should trigger a critical inrush event.</Description>
 			</Item>
@@ -287,8 +287,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True if the inrush current is above threshold.</Description>
 			</Item>
 			<Item ID="26">
@@ -297,7 +297,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Minimum inrush current since last configuration.</Description>
 			</Item>
@@ -307,7 +307,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Maximum inrush current since last configuration.</Description>
 			</Item>
@@ -317,7 +317,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>A</Units>
 				<Description>Latest inrush current measured since last time the relay switched ON.</Description>
 			</Item>
@@ -327,7 +327,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>var</Units>
 				<Description>Instantaneous reactive power measured by the device and its electrical load.</Description>
 			</Item>
@@ -337,7 +337,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>varh</Units>
 				<Description>Cumulative reactive power measured by the device and its electrical load since last energy counter reset.</Description>
 			</Item>
@@ -392,8 +392,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 			<Item ID="6050">
@@ -413,7 +413,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..23</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
 			</Item>
 			<Item ID="6049">
@@ -423,10 +423,10 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>0..100</RangeEnumeration>
-				<Units/>
+				<Units></Units>
 				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>

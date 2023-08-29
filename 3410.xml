@@ -47,8 +47,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Standard global trade-in international number for the control device.</Description>
 			</Item>
 			<Item ID="2">
@@ -57,8 +57,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Unique identifier of the manufacturer of the control device, equivalent to IEEE's OUI (Organizational Unique Identifier). This value should be a Hexadecimal value. This value may be used by an online uCIFI product catalog server, for software modules to retrieve the data model of a device using this attribute associated with the model number on the "Device" (Id=3) object.</Description>
 			</Item>
 			<Item ID="3">
@@ -67,8 +67,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>User-readable name of the device set by the user.</Description>
 			</Item>
 			<Item ID="4">
@@ -77,8 +77,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Identifier of the asset (e.g. meter, luminaire, container) that is controlled by the device.</Description>
 			</Item>
 			<Item ID="5">
@@ -87,8 +87,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Installation date of the device.</Description>
 			</Item>
 			<Item ID="6">
@@ -97,8 +97,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True while software within the device is being updated.</Description>
 			</Item>
 			<Item ID="7">
@@ -107,8 +107,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Boolean</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Set to True when the device is in maintenance mode.</Description>
 			</Item>
 			<Item ID="8">
@@ -116,9 +116,9 @@
 				<Operations>E</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type/>
-				<RangeEnumeration/>
-				<Units/>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Reset the configuration parameters (and only the configuration parameters) of the device. It does not clear any counter (e.g. kWh counter or operating hour counter).</Description>
 			</Item>
 			<Item ID="9">
@@ -127,7 +127,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration/>
+				<RangeEnumeration></RangeEnumeration>
 				<Units>h</Units>
 				<Description>Cumulated number of hours during which the device has been powered on.</Description>
 			</Item>
@@ -137,8 +137,8 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration/>
-				<Units/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
 				<Description>Additional information about peripheral firmware versions. The format is left to the vendor.</Description>
 			</Item>
 			<Item ID="11">
@@ -157,7 +157,7 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>The precise date and UTC time during the year when Daylight Saving Time ends, represented as Unix Time.</Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="13">
 				<Name>DST Offset</Name>
@@ -166,7 +166,7 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as "01:00"</Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 			<Item ID="14">
 				<Name>Uptime</Name>
@@ -184,9 +184,9 @@
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
 				<Description>Set to true if the device is a Reduce Functional Device running on battery.</Description>
-				<Units/>
+				<Units></Units>
 			</Item>
 		</Resources>
-		<Description2/>
+		<Description2></Description2>
 	</Object>
 </LWM2M>
