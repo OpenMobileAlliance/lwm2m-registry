@@ -5537,7 +5537,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <URN>urn:oma:lwm2m:x:10482</URN>
         <Name>DYM IoT edge commands and data protocols</Name>
         <Description>This LWM2M object is used between DYM IoT Platform and Edge IoT Device Manager for control command and data exchange.</Description>
-        <Owner>Debug Your Mind Labs LLP</Owner>
+        <Owner>DYM Labs</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
