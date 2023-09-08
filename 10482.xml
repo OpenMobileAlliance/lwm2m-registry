@@ -31,8 +31,8 @@ POSSIBILITY OF SUCH DAMAGE.
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
-		<Name>DYM IoT Edge commands and data protocols</Name>
-		<Description1>This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange.</Description1>
+		<Name>DYM IoT edge commands and data protocols</Name>
+		<Description1>This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange</Description1>
 		<ObjectID>10482</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:x:10482</ObjectURN><LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion><MultipleInstances>Single</MultipleInstances>
