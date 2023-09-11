@@ -5494,7 +5494,9 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>10479</ObjectID>
         <URN>urn:oma:lwm2m:x:10479</URN>
         <Name>Cellular Network and Bearer Control</Name>
-        <Description>This LwM2M Object enables monitoring and selection of available network bearers (or Radio Access Technologies - RATs) of cellular networks.</Description>
+        <Description>This LwM2M Object enables monitoring of available network bearers (or Radio Access Technologies - RATs) of cellular networks. Each instance of this Object holds information related to one network bearer incl. the associated PLMN.
+An object instance should be created for every RAT available for a PLMN, and for every PLMN visible to the device.
+The Object also allows steering the device towards a particular PLMN, or, to a particular PLMN+RAT combination.</Description>
         <Owner>Vodafone</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
