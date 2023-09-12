@@ -227,7 +227,7 @@ For more details on Network Measurement Report, refer to the appropriate 3GPP  s
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Move to the network represented by this Object Instance. Only the network is selected and the Bearer selection is performed automatically.
-Device sets “network manually selected” = 1.]]></Description>
+Device sets "network manually selected" = 1.]]></Description>
 			</Item><Item ID="10">
 				<Name>Select Network And Bearer</Name>
 				<Operations>E</Operations>
@@ -237,8 +237,8 @@ Device sets “network manually selected” = 1.]]></Description>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Move to the network and bearer represented by this Object Instance. 
-Device sets “network manually selected” = 1
-Device sets “bearer manually selected” = 1]]></Description>
+Device sets "network manually selected" = 1
+Device sets "bearer manually selected" = 1]]></Description>
 			</Item>
 			
 			
@@ -317,9 +317,9 @@ This resource shall only be present in Object instance 0.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[Resets the device to automated network selection.
 Additionally,
-sets the “network manually selected” = 0
+sets the "network manually selected" = 0
 and
-sets the “Bearer manually selected” = 0.
+sets the "Bearer manually selected" = 0.
 
 This resource shall only be present in Object instance 0.]]></Description>
 			</Item>
