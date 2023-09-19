@@ -898,14 +898,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>511</ObjectID>
         <URN>urn:oma:lwm2m:oma:511</URN>
-        <Name>TBD</Name>
-        <Description>TBD</Description>
+        <Name>Compact Composite</Name>
+        <Description>This Object enables collecting a set of Resource values from other Objects into a single Resource representation.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>511.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
