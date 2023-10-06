@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>Network Speed Test</Name>
 		<Description1><![CDATA[This Object supports triggering a network speed test and records the results. Furthermore, it allows to configure the server address of the server used for the speed test.]]></Description1>
 		<ObjectID>10481</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:10481</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10481</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
