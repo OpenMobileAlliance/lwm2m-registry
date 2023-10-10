@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: OMA-SUP-XML_4-V1_3_1-20221209-A.xml
+   Path: http://www.openmobilealliance.org/release/ObjLwM2M_Conn_Mon/
+
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 4.xml
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+  OMA-TS-LightweightM2M_Core-V1_2_1
+
+  This is available at http://www.openmobilealliance.org/release/LightweightM2M/
+
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
+LEGAL DISCLAIMER
+
+  Copyright 2022 Open Mobile Alliance.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+  The above license is used as a license under copyright only.  Please
+  reference the OMA IPR Policy for patent licensing terms:
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
+
+Copyright 2023 Vodafone. 
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Cellular Network and Bearer Control</Name>
+		<Description1><![CDATA[This LwM2M Object enables monitoring of available network bearers (or Radio Access Technologies - RATs) of cellular networks. Each instance of this Object holds information related to one network bearer incl. the associated PLMN.
+An object instance should be created for every RAT available for a PLMN, and for every PLMN visible to the device.
+The Object also allows steering the device towards a particular PLMN, or, to a particular PLMN+RAT combination.]]></Description1>
+		<ObjectID>10479</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:x:10479</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>PLMN Name</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[PLMN name e.g. "Vodafone UK"]]></Description>
+			</Item><Item ID="1">
+        <Name>MCC</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Description><![CDATA[Serving Mobile Country Code. 
+As specified in TS [3GPP 23.003].]]></Description>
+      </Item><Item ID="2">
+        <Name>MNC</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Description><![CDATA[Mobile Network Code. 
+As specified in TS [3GPP 23.003].]]></Description>
+      </Item><Item ID="3">
+				<Name>Network Bearer</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..50</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the available network bearers. 
+More specifically: 
+0: GSM
+1: TD-SCDMA
+2: WCDMA
+3: CDMA2000
+4: WiMAX
+5: LTE-TDD
+6: LTE-FDD
+7: NB-IoT 
+8: 5GNR TDD 
+9: 5G-NR FDD 
+10: CAT-M
+11 - 20: Reserved for other types of cellular network bearers]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Currently In Use</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates if this PLMN and network bearer is currently used e.g. for the current LwM2M communication (true).]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Radio Signal Strength</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>dBm</Units>
+				<Description><![CDATA[Indicates the average value of the received signal strength indication. The value is expressed in dBm. For the following network bearers the signal strength parameters indicated below are represented by this resource:
+GSM:    RSSI
+UMTS:   RSCP
+LTE:    RSRP
+NB-IoT: NRSRP
+CAT-M: RSRP
+For more details on Network Measurement Report, refer to the appropriate 3GPP  standards, (e.g. for LTE refer to 3GPP TS 36.133).]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Link Quality</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This contains received link quality  e.g. RxQual Downlink for GSM (range 0...7, refer to 3GPP TS 44.018 for more details on Network Measurement Report encoding), RSRQ for LTE and Cat-M (refer to 3GPP TS 36.214), NRSRQ for NB-IoT (refer to 3GPP TS 36.214).]]></Description>
+			</Item>
+			
+			
+			
+			
+      
+      
+      
+      <Item ID="7"><Name>SignalSNR</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units>dB</Units>
+        <Description><![CDATA[SINR: Signal to Interference plus Noise Ratio SINR is the ratio of the strength of the received signal to the strength of the received interference signal (noise and interference).]]></Description>
+      </Item>
+      
+      <Item ID="8">
+	<Name>Coverage Enhancement Level</Name>
+	<Operations>R</Operations>
+	<MultipleInstances>Single</MultipleInstances>
+	<Mandatory>Optional</Mandatory>
+	<Type>Integer</Type>
+	<RangeEnumeration>0..3, 99</RangeEnumeration>
+	<Units></Units>
+	<Description><![CDATA[Indicates the Coverage Enhancement Level of the UE in the serving cell. The Coverage Enhancement levels are defined and specified in 3GPP TS 36.331 and 36.213.
+		0: Coverage Enhancement level 0
+		1: Coverage Enhancement level 1
+		2: Coverage Enhancement level 2
+		3: Coverage Enhancement level 3
+               99: No Coverage Enhancement in the serving cell]]></Description>
+      </Item><Item ID="9">
+				<Name>Select Network</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Move to the network represented by this Object Instance. Only the network is selected and the Bearer selection is performed automatically.
+Device sets "network manually selected" = 1.]]></Description>
+			</Item><Item ID="10">
+				<Name>Select Network And Bearer</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Move to the network and bearer represented by this Object Instance. 
+Device sets "network manually selected" = 1
+Device sets "bearer manually selected" = 1]]></Description>
+			</Item>
+			
+			
+			
+			
+			
+			
+			<Item ID="11">
+				<Name>Device Supports Manual Network Selection</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[0=device does not support manual network selection (overwriting automatic network selection)
+1=device supports manual network selection
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item><Item ID="12">
+				<Name>Network Manually Selected</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[0 = device is on automatic network selection mode.
+1=  device is on manual network selection mode and the network has been manually selected
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item>
+			<Item ID="13">
+				<Name>Device Supports Manual Bearer Selection</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[0=device does not support manual bearer selection (overwriting automatic bearer selection)
+1=device supports manual bearer selection
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item><Item ID="14">
+				<Name>Bearer Manually Selected</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[	0 = device is on automatic bearer selection mode.
+
+1= device is on manual bearer selection mode and the bearer has been manually selected
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item><Item ID="15">
+				<Name>Perform Network Scan</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Perform a new network scan and populate the object instances accordingly. 
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item><Item ID="16">
+				<Name>Reset Network Selection</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Resets the device to automated network selection.
+Additionally,
+sets the "network manually selected" = 0
+and
+sets the "Bearer manually selected" = 0.
+
+This resource shall only be present in Object instance 0.]]></Description>
+			</Item>
+			
+			
+					
+    </Resources> <Description2></Description2>
+    </Object>
+</LWM2M>
