@@ -150,7 +150,7 @@ If both single sensor input array and multi sensor input array are both specifie
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Description><![CDATA[Sequence of arguments representing Output Filter instances to be applied to the corresponding target output
-e.g. 0;;1 means 3456/0;default;3456/1
+e.g. 0;;1 means /3456/0;default;/3456/1
 If resource or specific entry is not specified, the default output filter, if present, would be applied]]></Description>
 				<Units/>
 			</Item>

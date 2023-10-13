@@ -56,9 +56,10 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[Example:
-Instance #0: /3302/0/5500
-Instance #1: /3302/1/5500]]></Description>
+				<Description><![CDATA[Resources are specified using Core Link syntax
+Example:
+Instance #0: </3302/0/5500>
+Instance #1: </3302/1/5500>]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="2">

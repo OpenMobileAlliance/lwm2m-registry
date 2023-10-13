@@ -326,7 +326,7 @@
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type>Integer</Type>
 				<RangeEnumeration/>
 				<Units/>
 				<Description><![CDATA[Number of power failures in any phase]]></Description>
@@ -336,7 +336,7 @@
 				<Operations>R</Operations>
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
+				<Type>Integer</Type>
 				<RangeEnumeration/>
 				<Units/>
 				<Description><![CDATA[Number of long power failures in any phase.]]></Description>
