@@ -65,7 +65,7 @@
 				<Operations>R</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of Object/Instance/resource, retrieved from the "Remote Sensor State URI" field of the last received or sent group message. [default=empty]]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of </Object/Instance/Resource> (using Core Link syntax), retrieved from the "Remote Sensor State URI" field of the last received or sent group message. [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="3">
@@ -227,7 +227,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[PUBLISHER ONLY URI in the format of ObjectID/instanceID/resourceID(/resourceInstanceID) pointing to the LwM2M resource instance holding the sensor state that the device should publish into the group. This uses the real address of a local physical sensor, e.g. 3302/0/5500 [default=empty]]]></Description>
+				<Description><![CDATA[PUBLISHER ONLY URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) pointing to the LwM2M resource instance holding the sensor state that the device should publish into the group. This uses the real address of a local physical sensor, e.g. </3302/0/5500> [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="21">
@@ -245,7 +245,7 @@
 				<Operations>RW</Operations>
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[SUBSCRIBER ONLY URI in the format of ObjectID/instanceID/resourceID(/resourceInstanceID) identifying the publishers to be accepted when using static mapping. This also reflects where the sensor state information retrieved from the Sensor Group should be locally stored into. [default=empty]]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) identifying the publishers to be accepted when using static mapping. This also reflects where the sensor state information retrieved from the Sensor Group should be locally stored into. [default=empty]]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="23">

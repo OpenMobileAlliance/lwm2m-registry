@@ -102,13 +102,14 @@ If compound operation is supported, functions are executed in a order based on t
 				<Description><![CDATA[List of sensors or input filters that can be referenced within the associated program.
 If more than one sensor/input filter has to be checked, multiple instances shall be used.
 Each one may be assigned a different input filter
+Resources are specified using Core Link syntax
 
 For example:
-Instance 0: /3302/0/5500 (presence sensor #1)
-Instance 1: /3302/1/5500 (presence sensor #2)
+Instance 0: </3302/0/5500> (presence sensor #1)
+Instance 1: </3302/1/5500> (presence sensor #2)
 
 Or:
-Instance 0: /3455/0/0/0 (input filter #1)]]></Description>
+Instance 0: </3455/0/0/0> (input filter #1)]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="6">
@@ -117,13 +118,14 @@ Instance 0: /3455/0/0/0 (input filter #1)]]></Description>
 				<Operations>RW</Operations>
 				<Mandatory>Mandatory</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[List of LWM2M object/instances that will be controlled by the associated program.
-If more than one object/instances pair shall be controlled, multiple instances shall be used.
+				<Description><![CDATA[List of LWM2M </Object/Instance> that will be controlled by the associated program.
+If more than one </Object/Instance> pair shall be controlled, multiple instances shall be used.
 The target resource within each instance is specified in Output Targets.
+Instances are specified using Core Link syntax
 
 For example
-instance 0: /3416/0 (lamp #0)
-instance 1: /3416/1 (lamp #1)]]></Description>
+instance 0: </3416/0> (lamp #0)
+instance 1: </3416/1> (lamp #1)]]></Description>
 				<Units/>
 			</Item>
 			<Item ID="7">
