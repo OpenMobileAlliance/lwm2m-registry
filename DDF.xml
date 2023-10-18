@@ -5870,7 +5870,7 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Ver>1.0</Ver>
         <DDF></DDF>
         <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
+        <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
