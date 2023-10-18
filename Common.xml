@@ -3666,13 +3666,13 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
         <TSLink>0</TSLink>
       </Item> 
       <Item ID="6057">
-        <Name>TBD</Name>
-        <Operations></Operations>
-        <Type></Type>
-        <RangeEnumeration></RangeEnumeration>
-        <Units></Units>
-        <Submitter></Submitter>
-        <Description><![CDATA[TBD]]></Description>
+        <Name>Averaging Time Period</Name>
+        <Operations>RW</Operations>
+        <Type>Float</Type>
+        <RangeEnumeration>0.0..86400.0</RangeEnumeration>
+        <Units>s</Units>
+        <Submitter>South East Water Corporation</Submitter>
+        <Description><![CDATA[A value used to specify the time period over which data should be averaged.This value can be changed by doing a write command]]></Description>
         <TS></TS>
         <TSLink>0</TSLink>
       </Item>     
