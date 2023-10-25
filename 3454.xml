@@ -85,7 +85,7 @@ If omitted or not supported, function can be assumed to be effective 24/24]]></D
 				<Operations>RW</Operations>
 				<Mandatory>Mandatory</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
-				<Description><![CDATA[Sequence of fixed time and/or astronomical events separated by commas
+				<Description><![CDATA[Sequence of fixed time and/or astronomical events separated by semicolons
 Each resource instance is specified as a sequence that will target the corresponding output
 hh:mm = fixed time
 S+30 = sunset plus 30 minutes
@@ -124,7 +124,7 @@ This resource shall be used in mutual exclusion with the multi sensor input arra
 				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Multiple</MultipleInstances>
 				<Description><![CDATA[Allows to define multiple conditions based on time and sensor values with a syntax similar to the one used for the Run condition
-Each condition shall be enclosed in brackets and separated by semi columns
+Each condition shall be enclosed in brackets and separated by semicolons
 (<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);(<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);…
 The first condition matching would take precedence over the ones following
 Any spacing provided outside double quotes can be safely ignored
