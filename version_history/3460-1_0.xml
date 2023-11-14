@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Distributed Sensor Message</Name>
+		<Description1>The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.</Description1>
+		<ObjectID>3460</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3460</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Group ID</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[The identifier of the group. This resource can be used to filter the incoming message.
+This resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Publishing timestamp</Name>
+				<Type>Time</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[UNIX timestamp related to the time when the measurement has been collected by the publisher.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="2">
+				<Name>Publisher State URI</Name>
+				<Type>String</Type>
+				<Operations>R</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[URI of the resource that contains the status information, to be used for data fusion and to be eventually filtered upon reception]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Publisher ID</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[If this resource is omitted, the Publisher State URI shall be properly translated in advance in order to map the physical sensor instance on the publisher to the corresponding publisher ID specified within the Distributed Sensor Group.
+Otherwise, the real physical sensor instance can be used and the translation has to be performed upon reception]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Auto Clear Validity Time</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[If Auto-clear capability is supported by the subscriber, the validity of the attached data can be limited for the specified amount of time, after which it can be discarded or reset to a default value (see Auto Clear Default Value)]]></Description>
+				<Units>s</Units>
+			</Item>
+			<Item ID="5">
+				<Name>Auto Clear Default Value</Name>
+				<Type>Float</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Default value to be restored when the validity time is expired. If not specified 0/false has to be assumed]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+		<Description2/>
+	</Object>
+</LWM2M>

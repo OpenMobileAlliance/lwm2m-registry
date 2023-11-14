@@ -3641,6 +3641,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>3422</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3422</URN>
+        <Name>Three-phase electrical meter complement</Name>
+        <Description>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3422.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>3423</ObjectID>
         <URN>urn:oma:lwm2m:ext:3423</URN>
         <Name>Gas meter</Name>
@@ -4105,8 +4119,246 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>3445</ObjectID>
         <URN>urn:oma:lwm2m:ext:3445</URN>
+        <Name>Stream Gauge</Name>
+        <Description>The uCIFI Stream Gauge measures the elevation of the water level surface and/or volumetric discharge.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3445.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3446</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3446</URN>
+        <Name>Rain Gauge</Name>
+        <Description>The uCIFI rain gauge is a device that measures the quantity of rain fall.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3446.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3447</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3447</URN>
+        <Name>LPWAN Mesh Connectivity</Name>
+        <Description>The uCIFI LPWAN Mesh Connectivity object enables monitoring and management of parameters related with the operation of 802.15.4-based LPWAN devices.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3447.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3448</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3448</URN>
+        <Name>LPWAN Mesh Statistics</Name>
+        <Description>The uCIFI LPWAN Mesh Statistics object enables the client to collect statistical information specifically tailored to monitor performance of 805.15.4 mesh networks. The object encompasses resources that provide visibility over both MAC layer and Network Layer statistics, the applicability of which is dependent on the specific 802.15.4 technology.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3448.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3449</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3449</URN>
+        <Name>Anemometer</Name>
+        <Description>The uCIFI anemometer is a sensor used to record speed and direction of wind. It is designed following the IPSO object reference.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3449.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3450</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3450</URN>
+        <Name>Wet Bulb Globe Temperature</Name>
+        <Description>The uCIFI Wet Bulb Globe Temperature is a temperature sensor that extends the standard IPSO Temperature object reference and can be used to record apparent temperature based on WBGT calculation. The measure comes from applying specific formula that take into account environmental measurements, such as temperature, humidity, wind speed, radiation.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3450.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3451</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3451</URN>
+        <Name>Roll over sensor</Name>
+        <Description>The uCIFI Roll Over Sensor is used to measure the roll component of displacement and can be useful in safety application, by complementing the existing IPSO Direction and uCIFI Tilt sensors.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3451.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3452</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3452</URN>
+        <Name>Program Scheduler</Name>
+        <Description>Summary of the mapping between the various functions, eventual inputs and the target actuators, spanning multiple days or years.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3452.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3453</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3453</URN>
+        <Name>Calendar Rule</Name>
+        <Description>Allows to specify when to execute a particular function.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3453.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3454</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3454</URN>
+        <Name>Program Function</Name>
+        <Description>Describes the behavior that controls the associated target based on time or sensor status.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3454.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3455</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3455</URN>
+        <Name>Input Filter</Name>
+        <Description>The uCIFI Input Filter can be used to fine tune the sensor evaluation, in order to provide hold functionality or custom filtering. To be used in conjunction with a Program Scheduler.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3455.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3456</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3456</URN>
+        <Name>Output Filter</Name>
+        <Description>The uCIFI Output Filter can be used to fine tune the output commands in order, for example, to achieve a prolonged fade. To be used in conjunction with a Program Scheduler.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3456.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3457</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3457</URN>
+        <Name>Program Manager</Name>
+        <Description>The uCIFI Program Manager describes the scheduling capabilities of the device, referring to Program Schedulers, Program Functions, Calendar Rules and Filters.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3457.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3458</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3458</URN>
+        <Name>Program Monitor</Name>
+        <Description>The uCIFI Program Monitor exports some useful information related to program execution.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3458.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3459</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3459</URN>
+        <Name>Distributed Sensor Group</Name>
+        <Description>The uCIFI Distributed Sensor Group allows to configure a device to publish or subscribe to device-to-device communication.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3459.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3460</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3460</URN>
+        <Name>Distributed Sensor Message</Name>
+        <Description>The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3460.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3461</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3461</URN>
+        <Name>Sensor Group Device Capabilities</Name>
+        <Description>This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3461.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3462</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3462</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3445 to 3480</Description>
+        <Description>Reservation from 3462 to 3480</Description>
         <Owner>TBD</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4120,7 +4372,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>3480</ObjectID>
         <URN>urn:oma:lwm2m:ext:3480</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3445 to 3480</Description>
+        <Description>Reservation from 3462 to 3480</Description>
         <Owner>TBD</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
