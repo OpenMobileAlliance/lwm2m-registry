@@ -6044,7 +6044,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>10379</ObjectID>
         <URN>urn:oma:lwm2m:x:10379</URN>
         <Name>Event Profile</Name>
-        <Description>Itron's battery powered device object for events and alarms</Description>
+        <Description>The Event Profile object manages capture of Events and Alarms based on related Event Codes. The Event Profile object also acts as an efficient aggregator for Events and Alarms, that can help to optimize their delivery. 
+Note: this object does not intent to manage deliveries of Events and Alarms.</Description>
         <Owner>Itron</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
