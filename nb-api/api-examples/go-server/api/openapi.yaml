@@ -1,0 +1,1118 @@
+openapi: 3.0.0
+info:
+  title: LwM2M NB APIs
+  version: 1.1.0
+servers:
+- url: https://example.com
+security:
+- ApiKeyAuth: []
+- OAuth2: []
+tags:
+- name: Device
+- name: Device Operation
+- name: Device Observation
+paths:
+  /lwm2m/v1/devices/{deviceId}:
+    get:
+      operationId: getDevice
+      parameters:
+      - description: Identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: Device information
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId not found
+      summary: Get device information
+      tags:
+      - Device
+  /lwm2m/v1/devices/{deviceId}/operations:
+    get:
+      operationId: getDeviceOperations
+      parameters:
+      - description: Page number
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          example: 1
+          type: integer
+        style: form
+      - description: Page size (maximum value is 30)
+        explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          example: 10
+          type: integer
+        style: form
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getDeviceOperations_200_response'
+          description: Operations
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+      summary: Get all the device operations
+      tags:
+      - Device Operation
+    post:
+      operationId: createDeviceOperation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOperation'
+        description: Operation
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatedOperationResult'
+          description: Operation result
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Invalid payload
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+      summary: Create a new device operation
+      tags:
+      - Device Operation
+  /lwm2m/v1/devices/{deviceId}/operations/{operationId}:
+    delete:
+      operationId: deleteDeviceOperation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the operation
+        explode: false
+        in: path
+        name: operationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "204":
+          description: Operation deleted
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: The operation is not completed
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or operationId not found
+      summary: Delete a completed device operation
+      tags:
+      - Device Operation
+    get:
+      operationId: getDeviceOperation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the operation
+        explode: false
+        in: path
+        name: operationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceOperation'
+          description: Operations
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or operationId not found
+      summary: Get the state of a device operation
+      tags:
+      - Device Operation
+  /lwm2m/v1/devices/{deviceId}/operations/{operationId}/successTargets:
+    get:
+      operationId: getDeviceOperationSuccessTargets
+      parameters:
+      - description: Page number
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          example: 1
+          type: integer
+        style: form
+      - description: Page size (maximum value is 30)
+        explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          example: 10
+          type: integer
+        style: form
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the operation
+        explode: false
+        in: path
+        name: operationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getDeviceOperationSuccessTargets_200_response'
+          description: Operations
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or operationId not found
+      summary: Get device operation success targets
+      tags:
+      - Device Operation
+  /lwm2m/v1/devices/{deviceId}/operations/{operationId}/errorTargets:
+    get:
+      operationId: getDeviceOperationErrorTargets
+      parameters:
+      - description: Page number
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          example: 1
+          type: integer
+        style: form
+      - description: Page size (maximum value is 30)
+        explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          example: 10
+          type: integer
+        style: form
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the operation
+        explode: false
+        in: path
+        name: operationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getDeviceOperationErrorTargets_200_response'
+          description: Operations
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or operationId not found
+      summary: Get device operation error targets
+      tags:
+      - Device Operation
+  /lwm2m/v1/devices/{deviceId}/observations:
+    get:
+      operationId: getDeviceObservations
+      parameters:
+      - description: Page number
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          example: 1
+          type: integer
+        style: form
+      - description: Page size (maximum value is 30)
+        explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          example: 10
+          type: integer
+        style: form
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getDeviceObservations_200_response'
+          description: Operation result
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId not found
+      summary: Get all the device observations
+      tags:
+      - Device Observation
+    post:
+      operationId: createDeviceObservation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateObservation'
+        description: Observation
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatedObservationResult'
+          description: Observation result
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Invalid payload
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId not found
+      summary: Create a new device observation
+      tags:
+      - Device Observation
+  /lwm2m/v1/devices/{deviceId}/observations/{observationId}:
+    delete:
+      operationId: deleteDeviceObservation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the observation
+        explode: false
+        in: path
+        name: observationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "204":
+          description: No content
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or observationId not found
+      summary: Delete a device observation
+      tags:
+      - Device Observation
+    get:
+      operationId: getDeviceObservation
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the observation
+        explode: false
+        in: path
+        name: observationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Observation'
+          description: Observations
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or observationId not found
+      summary: Get the state of a device observation
+      tags:
+      - Device Observation
+  /lwm2m/v1/devices/{deviceId}/observations/{observationId}/notifications:
+    get:
+      operationId: getDeviceObservationNotifications
+      parameters:
+      - description: Page number
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          example: 1
+          type: integer
+        style: form
+      - description: Page size (maximum value is 30)
+        explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          example: 10
+          type: integer
+        style: form
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the observation
+        explode: false
+        in: path
+        name: observationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getDeviceObservationNotifications_200_response'
+          description: Notifications
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Invalid query
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: deviceId or observationId not found
+      summary: Get the device observation's notifications
+      tags:
+      - Device Observation
+  /lwm2m/v1/devices/{deviceId}/observations/{observationId}/notifications/{notificationId}:
+    get:
+      operationId: getDeviceObservationNotification
+      parameters:
+      - description: The identifier of the device
+        explode: false
+        in: path
+        name: deviceId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the observation
+        explode: false
+        in: path
+        name: observationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The identifier of the notification
+        explode: false
+        in: path
+        name: notificationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ObservationDataNotification'
+          description: Notification
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: Unauthorized
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericError'
+          description: "deviceId, observationId or notificationId not found"
+      summary: Get the notification of a device observation
+      tags:
+      - Device Observation
+components:
+  parameters:
+    Page:
+      description: Page number
+      explode: true
+      in: query
+      name: page
+      required: false
+      schema:
+        example: 1
+        type: integer
+      style: form
+    Size:
+      description: Page size (maximum value is 30)
+      explode: true
+      in: query
+      name: size
+      required: false
+      schema:
+        example: 10
+        type: integer
+      style: form
+  schemas:
+    GenericError:
+      properties:
+        code:
+          example: error_0
+          type: string
+        message:
+          example: An error occurred
+          type: string
+      type: object
+    Pagination:
+      properties:
+        totalElements:
+          example: 1
+          type: integer
+        totalPages:
+          example: 1
+          type: integer
+        pageSize:
+          example: 10
+          type: integer
+        count:
+          example: 1
+          type: integer
+        page:
+          example: 1
+          type: integer
+        nextPage:
+          example: /api/uri?page=2&size=10
+          type: string
+      type: object
+    CreateOperation:
+      oneOf:
+      - $ref: '#/components/schemas/CreateOperationWithoutValue'
+      - $ref: '#/components/schemas/CreateOperationWithValue'
+      type: object
+    CreateOperationWithoutValue:
+      properties:
+        operation:
+          enum:
+          - READ
+          - EXECUTE
+          - DISCOVER
+          - DELETE
+          type: string
+        targets:
+          items:
+            $ref: '#/components/schemas/CreateOperationWithoutValue_targets_inner'
+          type: array
+      required:
+      - operation
+      - targets
+      type: object
+    CreateOperationWithValue:
+      properties:
+        operation:
+          enum:
+          - WRITE
+          - CREATE
+          type: string
+        targets:
+          items:
+            $ref: '#/components/schemas/CreateOperationWithValue_targets_inner'
+          type: array
+      required:
+      - operation
+      - targets
+      type: object
+    CreatedOperationResult:
+      example:
+        operationId: 01CD
+      properties:
+        operationId:
+          example: 01CD
+          type: string
+      type: object
+    MinimalDeviceOperation:
+      properties:
+        operation:
+          description: The type of the operation
+          enum:
+          - READ
+          - WRITE
+          - EXECUTE
+          - DISCOVER
+          - CREATE
+          - DELETE
+          type: string
+        status:
+          description: The status of the operation
+          enum:
+          - ONGOING
+          - COMPLETED
+          example: COMPLETED
+          type: string
+        completenessDate:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      type: object
+    PaginatedDeviceOperation:
+      allOf:
+      - properties:
+          operationId:
+            example: 01CD
+            type: string
+      - $ref: '#/components/schemas/MinimalDeviceOperation'
+      type: object
+    DeviceOperation:
+      allOf:
+      - $ref: '#/components/schemas/MinimalDeviceOperation'
+      - properties:
+          targets:
+            items:
+              $ref: '#/components/schemas/DeviceOperation_allOf_targets'
+            type: array
+          successTargets:
+            example: 1
+            type: integer
+          errorTargets:
+            example: 0
+            type: integer
+          creationDate:
+            example: 2023-09-25T16:30:00Z
+            format: date-time
+            type: string
+      type: object
+    SingleOperationDataReport:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+        value:
+          example: 1233456789
+          type: object
+        valueType:
+          enum:
+          - NUMBER
+          - STRING
+          - BOOLEAN
+          type: string
+        deviceTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      required:
+      - path
+      - serverTimestamp
+      - value
+      type: object
+    SingleOperationErrorReport:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+        failureReason:
+          example: An error occurred
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      required:
+      - failureReason
+      - path
+      - serverTimestamp
+      type: object
+    CreateObservation:
+      example:
+        targets:
+        - path: /3/0/2
+        - path: /3/0/2
+      properties:
+        targets:
+          items:
+            $ref: '#/components/schemas/CreateObservation_targets_inner'
+          type: array
+      type: object
+    CreatedObservationResult:
+      example:
+        observationId: 50B5
+      properties:
+        observationId:
+          example: 50B5
+          type: string
+      type: object
+    PaginatedObservation:
+      allOf:
+      - properties:
+          observationId:
+            example: 50B5
+            type: string
+      type: object
+    Observation:
+      allOf:
+      - properties:
+          creationDate:
+            example: 2023-09-25T16:30:00Z
+            format: date-time
+            type: string
+          targets:
+            items:
+              $ref: '#/components/schemas/Observation_allOf_targets'
+            type: array
+      type: object
+    CommonNotification:
+      properties:
+        deviceId:
+          example: example-client
+          type: string
+      type: object
+    PaginatedObservationNotification:
+      oneOf:
+      - $ref: '#/components/schemas/PaginatedObservationNotificationData'
+      - $ref: '#/components/schemas/PaginatedObservationNotificationError'
+    PaginatedObservationNotificationData:
+      properties:
+        type:
+          enum:
+          - DATA
+          type: string
+        notificationId:
+          example: A1B2
+          type: string
+        deviceTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      required:
+      - notificationId
+      - serverTimestamp
+      - type
+      type: object
+    PaginatedObservationNotificationError:
+      properties:
+        type:
+          enum:
+          - ERROR
+          type: string
+        notificationId:
+          example: A1B2
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      required:
+      - notificationId
+      - serverTimestamp
+      - type
+      type: object
+    Value:
+      properties:
+        value:
+          example: "1233456789"
+          type: object
+        valueType:
+          enum:
+          - NUMBER
+          - STRING
+          - BOOLEAN
+          type: string
+        deviceTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      type: object
+    ResultDataNotification:
+      allOf:
+      - properties:
+          path:
+            example: /3/0/2
+            type: string
+      - $ref: '#/components/schemas/Value'
+      type: object
+    ResultErrorNotification:
+      properties:
+        failureReason:
+          example: Reason for failure
+          type: string
+        serverTimestamp:
+          example: 2023-09-25T16:30:00Z
+          format: date-time
+          type: string
+      type: object
+    ObservationDataNotification:
+      allOf:
+      - $ref: '#/components/schemas/CommonNotification'
+      - properties:
+          observationId:
+            example: 50B5
+            type: string
+          notificationId:
+            example: "14"
+            type: string
+          results:
+            items:
+              $ref: '#/components/schemas/ResultDataNotification'
+            type: array
+      type: object
+    Device:
+      example:
+        operations:
+        - null
+        - null
+        lwM2MVersion: "1.0"
+        objects:
+        - objectVersion: "1.0"
+          objectInstanceId: 0
+          objectId: 1
+        - objectVersion: "1.0"
+          objectInstanceId: 0
+          objectId: 1
+        observations:
+        - null
+        - null
+        lifetime: 300
+        endpointName: example-client
+        binding: U
+        registration: 2022-04-01T08:25:31.422Z
+      properties:
+        endpointName:
+          example: example-client
+          readOnly: true
+          type: string
+        binding:
+          example: U
+          type: string
+        lwM2MVersion:
+          example: "1.0"
+          type: string
+        registration:
+          example: 2022-04-01T08:25:31.422Z
+          format: date-time
+          type: string
+        lifetime:
+          example: 300
+          type: number
+        objects:
+          items:
+            $ref: '#/components/schemas/Device_objects_inner'
+          type: array
+        observations:
+          items:
+            $ref: '#/components/schemas/Observation'
+          type: array
+        operations:
+          items:
+            $ref: '#/components/schemas/DeviceOperation'
+          type: array
+      type: object
+    getDeviceOperations_200_response:
+      allOf:
+      - $ref: '#/components/schemas/Pagination'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/PaginatedDeviceOperation'
+            type: array
+    getDeviceOperationSuccessTargets_200_response:
+      allOf:
+      - $ref: '#/components/schemas/Pagination'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/SingleOperationDataReport'
+            type: array
+    getDeviceOperationErrorTargets_200_response:
+      allOf:
+      - $ref: '#/components/schemas/Pagination'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/SingleOperationErrorReport'
+            type: array
+    getDeviceObservations_200_response:
+      allOf:
+      - $ref: '#/components/schemas/Pagination'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/PaginatedObservation'
+            type: array
+    getDeviceObservationNotifications_200_response:
+      allOf:
+      - $ref: '#/components/schemas/Pagination'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/PaginatedObservationNotification'
+            type: array
+    CreateOperationWithoutValue_targets_inner:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+      required:
+      - path
+      type: object
+    CreateOperationWithValue_targets_inner:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+        value:
+          example: "1233456789"
+          type: object
+      required:
+      - path
+      - value
+      type: object
+    DeviceOperation_allOf_targets:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+        value:
+          example: "1233456789"
+          type: object
+      type: object
+      example: null
+    CreateObservation_targets_inner:
+      example:
+        path: /3/0/2
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+      type: object
+    Observation_allOf_targets:
+      properties:
+        path:
+          example: /3/0/2
+          type: string
+      type: object
+      example: null
+    Device_objects_inner:
+      example:
+        objectVersion: "1.0"
+        objectInstanceId: 0
+        objectId: 1
+      properties:
+        objectId:
+          example: 1
+          type: integer
+        objectInstanceId:
+          example: 0
+          type: integer
+        objectVersion:
+          example: "1.0"
+          type: string
+      type: object
