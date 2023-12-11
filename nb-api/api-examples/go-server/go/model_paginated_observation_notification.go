@@ -9,11 +9,11 @@
 
 package openapi
 
-
-
+import (
+	"time"
+)
 
 type PaginatedObservationNotification struct {
-
 	Type string `json:"type"`
 
 	NotificationId string `json:"notificationId"`
@@ -26,8 +26,8 @@ type PaginatedObservationNotification struct {
 // AssertPaginatedObservationNotificationRequired checks if the required fields are not zero-ed
 func AssertPaginatedObservationNotificationRequired(obj PaginatedObservationNotification) error {
 	elements := map[string]interface{}{
-		"type": obj.Type,
-		"notificationId": obj.NotificationId,
+		"type":            obj.Type,
+		"notificationId":  obj.NotificationId,
 		"serverTimestamp": obj.ServerTimestamp,
 	}
 	for name, el := range elements {

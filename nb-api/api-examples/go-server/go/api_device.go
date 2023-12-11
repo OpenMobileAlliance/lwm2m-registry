@@ -10,7 +10,7 @@
 package openapi
 
 import (
-	"encoding/json"
+	//"encoding/json"
 	"net/http"
 	"strings"
 
@@ -19,7 +19,7 @@ import (
 
 // DeviceAPIController binds http requests to an api service and writes the service results to the http response
 type DeviceAPIController struct {
-	service DeviceAPIServicer
+	service      DeviceAPIServicer
 	errorHandler ErrorHandler
 }
 
