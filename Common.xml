@@ -176,6 +176,28 @@
         <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>       
         <TSLink>1</TSLink>
        </Item>
+       <Item ID="4016">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>![CDATA[TBD]] </Description>        
+        <TS></TS>       
+        <TSLink>1</TSLink>
+       </Item>
+       <Item ID="4017">
+        <Name>TBD</Name>
+        <Operations></Operations>
+        <Type></Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description>![CDATA[TBD]] </Description>        
+        <TS></TS>       
+        <TSLink>1</TSLink>
+       </Item>
       <Item ID="4020">
         <Name>TBD</Name>
         <Operations></Operations>
