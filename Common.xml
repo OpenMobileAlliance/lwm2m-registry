@@ -183,7 +183,7 @@
         <RangeEnumeration></RangeEnumeration>       
         <Units></Units>        
         <Submitter>OMA</Submitter>
-        <Description>![CDATA[TBD]] </Description>        
+        <Description><![CDATA[TBD]]></Description>        
         <TS></TS>       
         <TSLink>1</TSLink>
        </Item>
@@ -194,7 +194,7 @@
         <RangeEnumeration></RangeEnumeration>       
         <Units></Units>        
         <Submitter>OMA</Submitter>
-        <Description>![CDATA[TBD]] </Description>        
+        <Description><![CDATA[TBD]]></Description>        
         <TS></TS>       
         <TSLink>1</TSLink>
        </Item>
