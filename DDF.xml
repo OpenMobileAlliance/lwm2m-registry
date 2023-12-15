@@ -586,7 +586,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
     </Item>
     <Item>
         <ObjectID>20</ObjectID>
-        <URN>urn:oma:lwm2m:oma:20</URN>
+        <URN>urn:oma:lwm2m:oma:20:2.0</URN>
         <Name>Event Log</Name>
         <Description>The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
 The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
@@ -612,6 +612,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LwM2M_EventLog/V2_1-20231212-A/OMA-TS-LWM2M_EventLog-V2_1-20231212-A.pdf</TS>
+        <TSLink>1</TSLink>
         <TSLink>1</TSLink>
     </Item>
     <Item>

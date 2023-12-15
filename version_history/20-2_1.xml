@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_EventLog-V2_0-20230131-A
+   File: OMA-SUP-XML_LWM2M_EventLog-V2_1-20231212-A
    Path: https://openmobilealliance.org/release/LwM2M_EventLog/
 
 OMNA LwM2M Registry
@@ -15,7 +15,7 @@ NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LwM2M_EventLog-V2_0
+    OMA-TS-LwM2M_EventLog-V2_1
 
   This is available at https://www.openmobilealliance.org/release/LwM2M_EventLog/
 
@@ -65,9 +65,9 @@ LEGAL DISCLAIMER
 The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.
 ]]></Description1>
 		<ObjectID>20</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:20:2.0</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>2.0</ObjectVersion>
+		<ObjectURN>urn:oma:lwm2m:oma:20:2.1</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>2.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -109,7 +109,7 @@ Arguments definitions are described in the table below.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration>8-Bits</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error 4th LSB 1=LogDataIncremental collection active 0=LogDataIncremental collection stopped [5th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
 			</Item>
 			<Item ID="4014"><Name>LogData</Name>
 				<Operations>R</Operations>
@@ -136,6 +136,29 @@ Arguments definitions are described in the table below.]]></Description>
 [4..99] reserved
 [100..255] vendor specific data format
  ]]></Description>
+			</Item>
+			<Item ID="4016">
+				<Name>LogDataIncremental</Name>
+				<Operations></Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Log data collected since the last Send operation described for the LogDataIncremental Minimum Send Interval resource, or since that interval has been set to a positive value if the first Send operation has not yet been performed.
+The data shall have the same format as the LogData resource, but its collection and emptying is independent from it and from the LogStart/LogStop logic.
+This resource may only be included in a Send operation payload. Attempting to access it via the Device Management and Service Enablement Interface shall result in generating the Method Not Allowed error.]]></Description>
+			</Item>
+			<Item ID="4017">
+				<Name>LogDataIncrementalMinimumSendInterval</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.
+If the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server.]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>
