@@ -15,7 +15,7 @@ This repository contains materials and resources for the development of a Northb
 
 - `/api`: This directory contains the API definitions and specifications for the Northbound API. It includes both `.md` and `.yml` files for definition.
 
-Changes to the official API should be submitted against `/api/nbapi-v00.yml`.
+Changes to the official API should be submitted against [`/api/nbapi-v00.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/nbapi-v00.yml).
 
 - `/docs`: This is where all the documentation related to the project is stored. It includes workshop materials and proposals.
 
