@@ -7,7 +7,7 @@ This repository contains materials and resources for the development of a Northb
 ├── README.md
 ├── api
 ├── docs
-├── implementations
+├── impl
 └── minutes
 ```
 
@@ -19,7 +19,8 @@ Changes to the official API should be submitted against `/api/nbapi-v00.yml`.
 
 - `/docs`: This is where all the documentation related to the project is stored. It includes workshop materials and proposals.
 
-- `/implementations`: This directory contains code related to the server implementations of the Northbound API. Please upload yours on a subfolder in the path.
+- `/impl`: This directory stands for "implementations" and contains code related to the server implementations of the Northbound API. Please upload yours on a subfolder in the path. Below you have links to the existing ones:
+  - [go-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/go-server) Simple implementation in Go.
 
 - `/minutes`: This directory contains markdown files with the minutes from each project meeting.
 
