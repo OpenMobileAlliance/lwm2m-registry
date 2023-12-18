@@ -2,6 +2,14 @@
 
 This repository contains materials and resources for the development of a Northbound API (NB API). The resources include workshop materials, meeting minutes, and API examples to aid in the development process.
 
-`/api-examples`
+## Repository Structure
 
-This directory contains API examples from OMA members.
+- `/api`: This directory contains the API definitions and specifications for the Northbound API. It includes both `.md` and `.yml` files for definition.
+
+Changes to the official API should be submitted against `/api/nbapi-v00.yml`.
+
+- `/docs`: This is where all the documentation related to the project is stored. It includes workshop materials and proposals.
+
+- `/implementations`: This directory contains code related to the server implementations of the Northbound API. Please upload yours on a subfolder in the path.
+
+- `/minutes`: This directory contains markdown files with the minutes from each project meeting.
