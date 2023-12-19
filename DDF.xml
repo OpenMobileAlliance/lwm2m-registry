@@ -611,7 +611,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <DDF>20.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
-        <TS>https://www.openmobilealliance.org/release/Lwm2m_eventlog/V2_1-20231212-A/V2_1-20231212-A_OMA-TS-LWM2M_EventLog-V2_1-20231212-A.pdf</TS>
+        <TS>https://www.openmobilealliance.org/release/LwM2M_EventLog/V2_1-20231212-A/OMA-TS-LWM2M_EventLog-V2_1-20231212-A.pdf</TS>
         <TSLink>1</TSLink>
         <TSLink>1</TSLink>
     </Item>
