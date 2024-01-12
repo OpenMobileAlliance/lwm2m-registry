@@ -6127,6 +6127,62 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>10483</ObjectID>
+        <URN>urn:oma:lwm2m:x:10483</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10483</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10484</ObjectID>
+        <URN>urn:oma:lwm2m:x:10484</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10484</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10485</ObjectID>
+        <URN>urn:oma:lwm2m:x:10485</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10485</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>10486</ObjectID>
+        <URN>urn:oma:lwm2m:x:10486</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10486</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
         <Name>MQTT Broker</Name>
