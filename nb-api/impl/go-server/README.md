@@ -1,4 +1,6 @@
-# Northbound API basic server
+# LwM2M Northbound API
+
+## Server in Go
 
 ### API
 
@@ -9,6 +11,7 @@ The objective would be to keep adding functionality based on the features descri
 Feel free to suggest PRs or functionality proposals.
 
 ### Running the server
+
 To run the server, follow these simple steps:
 
 ```

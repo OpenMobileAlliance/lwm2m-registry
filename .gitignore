@@ -1,1 +1,4 @@
 **/.DS_Store
+nb-api/impl/py-server/venv/*
+nb-api/impl/py-server/__pycache__/*
+nb-api/impl/py-server/test/__pycache__/*

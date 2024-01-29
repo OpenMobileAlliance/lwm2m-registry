@@ -20,7 +20,10 @@ Changes to the official API should be submitted against [`/api/nbapi-v00.yml`](h
 - `/docs`: This is where all the documentation related to the project is stored. It includes workshop materials and proposals.
 
 - `/impl`: This directory stands for "implementations" and contains code related to the server implementations of the Northbound API. Please upload yours on a subfolder in the path. Below you have links to the existing ones:
+
   - [go-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/go-server) Simple implementation in Go.
+
+  - [python-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/py-server) Implementation in Python. A more complete one.
 
 - `/minutes`: This directory contains markdown files with the minutes from each project meeting.
 
