@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Program Function</Name>
+		<Description1>Describes the behavior that controls the associated target based on time or sensor status.</Description1>
+		<ObjectID>3454</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3454</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Mandatory</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Function Name</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Mnemonic name of the function]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="1">
+				<Name>Run Condition</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Conditions that would cause the function to be effective (if at least one condition is met).
+Syntax of each condition is as follows:
+<time>,<sensor #1>,<sensor #2>,…,<sensor #n>
+
+hh:mm or S(unset), sun(R)ise /- minute offset
+Ranges are separated with a tilde character "~"
+Open ranges can be written as start~ (value >= start) or ~end (value <= end)
+
+Time should be a range, eg 18:00~04:00 or S~R
+And each sensor can be either a specific value or a range of values
+
+If omitted or not supported, function can be assumed to be effective 24/24]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="3">
+				<Name>Output Filter</Name>
+				<Type>Integer</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Number of Output Filter object instances, each one being applied to the corresponding target output]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="4">
+				<Name>Time Input Array</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Sequence of fixed time and/or astronomical events separated by semicolons
+Each resource instance is specified as a sequence that will target the corresponding output
+hh:mm = fixed time
+S+30 = sunset plus 30 minutes
+R-20 = sunrise minus 20 minutes]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="5">
+				<Name>Time Output Array</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Mandatory</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Sequence of arguments to be provided to the target.
+If strings have to be provided, they must be enclosed in double quotes
+e.g. 10;50;24
+"parking empty";"parking full"
+
+Any spacing provided outside double quotes can be safely ignored]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="6">
+				<Name>Single Sensor Input Array</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Allows to define multiple conditions based on sensor value.
+Only the first sensor is considered (in case multiple sensors are configured).
+This resource shall be used in mutual exclusion with the multi sensor input array.]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="7">
+				<Name>Multi Sensor Input Array</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Allows to define multiple conditions based on time and sensor values with a syntax similar to the one used for the Run condition
+Each condition shall be enclosed in brackets and separated by semicolons
+(<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);(<time>,<sensor #1>,<sensor #2>,…,<sensor #n>);…
+The first condition matching would take precedence over the ones following
+Any spacing provided outside double quotes can be safely ignored
+When multiple output targets have to be managed, additional conditions will be provided in a separate resource instance]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="8">
+				<Name>Sensor Output Array</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Sequence of arguments to be provided to the target in a similar way of the time output array
+The sensor arrays can be used in conjunction of the time arrays and, in this case, would take precedence in case of matching
+This would allow to define both fixed time control and sensor based control in a single function
+If both single sensor input array and multi sensor input array are both specified, the multi sensor one would take precedence]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="9">
+				<Name>Output Filter for Time Output</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Sequence of arguments representing Output Filter instances to be applied to the corresponding target output
+e.g. 0;;1 means /3456/0;default;/3456/1
+If resource or specific entry is not specified, the default output filter, if present, would be applied]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="10">
+				<Name>Output Filter for Sensor Output</Name>
+				<Type>String</Type>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Description><![CDATA[Sequence of arguments representing Output Filter instances to be applied to the corresponding target output
+e.g. 0;;1 means 3456/0;default;3456/1
+If resource or specific entry is not specified, the default output filter, if present, would be applied]]></Description>
+				<Units/>
+			</Item>
+		</Resources>
+		<Description2/>
+	</Object>
+</LWM2M>

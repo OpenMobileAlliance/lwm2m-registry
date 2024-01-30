@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- BSD-3 Clause License
+
+Copyright 2023 Itron. 
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+
+	<Object ObjectType="MODefinition">
+		<Name>Event Profile</Name>
+		<Description1><![CDATA[The Event Profile object manages capture of Events and Alarms based on related Event Codes. The Event Profile object also acts as an efficient aggregator for Events and Alarms, that can help to optimize their delivery. 
+Note: this object does not intent to manage deliveries of Events and Alarms.]]></Description1>
+		<ObjectID>10379</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:x:10379</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Events to Capture</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[List of Event Codes for Events to capture in the Events Captured resource when the related Events are triggered.]]></Description>
+			</Item>
+			<Item ID="1">
+				<Name>Events Captured</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Triggered or raised Events are captured in this Events Captured resource. The triggered or raised Events must be listed in the Events to Capture resource to allow the capture. 
+For Events structure definitions, a recommendation is to use the definitions for Events and related serialization as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data).
+The Events Captured list should be sorted by increasing Timestamps (oldest Events first).
+The maximum size of the Events Captured list is implementation specific.
+When the Events Captured list reaches the maximum size, it should roll-over and start back from the first entry (overwrites that first entry).
+On triggering or raising of an Event that needs to be captured (listed in the Events to Capture resource), that Event should be implicitly captured in (added to) the Events Captured resource.
+If the Capture resource is supported, an explicit capture of a triggered or raised Event can be accomplished via an execution of that Capture resource.
+]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>Active Events</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[List of Event Codes for currently active Events. An Event is considered Active if it got raised or triggered and didn’t get de-asserted based on its trigger conditions. (example: a high flow event triggered on exceeding a certain threshold is considered active as long as it exceeds that threshold, below that threshold that event would not be considered active anymore).]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>Events Configured as Alarm</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Event Codes for Events that are also configured as Alarms, that the device could send on the next best opportunity when the underlying Events are triggered (in real-time or near real-time).]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Alarms Captured</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Opaque</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Triggered or raised Alarms are captured in this Alarms Captured resource. The triggered or raised Alarms must be listed in the Alarms Events Configured as Alarm resource to allow the capture in this Alarms Captured resource.
+The management of the Alarms Captured list can follow the same rules as used for the management of Event Captured resource.
+]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Capture Event</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The Capture Event allows to capture an Event with associated parameters, based on the Event structure definition chosen (as defined for the Events Captured resource).
+The captured Event is added to the Event Captured resource. 
+If that Event is also configured as an Alarm, it is also captured and added in the Alarms Captured resource.
+Assuming the use of an Event serialization as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data), the Capture Event method would use the following arguments:
+A mandatory Opaque argument (Order 0): an Event serialization structure as found in the shared resource 6025: Latest Eventlog Payload (with an Event Code, Event Type, Event Timestamp and optional data).]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Clear Events</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Executing the Clear Events resource clears the Event Captured resource.]]></Description>
+			</Item>
+			<Item ID="7">
+				<Name>Clear Alarms</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Executing the Clear Alarms resource clears the Alarms Captured resource.]]></Description>
+			</Item>
+			<Item ID="8">
+				<Name>Maximum Event Count</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Maximum Event Count is a readable and writable resource used to provide a ceiling on the number of events that can be raised within the time period defined in Maximum Event Period resource. The intent of this resource is to control the number of events reported, particularly in the case of a faulty sensor.
+The Maximum Event Count and Maximum Event Period resources store values related to an Event Code present in the Event to Capture resource and are interpreted together, with matching indexes, and shall have the same number of entries.
+The first index values found in the Maximum Event Count and Maximum Event Period correspond to the first index value (Event Code) found in the Events to Capture resource, and so on.
+If the Maximum Event Count (for a given Event Code) is set to -1, the number of events recorded is unconstrained.]]>
+				</Description>
+			</Item>
+			<Item ID="9">
+				<Name>Maximum Event Period</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description><![CDATA[Maximum Event Period is a readable and writable resource used in conjunction with the Maximum Event Count resource to control the number of events that can be raised in a given period. Maximum Event Period is an integer value representing the number of seconds for which the Maximum Event Count is measured.
+The Maximum Event Count and Maximum Event Period resources store values related to an Event Code present in the Event to Capture resource and are interpreted together, with matching indexes, and shall have the same number of entries.
+The first index values found in the Maximum Event Count and Maximum Event Period correspond to the first index value (Event Code) found in the Events to Capture resource, and so on.
+If the Maximum Event Period (for a given Event Code) is set to -1, the number of events recorded is unconstrained.]]></Description>
+			</Item>
+		</Resources>
+		<Description2><![CDATA[]]></Description2>
+	</Object>
+</LWM2M>

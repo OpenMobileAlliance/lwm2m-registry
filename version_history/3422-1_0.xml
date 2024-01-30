@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023 uCIFI Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Three-phase electrical meter complement</Name>
+		<Description1>The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.</Description1>
+		<ObjectID>3422</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3422</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>L1-L2 Voltage</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>V</Units>
+				<Description><![CDATA[Voltage measured between line 1 and line 2.]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>L2-L3 Voltage</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>V</Units>
+				<Description><![CDATA[Voltage measured between line 2 and line 3.]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>L3-L1 Voltage</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>V</Units>
+				<Description><![CDATA[Voltage measured between line 3 and line 1.]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Total Current of all three phases</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>A</Units>
+				<Description><![CDATA[Sum of current measured on all three lines.]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Instantaneous Power Factor overall</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Instantaneous power factor overall.]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Last Average Power Factor</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Last average power factor calculated from each power factor on the 3 lines.]]></Description>
+			</Item>
+			<Item ID="7">
+				<Name>Minimum Power Factor</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Minimum power factor measured on the 3 lines.]]></Description>
+			</Item>
+			<Item ID="8">
+				<Name>Total active power import on the 3 lines</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>W</Units>
+				<Description><![CDATA[System W: Inst. Value. Sum Li Active power+ (QI+QIV).]]></Description>
+			</Item>
+			<Item ID="9">
+				<Name>Total active power export on the 3 lines</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>W</Units>
+				<Description><![CDATA[System W: Inst. Value. Sum Li Active power- (QII+QIII).]]></Description>
+			</Item>
+			<Item ID="10">
+				<Name>Total reactive power import on the 3 lines</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>var</Units>
+				<Description><![CDATA[System var: Inst. Value. Sum Li Reactive power+ (QI+QII).]]></Description>
+			</Item>
+			<Item ID="11">
+				<Name>Total reactive power export on the 3 lines</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>var</Units>
+				<Description><![CDATA[System var: Inst. Value. Sum Li Reactive power- (QIII+QIV).]]></Description>
+			</Item>
+			<Item ID="12">
+				<Name>Instantaneous Apparent Power import</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>-1..1</RangeEnumeration>
+				<Units>VA</Units>
+				<Description><![CDATA[Instantaneous apparent power import on the 3 lines (+VA).]]></Description>
+			</Item>
+			<Item ID="13">
+				<Name>Instantaneous Apparent Power export</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>VA</Units>
+				<Description><![CDATA[Instantaneous apparent power export on the 3 lines (-VA).]]></Description>
+			</Item>
+			<Item ID="14">
+				<Name>Instantaneous Active Power</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>W</Units>
+				<Description><![CDATA[Instantaneous active power on the 3 lines (|+A|+|-A|).]]></Description>
+			</Item>
+			<Item ID="15">
+				<Name>Instantaneous Net Active Power</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>W</Units>
+				<Description><![CDATA[Instantaneous net active power on the 3 lines (|+A|-|-A|).]]></Description>
+			</Item>
+			<Item ID="16">
+				<Name>Measurement period of Instantaneous value</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>s</Units>
+				<Description><![CDATA[Measurement period of instantaneous value.]]></Description>
+			</Item>
+			<Item ID="17">
+				<Name>Active energy import Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>Wh</Units>
+				<Description><![CDATA[Active energy import (unified rate) on the 3 lines (+A).]]></Description>
+			</Item>
+			<Item ID="18">
+				<Name>Active energy export Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>Wh</Units>
+				<Description><![CDATA[Active energy export (unified rate) on the 3 lines (-A).]]></Description>
+			</Item>
+			<Item ID="19">
+				<Name>Active energy Combined total (+export)</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>Wh</Units>
+				<Description><![CDATA[Active energy, combined total, import plus export (|+A|+|-A|).]]></Description>
+			</Item>
+			<Item ID="20">
+				<Name>Active energy Combined total (-export)</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>Wh</Units>
+				<Description><![CDATA[Active energy, combined total, import minus export, on the 3 lines (|+A|-|-A|).]]></Description>
+			</Item>
+			<Item ID="21">
+				<Name>Reactive energy import Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy import, unified rate, on the 3 lines (+R).]]></Description>
+			</Item>
+			<Item ID="22">
+				<Name>Reactive energy export Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy export, unified rate, on the 3 lines (-R).]]></Description>
+			</Item>
+			<Item ID="23">
+				<Name>Reactive energy QI Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy QI, unified rate, on the 3 lines (+Ri).]]></Description>
+			</Item>
+			<Item ID="24">
+				<Name>Reactive energy QII Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy QII, unified rate, on the 3 lines (+Rc).]]></Description>
+			</Item>
+			<Item ID="25">
+				<Name>Reactive energy QIII Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy QIII, unified rate, on the 3 lines (-Ri).]]></Description>
+			</Item>
+			<Item ID="26">
+				<Name>Reactive energy QIV Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>varh</Units>
+				<Description><![CDATA[Reactive energy QIV, unified rate, on the 3 lines (-Rc).]]></Description>
+			</Item>
+			<Item ID="27">
+				<Name>Apparent energy import Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>VAh</Units>
+				<Description><![CDATA[Apparent energy import, unified rate, on the 3 lines.]]></Description>
+			</Item>
+			<Item ID="28">
+				<Name>Apparent energy export Un</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>VAh</Units>
+				<Description><![CDATA[Apparent energy export, unified rate, on the 3 lines.]]></Description>
+			</Item>
+			<Item ID="29">
+				<Name>Number of power failures in any phase</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Number of power failures in any phase]]></Description>
+			</Item>
+			<Item ID="30">
+				<Name>Number of long power failures in any phase</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Number of long power failures in any phase.]]></Description>
+			</Item>
+			<Item ID="31">
+				<Name>Time threshold for long power failure</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>s</Units>
+				<Description><![CDATA[Time threshold for long power failure.]]></Description>
+			</Item>
+			<Item ID="32">
+				<Name>Duration of last long power failure in any phase</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>s</Units>
+				<Description><![CDATA[Duration of last long power failure in any phase.]]></Description>
+			</Item>
+			<Item ID="33">
+				<Name>Threshold for missing voltage (voltage cut)</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>V</Units>
+				<Description><![CDATA[Threshold for missing voltage (voltage cut).]]></Description>
+			</Item>
+			<Item ID="34">
+				<Name>Time threshold for voltage cut</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units>s</Units>
+				<Description><![CDATA[Time threshold for voltage cut.]]></Description>
+			</Item>
+			<Item ID="35">
+				<Name>Voltage cut</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Set to True if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected.]]></Description>
+			</Item>
+			<Item ID="36">
+				<Name>L1 Meter Instance</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 1]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="37">
+				<Name>L2 Meter Instance</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 2]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="38">
+				<Name>L3 Meter Instance</Name>
+				<Type>Integer</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[Instance number of the Single-phase electrical meter associated to line 3]]></Description>
+				<Units/>
+			</Item>
+			<Item ID="39">
+				<Name>Low power factor threshold</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Threshold below which the low power factor resource is set to True.]]></Description>
+			</Item>
+			<Item ID="40">
+				<Name>Low power factor</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description><![CDATA[Set to True when the overall power factor is below low power factor threshold.]]></Description>
+			</Item>
+			<Item ID="41">
+				<Name>Excessive load</Name>
+				<Type>Boolean</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[True if an excessive load is detected, e.g when too much current is being imported]]></Description>
+				<Units/>
+			</Item>			
+			<Item ID="42">
+				<Name>Unexpected load</Name>
+				<Type>Boolean</Type>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
+				<Description><![CDATA[True if an unexpected load is detected, e.g when current is imported despite the load being supposed to be disconnected]]></Description>
+				<Units/>
+			</Item>			
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration/>
+				<Units/>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+			<Item ID="6050">
+				<Name>Fractional Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..1</RangeEnumeration>
+				<Units>s</Units>
+				<Description>Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).</Description>
+			</Item>
+			<Item ID="6042">
+				<Name>Measurement Quality Indicator</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..23</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.</Description>
+			</Item>
+			<Item ID="6049">
+				<Name>Measurement Quality Level</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units/>
+				<Description>Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.</Description>
+			</Item>
+		</Resources>
+		<Description2/>
+	</Object>
+</LWM2M>
