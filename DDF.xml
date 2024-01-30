@@ -6116,15 +6116,15 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
         <ObjectID>10482</ObjectID>
         <URN>urn:oma:lwm2m:x:10482</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10482</Description>
-        <Owner>TBD</Owner>
+        <Name>DYM IoT edge commands and data protocols</Name>
+        <Description>This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange</Description>
+        <Owner>DYM Labs</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10482.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
+        <DDFLink>1</DDFLink>
+        <TS></TS> 
         <TSLink>0</TSLink>
     </Item>
     <Item>
