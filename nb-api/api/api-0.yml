@@ -1,10 +1,10 @@
 openapi: "3.0.0"
 info:
   title: LwM2M NB APIs
-  version: 1.1.0
+  version: 0.0.0
 
 servers:
-  - url: http://127.0.0.1:8000
+  - url: https://example.com
 
 security:
   - ApiKeyAuth: []
@@ -27,6 +27,62 @@ paths:
         - name: deviceId
           in: path
           description: Identifier of the device
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Device information
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Device"
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenericError"
+        404:
+          description: deviceId not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenericError"
+  /lwm2m/v1/devices/{deviceId}/{object)/{object_instance}/{resourceID}/{resource_instance}:
+    get:
+      summary: Reads any OMA object by Object/instance/resource/resource_instance
+      operationId: Read Object
+      tags:
+        - Device
+      parameters:
+        - name: deviceId
+          in: path
+          description: Identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: object
+          in: path
+          description: OMA Object ID
+          required: true
+          schema:
+            type: string
+        - name: object_instance
+          in: path
+          description: Instance of the Object ID being read
+          required: true
+          schema:
+            type: string
+        - name: resourceID
+          in: path
+          description: Resource ID of the object being read
+          required: true
+          schema:
+            type: string
+        - name: resource_instance
+          in: path
+          description: Instance of the resource being read
           required: true
           schema:
             type: string

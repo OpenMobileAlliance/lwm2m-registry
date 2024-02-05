@@ -1,0 +1,262 @@
+\documentclass{article}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{references.bib}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{lmodern} 
+\geometry{a4paper, margin=1in}
+\title{API Versioning Overview}
+\author{Jaime Jimenez - jaime.jimenez@ericsson.com}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{API Versioning}
+
+This document presents my own overview of the current state of the art in API versioning, focusing on best practices, strategies, techniques, and validation methods. The content is tailored to provide valuable insights for the OMA DMSO group, aiming to facilitate informed decision-making and the adoption of effective versioning approaches. The document is structured as follows:
+
+\begin{enumerate}
+    \item \textbf{Versioning Strategies}: Discusses additive-change and explicit-version strategies.
+    \item \textbf{Versioning Techniques}: Explores common ways APIs handle versioning, such as URI versioning, query parameter versioning, custom request headers, content negotiation, and hostname versioning.
+    \item \textbf{Version Semantics}: Provides an overview of semantic versioning and its adoption in the industry.
+    \item \textbf{Validation}: Covers API version validation using regular expressions.
+    \item \textbf{Communication Plan}: Presents possible communication channels and timelines for backward-compatible and backward-incompatible changes in APIs.
+    \item \textbf{Best API Design Practices}: Offers a set of best practices for designing APIs that can evolve gracefully over time, with examples for each practice.
+\end{enumerate}
+
+\section{Versioning Strategies}
+
+Versioning is essential for bundling changes into understandable chunks and providing developers a way to understand your API. According to \cite{DesigningWebAPIs} there are two possible strategies for handling versioning: additive-change strategy and explicit-version strategy. The most common on the web is the latter. The additive-change strategy is less common and is often used in internal APIs or when the API is not exposed to the public.
+
+\subsection{Additive-Change Strategy}
+
+In an additive-change strategy, all updates are compatible with previous versions. This strategy requires avoiding backward-incompatible changes, such as:
+
+\begin{itemize}
+    \item Removing or renaming APIs or API parameters
+    \item Changing a type for a response field
+    \item Changes in behavior for an existing API
+    \item Changes in error codes and fault contracts
+\end{itemize}
+
+In this strategy, you make changes like adding an output field or a new API endpoint without changing a response field's type or removing a response field without letting users opt-in via request parameters. This means you'll add more and more parameters that will alter the response of an API request.
+
+\subsection{Explicit-Version Strategy}
+
+When creating an explicitly numbered versioning system, the first thing to decide is how users will interact with versions, what is called a versioning \textit{scheme}. There are several choices available, each with distinct advantages. The version access pattern should be as stable as promised in accompanying documentation, and developers should have the option to opt into new versions while maintaining stability on previous versions.
+
+Some strategies for defining version schemes include:
+
+\begin{itemize}
+    \item Updating URI components
+    \item Using HTTP headers
+    \item Using request parameters
+\end{itemize}
+
+In addition to implementing the versioning system, you need to think about how to organize and label your versions. For this, the semantic versioning specification (SemVer) is the most commonly used (see \cite{serboutEmpiricalStudyWeb2023a}).
+
+\section{Versioning Techniques}
+
+There are several common ways in which APIs handle versioning \cite{DesigningWebAPIs}:
+
+\begin{enumerate}
+    \item URI versioning: This involves including the version number directly in the API endpoint's URL. For example, \url{https://api.example.com/v1/users} or \url{https://api.example.com/v2/users}. This approach is simple and easy to understand but can lead to URL clutter.
+    \item Query parameter versioning: In this method, the version number is passed as a query parameter in the URL. For example, \url{https://api.example.com/users?version=1} or \url{https://api.example.com/users?version=2}. This method is also easy to implement, but it can result in long URLs with multiple query parameters.
+    \item Custom request header: The version information is included in a custom header field in the HTTP request. For example, \texttt{X-API-Version: 1} or \texttt{X-API-Version: 2}. This approach keeps the URL clean and allows for more flexibility, but it might be less visible and harder to debug.
+    \item Content negotiation (Accept header): This method uses the standard HTTP \texttt{Accept} header to specify the desired API version. The client requests a specific version by including it in the \texttt{Accept} header, like \texttt{Accept: application/vnd.example.api+json; version=1.0} or \texttt{Accept: application/vnd.example.api+json; version=2.0}. This approach follows the HTTP standard but may be more complex to implement and understand.
+    \item Hostname versioning: In this approach, different versions of the API are served from different subdomains. For example, \url{https://v1.api.example.com/users} or \url{https://v2.api.example.com/users}. This method is easy to understand and allows for clear separation of API versions, but it may require additional infrastructure setup.
+\end{enumerate}
+
+\section{Version Semantics}
+
+Semantic versioning is a widely adopted method for expressing versions in a standardized and meaningful way. In \cite{xavierHistoricalImpactAnalysis2017} of a collection of 7,114 APIs, they discovered that 5,292 APIs employed semantic versioning (with 112,908 commits) at some point in their history. They also state:
+
+\begin{quote}
+    semantic versioning (SemVer) is the most widely adopted versioning scheme among API releases, specifically in the case of APIs that use the info.version field (60.56\%). In contrast, for APIs that use alternative methods for versioning, such as embedding version identifiers in endpoints URLs or the server DNS name, the most common practice is to use shorter version identifiers that include only the major version counter. Additionally, for preview releases, SemVer is often combined with other tags to reflect the type of preview release, such as Develop, Snapshot, Alpha, Beta, or Preview
+\end{quote}
+
+Therefore, it helps developers and users understand the changes between different versions of a software component, such as an API, library, or application. Semantic versioning uses a three-part version number in the format of \texttt{MAJOR.MINOR.PATCH}, where:
+
+\begin{enumerate}
+    \item MAJOR: This number is incremented when there are backward-incompatible changes in the software, such as changes in the API that would break existing clients.
+    \item MINOR: This number is incremented when new functionality is added in a backward-compatible manner. Existing clients should continue to work without any issues, but they may not be able to access the new features.
+    \item PATCH: This number is incremented when backward-compatible bug fixes are introduced. These fixes should not affect the software's functionality or introduce new features.
+\end{enumerate}
+
+For example, a version number like \texttt{2.3.4} denotes the second major version, with three minor updates and four patches.
+
+In addition to the standard semantic versioning, some projects use additional techniques or labels to express more information about the version:
+
+\begin{itemize}
+    \item Pre-release versioning: To indicate that a version is not yet stable or production-ready, pre-release labels can be added to the version number, e.g., \texttt{1.0.0-alpha}, \texttt{1.0.0-beta}, or \texttt{1.0.0-rc1} (release candidate 1).
+    \item Build metadata: Additional information about the build or environment can be appended to the version number, separated by a \texttt{+} symbol, e.g., \texttt{1.0.0+build123}. This metadata does not affect the version precedence or compatibility.
+    \item Date-based versioning: Some projects use a date-based versioning scheme, such as \texttt{YYYY.MM.DD} or \texttt{YYYY.MM}, to indicate when the version was released. While this is not strictly semantic versioning, it can provide useful information about the age and recency of a release.
+    \item Hybrid versioning: Some projects combine semantic versioning with date-based or other versioning schemes, e.g., \texttt{2.0.0-20220202} or \texttt{2.0.0-rc1+build123}.
+\end{itemize}
+
+When using semantic versioning or any other versioning technique, it's essential to communicate the versioning scheme clearly in the project documentation and adhere to the chosen scheme consistently \cite{DesigningWebAPIs}.
+
+\section{Validation}
+
+When working with APIs, it's essential to validate the version numbers to ensure compatibility and proper functionality. As mentioned before, numbers typically follow the Semantic Versioning (SemVer) format, which consists of three components: MAJOR.MINOR.PATCH (e.g., 1.2.3).
+
+\subsection{API Version Validation}
+
+API version validation can be performed using a regular expression (regex) to ensure that the version number follows the SemVer format. The following regex (see \cite{dibRegex101BuildTest}) can be used to validate a version number:
+
+\begin{verbatim}
+/^(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)
+(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)
+(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?
+(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/gm
+\end{verbatim}
+
+This regex validates the version string and captures the major, minor, and patch versions, as well as optional prerelease and build metadata identifiers.
+
+You can test and analyze this regex using the following URL: \url{https://regex101.com/r/Ly7O1x/3/} .
+
+For example: suppose you have an API that follows the SemVer standard, and you want to validate the version string provided by a user. You can use the regex above to ensure the version string is valid and extract the components for further processing.
+
+For example, given the version string \texttt{1.2.3-alpha.1+build.123}, the regex will validate the string and capture the following components:
+
+\begin{itemize}
+    \item Major: \texttt{1}
+    \item Minor: \texttt{2}
+    \item Patch: \texttt{3}
+    \item Prerelease: \texttt{alpha.1}
+    \item Build metadata: \texttt{build.123}
+\end{itemize}
+
+By validating and capturing the version components, you can ensure your API operates correctly and maintains compatibility with various clients and integrations.
+
+\section{Communication Plan}
+
+Communication plans for API changes are done to ensure that developers have a mechanism to receive updates (see \cite{DesigningWebAPIs} page 134). Starting with a RSS feed is a good approach, but eventually, you'll want a way to communicate with specific developers about changes that affect them. For example, if you previously used \texttt{repositories.fetch} and introduced \texttt{repositories.fetchSingle}, you might want to contact all developers who used the \texttt{repositories.fetch} endpoint in the past 12 months to inform them about the new \texttt{repositories.fetchSingle} endpoint. You might also want to contact developers who used the \texttt{repositories.fetch} endpoint and received a 500-level response after releasing a product that caused timeouts.
+
+The table below shows possible communication channels and timelines for backward-compatible and backward-incompatible changes. In this example, backward-compatible changes can be released at any time, and developers will be given 18 months' notice before backward-incompatible changes are released.
+
+\begin{tabularx}{\textwidth}{|l|X|X|l|}
+\hline
+\textbf{Change Type} & \textbf{Examples} & \textbf{Communication Channels} & \textbf{Time to Release After Notification} \\ \hline
+    Backward compatible & Request parameter added, response field added, new API method added & RSS feed, API docs & Anytime \\ \hline
+    Backward incompatible & Response field removed, functionality changes, response type changes, endpoint removed & RSS feed, API docs, Email to affected developers, Blog post explaining change & 18 months \\ \hline
+\end{tabularx} \\
+
+In addition to communication mechanisms where you broadcast information to specific audiences, there are other built-in ways to communicate. You might consider annotating response payloads or headers with information about changes.
+
+\section{Best API Design Practices}
+
+This section is mostly based on \cite{WebAPIVersioning} insights into the best practices for designing APIs that can evolve gracefully over time, along with examples for each practice:
+
+\subsection{Keep Compatible Changes Out of Names}
+
+Names should remain stable over time and should identify a known set of semantics. This applies to all identifiers, including URLs, media types, link relation names, and HTTP headers. Only include the major version number in the URL, leaving out minor and patch versions, as they don't require name changes for backwards compatibility.
+
+\textbf{Example:}
+
+Instead of using URLs like \url{http://api.example.com/v1.2.3/ladder}, only include the major version number:
+
+\begin{verbatim}
+http://api.example.com/v1/ladder
+\end{verbatim}
+
+Or even use a different hostname for each major version:
+
+\begin{verbatim}
+http://api2.example.com/ladder
+\end{verbatim}
+
+\subsection{Avoid New Major Versions}
+
+Introducing new major versions requires significant effort from both API developers and users. To minimize the need for new major versions, focus on making changes backwards-compatible and ensuring that your API can evolve without breaking existing clients.
+
+\textbf{Example:}
+
+Suppose you have an API for managing a list of products:
+
+\begin{verbatim}
+http://api.example.com/v1/products
+\end{verbatim}
+
+Instead of introducing a new major version for every small change, focus on making updates that are compatible with the existing version, minimizing the need for major version updates.
+
+\subsection{Make Changes Backwards-Compatible}
+
+Strive to make your API changes backwards-compatible by adding new resources, methods, or formats without affecting existing functionality. Even removing support for a feature can be considered backwards-compatible if it only affects clients that use it.
+
+\textbf{Example:}
+
+If you want to add a new field to the product resource, simply add the field without changing the existing structure:
+
+\begin{verbatim}
+{
+  "id": 1,
+  "name": "Product A",
+  "price": 100,
+  "new_field": "New Value"
+}
+\end{verbatim}
+
+Clients that don't expect the new field can continue to work without issues.
+
+\subsection{Think about Forwards-Compatibility}
+
+Consider how your clients will handle future changes and set clear expectations for their behavior. Encourage clients to be flexible and handle unexpected input gracefully. Document your expectations to guide developers in building resilient clients.
+
+\textbf{Example:}
+
+In your API documentation, specify that clients should ignore any unknown fields in JSON responses:
+
+\begin{verbatim}
+{
+  "id": 1,
+  "name": "Product A",
+  "price": 100,
+  "unknown_field": "Value"
+}
+\end{verbatim}
+
+By doing this, you allow your API to introduce new fields without breaking existing clients.
+
+\subsection{Version at Appropriate Granularities}
+
+Ensure that your versioning strategy reflects the appropriate level of granularity. For instance, a version number in a URL should represent a collection of resources and functionality, not just a single resource. Keep format changes separate from API versions to maximize their value and flexibility.
+
+\textbf{Example:}
+
+A version number in a URL represents a set of resources and functionality:
+
+\begin{verbatim}
+http://api.example.com/v1/products
+http://api.example.com/v1/users
+\end{verbatim}
+
+Format changes should be separate from API versions:
+
+\begin{verbatim}
+http://api.example.com/v1/products (application/json)
+http://api.example.com/v1/products (application/xml)
+\end{verbatim}
+
+\subsection{Make Minor and Patch Information Discoverable}
+
+Although minor and patch version numbers should not be included in names, they still hold value in other contexts, such as release notes and documentation. Make this information discoverable by clients through direct interrogation of the interface or by including it in the Server or User-Agent headers.
+
+\textbf{Example:}
+
+Include the minor and patch version information in the Server header:
+
+\begin{verbatim}
+Server: Example-API/1.2.3
+\end{verbatim}
+
+By following these best practices, you can design APIs that are more maintainable, flexible, and capable of evolving without causing unnecessary disruptions for your users.
+
+\section{References}
+\printbibliography[heading=none]
+\end{document}
