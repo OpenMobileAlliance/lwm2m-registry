@@ -4,7 +4,7 @@
 
 ### API
 
-This server implements a subset of the [`/api/api-0.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/ api-0.yml) API.
+This server implements a subset of the [`/api/api.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/api.yml) API.
 
 The objective would be to keep adding functionality based on the features described in the [Northbound API Project](https://github.com/orgs/OpenMobileAlliance/projects/5/views/1).
 
