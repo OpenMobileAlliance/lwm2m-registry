@@ -4,7 +4,7 @@
 
 This project is an implementation of the LwM2M NB APIs using FastAPI. It provides a set of RESTful endpoints to manage devices, device observations, and device operations.
 
-The server implements the [nbapi-v00-j.yml](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/impl/nbapi-v00-j.yml.yml).
+The server implements the [`/api/api-0.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/ api-0.yml).
 
 The objective would be to keep adding functionality based on the features described in the [Northbound API Project](https://github.com/orgs/OpenMobileAlliance/projects/5/views/1).
 

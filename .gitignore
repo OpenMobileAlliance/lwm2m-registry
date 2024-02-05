@@ -3,3 +3,14 @@ docs/versioning
 nb-api/impl/py-server/venv/*
 nb-api/impl/py-server/__pycache__/*
 nb-api/impl/py-server/test/__pycache__/*
+nb-api/docs/versioning/api-versioning.aux
+nb-api/docs/versioning/api-versioning.bbl
+nb-api/docs/versioning/api-versioning.bcf
+nb-api/docs/versioning/api-versioning.blg
+nb-api/docs/versioning/api-versioning.fdb_latexmk
+nb-api/docs/versioning/api-versioning.fls
+nb-api/docs/versioning/api-versioning.log
+nb-api/docs/versioning/api-versioning.out
+nb-api/docs/versioning/api-versioning.run.xml
+nb-api/docs/versioning/api-versioning.synctex.gz
+nb-api/docs/versioning/api-versioning.toc

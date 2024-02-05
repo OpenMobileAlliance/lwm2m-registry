@@ -4,7 +4,7 @@
 
 ### API
 
-This server implements the [basic-api.yml](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api-examples/basic-api.yml) which is a subset of IoTerop's proposal.
+This server implements a subset of the [`/api/api-0.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/ api-0.yml) API.
 
 The objective would be to keep adding functionality based on the features described in the [Northbound API Project](https://github.com/orgs/OpenMobileAlliance/projects/5/views/1).
 
