@@ -24,9 +24,9 @@ Changes to the official API should be submitted against [`api.yml`](https://gith
 
 - `/impl`: This directory stands for "implementations" and contains code related to the client or server implementations of the Northbound API. Please upload yours on a subfolder in the path. Below you have links to the existing ones:
 
-  - [go-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/go-server) Simple implementation in Go.
+  - [go-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/go-server) Basic implementation in Go.
 
-  - [python-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/py-server) Implementation in Python. A more complete one.
+  - [python-server](https://github.com/OpenMobileAlliance/dmso-wg/tree/main/nb-api/impl/py-server) Implementation in Python.
 
 - `/minutes`: This directory contains markdown files with the minutes from each project meeting.
 
