@@ -1,3 +1,4 @@
+---
 openapi: "3.0.0"
 info:
   title: LwM2M NB APIs
@@ -5,6 +6,7 @@ info:
 
 servers:
   - url: https://example.com
+  - url: http://127.0.0.1:8000
 
 security:
   - ApiKeyAuth: []
@@ -16,7 +18,6 @@ tags:
   - name: Device Observation
 
 paths:
-  
   /lwm2m/v1/devices/{deviceId}:
     get:
       summary: Get device information
@@ -51,7 +52,7 @@ paths:
                 $ref: "#/components/schemas/GenericError"
   /lwm2m/v1/devices/{deviceId}/{object)/{object_instance}/{resourceID}/{resource_instance}:
     get:
-      summary: Reads any OMA object by Object/instance/resource/resource_instance
+      summary: Reads any OMA object
       operationId: Read Object
       tags:
         - Device
@@ -112,12 +113,12 @@ paths:
       summary: Create a new device operation
       operationId: createDeviceOperation
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
       requestBody:
         required: true
         description: Operation
@@ -184,18 +185,18 @@ paths:
       summary: Get the state of a device operation
       operationId: getDeviceOperation
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
-      - name: operationId
-        in: path
-        description: The identifier of the operation
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: operationId
+          in: path
+          description: The identifier of the operation
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Operations
@@ -221,18 +222,18 @@ paths:
       summary: Delete a completed device operation
       operationId: deleteDeviceOperation
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
-      - name: operationId
-        in: path
-        description: The identifier of the operation
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: operationId
+          in: path
+          description: The identifier of the operation
+          required: true
+          schema:
+            type: string
       responses:
         204:
           description: Operation deleted
@@ -437,18 +438,18 @@ paths:
       summary: Get the state of a device observation
       operationId: getDeviceObservation
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
-      - name: observationId
-        in: path
-        description: The identifier of the observation
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: observationId
+          in: path
+          description: The identifier of the observation
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Observations
@@ -474,18 +475,18 @@ paths:
       summary: Delete a device observation
       operationId: deleteDeviceObservation
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
-      - name: observationId
-        in: path
-        description: The identifier of the observation
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: observationId
+          in: path
+          description: The identifier of the observation
+          required: true
+          schema:
+            type: string
       responses:
         204:
           description: No content
@@ -560,24 +561,24 @@ paths:
       summary: Get the notification of a device observation
       operationId: getDeviceObservationNotification
       parameters:
-      - name: deviceId
-        in: path
-        description: The identifier of the device
-        required: true
-        schema:
-          type: string
-      - name: observationId
-        in: path
-        description: The identifier of the observation
-        required: true
-        schema:
-          type: string
-      - name: notificationId
-        in: path
-        description: The identifier of the notification
-        required: true
-        schema:
-          type: string
+        - name: deviceId
+          in: path
+          description: The identifier of the device
+          required: true
+          schema:
+            type: string
+        - name: observationId
+          in: path
+          description: The identifier of the observation
+          required: true
+          schema:
+            type: string
+        - name: notificationId
+          in: path
+          description: The identifier of the notification
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Notification
@@ -942,7 +943,7 @@ components:
             results:
               type: array
               items:
-                  $ref: "#/components/schemas/ResultDataNotification"
+                $ref: "#/components/schemas/ResultDataNotification"
     Device:
       type: object
       properties:

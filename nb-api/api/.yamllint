@@ -1,0 +1,6 @@
+rules:
+  line-length:
+    max: 120 # Adjust as needed
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+
