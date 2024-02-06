@@ -2,7 +2,7 @@
 
 ## Server in Python
 
-This project is an implementation of the LwM2M NB APIs using FastAPI. It provides a set of RESTful endpoints to manage devices, device observations, and device operations. The server implements the Northbound API spec at [api.yml](https://github.com/OpenMobileAlliance/dmso-wg/blob/c7296330c4240d8b48a8f9d963abfe0070707afb/nb-api/api/api.yml).
+This project is an implementation of the LwM2M NB APIs using FastAPI. It provides a set of RESTful endpoints to manage devices, device observations, and device operations. The server implements the Northbound API spec at [api.yml](https://github.com/OpenMobileAlliance/dmso-wg/blob/c7296330c4240d8b48a8f9d963abfe0070707afb/nb-api/api/api.yml), feel free to add more details to the design document at [api.md](https://github.com/OpenMobileAlliance/dmso-wg/blob/c7296330c4240d8b48a8f9d963abfe0070707afb/nb-api/api/api.md).
 
 The objective would be to keep adding functionality based on the features described in the [Northbound API Project](https://github.com/orgs/OpenMobileAlliance/projects/5/views/1).
 
