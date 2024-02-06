@@ -16,7 +16,7 @@ This repository contains materials and resources for the development of a Northb
 
 - `/api`: This directory contains the API definitions and specifications for the Northbound API. It includes both `.md` and `.yml` files for definition.
 
-Changes to the official API should be submitted against [`api.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/api.yml), feel free to add more details to the design document at [api.md](https://github.com/OpenMobileAlliance/dmso-wg/blob/c7296330c4240d8b48a8f9d963abfe0070707afb/nb-api/api/api.md).
+Feel free to add more details to the design document at [api.md](https://github.com/OpenMobileAlliance/dmso-wg/blob/c7296330c4240d8b48a8f9d963abfe0070707afb/nb-api/api/api.md). Changes to the official API should be submitted against [`api.yml`](https://github.com/OpenMobileAlliance/dmso-wg/blob/main/nb-api/api/api.yml). Please check for errors with `yamllint` before submitting.
 
 - `/arch`: This directory contains archived items, including presentations and proposals.
 
