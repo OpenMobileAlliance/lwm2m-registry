@@ -11,7 +11,7 @@ The objective would be to keep adding functionality based on the features descri
 - Create a virtual environment and activate it:
 
 ``` sh
-python3 -m venv venv source venv/bin/activate
+python3 -m venv venv source venv/bin/activate.fish
 ```
 
 - Install the required packages:
