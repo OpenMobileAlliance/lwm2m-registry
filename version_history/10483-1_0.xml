@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>Thread Network</Name>
 		<Description1><![CDATA[This LWM2M object is used to describe and modify Thread network configurations]]></Description1>
 		<ObjectID>10483</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:10483:1.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10483</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
