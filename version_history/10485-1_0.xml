@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BSD-3 Clause License
+
+Copyright 2023 Hydro-Québec. 
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Thread Neighbor Information</Name>
+		<Description1><![CDATA[This LwM2M Object provides diagnostic information about Thread neighbors]]></Description1>
+		<ObjectID>10485</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:x:10485:1.0</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Multiple</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="0">
+				<Name>Neighbor Role</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>0...255</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Provides the type of neighbor as Enumerated type:
+				0: Child
+				1: Router
+				255: Undefined]]></Description>
+			</Item>
+			<Item ID="1">
+				<Name>RLOC16 Address</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The Routing Locator (RLOC16) identifies a Thread interface, based on its location in the network topology.]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>Age </Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description><![CDATA[The age is a measure of how long it has been since the last communication or interaction with that particular network neighbor.]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>Average RSSI</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>dBm</Units>
+				<Description><![CDATA[The average Received Signal Strength Indication (RSSI) over a specific period.]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Last RSSI</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>dBm</Units>
+				<Description><![CDATA[The instantaneous Received Signal Strength Indication (RSSI).]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Rx On When Idle</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Neighbor mode R represents "RX on when idle".]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Full Thread Device</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Neighbor mode D represents "Full Thread device".]]></Description>
+			</Item>
+			<Item ID="7">
+				<Name>Full Network Data</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Neighbor mode N represents "Full network data".]]></Description>
+			</Item>
+			<Item ID="8">
+				<Name>Extended MAC Address </Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[ Extended Medium Access Control (MAC).]]></Description>
+			</Item>
+			<Item ID="9">
+				<Name>Link Quality In</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the
+link is non-existent or unusable.</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Neighbor Link quality In.]]></Description>
+			</Item>
+			<Item ID="10">
+				<Name>Link Quality Out</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the
+link is non-existent or unusable.</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Neighbor Link quality Out.]]></Description>
+			</Item>		
+				<Item ID="11">
+				<Name>Frame Error</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>/100</Units>
+				<Description><![CDATA[Frame error percentage.]]></Description>
+			</Item>	
+				<Item ID="12">
+				<Name>Message Error</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>/100</Units>
+				<Description><![CDATA[Message error percentage.]]></Description>
+			</Item>	
+				<Item ID="13">
+				<Name>Queued Message Count</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>count</Units>
+				<Description><![CDATA[Queued Message count. A non-zero QmsgCnt indicates that there are messages waiting to be delivered, and it can be useful for assessing the network's communication efficiency and load.]]></Description>
+			</Item>					
+		</Resources>
+		<Description2 />
+	</Object>
+</LWM2M>

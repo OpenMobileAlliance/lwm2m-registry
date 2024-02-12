@@ -6129,9 +6129,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
         <ObjectID>10483</ObjectID>
         <URN>urn:oma:lwm2m:x:10483</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10483</Description>
-        <Owner>TBD</Owner>
+        <Name>Thread Network</Name>
+        <Description>This LWM2M object is used to describe and modify Thread network configurations</Description>
+        <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
@@ -6143,9 +6143,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
         <ObjectID>10484</ObjectID>
         <URN>urn:oma:lwm2m:x:10484</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10484</Description>
-        <Owner>TBD</Owner>
+        <Name>Thread Commissioning (joiner add)</Name>
+        <Description>This LwM2M Object enables commissioning (commissioner joiner add) of Thread devices on the Network. The target device must be have the "commissioner" and "joiner router" roles. Ex an ot-br posix "Border Router"</Description>
+        <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
@@ -6157,9 +6157,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
         <ObjectID>10485</ObjectID>
         <URN>urn:oma:lwm2m:x:10485</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10485</Description>
-        <Owner>TBD</Owner>
+        <Name>Thread Neighbor Information</Name>
+        <Description>This LwM2M Object provides diagnostic information about Thread neighbors</Description>
+        <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
@@ -6171,9 +6171,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
         <ObjectID>10486</ObjectID>
         <URN>urn:oma:lwm2m:x:10486</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10486</Description>
-        <Owner>TBD</Owner>
+        <Name>Thread CLI Command</Name>
+        <Description>This LwM2M Object provides access to issuing custom CLI commands to Thread devices</Description>
+        <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
