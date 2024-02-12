@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>Thread CLI Command</Name>
 		<Description1><![CDATA[This LwM2M Object provides access to issuing custom CLI commands to Thread devices]]></Description1>
 		<ObjectID>10486</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:10486:1.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10486</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>

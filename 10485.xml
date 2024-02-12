@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<Name>Thread Neighbor Information</Name>
 		<Description1><![CDATA[This LwM2M Object provides diagnostic information about Thread neighbors]]></Description1>
 		<ObjectID>10485</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:10485:1.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:x:10485</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
