@@ -6134,9 +6134,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10483.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -6148,9 +6148,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10484.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -6162,9 +6162,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10485.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -6176,9 +6176,9 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Owner>HydroQuebec</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10486.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
