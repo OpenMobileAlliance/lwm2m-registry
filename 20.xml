@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_LWM2M_EventLog-V2_1-20231212-A
+   File: OMA-SUP-XML_LWM2M_EventLog-V2_1-20240123-A
    Path: https://openmobilealliance.org/release/LwM2M_EventLog/
 
 OMNA LwM2M Registry
@@ -109,7 +109,7 @@ Arguments definitions are described in the table below.]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration>8-Bits</RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
+				<Description><![CDATA[Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error 4th LSB 1=LogDataIncremental collection active 0=LogDataIncremental collection stopped [5th -7th ] LSB:reserved 8th LSB: vendor specific.]]></Description>
 			</Item>
 			<Item ID="4014"><Name>LogData</Name>
 				<Operations>R</Operations>
@@ -160,6 +160,6 @@ This resource may only be included in a Send operation payload. Attempting to ac
 				<Description><![CDATA[Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.
 If the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server.]]></Description>
 			</Item></Resources>
-		<Description2><![CDATA[As an extension to the definition of resource 4013 (LogStatus), within the context of this Object starting with version 2.1, the 4th LSB, defined in the Resource Description as "reserved", shall mean: 1=LogDataIncremental collection active, 0=LogDataIncremental collection stopped.]]></Description2>
+		<Description2 />
 	</Object>
 </LWM2M>
