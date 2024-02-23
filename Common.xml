@@ -176,6 +176,31 @@
         <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>       
         <TSLink>1</TSLink>
        </Item>
+       <Item ID="4016">
+        <Name>LogDataIncremental</Name>
+        <Operations></Operations>
+        <Type>Opaque</Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description><![CDATA[Log data collected since the last Send operation described for the LogDataIncremental Minimum Send Interval resource, or since that interval has been set to a positive value if the first Send operation has not yet been performed.
+The data shall have the same format as the LogData resource, but its collection and emptying is independent from it and from the LogStart/LogStop logic.
+This resource may only be included in a Send operation payload. Attempting to access it via the Device Management and Service Enablement Interface shall result in generating the Method Not Allowed error.]]></Description>        
+        <TS></TS>       
+        <TSLink>1</TSLink>
+       </Item>
+       <Item ID="4017">
+        <Name>LogDataIncrementalMinimumSendInterval</Name>
+        <Operations>RW</Operations>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration></RangeEnumeration>       
+        <Units></Units>        
+        <Submitter>OMA</Submitter>
+        <Description><![CDATA[Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.
+If the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server.]]></Description>        
+        <TS></TS>       
+        <TSLink>1</TSLink>
+       </Item>
       <Item ID="4020">
         <Name>TBD</Name>
         <Operations></Operations>
