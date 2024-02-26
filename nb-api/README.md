@@ -1,5 +1,11 @@
 # Northbound API for LwM2M
 
+The Northbound API for LwM2M (Lightweight Machine to Machine) is designed to facilitate communication and management of IoT (Internet of Things) devices.
+
+It provides a set of standardized methods that can be used by external systems to perform tasks such as reading device data, writing configuration settings to devices, executing functions on devices, or subscribing to notifications from devices.
+
+It abstracts the lower-level details of the LwM2M protocol, making it easier for developers to integrate IoT device management capabilities into their applications without needing deep knowledge of the underlying protocol.
+
 This repository contains materials and resources for the development of a Northbound API (NB API). The resources include workshop materials, meeting minutes, and API examples to aid in the development process.
 
 ```
