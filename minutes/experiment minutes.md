@@ -1,0 +1,160 @@
+# DMSO 04-23-2024
+
+Previous minutes https://github.com/OpenMobileAlliance/dmso-wg/blob/main/minutes/2024-04-09-DMSO.md
+Current Minutes: https://etherpad.openmobilealliance.org/p/2024-04-23-DMSO.md
+
+## Participants
+
+* Matt Gillmore (Itron) *
+* Jaime Jimenez (Ericsson) 
+* Joaquin Prado (Standards Hub) *
+* Gordana Dimic (Standards Hub) *
+* Will Bell (Aetheros)
+* Naveen Kumar (Friendly Technologies)
+* Colin  Grealish (Nokia) 
+* Kishor Narnix (Narnix) 
+* Mateusz Kwiatkowski (AVSystem) 
+* Mojan Mohajer (Independent) *
+* Jean  Trakinat (TMUS) *
+* David Navarro (IoTerop) *
+* Travis Shanahan (Itron) *
+* Jan Holler (Ericsson)
+* Uttam Kotdiya (Securemeters)
+* Hamza Abbasi (Qualcomm) 
+* Fred Rodermund (IoTECC) 
+* Alexandre Buist (Hydro Q) *
+* Sylvain Riendeau (Hydro-Quebec) 
+* Nitin Bajaj 
+* Olivier Carmona (IoTerop) 
+* Louis Dupont (Hydro Quebec) *
+* Bryan 
+* Vikram Bajaj 
+* Tommy (T-mobile) 
+* Andrey (Friendly Technologies)
+* Piotr Roszkowski (AVSystem) *
+* Goran Selander (Ericcson) *
+
+
+Guests
+* Marco Tiloca (RISE)
+* Rikard Höglund (RISE)
+
+
+Quorum reached - YES
+
+## IPR Call
+
+"Each Member will use its reasonable endeavours to inform timely the Open Mobile Alliance of Essential IPR as it becomes aware that the Essential IPR is related to the prepared or published Specification. Members shall submit to the General Manager of Operations of OMA the IPR Statement and the IPR Licensing Declaration. These forms are available from OMA or online at the OMA website at www.openmobilealliance.org."
+
+The Chair mentioned the IPR, Antitrust and guest policy.
+
+## OMA Antitrust Policy
+http://www.openmobilealliance.org/AboutOMA/Antitrust.aspx
+The chair pointed out to the antitrust and IPR policy.
+
+## OMA Guest \& Observer Policy
+
+https://technical.openmobilealliance.org/guest.shtml
+
+## Review and Agree Previous Meeting Minutes
+https://github.com/OpenMobileAlliance/dmso-wg/blob/main/minutes/2024-04-09-DMSO.md
+Agreed - YES
+
+###
+Agenda:
+    
+ ## Northbound API Update
+
+v0.1 is in consitency review ending on 4/30/2024
+
+What is included in this release is in the roadmap view here https://github.com/orgs/OpenMobileAlliance/projects/5/views/1
+
+Comments can be made here https://github.com/OpenMobileAlliance/lwm2m-northbound-api/compare/development...v0.1-Northbound-API by creating an issue or directly creating a pull request on the v0.1-Northbound-API branch.  
+
+Louis (Hydro-Québec) confirms that it is now possible to assign reviewers to a pull request (TODO from 2024-04-09 minutes)
+
+## ETS PR/Issues update
+
+No current PR's / Issues
+
+
+### EDHOC discussion with guests mentioned above
+     - David Navaro gave a presentation on implementing EDHOC
+     -Proposed to introduce a new EDHOC Object used by the bootstrap-server
+- Modify the OSCORE Object (21) 
+- New optional resource 7 
+- New EDHOC Object ID: TBD with 7 proposed resources 
+- Changes to the TS are not required
+- This can posibly be an enabler spec
+- Rikard Hoglund demonstrated Leshan and gave a demo
+
+
+### Outstanding [E] editorial issues in the LwM2M repository
+- https://github.com/OpenMobileAlliance/LwM2M/issues/878 - Needs time to investigate gauge interest 
+     - Mojan to make pull request with Alexandre to suggest edits
+     - https://github.com/OpenMobileAlliance/LwM2M/pull/887
+     - https://github.com/OpenMobileAlliance/LwM2M/pull/886 - OK to merge
+     4/23/2024 - Remove the client implementation columb and restore the "Required" columb -  PR will be updated for next week.  for 887
+     
+ 
+     
+- Issue https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues/539 was addressed in TS 1.2.1. However there were some leftovers as the ambiguous "assigned attribute" was still used.
+     - https://github.com/OpenMobileAlliance/LwM2M/pull/889
+  - Group agrees to merge the PR
+
+- https://github.com/OpenMobileAlliance/LwM2M/issues/848 - Application server should be updated to Lwm2m server and the client should be LwM2M client 
+- David to make pull request
+- Matt to remind David
+
+- https://github.com/OpenMobileAlliance/LwM2M/issues/806
+- Link to 855 with similar concerns see issue for details
+- Note made on the issue on how to fix the broken link
+- Gordana and JP to take a look
+
+https://github.com/OpenMobileAlliance/LwM2M/issues/851
+- n Section 6.2.1.2, UDP is marked as a default mode, but there is text that says, "the client SHALL assume that the server supports the UDP binding."... is UDP support on the server required or not? It seems an odd mix of Mandatory (SHALL) and iffy (assume)...should the LwM2M Client use UDP.
+
+In Section 6.2.2, there are several citations of Register operation and "Registration" operation (after Table 6.2.2-1), internal references to the sections in which these are defined should be added
+- 4/9/2024 See notes on the issue
+- UDP Shall be supported by the Server for binding TCP is Optional.  
+
+https://github.com/OpenMobileAlliance/LwM2M/issues/842
+- Transport section 6.4.4 Error Codes 
+- Ex. one place it is written "(error code 4.06 asdefined in [CoAP])" and in other places it is written "the error code 4.05" or "the response code is still 2.05 Content".
+- David commented that 4.05 and 2.05 may be OMA specific to the document
+- Jaimie these codes are defined in IANA,  See IETF problem specific details see RFC 9290 for clarification and make sure they are defined
+- Jaimie to determine if this is a bug fix release candidate or 1.3 feature
+- MG will take a look per comments on the issue
+
+## DMSO Pull request
+- https://github.com/OpenMobileAlliance/dmso-wg/pull/38
+- Merged 4/23/2024
+
+## LwM2M_Registry PR's and Issues
+https://github.com/OpenMobileAlliance/lwm2m-registry/pull/750 - Thread device management objects
+- MG to review for typo's and check for re-usable resources to can be re-used
+
+https://github.com/OpenMobileAlliance/lwm2m-registry/issues/752 - Object 10284 has a typo in the description - comment has been made by the group on the issue on 4/9/2024 - 4/23/2024, no update
+
+https://github.com/OpenMobileAlliance/lwm2m-registry/issues/737 - Test range for URN's
+
+## Additional LwM2M PR's and Issues for 1.2.2 (Time Permitting)
+
+## Release Dates:
+LwM2M 1.2.2 for Q2 2024
+LwM2M 1.3 for Q4 2024
+
+
+## Proposed meeting dates F2F
+•Week of June 10th
+•Week of October 14 
+•4 days: Tu, We, Th, Fri
+•WG: Tu, We, Th
+•BOD: Th, Fr – half day each
+•SVE: Tu, We, Th if needed.
+
+
+### AOB
+TBD: Address the core objects vs TS
+
+    ### Meeting adjourned @ 11:30 ET
