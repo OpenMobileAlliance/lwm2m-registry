@@ -1,4 +1,5 @@
 
+
 # LwM2M Registry
 This public repository is dedicated to store and register new LwM2M Objects and Reusable Resources.
   
