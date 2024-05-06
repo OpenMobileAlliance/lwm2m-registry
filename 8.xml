@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_8-V1_0_3-20210119-A.xml
+   File: OMA-SUP-XML_8-V1_0_4-20240312-A.xml
    Path: http://www.openmobilealliance.org/release/LWM2M_LOCKWIPE/
 
 OMNA LwM2M Registry
@@ -15,7 +15,7 @@ NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M-V1_0_1
+    OMA-TS-LWM2M_LockWipe-V1_0_4
 
   This is available at http://www.openmobilealliance.org/release/
 
@@ -24,7 +24,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2021 Open Mobile Alliance.
+  Copyright 2021-2024 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
