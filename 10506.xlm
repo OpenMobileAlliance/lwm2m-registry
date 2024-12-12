@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright Ericsson 2020
+
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+The above license is used as a license under copyright only. Please
+reference the company patent licensing terms:
+http://www.openmobilealliance.org/ipr.html
+
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+    <Object ObjectType="MODefinition">
+        <Name>AI models</Name>
+        <Description1> This object can provision and configure Machine Intelligence (MI) capabilities. A new MI model is provisioned using an AI Model, Model URI,
+        and/or Model Description resources. The Input and Input labels resources can be used to configure where the model reads the input data and the Output and 
+        Output labels resource is used to configure where the model writes the output data. When the output of one model is used as input of another model, the models 
+        are chained together. Input and Output transform resources can be used to prepare data for input or to map output values, and also to transform  the data before reading or writing.
+  </Description1>
+        <ObjectID>10506</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:ext:10506</ObjectURN>
+        <LWM2MVersion>1.0</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="1">
+                <Name>Model</Name>
+                <Operations>RW</Operations>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The binary representation of the executable model. When the executable model is written here, that is used for execution when the "Enabled" resource is set to true.</Description>
+            </Item>
+            <Item ID="2">
+                <Name>Version</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>The current version of the model being referred</Description>
+            </Item>
+            <Item ID="3">
+                <Name>Description URL</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>A URL pointing to information describing the operation executed by the function and possibly metadata related to the input and/or output.</Description>
+            </Item>
+            <Item ID="4">
+                <Name>Model URI</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>URL where to retrieve the model to execute or URI to identify the model to execute (and retrieved with alternative methods). When this URI is written, the device attempts to retrieve the model using the URI and stores it in the Model resource.</Description>
+            </Item>
+            <Item ID="5">
+                <Name>Model Integrity</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Cryptographic checksum of the model when one is retrieved from a URI to ensure correctness and integrity of the downloaded model.</Description>
+            </Item>
+            <Item ID="6">
+                <Name>Model Description</Name>
+                <Operations>RW</Operations>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>When a model description (e.g., ONEX file) is written to this resource, the device either
+                1) attempts to convert that into an executable model 
+                2) asks a third-party server to do the conversion or 
+                3) executes the model in its native form. If conversion is done, the model is stored in the "Model" resource.</Description>
+            </Item>
+            <Item ID="7">
+                <Name>Inputs</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>A set of CoRE links / URLs that are pointing to resources at the device (e.g., "/3303/1/5700" for the current value of the temperature sensor instance #1) or external resources (e.g., "coap://foo.example/ac-setpoint" for setpoint of a home automation system). 
+                The output resources can be linked to other MI config objects' input resources to enable the chaining of models. </Description>
+            </Item>
+            <Item ID="8">
+                <Name>Input transforms</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Description of the transformation operations for transforming the data from a local resource / external source to a format usable with the given model.
+                Depending on the platform this may be either simple arithmetic expressions or a full program/script.</Description>
+            </Item>
+            <Item ID="9">
+                <Name>Input labels</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Labels to describe which input source is connected to which input of the MI model. Label #1 matches to Input CoRE link #1, etc.</Description>
+            </Item>
+            <Item ID="10">
+                <Name>Outputs</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>A set of CoRE links / URLs that are pointing to resources at the device (e.g., "/3308/1/5900" for the setpoint actuator set point value of the instance #1) or external resources (e.g., "coap://foo.example/ac-setpoint" setpoint of a home automation system).
+                The output resources can be linked to other MI config objects' input resources to enable chaining of models.</Description>
+            </Item>
+            <Item ID="11">
+                <Name>Output transforms</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Transforming output from a model-specific format to a resource-specific format; similar to input transforms.</Description>
+            </Item>
+            <Item ID="12">
+                <Name>Output labels</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Multiple</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Labels to describe which output is connected to which output of the MI model. Label #1 matches to Output CoRE link #1, etc.</Description>
+            </Item>
+            <Item ID="13">
+                <Name>Enabled</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>Boolean</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>If true, the function is available to be used. If false, the model is currently inactive.</Description>
+            </Item>
+            <Item ID="14">
+                <Name>Condition expression</Name>
+                <Operations>RW</Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Type>String</Type>
+                <RangeEnumeration/>
+                <Units/>
+                <Description>Expression for triggering the execution of the model. If no expression is given, the model is executed every time any input resource value changes.
+                When condition expression is given, the values of the input resources are evaluated using the condition expression. If the expression results in a true value, the model is executed.
+                For a false value, the model is not executed.</Description>
+            </Item>
+        </Resources>
+    </Object>
+</LWM2M>
