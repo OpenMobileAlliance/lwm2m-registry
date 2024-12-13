@@ -6470,19 +6470,43 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <!-- Integer -->
+        <!-- ObjectID -->
         <ObjectID>10506</ObjectID>
         <URN>urn:oma:lwm2m:x:10506</URN>
         <Name>TBD</Name>
         <Description>Reservation 10506</Description>
         <Owner>TBD</Owner>
+        <!-- URN of the object -->
+        <URN>urn:oma:lwm2m:oma:10506</URN>
+        <!-- Name of the object -->
+        <Name>AI model</Name>
+        <!-- Description of the Object -->
+        <Description>This object can provision and configure Machine Intelligence (MI) capabilities. A new MI model is provisioned using an AI Model, Model URI,
+		and/or Model Description resources. The Input and Input labels resources can be used to configure where the model reads the input data and the Output and 
+		Output labels resource is used to configure where the model writes the output data. When the output of one model is used as input of another model, the models 
+		are chained together. Input and Output transform resources can be used to prepare data for input or to map output values, and also to transform  the data before reading or writing.
+	</Description>
+        <!-- Name of the organization that has registered the object -->
+        <Owner>Ericsson</Owner>
+        <!-- Type of Object: 0 = defined by OMA, 1 = defined by external Standards Development Organizations, 2 = private or individual -->
         <Source>2</Source>
+        <!-- Ver of the object, not visible, not used -->
         <Ver>1.0</Ver>
         <DDF></DDF>
+        <!-- URL to the xml file describing the object -->
+        <DDF>10506.xml</DDF>
+        <!-- Link that opens the Object in the Vorto environment -->
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
+        <!-- 0 => if link to object should not be visible, 1 => if object should be visible (default) -->
+        <DDFLink>1</DDFLink>
+        <!-- URL to the TS of the object, not visible, not used -->
         <TS></TS>
+        <!-- 0 => if link to TS should not be visible, 1 => if link to TS should be visible (default) -->
         <TSLink>0</TSLink>
     </Item>
+    <Item>
     <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
