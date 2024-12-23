@@ -3491,7 +3491,7 @@ Using values in range 0-127 is recommended to avoid ambiguities with byte order 
       </Item>
       
       <Item ID="6040">    
-        <Name>Sample Frequency</Name>     
+        <Name>TBD</Name>     
         <Operations>RW</Operations>     
         <Type>Float</Type>
         <RangeEnumeration>0.0..86400.0</RangeEnumeration>
