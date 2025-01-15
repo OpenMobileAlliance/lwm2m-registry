@@ -1,0 +1,127 @@
+# DMSO 01-14-2025
+
+## Participants
+
+* Matt Gillmore (Itron) *
+* Jaime Jimenez (Ericsson) 
+* Joaquin Prado (Standards Hub) *
+* Gordana Dimic (Standards Hub) *
+* Will Bell (Aetheros)
+* Naveen Kumar (Friendly Technologies) 
+* Colin  Grealish (Motive) *
+* Kishor Narnix (Narnix) 
+* Mateusz Kwiatkowski (AVSystem)
+* Mojan Mohajer (Independent) 
+* Jean  Trakinat (TMUS) 
+* David Navarro (Trasna) *
+* Travis Shanahan (Itron) 
+* Jan Holler (Ericsson)
+* Uttam Kotdiya (Securemeters)
+* Hamza Abbasi (Qualcomm) 
+* Fred Rodermund (IoTECC) 
+* Alexandre Buist (Hydro Q) *
+* Sylvain Riendeau (Hydro-Quebec) *
+* Nitin Bajaj 
+* Olivier Carmona (IoTerop) 
+* Louis Dupont (Hydro Quebec) *
+* Bryan 
+* Vikram Bajaj 
+* Tommy (T-mobile) 
+* Andrey (Friendly Technologies)
+* Piotr Roszkowski (AVSystem) 
+* Goran Selander (Ericcson) 
+* Scott Migaldi (T-Mobile) 
+* Mark Young (T-Mobile) 
+* Will Bell (Atheros) 
+* Elias Weingaertner (Cumulocity IoT) *
+Guests
+* 
+
+Quorum reached - Yes
+
+## IPR Call
+
+"Each Member will use its reasonable endeavours to inform timely the Open Mobile Alliance of Essential IPR as it becomes aware that the Essential IPR is related to the prepared or published Specification. Members shall submit to the General Manager of Operations of OMA the IPR Statement and the IPR Licensing Declaration. These forms are available from OMA or online at the OMA website at www.openmobilealliance.org."
+
+The Chair mentioned the IPR, Antitrust and guest policy.
+
+## OMA Antitrust Policy
+http://www.openmobilealliance.org/AboutOMA/Antitrust.aspx
+The chair pointed out to the antitrust and IPR policy.
+
+## OMA Guest \& Observer Policy
+
+https://technical.openmobilealliance.org/guest.shtm
+
+## Agenda
+
+# Previous minutes approval
+https://github.com/OpenMobileAlliance/dmso-wg/blob/main/minutes/2024/2024-12-17-DMSO.md
+
+- approved
+
+Current Minutes: https://etherpad.openmobilealliance.org/p/2025-01-14-DMSO
+
+# 2025 Goals for OMA/DMSO Discussion
+	- Get NB-API finished by end of Q2?
+	- LwM2M 1.3 release timeline?
+	- LwM2M for developers turn around time on questions/issues
+	- LwM2M-registry turn around times
+		- Vendor specific validated Objects (1-2 weeks)?
+		- Core Objects (1-2 months)?
+	- Established SVE dates and times in person
+		- Keep ETS up to date
+		- Virtual LwM2M server and client testing perpetually
+		
+# Northbound API update
+
+	- Consistency review updates
+	- SwaggerHub definition
+	- https://app.swaggerhub.com/apis/MATTHEWGILLMORE/lw-m_2_m_nb_ap_is/0.0.0
+
+# 1.3 scope triage
+	- https://github.com/orgs/OpenMobileAlliance/projects/2/views/4?layout=roadmap
+
+	-Here is what has been classified
+	https://github.com/orgs/OpenMobileAlliance/projects/2/views/10
+		- Admin (3)
+		- Advanced FW Update (4)
+		- Alternate Path (3)
+		- Bug (3)
+		- Cellular boot strap enhancements (1)
+		- Clarification (14)
+		- Connection Monitoring (2)
+		- eSIM (2)
+		- ETS (4)
+		- Link Attr (1)
+		- ProfileID (5)
+		- question (1)
+		- Queue Mode (2)
+		- References (1)
+		- registration (5)
+		- Schema (1)
+		- Security (3)
+		- SenML (3)
+
+
+
+#LwM2M Registry issues/PRs
+
+- AI Smart Object
+https://github.com/OpenMobileAlliance/lwm2m-registry/issues/789
+https://github.com/OpenMobileAlliance/lwm2m-registry/pull/800
+- Errors found with validation and feedback has been submitted
+
+- Smart Water Meter
+https://github.com/OpenMobileAlliance/lwm2m-registry/issues/788
+
+
+
+##AOB
+	- DN  F2F meeting timeline for year 
+		- ACTION: MG to get a date established with the BOD
+	- ACTION: Redirect discussion with JP and MG
+	
+#Meeting Adjourned @  10:44 AM ET
+
+
