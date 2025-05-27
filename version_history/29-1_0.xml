@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: 
+   Type: xml
+
+Public Reachable Information
+   Path: http://www.openmobilealliance.org/tech/profiles
+   Name: 
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+    
+
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to technical-comments@mail.openmobilealliance.org
+
+CHANGE HISTORY
+
+    
+LEGAL DISCLAIMER
+
+-->
+
+<LWM2M xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd" >
+    <Object ObjectType="MODefinition">
+        <Name>EDHOC</Name>
+        <Description1><![CDATA[This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528.]]></Description1>
+        <ObjectID>29</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:oma:29</ObjectURN>
+        <LWM2MVersion>1.1</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="0">
+                <Name>Peer Public Key Type</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Determines the type of credential stored in Peer Public Key, using the same values as the IANA registry of COSE Header Parameters. E.g.
+13: CBOR Web Token (CWT)
+14: CWT Claims Set (CCS)
+24: Unordered bag of C509 certificates
+25: Ordered chain of C509 certificates
+32: Unordered bag of X.509 certificates
+33: Ordered chain of X.509 certificates
+257: Public Key]]></Description>
+            </Item>
+            <Item ID="1">
+                <Name>Peer Public Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the Peer's public credential.]]></Description>
+            </Item>
+            <Item ID="2">
+                <Name>Client Key Type</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Determines the type of credential stored in Client Public Key, using the same values as the IANA registry of COSE Header Parameters. E.g.
+13: CBOR Web Token (CWT)
+14: CWT Claims Set (CCS)
+24: Unordered bag of C509 certificates
+25: Ordered chain of C509 certificates
+32: Unordered bag of X.509 certificates
+33: Ordered chain of X.509 certificates
+257: Public Key]]></Description>
+            </Item>
+            <Item ID="3">
+                <Name>Client Public Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the LwM2M Client's public credential.
+If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the "Private Key" Resource must be null or not instantiated.]]></Description>
+            </Item>
+            <Item ID="4">
+                <Name>Private Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the LwM2M Client's private key.
+If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the "Client Public Key" Resource must be null or not instantiated.]]></Description>
+            </Item>
+            <Item ID="5">
+                <Name>Method</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration>0...3</RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The authentication method type value.]]></Description>
+            </Item>
+            <Item ID="6">
+                <Name>Initiator</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Indicates if the LwM2M Client is the EDHOC Initiator.
+If this Resource is not instantiated, the default value is True.]]></Description>
+            </Item>
+            <Item ID="7">
+                <Name>Selected Cipher Suite</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The label of the EDHOC cipher suite to use as the selected cipher suite.]]></Description>
+            </Item>
+            <Item ID="8">
+                <Name>Peer EDHOC CoAP URI Path</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The EDHOC CoAP URI path on the Server to use.
+If this Resource is not instantiated, the default value is "/.well-known/edhoc" when using CoAP.]]></Description>
+            </Item>
+            <Item ID="9">
+                <Name>EDHOC + OSCORE Combined Request Support</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Indicates if the peer supports EDHOC + OSCORE combined requests as defined in RFC 9668.
+If this Resource is not instantiated, the default value is True.]]></Description>
+            </Item>
+        </Resources>
+        <Description2><![CDATA[Normative references:
+- RFC 9528: G. Selander, J. Preuß Mattsson, F. Palombini, "Ephemeral Diffie-Hellman Over COSE (EDHOC)", https://www.rfc-editor.org/rfc/rfc9528.html
+- RFC 9668: F. Palombini, M. Tiloca, R. Höglund, S. Hristozov, G. Selander, "Using Ephemeral Diffie-Hellman Over COSE (EDHOC) with the Constrained Application Protocol (CoAP) and Object Security for Constrained RESTful Environments (OSCORE)", https://www.rfc-editor.org/rfc/rfc9668.html]]></Description2>
+    </Object>
+</LWM2M>
