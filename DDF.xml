@@ -748,7 +748,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>27</ObjectID>
         <URN>urn:oma:lwm2m:oma:27</URN>
         <Name>5GNR Connectivity</Name>
@@ -761,7 +762,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>28</ObjectID>
         <URN>urn:oma:lwm2m:oma:28</URN>
         <Name>Device RF Capabilities</Name>
@@ -775,6 +777,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
+    <Item>
 	<ObjectID>29</ObjectID>
         <URN>urn:oma:lwm2m:oma:29</URN>
         <Name>EDHOC</Name>
