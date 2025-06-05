@@ -3,13 +3,9 @@
 <!--
 FILE INFORMATION
 
-OMA Permanent Document
-   File: 
-   Type: xml
-
-Public Reachable Information
-   Path: http://www.openmobilealliance.org/tech/profiles
-   Name: 
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 29.xml
 
 NORMATIVE INFORMATION
 
@@ -26,6 +22,39 @@ CHANGE HISTORY
     
 LEGAL DISCLAIMER
 
+  Copyright 2025 Open Mobile Alliance.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+  The above license is used as a license under copyright only.  Please
+  reference the OMA IPR Policy for patent licensing terms:
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
+
 -->
 
 <LWM2M xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd" >
@@ -40,21 +69,14 @@ LEGAL DISCLAIMER
         <Mandatory>Optional</Mandatory>
         <Resources>
             <Item ID="0">
-                <Name>Peer Public Key Type</Name>
+                <Name>Peer Public Key Identifier</Name>
                 <Operations></Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
-                <Type>Integer</Type>
+                <Type>Opaque</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[Determines the type of credential stored in Peer Public Key, using the same values as the IANA registry of COSE Header Parameters. E.g.
-13: CBOR Web Token (CWT)
-14: CWT Claims Set (CCS)
-24: Unordered bag of C509 certificates
-25: Ordered chain of C509 certificates
-32: Unordered bag of X.509 certificates
-33: Ordered chain of X.509 certificates
-257: Public Key]]></Description>
+                <Description><![CDATA[The ID_CRED_x of the credential stored in Peer Public Key.]]></Description>
             </Item>
             <Item ID="1">
                 <Name>Peer Public Key</Name>
@@ -67,21 +89,14 @@ LEGAL DISCLAIMER
                 <Description><![CDATA[Stores the Peer's public credential.]]></Description>
             </Item>
             <Item ID="2">
-                <Name>Client Key Type</Name>
+                <Name>Client Key Identifier</Name>
                 <Operations></Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[Determines the type of credential stored in Client Public Key, using the same values as the IANA registry of COSE Header Parameters. E.g.
-13: CBOR Web Token (CWT)
-14: CWT Claims Set (CCS)
-24: Unordered bag of C509 certificates
-25: Ordered chain of C509 certificates
-32: Unordered bag of X.509 certificates
-33: Ordered chain of X.509 certificates
-257: Public Key]]></Description>
+                <Description><![CDATA[The ID_CRED_x of the credential stored in Client Public Key. If this Resource is null or not instantiated, the LwM2M Client is to generate the ID_CRED_x matching the Client Public Key.]]></Description>
             </Item>
             <Item ID="3">
                 <Name>Client Public Key</Name>
@@ -103,7 +118,7 @@ If this Resource is null or not instantiated, the LwM2M Client is to use OOB cre
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
                 <Description><![CDATA[Stores the LwM2M Client's private key.
-If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the "Client Public Key" Resource must be null or not instantiated.]]></Description>
+If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the Client Public Key Resource must be null or not instantiated.]]></Description>
             </Item>
             <Item ID="5">
                 <Name>Method</Name>
@@ -111,9 +126,9 @@ If this Resource is null or not instantiated, the LwM2M Client is to use OOB cre
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Mandatory</Mandatory>
                 <Type>Integer</Type>
-                <RangeEnumeration>0...3</RangeEnumeration>
+                <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The authentication method type value.]]></Description>
+                <Description><![CDATA[The authentication method type value, as defined in https://www.iana.org/assignments/edhoc/edhoc.xhtml#edhoc-method-types.]]></Description>
             </Item>
             <Item ID="6">
                 <Name>Initiator</Name>
@@ -134,7 +149,7 @@ If this Resource is not instantiated, the default value is True.]]></Description
                 <Type>Integer</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The label of the EDHOC cipher suite to use as the selected cipher suite.]]></Description>
+                <Description><![CDATA[The label of the EDHOC cipher suite to use as the selected cipher suite. If the Initiator Resource is set to True, this Resource must be instantiated.]]></Description>
             </Item>
             <Item ID="8">
                 <Name>Peer EDHOC CoAP URI Path</Name>
