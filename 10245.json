@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Relay Management",
+            "Description1": "This LWM2M Object provides a range of eNB related measurements and parameters of which several are changeable. Furthermore, it includes Resources to enable/disable the eNB.",
+            "ObjectID": "10245",
+            "ObjectURN": "urn:oma:lwm2m:x:10245",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "eNB Availability",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field indicates to the CCC whether or not the eNB of the CrowdBox is available for activation: AVAILABLE = TRUE; UNAVAILABLE = FALSE This is set by the CrowdBox itself using an algorithm specific to the use case and based on parameters known to the CrowdBox which may not necessarily be signalled to the network. In the absence of a more specific algorithm, this parameter should be set to AVAILABLE, unless a fault is detected which would prevent activation of the eNB, in which case it should be set to UNAVAILABLE."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "GPS Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "States whether the CrowdBox GPS receiver is synchronised to GPS time or not: UNSYCHRONISED = FALSE; SYNCHRONISED = TRUE If more than one GPS receiver is used by the CrowdBox, then SYNCHRONISED should be reported only if all receivers are synchronised."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Orientation",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-180..180",
+                        "Units": "deg",
+                        "Description": "Orientation of CrowdBox with respect to magnetic north. The reference orientation of the CrowdBox shall be the pointing direction of the eNB antenna(s) or, in the case of an omni-directional CrowdBox antenna, as defined in the accompanying product documentation."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "eNB EARFCN",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "EARFCN currently used by the eNB. Highest valid value in 3GPP is currently 46589. If the requested EARFCN is not supported by the eNB, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "eNB Bandwidth",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "5, 10, 15, 20",
+                        "Units": null,
+                        "Description": "Bandwidth of the currently used eNB carrier. If the requested bandwidth is not supported by the eNB, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Backhaul Primary EARFCN",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "EARFCN of primary cell used for the backhaul. If the requested EARFCN is not supported by the CrowdBox UE, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Backhaul Secondary EARFCN",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "EARFCN of any secondary cells used for the backhaul, in the event that carrier aggregation is being used. If the requested EARFCN is not supported by the CrowdBox UE, the response should be \"Bad Request\". The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Cumulative Measurement Window",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "s",
+                        "Description": "The current measurement interval over which cumulative statistics are collected for the following resources: Cumulative Number of Unique Users, Cumulative Downlink Throughput per Connected User, Cumulative Uplink Throughput per Connected User. Note that this measurement period is a sliding window rather than a granularity period. Measurements should never be reset, but rather old measurements should be removed from the cumulative total as they fall outside of the window. A value of 0 shall be interpreted as meaning only the current value should be reported. A value of 65535 shall be interpreted as an infinite window size (i.e. old measurements are never discarded)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "eNB ECI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..268435455",
+                        "Units": null,
+                        "Description": "A 28 bit E-UTRAN Cell Identifier (ECI) (range 0..2^28-1)"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "eNB Status",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource indicates the current status of the eNB and can be used by the CCC to change the state from enabled to disabled. TRUE = eNB enabled FALSE = eNB disabled"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Enable eNB",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enables the eNB. In addition the CrowdBox shall also update its configuration to reflect the current state of other relevant parameters. This might require a reboot."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "eNB Maximum Power",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..63",
+                        "Units": "dBm",
+                        "Description": "Maximum power for the eNB measured as the sum of input powers to all antenna connectors. The maximum power per antenna port is equal to the maximum eNB power divided by the number of antenna ports. If the requested power is above or below the maximum or minimum power levels of the eNB, then the power level should be set to the maximum or minimum respectively. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Backhaul Primary q-OffsetFreq",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-24..24",
+                        "Units": "dB",
+                        "Description": "q-OffsetFreq parameter for the backhaul primary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details. Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Backhaul Secondary q-OffsetFreq",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-24..24",
+                        "Units": "dB",
+                        "Description": "q-OffsetFreq parameter for the backhaul secondary EARFCN in SIB5 of the CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Neighbour CrowdBox EARFCN",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..66635",
+                        "Units": null,
+                        "Description": "EARFCN of a neighbour CrowdBox. Each instance of this resource relates to the same instance of resource ID 15."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Neighbour CrowdBox q-OffsetFreq",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-24..24",
+                        "Units": "dB",
+                        "Description": "q-OffsetFreq parameter of the Neighbour CrowdBox EARFCN in SIB5 of the Neighbour CrowdBox eNB BCCH. See TS 36.331 for details Range: dB-24; dB-22 .. dB24 Each instance of this resource relates to the same instance of resource ID 14. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Serving Macro eNB cellIndividualOffset",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-24..24",
+                        "Units": "dB",
+                        "Description": "Specifies the value of the cellIndividualOffset parameter applicable to the CrowdBox macro serving cell that is to be signalled to connected UEs in their measurement configuration information . See TS 36.331 for details. The CrowdBox shall only apply a change of this resource upon execution of the \"Enable eNB\" command."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

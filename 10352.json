@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Thermal Imager",
+            "Description1": "This LWM2M Object includes the Thermal Imager information.",
+            "ObjectID": "10352",
+            "ObjectURN": "urn:oma:lwm2m:x:10352",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Highest Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "-100.0..100.0",
+                        "Units": "Cel",
+                        "Description": "The Highest Temperature of the thermal imager."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Lowest Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "-100.0..100.0",
+                        "Units": "Cel",
+                        "Description": "The Lowest Temperature of the thermal imager."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Average Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "-100.0..100.0",
+                        "Units": "Cel",
+                        "Description": "The Average Temperature of the thermal imager."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

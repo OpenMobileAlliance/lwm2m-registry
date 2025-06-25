@@ -1,0 +1,253 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "5GNR Connectivity",
+            "Description1": "This is a device management object that should be used for 5G-NR capable devices.",
+            "ObjectID": "27",
+            "ObjectURN": "urn:oma:lwm2m:oma:27",
+            "LWM2MVersion": "1.2",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Connectivity Option",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the connectivity option.\n1 = Core Network: EPC; Master RAT: LTE; Secondary RAT: -\n3 = Core Network: EPC; Master RAT: LTE; Secondary RAT: NR\n2 = Core Network: 5GC; Master RAT: NR; Secondary RAT: -\n4 = Core Network: 5GC; Master RAT: NR; Secondary RAT: eLTE\n5 = Core Network: 5GC; Master RAT: eLTE; Secondary RAT: -\n7 = Core Network: 5GC; Master RAT: eLTE; Secondary RAT: NR"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "NR Band Support available",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Operating NR Bands supported by UE in NSA mode. Value represents the integer value of band mentioned in 3GPP  Spec 38.104 (Table: Table 5.2-1 and Table 5.2-2)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "NR Band attached",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Operating NR Bands on which UE is attached. Value represents the integer value of band mentioned in 3GPP  Spec 38.104 (Table: Table 5.2-1 and Table 5.2-2)"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "S-NSSAI",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Single - Network Slice Selection Assistance Information for 5G Standalone mode\n0 = eMBB\n1 = URLLC\n2 = MIoT\n3 = Custom \n4-7 = Reserved"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "DNN Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Data Network Name in case of Network Bearer Resource is a 5G SA (FDD/TDD) Cellular Network."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "PDU Session Id",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..15",
+                        "Units": null,
+                        "Description": "Indicates the PDU Session ID over which LwM2M session is established for 5G SA (FDD/TDD) Cellular Network."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "SSC Mode",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..3",
+                        "Units": null,
+                        "Description": "Indicates the Session and Service Continuity mode for 5G SA (FDD/TDD) Cellular Network."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "PDU Session Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the type of PDU session over which LwM2M connection is established for 5G SA (FDD/TDD) Cellular Network.\n1 = IPv4\n2 = IPv6\n3 = IPv4v6\n4 = Unstructured\n5 = Ethernet\n8 = Reserved (Spec Ref.)"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "5QI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the 5G QoS Identifier for 5G SA (FDD/TDD) Cellular Network.\n1-9,65,66,67,69,70,75,79,80,81,82,83,84,85 = Standard\n128 to 254 = Operator specific 0,255 = Reserved \nRemaining = Spare (Spec Ref.)"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "SDAP Enablement",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates whether SDAP is enabled or not for 5G SA (FDD/TDD) Cellular Network.\n0 = in UL only\n1 = In DL Only\n2 = In UL and DL both"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "QFI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..63",
+                        "Units": null,
+                        "Description": "Indicates the QoS Flow identifier for 5G SA (FDD/TDD) Cellular Network. (Spec Ref.)"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Session AMBR",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..25",
+                        "Units": null,
+                        "Description": "Indicates the Session Aggregate Maximum Bit Rate as per the 5G 3GPP Spec for 5G SA (FDD/TDD) Cellular Network.  (Spec Ref.)"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "APN-AMBR",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "The Aggregate Maximum Bitrate which is applicable to a given APN over which LwM2M session is established for 5G SA (FDD/TDD) Cellular Network."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "NAS Reflective QOS",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the QoS at NAS layer  for 5G SA (FDD/TDD) Cellular Network.\n0 = Disabled\n1 = Enabled"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Access Stratum Reflective QoS",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the QoS for Access Stratum (RRC) for 5G SA (FDD/TDD) Cellular Network..\n0 = Absent\n1 = Present"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "P-CSCF Address Index",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Index for the P-CSCF address for 5G SA (FDD/TDD) Cellular Network."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "PDU session Authentication",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Authentication type for PDU Session\nPDU session Authentication\n0 = Primary\n1 = Secondary\n2 = Both"
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "PLMN ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the PLMN ID over which UE is currently attached for 5G SA (FDD/TDD) Cellular Network.\nAllows server to see the currennt PLMN in string format (e.g. formatted as result of AT+COPS=? as per 3GPP-TS_27.007)"
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "LADN Support",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates whether LADN (Local Area Data Network) is supported or not for 5G SA (FDD/TDD) Cellular Network.\n0 = Not Supported\n1 = Supported"
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Integrity Protection on DRB",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current state of the Integrity Protection on Data Radio Bearer for 5G SA (FDD/TDD) Cellular Network.\n0 = Disabled\n1 = Enabled with 64-Kbps\n2 = Enabled with Peak Rate"
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Access type Preference",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Access Type preference for 5G SA (FDD/TDD) Cellular Network.\n0 = 3GPP\n1 = Non-3GPP"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

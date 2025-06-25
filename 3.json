@@ -1,0 +1,275 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Device",
+            "Description1": "This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.",
+            "ObjectID": "3",
+            "ObjectURN": "urn:oma:lwm2m:oma:3:1.2",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.2",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Manufacturer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable manufacturer name"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Model Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A model identifier (manufacturer specified string)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Serial Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Serial Number"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Firmware Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current firmware version of the Device.The Firmware Management function could rely on this resource."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Reboot",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reboot the LwM2M Device to restore the Device from unexpected firmware failure."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Factory Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Perform factory reset of the LwM2M Device to make the LwM2M Device to go through initial deployment sequence where provisioning and bootstrap sequence is performed. This requires client ensuring post factory reset to have minimal information to allow it to carry out one of the bootstrap methods specified in section 5.2.3. \nWhen this Resource is executed, \"De-register\" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Available Power Sources",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..7",
+                        "Units": null,
+                        "Description": "0: DC power\n1: Internal Battery\n2: External Battery\n3: Fuel Cell\n4: Power over Ethernet\n5: USB\n6: AC (Mains) power\n7: Solar\nThe same Resource Instance ID MUST be used to associate a given Power Source (Resource ID:6) with its Present Voltage (Resource ID:7) and its Present Current (Resource ID:8)"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Power Source Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Present voltage for each Available Power Sources Resource Instance. The unit used for this resource is in mV."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Power Source Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Present current for each Available Power Source. The unit used for this resource is in mA."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Battery Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Contains the current battery level as a percentage (with a range from 0 to 100). This value is only valid for the Device internal Battery if present (one Available Power Sources Resource Instance is 1)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Memory Free",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes). Note: 1 kilobyte corresponds to 1000 bytes."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Error Code",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..32",
+                        "Units": null,
+                        "Description": "0=No error\n1=Low battery power\n2=External power supply off\n3=GPS module failure\n4=Low received signal strength\n5=Out of memory\n6=SMS failure\n7=IP connectivity failure\n8=Peripheral malfunction\n9..15=Reserved for future use\n16..32=Device specific error codes\n\nWhen the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created. When an error associated with a Resource Instance is no longer present, that Resource Instance is deleted. When the single existing error is no longer present, the LwM2M Client returns to the original no error state where Instance 0 has value 0.\nThis error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client\u2019s error report depends on the policy of the LwM2M Server. Error codes in between 16 and 32 are specific to the Device and may have different meanings among implementations."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Reset Error Code",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Delete all error code Resource Instances and create only one zero-value error code that implies no error, then re-evaluate all error conditions and update and create Resources Instances to capture all current error conditions."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Current Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current UNIX time of the LwM2M Client.\nThe LwM2M Client should be responsible to increase this time value as every second elapses.\nThe LwM2M Server is able to write this Resource to make the LwM2M Client synchronized with the LwM2M Server."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "UTC Offset",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the UTC offset currently in effect for this LwM2M Device. UTC+X [ISO 8601]."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Timezone",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates in which time zone the LwM2M Device is located, in IANA Timezone (TZ) database format."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Supported Binding and Modes",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates which bindings and modes are supported in the LwM2M Client. The possible values are those listed in the LwM2M Core Specification."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Device Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Type of the device (manufacturer specified string: e.g. smart meters / dev Class / ...)"
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Hardware Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current hardware version of the device"
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Software Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current software version of the device (manufacturer specified string). On elaborated LwM2M device, SW could be split in 2 parts: a firmware one and a higher level software on top.\nBoth pieces of Software are together managed by LwM2M Firmware Update Object (Object ID 5)"
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Battery Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..6",
+                        "Units": null,
+                        "Description": "This value is only valid for the Device Internal Battery if present (one Available Power Sources Resource Instance value is 1).\nBattery\nStatus\tMeaning\tDescription\n0\tNormal\tThe battery is operating normally and not on power.\n1\tCharging\tThe battery is currently charging.\n2\tCharge Complete\tThe battery is fully charged and still on power.\n3\tDamaged\tThe battery has some problem.\n4\tLow Battery\tThe battery is low on charge.\n5\tNot Installed\tThe battery is not installed.\n6\tUnknown\tThe battery information is not available."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Memory Total",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).  Note: 1 kilobyte corresponds to 1000 bytes."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "ExtDevInfo",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reference to external \"Device\" object instance containing information. For example, such an external device can be a Host Device, which is a device into which the Device containing the LwM2M client is embedded. This Resource may be used to retrieve information about the Host Device."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

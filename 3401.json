@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Physical Push-Button Sensor",
+            "Description1": "The 'oA_Physical_Push-Button_Sensor' represents the physical part of a push-button sensor. All logical push-button sensors (object instances of 'oA Push-Button Sensor') are mapped to one physical push-button sensor.",
+            "ObjectID": "3401",
+            "ObjectURN": "urn:oma:lwm2m:ext:3401",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "201",
+                        "Name": "Push-Button Status Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0: RELEASED\n\t\t\t\t1: PRESSED\n\t\t\t\t2: FAULT",
+                        "Units": null,
+                        "Description": "This Resource represents the current PRESSED/RELEASED state of the push-button.\\n* 0: RELEASED - the switch/push-button is pressed or contact is opened\\n* 1: PRESSED - the switch/push-button is pressed or contact is closed\\n* 2: FAULT - the contact is in a faulty condition (e.g. stuck or non-reactive)"
+                    },
+                    {
+                        "@ID": "907",
+                        "Name": "Error Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Hardware_Error, 1: Quality_Error, 2: Invalid_State"
+                    },
+                    {
+                        "@ID": "908",
+                        "Name": "Mounting Location",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "1..64 bytes",
+                        "Units": null,
+                        "Description": "Describes the location of the device within the building. The content of the string is site specific."
+                    },
+                    {
+                        "@ID": "5502",
+                        "Name": "Digital Input Polarity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The polarity of the digital input as a Boolean (False = Normal, True = Reversed)."
+                    },
+                    {
+                        "@ID": "5503",
+                        "Name": "Digital Input Debounce",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "The debounce period in ms."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

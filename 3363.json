@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "nasEsmExpiryEvent",
+            "Description1": "NAS ESM timer expiry information",
+            "ObjectID": "3363",
+            "ObjectURN": "urn:oma:lwm2m:ext:3363",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "0",
+                    "Name": "NasEsmExpiryEvent",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Integer",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "1 = t3480\n2 = t3482\n3 = t3481\n4 = t3492"
+                }
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,242 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Leakage Detection Configuration",
+            "Description1": "This object provides timing and sampling frequency configuration for a vibration-based leakage detector",
+            "ObjectID": "10509",
+            "ObjectURN": "urn:oma:lwm2m:x:10509",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Sample Times",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Sample Times is a readable and writable multi value resource used to control when leak detection vibration sampling should occur. This is an integer value representing seconds since midnight"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Sample UTC Offset",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Sample UTC Offset resource is a readable and writable resource representing the time zone offset for this Leakage Detection Schedule instance. If this resource is empty, the application should use the UTC offset provided in the Device [/3/0/14] object instance resource or UTC if not provided."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Payload Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "Payload Type is a readable and writeable resource used to indicate which payload type to report to the LWM2M server. Values are one of:-\n0: Disabled\n1: AUC (default)\n2: All Frequency Values\n\nDisabled (0)  The leak detection payload generation should be disabled.\nAUC (1)  For this mode, only the mean AUC (area under curve) for all samples in the sampling window within the defined frequency range will be delivered to the LwM2M server via the Latest Payload Resource\nAll Frequency Values(2)  for this mode, the median for values for all frequency bands for all samples in the sampling window will be provided to the LwM2M server via the Latest Payload Resource"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Number Sample Windows",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..10",
+                        "Units": null,
+                        "Description": "The Number Sample Windows resource is a readable and writeable resource used to determine how many instances to use for the Sample Times resource"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Samples Per Window",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Samples Per Window resource is a readable and writeable resource used to control how many samples to read per sample window"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Sample Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The Sample Interval resource is a readable and writeable resource used to control the interval (in seconds) between each sample in a window"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "AUC Lower Frequency",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Hz",
+                        "Description": "The AUC Lower Frequency resource is a readable and writeable resource used to determine the lower frequency bound (inclusive) to use for calculating the AUC. This value will default to 360Hz if the resource is not set"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "AUC Upper Frequency",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Hz",
+                        "Description": "The AUC Upper Frequency resource is a readable and writeable resource used to determine the upper frequency bound (inclusive) to use for calculating the AUC. This value will default to 1200Hz if the resource is not set"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "AUC Leak Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The AUC Leak Threshold resource is a readable and writeable resource used to to compare the AUC of each sample in a sampling window. This value will default to 1000 if the resource is not set"
+                    },
+                    {
+                        "@ID": "6003",
+                        "Name": "Interval Collection Start Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Collection Start Time resource is a read only resource representing the time when the first interval was recorded on the device. Interval times represent the end of the interval, not the beginning. As an example, the first four hourly interval past midnight will have a timestamp of 04:00 (adjusting for UTC offset)."
+                    },
+                    {
+                        "@ID": "6004",
+                        "Name": "Oldest Recorded Interval",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Oldest Recorded Interval resource is a read-only resource representing the oldest available interval on the device. Interval times represent the end of the interval, not the beginning."
+                    },
+                    {
+                        "@ID": "6005",
+                        "Name": "Last Delivered Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Last Delivered Interval is a readable and writable resource used to represent the last interval delivered to the LwM2M server. Interval times represent the end of the interval, not the beginning. The setting of this resource is implementation specific but should be updated based on, either a Read request of the Latest Payload from the LwM2M server or via a confirmed delivery of Notify operation of the Latest Payload resource. This resource is writable to allow the server to adjust the Last Delivered Interval value if the server and client is out of sync."
+                    },
+                    {
+                        "@ID": "6006",
+                        "Name": "Latest Recorded Interval",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Latest Recorded Interval is a readable resource representing the currently highest recorded interval on the device. Interval times represent the end of the interval, not the beginning."
+                    },
+                    {
+                        "@ID": "6007",
+                        "Name": "Interval Delivery Midnight Aligned",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Delivery Midnight Aligned is a readable and writable resource used to indicate if data is delivered only to the previous midnight (1) or if part-day data can be delivered (0). Calculating Midnight should consider the Interval UTC Offset resource, or if empty, the Device [/3/0/14] object instance resource."
+                    },
+                    {
+                        "@ID": "6008",
+                        "Name": "Interval Historical Read",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Historical Interval Read is an executable resource designed to retrieve ad-hoc interval read data. The resource takes two arguments:-\nArgument 0: First Interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.\nArgument 1: Last interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.\nThe dates should be inclusive based on the end time of the interval. The data retrieved from this resource will be readable (or observable) from the Historical Read Payload Resource.\n\nAs an example, the Argument List to retrieve data from Midnight 2nd March (UTC+10) to Midnight 6rd March (UTC+10) for a specific instance of the interval data object, would be constructed as follows:-\n\n0='1488463200',1='1488808800'"
+                    },
+                    {
+                        "@ID": "6009",
+                        "Name": "Interval Historical Read Payload",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Historical Read Payload resource is the representation of the data requested by the Historical Interval Read executable resource. The format of this Opaque value should be identical to the Latest Payload resource. If no Historical Interval Read has been executed, this resource should return and empty Opaque value. This resource can either be Read from the Server or set up as an observation and Notified to the server as soon as the historical data is available. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Historical Read Payload should be set to an empty Opaque value."
+                    },
+                    {
+                        "@ID": "6026",
+                        "Name": "Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Start is an executable resource that enables the recording of interval data. The first interval recorded will have a timestamp based on the Interval Start Offset resource. This executable resource takes no arguments. Refer to re-usable resource LogStart for further details."
+                    },
+                    {
+                        "@ID": "6027",
+                        "Name": "Stop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stop (LogStop) is an executable resource that disables the recording of interval data for this object instance. This executable resource takes no arguments. Refer to re-usable resource LogStop for further details."
+                    },
+                    {
+                        "@ID": "6028",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Recording Enabled is a read-only resource providing an indication of if interval data is currently being recorded for this object instance. Refer to re-usable resource LogStatus for further details."
+                    },
+                    {
+                        "@ID": "6029",
+                        "Name": "Latest Payload",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Latest Payload resource is a read-only serialised Opaque (Binary) representation of all the Interval Data between the Last Delivered Interval and the Latest Recorded Interval, accounting for the Delivery Midnight Aligned resource. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Latest Delivered Interval should be updated. When no new data exists, an empty Opaque value should be provided.\n\nThe payload data can be provided in an implementation specific serialisation, but by default for fixed length values should use the OMA-LwM2M CBOR format encoded as follows:\n\n1. 8-bit integer, value 2 representing OMA-LwM2M CBOR format.\n2. Interval Data Instance ID/ Class [16-bit integer]\n3. Timestamp of first Interval [32-bit integer] representing the number of seconds since Jan 1st, 1970 in the UTC time zone.\n4. Interval Period in seconds [32-bit integer]\n5. Number of intervals in Payload [16-bit integer]\n6. Number of Values Per Interval [8-bit integer]\n7. Size of Value 1 in bits [8-bit integer]\n8. Size of Value 2 in bits [8-bit integer]\n...\n9. Size of Value N in bits [8-bit integer]\n10. Interval 1 Value 1 [x bits]\n11. Interval 1 Value 2 [x bits]\n...\n12. Interval 1 Value N [x bits]\n...\n13. Interval N Value N [x bits]\n\nIf for some implementation specific reason, there are missing intervals in the sequence, the payload may consist of multiple blocks of the above serialised data (appended into a single binary opaque value), each block representing a continuous series of interval data."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

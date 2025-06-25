@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Camera",
+            "Description1": "This LWM2M Object includes camera information.",
+            "ObjectID": "10340",
+            "ObjectURN": "urn:oma:lwm2m:x:10340",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Camera Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable camera name"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Camera Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The status of the camera, 1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Connection Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Connection Status of the camera, 1:On, 0:Off."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Working Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "The Working Status of the camera, 0:Recording, 1:Playing, 2:Paused."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Local Recording",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Local Recording is enabled or not, 1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Image Matting",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Image Matting is enabled or not, 1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Camera Snapshot",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Camera Snapshot is enabled or not(in Dangerous Situation), \n\t\t\t\t1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Camera Recording",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Camera Recording is enabled or not(in Dangerous Situation), \n\t\t\t\t1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Camera Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable the camera: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "Local Recording Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Local Recording: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "Image Matting Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Image Matting: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "Camera Snapshot Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Camera Snapshot in Dangerous Situation: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "Camera Recording Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Camera Recording in Dangerous Situation: Parameter: 1:Enable, 0:Disable"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

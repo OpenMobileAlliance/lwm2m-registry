@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "BinaryAppDataContainer",
+            "Description1": "This LwM2M Objects provides the application service data related to a LwM2M Server, eg. Water meter data. \nThere are several methods to create instance to indicate the message direction based on the negotiation between Application and LwM2M. The Client and Server should negotiate the instance(s) used to exchange the data. For example:\n - Using a single instance for both directions communication, from Client to Server and from Server to Client.\n - Using an instance for communication from Client to Server and another one for communication from Server to Client\n - Using several instances",
+            "ObjectID": "19",
+            "ObjectURN": "urn:oma:lwm2m:oma:19",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Data",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the application data content."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Data Priority",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1 bytes",
+                        "Units": null,
+                        "Description": "Indicates the Application data priority:\n0:Immediate\n1:BestEffort\n2:Latest\n3-100: Reserved for future use.\n101-254: Proprietary mode."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Data Creation Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Data instance creation timestamp."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Data Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "32 bytes",
+                        "Units": null,
+                        "Description": "Indicates the data description.\ne.g. \"meter reading\"."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Data Format",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "32 bytes",
+                        "Units": null,
+                        "Description": "Indicates the format of the Application Data.\ne.g. YG-Meter-Water-Reading\nUTF8-string"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "App ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2 bytes",
+                        "Units": null,
+                        "Description": "Indicates the destination Application ID."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Sensor Alarm",
+            "Description1": "The autosen Sensor Alarm object can be used to set alarm conditions for sampled sensor data. If condition is true, an action could be triggered e.g. upload immediately",
+            "ObjectID": "10496",
+            "ObjectURN": "urn:oma:lwm2m:x:10496",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Sensor Value Path",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Resources are specified using Core Link syntax\nExample:\nInstance #0: </3303/0/5700>\nInstance #1: </3303/1/5700>",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Alarm Condition",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4",
+                        "Description": "0: disabled\n1: Upper Bound is exceeded \n2: Lower Bound is exceeded\n3: In between bounds\n4: Outside of bounds",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Lower Bound",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Description": "Lower bound of the sensor value(s)",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Upper Bound",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "RangeEnumeration": null,
+                        "Description": "Upper bound of the sensor value(s)",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

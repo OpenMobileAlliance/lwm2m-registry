@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Data Monitoring",
+            "Description1": "Generic interface to set up data monitoring like sensor/log data and mechanism to receive alerts.",
+            "ObjectID": "10377",
+            "ObjectURN": "urn:oma:lwm2m:x:10377",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Monitoring Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is the Data Monitoring operation's name or string reference declared by device. It cannot be modified externally. Device can support multiple monitoring operation by declaring multiple instances of Data Monitoring object."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Monitoring Description",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource describes the monitoring operation including data type and supported settings/options, if any."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Monitoring Settings",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource allows the monitoring operation to accept settings or operation options. The available settings, if supported, should be described using Monitoring Description resource."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Data",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource contains the current value of actual data being monitored/sampled in device. The data and data type is formatted as CBOR payload."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Data Sampling Start Mask",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource defines when to start data sampling. Data Sampling Start Mask needs to adhere to following string format:\n\"YYMMDDHHmmss\"\nYY: year, e.g 21\nMM: month, 01 to 12\nDD: day, 01 to 31\nHH: hour, 00 to 23\nmm: minute, 00 to 59\nss: second, 00 to 59\n\nAny of the above can be replaced by character '-' for \"don't care\" masking.\n\nExample:\n1) \"211027201801\" data sampling will start at exactly 20:18:01 on 2021/10/27.\n2) \"------201801\" data sampling will start at the next 20:18:01.\n3) \"------------\" data sampling will start immediately.\n4) \"------01000000\" data sampling will start at next 1st of the month at 12am.\n\nIf this resource is not present, data sampling starts at device's specific implementation."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Data Sampling Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "This resource represents the time interval between consecutive data samplings. After the sampling starts (via the start mask, if present), the next sampling will run after Data Sampling Interval resource value has elapsed.\nIf this resource is not present, data sampling occurs at device's specific implementation."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Data Sampling Run Period",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "This resource defines the period to run this data sampling. Data Sampling will stop when the Run Period has elapsed from the start time. Depending on the Data Sampling Start Mask's \"don't care\" field, sampling may re-start again."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Reference A",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource contains the value of reference data that is to be compared with Data resource in conjunction with Comparison A resource. The comparison result is flagged by Status resource. When Status resource is made observable, this effectively becomes a mechanism to signal the server on a hit. The reference data and data type is formatted as CBOR payload."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Comparison A",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource represents the logical statement to compare Data resource against Reference A resource. The statements are encoded as following:\n0: No Comparison\n1: Data > Reference A\n2: Data >= Reference A\n3: Data < Reference A\n4: Data <= Reference A\n5: Data equals Reference A\n6: Data not equal Reference A"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Reference B",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource contains the value of reference data that is to be compared with Data resource in conjunction with Comparison B resource. The comparison result is flagged by Status resource. When Status resource is made observable, this effectively becomes a mechanism to signal the server on a hit. The reference data and data type is formatted as CBOR payload."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Comparison B",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource represents the logical statement to compare Data resource against Reference B resource. The statements are encoded as following:\n0: No Comparison\n1: Data > Reference B\n2: Data >= Reference B\n3: Data < Reference B\n4: Data <= Reference B\n5: Data equals Reference B\n6: Data not equal Reference B"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Reference C",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource contains the value of reference data that is to be compared with Data resource in conjunction with Comparison B resource. The comparison result is flagged by Status resource. When Status resource is made observable, this effectively becomes a mechanism to signal the server on a hit. The reference data and data type is formatted as CBOR payload."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Comparison C",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource represents the logical statement to compare Data resource against Reference B resource. The statements are encoded as following:\n0: No Comparison\n1: Data > Reference C\n2: Data >= Reference C\n3: Data < Reference C\n4: Data <= Reference C\n5: Data equals Reference C\n6: Data not equal Reference C"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Monitoring Results",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Monitoring Results resource is a serialized accumulation of comparison results of data and the references, represented by a read-only serialized Opaque (Binary).\nThis resource use CBOR format encoded as following: \n1. array(Result Index 1, Result Timestamp 1, Result Value 1)\n2. array(Result Index 2, Result Timestamp 2, Result Value 2)\n...\nn. array(Result Index n, Result Timestamp n, Result Value n)\t\n\nResult value is an integer containing bit flags described as per following:\nbit 0: 0(Comparison A statement is false), 1(Comparison A statement is true)\nbit 1: 0(Comparison B statement is false), 1(Comparison B statement is true)\nbit 2: 0(Comparison C statement is false), 1(Comparison C statement is true)\nother bits: unused\nNew result will be added when there is a change of current Result Value. Result Timestamp is a 32-bit integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone, sampled when the change occurs. Result Index is the running number of the recorded changes. \nNumber of available results is up to device's implementation and maximum result that can be accumulated should be stated in Monitoring Description resource."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Connected UE Measurements",
+            "Description1": "This LWM2M Object provides a range of measurements of connected UEs and provides an Object link to the Connected UE report.",
+            "ObjectID": "10248",
+            "ObjectURN": "urn:oma:lwm2m:x:10248",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Number of Connected Users",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "The number of different UEs currently connected to the eNB (i.e. in RRC_CONNECTED state)."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Cumulative Number of Unique Users",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "The number of different UEs that have connected to the eNB over the immediately preceding period specified by the \"Cumulative Measurement Window\" field."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Connected UE Report",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides an Object link to the Connected UE Report which provides a range of information related to the connected UEs."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

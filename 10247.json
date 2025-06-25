@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Neighbour Cell Report",
+            "Description1": "This LWM2M Object provides the neighbour cell report. The CrowdBox Measurements Object and the Connected UE Report Object have both Objlnk Resources pointing to this Object.",
+            "ObjectID": "10247",
+            "ObjectURN": "urn:oma:lwm2m:x:10247",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Neighbour PCI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..503",
+                        "Units": null,
+                        "Description": "Physical Cell ID of neighbouring LTE cell, as defined in TS 36.211"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Neighbour Cell ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4294967295",
+                        "Units": null,
+                        "Description": "Neighbour cell ID as specified by the cellIdentity field broadcast in SIB1 of the neighbour cell (see TS 36.331)."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Neighbour Cell Rank",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Current neighbour cell rank. Neighbour cells should be ordered (ranked) by the CrowdBox according to neighbour cell RSRP, with a higher RSRP corresponding to a lower index. Hence the neighbouring cell with the highest RSRP should be neighbour cell 0, the second neighbour cell 1, and so on."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Neighbour Cell RSRP",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..97",
+                        "Units": null,
+                        "Description": "Neighbour cell RSRP, as defined in TS 36.133, Section 9.1.4. Range: RSRP_00; RSRP_01 .. RSRP_97"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Neighbour Cell RSRQ",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-30..46",
+                        "Units": null,
+                        "Description": "Neighbour cell RSRQ, as defined in TS 36.133, Section 9.1.7. Range: RSRQ_-30; RSRQ_-29 .. RSRQ_46"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

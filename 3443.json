@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "eSIM IoT",
+            "Description1": "The interface between eIM and IPA as described in GSMA SGP.32.",
+            "ObjectID": "3443",
+            "ObjectURN": "urn:oma:lwm2m:ext:3443",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Status\n\t\t\t\t\t0  ready to receive eIM message\n\t\t\t\t\t1  not able to receive eIM message\n\t\t\t\t\tNote: In case value is >0 then writing to resource 2 shall not be possible"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "EID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "EID of the eUICC that is target of the object"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "eIM message",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The message from eIM to IPA. The message shall be in the ASN.1 DER format defined in SGP.32 Section 6.3.1"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "IPA message",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The message from IPA to eIM. The message shall be in the ASN.1 DER format defined in GSMA SGP.32 section 6.3.1"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Clear IPA message",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "In case Send or Confirmable Notifications is not used to deliver IPA messsage then execution of this resource will confirm delivery of the IPA message and clear the resource 3."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

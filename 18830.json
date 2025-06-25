@@ -1,0 +1,143 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "MQTT Broker",
+            "Description1": "This LwM2M Object provides the information to connect to an MQTT Broker i.e. URI, configuration, and keying material.",
+            "ObjectID": "18830",
+            "ObjectURN": "urn:oma:lwm2m:x:18830",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "URI",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "URI of the MQTT broker."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Client Identifier",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "MQTT Client Identifier to use when connecting to this MQTT broker."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Clean Session",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Clean Session value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Keep Alive",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "s",
+                        "Description": "The Keep Alive value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "User Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The User Name to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Password",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "The Password value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Security Mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4",
+                        "Units": null,
+                        "Description": "Determines which security mode is used\n                    0: PreShared Key mode\n                    1: Raw Public Key mode\n                    2: Certificate mode\n                    3: NoSec mode\n                    4: Certificate mode with EST"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Public Key or Identity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the Device\u2019s certificate, public key (RPK mode) or PSK Identity (PSK mode)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "MQTT Broker Public Key",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the MQTT Broker\u2019s certificate, public key (RPK mode) or trust anchor. The Certificate Usage Resource determines the content of this resource."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Secret Key",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the secret key (PSK mode) or private key (RPK or certificate mode)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Certificate Usage",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "The Certificate Usage Resource specifies the semantic of the certificate or raw public key stored in the \"MQTT Broker Public Key\" Resource, which is used to match the certificate presented in the TLS/DTLS handshake. The currently defined values are:\n                    0: CA constraint\n                    1: service certificate constraint\n                    2: trust anchor assertion\n                    3: domain-issued certificate\n\n                    When this Resource is absent, value (3) for domain issued certificate mode is assumed."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

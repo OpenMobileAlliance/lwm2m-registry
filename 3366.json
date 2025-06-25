@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "macRachAttemptEvent",
+            "Description1": "RACH information. Logged at RACH TX",
+            "ObjectID": "3366",
+            "ObjectURN": "urn:oma:lwm2m:ext:3366",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "rachAttemptCounter",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RACH Attempt Counter"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "MacRachAttemptEventType",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = Success\n1 = Failure-At-Msg-2\n2 = Failure-At-Msg-4-CT-Timer-Expired\n3 = Failure-At-Msg-4-CT-Resolution-Not-Passed\n4 = Aborted"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "contentionBased",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = Contention based\n0 = otherwise"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "rachMessage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = MSG 1\n2 = MSG 2\n3 = MSG 3"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "preambleIndex",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "preambleIndex=There are 64 preambles available in each cell. Range is from 0-63. (3GPP 36.211)"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "preamblePowerOffset",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "preamblePowerOffset= stepsize*preamble transmission number"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "backoffTime",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Backoff Time"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "msg2Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = pass\n0 = fail"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "timingAdjustmentValue",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Timing Adjustment Value"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

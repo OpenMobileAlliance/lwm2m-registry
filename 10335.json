@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Event",
+            "Description1": "Here lists all items of an event reported by the robot.",
+            "ObjectID": "10335",
+            "ObjectURN": "urn:oma:lwm2m:x:10335",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Entity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "4..63",
+                        "Units": null,
+                        "Description": "Contains the object ID and object instance ID/name, for example: </10320/2>."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Event Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "The type of this event, for example: APP restart."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When was this event reported."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Sequence No",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..9223372036854775807",
+                        "Units": null,
+                        "Description": "Sequence No of this event, used to detect event loss. A 63 bit value with range 0..2^63-1."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Additional Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The information related to this event."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

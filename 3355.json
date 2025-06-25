@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "handoverEvent",
+            "Description1": "handover event information",
+            "ObjectID": "3355",
+            "ObjectURN": "urn:oma:lwm2m:ext:3355",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "timeHandoverStart",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Modem time when handover is initiated"
+                    },
+                    {
+                        "@ID": "6032",
+                        "Name": "dlEarfcn",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "EARFCN - frequency"
+                    },
+                    {
+                        "@ID": "6033",
+                        "Name": "CellID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cell ID."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "handoverResult",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = Pass\n1 = InvalidCfg (Validation failure)\n2 = PhysicalFailure (Physical layer failure on the target cell)\n3 = Rach (T304 expiry due to RACH failure on target cell)\n4 = RachMeasConfigIncluded (T304 expiry due to RACH failure on target cell when MeasConfig IE was included)\n5 = Other (other failure reason than ones above)"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "TargetEarfcn",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Target EARFCN"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "TargetPhysicalCellID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Target Physical Cell ID"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "targetCellRsrp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Target Cell RSRP in dBm"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

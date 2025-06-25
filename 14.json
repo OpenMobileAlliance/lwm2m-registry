@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LWM2M Software Component",
+            "Description1": "If some Objects are not supported after software update, the LwM2M Client MUST delete all the Object Instances of the Objects that are not supported.",
+            "ObjectID": "14",
+            "ObjectURN": "urn:oma:lwm2m:oma:14",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Component Identity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "Name or identifier of the software component"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Component Pack",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Software components is stored in this resource"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Component Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "Version of the software component."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Activate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This action activates the software previously successfully installed (the SW Update Package Installation State Machine is currently in the INSTALLED state)."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Deactivate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This action deactivates software if the SW Update Package Installation State Machine is currently in the INSTALLED state."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Activation State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the current activation state of this software component:\n0: DISABLED\nActivation State is DISABLED if the Software Component Activation State Machine is in the INACTIVE state or not alive.\n1: ENABLED\nActivation State is ENABLED only if the Software Component Activation State Machine is in the ACTIVE state."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

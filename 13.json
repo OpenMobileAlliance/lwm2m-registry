@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LWM2M Bearer Selection",
+            "Description1": "This object specifies resources to enable a device to choose a PLMN/network on which to attach/register and what type of bearer to then connect.\n\t\tThis object allows via remote bearer and network configuration to overwrite automatic network and bearer selection e.g. as supported by the UICC. An equivalent example for overwriting automatic selection is a user doing manual network and bearer selection on a smart phone.",
+            "ObjectID": "13",
+            "ObjectURN": "urn:oma:lwm2m:oma:13:1.1",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Preferred Communications Bearer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Used in network selection and, if applicable, in subsequent mobility management procedures:\n\t\t\t\t0: auto connect\n\t\t\t\t1: 3GPP PS preferred\n\t\t\t\t2: 3GPP PS GSM (GPRS) preferred\u00a0(including EC-GSM-IoT)\n\t\t\t\t3: 3GPP PS UMTS preferred\n\t\t\t\t4: 3GPP PS LTE preferred\n\t\t\t\t5: 1xEV-DO preferred (1)\n\t\t\t\t6: 3GPP CS preferred (1)\n\t\t\t\t7: WLAN preferred\n\t\t\t\t8: Ethernet preferred (1)\n\t\t\t\t9: DSL preferred (1)\n\t\t\t\t10: Bluetooth preferred (1)\n\t\t\t\t11: WIMAX preferred (1)\n\t\t\t\t12: 3GPP PS LTE with CIoT EPS optimisations, User Plane preferred (2)\n\t\t\t\t13: 3GPP PS LTE with CIoT EPS optimisations, Control Plane preferred (2)14: 3GPP PS NB-IoT Control Plane optimisations preferred (2)\n\t\t\t\t15: 3GPP PS NB-IoT User Plane optimisations preferred (2) \n\t\t\t\t16: 3GPP 5G-NR preferred\n\t\t\t\t17-100: Reserved for future use\n\t\t\t\tThe Preferred Communications Bearer resource specifies the preferred communications bearer that the LWM2M Client is requested to use for connecting to the LWM2M Server. If multiple preferred communications bearers are specified, the priority order is reflected by the resource instance order. E.g. the bearer which appears first in the list of resource instances is to have higher priority over the rest of available bearers. The LWM2M Client SHOULD use the preferred bearers with higher priority first if they are available. If none of indicated preferred bearers is available, the LWM2M Client SHOULD wait until one of them becomes available."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Acceptable RSSI (GSM)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-110..-48",
+                        "Units": null,
+                        "Description": "Provides guide to the application when performing manual network selection."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Acceptable RSCP (UMTS)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-120..-25",
+                        "Units": null,
+                        "Description": "Provides guide to the application when performing manual network selection."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Acceptable RSRP (LTE)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-140..-44",
+                        "Units": null,
+                        "Description": "Provides guide to the application when performing manual network selection."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Acceptable RSSI (1xEV-DO)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides guide to the application when performing manual network selection."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Cell lock list",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Comma separated list of allowed Global Cell Identities."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Operator list",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Comma separated list of MCC+MNC of operators, in priority order.\n\t\t\t\tResource \"operator list mode\" indicates how to process this list."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Operator list mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates whether resource \"operator list\" represents the allowed operator list (white list), or, the preferred operator list.\n\t\t\t\t0=preferred\n\t\t\t\t1=allowed"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "List of available PLMNs",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Allows server to see results of network scan (e.g. result of AT+COPS=? as per 3GPP-TS_27.007)"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Vendor specific extensions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to a vendor specific object."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Acceptable RSRP (NB-IoT)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-158..-44",
+                        "Units": null,
+                        "Description": "Provides guide to the application when performing manual network selection."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Higher Priority PLMN Search Timer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Interval between periodic searches for higher priority PLMNs of the same country when camped on a visited PLMN, i.e. roaming scenario; based on SIM configuration, EFHPPLMN [3GPP-TS_31.102, section 4.2.6]"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Attach without PDN connection",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "False: attach with PDN connection\n\t\t\t\tTrue: attach without PDN connection"
+                    }
+                ]
+            },
+            "Description2": "Notes:\n\t\t(1)\tRemote management of this communications bearer via LwM2M is currently not supported.\n\t\t(2)\tSee [3GPP-TS_23.401, section 4.3.5.10] for the Preferred Network Behaviour indication used by the UE to inform the network about its capabilities and preferences."
+        }
+    }
+}

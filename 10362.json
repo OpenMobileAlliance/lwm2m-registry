@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Drop Sensor",
+            "Description1": "This LWM2M Object includes Drop Sensor information.",
+            "ObjectID": "10362",
+            "ObjectURN": "urn:oma:lwm2m:x:10362",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The display name of the Drop Sensor."
+                    },
+                    {
+                        "@ID": "50",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0:Normal, 1:Unknown, <0:Failed with error code(negative number)."
+                    },
+                    {
+                        "@ID": "51",
+                        "Name": "Drop Detection",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Drop Detection is enabled or not,\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Drop Detection Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Drop Detection: Parameter: 1:Enable, 0:Disable"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

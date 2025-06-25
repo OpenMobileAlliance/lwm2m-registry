@@ -1,0 +1,319 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Filling level",
+            "Description1": "The uCIFI filling level sensor measures how full and/or how empty a container (e.g. waste, fuel) is and reports it either in percentage or in centimeters. The filling level sensor may be complemented with a temperature sensor to compose a waste filling sensor that can also identify waste container fire.",
+            "ObjectID": "3435",
+            "ObjectURN": "urn:oma:lwm2m:ext:3435:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Container height",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "cm",
+                        "Description": "Height of the container."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Actual filling percentage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Percentage of container filled with content."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Actual filling level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "cm",
+                        "Description": "Height of content in the container."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "High threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Threshold above which the container is considered full."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Container full",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the actual filling percentage is above the high threshold."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Low threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Threshold below which the container is considered empty."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Container empty",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the actual filling percentage is below the low threshold."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Average filling speed",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Average percentage filled per day."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Average filling speed reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset average filling speed."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Forecast full date",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Next date at which the container should reach the high threshold."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Forecast empty date",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Next date at which the container should reach the low threshold."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Container out of location",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the container is not at the location where it should be."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Container out of position",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the container is not in correct upright position."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Container width",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "cm",
+                        "Description": "Width of the container."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Container installation type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": "cm",
+                        "Description": "Type of the container. Examples are underground, above ground."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Container volume max",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3",
+                        "Description": "The maximum volume available in the container for waste items."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Filling sensor position",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The position of the filling sensor inside the container."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Type of materials",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The type of the materials the container can be filled with. Examples are plastic, glass."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Filling operations counter",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total amount of filling operations performed."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Reset filling operations counter",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total amount of filling operations performed."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Cover open",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to true if the cover of the container is open and the filling level cannot be estimated. This is valid if the filling level sensor is installed under the cover of the bin."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "Temperature alarm",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to true if the sensor detects a fire using either a temperature sensor object.and/or a gas detection object."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "Water infiltration alarm",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to true if the sensor detects water infiltration or a high humidity level."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

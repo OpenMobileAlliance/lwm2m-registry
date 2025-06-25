@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "emmStateValue",
+            "Description1": "EMM context information",
+            "ObjectID": "3361",
+            "ObjectURN": "urn:oma:lwm2m:ext:3361",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "EmmState",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = EmmNull\n2 = EmmDeregistered\n3 = EmmRegisteredInitiated\n4 = EmmRegistered\n5 = EmmTrackingAreaUpdatingInitiated\n6 = EmmServiceRequestInitiated\n7 = EmmDeregisteredInitiated"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "emmSubstate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "-- If EMM state is EmmDeregistered(2), EMM sub-state\n    -- EmmDeregisteredNoImsi(1)\n    -- EmmDeregisteredPlmnSearch(2)\n    -- EmmDeregisteredAttachNeeded(3)\n    -- EmmDeregisteredNoCellAvailable(4)\n    -- EmmDeregisteredAttemptingToAttach(5)\n    -- EmmDeregisteredNormalService(6)\n    -- EmmDeregisteredLimitedService(7)\n    -- If EMM state is EmmRegistered(4), EMM sub-state\n    -- EmmRegisteredNormalService(1)\n    -- EmmRegisteredUpdateNeeded(2)\n    -- EmmRegisteredAttemptingToUpdate(3)\n    -- EmmRegisteredNoCellAvailable(4)\n    -- EmmRegisteredPlmnSearch(5)\n    -- EmmRegisteredLimitedService(6)\n    -- EmmRegisteredImsiDetachInitiated(7)\n    -- EmmRegisteredAttemptingToUpdateMm(8)\n    -- Others use invalid EMM Substate value (0)"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

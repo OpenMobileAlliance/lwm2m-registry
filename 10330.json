@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Network Info",
+            "Description1": "This LWM2M Object includes network status related information.",
+            "ObjectID": "10330",
+            "ObjectURN": "urn:oma:lwm2m:x:10330",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "IMEI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "15",
+                        "Units": null,
+                        "Description": "The IMEI of the RCU in the Robot."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "IMSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "15",
+                        "Units": null,
+                        "Description": "The IMSI of the RCU in the Robot."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Radio Connectivity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The radio connectivity status, contains the reference to the Connectivity Monitoring(4)."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "GPS Signal Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..4",
+                        "Units": null,
+                        "Description": "The GPS signal status: 1: Very Good, 2: Good, 3:Normal, 4: Bad."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "VBN Connection Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "VBN Connection Status: 1:Connected, 0:Disconnected."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "HARI Connection Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "HARI Connection Status: 1:Connected, 0:Disconnected."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "CCU Connection Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "CCU Connection Status: 1:Connected, 0:Disconnected.\n\t\t\tThe resource instance ID is the same with the Object Instance ID of corresponding CCU."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,231 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M v1.0 Test Object",
+            "Description1": "This object is for use in interoperability tests of the LwM2M v1.0 technical specification. It contains resources for each available datatype.",
+            "ObjectID": "3441",
+            "ObjectURN": "urn:oma:lwm2m:ext:3441",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Reset values",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset all resources of this object with their initial value."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Randomize values",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set random value to all resources. For multi-instance resources, the number of resource instances is also randomized.\nRandomization should avoid to generate too big payload. We advice to limit value to something like : \n - 20 characters for String,\n - 20 bytes for Opaque,\n - 10 instances for multi-instance resources."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Clear values",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Clear all values : \n - all multiple resource as empty resource\n - all number to 0\n - String to empty string\n - boolean to false,\n - opaque to empty byte array,\n - time to an 1st, 1970 in the UTC time zone\n - objlink to null link"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Exec With Arguments",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resources can be used to test \"Execute Operation\" with Arguments.\nSent Arguments can be read via \"Arguments List\"(4) resource.\nE.g. If you send an Exec /3441/0/3 with \"3='stringValue',4\" as arguments value,\n     then /3441/0/4/3 will be 'stringValue' and /3441/0/4/4 will be an empty string."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Arguments List",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of Arguments from last execute on \"Exec With Arguments\"(3) resource. This resource is not affected by the \"Randomize values\"(1) executable resource."
+                    },
+                    {
+                        "@ID": "110",
+                        "Name": "String Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be \"initial value\"."
+                    },
+                    {
+                        "@ID": "120",
+                        "Name": "Integer Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be \"1024\"."
+                    },
+                    {
+                        "@ID": "130",
+                        "Name": "Float Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be \"3.14159\"."
+                    },
+                    {
+                        "@ID": "140",
+                        "Name": "Boolean Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be \"true\"."
+                    },
+                    {
+                        "@ID": "150",
+                        "Name": "Opaque Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be the bytes sequence \"0123456789ABCDEF\" (Hexadecimal notation)."
+                    },
+                    {
+                        "@ID": "160",
+                        "Name": "Time Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be the time to an 1st, 2000 in the UTC time zone. (Timestamp value : 946684800)"
+                    },
+                    {
+                        "@ID": "170",
+                        "Name": "ObjLink Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be a link to instance 0 of Device Object 3 (3:0)."
+                    },
+                    {
+                        "@ID": "1110",
+                        "Name": "Multiple String Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"initial value\"."
+                    },
+                    {
+                        "@ID": "1120",
+                        "Name": "Multiple Integer Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"1024\"."
+                    },
+                    {
+                        "@ID": "1130",
+                        "Name": "Multiple Float Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"3.14159\"."
+                    },
+                    {
+                        "@ID": "1140",
+                        "Name": "Multiple Boolean Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"true\"."
+                    },
+                    {
+                        "@ID": "1150",
+                        "Name": "Multiple Opaque Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"0123456789ABCDEF\"(Hexadecimal notation of the bytes sequence)."
+                    },
+                    {
+                        "@ID": "1160",
+                        "Name": "Multiple Time Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value 1st, 2000 in the UTC time zone (Timestamp value : 946684800)."
+                    },
+                    {
+                        "@ID": "1170",
+                        "Name": "Multiple ObjLink Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Initial value must be 1 instance with ID 0 and value \"3:0\"."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Discharge",
+            "Description1": "This LWM2M object provides water discharge events for a water tank monitoring device.",
+            "ObjectID": "10498",
+            "ObjectURN": "urn:oma:lwm2m:x:10498",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Discharge Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "The water level to discharge to in metres for a water level discharge event"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Discharge Date Time Storm",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The date time for which a water level discharge event should occur"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Discharge Volume",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "l",
+                        "Description": "The water volume to discharge in litres for a volume discharge event"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Discharge Date Time Volume",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The date time for which a volume discharge event should occur"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

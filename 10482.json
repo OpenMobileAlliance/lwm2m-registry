@@ -1,0 +1,154 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "DYM IoT edge commands and data protocols",
+            "Description1": "This LWM2M object is used between IoT Platform and Edge IoT Device Manager for control command and data exchange",
+            "ObjectID": "10482",
+            "ObjectURN": "urn:oma:lwm2m:x:10482",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "MQTT Redis Information",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "MQTT and Redis connection and communication information"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Disable Edge",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Disable edge"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Enable Edge",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute Enable edge"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Delete Edge",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute Delete edge"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Plugin Management",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Plugin Management information"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Read data",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute read operation"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Write data",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute write operation"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Write Data Operation",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute data operations"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Read data Operation",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute data operation for custom sensor objects"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Observe data",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute Observe data operation for continues read"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Update Observe data",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute update Observe data operation with latest config"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Remove Observe data",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute Remove Observe data operation to stop continues read"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

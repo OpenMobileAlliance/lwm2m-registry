@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Addressable Text Display",
+            "Description1": "This IPSO object is used to send text to a text-only or text mode graphics display. Writing a string of text to the text resource causes it to be displayed at the selected X and Y locations on the display. If X or Y are set to a value greater than the size of the display, the position \"wraps around\" to the modulus of the setting and the display size. Likewise, if the text string overflows the display size, the text \"wraps around\" and displays on the next line down or, if the last line has been written, wraps around to the top of the display. Brightness and Contrast controls are provided to allow control of various display types including STN and DSTN type LCD character displays. Writing an empty payload to the Clear Display resource causes the display to be erased.",
+            "ObjectID": "3341",
+            "ObjectURN": "urn:oma:lwm2m:ext:3341",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "5527",
+                        "Name": "Text",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A string of text."
+                    },
+                    {
+                        "@ID": "5528",
+                        "Name": "X Coordinate",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "X Coordinate."
+                    },
+                    {
+                        "@ID": "5529",
+                        "Name": "Y Coordinate",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Y Coordinate."
+                    },
+                    {
+                        "@ID": "5545",
+                        "Name": "Max X Coordinate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The highest X coordinate the display supports before wrapping to the next line."
+                    },
+                    {
+                        "@ID": "5546",
+                        "Name": "Max Y Coordinate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The highest Y coordinate the display supports before wrapping to the next line."
+                    },
+                    {
+                        "@ID": "5530",
+                        "Name": "Clear Display",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Command to clear the display."
+                    },
+                    {
+                        "@ID": "5548",
+                        "Name": "Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Used to represent a level control such as audio volume."
+                    },
+                    {
+                        "@ID": "5531",
+                        "Name": "Contrast",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Proportional control, integer value between 0 and 100 as a percentage."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

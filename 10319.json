@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "RCU Control",
+            "Description1": "This LWM2M Object includes all operations on RCUs.",
+            "ObjectID": "10319",
+            "ObjectURN": "urn:oma:lwm2m:x:10319",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "RCU Diagnostics Mode",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the Diagnostics Mode is switched on or not, \n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is On and 0 is Off."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "RCU Log Recording",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the Log Recording is switched on or not,\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is On and 0 is Off."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "RCU Shutdown",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Shut down the RCU."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "RCU Restart",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Restart the RCU."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "RCU Deactivate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Deactivate the RCU."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "RCU Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the RCU to factory settings."
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "RCU Diagnostics Mode Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Switch on/off Diagnostics Mode: Parameter: 1:On, 0:Off"
+                    },
+                    {
+                        "@ID": "105",
+                        "Name": "RCU Log Recording Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Switch on/off the Log Recording, Parameter: 1:On, 0:Off"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

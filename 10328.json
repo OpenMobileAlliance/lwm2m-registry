@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "SCA PM",
+            "Description1": "This LWM2M Object includes all PM items belongs to a specific SCA.",
+            "ObjectID": "10328",
+            "ObjectURN": "urn:oma:lwm2m:x:10328",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "SCA Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The name of the SCA."
+                    },
+                    {
+                        "@ID": "605",
+                        "Name": "SCA Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "The current of the SCA."
+                    },
+                    {
+                        "@ID": "606",
+                        "Name": "SCA Temperate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "SCA Temperature."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

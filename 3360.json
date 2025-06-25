@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "esmContextInfo",
+            "Description1": "ESM context information",
+            "ObjectID": "3360",
+            "ObjectURN": "urn:oma:lwm2m:ext:3360",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "contextType",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0=default\n1=dedicated"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "bearerState",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Bearer State\n0 = null\n1 = activeWaiting\n2 = active\n3 = modifying"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "radioBearerId",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Radio bearer ID corresponding to EPS Bearer ID of the context"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "qci",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "QoS Class Identifier (TS 23.203)"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

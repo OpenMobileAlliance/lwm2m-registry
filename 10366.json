@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Fan",
+            "Description1": "This LWM2M Object includes Fan information.",
+            "ObjectID": "10366",
+            "ObjectURN": "urn:oma:lwm2m:x:10366",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "1",
+                    "Name": "Fan Name",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "String",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "The display name of the Fan."
+                }
+            },
+            "Description2": null
+        }
+    }
+}

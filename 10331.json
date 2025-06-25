@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Robot Service Info",
+            "Description1": "This LWM2M Object includes robot service related information.",
+            "ObjectID": "10331",
+            "ObjectURN": "urn:oma:lwm2m:x:10331",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Current status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..127",
+                        "Units": null,
+                        "Description": "Current status, for example: working, pasued, dormant, holding, charging and so on."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Services Providing",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..127",
+                        "Units": null,
+                        "Description": "Providing services: for example: patrolling, advertisement playing, patrolling and so on,\n\t\t\tone robot can do several works at the same time, for example, patrolling with advertisement playing."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Advertising Contents",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Advertising Contents it is playing."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Current Language",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..127",
+                        "Units": null,
+                        "Description": "Current language used by the robot."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Volume",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "The Volume of the speaker."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Moving Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "0:Moving, 1:Stopped, 2:Suspended."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Moving Speed",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m/h",
+                        "Description": "The moving speed of the robot."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Location",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the location object(6)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Map List",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Assigned Map List and the Map currently within."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Planned Route list",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Planned Route list, routes are separated by comma."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Current Route",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current Route."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Route to-do List",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Routes to be done, routes are separated by comma."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Synchronous Whistle",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The status of the Synchronous Whistle, 1:On, 0:Off."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Current Actions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current Body Actions/Actions."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "ASR Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "ASR Type, 0:Cloud, 1:Local, 2:Offline."
+                    },
+                    {
+                        "@ID": "50",
+                        "Name": "TTS Vendor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The TTS Vendor."
+                    },
+                    {
+                        "@ID": "51",
+                        "Name": "TTS Speaker",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Which speaker of the vender is selected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Calendar Rule",
+            "Description1": "Allows to specify when to execute a particular function.",
+            "ObjectID": "3453",
+            "ObjectURN": "urn:oma:lwm2m:ext:3453",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Calendar Name",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Mnemonic name of the calendar",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Calendar Type",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "0 - Day time Gregorian calendar used to reference periods of 24h (00-24h) during the year\n1 - Night time calendar, a variation of the Gregorian calendar proposed by uCiFi to reference \"night\" periods of 24h during a year.\nMeasured from 12:00 of one Gregorian calendar day to 12:00 of the next day.\nIf omitted, 0 shall be assumed",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Start Date",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Start date formatted as yyyy-mm-dd.\nTo define the same start date every year: --mm-dd (e.g. --01-01 for Jan 1st every year).\nStart date is optional.\nIf no start date, no end date should be mentioned, and the scheduler should apply every day of every year.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "End Date",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "End date formatted as yyyy-mm-dd.\nTo define the same end date every year: --mm-dd (e.g. --03-31 for March 31st every year).\nEnd date is optional.\nIf no start date is specified, no end date should be mentioned as well, and the scheduler should apply every day of every year.\nIf the start date is specified but the end date is not, it shall be assumed to be equal to the start date",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Date Rule",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Date string formatted as dom month dow, inspired from the CRON format without minutes and hours, that indicates the occurrence of the rule:\ndom = day of month (1-31)\nmonth = 1-12\ndow = day of week (0-7, where 0,7=Sunday)\n* * * means every day between \"Start date\" and \"End date\"\n1-10 * * means from the 1st to the 10th day of the month each month between \"Start date\" and \"End date\"\n* * 6,7 means every Saturday and Sunday, between \"Start date\" and \"End date\"\nThe date rule is optional.\nIf not present, it means every day between \"Start date\" and \"End date\".\nIf present, it would be applied in AND to every instance of Start date and End date",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Calendar Active",
+                        "Type": "Boolean",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "True if the calendar rule is currently active",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

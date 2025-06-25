@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M Gateway",
+            "Description1": "This object is used by a LwM2M Gateway to maintain the IoT Devices connected to the LwM2M Gateway.",
+            "ObjectID": "25",
+            "ObjectURN": "urn:oma:lwm2m:oma:25:2.0",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Device ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource identifies the IoT Device connected to the LwM2M Gateway."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Prefix",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource defines what prefix MUST be used for access to LwM2M Objects of this IoT Device."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "IoT Device Objects",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource contains the Objects and Object Instances exposed by the LwM2M Gateway on behalf of the IoT Device. It uses the same CoreLnk format as Registration Interface."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

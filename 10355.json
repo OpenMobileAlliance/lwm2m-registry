@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "General Info",
+            "Description1": "This LWM2M Object contains the referrence to all general info objects of the robot.",
+            "ObjectID": "10355",
+            "ObjectURN": "urn:oma:lwm2m:x:10355",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "100",
+                        "Name": "Robot General Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Robot General Info."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "RCU General Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the RCU General info of the Robot."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "CCU General Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to general info of CCUs of the Robot."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "ECU General Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to general info of ECUs of the Robot."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "SCA",
+            "Description1": "This LWM2M Object includes SCA information.",
+            "ObjectID": "10337",
+            "ObjectURN": "urn:oma:lwm2m:x:10337",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "SCA Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable SCA name"
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "SCA Motion Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "0:Forward, 1:Backward, 2:Stop."
+                    },
+                    {
+                        "@ID": "200",
+                        "Name": "SCA Motion Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Parameter:0:Forward, 1:Backward, 2:Stop."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

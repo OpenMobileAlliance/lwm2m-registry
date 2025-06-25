@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "ECID-Signal Measurement Information",
+            "Description1": "This LWM2M Object provides ECID signal measurements of a device.",
+            "ObjectID": "10256",
+            "ObjectURN": "urn:oma:lwm2m:x:10256",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "physCellId",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies the physical cell identity of the measured cell."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "ECGI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies cell global ID of the measured cell. The target device shall provide this field if it was able to determine the ECGI of the measured cell at the time of measurement."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "arfcnEUTRA",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies the ARFCN of the measured E-UTRA carrier frequency."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "rsrp-Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies the reference signal received power (RSRP) measurement."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "rsrq-Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies the reference signal received quality (RSRQ) measurement."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "ue-RxTxTimeDiff",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This field specifies the UE Rx-Tx time difference measurement."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

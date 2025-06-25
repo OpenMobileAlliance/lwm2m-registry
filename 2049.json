@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "ActiveCmdhPolicy",
+            "Description1": "This Object provides a link to the currently active set of CMDH policies",
+            "ObjectID": "2049",
+            "ObjectURN": "urn:oma:lwm2m:ext:2049",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "0",
+                    "Name": "ActiveLink",
+                    "Operations": "RW",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Objlnk",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "Contains the reference to the CMDH policies (CmdhPolicy Object Instance) currently active for the associated CSE."
+                }
+            },
+            "Description2": null
+        }
+    }
+}

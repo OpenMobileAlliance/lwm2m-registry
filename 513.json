@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "AI Model Configuration",
+            "Description1": "This object can be used to provision and configure AI Model capabilities. A new AI model is provisioned using the Model, Model URI, and/or Model Description resources. The Input and Input labels resources can be used to configure where the model reads the input data and the Output and Output labels resources are used to configure where the model writes the output data. When output of one model is used as input of another model, the models are chained together. Input and Output transform resources can be used to transform data before reading or writing.",
+            "ObjectID": "513",
+            "ObjectURN": "urn:oma:lwm2m:oma:513",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Model",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The binary representation of the executable model. When executable model is written here, that is used for execution when the \"Enabled\" resource is set to true."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Version",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The current version of the model being referred."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Description URL",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A URL pointing to information describing the operation executed by the function and possibly metadata related to the input and/or output."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Model URI",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "URL where to retrieve the model to execute or URI to identify the model to execute (and retrieved with alternative methods). When this URI is written, the device attempts to retrieve the model using the URI and stores it in the Model resource."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Model Integrity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cryptographic checksum of the model when one is retrieved from a URI to ensure correctness and integrity of the downloaded model."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Model Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When a model description (e.g., ONEX file) is written to this resource, the device either 1) attempts to convert that into executable model 2) asks third party server to do the conversion or 3) executes the model in its native form. If conversion is done, the model is stored in the \"Model\" resource."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Inputs",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A set of CoRE links / URLs that are pointing to resources at the device (e.g., \"/3303/1/5700\" for the current value of the temperature sensor instance #1) or external resources (e.g., \"coaps://foo.example/ac-setpoint\" for a setpoint of a home automation system). The output resources can be links to other AI Model config objects' input resources to enable chaining of models."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Input transforms",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Description of the transformation operations for transforming the data from a local resource / external source to format usable with the given model. The transformations functions used are matching the inputs indexes unless everything is processed using one function that manage all the inputs. In case of using the matching index transformations, the inputs without transformations are marked with empty string."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Input labels",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Labels to describe which input source is connected to which input of the AI model. Label in the resource instance 0 describes the Inputs CoRE link instance 0, label in instance 1 the Inputs CoRE link instance 1, etc."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Outputs",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A set of CoRE links / URLs that are pointing to resources at the device (e.g., \"/3308/1/5900\" for the setpoint actuator set point value of the instance #1) or external resources (e.g., \"coap://foo.example/ac-setpoint\" setpoint of a home automation system). The output resources can be links to other AI Model config objects' input resources to enable chaining of models."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Output transforms",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Transforming output from a model specific format to the resource specific format; similar to input transforms. The transformations functions used are matching the outputs indexes unless everything is processed using one function that manage all the outputs. In case of using the matching index transformations, the output without transformations are marked with NULL"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Output labels",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Labels to describe which output is connected to which output of the AI model. Label in the resource instance 0 describes the Inputs CoRE link instance 0, label in instance 1 the Inputs CoRE link instance 1, etc."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Enabled",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If true, the function is available to be used. If false, the model is currently inactive. Default value is true."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Condition expression",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Expression for triggering the execution of the model. If no expression is given, the model is executed every time any input resource value changes. When condition expression is given, the values of the input resources are evaluated using the condition expression. If the expression results in a true value, the model is executed. For a false value the model is not executed."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

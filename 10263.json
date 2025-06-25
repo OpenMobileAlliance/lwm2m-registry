@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Event Data Delivery",
+            "Description1": "The Event Data Delivery object provides a simple means for managing the delivery of event data from multiple Event Data Object instances.",
+            "ObjectID": "10263",
+            "ObjectURN": "urn:oma:lwm2m:x:10263",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Name resource provides a way to identify different Event Data Delivery instances. Name is a readable and writable attribute. Name is defined as an arbitrary length text string"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Event Data Links",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Event Data Links resource is a set of object links that point to each of the Event Data Object Instances that are managed by this Event Data Delivery Object Instance. An Object Link is two 16-bit integer values representing the Object ID and the Object Instance ID. This resource can have multiple instances allowing this Event Data Delivery object to manage many Event Data instances."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Latest Eventlog",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Latest Eventlog resource is a multiple instance resource representing the Latest Eventlog resource from each of the Event Data objects defined in the Event Data Links Resource. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Latest Delivered Event Time for each of the Event Data objects defined in the Event Data Links Resource must be updated. When no new event data exists for any of the linked Event Data instances an empty Opaque value should be provided.\n\nIf this resource has an LwM2M server observation and one of the Event Data Instance is configured as Realtime and has been triggered, the Event Data Delivery object must send all undelivered events for all linked Event Data objects."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Schedule",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Schedule resource provides link to a schedule object. This Schedule object is used to provide fine grain control the Notification schedule delivery when the default LwM2M NOTIFICATION attributes do not provide sufficient control. If no schedule is required, an Object Link referencing no Object Instance will contain the concatenation of 2 MAX-ID values (null link)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

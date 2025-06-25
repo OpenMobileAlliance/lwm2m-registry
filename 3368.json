@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "macTimerStatusEvent",
+            "Description1": "MAC timer expiry information",
+            "ObjectID": "3368",
+            "ObjectURN": "urn:oma:lwm2m:ext:3368",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "0",
+                    "Name": "macTimerName",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Integer",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "0 = TA\n1 = RA\n2 = Contention\n3 = RACH_Back_Off"
+                }
+            },
+            "Description2": null
+        }
+    }
+}

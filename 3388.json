@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Device",
+            "Description1": "The 'oA Device' represents the OpenAIS specific parameters of a Device that are necessary in addition to the LWM2M Device.",
+            "ObjectID": "3388",
+            "ObjectURN": "urn:oma:lwm2m:ext:3388",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "907",
+                        "Name": "Error Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Communication_Error, 1: Power_Supply_Error, 2: Firmware_Error, 3: Over_Temperature, 4: Vendor_Specific_Error_1, 5: Vendor_Specific_Error_2, 6: Vendor_Specific_Error_3, 7: Vendor_Specific_Error_4, 8: Vendor_Specific_Error_5, 9: Vendor_Specific_Error_6, 10: Vendor_Specific_Error_7, 11: Vendor_Specific_Error_8, 12: Vendor_Specific_Error_9, 13: Vendor_Specific_Error_10, 14: Vendor_Specific_Error_11, 15: Vendor_Specific_Error_12"
+                    },
+                    {
+                        "@ID": "500",
+                        "Name": "OEM ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..64 bytes",
+                        "Units": null,
+                        "Description": "OEM ID: Identifies the OEM product (using its GTIN) that has this (electronic) device built in"
+                    },
+                    {
+                        "@ID": "501",
+                        "Name": "OEM String",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..64 bytes",
+                        "Units": null,
+                        "Description": "Human readable OEM ID, e.g. the OEM company and product name that has this (electronic) device built in"
+                    },
+                    {
+                        "@ID": "929",
+                        "Name": "BMS ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "ID to be used in BMS: identifies the devices role in the (BMS) system"
+                    },
+                    {
+                        "@ID": "503",
+                        "Name": "CPU Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-128..127",
+                        "Units": "C",
+                        "Description": "Current temperature of the CPU"
+                    },
+                    {
+                        "@ID": "504",
+                        "Name": "Executing Objects",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to Physical Object Instances that are part of this device in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)"
+                    },
+                    {
+                        "@ID": "910",
+                        "Name": "Total Energy Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..18446744073709551615",
+                        "Units": "Ws",
+                        "Description": "The total energy usage of the device (accumulated value)"
+                    },
+                    {
+                        "@ID": "911",
+                        "Name": "Actual Power Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..4294967295",
+                        "Units": "W",
+                        "Description": "The actual power usage of the device. Scaling is 0.1W / unit"
+                    },
+                    {
+                        "@ID": "912",
+                        "Name": "Accuracy Class",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..64 bytes",
+                        "Units": null,
+                        "Description": "The accuracy class of the energy sensor on the device (using either % accuracy or a letter that defines the accuracy class)"
+                    },
+                    {
+                        "@ID": "908",
+                        "Name": "Mounting Location",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "1..64 bytes",
+                        "Units": null,
+                        "Description": "Describes the location of the device within the building. The content of the string is site specific."
+                    },
+                    {
+                        "@ID": "505",
+                        "Name": "System Failure Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "ms",
+                        "Description": "When the Object is not able to communicate with a control function in the network, in this case for a period of 10s, the connection is considered lost and the light point automatically sets to the value indicated in 'System Failure Intensity'."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

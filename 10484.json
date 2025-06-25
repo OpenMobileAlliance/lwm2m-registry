@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Thread Commissioning (joiner add)",
+            "Description1": "This LwM2M Object enables commissioning (commissioner joiner add) of Thread devices on the Network. The target device must be have the \"commissioner\" and \"joiner router\" roles. Ex: \"Border Router\"",
+            "ObjectID": "10484",
+            "ObjectURN": "urn:oma:lwm2m:x:10484",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Joiner eui64 / discerner",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Extended Unique Identifier (EUI64) or discerner value that can be accepted by the thread commissioner. Use '*' to match any Joiner."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Joiner PSK",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Pre Shared Key (PSK/PSKd) Identity shared between thread device and thread commisioner."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Start the commisioning sequence with a default timeout. Using ot-br-posix, this is equivalent to issuing the \"commissioner joiner add [Thread joiner eui64] [Pre Shared Key Identity]\" command. Optionnal commissioning timeout in seconds can be specified using argument 0. Ex 0='60'"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Cancel",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stops the commissionning process immediatly."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "Provides the commisioner state as Enumerated type:\n\t\t\t\t0: Disabled\n\t\t\t\t1: Active"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Pending joiners IDs",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reports the commissioner currently accepted (eui64 / discerner) IDs."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

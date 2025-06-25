@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "radioLinkFailureEvent",
+            "Description1": "Radio Link Failure Event",
+            "ObjectID": "3356",
+            "ObjectURN": "urn:oma:lwm2m:ext:3356",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "timeRLF",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Modem time when RLF is occurred"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "rlfCause",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Radio Link Failure cause\n        0 = configurationFailue\n        1 = handoverFailure\n        2 = rachFailure,\n        3 = maxRetransmission,\n        4 = ipCheckFailue\n        5 = sibReadingFailure\n        6 = mibChange\n        7 = other"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

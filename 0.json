@@ -1,0 +1,363 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LWM2M Security",
+            "Description1": "This LwM2M Object provides the keying material of a LwM2M Client appropriate to access a specified LwM2M Server. One Object Instance SHOULD address a LwM2M Bootstrap-Server.\nThese LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.",
+            "ObjectID": "0",
+            "ObjectURN": "urn:oma:lwm2m:oma:0:1.2",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.2",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "LWM2M  Server URI",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Uniquely identifies the LwM2M Server or LwM2M Bootstrap-Server. The format of the CoAP URI is defined in Section 6 of RFC 7252."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Bootstrap-Server",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Determines if the current instance concerns a LwM2M Bootstrap-Server (true) or a standard LwM2M Server (false)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Security Mode",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4",
+                        "Units": null,
+                        "Description": "Determines which security mode is used\n0: Pre-Shared Key mode\n1: Raw Public Key mode\n2: Certificate mode\n3: NoSec mode\n4: Certificate mode with EST"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Public Key or Identity",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the LwM2M Client's certificate, public key (RPK mode) or PSK Identity (PSK mode)."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Server Public Key",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the LwM2M Server's, respectively LwM2M Bootstrap-Server's, certificate, public key (RPK mode) or trust anchor. The Certificate Mode Resource determines the content of this resource."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Secret Key",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stores the secret key (PSK mode) or private key (RPK or certificate mode)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "SMS Security Mode",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Determines which SMS security mode is used: \n0: Reserved for future use\n1: DTLS mode (Device terminated) PSK mode assumed\n2: Secure Packet Structure mode (Smartcard terminated)\n3: NoSec mode\n4: Reserved mode (DTLS mode with multiplexing Security Association support)\n5-203 : Reserved for future use\n204-255: Proprietary modes"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "SMS Binding Key Parameters",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "6",
+                        "Units": null,
+                        "Description": "Stores the KIc, KID, SPI and TAR."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "SMS Binding Secret Key(s)",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "16,32,48",
+                        "Units": null,
+                        "Description": "Stores the values of the key(s) for the SMS binding."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "LwM2M Server SMS Number",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "MSISDN used by the LwM2M Client to send messages to the LwM2M Server via the SMS binding."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Short Server ID",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..65534",
+                        "Units": null,
+                        "Description": "This identifier uniquely identifies each LwM2M Server configured for the LwM2M Client.\nThis Resource MUST be set when the Bootstrap-Server Resource has a value of 'false'. \nThe values ID:0 and ID:65535 values MUST NOT be used for identifying the LwM2M Server."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Client Hold Off Time",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The number of seconds to wait before initiating a Client Initiated Bootstrap once the LwM2M Client has determined it should initiate this bootstrap mode.\nIn case client initiated bootstrap is supported by the LwM2M Client, this resource MUST be supported. This information is relevant for use with a Bootstrap-Server only."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Bootstrap-Server Account Timeout",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The LwM2M Client MUST purge the LwM2M Bootstrap-Server Account after the timeout value given by this resource. The lowest timeout value is 1.\nIf the value is set to 0, or if this resource is not instantiated, the Bootstrap-Server Account lifetime is infinite."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Matching Type",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "The Matching Type Resource specifies how the certificate or raw public key in in the Server Public Key is presented. Four values are currently defined:\n                0: Exact match. This is the default value and also corresponds to the functionality of LwM2M v1.0. Hence, if this resource is not present then the content of the Server Public Key Resource corresponds to this value.\n                1: SHA-256 hash [RFC6234]\n                2: SHA-384 hash [RFC6234]\n                3: SHA-512 hash [RFC6234]"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "SNI",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource holds the value of the Server Name Indication (SNI) value to be used during the TLS handshake. When this resource is present then the LwM2M Server URI acts as the address of the service while the SNI value is used for matching a presented certificate, or PSK identity."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Certificate Usage",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "The Certificate Usage Resource specifies the semantic of the certificate or \n                raw public key stored in the Server Public Key Resource, which is used to match \n                the certificate presented in the TLS/DTLS handshake. The currently defined values are \n                0 for \"CA constraint\", 1 for \"service certificate constraint\", 2 for \"trust anchor \n                assertion\", and 3 for \"domain-issued certificate\". When this resource is absent, \n                value (3) for domain issued certificate mode is assumed. More details about the \n                semantic of each value can be found in the security consideration section of the \n                LwM2M specification."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "DTLS/TLS Ciphersuite",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When this resource is present it instructs the TLS/DTLS client to propose the indicated ciphersuite(s) in the ClientHello of the handshake. A ciphersuite is indicated as a 32-bit integer value. The IANA TLS ciphersuite registry is maintained at https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml. As an example, the TLS_PSK_WITH_AES_128_CCM_8 ciphersuite is represented with the following string \"0xC0,0xA8\". To form an integer value the two values are concatenated. In this example, the value is 0xc0a8 or 49320."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "OSCORE Security Mode",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If this resource is defined, it provides a link to the OSCORE Object Instance and OSCORE MUST be used by the LwM2M Client with the linked OSCORE Object Instance."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Groups To Use by Client",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what groups the LwM2M Client should use with a LwM2M Server/LwM2M Bootstrap-Server (ordered from most preferred to least preferred). Resource instance 0 indicates the most preferred group. The values are taken from Section 4.2.7 of RFC 8446. An example is secp256r1 (0x0017)."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Signature Algorithms Supported by Server",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what signature algorithms the LwM2M Server/LwM2M Bootstrap-Server supports. The values are taken from Section 4.2.3 of RFC 8446. An example is ecdsa_secp256r1_sha256(0x0403)."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Signature Algorithms To Use by Client",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what signature algorithms the LwM2M Client should use with a LwM2M Server/LwM2M Bootstrap-Server (ordered from most preferred to least preferred). Resource instance 0 indicates the most preferred group. The values are taken from Section 4.2.3 of RFC 8446. An example is ecdsa_secp256r1_sha256(0x0403)."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Signature Algorithm Certs Supported by Server",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what certificate-specific signature algorithms the the LwM2M Server/LwM2M Bootstrap-Server supports. The values are taken from Section 4.2.3 of RFC 8446. An example is ecdsa_secp256r1_sha256(0x0403)."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "TLS 1.3 Features To Use by Client",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates which features the LwM2M Client should use with the respective LwM2M Server/LwM2M Bootstrap-Server. The bitmask values listed below are defined. A bit value of '0' means the feature should not be used. bit(0) - PSK Plain, bit(1) - 0-RTT, bit(2) - PSK with PFS, bit(3) - Certificate-based Authentication. Bit(4) to bit(31) are reserved."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "TLS Extensions Supported by Server",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what extensions the LwM2M Server/LwM2M Bootstrap-Server supports in form of a bitmap.  The following values are defined: bit(0) - Server Name Indication (RFC 6066), bit (1) - Max Fragment Length (RFC 6066), bit (2) - Status Request (RFC 6066), bit (3) - Heartbeat (RFC 6520), bit (4) - Application Layer Protocol Negotiation (RFC 7301), bit (5) - Signed Certificate Timestamp (RFC 6962), bit (6) - Certificate Compression (draft-ietf-tls-certificate-compression), bit (7) - Record Size Limit (RFC 8449), bit (8) - Ticket Pinning (draft-ietf-tls-pinning-ticket), bit (9) - Certificate Authorities (RFC 8446), bit (10) - OID Filters (RFC 8446), bit (11) - Post Handshake Auth (RFC 8446), bit (12) - Connection ID (draft-ietf-tls-dtls-connection-id/draft-ietf-tls-dtls13). Bit(13) to bit(31) are reserved."
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "TLS Extensions To Use by Client",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "If this resource is defined, it indicates what extensions the LwM2M Client should use with the LwM2M Server/LwM2M Bootstrap-Server in form of a bitmap. The following values are defined: bit(0) - Server Name Indication (RFC 6066), bit (1) - Max Fragment Length (RFC 6066), bit (2) - Status Request (RFC 6066), bit (3) - Heartbeat (RFC 6520), bit (4) - Application Layer Protocol Negotiation (RFC 7301), bit (5) - Signed Certificate Timestamp (RFC 6962), bit (6) - Certificate Compression (draft-ietf-tls-certificate-compression), bit (7) - Record Size Limit (RFC 8449), bit (8) - Ticket Pinning (draft-ietf-tls-pinning-ticket), bit (9) - Certificate Authorities (RFC 8446), bit (10) - OID Filters (RFC 8446), bit (11) - Post Handshake Auth (RFC 8446), bit (12) - Connection ID (draft-ietf-tls-dtls-connection-id/draft-ietf-tls-dtls13). Bit(13) to bit(31) are reserved."
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "Secondary LwM2M Server URI",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "If this resource is present then the LwM2M Server URI in the Security Object, Resource ID 0, is augmented with information about further LwM2M Server URIs that can be used with the same security information found in the LwM2M Security Object. This is useful when a LwM2M Server is reachable via two different transport bindings (i.e. URIs). For example when the same server is reachable with two different URIs, such as a \"coaps\" and a \"coaps+tcp\" URI scheme."
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "MQTT Server",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If this resource is defined, it provides a link to a MQTT Server Object Instance, which offers additional configuration information for use with this MQTT server. This Resource is used only when the URI scheme in the LwM2M Server URI Resource indicates the use of MQTT."
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "LwM2M COSE Security",
+                        "Operations": null,
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If this resource is defined, it provides a links to LwM2M COSE Object Instances, which contain security-relevant configuration information for use with COSE."
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "RDS Destination Port",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "This resource provides the default RDS Destination Port Number (as defined in 3GPP TS 24.250) to use for contacting the LwM2M or Bootstrap Server when communicating through the SCEF across the Non-IP binding."
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "RDS Source Port",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "This resource provides the default RDS Source Port Number (as defined in 3GPP TS 24.250) to use for contacting the LwM2M or Bootstrap Server when communicating through the SCEF across the Non-IP binding."
+                    },
+                    {
+                        "@ID": "30",
+                        "Name": "RDS Application ID",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource provides the Application ID (as defined in 3GPP TS 24.250) to use for querying the SCEF for the source and destination port numbers for contacting the LwM2M or Bootstrap Server when communicating through the SCEF across the Non-IP binding."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

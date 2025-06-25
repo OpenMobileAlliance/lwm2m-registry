@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M Access Control",
+            "Description1": "Access Control Object is used to check whether the LwM2M Server has access right for performing an operation.",
+            "ObjectID": "2",
+            "ObjectURN": "urn:oma:lwm2m:oma:2:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Object ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..65534",
+                        "Units": null,
+                        "Description": "Resources 0 and 1 point to the Object Instance for which the Instances of the ACL Resource of that Access Control Object Instance are applicable."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Object Instance ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "See above"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "ACL",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..31",
+                        "Units": null,
+                        "Description": "The Resource Instance ID MUST be the Short Server ID of a certain LwM2M Server for which associated access rights are contained in the Resource Instance value.\nThe Resource Instance ID 0 is a specific ID, determining the ACL Instance which contains the default access rights.\nEach bit set in the Resource Instance value, grants an access right to the LwM2M Server to the corresponding operation.\nThe bit order is specified as below.\n1st LSB: R(Read, Observe, Write-Attributes)\n2nd LSB: W(Write)\n3rd LSB: E(Execute)\n4th LSB: D(Delete)\n5th LSB: C(Create)\nOther bits are reserved for future use."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Access Control Owner",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Short Server ID of a certain LwM2M Server; only such an LwM2M Server can manage the Resources of this Object Instance. \nThe specific value MAX_ID=65535 means this Access Control Object Instance is created and modified during a Bootstrap phase only."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

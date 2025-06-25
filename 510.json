@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Vendor Specific Measurement Quality Reason",
+            "Description1": "This object contains description for vendor specific measurement quality reason codes provided in a Measurement Metadata (509) object. Instances of this object define the mapping of vendor specific reason codes to reason description in the scope of an individual device.",
+            "ObjectID": "510",
+            "ObjectURN": "urn:oma:lwm2m:oma:510",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Vendor Specific Quality Reason Code",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "128..1023",
+                        "Units": null,
+                        "Description": "Measurement quality degradation reason reported by a smart sensor. Reason codes 0-127 are generic reason codes and they are defined in Measurement Metadata object description.\n128-511: VENDOR_SPECIFIC_BLOCK Vendor specific block. This block contains vendor specific quality reason codes.\n512-1023: RESERVED_VENDOR_BLOCK Reserved vendor specific block. This block is reserved for future use."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Quality Reason Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "1..128",
+                        "Units": null,
+                        "Description": "The name of the quality reason. It is used as a key to find a localized reason description. The name should be concise and unique in the localization scope."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Quality Reason Description",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Description of the quality reason. This text can be used if a localized version is not found."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

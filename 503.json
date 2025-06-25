@@ -1,0 +1,440 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Fire Alarm",
+            "Description1": "This is an alarm that should be raised if the sensor(s) detect fire, based on the values reported from Temperature, Humidity, Smoke (CO2).",
+            "ObjectID": "503",
+            "ObjectURN": "urn:oma:lwm2m:oma:503",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Temperature Sensor Location Tag",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Verbose identification of the location of the Temperature sensor location"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Temperature Unit",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Temperature Units: 0 = Celsius, 1 = Fahrenheit, 2 = Kelvin. All temperature values are represented in this unit."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Ambient Temperature",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Temperature for the area."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Temperature Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Last or Current Measured Temperature Value from the Sensor. The value 65534 indicates that the Sensor data is not available."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Minimum Measured Temperature Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The minimum Temperature value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Maximum Measured Temperature Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum Temperature value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Min Temperature Range Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The minimum temperature value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Max Temperature Range Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum temperature value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Lower Temperature Accuracy",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the lower end of the accuracy range for the temperature sensor."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Upper Temperature Accuracy",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the upper end of the accuracy range for the temperature sensor."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Temperature Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the maximum threshold for the temperature."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Temperature Sensor Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Temperature Sensor Error: 0 = false (Working correctly), 1 = true (Faulty)."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Reset Temperature",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the \"Temperature\" related parameters to default."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Temperature Alarm Loudness",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "Indicates the loudness of temperature alarm."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Humidity Sensor Location Tag",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Verbose identification of the location of the Humidity sensor."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Ambient Relative Humidity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "%RH",
+                        "Description": "Relative humidity for the area."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Humidity Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "/100",
+                        "Description": "Last or Current Measured Humidity Value from the Sensor. The value 0 indicates that the Sensor data is not available."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Minimum Measured Humidity Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "/100",
+                        "Description": "The minimum Humidity value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Maximum Measured Humidity Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "/100",
+                        "Description": "The maximum Humidity value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Humidity Accuracy",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "/100",
+                        "Description": "Indicate the accuracy for the Humidity Sensor."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Humidity Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..100.0",
+                        "Units": "/100",
+                        "Description": "Indicate the threshold for the Humidity."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Humidity Sensor Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Humidity Sensor Error: 0 = false (Working correctly), 1 = true (Faulty)"
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "Reset Humidity",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the \"Humidity\" related parameters to default."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "Humidity Alarm Loudness",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "Indicates the loudness of the Humidity alarm."
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "Smoke Sensor Location Tag",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Verbose identification of the location of the Smoke sensor."
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "CO2 Alarm State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = False (CO2 alarm threshold not exceeded), 1 = True (CO2 alarm threshold exceeded)."
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "Ambient CO2 Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "ppm",
+                        "Description": "CO2 value for the area."
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "CO2 Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "ppm",
+                        "Description": "Last or Current Measured CO2 Value from the sensor. The value 0 indicates that the Sensor data is not available."
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "Minimum Measured CO2 Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "ppm",
+                        "Description": "The minimum CO2 value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "Maximum Measured CO2 Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "ppm",
+                        "Description": "The maximum CO2 value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "30",
+                        "Name": "CO2 Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "ppm",
+                        "Description": "Indicate the alarm threshold for the CO2."
+                    },
+                    {
+                        "@ID": "31",
+                        "Name": "Smoke Sensor Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Smoke Sensor Error: 0 = false (Working correctly), 1 = true (Faulty)"
+                    },
+                    {
+                        "@ID": "32",
+                        "Name": "Reset Smoke Detection",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the \"Smoke\" related parameters to default."
+                    },
+                    {
+                        "@ID": "33",
+                        "Name": "Smoke Alarm Loudness",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "Indicates the loudness of smoke alarm"
+                    },
+                    {
+                        "@ID": "6044",
+                        "Name": "Battery Percentage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.00..100.00",
+                        "Units": null,
+                        "Description": "Current remaining battery level."
+                    },
+                    {
+                        "@ID": "5514",
+                        "Name": "Latitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984)."
+                    },
+                    {
+                        "@ID": "5515",
+                        "Name": "Longitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984)."
+                    },
+                    {
+                        "@ID": "6039",
+                        "Name": "Altitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Altitude above sea level in meters."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

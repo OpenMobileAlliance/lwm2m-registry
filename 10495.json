@@ -1,0 +1,84 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Periodic Sensor Upload",
+            "Description1": "The autosen Periodic Sensor Upload object can be used to upload sampled sensor data at periodic intervals",
+            "ObjectID": "10495",
+            "ObjectURN": "urn:oma:lwm2m:x:10495:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Sensor Sampler Path",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Link to an object instance of the Periodic Sensor Sampler Object",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Upload Start Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..86399",
+                        "Description": "Specifies the number of seconds after midnight UTC from which the upload should be started",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Upload Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..86399",
+                        "Description": "Specifies the Interval at which the upload is to be repeated from the Upload Start Time.",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Upload Count",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "RangeEnumeration": "1..86399",
+                        "Description": "Specifies the number of intervals to be performed in the upload interval, starting from the Upload Start Time",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Upload Days of the Week",
+                        "Type": "Opaque",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the days of the week when an upload should occur. The value is a single byte (bitmask), where Bit 0 = Sunday, Bit 1 = Monday, ..., Bit 6 = Saturday"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Upload Recurrence",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the Recurrence in days in which the Uploader will be executed. This works in combination with \"Sampling Days of the Week\" (ID 5),  \n        allowing finer control over when sampling occurs."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

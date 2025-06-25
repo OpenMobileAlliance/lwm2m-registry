@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "APP",
+            "Description1": "This LWM2M Object includes the APP information.",
+            "ObjectID": "10354",
+            "ObjectURN": "urn:oma:lwm2m:x:10354",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "APP Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The name of the APP, human readable string."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "APP Version",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The version of the APP, human readable string."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "APP Build No",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Build No of the APP, human readable string."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "APP Patch No",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Patch No of the APP, human readable string."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Package URI",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "URI from where the device can download the software package by an alternative mechanism."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Vendor Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The vendor of the package."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Installation Target",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Specify where this APP should be installed, RCU or which CCU."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "APP Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..5",
+                        "Units": null,
+                        "Description": "The Status of the APP, 0:Downloading, 1:Downloaded, 2:Installed, 3:Verified, 4:Activated, 5:Stopped."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "APP Restart",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Restart the APP."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "APP Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Start the APP."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "APP Stop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stop the APP."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "APP Download",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Download the APP."
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "APP Install",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Install the APP."
+                    },
+                    {
+                        "@ID": "105",
+                        "Name": "APP Uninstall",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Uninstall the APP."
+                    },
+                    {
+                        "@ID": "106",
+                        "Name": "APP Activate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Activate the APP."
+                    },
+                    {
+                        "@ID": "107",
+                        "Name": "APP Deactivate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Deactivate the APP."
+                    },
+                    {
+                        "@ID": "108",
+                        "Name": "APP Verify",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Verify the installed APP after APP is activated."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,231 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LWM2M Software Management",
+            "Description1": "This LwM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance.",
+            "ObjectID": "9",
+            "ObjectURN": "urn:oma:lwm2m:oma:9",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "PkgName",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "Name of the software package"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "PkgVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "Version of the software package"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Package",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Software package\nThe package can be in one single software component, or any delivery material used by the Device to determine the software component(s) and proceed to their installation.\nCan be archive file, executable, manifest. This resource to be used when it is single block of delivery."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Package URI",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "URI from where the device can download the software package by an alternative mechanism. As soon the device has received the Package URI it performs the download at the next practical opportunity.\nCan be direct link to a single software component or link to archive file, executable, or manifest, used by the Device to determine, then access to the software component(s). This resource to be used when it is single block of delivery."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Install",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Installs software from the package either stored in Package resource, or, downloaded from the Package URI. This Resource is only executable when the value of the State Resource is DELIVERED."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Checkpoint",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to a \"Checkpoint\" object which allows to specify conditions/dependencies for a software update. E.g. power connected, sufficient memory, target system."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Uninstall",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Uninstalls the software package.\nThis executable resource may have one argument.\nIf used with no argument or argument is 0, the Package is removed i from the Device. If the argument is 1 (\"ForUpdate\"), the Client MUST prepare itself for receiving a Package used to upgrade the Software already in place. Update State is set back to INITIAL state."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Update State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4",
+                        "Units": null,
+                        "Description": "Indicates current state with respect to this software update. This value is set by the LwM2M Client.\n0: INITIAL\nBefore downloading.\n(see 5.1.2.1)\n1: DOWNLOAD STARTED\nThe downloading process has started and is on-going.\n(see 5.1.2.2)\n2: DOWNLOADED\nThe package has been completely downloaded \n(see 5.1.2.3)\n3: DELIVERED\nIn that state, the package has been correctly downloaded and is ready to be installed. \n(see 5.1.2.4)\nIf executing the Install Resource failed, the state remains at DELIVERED.\nIf executing the Install Resource was successful, the state changes from DELIVERED to INSTALLED.\nAfter executing the UnInstall Resource, the state changes to INITIAL.\n4: INSTALLED\nIn that state the software is correctly installed and can be activated or deactivated according to the Activation State Machine.\n(see 5.1.2.5)"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Update Supported Objects",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If this value is true, the LwM2M Client MUST inform the registered LwM2M Servers of Objects and Object Instances parameter by sending an Update or Registration message after the software update operation at the next practical opportunity if supported Objects in the LwM2M Client have changed, in order for the LwM2M Servers to promptly manage newly installed Objects. \nIf false, Objects and Object Instances parameter MUST be reported at the next periodic Update message.\nThe default value is false."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Update Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..200",
+                        "Units": null,
+                        "Description": "Contains the result of downloading or installing/uninstalling the software\n0: Initial value. Prior to download any new package in the Device, Update Result MUST be reset to this initial value. One side effect of executing the Uninstall resource is to reset Update Result to this initial value \"0\".\n1: Downloading. The package downloading process is on-going.\n2: Software successfully installed.\n3: Successfully Downloaded and package integrity verified\n(( 4-49, for expansion, of other scenarios))\n50: Not enough storage for the new software package.\n51: Out of memory during downloading process.\n52: Connection lost during downloading process.\n53: Package integrity check failure.\n54: Unsupported package type.\n56: Invalid URI\n57: Device defined update error\n58: Software installation failure\n59: Uninstallation Failure during forUpdate(arg=0)\n60-200 : (for expansion, selection to be in blocks depending on new introduction of features)\nThis Resource MAY be reported by sending Observe operation."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Activate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This action activates the software previously successfully installed (the Package Installation State Machine is currently in the INSTALLED state)"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Deactivate",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This action deactivates softwareif the Package Installation State Machine is currently in the INSTALLED state."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Activation State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the current activation state of this software:\n0: DISABLED\nActivation State is DISABLED if the Software Activation State Machine is in the INACTIVE state or not alive.\n1: ENABLED\nActivation State is ENABLED only if the Software Activation State Machine is in the ACTIVE state"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Package Settings",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to \"Package Settings\" object which allows to modify at any time software configuration settings. This is an application specific object. \nNote: OMA might provide a template for a Package Settings object in a future release of this specification."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "User Name",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "User Name for access to SW Update Package in pull mode.\nKey based mechanism can alternatively use for talking to the component server instead of user name and password combination."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Password",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255 bytes",
+                        "Units": null,
+                        "Description": "Password for access to SW Update Package in pull mode."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Status Reason",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the status of the actions done by the client on the SW Component(s) referred by the present SW Update Package. The status is defined in Appendix B."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Software Component Link",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reference to SW Components downloaded and installed in scope of the present SW Update Package Note: When resource 17 objlink exist, resources 2, 3 and 12 in this table are ignored."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Software Component tree length",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Software Component tree length indicates the number of instances existing for this software package in the Software Component Object."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

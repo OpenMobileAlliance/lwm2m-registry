@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Device RF Capabilities",
+            "Description1": "This is a device management object that should be used for capturing the RF capabilities of the device.",
+            "ObjectID": "28",
+            "ObjectURN": "urn:oma:lwm2m:oma:28",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Supported LTE Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported LTE bands"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Supported EGPRS Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported EGPRS bands"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Supported TD-SCDMA Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported TD-SCDMA bands"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Supported WCDMA Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported WCDMA bands"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Supported CDMA-2000 Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported CDMA-2000 bands"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Supported WiMAX Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported WiMAX bands"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Supported NB-IoT Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported NB-IoT bands"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Supported 5G Band Information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the list of supported 5G-NR bands"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

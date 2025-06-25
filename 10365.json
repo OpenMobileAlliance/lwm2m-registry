@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Gas-Dust Sensor",
+            "Description1": "This LWM2M Object includes Gas-Dust information.",
+            "ObjectID": "10365",
+            "ObjectURN": "urn:oma:lwm2m:x:10365",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "50",
+                    "Name": "Status",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Integer",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "0:Normal, 1:Unknown, <0:Failed with error code(negative number)."
+                }
+            },
+            "Description2": null
+        }
+    }
+}

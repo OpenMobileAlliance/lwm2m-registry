@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CCU PM",
+            "Description1": "This LWM2M Object includes CCU PM(counter and gauge).",
+            "ObjectID": "10322",
+            "ObjectURN": "urn:oma:lwm2m:x:10322",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "CPU Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%",
+                        "Description": "The CPU usage of the CCU."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Max CPU Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%",
+                        "Description": "Max CPU Usage of the CCU."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Memory Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%",
+                        "Description": "Memory Usage of the CCU."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Storage Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%",
+                        "Description": "Storage Usage of the CCU."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

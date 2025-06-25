@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "NeighborCellMeasurements",
+            "Description1": "Neighbor Cell Measurements",
+            "ObjectID": "3371",
+            "ObjectURN": "urn:oma:lwm2m:ext:3371",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6037",
+                        "Name": "sysFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "System Frame Number."
+                    },
+                    {
+                        "@ID": "6038",
+                        "Name": "subFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Sub Frame Number."
+                    },
+                    {
+                        "@ID": "6034",
+                        "Name": "pci",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PCI."
+                    },
+                    {
+                        "@ID": "6035",
+                        "Name": "rsrp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RSRP Value in dBm (-180..-30)"
+                    },
+                    {
+                        "@ID": "6036",
+                        "Name": "rsrq",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RSRQ Value in dB (-30..10)"
+                    },
+                    {
+                        "@ID": "6032",
+                        "Name": "dlEarfcn",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "EARFCN - frequency"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

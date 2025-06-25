@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhDefEcValues",
+            "Description1": "This Object represents default set of values for the Event Category parameter of an incoming request or response message.",
+            "ObjectID": "2051",
+            "ObjectURN": "urn:oma:lwm2m:ext:2051",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Order",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains an index defining the order of processing this CmdhDefEcValue Object Instance will be handled"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "DefEcValue",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Represents the default Event category value to be applied when the conditions given in this Object Instance are matched"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "RequestOrigin",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of zero or more Local AE-IDs, App-IDs, or the strings \"localAE\" or \"thisCSE\""
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "RequestContext",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the requestContext information of this Object Instance which needs to be matched"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "RequestContextNotification",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains true/false flag indicating whether or not notification procedures apply."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "RequestCharacteristics",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Represents conditions pertaining to the request itself, (e.g. the requested Response Type  ) than needs to be matched"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

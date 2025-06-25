@@ -1,0 +1,187 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Water Flow Readings",
+            "Description1": "Measures the flow of water in regular intervals",
+            "ObjectID": "10266",
+            "ObjectURN": "urn:oma:lwm2m:x:10266",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6000",
+                        "Name": "Interval Period",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..864000",
+                        "Units": "s",
+                        "Description": "The Interval Period resource is an Integer value representing the width in seconds of the intervals being managed by this interval data object. This resource is read only and can only be changed by resource 11 (Change Interval Configuration). It is recommended that the Interval Period be set to a devisor of 24 hours (86400 seconds) to provide a consistent interval period. Examples of Interval Period include:-\n30 = Every 30 seconds\n600 = Every 10 minutes\n1800 = Every 30 minutes\n3600 = Hourly\n7200 = Every 2 hours\n14400 = Every 4 hours\n43200 = Every 12 hours\n86400 = Every Day\n172600 = Every Second Day"
+                    },
+                    {
+                        "@ID": "6001",
+                        "Name": "Interval Start Offset",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..86399",
+                        "Units": "s",
+                        "Description": "The Interval Start Offset resource is a read only resource representing the number of seconds past midnight for which the first interval is recorded. If this resource is empty, it is assumed that the intervals are midnight aligned. This can be used to adjust interval boundaries. As an example, an Interval Period of 3600 seconds and an Interval Start time of 300 represents hourly interval data, starting at 00:05."
+                    },
+                    {
+                        "@ID": "6002",
+                        "Name": "Interval UTC Offset",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Interval UTC Offset resource is a read only resource representing the time zone offset for this Interval Data instance. If this resource is empty, the application should use the UTC offset provided in the Device [/3/0/14] object instance resource or UTC if not provided. UTC+X [ISO 8601]."
+                    },
+                    {
+                        "@ID": "6003",
+                        "Name": "Interval Collection Start Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Collection Start Time resource is a read only resource representing the time when the first interval was recorded on the device. Interval times represent the end of the interval, not the beginning. As an example, the first four hourly interval past midnight will have a timestamp of 04:00 (adjusting for UTC offset)."
+                    },
+                    {
+                        "@ID": "6004",
+                        "Name": "Oldest Recorded Interval",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Oldest Recorded Interval resource is a read-only resource representing the oldest available interval on the device. Interval times represent the end of the interval, not the beginning."
+                    },
+                    {
+                        "@ID": "6005",
+                        "Name": "Last Delivered Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Last Delivered Interval is a readable and writable resource used to represent the last interval delivered to the LwM2M server. Interval times represent the end of the interval, not the beginning. The setting of this resource is implementation specific but should be updated based on, either a Read request of the Latest Payload from the LwM2M server or via a confirmed delivery of Notify operation of the Latest Payload resource. This resource is writable to allow the server to adjust the Last Delivered Interval value if the server and client is out of sync."
+                    },
+                    {
+                        "@ID": "6006",
+                        "Name": "Latest Recorded Interval",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Latest Recorded Interval is a readable resource representing the currently highest recorded interval on the device. Interval times represent the end of the interval, not the beginning."
+                    },
+                    {
+                        "@ID": "6007",
+                        "Name": "Interval Delivery Midnight Aligned",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Delivery Midnight Aligned is a readable and writable resource used to indicate if data is delivered only to the previous midnight (1) or if part-day data can be delivered (0). Calculating Midnight should consider the Interval UTC Offset resource, or if empty, the Device [/3/0/14] object instance resource."
+                    },
+                    {
+                        "@ID": "6008",
+                        "Name": "Interval Historical Read",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Historical Interval Read is an executable resource designed to retrieve ad-hoc interval read data. The resource takes two arguments:-\nArgument 0: First Interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.\nArgument 1: Last interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.\nThe dates should be inclusive based on the end time of the interval. The data retrieved from this resource will be readable (or observable) from the Historical Read Payload Resource.\n\nAs an example, the Argument List to retrieve data from Midnight 2nd March (UTC+10) to Midnight 6rd March (UTC+10) for a specific instance of the interval data object, would be constructed as follows:-\n\n0='1488463200',1='1488808800'"
+                    },
+                    {
+                        "@ID": "6009",
+                        "Name": "Interval Historical Read Payload",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Historical Read Payload resource is the representation of the data requested by the Historical Interval Read executable resource. The format of this Opaque value should be identical to the Latest Payload resource. If no Historical Interval Read has been executed, this resource should return and empty Opaque value. This resource can either be Read from the Server or set up as an observation and Notified to the server as soon as the historical data is available. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Historical Read Payload should be set to an empty Opaque value."
+                    },
+                    {
+                        "@ID": "6010",
+                        "Name": "Interval Change Configuration",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Change Interval Configuration is an executable resource designed to allow the Interval Period, Interval Start Offset and Interval UTC Offset to be reconfigured. The resource takes three arguments:-\nArgument 0: [Mandatory] Interval Period represented as an integer as defined in the Interval Period Resource.\nArgument 1: [Optional] Interval start offset represented as an integer as defined in the Interval Start Offset Resource. If not provided, leave the value as per the current configuration\nArgument 2: [Optional] Interval UTC offset represented as a String as defined in the Interval UTC Offset Resource. If not provided, leave the value as per the current configuration.\n\nDepending on the specifics of the implementation of this object, reconfiguring the Interval data object may result in the removal of all historical data for this Interval Data Object Instance. Please consult with your device vendor as to the implications of reconfiguring an Interval Data Object Instance.\n\nAs an example, the Argument List to change an interval data object instance from its existing values to one hour intervals, midnight aligned in UTC+10 time zone:-\n\n0='3600',1='0',1='UTC+10'"
+                    },
+                    {
+                        "@ID": "6026",
+                        "Name": "Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Start is an executable resource that enables the recording of interval data. The first interval recorded will have a timestamp based on the Interval Start Offset resource. This executable resource takes no arguments. Refer to re-usable resource LogStart for further details."
+                    },
+                    {
+                        "@ID": "6027",
+                        "Name": "Stop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stop (LogStop) is an executable resource that disables the recording of interval data for this object instance. This executable resource takes no arguments. Refer to re-usable resource LogStop for further details."
+                    },
+                    {
+                        "@ID": "6028",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Recording Enabled is a read-only resource providing an indication of if interval data is currently being recorded for this object instance. Refer to re-usable resource LogStatus for further details."
+                    },
+                    {
+                        "@ID": "6029",
+                        "Name": "Latest Payload",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Latest Payload resource is a read-only serialised Opaque (Binary) representation of all the Interval Data between the Last Delivered Interval and the Latest Recorded Interval, accounting for the Delivery Midnight Aligned resource. When this payload is delivered to the LwM2M server, via either a read request or a confirmed observation on this Object, Object Instance or Resource, the Latest Delivered Interval should be updated. When no new data exists, an empty Opaque value should be provided.\n\nThe payload data can be provided in an implementation specific serialisation, but by default for fixed length values should use the OMA-LwM2M CBOR format encoded as follows:\n\n1. 8-bit integer, value 2 representing OMA-LwM2M CBOR format.\n2. Interval Data Instance ID/ Class [16-bit integer]\n3. Timestamp of first Interval [32-bit integer] representing the number of seconds since Jan 1st, 1970 in the UTC time zone.\n4. Interval Period in seconds [32-bit integer]\n5. Number of intervals in Payload [16-bit integer]\n6. Number of Values Per Interval [8-bit integer]\n7. Size of Value 1 in bits [8-bit integer]\n8. Size of Value 2 in bits [8-bit integer]\n...\n9. Size of Value N in bits [8-bit integer]\n10. Interval 1 Value 1 [x bits]\n11. Interval 1 Value 2 [x bits]\n...\n12. Interval 1 Value N [x bits]\n...\n13. Interval N Value N [x bits]\n\nIf for some implementation specific reason, there are missing intervals in the sequence, the payload may consist of multiple blocks of the above serialised data (appended into a single binary opaque value), each block representing a continuous series of interval data."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

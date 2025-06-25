@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Cellular Network and Bearer Control",
+            "Description1": "This LwM2M Object enables monitoring of available network bearers (or Radio Access Technologies - RATs) of cellular networks. Each instance of this Object holds information related to one network bearer incl. the associated PLMN.\nAn object instance should be created for every RAT available for a PLMN, and for every PLMN visible to the device.\nThe Object also allows steering the device towards a particular PLMN, or, to a particular PLMN+RAT combination.",
+            "ObjectID": "10479",
+            "ObjectURN": "urn:oma:lwm2m:x:10479",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "PLMN Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PLMN name e.g. \"Vodafone UK\""
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "MCC",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Serving Mobile Country Code. \nAs specified in TS [3GPP 23.003]."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "MNC",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Mobile Network Code. \nAs specified in TS [3GPP 23.003]."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Network Bearer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..50",
+                        "Units": null,
+                        "Description": "Indicates the available network bearers. \nMore specifically: \n0: GSM\n1: TD-SCDMA\n2: WCDMA\n3: CDMA2000\n4: WiMAX\n5: LTE-TDD\n6: LTE-FDD\n7: NB-IoT \n8: 5GNR TDD \n9: 5G-NR FDD \n10: CAT-M\n11 - 20: Reserved for other types of cellular network bearers"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Currently In Use",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates if this PLMN and network bearer is currently used e.g. for the current LwM2M communication (true)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Radio Signal Strength",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "dBm",
+                        "Description": "Indicates the average value of the received signal strength indication. The value is expressed in dBm. For the following network bearers the signal strength parameters indicated below are represented by this resource:\nGSM:    RSSI\nUMTS:   RSCP\nLTE:    RSRP\nNB-IoT: NRSRP\nCAT-M: RSRP\nFor more details on Network Measurement Report, refer to the appropriate 3GPP  standards, (e.g. for LTE refer to 3GPP TS 36.133)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Link Quality",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This contains received link quality  e.g. RxQual Downlink for GSM (range 0...7, refer to 3GPP TS 44.018 for more details on Network Measurement Report encoding), RSRQ for LTE and Cat-M (refer to 3GPP TS 36.214), NRSRQ for NB-IoT (refer to 3GPP TS 36.214)."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "SignalSNR",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "SINR: Signal to Interference plus Noise Ratio SINR is the ratio of the strength of the received signal to the strength of the received interference signal (noise and interference)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Coverage Enhancement Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3, 99",
+                        "Units": null,
+                        "Description": "Indicates the Coverage Enhancement Level of the UE in the serving cell. The Coverage Enhancement levels are defined and specified in 3GPP TS 36.331 and 36.213.\n\t\t0: Coverage Enhancement level 0\n\t\t1: Coverage Enhancement level 1\n\t\t2: Coverage Enhancement level 2\n\t\t3: Coverage Enhancement level 3\n               99: No Coverage Enhancement in the serving cell"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Select Network",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Move to the network represented by this Object Instance. Only the network is selected and the Bearer selection is performed automatically.\nDevice sets \"network manually selected\" = 1."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Select Network And Bearer",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Move to the network and bearer represented by this Object Instance. \nDevice sets \"network manually selected\" = 1\nDevice sets \"bearer manually selected\" = 1"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Device Supports Manual Network Selection",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0=device does not support manual network selection (overwriting automatic network selection)\n1=device supports manual network selection\n\nThis resource shall only be present in Object instance 0."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Network Manually Selected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = device is on automatic network selection mode.\n1=  device is on manual network selection mode and the network has been manually selected\n\nThis resource shall only be present in Object instance 0."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Device Supports Manual Bearer Selection",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0=device does not support manual bearer selection (overwriting automatic bearer selection)\n1=device supports manual bearer selection\n\nThis resource shall only be present in Object instance 0."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Bearer Manually Selected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = device is on automatic bearer selection mode.\n\n1= device is on manual bearer selection mode and the bearer has been manually selected\n\nThis resource shall only be present in Object instance 0."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Perform Network Scan",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Perform a new network scan and populate the object instances accordingly. \n\nThis resource shall only be present in Object instance 0."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Reset Network Selection",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Resets the device to automated network selection.\nAdditionally,\nsets the \"network manually selected\" = 0\nand\nsets the \"Bearer manually selected\" = 0.\n\nThis resource shall only be present in Object instance 0."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

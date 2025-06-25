@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhBackOffParametersSet",
+            "Description1": "This Object defines set of parameters which can be referenced by a specific Instance of the CmdhNwAccessRule Object (ID: 2055)",
+            "ObjectID": "2057",
+            "ObjectURN": "urn:oma:lwm2m:ext:2057",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "NetworkAction",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..5",
+                        "Units": null,
+                        "Description": "Contains specific action actually  attempted on the network (e.g. cellular-registration)"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "InitialBackoffTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for the Initial wait time."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "AdditionalBackoffTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for an additional wait tme."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "MaximumBackoffTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for the maximum wait time"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "OptionalRandomBackoffTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Regarding the BackOffParameters of a certain CmdhNwAccessRule  Object Instance, this Resource contains the value for an optional random wait time."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}
