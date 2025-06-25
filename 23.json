@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M COSE",
+            "Description1": "This Object provides the keying material and related information for use with COSE.",
+            "ObjectID": "23",
+            "ObjectURN": "urn:oma:lwm2m:oma:23",
+            "LWM2MVersion": "1.2",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "KID",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is used to indicate the key identifier."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "AEAD Algorithm",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is used to store the encoding of the AEAD Algorithm as defined in Table 10 of RFC 8152."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Key",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is used to store the key for use with the indicated AEAD algorithm."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

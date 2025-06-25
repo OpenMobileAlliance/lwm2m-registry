@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Device Metadata",
+            "Description1": "This object provides a range of information related to device metadata",
+            "ObjectID": "10255",
+            "ObjectURN": "urn:oma:lwm2m:x:10255",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Protocol supported",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Manifest protocol supported"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Bootloader hash",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Hash of the bootloader. This is used for tracking the version of the bootloader used."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "OEM bootloader hash",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the end-user has modified the bootloader the hash of the modified bootloader is recorded here"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Vendor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Vendor Class UUID"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Class",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Class UUID"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Device",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Device UUID"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

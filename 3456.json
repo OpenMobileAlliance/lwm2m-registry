@@ -1,0 +1,62 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Output Filter",
+            "Description1": "The uCIFI Output Filter can be used to fine tune the output commands in order, for example, to achieve a prolonged fade. To be used in conjunction with a Program Scheduler.",
+            "ObjectID": "3456",
+            "ObjectURN": "urn:oma:lwm2m:ext:3456",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Operation",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "This resource defines an operation to be performed between the value of the Control Program output and the value currently store in the LwM2M resource pointed by 'Target'. Possible operations: 1 - set 2 - min 3 - max 4 - add 5 - subtract 6 - multiply When operation or filter is not defined the default output operation is set",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Delay",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "When defined the control output is not immediately applied and transaction time = delay is implemented between the current target resource value and the value of the control program output.\u00a0 This can be also associated to Fade Time in smart lighting scenario",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Transaction",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Defines the type of progression to occur to\u00a0 transition the current target resource value to the value defined by the of the control program output. Current options: 0 - Immediate 1 - linear 2 - exponential 3 - Device internal mechanism",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Expiration Time",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Limit the time period for which the output command should be considered valid. This is to be used in scenarios where Control Programs are not under continuous re-evaluation and for which the output control action is not continuously re-calculated. In such scenarios, the expiration time resource can be used to limit the time frame that the control output should be applied to the target resource.",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

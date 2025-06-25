@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Particulates",
+            "Description1": "This object should be used to report the concentration of particulates, for example a measurement of a particulates air quality sensor.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the particulate sensor. An example measurement unit is microgrammes per cubic metre ug/m3.",
+            "ObjectID": "10314",
+            "ObjectURN": "urn:oma:lwm2m:x:10314",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "5700",
+                        "Name": "Sensor Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Last or Current Measured Value from the Sensor."
+                    },
+                    {
+                        "@ID": "5601",
+                        "Name": "Min Measured Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The minimum value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "5602",
+                        "Name": "Max Measured Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "5604",
+                        "Name": "Max Range Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "5701",
+                        "Name": "Sensor Units",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Measurement Units Definition."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    },
+                    {
+                        "@ID": "5605",
+                        "Name": "Reset Min and Max Measured Values",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the Min and Max Measured Values to Current Value."
+                    },
+                    {
+                        "@ID": "6043",
+                        "Name": "Measured Particle Size",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Size of the particle that the sensor is measuring"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LED color light",
+            "Description1": "The uCIFI LED color light enables to control light colors of a LED luminaire.",
+            "ObjectID": "3420",
+            "ObjectURN": "urn:oma:lwm2m:ext:3420",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "1",
+                    "Name": "RGB value",
+                    "Operations": "RW",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "String",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "Text string according to the RBG hexadecimal format with # (e.g. #FF0000 for 100% red)."
+                }
+            },
+            "Description2": null
+        }
+    }
+}

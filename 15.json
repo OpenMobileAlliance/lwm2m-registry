@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "DevCapMgmt",
+            "Description1": "This LWM2M Object is dedicated to manage the device capabilities of a device e.g. sensors, communication, etc.",
+            "ObjectID": "15",
+            "ObjectURN": "urn:oma:lwm2m:oma:15:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Property",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of Device Capabilities inside a given Group.\nThe format is a free list ASCII-represented integers separated by a semi colon. (e.g. 0;1;10)\nThe list of capabilities per Group is given in Appendix B: Device Capabilities Vocabulary\nexecutable Resource can work with."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Group",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "Group name of Device Capabilities\n0: SENSOR: luminosity, presence,temp,humidity\n1: CONTROL: Light, Power, Sound\n2: CONNECTIVITY: Bluetooth, wifi, \u2026\n3: NAVIGATION: gps, galieo\n4: STORAGE: external memory,\n5: VISION: cam, video-cam, night_cam.\n6: SOUND: speaker, buzzer\n7: ANALOG_INPUT: generic input\n8: ANALOG_OUTPUT: generic output\n9..15: reserved"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Description",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Device Capability Description\n(manufacturer specified string)"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Attached",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When the resource doesn\u2019t exist, it means the associated Device Capability is not removable.\nWhen this resource is \"False\", it means the associated Device Capability is removable and is currently not attached to the device.\nWhen this resource is \"True\", it means the associated Device Capability - if removable - is currently attached to the Device.\nWhen a Device Capability is not removable, and the \"Attached\" Resource is present, the \"Attached\" value but be set to \"True\"."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Enabled",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource indicates whether the Device Capability is enabled regardless whether the Device Capability is attached or not. If the value of this resource is \"True\" the Device Capability is in Enabled State. If the value is \"False\" the Device Capability is in Disabled State;\nThe \u2018Attached\u2019 and \u2018Enabled\u2019 resources are independent. A Device Capability MAY have \u2018True\u2019 as value for \u2018Enabled\u2019 Resource while having \u2018False\u2019 as value for the \u2018Attached\u2019 Resource. That means the Device Capability is still not available and can\u2019t be used until it is attached to the Device, but will be useable once the Device Capability is attached."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "opEnable",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This command is used to enable the Device Capability to transfer the Device Capability from Disabled State to Enabled state.\nIn Enabled State, the Device Capability is allowed to work when it is attached to the Device."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "opDisable",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This command is used to disable the Device Capability to transfer the Device Capability from Enabled State to Disabled State.\nIn Disabled state the Device Capability is not allowed to work."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "NotifyEn",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When the Resources \"Enabled\" or \"Attached\" are under \"Observation\", this resource specifies whether the LWM2M Server MUST be notified when the value of the Resource on \"Observation\" changed. If the Resource \"NotifyEn\" is not present or the value is \u2018False\u2019, the LWM2M Server will be not notified about this change. If the \"NotifyEn\" Resource is present and the value is \u2018True\u2019, the LWM2M Server will be notified."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

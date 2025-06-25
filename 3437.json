@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Edge computing script",
+            "Description1": "The uCIFI edge computing scripts object defines a particular script to be executed by a device under a time or any other condition set by a \"Edge Computing Time Condition\" or \"Edge Computing Generic Condition\" object.",
+            "ObjectID": "3437",
+            "ObjectURN": "urn:oma:lwm2m:ext:3437",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Name of the script."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Signature",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Unique hash or signature associated to the script to be verified by the end-device before execution. The format of the hash or signature is vendor-specific."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Version",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Version of the script, as defined by the vendor."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Script",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Vendor-specific script."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Script format",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Script format to enable the device to select the script interpreter in case it supports multiple (e.g. LUA). The format of this resource is free to support vendor-specific formats."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Non supported script",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the script is not supported or if the device has identified errors in the script."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Non authorized script",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the hash/signature is not correct."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

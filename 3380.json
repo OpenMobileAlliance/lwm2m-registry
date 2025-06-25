@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "PrachReport",
+            "Description1": "PRACH report information",
+            "ObjectID": "3380",
+            "ObjectURN": "urn:oma:lwm2m:ext:3380:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6037",
+                        "Name": "sysFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "System Frame Number."
+                    },
+                    {
+                        "@ID": "6038",
+                        "Name": "subFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Sub Frame Number."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "rachTxPower",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PRACH tx power in dB (-112..23)"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "zadOffSeqNum",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "ZadOFF Sequence Number (0..837)"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "prachConfig",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Random access preamble timing for a range of preamble formats (0..64)"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "preambleFormat",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Preamble Format (0..4)"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "maxTransmissionMsg3",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Max number of HARQ re-transmissions from UE for RACH message 3 (1..8)"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "raResponseWindowSize",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Window size for reception of RACH message 2 (2..10)"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "RachRequestResult",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RACH Request success/failure - 0=fail, 1=pass"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "ce_mode",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "CE_mode"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "ce_level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "CE level"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "num_prach_repetition",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of PRACH Repetitions"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "prach_repetition_seq",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PRACH Repetition seq"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,154 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Thread Network",
+            "Description1": "This LWM2M object is used to describe and modify Thread network configurations",
+            "ObjectID": "10483",
+            "ObjectURN": "urn:oma:lwm2m:x:10483",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Network Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread network name."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "PAN ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread network Personal Area Network Identification (PAN ID)."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Extended PAN ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread network Extended Personal Area Network Identification (Ext PAN ID)."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Passphrase",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread network passphrase."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Master Key",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread network master key value."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Channel",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The communication channel number. IEEE 802.15.4 Channel value."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "IPv6 Mesh Local Prefix",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The IPv6 mesh local prefix."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Max Children",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The configured maximum number of children."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "RLOC16 Address",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Routing Locator (RLOC16) identifies a Thread interface, based on its location in the network topology."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "EUI64",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates the Extended Unique Identifier (EUI64) of the device."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Extended MAC Address",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The extended media access control (MAC) address of the device."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "IPv6 Addresses",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A list of assigned IP addresses."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

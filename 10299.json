@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "HostDevice",
+            "Description1": "This LWM2M Object provides a range of host device related information which can be queried by the LWM2M Server. The host device is any integrated device with an embedded cellular radio module.",
+            "ObjectID": "10299",
+            "ObjectURN": "urn:oma:lwm2m:x:10299",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Manufacturer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Host device manufacturers name (OEM)."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Model",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Identifier of the model name or number determined by device manufacturer."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "UniqueID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Unique ID assigned by an manufacturer or other body. Used to uniquely identify a host device. Examples include serial # or UUID."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "FirmwareVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current Firmware version of the host device. (manufacturer specified string)."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "SoftwareVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current software version of the host device. (manufacturer specified string)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "HardwareVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current hardware version of the host device. (manufacturer specified string)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "DateStamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "UTC value of the time and date of the last Firmware or Software update. Format:MM:DD:YYYY HH:MM:SS"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

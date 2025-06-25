@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhBuffer",
+            "Description1": "This Object defines limits in usage of buffers for temporarily storing information that needs to be forwarded to other CSEs during processing of CMDH-related requests in a CSE.",
+            "ObjectID": "2056",
+            "ObjectURN": "urn:oma:lwm2m:ext:2056",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "ApplicableEventCategory",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains a list of event category values"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "MaxBufferSize",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "B",
+                        "Description": "Contains the max Buffer size of the CmdhBuffer Object Instance"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "StoragePriority",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..10",
+                        "Units": null,
+                        "Description": "Storage priority for the buffered data associated to that CmdhBuffer Object Instance. t \nBuffered requests associated with a lower storage priority shall be purged before buffered requests with a higher storage priority."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

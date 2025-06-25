@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "rrcStateChangeEvent",
+            "Description1": "Current RRC state change information, including the event that triggered the state change",
+            "ObjectID": "3357",
+            "ObjectURN": "urn:oma:lwm2m:ext:3357",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "rrcState",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RRC state\n       0 =  null\n        1 = idleCampedOnAnyCell\n        2 = idleCampedNormally\n       3 =  idlConnecting\n        4 = connectedNormally\n        5 = releasing(when going from connected to idle)"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "rrcStateChangeCause",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Trigger for RRC state change\n 0 = toNull (Generic cause for all state transitions to null state. From any stable state other than null to null state)\n1 = IdleFromUpperLayer (Camped due to connection aborted from upper layers. From any stable state to idlecampednormally)\n2 = idleT300Expiry (Camped due to T300expiry. From any stable state other than connectednormally to idlecampednormally)\n3= idleConnectionReject (Camped due to connection rejected from eNB. From any stable state other than connectednormally to idlecampednormally)\n4 = idleCellReselectionFailure (Camped due to cell reselection. From idlecampednormally to idlecampednormally)\n5 = idleBarred (Camped due to access barring. From any stable state to idlecampednormally)\n6 = idleOtherRrcFailue (Camped due to other reasons. From any stable state to idlecampednormally)\n7 = idleEnteringLte (From null to idlecampednormally)\n8 = connectingEmergencyCall (Enter connecting due to emergency call. Any stable state other than connectednormally to connectednormally)\n9 = connectingHighPriAccess (Enter connecting due to high priority access. From idlecampednormally to connectednormally)\n10 = connectingReceiveCall (Enter connecting due to receiving call. From idlecampednormally to connectednormally)\n11 = connectingMakingCall (Enter connecting due to making call. From idlecampednormally to connectednormally)\n12 = connectingMoData (Enter connecting due to originating a data session. From idlecampednormally to connectednormally)\n13 = connectedHoFailure (Camped on a cell in connected state due to handover failure. From connectednormally to idlecampednormally or idlecampedonanycell)\n14 = connectedOther (Camped on a cell in connected state due to other reasons. From connectednormally to idlecampednormally or idlecampedonanycell.\n15 = releasingT311Expriry (Enter releasing due to T311 expiry. From connected normally to idlecampednormally)\n16 = releasingT301Expriry (Enter releasing due to T301 expiry. From connected normally to idlecampednormally)\n17 = releasingReject (Enter releasing due to RRC connection reestablishment reject. From connected normally to idlecampednormally)\n18 = connectingOther (From idlecampednormally to connectednormally for other procedures like Extended service request, TAU, or RRC reestablishment"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

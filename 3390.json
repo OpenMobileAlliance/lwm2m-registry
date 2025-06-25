@@ -1,0 +1,297 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Logical Colour Light-Point Actuator",
+            "Description1": "The 'oA Logical Colour Light Point Actuator' represents the logical part of an actuator model for a colour light point. The corresponding physical device is a light channel and associated gear (e.g. LED driver).\\nThe Object (module) supports several interactions that include absolute and relative colour setting. Several device configuration parameters are mapped, which relate to behaviour or describe device limitations.",
+            "ObjectID": "3390",
+            "ObjectURN": "urn:oma:lwm2m:ext:3390",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "125",
+                        "Name": "Target Colour X",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "This Resource represents the target colour X value requested to the Light Point. Scale is: 0.001"
+                    },
+                    {
+                        "@ID": "126",
+                        "Name": "Target Colour Y",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "This Resource represents the target colour Y value requested to the Light Point. Scaling is 0.001 per Unit, Value conforms to CIE color definition"
+                    },
+                    {
+                        "@ID": "909",
+                        "Name": "Executing Object",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)"
+                    },
+                    {
+                        "@ID": "921",
+                        "Name": "Priority",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..5",
+                        "Units": null,
+                        "Description": "The priority of this Logical Object. If a Logical Object with a higher priority controlles the same physical object, this instance will hold its settings until its priority is sufficient again. \\nIf the priorities are the same the last one is served."
+                    },
+                    {
+                        "@ID": "127",
+                        "Name": "Colour Changing Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "ms",
+                        "Description": "Defines the time needed to change the light point output from minimum hue/saturation to maximum hue/saturation. The resulting change rate is used for the relative changes of the colour request. Scaling is 100ms per Unit"
+                    },
+                    {
+                        "@ID": "128",
+                        "Name": "Colour Transition Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "ms",
+                        "Description": "Defines the default transition time to be used for 'Set_Colour' and 'Step' requests, if that request has no value specified. A value of 0 means the transaction is immediate. Scaling is 100ms per unit"
+                    },
+                    {
+                        "@ID": "129",
+                        "Name": "Hue Step Size",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Defines the default step size to be used for 'Hue Step' requests, if that request has no value specified. The Hue is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000."
+                    },
+                    {
+                        "@ID": "130",
+                        "Name": "Saturation Step Size",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Defines the default step size to be used for 'Saturation Step' requests, if that request has no value specified. The Saturation is in relative units (0..1), scaling is 0.001 per unit, so the integers given are at factor 1000."
+                    },
+                    {
+                        "@ID": "903",
+                        "Name": "Application Group ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "The application group ID that the logical object is part of. This ID will define the application group the status reports are sent to. It is internally used as a pointer to the Group Object instance that hosts all the Group configurations."
+                    },
+                    {
+                        "@ID": "904",
+                        "Name": "Status Resend Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "1..600",
+                        "Units": "s",
+                        "Description": "The time specified as status resend time is used to resend the actual status to the application group the object is a member of, even if nothing changed.\\nThe status resend time is restarted after every event. The actual interval is a random time with the maximum duration given by this resource. Randomization helps to avoid massive ongoing message collisions after system power up.\\nFor example: Status resend time is set to 10 seconds;\\n* 00:00 status is sent\\n* 00:05 status changes and is sent immediatly\\n* 00:15 (or before, depending on the randomization) status is sent even though it did not change"
+                    },
+                    {
+                        "@ID": "919",
+                        "Name": "Status Report Structure ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "The ID of the status resource structure that is used to code the cyclic status report. See object 4012 'oA Status Report Structure' for more information"
+                    },
+                    {
+                        "@ID": "922",
+                        "Name": "Scene Cache",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A cache for the scene values. These values should be called when a scene is recalled. It is buildt from a Scene_ID (UInt 16, a target resource (Corelnk) defineition, and a payload that operates on this resource), a transition time in ms (UInt16), and an action (Put/Post) defintion"
+                    },
+                    {
+                        "@ID": "131",
+                        "Name": "Set Colour",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This Resource allows to set the colour of a light point using the following arguments:\\n- *arg0: Colour x* - final colour x value\\n- *arg1: Colour y* - final colour y value\\n- *arg2: Time* - transition time with 100ms resolution\\n\\t\\t\\t\\n**Note:** When the optional argument time is not given, or if its value is empty the default configuration value is used.\\nA request on this Resource will immediately update 'Remaining Transition Time' and 'Current Colour' until the Set Colour operation is cloncluded."
+                    },
+                    {
+                        "@ID": "134",
+                        "Name": "Relative Change Saturation",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This Resource allows to change the saturation relatively:\\n- *Direction* [mandatory] direction of change\\n**Note:** During this process, the 'Current Colour' and 'Remaining Transition Time' are continuously updated.If this Resource is executed while another colour variation process is running, the ongoing process is stopped and the new process begins using the actual colour as starting point.\\n\\t\\t\\t\\nSome examples:\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 0`  \\ndecreases saturation.\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 1`  \\nincreases saturation."
+                    },
+                    {
+                        "@ID": "132",
+                        "Name": "Relative Change Hue",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This Resource allows to change the hue relatively:\\n- *Direction* [mandatory] direction of change\\n**Note:** During this process, the 'Current Colour' and 'Remaining Transition Time' are continuously updated. If this Resource is executed while another colour variation process is running, the ongoing process is stopped and the new process begins using the colour values at that specific moment as starting point.\\n\\t\\t\\t\\nSome examples:\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 0`  \\nincreases hue.\\n- `POST coap://<target_IP_address>/<dir>/<Obj_ID>/<obj_instance>/118 1`  \\ndecreases hue."
+                    },
+                    {
+                        "@ID": "136",
+                        "Name": "Stop Transition",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When written, it immediately stops all ongoing transition processes (absolute or relative). 'Current Colour' maintains the value it has at that moment and 'Remaining Transition Time' is set to '0'. Payload is not required, however, a success/failure message is recommended."
+                    },
+                    {
+                        "@ID": "135",
+                        "Name": "Step Saturation",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource allows to increase and decrease the saturation of the colour light point by a given step size. \\nThe following paramters are used:\\n- *arg0: Direction* - step direction (true=increase saturation, false=decrease saturation)\\n- *arg1: Step Size* - the size of the step\\n- *arg2: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\t\\n**Note:** During this process, the 'Remaining Transition Time' and 'Current Colour' are continuously updated.\\nIf this Resource is executed while another colour variation process is running, the ongoing is stopped and this new process is started, using the current colour value as a starting point."
+                    },
+                    {
+                        "@ID": "133",
+                        "Name": "Step Hue",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource allows to increase and decrease the hue of the colour light point by a given step size. \\nThe following paramters are used:\\n- *arg0: Direction* - step direction (true=increase hue, false=decrease hue)\\n- *arg1: Step Size* - the size of the step\\n- *arg2: Transition Time* - transition time with 100ms resolution\\n\\t\\t\\t\\t\\n**Note:** During this process, the 'Remaining Transition Time' and 'Current Colour' are continuously updated.\\nIf this Resource is executed while another colour variation process is running, the ongoing is stopped and this new process is started, using the current colour value as a starting point."
+                    },
+                    {
+                        "@ID": "902",
+                        "Name": "Recall Scene",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "When written, the scene with the given ID is recalled immediately."
+                    },
+                    {
+                        "@ID": "905",
+                        "Name": "Debug Mode Enabled",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enables the object test mode. The physical representation of the object will be disabled. Stimuli can be injected to test the object remotely using inject test event."
+                    },
+                    {
+                        "@ID": "906",
+                        "Name": "Inject Test Event",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Defines a test event for injection into the system when debug mode is enabled. Event definition is vendor specific."
+                    },
+                    {
+                        "@ID": "934",
+                        "Name": "Execute Inject",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Executes the injection of a test event as specified in 906"
+                    },
+                    {
+                        "@ID": "924",
+                        "Name": "Object Enabled",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource allows to disable an object instance. \\nIf an object instance is disabled it does process incoming events but does not create outgoing events."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

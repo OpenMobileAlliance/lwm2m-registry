@@ -1,0 +1,446 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Electrical monitor",
+            "Description1": "The uCIFI electrical monitor object provides attributes related to the analysis of electrical consumption in an outdoor luminaire or in a streetlight cabinet. It also identifies electrical anomalies.",
+            "ObjectID": "3418",
+            "ObjectURN": "urn:oma:lwm2m:ext:3418:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Supply voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Electrical voltage supplied to the device."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Supply current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Electrical current supplied to the device."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Frequency",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Hz",
+                        "Description": "Frequency of the supply current to the device."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Active power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Active power consumed by the device and its electrical load."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Power factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "-1..1",
+                        "Units": null,
+                        "Description": "Power factor is equal to active power divided by apparent power. The value is between -1 and  1."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Cumulated active energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Cumulated number of Wh measured by the device and its load since last energy counter reset."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Energy reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset both cumulated active and reactive energy counter."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Low power factor threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Threshold below which the device should trigger a low power factor event."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Low power factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the power factor is below threshold. This is an absolute value threshold."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Low power threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Threshold below which the device should trigger a low power event."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Low power threshold at low dim level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Threshold below which the device should trigger a low power event. This is an addition to the low power threshold to allow a separated threshold when dim level is low."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Low power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the power is below threshold. Vendor may consider the Low power threshold at low dim level to set this resource to True, taking into account the lamp dim level."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "High power threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Threshold above which the device should trigger a high power event."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "High power threshold at low dim level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Threshold above which the device should trigger a high power event. This is an addition to the high power threshold to allow a separated threshold when dim level is low."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "High power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the power is above threshold. Vendor may consider the High power threshold at low dim level to set this resource to True, taking into account the lamp dim level."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Low current threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Threshold below which the device should trigger a low current event."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Low current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the current is below threshold."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "High current threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Threshold above which the device should trigger a high current event."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "High current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the current is above threshold."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Low voltage threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Threshold below which the device should trigger a low voltage event."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Low voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the voltage is below threshold."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "High voltage threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "ON;OFF",
+                        "Units": "V",
+                        "Description": "Threshold above which the device should trigger a high voltage event."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "High voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the voltage is above threshold."
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "Critical inrush threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Threshold above which the device should trigger a critical inrush event."
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "Critical inrush current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the inrush current is above threshold."
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "Minimum inrush Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Minimum inrush current since last configuration."
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "Maximum inrush Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Maximum inrush current since last configuration."
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "Latest inrush Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Latest inrush current measured since last time the relay switched ON."
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "Reactive power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "var",
+                        "Description": "Instantaneous reactive power measured by the device and its electrical load."
+                    },
+                    {
+                        "@ID": "30",
+                        "Name": "Reactive energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Cumulative reactive power measured by the device and its electrical load since last energy counter reset."
+                    },
+                    {
+                        "@ID": "31",
+                        "Name": "Low power threshold at custom dim level",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "If the measured power when the dimming is between \"Custom dim level min range\" and \"Custom dim level max range\" is below this threshold, a low power alarm is set.",
+                        "Units": "W"
+                    },
+                    {
+                        "@ID": "32",
+                        "Name": "High power threshold at custom dim level",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "If the measured power when the dimming is between \"Custom dim level min range\" and \"Custom dim level max range\" is above this threshold, a high power alarm is set.",
+                        "Units": "W"
+                    },
+                    {
+                        "@ID": "33",
+                        "Name": "Custom dim level min range",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Custom dimming range (lower bound) to allow specification of finer grain thresholds and alarms.",
+                        "Units": "/100"
+                    },
+                    {
+                        "@ID": "34",
+                        "Name": "Custom dim level max range",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Custom dimming range (upper bound) to allow specification of finer grain thresholds and alarms.",
+                        "Units": "/100"
+                    },
+                    {
+                        "@ID": "35",
+                        "Name": "Dimming level",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Dimming level associated to current measurement.",
+                        "Units": "/100"
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Roll over sensor",
+            "Description1": "The uCIFI Roll Over Sensor is used to measure the roll component of displacement and can be useful in safety application, by complementing the existing IPSO Direction and uCIFI Tilt sensors.",
+            "ObjectID": "3451",
+            "ObjectURN": "urn:oma:lwm2m:ext:3451",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Angle",
+                        "Type": "Float",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Angle of inclination between the internal horizontal line and the parallel to earth",
+                        "Units": "rad"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Minimum measured Angle",
+                        "Type": "Float",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Minimum angle measured by the roll over sensor since last reset or since power ON if no reset",
+                        "Units": "rad"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Maximum measured angle",
+                        "Type": "Float",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum angle measured by the roll over sensor since last reset or since power ON if no reset",
+                        "Units": "rad"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Reset min max angles",
+                        "Type": null,
+                        "Operations": "E",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Set the minimum and maximum measured angles to the current angle value",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Out of position threshold",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "The angle above which the device triggers an out of position event",
+                        "Units": "rad"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Out of position",
+                        "Type": "Boolean",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Set to True if the angle is above the out of position threshold",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

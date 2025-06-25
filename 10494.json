@@ -1,0 +1,94 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Periodic Sensor Sampler",
+            "Description1": "The autosen Periodic Sensor Sampler object can be used to sample one or more sensor value(s) at periodic intervals",
+            "ObjectID": "10494",
+            "ObjectURN": "urn:oma:lwm2m:x:10494:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Sensor Value Path",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Resources are specified using Core Link syntax\nExample:\nInstance #0: </3303/0/5700>\nInstance #1: </3303/1/5700>",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Sampling Start Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..86399",
+                        "Description": "Specifies the number of seconds after midnight UTC from which the sampler should be started",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Sampling Interval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..86399",
+                        "Description": "Specifies the Interval at which the sampling is to be repeated from the Sampling Start Time.",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Sampling Count",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "RangeEnumeration": "0..86399",
+                        "Description": "Specifies the number of intervals to be performed in the sampling interval, starting from the Sampling Start Time",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Step Filter",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Only when the value pointed by LwM2M resource Sensor Value Path changes by more than Step Filter the Sampler should evaluate the value",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Sampling Days of the Week",
+                        "Type": "Opaque",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the days of the week when sampling should occur. The value is a single byte (bitmask), where Bit 0 = Sunday, Bit 1 = Monday, ..., Bit 6 = Saturday"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Sampling Recurrence",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the Recurrence in days in which the Sampler will be executed. This works in combination with \"Sampling Days of the Week\" (ID 5),  \n        allowing finer control over when sampling occurs."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

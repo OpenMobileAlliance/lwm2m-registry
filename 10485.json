@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Thread Neighbor Information",
+            "Description1": "This LwM2M Object provides diagnostic information about Thread neighbors",
+            "ObjectID": "10485",
+            "ObjectURN": "urn:oma:lwm2m:x:10485",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Neighbor Role",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "Provides the type of neighbor as Enumerated type:\n\t\t\t\t0: Child\n\t\t\t\t1: Router"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "RLOC16 Address",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Routing Locator (RLOC16) identifies a Thread interface, based on its location in the network topology."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Age",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The age is a measure of how long it has been since the last communication or interaction with that particular network neighbor."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Average RSSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "dBm",
+                        "Description": "The average Received Signal Strength Indication (RSSI) over a specific period."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Last RSSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "dBm",
+                        "Description": "The instantaneous Received Signal Strength Indication (RSSI)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Rx On When Idle",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Neighbor mode R represents \"RX on when idle\"."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Full Thread Device",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Neighbor mode D represents \"Full Thread device\"."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Full Network Data",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Neighbor mode N represents \"Full network data\"."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Extended MAC Address",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Extended Medium Access Control (MAC)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Link Quality In",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Neighbor Link quality In. Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the\nlink is non-existent or unusable."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Link Quality Out",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Neighbor Link quality Out. Link Quality is an integer in [0, 3]. A higher link quality indicates a more usable link, with 0 indicating that the\nlink is non-existent or unusable."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Frame Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Frame error percentage."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Message Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Message error percentage."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Queued Message Count",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "count",
+                        "Description": "Queued Message count. A non-zero Queued Message Count indicates that there are messages waiting to be delivered, and it can be useful for assessing the network's communication efficiency and load."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,297 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Physical Colour Temperature Light-Point Actuator",
+            "Description1": "The 'oA_Physical_Colour_Temperature_Light-Point_Actuator' represents a physical tunable white light-point actuator. It is necessary to map at least on Logical Light Point Actuator to control the intensity and one Logical Colour Temperature Light-Point to control the colour temperature to the Physical Colour Temperature Light Point.",
+            "ObjectID": "3397",
+            "ObjectURN": "urn:oma:lwm2m:ext:3397",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "907",
+                        "Name": "Error Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Error status is a bit coded value that shows all current errors on the object. The error status changes as soon as a new error occurs or an old one is resolved. Bitwise: 0 (LSB): Hardware_Error, 1: Execution_Limit_LED_Temp, 2: Execution_Limit_Power_Restrictions, 3: Light-Point_Malfunction"
+                    },
+                    {
+                        "@ID": "908",
+                        "Name": "Mounting Location",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "1..64 bytes",
+                        "Units": null,
+                        "Description": "Describes the location of the device within the building. The content of the string is site specific."
+                    },
+                    {
+                        "@ID": "5850",
+                        "Name": "On/Off",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "On/off control. Boolean value where True is On and False is Off."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Current Intensity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.0..1.0",
+                        "Units": null,
+                        "Description": "This Resource represents the current intensity (0-1). This is a 'real-time' value, which is given independently of any ongoing dimming request."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "Remaining Transition Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "ms",
+                        "Description": "Remaining approximated time of any ongoing 'Set Intensity', 'Step' or 'Switch' process which requires a variation of the light output over a period of time higher or equal to one 100ms interval. When the process is started, the value is equal to the time value selected for the process and it is continuously decreased until completed (time=0), or a 'Stop Dimming' request is received.\\n\\t\\t\\t\\t\\n**NOTE:** If during a request the process reaches the Maximum/Minimum Intensity limits, the time is automatically set to '0' as the process is stopped. Scaling is 100ms per unit"
+                    },
+                    {
+                        "@ID": "137",
+                        "Name": "Current Colour Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "K",
+                        "Description": "This Resource represents the current colour temperature. This is a 'real-time' value, which is given independently of any ongoing change request."
+                    },
+                    {
+                        "@ID": "138",
+                        "Name": "Remaining Colour Temperature Transition Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "ms",
+                        "Description": "Remaining approximated time of any ongoing 'Set Temperature', 'Step' or 'Switch' process which requires a variation of the light output over a period of time higher or equal to one 100ms interval. When the process is started, the value is equal to the time value selected for the process and it is continuously decreased until completed (time=0), or a 'Stop' request is received.\\n\\t\\t\\t\\t\\n**NOTE:** If during a request the process reaches the Maximum/Minimum colour temperature limits, the time is automatically set to '0' as the process is stopped. Scaling is 100ms per unit"
+                    },
+                    {
+                        "@ID": "910",
+                        "Name": "Total Energy Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..18446744073709551615",
+                        "Units": "Ws",
+                        "Description": "The total energy usage of the device (accumulated value)"
+                    },
+                    {
+                        "@ID": "911",
+                        "Name": "Actual Power Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..4294967295",
+                        "Units": "W",
+                        "Description": "The actual power usage of the device. Scaling is 0.1W per unit"
+                    },
+                    {
+                        "@ID": "912",
+                        "Name": "Accuracy Class",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..64 bytes",
+                        "Units": null,
+                        "Description": "The accuracy class of the energy sensor on the device (using either % accuracy or a letter that defines the accuracy class)"
+                    },
+                    {
+                        "@ID": "930",
+                        "Name": "Operating Hours",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..4294967295",
+                        "Units": "h",
+                        "Description": "The total operating hours where the light point is on."
+                    },
+                    {
+                        "@ID": "931",
+                        "Name": "Adjusted Operating Hours",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..4294967295",
+                        "Units": null,
+                        "Description": "The total operating hours adjusted by the dim level of the luminaire."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "Physical Minimum Intensity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "Minimum intensity that can be set for this instance of a Light Point. This value is factory defined by luminaire or gear manufacturer."
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "Minimum Intensity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "The value set in this Resource limits the minimum output of the Light Point. when performing any transition operation (e.g. Switch(ON),'Dim(DOWN)','Step(DOWN)' or Set_Intensity(x)') the minimum intensity value indicated by this Resource will override any other definition or request input parameter value.\\nChanging this Resource stops any transition process, and the 'Remaining Transition Time' and 'Current Intensity' are updated.\\n\\t\\t\\t\\n**Note:** This value must be greater or equal to 'Physical Minimum Intensity' and smaller or equal to 'Maximum Intensity'. If a Light Point with fixed output is used, the 'Minimum Intensity' and 'Maximum Intensity' MUST be defined with the same value."
+                    },
+                    {
+                        "@ID": "105",
+                        "Name": "Maximum Intensity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "The value set in this Resource limits the maximum output of the Light Point. when performing any transition operation (e.g. Switch(ON),'Dim(UP)','Step(UP)' or Set_Intensity(x)') the maximum intensity value indicated by this Resource will override any other definition or request input parameter value.\\nChanging this Resource stops any transition process, and the 'Remaining Transition Time' and 'Current Intensity' are updated.\\n\\t\\t\\t\\n**Note:** This value must be greater or equal to 'Minimum Intensity'. If a Light Point with fixed output is used, the 'Minimum Intensity' and 'Maximum Intensity' MUST be defined with the same value."
+                    },
+                    {
+                        "@ID": "155",
+                        "Name": "Physical Minimum Colour Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "K",
+                        "Description": "Minimum colour temperature that can be set for this instance of a Light Point. This value is factory defined by luminaire or gear manufacturer."
+                    },
+                    {
+                        "@ID": "156",
+                        "Name": "Physical Maximum Colour Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "K",
+                        "Description": "Maximum colour temperature that can be set for this instance of a Light Point. This value is factory defined by luminaire or gear manufacturer."
+                    },
+                    {
+                        "@ID": "157",
+                        "Name": "Minimum Colour Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "K",
+                        "Description": "The value set in this Resource limits the minimum colour temperature output of the Light Point. When performing any colour temperature transition operation the minimum colour temperature value indicated by this resource will override any other definition or requested input parameter value.\\nChanging this resource stops any transition process, and the 'Remaining Colour Temperature Transition Time' and 'Current Colour Temperature' are updated.\\n\\t\\t\\t\\t\\t\\n**Note:** This value must be greater or equal to 'Physical Minimum Colour Temperature' and smaller or equal to 'Maximum Colour Temperature'."
+                    },
+                    {
+                        "@ID": "158",
+                        "Name": "Maximum Colour Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": "K",
+                        "Description": "The value set in this resource limits the maximum colour temperature output of the Light Point. When performing any colour temperature transition operation the maximum colour temperature value indicated by this resource will override any other definition or requested input parameter value.\\nChanging this resource stops any transition process, and the 'Remaining Colour Temperature Transition Time' and 'Current Colour Temperature' are updated.\\n\\t\\t\\t\\t\\t\\n**Note:** This value must be smaller or equal to 'Physical Colour Temperature' and greater or equal to 'Minimum Colour Temperature'."
+                    },
+                    {
+                        "@ID": "110",
+                        "Name": "Power On Behaviour",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0: CONFIGURED_ON\n\t\t\t\t1: FULL_ON\n\t\t\t\t2: RECALL",
+                        "Units": null,
+                        "Description": "Defines the default behaviour of the light point when it is switched 'On'. The following options are possible:\\n- *CONFIGURED_ON* intensity goes to the stored default value ('Power On Intensity') [default option]\\n- *FULL_ON* intensity always goes to the maximum intensity value allowed\\n- *RECALL* if available, the intensity is recalled from 'Stored Intensity', otherwise 'Power On Intensity' is used"
+                    },
+                    {
+                        "@ID": "111",
+                        "Name": "Power On Intensity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "Defines the default Intensity used in switch operations that result in a 'On' state. It is used if no intensity is given in the switch request payload and if 'Power On Behaviour' is CONFIGURED_ON. When this Resource is not defined, the value to be used should be '1'.\\n\\t\\t\\t\\t\\n**Note:** When setting this value, the Minimum/Maximum intensity limits must be validated. A write request that requires the final value to be adjusted should send a reply message with the corrected value."
+                    },
+                    {
+                        "@ID": "114",
+                        "Name": "Stored Intensity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "This Resource represents a copy of the last 'Current Intensity' that is bigger than 0, before a power cycle is triggered. It should be updated in NVM whenever a transition process is completed, and optionally if a power cycle is triggered."
+                    },
+                    {
+                        "@ID": "115",
+                        "Name": "System Failure Intensity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.000001..1.0",
+                        "Units": null,
+                        "Description": "This is the intensity value the light point goes to if the connection to the network is lost for longer than 'System Failure Time'.\\n\\t\\t\\t\\t\\n**Note:** When setting the value of this Resource, the limits of 'Minimum Intensity' and 'Maximum Intensity' must be validated. A write operation that requires the final value to be adjusted should result in a reply message with the final corrected value.\\nIndependently of the previous limits, a '0' value is allowed and it means, in case of network failure, the 'On/Off Status' is set to 'Off'."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

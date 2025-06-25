@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Photocell",
+            "Description1": "A uCIFI photocell object is used for lighting control, particularly to identify when light should be switched ON/OFF.",
+            "ObjectID": "3419",
+            "ObjectURN": "urn:oma:lwm2m:ext:3419:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "ON lux level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "lx",
+                        "Description": "Lux level below which the photocell switches its relay ON or sends a switch ON message on the network."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "OFF lux level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "lx",
+                        "Description": "Lux level above which the photocell switches its relay OFF or sends a switch OFF message on the network."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Photocell status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if lux level is below ON lux level. Set to False if lux level is above OFF lux."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

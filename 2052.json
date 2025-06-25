@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhEcDefParamValues",
+            "Description1": "This Object represents a specific set of default values for the CMDH related parameters Request Expiration Timestamp, Result Expiration Timestamp, Operational Execution Time, Result Persistence and Delivery Aggregation that are applicable for a given Event Category if these parameters are not specified in the message.",
+            "ObjectID": "2052",
+            "ObjectURN": "urn:oma:lwm2m:ext:2052",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "ApplicableEventCategory",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains  list of Event Category values"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "DefaultRequestExpTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains the default value for the Request Expiration Timestamp parameter when such a parameter is not set in the request"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "DefaultResultExpTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains the default value of the Result  Expiration Timestamp parameter when such a parameter is not set in the request"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "DefaultOpExecTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains the default value of the Operation Execution Time parameter when such a parameter is not set in the request"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "DefaultRespPersistence",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains the default value of the Result  Persistence parameter when such a parameter is not set in the request"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "DefaultDelAggregation",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains the default value of the Delivery Aggregation  parameter when such a parameter is not set in the request"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

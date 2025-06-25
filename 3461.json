@@ -1,0 +1,72 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Sensor Group Device Capabilities",
+            "Description1": "This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.",
+            "ObjectID": "3461",
+            "ObjectURN": "urn:oma:lwm2m:ext:3461",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Remote Sensor Management capabilities",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the capabilities supported by the device to manage and store remote sensors information retrieved from the sensor group as a Bit Mask:\nBit 0: Dynamic mapping support - Remote sensors can be discovered as new messages are received. If explicit mapping is required, new corresponding object instances will be automatically created\nBit 1: Implicit mapping support - Sensor state is maintained on an implementation specific internal database instead of being reflected into local objects\nBit 2: Auto clear support - Automatic clear to the default value is supported after validity time is expired",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Max number of explicit sensors",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "The maximum number of sensors and sensor states the device can instantiate.\nThis value is calculated by the count of all different sensor objects associated with a sensor groups.\nThis value shall be set to 0 if explicit mapping is not supported\nOn uCiFi compliant devices support for static explicit mapping is mandatory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Max number of implicit sensors",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "The maximum number of sensors and sensor states the device can keep in memory.\nThis value is calculated by the count of all different sensor objects associated with a sensor groups.\nThis value shall be set to 0 if implicit mapping is not supported.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Data Fusion Capabilities",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Specifies the data fusion algorithms supported by the device represented as a bitmask:\nBit 0: OR\nBit 1: AND\nBit 2: ADD\nBit 3: MAX\nBit 4: MIN\nBit 5: LAST - The last value reported by any sensor in the group becomes the group state value\nBit 6: Reserved (Custom 1)\nBit 7: Reserved (Custom 2)\nIf the device supports no fusion capabilities, this resource should be set to 0.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Reset DSG objects",
+                        "Type": null,
+                        "Operations": "E",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "When executed, trigger a complete wipe of the distributed sensor groups already commissioned",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

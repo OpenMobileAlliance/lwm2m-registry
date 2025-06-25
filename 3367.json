@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "macRachAttemptReasonEvent",
+            "Description1": "RACH Information - reason for initiating RACH",
+            "ObjectID": "3367",
+            "ObjectURN": "urn:oma:lwm2m:ext:3367",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "MacRachAttemptReasonType",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = Connection-Request\n2 = Radio-Link-Failure\n3 = UL-Data-Arrival\n4 = DL-Data-Arrival\n5 = Handover"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "ueID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "UE ID"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "contentionBased",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 = Contention based\n0 = otherwise"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "preamble",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "preamble= The random access preambles are generated from Zadoff-Chu sequences with zero correlation zone (3GPP TS 36.211)"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "preambleGroupChosen",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0: Group A, 1: Group B"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

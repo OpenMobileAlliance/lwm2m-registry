@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Manifest",
+            "Description1": "This object provides a range of information related to updating packages on a device",
+            "ObjectID": "10252",
+            "ObjectURN": "urn:oma:lwm2m:x:10252",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Manifest",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Content of a new manifest"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..8",
+                        "Units": null,
+                        "Description": "Current state of manifest processing\n0.\tUninitialised\n1.\tIdle\n2.\tProcessing manifest\n3.\tAwaiting download approval\n4.\tDownloading \n5.\tDownloaded\n6.\tAwaiting application approval\n7.\tUpdating\n8.\tRebooting"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Manifest Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..19",
+                        "Units": null,
+                        "Description": "Final result of the device processing a manifest.\n0.\tUninitialised\n1.\tSuccess\n2.\tManifest timeout. The Manifest URI has timed-out.\n3.\tManifest not found. The Manifest URI not found.\n4.\tManifest failed integrity check. The manifest integrity check failed. \n5.\tManifest rejected. The Manifest attributes do not apply to this device.\n6.\tManifest certificate not found\n7.\tManifest signature failed. The Manifest signature is not recognised by this device.\n8.\tDependent manifest not found\n9.\tNot enough storage for the new asset\n10.\tOut of memory during download process\n11.\tConnection lost during download process\n12.\tAsset failed integrity check\n13.\tUnsupported asset type\n14.\tInvalid asset URI\n15.\tTimed out downloading asset\n16.\tUnsupported delta format\n17.\tUnsupported encryption format\n18.\tAsset update successfully completed\n19.\tAsset updated successfully after recovery"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Payload Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains payload-specific errors or output."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Asset Hash",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Hash of the installed asset."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Manifest version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Version of the current manifest."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Asset Installation Progress",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Progress update of the asset installation process (in bytes)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Campaign Id",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Id of campaign affecting this device. There currently isn\u2019t any logic on the server or the client to handle this."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Manual Trigger",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Manually apply the asset update. This will only have effect if the manifest requires this. The state resource must also be in the downloaded state for the execute command to be actioned."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

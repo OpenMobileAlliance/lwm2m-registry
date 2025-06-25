@@ -1,0 +1,385 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LPWAN Mesh Statistics",
+            "Description1": "The uCIFI LPWAN Mesh Statistics object enables the client to collect statistical information specifically tailored to monitor performance of 805.15.4 mesh networks. The object encompasses resources that provide visibility over both MAC layer and Network Layer statistics, the applicability of which is dependent on the specific 802.15.4 technology.",
+            "ObjectID": "3448",
+            "ObjectURN": "urn:oma:lwm2m:ext:3448",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Tx Packets Total",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IEEE 802.15.4 macTxSuccessCount, Packets transmitted and acked with no retries."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Tx Success on single Retry",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IEEE 802.15.4 macRetryCount, successful transmission after one retry."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Tx Success on Multi Retry",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IEEE 802.15.4 macMultipleRetryCount, TX acked after more than one retry."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Tx Discarded packets",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets that failed transmission."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "TX CCA failures",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets that failed to transmit due to busy channel."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Tx ACK failure",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets that failed to transmit due to lack of acknowledgement."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Rx Packets Total",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets received."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Rx Discarded Packets",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets discarded."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Rx Malformed Packets",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of packets that failed to parse due to inconsistencies on frame headers."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Rx Unsecure Packets",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total packets discarded due to inconsistencies on security information (802.15.4 macSecurityFailure)."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Rx duplicate Packets",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of duplicate packets droped (802.15.4 macDuplicateFrameCount)."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Beacon Frames Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Beacons frames transmitted by the device. These are used for mesh network management operations (advertising, discovery, etc.)."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Beacon Frames Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Beacons frames received by the device. These are used for mesh network management operations (advertising, discovery, etc.)."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Ack Frames Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Acknowledgment frames transmitted by the device."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Ack Frames Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Acknowledgment frames received by the device."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Command Frames Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Command frames transmitted by the device. These maybe used for mesh network management operations (association, disassociation, beacon request, etc.)."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Command Frames Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Command frames received by the device. These maybe used for mesh network management operations (association, disassociation, beacon request, etc.)."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Data Frames Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Data frames transmitted by the device."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Data Frames Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Used as a cumulative counter to report on the number of IEEE 802.15.4 Data frames received by the device."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Data Bytes Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of payload data bytes sent via this interface."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Data Bytes Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Total number of payload data bytes received via this interface."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "Unicast Packets Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Unicast Packets Sent."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "Unicast Packets Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Unicast Packets Received."
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "Multicast Packets Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Multicast Packets Sent."
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "Multicast Packets Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Multicast Packets Received."
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "Broadcast Packets Sent",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Broadcast Packets Sent."
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "Broadcast Packets Received",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Count of Broadcast Packets Received."
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset all resources and start collection period."
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "Stop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stop collecting information, but do not reset resources."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

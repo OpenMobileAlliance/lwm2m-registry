@@ -1,0 +1,440 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Robot Control",
+            "Description1": "This LWM2M Object includes all operations on robots.",
+            "ObjectID": "10329",
+            "ObjectURN": "urn:oma:lwm2m:x:10329",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Collision Detection",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Collision Detection is enabled or not, \n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Drop Detection",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Drop Detection is enabled or not,\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Automatic Navigation",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Automatic Navigation is enabled or not,\n\t\t\t\tthe setting of which is a Boolean value (1,0) where 1 is Enabled and 0 is Disabled."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Robot Shutdown",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Shut down the robot."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "Robot Reboot",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reboot the robot."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "Robot Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the robot to factory settings."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "Robot Wakeup",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Let the robot to wake up."
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "Robot Sleep",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Let the robot to sleep."
+                    },
+                    {
+                        "@ID": "105",
+                        "Name": "Robot Self-checking",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Let the robot to do self-checking."
+                    },
+                    {
+                        "@ID": "106",
+                        "Name": "Emergency Braking",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Bark the robot emergently."
+                    },
+                    {
+                        "@ID": "107",
+                        "Name": "Emergency Braking Release",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Release Emergency Braking for the robot."
+                    },
+                    {
+                        "@ID": "110",
+                        "Name": "Action Execution",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Let the robot to execute a task, parameter: Action name|possible parameters if any."
+                    },
+                    {
+                        "@ID": "111",
+                        "Name": "Action List Upload",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload action list, parameter:select action list to be uploaed."
+                    },
+                    {
+                        "@ID": "112",
+                        "Name": "Action List Download",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Download action list, parameter: \n\t\t\t\tdownload path if present, else store in default directory with default name."
+                    },
+                    {
+                        "@ID": "113",
+                        "Name": "Group Dancing Program Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Change playbill for group dancing, parameter:playbill."
+                    },
+                    {
+                        "@ID": "114",
+                        "Name": "Navigation Map Upload",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload navigation map, parameter:select navigation map to be uploaded."
+                    },
+                    {
+                        "@ID": "115",
+                        "Name": "Group Dancing Program Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Change playbill for group dancing, parameter:playbill."
+                    },
+                    {
+                        "@ID": "116",
+                        "Name": "Navigation Map Download",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Download navigation map, parameter: \n\t\t\t\tdownload path if present, else store in default directory with default name."
+                    },
+                    {
+                        "@ID": "117",
+                        "Name": "Route list Execution",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execute route list , parameter:if any."
+                    },
+                    {
+                        "@ID": "118",
+                        "Name": "Route list Upload",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload route list, parameter:select route list to be uploaded."
+                    },
+                    {
+                        "@ID": "119",
+                        "Name": "Route list Download",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Download route list, parameter: \n\t\t\t\tdownload path if present, else store in default directory with default name."
+                    },
+                    {
+                        "@ID": "120",
+                        "Name": "Automatic Navigation Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Automatic Navigation: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "121",
+                        "Name": "Manual Navigation",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Manual Navigation: Parameter: route info."
+                    },
+                    {
+                        "@ID": "122",
+                        "Name": "Moving to Charging Station",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Moving to Charging Station."
+                    },
+                    {
+                        "@ID": "123",
+                        "Name": "Moving to Specified location",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Manual Navigation: Parameter: route info."
+                    },
+                    {
+                        "@ID": "124",
+                        "Name": "Low Frequency Patrol Broadcasting",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Patrol broadcast in low frequency."
+                    },
+                    {
+                        "@ID": "125",
+                        "Name": "Task Start",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Start a task, parameter:task name."
+                    },
+                    {
+                        "@ID": "126",
+                        "Name": "Task Stop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Stop a task, parameter:task name."
+                    },
+                    {
+                        "@ID": "127",
+                        "Name": "Task Suspend",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Suspend a task, parameter:task name."
+                    },
+                    {
+                        "@ID": "128",
+                        "Name": "Task Resume",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Resume a task, parameter:task name."
+                    },
+                    {
+                        "@ID": "129",
+                        "Name": "Video Upload",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload a video, parameter:select video to be uploaded."
+                    },
+                    {
+                        "@ID": "130",
+                        "Name": "Picture Upload",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload picture, parameter:select picture to be uploaded."
+                    },
+                    {
+                        "@ID": "131",
+                        "Name": "Default Language Switching",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Upload picture, parameter:Language name."
+                    },
+                    {
+                        "@ID": "132",
+                        "Name": "Intonation Change",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Change intonation of the robot, parameter:Intonation name."
+                    },
+                    {
+                        "@ID": "133",
+                        "Name": "Intonation Change",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Change intonation of the robot, parameter:Intonation name."
+                    },
+                    {
+                        "@ID": "134",
+                        "Name": "Speaking with Action",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Robot speaks with specific action, parameter:key words|action name."
+                    },
+                    {
+                        "@ID": "135",
+                        "Name": "Collision Detection Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Collision Detection: Parameter: 1:Enable, 0:Disable"
+                    },
+                    {
+                        "@ID": "136",
+                        "Name": "Drop Detection Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Drop Detection: Parameter: 1:Enable, 0:Disable"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

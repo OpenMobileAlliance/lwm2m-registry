@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Event Log",
+            "Description1": "The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.\nThe Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.",
+            "ObjectID": "20",
+            "ObjectURN": "urn:oma:lwm2m:oma:20:2.1",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "2.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4010",
+                        "Name": "LogClass",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "255",
+                        "Units": null,
+                        "Description": "Define the Log Event Class: 0: generic (default)  1: system   2: security  3: event   4: trace   5: panic   6: charging [7-99]: reserved [100-255]: vendor specific"
+                    },
+                    {
+                        "@ID": "4011",
+                        "Name": "LogStart",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Actions:\na) Start data collection(DC)\nb) LogStatus is set to 0 (running)\nc) DC is emptied (default) or extended according arg'0' value \nArguments definitions are described in the table below."
+                    },
+                    {
+                        "@ID": "4012",
+                        "Name": "LogStop",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Actions: a) Stop data collection(DC) b)  1st LSB of LogStatus is set to \"1\"(stopped) c) DC is kept (default) or emptied according arg'0' value Arguments definitions are described in the table below."
+                    },
+                    {
+                        "@ID": "4013",
+                        "Name": "LogStatus",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "8-Bits",
+                        "Units": null,
+                        "Description": "Data Collection process status: Each bit of this Resource Instance value defines specific status: 1st LSB 0=running, 1=stopped 2nd LSB 1=LogData contains Valid Data 0=LogData doesn't contain Valid Data 3rd LSB 1=Error occurred during Data Collection 0=No error [4th -7th ] LSB:reserved 8th LSB: vendor specific."
+                    },
+                    {
+                        "@ID": "4014",
+                        "Name": "LogData",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Read Access on that Resource returns the Data Collection associated to the current Object Instance."
+                    },
+                    {
+                        "@ID": "4015",
+                        "Name": "LogDataFormat",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "255",
+                        "Units": null,
+                        "Description": "when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned\n. when retrieved by the Server, this Resource indicates which specific data format is used when the LogData Resource is returned to the Server \n0  or Resource not present : no specific data format (sequence of bytes)\n1 : OMA-LwM2M TLV format\n2 : OMA-LwM2M JSON format\n3:  OMA-LwM2M CBOR format\n[4..99] reserved\n[100..255] vendor specific data format"
+                    },
+                    {
+                        "@ID": "4016",
+                        "Name": "LogDataIncremental",
+                        "Operations": null,
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Log data collected since the last Send operation described for the LogDataIncremental Minimum Send Interval resource, or since that interval has been set to a positive value if the first Send operation has not yet been performed.\nThe data shall have the same format as the LogData resource, but its collection and emptying is independent from it and from the LogStart/LogStop logic.\nThis resource may only be included in a Send operation payload. Attempting to access it via the Device Management and Service Enablement Interface shall result in generating the Method Not Allowed error."
+                    },
+                    {
+                        "@ID": "4017",
+                        "Name": "LogDataIncrementalMinimumSendInterval",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.\nIf the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server."
+                    }
+                ]
+            },
+            "Description2": "As an extension to the definition of resource 4013 (LogStatus), within the context of this Object starting with version 2.1, the 4th LSB, defined in the Resource Description as \"reserved\", shall mean: 1=LogDataIncremental collection active, 0=LogDataIncremental collection stopped."
+        }
+    }
+}

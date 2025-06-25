@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Edge computing generic condition",
+            "Description1": "The uCIFI edge computing generic condition object defines a vendor-specific condition (e.g. when a resource or an object is equal to a particular value) at which a particular script should be executed by the device.",
+            "ObjectID": "3439",
+            "ObjectURN": "urn:oma:lwm2m:ext:3439",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Vendor condition",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Condition described in a vendor specific way."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Script identifier",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Object URN/Resource ID of the script to apply to the time/days defined in the vendor condition resource."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Non supported time condition",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if the device can\u2019t support the condition."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

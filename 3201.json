@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Digital Output",
+            "Description1": "Generic digital output for non-specific actuators",
+            "ObjectID": "3201",
+            "ObjectURN": "urn:oma:lwm2m:ext:3201:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "5550",
+                        "Name": "Digital Output State",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The current state of a digital output."
+                    },
+                    {
+                        "@ID": "5551",
+                        "Name": "Digital Output Polarity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The polarity of the digital output as a Boolean (False = Normal, True = Reversed)."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

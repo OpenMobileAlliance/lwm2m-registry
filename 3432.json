@@ -1,0 +1,263 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Traffic Counter",
+            "Description1": "The uCIFI traffic counter provides vehicle counting and traffic analysis data. A traffic counting device may implement multiple instances of this traffic counter object, each of them being in charge of counting different categories of vehicles (e.g. bikes, cars, trucks).",
+            "ObjectID": "3432",
+            "ObjectURN": "urn:oma:lwm2m:ext:3432:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Vehicle type",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Identifies the Vehicle type(s) detected in conformance with DATEX II v3 specifications.\nThe resource instance ID used here should match, the remaining resource IDs under this object for measurement taken by the device for the specified vehicle type. \nInstance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any type)\n\n0=Vehicle normally used for agricultural purposes, e.g. tractor, combined harvester etc.\n1=Vehicle of any type.\n2=Articulated bus\n3=Articulated trolley bus\n4=Articulated vehicle.\n5=Bicycle.\n6=Bus.\n7=Vehicles designed and constructed for the carriage of passengers and comprising no more than eight seats in addition to the driver's seat, and having a maximum mass (\"technically permissible maximum laden mass\") not exceeding 3.5 tons (M1).\n8=Caravan.\n9=Car or light vehicle.\n10=Car towing a caravan.\n11=Car towing a trailer.\n12=Vehicle normally used for construction or maintenance purposes, e.g. digger, excavator, bulldozer, lorry mounted crane etc.\n13=Four wheel drive vehicle.\n14=Vehicles with a total weight above 3,500 kg (vehicle and load).\n15=Heavy goods vehicle with trailer\n16=A transporter for heavy duty (usually with abnormal dimensions).\n17=Vehicle whose weight means it should be classed as a heavy vehicle\n18=High sided vehicle.\n19=Vehicles for the carriage of goods and having a maximum mass not exceeding 3.5 tonnes (class N1).\n20=Large car\n21=Vehicles for the carriage of goods and having a maximum mass exceeding 3.5 tonnes (belonging to class N2 when not exceeding 12 tonnes, otherwise class N3).\n22=Light goods vehicle with trailer\n23=A heavy lorry that is longer than normal.\n24=Lorry of any type.\n25=Metro\n26=Vehicles designed and constructed for the carriage of passengers, comprising more than eight seats in addition to the driver's seat, and having a maximum mass not exceeding 5 tonnes (class M2).\n27=Moped (a two wheeled motor vehicle characterized by a small engine typically less than 50cc and by normally having pedals).\n28=Motorcycle.\n29=Three wheeled vehicle comprising a motorcycle with an attached side car.\n30=Motorhome\n31=Motorscooter (a two wheeled motor vehicle characterized by a step-through frame and small diameter wheels).\n32=Passenger car\n33=Small car\n34=Vehicle with large tank for carrying bulk liquids.\n35=Three wheeled vehicle of unspecified type.\n36=Trailer.\n37=Tram.\n38=Trolley bus\n39=Two wheeled vehicle of unspecified type.\n40=Van.\n41=Vehicle (of unspecified type) towing a caravan.\n42=Vehicle with catalytic converter.\n43Vehicle without catalytic converter.\n44=Vehicle (of unspecified type) towing a trailer.\n45n=Vehicle with even numbered registration plate.\n46=Vehicle with odd numbered registration plate.\n99=Unknown.\n100=Other than as defined in this enumeration.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Cumulated number",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of vehicles counted since last reset."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Reset cumulated number",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the cumulated number of vehicles."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Cumulated number today",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of vehicles counted today."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Measuring period 1",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time period 1 during which the counter shall provide number of vehicles (e.g. 1 hour)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Measuring period 2",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time period 2 during which the counter shall provide number of vehicles (e.g. 15 minutes)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Measuring period 3",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time period 3 during which the counter shall provide number of vehicles (e.g. 5 minutes)."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Cumulated number during last period 1",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of vehicles counted during the last period 1 (e.g. 1 hour)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Cumulated number during last period 2",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of vehicles counted during the last period 2 (e.g. 15 minutes)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Cumulated number during last period 3",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of vehicles counted during the last period 3 (e.g. 5 minutes)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Average speed during last period 1",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average speed measured on the vehicles during the last period 1 (e.g. 1 hour)."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Average speed during last period 2",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average speed measured on the vehicles during the last period 2 (e.g. 15 minutes)."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Average speed during last period 3",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average speed measured on the vehicles during the last period 3 (e.g. 5 minutes)."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Average distance during last period 1",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average distance between two vehicles measured during the last period 1 (e.g. 1 hour)."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Average distance during last period 2",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average distance between two vehicles measured during the last period 2 (e.g. 15 minutes)."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Average distance during last period 3",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Average distance between two vehicles measured during the last period 3 (e.g. 5 minutes)."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Speed limit threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Speed limit threshold used to calculate the percentage of vehicles above speed limit."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Percentage above speed limit",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Percentage of vehicles driving above speed limit."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

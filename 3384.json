@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "sipSubscriptionEvent",
+            "Description1": "SIP Subscription status",
+            "ObjectID": "3384",
+            "ObjectURN": "urn:oma:lwm2m:ext:3384",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "eventType",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "-obtained header of the SUBSCRIBE\n1 = Registration\n2 = Presence\n3 = Conference\n4 = Dialog\n5 = Call-info"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "subscriptionResult",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "-1 = Event subscription message not available\n0 = Success (when 200 OK received is followed by NOTIFY, and applies to all Event Types)\n1 = Failure (when any error other than 401 is received; else when 408 timeout occurs)"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

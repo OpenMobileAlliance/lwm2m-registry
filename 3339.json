@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Audio Clip",
+            "Description1": "This IPSO object should be used for a speaker that plays a pre-recorded audio clip or an audio output that is sent elsewhere. For example, an elevator which announces the floor of the building. A resource is provided to store the clip, a dimmer resource controls the relative sound level of the playback, and a duration resource limits the maximum playback time. After the duration time is reached, any remaining samples in the clip are ignored, and the clip player will be ready to play another clip.",
+            "ObjectID": "3339",
+            "ObjectURN": "urn:oma:lwm2m:ext:3339",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "5522",
+                        "Name": "Clip",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator)."
+                    },
+                    {
+                        "@ID": "5523",
+                        "Name": "Trigger",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Trigger initiating actuation."
+                    },
+                    {
+                        "@ID": "5548",
+                        "Name": "Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Used to represent a level control such as audio volume."
+                    },
+                    {
+                        "@ID": "5524",
+                        "Name": "Duration",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The duration of the sound once trigger."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

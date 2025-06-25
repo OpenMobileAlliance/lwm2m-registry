@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "powerupLog",
+            "Description1": "One time event sent by the device at power up.",
+            "ObjectID": "3351",
+            "ObjectURN": "urn:oma:lwm2m:ext:3351",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "deviceName",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human-readable name of the device"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "toolVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The tool version that the device supports - used to determine the logging object/resource version to be used for parsing"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "IMEI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IMEI of device"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "IMSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IMSI of device"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "MSISDN",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "MSISDN of device"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

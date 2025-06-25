@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Thread CLI Command",
+            "Description1": "This LwM2M Object provides access to issuing custom CLI commands to Thread devices",
+            "ObjectID": "10486",
+            "ObjectURN": "urn:oma:lwm2m:x:10486",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "CLI version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Thread Command-Line Interface (CLI) version"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Command",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The command that will be issued."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Execute",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Send the command to the Thread CLI."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The string returned by the Thread CLI."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

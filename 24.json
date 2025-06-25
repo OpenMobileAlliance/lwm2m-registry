@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "MQTT Server",
+            "Description1": "This object defines configuration parameters for an MQTT client to interact with a MQTT server.",
+            "ObjectID": "24",
+            "ObjectURN": "urn:oma:lwm2m:oma:24",
+            "LWM2MVersion": "1.2",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Will Retain",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Will Retain value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Will Topic",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Will Topic to include in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Will Message",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Will Message to include in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Clean Session",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Clean Session value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Will QoS",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "The Will QoS value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Keep Alive",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "The Keep Alive value to declare in the MQTT CONNECT message."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Client Identifier",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Client Identifier identifies the MQTT client to the MQTT server. MQTT server must support ClientIds which are between 1 and 23 UTF-8 encoded bytes in length, and that contain only the characters \"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\". MQTT server may allow ClientId's that contain more than 23 encoded bytes and may support ClientId's that contain characters not included in the list."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "User Name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The User Name to declare in the MQTT CONNECT message. It must be a UTF-8 encoded string. It can be used by the MQTT server for authentication and authorization."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Password",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Password value to declare in the MQTT CONNECT message."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

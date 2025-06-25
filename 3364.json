@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "emmFailureCauseEvent",
+            "Description1": "Triggered at EMM failure - failure cause is logged",
+            "ObjectID": "3364",
+            "ObjectURN": "urn:oma:lwm2m:ext:3364",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "0",
+                    "Name": "EMMCause",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Integer",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "EMM Failure Causes - 3GPP 24.301"
+                }
+            },
+            "Description2": null
+        }
+    }
+}

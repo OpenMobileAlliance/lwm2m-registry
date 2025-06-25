@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhNwAccessRule",
+            "Description1": "This Object defines limits in usage of specific underlying networks for forwarding information to other CSEs during processing of CMDH-related requests in a CSE.",
+            "ObjectID": "2055",
+            "ObjectURN": "urn:oma:lwm2m:ext:2055",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "TargetNetwork",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains identifiers of Underlying networks"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "SpreadingWaitTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Contains a value in ms such that before accessing the underlying network (typically to forward an incoming request), the CSE will wait for an additional amount of time randomly chosen between 0 and this value"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "MinReqVolume",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "B",
+                        "Description": "Minimum amount of data that needs to be aggregated before any of the Underlying Networks matching with the targetNetwork Resource of the current Instance of the  CmdhNwAccessRule Object can be used for forwarding information to other CSEs."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "BackOffParameters",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reference to an Instance of BackOffParameterSet Object defining parameters that define how usage of any of the Underlying Networks matching with the targetNetwork Resource  of that Object Instance, shall be handled when attempts to use such networks have failed."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "OtherConditions",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of additional conditions that need to be fulfilled before any of the Underlying Networks matching with the TargetNetwork Resource of this CmdhNwAccessRule Object Instance can be used for forwarding information to other CSEs."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "AllowedSchedule",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains time schedules in form of extended crontab syntax defined in oneM2M Protocol TS-0004"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

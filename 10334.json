@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Robot Alarm",
+            "Description1": "Here lists all items of an alarm reported by the robot.",
+            "ObjectID": "10334",
+            "ObjectURN": "urn:oma:lwm2m:x:10334",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Entity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "4..63",
+                        "Units": null,
+                        "Description": "Contains the object ID and object instance ID/name, for example: </10320/2>."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Probable Cause",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Probable cause of this alarm."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Specific Problem",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Specific Problem of of this alarm."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Alarm Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2..6",
+                        "Units": null,
+                        "Description": "The Alarm Type of this alarm,\n\t\t\t\t2:Communications, 3:Quality of Service (QoS), 4:Processing Error, \n\t\t\t\t5:Equipment, 6:Environmental."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Severity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..5",
+                        "Units": null,
+                        "Description": "The severity of this alarm. Critical(1), Major(2), Minor(3), Warning(4), Cleared(5)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Report Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "When was this alarm reported."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Sequence No",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..9223372036854775807",
+                        "Units": null,
+                        "Description": "Sequence No of this alarm, used to detect alarm loss. A 63 bit value with range 0..2^63-1."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Additional Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The information related to this alarm."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

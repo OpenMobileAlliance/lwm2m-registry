@@ -1,0 +1,82 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Distributed Sensor Message",
+            "Description1": "The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.",
+            "ObjectID": "3460",
+            "ObjectURN": "urn:oma:lwm2m:ext:3460",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Group ID",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "The identifier of the group. This resource can be used to filter the incoming message.\nThis resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Publishing timestamp",
+                        "Type": "Time",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "UNIX timestamp related to the time when the measurement has been collected by the publisher.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Publisher State URI",
+                        "Type": "String",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "URI of the resource that contains the status information, to be used for data fusion and to be eventually filtered upon reception",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Publisher ID",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "If this resource is omitted, the Publisher State URI shall be properly translated in advance in order to map the physical sensor instance on the publisher to the corresponding publisher ID specified within the Distributed Sensor Group.\nOtherwise, the real physical sensor instance can be used and the translation has to be performed upon reception",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Auto Clear Validity Time",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "If Auto-clear capability is supported by the subscriber, the validity of the attached data can be limited for the specified amount of time, after which it can be discarded or reset to a default value (see Auto Clear Default Value)",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Auto Clear Default Value",
+                        "Type": "Float",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Default value to be restored when the validity time is expired. If not specified 0/false has to be assumed",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Water Tank",
+            "Description1": "This object provides site specific configuration for devices operating in a water tank.",
+            "ObjectID": "10502",
+            "ObjectURN": "urn:oma:lwm2m:x:10502",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Valve Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The type of discharge valve used:\n1. Valve Type 1 - Battery powered pump with feedback\n2. Valve Type 2 - Mains powered pump with feedback\n3. Valve Type 3 - Mains powered pump without feedback"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Sensor Offset",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Distance from the sensor face to the bottom of the tank measured in metres"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Tank Cross Section",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m2",
+                        "Description": "Cross-Sectional area of the tank in m^2"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Tank GPS Location Longitude",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "GPS Location - Longitude of the device in the format [+/-]12.345678"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Tank GPS Location Latitude",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "GPS Location - Latitude of the device in the format [+/-]12.345678"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Minimum Tank Discharge Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Minimum water level that the tank can be discharged to in metres"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Valve State Validation Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The amount of time to wait in seconds before validating the hardware state of the valve if feedback is configured"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Tank Reserve Pump Cut-In Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "The water level threshold above which the optional domestic usage pump is enabled if configured as Valve Type 1."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Tank Reserve Pump Cut-Out Level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "The water level threshold below which the optional domestic usage pump is disabled if configured as Valve Type 1."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Maximum Discharge Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Maximum expected discharge duration in seconds. Used to limit the duration of any discharge event."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Static Objects",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "The distances to static objects identified in the tank"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Static Objects Count",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The number of static objects indentified in the tank"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Catchment Area",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m2",
+                        "Description": "The area of the roof or other surfaces that collects rainwater to be stored in the rainwater tank"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

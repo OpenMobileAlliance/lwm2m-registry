@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Receiving Object",
+            "Description1": "The 'oA Receiving Object' provides a resource for sensors/actuators to report their status message to. It is used with control objects as logical object that forwards the sensor and status data to the executing object.\\nIt is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode.",
+            "ObjectID": "3402",
+            "ObjectURN": "urn:oma:lwm2m:ext:3402",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "909",
+                        "Name": "Executing Object",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to the Object Instance in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)"
+                    },
+                    {
+                        "@ID": "923",
+                        "Name": "Status Report",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The actuators and sensors report their status to this resource. It is also used to receive the 'go bootstrap' message, using the Struct-ID 255, in OOTB mode."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

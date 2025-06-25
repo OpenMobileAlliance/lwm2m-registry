@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "PM Threshold",
+            "Description1": "Here defines all items needed in PM Threshold management.",
+            "ObjectID": "10333",
+            "ObjectURN": "urn:oma:lwm2m:x:10333",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Entity",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "4..63",
+                        "Units": null,
+                        "Description": "Contains the object ID and object instance ID/name, for example: </10320/2>."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Performance Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Referrence to a PM item, similar with Corelnk in LwM2M 1.1, \n\t\t\t\t</object ID/object instance ID/resoure ID>, for example:/10322/2/4"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "High Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "High Threshold of this PM item."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Low Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Low Threshold of this PM item."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,182 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Device Extension",
+            "Description1": "The uCIFI device extension is an extension to the standard Lightweight M2M device (object ID 3) using the resource called \"ExtDevInfo\" (resource ID 22).",
+            "ObjectID": "3410",
+            "ObjectURN": "urn:oma:lwm2m:ext:3410:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "GTIN model number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Standard global trade-in international number for the control device."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Manufacturer identifier",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Unique identifier of the manufacturer of the control device, equivalent to IEEE's OUI (Organizational Unique Identifier). This value should be a Hexadecimal value. This value may be used by an online uCIFI product catalog server, for software modules to retrieve the data model of a device using this attribute associated with the model number on the \"Device\" (Id=3) object."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "User-given name",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "User-readable name of the device set by the user."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Asset identifier",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Identifier of the asset (e.g. meter, luminaire, container) that is controlled by the device."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Installation date",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Installation date of the device."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Software update",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True while software within the device is being updated."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Maintenance",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True when the device is in maintenance mode."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Configuration reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the configuration parameters (and only the configuration parameters) of the device. It does not clear any counter (e.g. kWh counter or operating hour counter)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Device operating hours",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "h",
+                        "Description": "Cumulated number of hours during which the device has been powered on."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Additional firmware information",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Additional information about peripheral firmware versions. The format is left to the vendor."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "DST Start",
+                        "Type": "Time",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "The precise date and UTC time during the year when Daylight Saving Time begins, represented as Unix Time.",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "DST End",
+                        "Type": "Time",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "The precise date and UTC time during the year when Daylight Saving Time ends, represented as Unix Time.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "DST Offset",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "The amount by which the UTC offset changes when Daylight Saving Time is in effect, represented as ISO 8601 time offset format. A DST offset of one hour is represented as \"01:00\"",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Uptime",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Number of seconds since the last reboot of the device.",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "RFD device",
+                        "Type": "Boolean",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Set to true if the device is a Reduce Functional Device running on battery.",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

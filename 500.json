@@ -1,0 +1,132 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CoAP Config",
+            "Description1": "This object is used to configure the CoAP transmission parameters (RFC7252) and other parameters that affect CoAP transmission.",
+            "ObjectID": "500",
+            "ObjectURN": "urn:oma:lwm2m:oma:500",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Network Bearer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Identify the network bearer for which these parameters are applicable. The value is from the network bearer list defined in the Connectivity Monitoring Object (ID: 4). Please, verify the list of currently reserved values."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "ACK_TIMEOUT",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The initial value of retransmission timeout in CoAP. Default is set to that of RFC7252, that is 2 seconds."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "ACK_RANDOM_FACTOR",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The initial value of retransmission timeout in CoAP. Default is set to that of RFC7252, that is a value of 1.5."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "MAX_RETRANSMIT",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum number of retransmissions. Default is set to that of RFC7252, that is 4 retransmissions."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "NSTART",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of simultaneous outstanding interactions that the LwM2M client can accept from a given LwM2M Server. An outstanding interaction is either a CON for which an ACK has not yet been received but is still expected (message layer) or a request for which neither a response nor an Acknowledgment message has yet been received but is still expected. Default is set to that of RFC7252, that is 1 interaction."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "DEFAULT_LEISURE",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "If a server does decide to respond to a multicast request, it should not respond immediately. Instead, it should pick based on RFC7252, Section 8.2. If the LwM2M Client does not have data to compute the Leisure time it should use that of Default Leisure as specified in RFC7252."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "PROBING_RATE",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "B/s",
+                        "Description": "This resource represents the maximum probing rate accepted by this LwM2M Client in bytes per second."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "DTLS Retransmission Timer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The LwM2M Server may modify the initial DTLS retransmission timer value of 1 second into a different value. This will have effects on latency as well as on congestion, thus the timer value should be handled carefully."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Max Response Waiting Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum time in seconds the device will wait for a separate response to a request."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Apply",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Applies the parameters specifed in the resources to the CoAP connections on this interface."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

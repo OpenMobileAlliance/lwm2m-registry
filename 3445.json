@@ -1,0 +1,187 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Stream Gauge",
+            "Description1": "The uCIFI Stream Gauge measures the elevation of the water level surface and/or volumetric discharge.",
+            "ObjectID": "3445",
+            "ObjectURN": "urn:oma:lwm2m:ext:3445",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Water Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Water level surface elevation."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Volumetric discharge",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3",
+                        "Description": "Volumetric flow rate of water that is transported through a given cross-sectional area."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Type of meter",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Type of stream gauge meter."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "0 = OK, 1-255 = Error code."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Alarm Counter Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset alarm counts."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Threshold A",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "If the water Level exceeds this value, the alarm A is set to True. This alarm has highest severity. A value of 0 or less disables the alarm."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Alarm A",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the water Level exceeds the value in Threshold A, Alarm A is set to True. Alarm A is false otherwise."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Alarm A Counter",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of Alarm A events since reset."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Threshold B",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "If the water Level exceeds this value, the alarm B is set to True. This alarm has lowest severity. A value of 0 or less disables the alarm."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Alarm B",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the water Level exceeds the value in Threshold B, Alarm B is set to True. Alarm B is false otherwise."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Alarm B Counter",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of Alarm B events since reset."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

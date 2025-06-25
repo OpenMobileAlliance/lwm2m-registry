@@ -1,0 +1,253 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Remote SIM Provisioning",
+            "Description1": "This is a device management object that should be used for Remote SIM Provisioning according to GSMA standards",
+            "ObjectID": "504",
+            "ObjectURN": "urn:oma:lwm2m:oma:504",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Current SIM Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Provides the information about the currently being used SIM Type:\n0: UICC (removable)\n1: eUICC (removable)\n2: eUICC (non-removable)\n3: iUICC\n4-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Supported SIM Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Provides the information about the currently supported SIM Types: \n0: UICC (removable)\n1: eUICC (removable)\n2: eUICC (non-removable)\n3: iUICC\n4-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Service Provider Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides the name of the Service Provider assocatiated with the downloaded profile or the profile currently being downloaded."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Download URI/Information",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "URI, or formatted data containing the URI (e.g. GSMA SGP.22 Activation Code), from where the device can download the profile package by an alternative mechanism. \nThe URI format is defined in RFC 3986."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "RSP Update",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Executes one or more RSP actions. The actions are given as arguments and in case providing multiple actions comma separation is used, e.g. 0,1,2. The following values are possible:\n0: Download & install profile\n1: Enable profile - for profile identified by resource 14\n2: Disable profile - for profile identified by resource 14\n3: Delete profile - for profile identified by resource 14\n4: Reset memory of current SIM\n5-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "RSP Update State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..10",
+                        "Units": null,
+                        "Description": "Indicates current state with respect to the executed RSP action(s) in the RSP update resource. This value is set by the LwM2M Client.\n0: Idle (before downloading a profile or after successful completetion of the action(s))\n1: Downloading (The data sequence is on the way)\n2: Downloaded profile ready for installation\n3: Installing\n5: Enabling\n6: Disabling\n7: Deleting\n8: Resetting memory\n9: Pending end-user consent\n10: Pending confirmation code\n11-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "RSP Update Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..16",
+                        "Units": null,
+                        "Description": "Contains the result of the executed RSP action(s) in the RSP update resource.\n0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value. \n1: RSP action completed successfully.\n2: Not enough SIM memory for the new Profile package. \n3. Out of RAM during downloading process. \n4: Connection lost during downloading process.\n5: Integrity check failure for new downloaded profile package. \n6: Unsupported profile package type. \n7: Invalid URI\n8: Unsupported protocol.\n9: Not authorized to download profile at the given URI.\n10: Failed to authenticate server given by the URI.\n11: Generic download and installation error.\n12: Error in profile package format\n13: Failed to enable profile.\n14: Failed to disable profile.\n15: Failed to delete profile.\n16: Failed to reset memory.\n17-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Profile Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Name of the downloaded profile / profile package or the profile / profile package currently being downloaded."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Profile Package Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Version of the downloaded profile / profile package or the profile / profile package currently being downloaded."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Free Memory on SIM",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "KiB",
+                        "Description": "Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kibibytes)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Total Memory on SIM",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "KiB",
+                        "Description": "Total amount of storage space which can store data and software in the LwM2M Device"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Integrated Circuit Card Identifier (ICCID)",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource provides the unique identification number for each installed profile of the current SIM in case of RSP support or\nthe unique identification number of the current SIM in case of current SIM being a UICC with no RSP support. Please refer ETSI TS 102.22.1. In case of multiple installed profiles,\nthe currently active profile is the first instance."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "eUICC ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "eUICC-ID (a.k.a. EID), see GSMA SGP.02 and GSMA SGP.29 for definitions"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "RSP Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides the information about the Remote SIM Provisioning (RSP) type of the current SIM:\n0: No RSP support\n1: GSMA eSIM for M2M devices\n2: GSMA eSIM for consumer devices\n3-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Selected ICCID for RSP operation",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates ICCID of profile selected for profile specific RSP operations. This resource must be present if multiple installed profiles is supported\nby the RSP implementation. In case of only support for a single profile at a time this resource is not required to be present for profile selection. After successful installation of\na profile the value of this resource (if present) is updated to the ICCID of the installed profile."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "RSP Consent Reason",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides information on the requested user consent"
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "RSP User Consent",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..1",
+                        "Units": null,
+                        "Description": "User consent decision. The following values are possible:\n0: Approved\n1: Rejected\n2-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "RSP Confirmation Code",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides a confirmation code (see e.g. GSMA SGP.21/22)"
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "RSP Data Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..17",
+                        "Units": null,
+                        "Description": "RSP data type for set and get RSP data:\n0: SM-DP+ default address (see GSMA SGP.22)\n1: eUICCInfo2 (see GSMA SGP.22)\n2: DeviceInfo (see GSMA SGP.22)\n3: eSIM Profile Metadata (GSMA SGP.22 ProfileInfo default data for all installed profiles)\n5: ISD-P AID (see GSMA SGP.22) - for profile identified by resource 14\n6: Profile state (see GSMA SGP.22) - for profile identified by resource 14\n7: Profile Nickname (see GSMA SGP.22) - for profile identified by resource 14\n8: Service provider name (see GSMA SGP.22) - for profile identified by resource 14\n9: Profile name (see GSMA SGP.22) - for profile identified by resource 14\n10: Icon type (see GSMA SGP.22) - for profile identified by resource 14\n11: Icon (see GSMA SGP.22) - for profile identified by resource 14\n12: Profile Class (see GSMA SGP.22) - for profile identified by resource 14\n13: Notification Configuration Info (see GSMA SGP.22) - for profile identified by resource 14\n14: Profile Owner (see GSMA SGP.22) - for profile identified by resource 14\n15: SM-DP+ proprietary data (see GSMA SGP.22) - for profile identified by resource 14\n16: Profile Policy Rules (see GSMA SGP.22) - for profile identified by resource 14\n17: RSP formatted data request/response (RSP type specific)\n18-24: Reserved for future use"
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Set RSP Data",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is used to update the (e/i)UICC data / profile specific data of type according to resource 30.\nIt is up to the RSP type whether update of the data is possible or not."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Get RSP Data",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource is used to retrieve the (e/i)UICC data / profile specific data of type according to resource 30.\nIt is up to the RSP type whether retrieval of the data is possible or not."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

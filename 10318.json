@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "RCU PM",
+            "Description1": "This LWM2M Object includes RCU(Robotic Control Unit) PM information(counter and guage).",
+            "ObjectID": "10318",
+            "ObjectURN": "urn:oma:lwm2m:x:10318",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "CPU Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "The CPU usage of the RCU."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Max CPU Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Max CPU Usage of the RCU."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Memory Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Memory Usage of the RCU."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Storage Usage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Storage Usage of the RCU."
+                    },
+                    {
+                        "@ID": "51",
+                        "Name": "Battery Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "The Battery Level of the RCU."
+                    },
+                    {
+                        "@ID": "52",
+                        "Name": "Network Bandwidth",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Mbit/s",
+                        "Description": "Network Bandwidth of the RCU."
+                    },
+                    {
+                        "@ID": "53",
+                        "Name": "Mobile Signal",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Mobile Signal of the RCU."
+                    },
+                    {
+                        "@ID": "54",
+                        "Name": "GPS Signal",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "GPS Signal of the RCU."
+                    },
+                    {
+                        "@ID": "55",
+                        "Name": "Wi-Fi Signal",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Wi-Fi Signal of the RCU."
+                    },
+                    {
+                        "@ID": "56",
+                        "Name": "UpLink Rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Mbit/s",
+                        "Description": "UpLink Rate of the network used by the RCU."
+                    },
+                    {
+                        "@ID": "57",
+                        "Name": "DownLink Rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Mbit/s",
+                        "Description": "DownLink Rate of the network used by the RCU."
+                    },
+                    {
+                        "@ID": "58",
+                        "Name": "Packet Loss Rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Packet Loss Rate in percentage."
+                    },
+                    {
+                        "@ID": "59",
+                        "Name": "Network Latency",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "ms",
+                        "Description": "Network Latency in ms."
+                    },
+                    {
+                        "@ID": "300",
+                        "Name": "Battery Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Battery Temperature."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

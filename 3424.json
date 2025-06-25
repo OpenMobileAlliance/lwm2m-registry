@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Water meter",
+            "Description1": "The uCIFI water meter measures water volume that was distributed through a water meter, in pulse count as well as in m3. It also detects anomalies in the water meter.",
+            "ObjectID": "3424",
+            "ObjectURN": "urn:oma:lwm2m:ext:3424:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Cumulated water volume",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3",
+                        "Description": "Number of cubic meters of water distributed through the meter since last reset."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Cumulated water meter value reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the cumulated meter value."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Type of meter",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Type of water meter."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Cumulated pulse value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Cumulated number of pulses detected on the meter."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Cumulated pulse value reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the cumulated pulse value."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Pulse ratio",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Ratio to calculate water volume from pulse value."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Minimum flow rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3/s",
+                        "Description": "Minimum flow rate since last metering value."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Maximum flow rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3/s",
+                        "Description": "Maximum flow rate since last metering value."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Leak suspected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if water leak is suspected."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Leak detected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if leak is detected."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Back flow detected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if water back flow is detected."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Blocked meter",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if water meter is blocked."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Fraud detected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if fraud is detected."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

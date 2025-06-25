@@ -1,0 +1,122 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Program Function",
+            "Description1": "Describes the behavior that controls the associated target based on time or sensor status.",
+            "ObjectID": "3454",
+            "ObjectURN": "urn:oma:lwm2m:ext:3454",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Function Name",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Mnemonic name of the function",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Run Condition",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Conditions that would cause the function to be effective (if at least one condition is met).\nSyntax of each condition is as follows:\n<time>,<sensor #1>,<sensor #2>,\u2026,<sensor #n>\n\nhh:mm or S(unset), sun(R)ise /- minute offset\nRanges are separated with a tilde character \"~\"\nOpen ranges can be written as start~ (value >= start) or ~end (value <= end)\n\nTime should be a range, eg 18:00~04:00 or S~R\nAnd each sensor can be either a specific value or a range of values\n\nIf omitted or not supported, function can be assumed to be effective 24/24",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Output Filter",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Number of Output Filter object instances, each one being applied to the corresponding target output",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Time Input Array",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Sequence of fixed time and/or astronomical events separated by semicolons\nEach resource instance is specified as a sequence that will target the corresponding output\nhh:mm = fixed time\nS+30 = sunset plus 30 minutes\nR-20 = sunrise minus 20 minutes",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Time Output Array",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Sequence of arguments to be provided to the target.\nIf strings have to be provided, they must be enclosed in double quotes\ne.g. 10;50;24\n\"parking empty\";\"parking full\"\n\nAny spacing provided outside double quotes can be safely ignored",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Single Sensor Input Array",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Allows to define multiple conditions based on sensor value.\nOnly the first sensor is considered (in case multiple sensors are configured).\nThis resource shall be used in mutual exclusion with the multi sensor input array.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Multi Sensor Input Array",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Allows to define multiple conditions based on time and sensor values with a syntax similar to the one used for the Run condition\nEach condition shall be enclosed in brackets and separated by semicolons\n(<time>,<sensor #1>,<sensor #2>,\u2026,<sensor #n>);(<time>,<sensor #1>,<sensor #2>,\u2026,<sensor #n>);\u2026\nThe first condition matching would take precedence over the ones following\nAny spacing provided outside double quotes can be safely ignored\nWhen multiple output targets have to be managed, additional conditions will be provided in a separate resource instance",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Sensor Output Array",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Sequence of arguments to be provided to the target in a similar way of the time output array\nThe sensor arrays can be used in conjunction of the time arrays and, in this case, would take precedence in case of matching\nThis would allow to define both fixed time control and sensor based control in a single function\nIf both single sensor input array and multi sensor input array are both specified, the multi sensor one would take precedence",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Output Filter for Time Output",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Sequence of arguments representing Output Filter instances to be applied to the corresponding target output\ne.g. 0;;1 means /3456/0;default;/3456/1\nIf resource or specific entry is not specified, the default output filter, if present, would be applied",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Output Filter for Sensor Output",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Sequence of arguments representing Output Filter instances to be applied to the corresponding target output\ne.g. 0;;1 means 3456/0;default;3456/1\nIf resource or specific entry is not specified, the default output filter, if present, would be applied",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

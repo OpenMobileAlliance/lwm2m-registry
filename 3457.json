@@ -1,0 +1,192 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Program Manager",
+            "Description1": "The uCIFI Program Manager describes the scheduling capabilities of the device, referring to Program Schedulers, Program Functions, Calendar Rules and Filters.",
+            "ObjectID": "3457",
+            "ObjectURN": "urn:oma:lwm2m:ext:3457",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Max number of Program Schedulers",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of program schedulers supported by the device.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Current number of Program Schedulers",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Number of program schedulers currently allocated.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Max number of Program Functions",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of program functions supported by the device.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Current number of Program Functions",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Number of program functions currently allocated.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Max number of Calendars",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of calendars supported by the device.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Current number of Calendar",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Number of calendars currently allocated.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Max number of Actuators",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of target actuators supported.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Max number of Input Sources",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of input sources supported.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Max number of Dates in Calendar",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Maximum number of start/end date in Calendar supported.\nCan be eventually adjusted in order to reserve more or less memory.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Max Flash Memory Allocated",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Max flash memory (in bytes) to be allocated.\nCan be eventually adjusted in order to reserve more or less memory",
+                        "Units": "B"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Flash Memory Free",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Free flash memory in bytes",
+                        "Units": "B"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Error Conditions",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Mandatory",
+                        "MultipleInstances": "Single",
+                        "Description": "Bitmap\nBit 0: No valid program \nBit 1: Missing configuration objects \nBit 2: Missing configuration resources \nBit 3: Invalid inputs\nBit 4: Invalid outputs\nBit 5: Invalid function format\nBit 6: Out of storage memory\nBit 7: Out of runtime memory\nBit 8..31: reserved for future use",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Clear errors",
+                        "Type": null,
+                        "Operations": "E",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "When executed, clears temporary error conditions.\nTo be noted that some of the errors may require to change the content of other objects to be completely cleared.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Supported Capabilities",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Bitmap\nBit 0: Astronomical Events\nBit 1: Single sensor Inputs\nBit 2: Multi Sensor Inputs\nBit 3: Input Filters\nBit 4: Output Filters\nBit 5: Calendar\nBit 6: Compound Operations\nBit 7: Second granularity (for fixed time expressions)\nBit 8: Astronomical Midnight\nBit 9: Off when inactive",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Max Dynamic Memory Allocated",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Max RAM memory (in bytes) to be allocated.\nCan be eventually adjusted in order to reserve more or less memory",
+                        "Units": "B"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Dynamic Memory Free",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Free RAM memory in bytes",
+                        "Units": "B"
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Reset schedule objects",
+                        "Type": null,
+                        "Operations": "E",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "When executed, trigger a complete wipe of schedules already commissioned",
+                        "Units": null
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

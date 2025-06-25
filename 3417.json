@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Luminaire asset",
+            "Description1": "The uCIFI luminaire asset is an object that enables outdoor lighting control software to configure outdoor lamp controllers. It also enables outdoor lamp controllers to send Zhaga D4i or DALI attributes read from the control gears, to centrally managed outdoor lighting control software or asset management systems.",
+            "ObjectID": "3417",
+            "ObjectURN": "urn:oma:lwm2m:ext:3417",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Asset GTIN",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Global trade-in international number used in the Luminaire Asset controlled by the device."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Year of manufacture",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Year of manufacture of the luminaire."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Week of manufacture",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Week of manufacture of the luminaire."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Nominal light output",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "lm",
+                        "Description": "Nominal light output of the luminaire."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Light distribution type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enumeration of possible light distribution type, using the Zhaga D4i enumeration. Please refer to ZD4i standard for more details."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Luminaire color",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Painting color of the luminaire."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Nominal input power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Nominal input power of the luminaire."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Power at minimum dim level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Power at minimum dim level for the luminaire."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Nominal max AC mains voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Nominal max AC mains voltage for the luminaire to operate."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Nominal min AC mains voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Nominal min AC mains voltage for the luminaire to operate."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "CRI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Color rendering index (0 to 100) of the luminaire."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "CCT value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "K",
+                        "Description": "Color temperature of the luminaire."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Luminaire identification",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Luminaire identification as per DiiA/D4i specification part 251 (MB1 extension): 60 ascii character string."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Luminaire identification number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Luminaire identification number as per DiiA/D4i specification part 251 (MB1 extension): 20 digit number."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

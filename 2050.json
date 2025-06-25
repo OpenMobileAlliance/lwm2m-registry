@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhDefaults",
+            "Description1": "Defines which CMDH related parameters will be used by default.",
+            "ObjectID": "2050",
+            "ObjectURN": "urn:oma:lwm2m:ext:2050",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "DefaultEcRules",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 or more references to  CmdhDefEcValue Object Instances containing default values for the ec (event category) parameter of an incoming request or response when this parameter is not indicated in the message itself"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "DefaultEcParamRules",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "1 or more references to CmdhEcDefParamValues Object Instances"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

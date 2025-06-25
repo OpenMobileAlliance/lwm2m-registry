@@ -1,0 +1,143 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CmdhLimits",
+            "Description1": "This Object represents limits for CMDH related parameter values.",
+            "ObjectID": "2053",
+            "ObjectURN": "urn:oma:lwm2m:ext:2053",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Order",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains index indicating in which order the concerned CmdhLimits Object Instance will be treated by the CSE to determine a value for the limit parameters."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "RequestOrigin",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of zero or more Local AE-IDs, App-IDs, or the strings \"localAE\" or \"thisCSE\""
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "RequestContext",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Represents the Dynamic Context condition under which CMDH parameter limits defined inside the concerned CmdhLimits Object Instance is applicable."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "RequestContextNotificatio",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains true/false flag indicating whether or not notification procedures apply."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "RequestCharacteristics",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Represents conditions pertaining to the request itself, (e.g. the requested Response Type  ) than needs to be matched"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "LimitsEventCategory",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Allowed values for the Event Category parameter in a request of any of the Originators indicated in the requestOrigin attribute."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "LimitsRequestExpTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2 Instances",
+                        "Units": "ms",
+                        "Description": "Defines a range of values for the Request Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\nInst 0 : minTime\nInst 1:  maxTime"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "LimitsResultExpTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2 Instances",
+                        "Units": "ms",
+                        "Description": "Defines a range of values for the Result Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\nInst 0 : minTime\nInst 1:  maxTime"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "LimitsOptExpTime",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2 Instances",
+                        "Units": "ms",
+                        "Description": "Defines a range of values for the Operation Expiration Time parameter for a request of any Originator indicated in the requestOrigin Resource\nInst 0 : minTime\nInst 1:  maxTime"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "LimitsRespPersistence",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "2 Instances",
+                        "Units": "ms",
+                        "Description": "Defines a range of values for the Result Persistence parameter for a request of any Originator indicated in the requestOrigin Resource\nInst 0 : minTime\nInst 1:  maxTime"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "LimitsDelAggregation",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the permitted settings of the DeliveryAggregation parameter of request primitives. \n'0' means 'False' '1' means 'True' '0 1' means 'False' or 'True'"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

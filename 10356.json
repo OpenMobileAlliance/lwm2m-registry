@@ -1,0 +1,165 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Service Info",
+            "Description1": "This LWM2M Object contains the referrence to all objects containing service info.",
+            "ObjectID": "10356",
+            "ObjectURN": "urn:oma:lwm2m:x:10356",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "100",
+                        "Name": "Robot Service Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Robot Service Info."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "SCA Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to SCAs of the Robot."
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "Speaker Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Speaker of the Robot."
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "Camera Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to Cameras of the Robot."
+                    },
+                    {
+                        "@ID": "104",
+                        "Name": "Screen Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Screen of the Robot."
+                    },
+                    {
+                        "@ID": "105",
+                        "Name": "Light Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to Lights of the Robot."
+                    },
+                    {
+                        "@ID": "106",
+                        "Name": "Warning Light Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Warning Light of the Robot."
+                    },
+                    {
+                        "@ID": "107",
+                        "Name": "Door Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Door of the Robot."
+                    },
+                    {
+                        "@ID": "108",
+                        "Name": "Thermal Imager Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Thermal Imager of the Robot."
+                    },
+                    {
+                        "@ID": "109",
+                        "Name": "Compressor Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the Compressor of the Robot."
+                    },
+                    {
+                        "@ID": "110",
+                        "Name": "Lock Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to Lock Info of the Robot."
+                    },
+                    {
+                        "@ID": "111",
+                        "Name": "Collision Sensor Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to Collision Sensor Info of the Robot."
+                    },
+                    {
+                        "@ID": "112",
+                        "Name": "Drop Sensor Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to Drop Sensor Info of the Robot."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LWM2M Cellular Connectivity",
+            "Description1": "This object specifies resources to enable a device to connect to a 3GPP or 3GPP2 bearer, including GPRS/EDGE, UMTS, LTE, NB-IoT, SMS. For cellular connectivity, this object focuses on Packet Switched (PS) connectivity and doesn't aim to provide comprehensive Circuit Switched (CS) connectivity management.",
+            "ObjectID": "10",
+            "ObjectURN": "urn:oma:lwm2m:oma:10:1.1",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "SMSC address",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "E.164 address of SMSC.\n\t\t\t\tApplicable for 3GPP2 networks where SMSC is not available from a smart card, or for 3GPP/3GPP2 networks to provide the application with a customer specific SMSC.  The application decides how to use this parameter, e.g. precedence over UICC based SMSC address."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Disable radio period",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Time period in MINUTES for which the device shall disconnect from cellular radio (PS detach, CS detach if applicable).\n\t\t\t\tCan be used to handle network overload situations. \n\t\t\t\tThe value is a positive integer (0 to 65535), duration can be from 1 minute to 65535 minutes (approximately 45 days)\n\t\t\t\tAs soon the server writes a value which is >0 the device SHALL disconnect. When the period has elapsed the device MAY reconnect."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Module activation code",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Configurable in case the application needs to issue a code (e.g. via AT command) to activate the module. e.g. \"*98\"."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Vendor specific extensions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Links to a vendor specific object."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "PSM Timer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "PSM Timer = Extended T3412 as described in section 10.5.7.4a (GPRS Timer 3) of [3GPP-TS_24.008]. The value in seconds has to be compatible with Extended T3412, otherwise conversion will not be exact. It defines Max interval between periodic TAU if there is no other transmission from the device. During most of this time the device is considered as unreachable and can therefore go into a deep sleep mode while keeping the PDN connection(s) active."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Active Timer",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Active Timer = T3324 as described in section 10.5.7.3 (GPRS Timer) of [3GPP-TS_24.008]. The value in seconds has to be compatible with T3324, otherwise conversion will not be exact. This is the time a UE has to remain reachable after transitioning to idle state in case there is pending data from the NW to send out. At the end of T3324 UE can go into a deep sleep mode while keeping the PDN connection(s) active."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "eDRX parameters for Iu mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Extended DRX parameters (Paging Time Window and eDRX value) for Iu mode which the UE can request from the network. This resource is encoded as octet 3 in [3GPP-TS_24.008, clause 10.5.5.32]."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "eDRX parameters for WB-S1 mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Extended DRX parameters (Paging Time Window and eDRX value) for WB-S1 mode which the UE can request from the network. This resource is encoded as octet 3 in [3GPP-TS_24.008, clause 10.5.5.32]."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "eDRX parameters for NB-S1 mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Extended DRX parameters (Paging Time Window and eDRX value) for NB-S1 mode which the UE can request from the network. This resource is encoded as octet 3 in [3GPP-TS_24.008, clause 10.5.5.32]."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "eDRX parameters for A/Gb mode",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Extended DRX parameters (Paging Time Window and eDRX value) for A/Gb mode which the UE can request from the network. This resource is encoded as octet 3 in [3GPP-TS_24.008, clause 10.5.5.32]."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Activated Profile Names",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Links to instances of the \"APN connection profile\" object representing every APN connection profile that has an activated PDN connection."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Supported Power Saving Modes",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "This Resource is used to indicate the Power Saving Modes supported by the LwM2M Client.\n\t\t\t\tEach bit set in the Resource Instance value corresponds to a supported mode. Several bit set, means several modes are supported.\n\t\t\t\t1st LSB: PSM\n\t\t\t\t2nd LSB: eDRX\n\t\t\t\tOther bits are reserved for future use"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Active Power Saving Modes",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "This Resource is used to indicate which Power Saving Mode(s) is (are) currently active in the LwM2M Client.\n\t\t\t\tEach bit set in the Resource Instance value corresponds to an active mode.\n\t\t\t\t1st LSB: PSM \n\t\t\t\t2nd LSB: eDRX\n\t\t\t\tOther bits are reserved for future use"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Release Assistance Indication Usage",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "This resource is used to indicate client configuration as to when it uses Release Assistance Indicator (RAI) as defined in 3GPP-TS_24.310, clause 9.9.4.25 to indicate to the NW when connection can be released.\n\t\t\t\t1st LSB: RAI not used\n\t\t\t\t2nd LSB: RAI used when transmitting last message which requires no application/transport layer response/ confirmation\n\t\t\t\t3rd LSB: RAI used when transmitting last message which requires response/confirmation; when this bit is set, 2nd LSB is also expected to be set."
+                    }
+                ]
+            },
+            "Description2": "Notes:\n                (0) Resource 6 \"Serving PLMN Rate control\" was moved to the APN Connection Profile Object (#11) to correctly correspond to the 3GPP specifications.\n\n\t\t(1) PSM Timer, Active Timer and all eDRX parameters resources are controlled by the 3GPP network. A LwM2M server may write a suggested values to these resource. As soon a LwM2M server changes the current values the device then suggests the new values to the network upon the next practical opportunity e.g. by inclusion of the requested value in an Attach or TAU request. In case the network confirms the suggested value then the device shall apply that value. In case the network provides a different value then the value provided by the network shall be applied by the device and the resource value shall be set to that value.\n\t\tThe LwM2M server may use the observe function to be notified upon any changes of PSM, Active timer or eDRX parameters. By using the observe function the LwM2M server will get notified in case the value suggested by the LwM2M server is not accepted by the network, or, if the value is changed by the network for any reason (e.g., if the device moves into new tracking areas there is no guarantee that the above values remain the same and are not altered by the network)."
+        }
+    }
+}

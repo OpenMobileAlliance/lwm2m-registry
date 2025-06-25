@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "pucchPowerControl",
+            "Description1": "PUCCH TX power control information",
+            "ObjectID": "3379",
+            "ObjectURN": "urn:oma:lwm2m:ext:3379",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6037",
+                        "Name": "sysFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "System Frame Number."
+                    },
+                    {
+                        "@ID": "6038",
+                        "Name": "subFrameNumber",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Sub Frame Number."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "pucchTxPowerValue",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PUCCH Tx power measurement in dB (-112..23)"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "dlPathLoss",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Downlink path loss calculated in UE (0..255)"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

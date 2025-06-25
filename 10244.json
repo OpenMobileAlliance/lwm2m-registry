@@ -1,0 +1,374 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "VehicleControlUnit",
+            "Description1": "This Object provides the information to represent a generic VCU(vehicle control unit).",
+            "ObjectID": "10244",
+            "ObjectURN": "urn:oma:lwm2m:x:10244",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Vehicle UI State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "The UI state of the vehicle. 0: idle 1: driving 2: charging 3: limp-home 4-15: reserved for future use"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Vehicle Speed",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "km/h",
+                        "Description": "Current speed of the vehicle."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Vehicle Shift Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Current shift status of the vehicle. 0: Neutral 1: Forward 2: Reverse"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Vehicle AP Position",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Current position of the accelerator pedal."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Vehicle Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kW",
+                        "Description": "Current power of drive output/regenerative braking."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Vehicle Drive Energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Accumulated drive energy of the vehicle."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Vehicle Energy Consumption Efficiency",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh/km",
+                        "Description": "Energy consumption efficiency of the vehicle."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Vehicle Estimated Mileage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "km",
+                        "Description": "Estimated mileage of current battery capacity."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Vehicle Charge Cable Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Whether the charge cable is connected or not. 0: unconnected 1: connected"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Vehicle Charge Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..15",
+                        "Units": null,
+                        "Description": "Charging status of the vehicle. 1: non-charge mode 2: charging 3: charge completed 4: charging abort abnormally"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Vehicle Charge Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Charging voltage"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Vehicle Charge Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Charging current"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Vehicle Charge Remaining Time",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "min",
+                        "Description": "Remaining charging time"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Battery Pack Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage of the battery pack"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Battery Pack Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Current of the battery pack"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Battery Pack Remaining Capacity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "Ah",
+                        "Description": "Remaining capacity of the battery pack"
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Battery Pack SOC",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "SOC(state of charge) of the battery pack"
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Battery Pack SOH",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "SOH(state of health) of the battery pack"
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Battery Cell MinVolt",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "mV",
+                        "Description": "Minimum voltage of the battery module (with parallel connection of cells)"
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Battery Cell MaxVolt",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "mV",
+                        "Description": "Maximum voltage of the battery module (with parallel connection of cells)"
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Battery Module MinTemp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Minimum temperature of the battery module"
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Battery Module MaxTemp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Maximum temperature of the battery module"
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "Battery Connection Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Whether the battery is connected or not. 0: unconnected 1: connected"
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "MCU Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage of the MCU(motor control unit)"
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "MCU Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Temperature of MCU(motor control unit)"
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "Motor Speed",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "1/min",
+                        "Description": "Rotational speed of the motor"
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "Motor Temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Temperature of the motor"
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "Motor OT Warning",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Whether the motor is OT or not. 0: normal 1: OT warning"
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "MCU OT Warning",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Whether the MCU is OT or not. 0: normal 1: OT warning"
+                    },
+                    {
+                        "@ID": "30",
+                        "Name": "Battery Pack OT Warning",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Whether the battery pack is OT or not. 0: normal 1: OT warning"
+                    },
+                    {
+                        "@ID": "31",
+                        "Name": "MCU fault",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Status of MCU. 0: normal 1: level 1 minor fault 2: level 2 critical fault"
+                    },
+                    {
+                        "@ID": "32",
+                        "Name": "Motor Error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Status of the battery pack. 0: normal 1: level D25 minor fault 2: level 2 critical fault"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

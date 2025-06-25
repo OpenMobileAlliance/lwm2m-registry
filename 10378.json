@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Edge Application Server Configuration",
+            "Description1": "This is used for UE to obtain information about suitable Edge Application Server in Edge Data Network, and to support service continuity for the UE to minimize service interruption.",
+            "ObjectID": "10378",
+            "ObjectURN": "urn:oma:lwm2m:x:10378",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Application Client ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Identity of the Application Client used to distinguish multiple ACs if applicable, refer to [3GPP TS 23.558]."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "EAS ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The identifier of the Edge Application Server, refer to [3GPP TS 23.558]."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "EAS Endpoint",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The endpoint information (e.g. URI, FQDN, IP address) used to communicate with the Edge Application Server, refer to [3GPP TS 23.558]."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "1..2",
+                        "Units": null,
+                        "Description": "Type of EAS that may be useful in service continuity scenario. UE may switch from source EAS (S-EAS) to target EAS (T-EAS) during mobility.\n1: S-EAS\n2: T-EAS\nrefer to [3GPP TS 23.558]"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

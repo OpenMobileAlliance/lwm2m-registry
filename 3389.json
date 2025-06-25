@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "oA Group",
+            "Description1": "The 'oA Group' represents a group. It contains an application group ID, a security group ID and a list of multicast and unicast IP addresses that are used in the group. \\nAdditionally it contains a list of all members of the group.",
+            "ObjectID": "3389",
+            "ObjectURN": "urn:oma:lwm2m:ext:3389",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "4001",
+                        "Name": "ObjectVersion",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "LWM2M Object versioning label."
+                    },
+                    {
+                        "@ID": "901",
+                        "Name": "Documentary Description",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..256",
+                        "Units": null,
+                        "Description": "Resource to hold a documentary text description of the object."
+                    },
+                    {
+                        "@ID": "600",
+                        "Name": "Application Group ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Identifier of the application group"
+                    },
+                    {
+                        "@ID": "601",
+                        "Name": "Security Group ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "Identifier of the security group"
+                    },
+                    {
+                        "@ID": "602",
+                        "Name": "IP Addresses",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "List of multicast and unicast IPv6 addresses to be used for outgoing group messages"
+                    },
+                    {
+                        "@ID": "603",
+                        "Name": "Members",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Link to the local object instances (and/or single resources) that are members of that group in CoRE Link Format [RFC6690](https://tools.ietf.org/html/rfc6690)\\nNote: instances and resources not listed here will not be addressable on this node through group messages of this group"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

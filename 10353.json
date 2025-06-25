@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Warning Light",
+            "Description1": "This LWM2M Object includes Warning Light information.",
+            "ObjectID": "10353",
+            "ObjectURN": "urn:oma:lwm2m:x:10353",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Light Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The status of the light, 1:On, 0:Off."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Light Warning",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If Light Warning is enabled or not, 1:Enabled, 0:Disabled."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Light Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Switch on/off the light: Parameter: 1:On, 0:Off"
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "Light Warning Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Enable/Disable Light Warning: Parameter: 1:Enable, 0:Disable"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

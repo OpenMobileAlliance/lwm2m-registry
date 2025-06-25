@@ -1,0 +1,92 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Input Filter",
+            "Description1": "The uCIFI Input Filter can be used to fine tune the sensor evaluation, in order to provide hold functionality or custom filtering. To be used in conjunction with a Program Scheduler.",
+            "ObjectID": "3455",
+            "ObjectURN": "urn:oma:lwm2m:ext:3455",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Input State",
+                        "Type": "String",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Current state captured on the input source",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Input Source",
+                        "Type": "String",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Multiple",
+                        "Description": "Resources are specified using Core Link syntax\nExample:\nInstance #0: </3302/0/5500>\nInstance #1: </3302/1/5500>",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Data Type",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "0 - opaque 1 - counter integer 2 - gauge integer 3 - gauge float 4 - Time 5 - String",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Evaluation Interval",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Sets the frequency at which the LwM2M resource identified as Source should be evaluated.\nExample, if set to 5000, the Program should evaluate the value reported by the LwM2M resource pointed by Source every 5 seconds.",
+                        "Units": "s"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Step Filter",
+                        "Type": "Float",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Sets a step interval, making the Program evaluate\u00a0the LwM2M resource pointed by\u00a0Source, only when its value changes\u00a0by more than Step Filter.\nExample, if set to 1000, the Program should evaluate the value reported by the LwM2M resource pointed by Source only if it changes by more than 1000 units from the last evaluation.",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5903",
+                        "Name": "Busy to Clear delay",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Delay from the detection state to the clear state in ms.",
+                        "Units": "ms"
+                    },
+                    {
+                        "@ID": "5904",
+                        "Name": "Clear to Busy delay",
+                        "Type": "Integer",
+                        "Operations": "RW",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Delay from the clear state to the busy state in ms.",
+                        "Units": "ms"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Manhole",
+            "Description1": "This object provides site specific configuration for devices operating in a sewer manhole.",
+            "ObjectID": "10493",
+            "ObjectURN": "urn:oma:lwm2m:x:10493",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Cover level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The level of the manhole cover measured relative to a height datum eg. mAHD"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Sensor face level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The level of the freespace distance sensor relative to a height datum eg. mAHD"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Invert level",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The level of the manhole invert measured relative to a height datum eg. mAHD"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Static object",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The level of a static object (eg. platform, ladder, etc.) in the manhole measured relative to a height datum eg. mAHD"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

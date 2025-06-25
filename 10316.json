@@ -1,0 +1,220 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "RCU",
+            "Description1": "This LWM2M Object includes RCU(Robotic Control Unit) information and the link to RCU APPs.",
+            "ObjectID": "10316",
+            "ObjectURN": "urn:oma:lwm2m:x:10316",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "RCU ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..127",
+                        "Units": null,
+                        "Description": "The RCU identity."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "RCU Serial Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..63",
+                        "Units": null,
+                        "Description": "Serial Number of the RCU."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "RCU Software Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..63",
+                        "Units": null,
+                        "Description": "Software Version of the RCU."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "RCU OS Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..127",
+                        "Units": null,
+                        "Description": "OS type and version of the RCU."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "RCU CPU Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "64",
+                        "Units": null,
+                        "Description": "Cpu information of the RCU."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "RCU RAM Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "64",
+                        "Units": null,
+                        "Description": "RAM information of the RCU."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "RCU ROM Size",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "ROM Size of the RCU (expressed in gigabyte)."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "RCU ROM Available Size",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Available ROM Size of the RCU (expressed in gigabyte)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "SD Storage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Total storage of the RCU SD card, for example: 128G."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "SD Available Storage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Available storage of the RCU SD card, for example: 63G."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "RCU GPS Location",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "RCU GPS location, contains the referrence to Location(6)."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Wi-Fi MAC",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "12",
+                        "Units": null,
+                        "Description": "Wi-Fi MAC of the RCU."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Bluetooth MAC",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "12",
+                        "Units": null,
+                        "Description": "Bluetooth MAC of the RCU, for example: ."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Camera Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "64",
+                        "Units": null,
+                        "Description": "Camera info of the RCU."
+                    },
+                    {
+                        "@ID": "51",
+                        "Name": "Battery Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "The current Battery Level as a percentage (with a range from 0 to 100)."
+                    },
+                    {
+                        "@ID": "5852",
+                        "Name": "On time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter."
+                    },
+                    {
+                        "@ID": "60",
+                        "Name": "Downloaded APP Packages",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Each item contains APP Name/Version info/Package Name."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "RCU APPs",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the APPs belongs to RCU."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

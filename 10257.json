@@ -1,0 +1,220 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Heat / Cooling meter",
+            "Description1": "This Object provides the information to represent a generic (district) heat or cooling meter",
+            "ObjectID": "10257",
+            "ObjectURN": "urn:oma:lwm2m:x:10257",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Manufacturer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable manufacturer name"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Model Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A model identifier (manufacturer specified string)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Serial Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Serial number of the meter"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Description",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Description of the meter"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Error code",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Error code reported by the meter"
+                    },
+                    {
+                        "@ID": "5800",
+                        "Name": "Instantaneous active power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "The current active power."
+                    },
+                    {
+                        "@ID": "5802",
+                        "Name": "Max Measured active power",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "The maximum active power measured by the sensor since it is ON."
+                    },
+                    {
+                        "@ID": "5805",
+                        "Name": "Cumulative active power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "The cumulative active power since the last cumulative energy reset or device start."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Flow temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Flow temperature"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Max Measured flow temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "The maximum flow temperature measured by the meter"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Return temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "Return temperature"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Max Measured return temperature",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Cel",
+                        "Description": "The maximum return temperature measured by the meter"
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Temperature difference",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "K",
+                        "Description": "Temperature difference"
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Flow rate",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3/s",
+                        "Description": "The flow rate"
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Max Measured flow",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3/s",
+                        "Description": "The maximum flow measured by the meter"
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Flow volume",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3",
+                        "Description": "The cumulative flow volume measured on the flow pipe"
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Return volume",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m3",
+                        "Description": "The cumulative flow volume measured on the return pipe"
+                    },
+                    {
+                        "@ID": "5506",
+                        "Name": "Current Time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

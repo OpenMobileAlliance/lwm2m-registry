@@ -1,0 +1,66 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "SpringMotor",
+            "Description1": "This LWM2M Object includes SpringMotor information.",
+            "ObjectID": "10368",
+            "ObjectURN": "urn:oma:lwm2m:x:10368",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "SpringMotor Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable SpringMotor Name"
+                    },
+                    {
+                        "@ID": "5907",
+                        "Name": "Host Device Unique ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The host device unique ID as assigned by an OEM, MNO, \n\t\t\t\tor other as the Device ID in the onboarding or manufacturing process."
+                    },
+                    {
+                        "@ID": "5905",
+                        "Name": "Host Device Manufacturer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable host device manufacturer name."
+                    },
+                    {
+                        "@ID": "5906",
+                        "Name": "Host Device Model Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A host device model identifier (manufacturer specified string)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

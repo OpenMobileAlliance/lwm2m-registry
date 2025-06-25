@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Irrigation valve",
+            "Description1": "The uCIFI irrigation valve provides a way to control and monitor an irrigation valve.",
+            "ObjectID": "3425",
+            "ObjectURN": "urn:oma:lwm2m:ext:3425:1.1",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.1",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Default status",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Default status (level of opening of the valve from 0 to 100%) that is applied when the device is powered ON."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Actual level of opening of the valve (from 0 to 100%)."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Command",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "Command (e.g. manual override, scheduler) sent to the irrigation valve."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Command in action",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "/100",
+                        "Description": "For devices connected on slow LPWAN networks, the command in action (this resource) may differ from a command that was sent (resource ID: 3). The command in action is the actual value of the command in action on the irrigation valve."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Scheduler ID",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Identifiers of the schedulers that are assigned to the Command of this irrigation valve."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Invalid scheduler",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True when one of the schedulers can\u2019t be executed or is not supported by this irrigation valve. Otherwise set to False."
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

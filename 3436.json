@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Edge computing manager",
+            "Description1": "The uCIFI edge computing manager object defines the capability of a device to run scripts on the device itself.",
+            "ObjectID": "3436",
+            "ObjectURN": "urn:oma:lwm2m:ext:3436",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Max number of scripts",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Maximum number of scripts supported by the device."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Number of free slots for scripts",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of free slots to store new scripts."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Max number of conditions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Maximum number of conditions supported by the device."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Number of free slots for conditions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of free slots to store new conditions."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Edge-computing capabilities",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Vendor-specific resource to share the capabilities of the devices as regards to edge computing."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

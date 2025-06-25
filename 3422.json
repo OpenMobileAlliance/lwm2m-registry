@@ -1,0 +1,523 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Three-phase electrical meter complement",
+            "Description1": "The uCIFI three-phase electrical meter complement gathers all the measures, events, threshold and other resources required to create a full three-phase electrical meter together with three additional uCIFI single-phase electrical meters.",
+            "ObjectID": "3422",
+            "ObjectURN": "urn:oma:lwm2m:ext:3422",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "L1-L2 Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage measured between line 1 and line 2."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "L2-L3 Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage measured between line 2 and line 3."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "L3-L1 Voltage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage measured between line 3 and line 1."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Total Current of all three phases",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Sum of current measured on all three lines."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Instantaneous Power Factor overall",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Instantaneous power factor overall."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Last Average Power Factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Last average power factor calculated from each power factor on the 3 lines."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Minimum Power Factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Minimum power factor measured on the 3 lines."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Total active power import on the 3 lines",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "System W: Inst. Value. Sum Li Active power+ (QI+QIV)."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Total active power export on the 3 lines",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "System W: Inst. Value. Sum Li Active power- (QII+QIII)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Total reactive power import on the 3 lines",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "var",
+                        "Description": "System var: Inst. Value. Sum Li Reactive power+ (QI+QII)."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Total reactive power export on the 3 lines",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "var",
+                        "Description": "System var: Inst. Value. Sum Li Reactive power- (QIII+QIV)."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Instantaneous Apparent Power import",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "-1..1",
+                        "Units": "VA",
+                        "Description": "Instantaneous apparent power import on the 3 lines (+VA)."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Instantaneous Apparent Power export",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "VA",
+                        "Description": "Instantaneous apparent power export on the 3 lines (-VA)."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Instantaneous Active Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Instantaneous active power on the 3 lines (|+A|+|-A|)."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Instantaneous Net Active Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "W",
+                        "Description": "Instantaneous net active power on the 3 lines (|+A|-|-A|)."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Measurement period of Instantaneous value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Measurement period of instantaneous value."
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Active energy import Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Active energy import (unified rate) on the 3 lines (+A)."
+                    },
+                    {
+                        "@ID": "18",
+                        "Name": "Active energy export Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Active energy export (unified rate) on the 3 lines (-A)."
+                    },
+                    {
+                        "@ID": "19",
+                        "Name": "Active energy Combined total (+export)",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Active energy, combined total, import plus export (|+A|+|-A|)."
+                    },
+                    {
+                        "@ID": "20",
+                        "Name": "Active energy Combined total (-export)",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Wh",
+                        "Description": "Active energy, combined total, import minus export, on the 3 lines (|+A|-|-A|)."
+                    },
+                    {
+                        "@ID": "21",
+                        "Name": "Reactive energy import Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy import, unified rate, on the 3 lines (+R)."
+                    },
+                    {
+                        "@ID": "22",
+                        "Name": "Reactive energy export Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy export, unified rate, on the 3 lines (-R)."
+                    },
+                    {
+                        "@ID": "23",
+                        "Name": "Reactive energy QI Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy QI, unified rate, on the 3 lines (+Ri)."
+                    },
+                    {
+                        "@ID": "24",
+                        "Name": "Reactive energy QII Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy QII, unified rate, on the 3 lines (+Rc)."
+                    },
+                    {
+                        "@ID": "25",
+                        "Name": "Reactive energy QIII Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy QIII, unified rate, on the 3 lines (-Ri)."
+                    },
+                    {
+                        "@ID": "26",
+                        "Name": "Reactive energy QIV Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "varh",
+                        "Description": "Reactive energy QIV, unified rate, on the 3 lines (-Rc)."
+                    },
+                    {
+                        "@ID": "27",
+                        "Name": "Apparent energy import Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "VAh",
+                        "Description": "Apparent energy import, unified rate, on the 3 lines."
+                    },
+                    {
+                        "@ID": "28",
+                        "Name": "Apparent energy export Un",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "VAh",
+                        "Description": "Apparent energy export, unified rate, on the 3 lines."
+                    },
+                    {
+                        "@ID": "29",
+                        "Name": "Number of power failures in any phase",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of power failures in any phase"
+                    },
+                    {
+                        "@ID": "30",
+                        "Name": "Number of long power failures in any phase",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Number of long power failures in any phase."
+                    },
+                    {
+                        "@ID": "31",
+                        "Name": "Time threshold for long power failure",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time threshold for long power failure."
+                    },
+                    {
+                        "@ID": "32",
+                        "Name": "Duration of last long power failure in any phase",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Duration of last long power failure in any phase."
+                    },
+                    {
+                        "@ID": "33",
+                        "Name": "Threshold for missing voltage (voltage cut)",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Threshold for missing voltage (voltage cut)."
+                    },
+                    {
+                        "@ID": "34",
+                        "Name": "Time threshold for voltage cut",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time threshold for voltage cut."
+                    },
+                    {
+                        "@ID": "35",
+                        "Name": "Voltage cut",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True if a voltage cut for a time above the time threshold and for a voltage below the voltage threshold is detected."
+                    },
+                    {
+                        "@ID": "36",
+                        "Name": "L1 Meter Instance",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Instance number of the Single-phase electrical meter associated to line 1",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "37",
+                        "Name": "L2 Meter Instance",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Instance number of the Single-phase electrical meter associated to line 2",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "38",
+                        "Name": "L3 Meter Instance",
+                        "Type": "Integer",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "Instance number of the Single-phase electrical meter associated to line 3",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "39",
+                        "Name": "Low power factor threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Threshold below which the low power factor resource is set to True."
+                    },
+                    {
+                        "@ID": "40",
+                        "Name": "Low power factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True when the overall power factor is below low power factor threshold."
+                    },
+                    {
+                        "@ID": "41",
+                        "Name": "Excessive load",
+                        "Type": "Boolean",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "True if an excessive load is detected, e.g when too much current is being imported",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "42",
+                        "Name": "Unexpected load",
+                        "Type": "Boolean",
+                        "Operations": "R",
+                        "Mandatory": "Optional",
+                        "MultipleInstances": "Single",
+                        "Description": "True if an unexpected load is detected, e.g when current is imported despite the load being supposed to be disconnected",
+                        "Units": null
+                    },
+                    {
+                        "@ID": "5518",
+                        "Name": "Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The timestamp of when the measurement was performed."
+                    },
+                    {
+                        "@ID": "6050",
+                        "Name": "Fractional Timestamp",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..1",
+                        "Units": "s",
+                        "Description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms)."
+                    },
+                    {
+                        "@ID": "6042",
+                        "Name": "Measurement Quality Indicator",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..23",
+                        "Units": null,
+                        "Description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality."
+                    },
+                    {
+                        "@ID": "6049",
+                        "Name": "Measurement Quality Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": null,
+                        "Description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

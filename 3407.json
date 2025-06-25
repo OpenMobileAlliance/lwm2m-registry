@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Smoke Alarm",
+            "Description1": "This is an alarm that should be raised if the meter detects CO2 concentration above a pre-configured threshold.",
+            "ObjectID": "3407",
+            "ObjectURN": "urn:oma:lwm2m:ext:3407",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6044",
+                        "Name": "Battery Percentage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.00..100.00",
+                        "Units": null,
+                        "Description": "Current remaining battery level."
+                    },
+                    {
+                        "@ID": "6045",
+                        "Name": "RSSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dBW",
+                        "Description": "Received Signal Strength Indicator."
+                    },
+                    {
+                        "@ID": "6046",
+                        "Name": "Smoke Sensor State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicate current smoke sensor state."
+                    },
+                    {
+                        "@ID": "6047",
+                        "Name": "Detected CO2 percentage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.00..100.00",
+                        "Units": "/100",
+                        "Description": "Current level of detected CO2 as a percentage of concentration."
+                    },
+                    {
+                        "@ID": "6048",
+                        "Name": "Alarm loudness",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "Indicate the loudness of the alarm."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

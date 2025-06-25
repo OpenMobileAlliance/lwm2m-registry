@@ -1,0 +1,198 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CO Detector",
+            "Description1": "This is an alarm that should be raised if the sensor detects a higher than threshold CO level.",
+            "ObjectID": "502",
+            "ObjectURN": "urn:oma:lwm2m:oma:502",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "CO Sensor Location Tag",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Verbose identification of the location of the CO sensor."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "CO Detected",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0 = false (CO NOT detected), 1 = true (CO Detected)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Ambient CO Value",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "CO value (in ppm) received for the area."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "CO Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "Last or Current Measured CO Value (in ppm) from the Sensor."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Min CO Range Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "The minimum value that can be measured by the sensor (in ppm)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Max CO Range Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "The maximum value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "CO Detection Accuracy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "Indicate range of the accuracy for the temperature Sensor."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Minimum Measured CO Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "The minimum CO value (in ppm) measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Maximum Measured CO Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "The maximum CO value measured (in ppm) by the sensor since power ON or reset"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Upper CO Threshold",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..12800",
+                        "Units": "ppm",
+                        "Description": "Indicate the Upper threshold for the CO Value (in ppm)."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the \"CO\" object related parameters to default"
+                    },
+                    {
+                        "@ID": "6048",
+                        "Name": "Alarm loudness",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "dB",
+                        "Description": "Indicate the loudness of the alarm."
+                    },
+                    {
+                        "@ID": "5514",
+                        "Name": "Latitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984)."
+                    },
+                    {
+                        "@ID": "5515",
+                        "Name": "Longitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984)."
+                    },
+                    {
+                        "@ID": "6039",
+                        "Name": "Altitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "m",
+                        "Description": "Altitude above sea level in meters."
+                    },
+                    {
+                        "@ID": "6044",
+                        "Name": "Battery Percentage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0.00..100.00",
+                        "Units": null,
+                        "Description": "Current remaining battery level."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

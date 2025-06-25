@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M Gateway Routing",
+            "Description1": "This object is used by a LwM2M Gateway to maintain the routing table.",
+            "ObjectID": "26",
+            "ObjectURN": "urn:oma:lwm2m:oma:26",
+            "LWM2MVersion": "1.2",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "LwM2M Object ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Unsigned Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource identifies mapping the LwM2M Object ID that is mapped with the Mapping Info Resource. It defines the source of the mapping."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Mapping Info",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Corelnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource defines the target of the mapping. This Resource may be empty in which case the mapping is the identity function."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

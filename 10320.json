@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "CCU",
+            "Description1": "This LWM2M Object includes CCU(Central Control Unit) information and the link to CCU APPs.",
+            "ObjectID": "10320",
+            "ObjectURN": "urn:oma:lwm2m:x:10320",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "CCU ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The CCU identity."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "CCU FM Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The firmware version of the CCU."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "CCU SW Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The software version of the CCU."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "CCU Memory Size",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Total Memory Size of the CCU (expressed in gigabyte)."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "CCU Storage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Total storage of the CCU."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "CCU Available Storage",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "GB",
+                        "Description": "Available storage of the CCU."
+                    },
+                    {
+                        "@ID": "5852",
+                        "Name": "On time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Downloaded APP Packages",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Each item contains APP Name, Version info, Package Name."
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "CCU APPs",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Contains the reference to the APPs belongs to this CCU."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

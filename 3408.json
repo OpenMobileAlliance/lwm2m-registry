@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Manhole Cover",
+            "Description1": "Describe the status of a manhole cover.",
+            "ObjectID": "3408",
+            "ObjectURN": "urn:oma:lwm2m:ext:3408",
+            "LWM2MVersion": "1.1",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Safety Angle Threshold",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..180",
+                        "Units": "rad",
+                        "Description": "The threshold of manhole cover's safety angle."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Manhole Cover Tilt",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..180",
+                        "Units": "rad",
+                        "Description": "The tilt angle of a manhole cover."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Cover Open Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicate whether an open status of the manhole cover is detected. Not detected open [true] or Detected open [false]."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

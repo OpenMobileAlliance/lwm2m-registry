@@ -1,0 +1,121 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Current Loop Input",
+            "Description1": "This LWM2M Object provides a representation of a current loop sensor, which indicates the value emitted by a current source.",
+            "ObjectID": "10254",
+            "ObjectURN": "urn:oma:lwm2m:x:10254:1.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Current Loop Input Current Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": "0; 3.8..20.5",
+                        "Units": "mA",
+                        "Description": "The current value of the current loop input. A value of 0 indicates the not-connected state and/or invalid (i.e. out-of-range) values."
+                    },
+                    {
+                        "@ID": "5601",
+                        "Name": "Min Measured Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The minimum value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "5602",
+                        "Name": "Max Measured Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum value measured by the sensor since power ON or reset."
+                    },
+                    {
+                        "@ID": "5603",
+                        "Name": "Min Range Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The minimum value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "5604",
+                        "Name": "Max Range Value",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The maximum value that can be measured by the sensor."
+                    },
+                    {
+                        "@ID": "5605",
+                        "Name": "Reset Min and Max Measured Values",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Reset the Min and Max Measured Values to Current Value."
+                    },
+                    {
+                        "@ID": "5701",
+                        "Name": "Sensor Units",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Measurement Units Definition."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    },
+                    {
+                        "@ID": "5821",
+                        "Name": "Current Calibration",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Read or Write the current calibration coefficient."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

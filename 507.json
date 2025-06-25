@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "nuSIM Profile",
+            "Description1": "This device management object contains the elements of a nuSIM profile package according to nuSIM Technical Specification NTS.01.",
+            "ObjectID": "507",
+            "ObjectURN": "urn:oma:lwm2m:oma:507",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "encP",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Encrypted nuSIM profile"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "mac",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "MAC value of encrypted nuSIM profile"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "eKpubDP",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Ephemeral DP public key"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "SigEKpubDP",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Signature of eKpubDP created with KpubDP"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "KpubDP",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "nuSIM DP public key"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "SigKpubDP",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Signature of KpubDP created with KpubCI"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "KpubCl",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "nuSIM CI public key"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

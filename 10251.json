@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "AT Command",
+            "Description1": "Used to execute an AT command on a cellular modem",
+            "ObjectID": "10251",
+            "ObjectURN": "urn:oma:lwm2m:x:10251",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Command",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The AT command to run. Example: AT+CREG? to query registration status"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Response",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Response to the AT command. Example: +CREG:0,5 If multiple lines are returned as the modem response, each line will be returned in a separate resource."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Status of the command execution as returned by the modem. Typical values:OK ERROR"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Timeout",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Amount of time in seconds allowed for the modem to respond to the command."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Run",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Executing this resource will cause the command to be sent to the modem. And the result to be populated using the Response (1) and Status (2) resources"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

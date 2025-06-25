@@ -1,0 +1,44 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Robot Selfcheck Info",
+            "Description1": "This LWM2M Object includes robot selfcheck result.",
+            "ObjectID": "10332",
+            "ObjectURN": "urn:oma:lwm2m:x:10332",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Entity",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "4..63",
+                        "Units": null,
+                        "Description": "Contains the object ID and object instance ID/Name, for example: </10320/2>."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "0:Normal, 1:Unknown, 0:Failed with error code(negative number)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

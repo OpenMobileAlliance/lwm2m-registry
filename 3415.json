@@ -1,0 +1,77 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Time synchronization",
+            "Description1": "The uCIFI time synchronization object enables a device to sync-up its internal clock with a remote NTP server.",
+            "ObjectID": "3415",
+            "ObjectURN": "urn:oma:lwm2m:ext:3415:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "NTP server address",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Hostname or IP address of the Network Time Protocol server."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Backup NTP server address",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Hostname or IP address of a backup NTP server to be used in case the main NTP server does not respond."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "NTP period",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "h",
+                        "Description": "Number of hours before which the device tries to reach the NTP server for time synchronization."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Last time sync",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "h",
+                        "Description": "Last time at which a successful time synchronization occurred."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Time sync error",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set to True in case the latest time synchronization operation failed. Set to False in case the last operation succeeded."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

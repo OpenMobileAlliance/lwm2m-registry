@@ -1,0 +1,55 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Lock",
+            "Description1": "This LWM2M Object includes the Lock information.",
+            "ObjectID": "10359",
+            "ObjectURN": "urn:oma:lwm2m:x:10359",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Lock Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The name of the compressor."
+                    },
+                    {
+                        "@ID": "50",
+                        "Name": "Lock Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The status of the lock, 1:Locked, 0:Unlocked."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Lock Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Lock/Unlock the lock: Parameter: 1:Lock, 0:Unlock"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LwM2M SIM Provisioning",
+            "Description1": "This is a device management object that should be used for Remote SIM Provisioning from a LwM2M server.",
+            "ObjectID": "505",
+            "ObjectURN": "urn:oma:lwm2m:oma:505",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Current SIM Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Provides the information about the currently being used SIM Type:\n0: UICC (removable)\n1: eUICC (removable)\n2: eUICC (non-removable)\n3: iUICC"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Supported SIM Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Provides the information about the currently supported SIM Types: \n0: UICC (removable)\n1: eUICC (removable)\n2: eUICC (non-removable)\n3: iUICC"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Service Provider Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Provides the Service Provider Name using which LwM2M is currently communicating to the Server."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Profile Package",
+                        "Operations": "W",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Opaque",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Profile Package is a personalised Profile using an interoperable description format that is transmitted to an eUICC to load and install a Profile."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Profile URI",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "URI from where the device can download the profile package by an alternative mechanism. As soon the device has received the Profile package URI it performs the download at the next practical opportunity. The URI format is defined in RFC 3986. For example, coaps://example.org/profile is a syntactically valid URI. The URI scheme determines the protocol to be used. For CoAP this endpoint MAY be a LwM2M Server but does not necessarily need to be. A CoAP server implementing block-wise transfer is sufficient as a server hosting a firmware repository and the expectation is that this server merely serves as a separate file server making profile images available to LwM2M Clients. This server can be the future carrier server as well from which IoT devices would like to use the service."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Update Profile",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Updates profile by using the profile package stored in Package, or, by using the profile downloaded from the Package URI. This Resource is only executable when the value of the State Resource is Downloaded."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Update State",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "Indicates current state with respect to this profile update. This value is set by the LwM2M Client. \n0: Idle (before downloading or after successful updating) \n1: Downloading (The data sequence is on the way) \n2: Downloaded \n3: Updating If writing the profile package to Package Resource is done, or, if the device has downloaded the profile package from the Package URI the state changes to Downloaded. Writing an empty string to Package URI Resource or setting the Package Resource to NULL (\u00e2\u20ac\u02dc\\0\u00e2\u20ac\u2122), resets the Profile Update State Machine: the State Resource value is set to Idle and the Update Result Resource value is set to 0. When in Downloaded state, and the executable Resource Update is triggered, the state changes to Updating. If the Update Resource failed, the state returns at Downloaded. If performing the Update Resource was successful, the state changes from Updating to Idle."
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Update Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..8",
+                        "Units": null,
+                        "Description": "Contains the result of downloading or updating the Profile \n0: Initial value. Once the updating process is initiated (Download /Update), this Resource MUST be reset to Initial value. \n1: Profile updated successfully, \n2: Not enough SIM memory for the new Profile package. \n3. Out of RAM during downloading process. \n4: Connection lost during downloading process. 5: Integrity check failure for new downloaded package. \n6: Unsupported package type. \n7: Invalid URI\n8: Unsupported protocol. \n\nA LwM2M client indicates the failure to retrieve the Profile using the URI provided in the Package URI resource by writing the value 9 to the /x/0/7 (Update Result resource) when the URI contained a URI scheme unsupported by the client. Consequently, the LwM2M Client is unable to retrieve the Profile using the URI provided by the LwM2M Server in the Package URI when it refers to an unsupported protocol."
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Profile Name",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Name of the Profile Package."
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Profile Package Version",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "Version of the Profile package."
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Profile Update Protocol Support",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..3",
+                        "Units": null,
+                        "Description": "This resource indicates what protocols the LwM2M Client implements to retrieve Profiles. The LwM2M server uses this information to decide what URI to include in the Package URI. A LwM2M Server MUST NOT include a URI in the Package URI object that uses a protocol that is unsupported by the LwM2M client. For example, if a LwM2M client indicates that it supports CoAP and CoAPS then a LwM2M Server must not provide an HTTP URI in the Packet URI. The following values are defined by this version of the specification: \n0: CoAP (as defined in RFC 7252) with the additional support for block-wise transfer. CoAP is the default setting. \n1: CoAPS (as defined in RFC 7252) with the additional support for block-wise transfer \n2: HTTP 1.1 (as defined in RFC 7230) \n3: HTTPS 1.1 (as defined in RFC 7230) Additional values MAY be defined in the future. Any value not understood by the LwM2M Server MUST be ignored."
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Profile Update Delivery Method",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "The LwM2M Client uses this resource to\nindicate its support for transferring Profile\nimages to the client either via the Package\nResource (=push) or via the Package URI\nResource (=pull) mechanism.\n0: Pull only\n1: Push only\n2: Both. In this case the LwM2M Server\nMAY choose the preferred mechanism for\nconveying the profile image to the\nLwM2M Client."
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "Free Memory on SIM",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "KiB",
+                        "Description": "Estimated current available amount of storage space on SIM which can store data and software in the LwM2M Device (expressed in kibibytes)."
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "Total Memory on SIM",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "KiB",
+                        "Description": "Total amount of storage space which can store data and software in the LwM2M Device."
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Integrated Circuit Card Identifier (ICCID)",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This Elementary File (EF) provides a unique identification number for the UICC/Smart Cards. Please refer ETSI TS 102.22.1."
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "eUICC ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "eUICC-ID (a.k.a. EID), see GSMA SGP.02 and GSMA SGP.29 for definitions."
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Profile Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Free optional text produced by the SM-DP+ server. This is equivalent to the \"Profile Description ID\" as described in Annex B of SGP.21."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

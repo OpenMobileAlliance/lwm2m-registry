@@ -1,0 +1,31 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "rrcTimerExpiryEvent",
+            "Description1": "RRC timer expiry event information",
+            "ObjectID": "3358",
+            "ObjectURN": "urn:oma:lwm2m:ext:3358",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": {
+                    "@ID": "0",
+                    "Name": "RrcTimerExpiryEvent",
+                    "Operations": "R",
+                    "MultipleInstances": "Single",
+                    "Mandatory": "Mandatory",
+                    "Type": "Integer",
+                    "RangeEnumeration": null,
+                    "Units": null,
+                    "Description": "1 = t300\n2 = t301\n3 = t302\n4 = t303\n5 = t304\n6 = t305\n7 = t311\n8 = t320\n9 = t321\n10 = other"
+                }
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "LTE-MTC Band Config",
+            "Description1": "This object is used to configure the cellular band used by the device as well as to change the band. It is intended to be used on LTE bands, as in NB-IoT and LTE Cat M1 frequency bands.",
+            "ObjectID": "501",
+            "ObjectURN": "urn:oma:lwm2m:oma:501",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "EARFCN",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..65535",
+                        "Units": null,
+                        "Description": "E-UTRA Absolute Radio Frequency Channel Number (EARFCN), the carrier frequency of the device radio."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Current Frequency (Downlink)",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "MHz",
+                        "Description": "The current frequency used in the current band in MHz (Downlink)."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Current Frequency (Uplink)",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "MHz",
+                        "Description": "The current frequency used in the current band in MHz (Uplink)."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Prioritized Channels",
+                        "Operations": "RW",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates a list of currently supported EARFCNs in priority order. Each Resource Instance has a value from the band list."
+                    },
+                    {
+                        "@ID": "5750",
+                        "Name": "Application Type",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The application type of the sensor or actuator as a string depending on the use case."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Reset Timeout",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "Time that the device will wait until reset once the Reset Resource is triggered."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Reset",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Execuring this resource resets the radio interface of the device."
+                    },
+                    {
+                        "@ID": "48",
+                        "Name": "Vendor specific extensions",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "This resource links to a vendor specific object."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

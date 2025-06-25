@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Shareparkinglot",
+            "Description1": "This LwM2M Object provides the keying material of our technology product-ShareParkingLock.",
+            "ObjectID": "10309",
+            "ObjectURN": "urn:oma:lwm2m:x:10309",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "LockID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Unique ID of the lock."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "LockType",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Type of the lock."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "LightSwitchState",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Infra-red sensor switch state."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "RSSI",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "-30..-120",
+                        "Units": "dBm",
+                        "Description": "Radio Received Signal Strength Indicator."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "BatteryCapacity",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%EL",
+                        "Description": "Current battery capacity in percentage Energy Level (EL)."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "DataUpTime",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "Time",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The data upload time."
+                    },
+                    {
+                        "@ID": "5514",
+                        "Name": "Latitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984)."
+                    },
+                    {
+                        "@ID": "5515",
+                        "Name": "Longitude",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

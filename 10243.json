@@ -1,0 +1,220 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Single-Phase Power Meter",
+            "Description1": "This Object provides the information to represent a generic Single-Phase Power Meter.",
+            "ObjectID": "10243",
+            "ObjectURN": "urn:oma:lwm2m:x:10243:2.0",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "2.0",
+            "MultipleInstances": "Multiple",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "Manufacturer",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Human readable manufacturer name"
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Model Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "A model identifier (manufacturer specified string)"
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Serial Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Serial number of the meter"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Description",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Description of the meter"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Tension",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "V",
+                        "Description": "Voltage"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Current",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "A",
+                        "Description": "Current"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Active Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kW",
+                        "Description": "Active Power"
+                    },
+                    {
+                        "@ID": "7",
+                        "Name": "Reactive Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kvar",
+                        "Description": "Reactive Power"
+                    },
+                    {
+                        "@ID": "8",
+                        "Name": "Inductive Reactive Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kvar",
+                        "Description": "Inductive Reactive Power"
+                    },
+                    {
+                        "@ID": "9",
+                        "Name": "Capacitive Reactive Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kvar",
+                        "Description": "Capacitive Reactive Power"
+                    },
+                    {
+                        "@ID": "10",
+                        "Name": "Apparent Power",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kVA",
+                        "Description": "Apparent Power"
+                    },
+                    {
+                        "@ID": "11",
+                        "Name": "Power Factor",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": "-1..1",
+                        "Units": null,
+                        "Description": "Power Factor"
+                    },
+                    {
+                        "@ID": "12",
+                        "Name": "THD-V",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Total Harmonic Distortion (Tension)"
+                    },
+                    {
+                        "@ID": "13",
+                        "Name": "THD-A",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "/100",
+                        "Description": "Total Harmonic Distortion (Current)"
+                    },
+                    {
+                        "@ID": "14",
+                        "Name": "Active Energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kWh",
+                        "Description": "Active Energy"
+                    },
+                    {
+                        "@ID": "15",
+                        "Name": "Reactive Energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kvarh",
+                        "Description": "Reactive Energy"
+                    },
+                    {
+                        "@ID": "16",
+                        "Name": "Apparent Energy",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "kVAh",
+                        "Description": "Apparent Energy"
+                    },
+                    {
+                        "@ID": "17",
+                        "Name": "Frequency",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Float",
+                        "RangeEnumeration": null,
+                        "Units": "Hz",
+                        "Description": "Frequency"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

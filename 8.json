@@ -1,0 +1,88 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Lock and Wipe",
+            "Description1": "This LWM2M objects provides the resources needed to perform the lock and wipe operations.",
+            "ObjectID": "8",
+            "ObjectURN": "urn:oma:lwm2m:oma:8",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "0",
+                        "Name": "State",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..2",
+                        "Units": null,
+                        "Description": "State of the device:\n0: unlocked state Normal operation.\n1: partially locked state\nTo render the device inoperable the device has been partially locked. The \"lock target\" resource allows specifying the target(s) for this operation.\n2: fully locked state\nTo render the device fully inoperable the device has been fully locked."
+                    },
+                    {
+                        "@ID": "1",
+                        "Name": "Lock target",
+                        "Operations": "W",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "To specify one or several targets for the lock operation. This allows partially locking the device by selecting specific components or interfaces to be locked."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Wipe item",
+                        "Operations": "R",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Indicates which data can be wiped from the device. This resource could be e.g. representing a directory."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Wipe",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "To permanently erase data from the device."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Wipe target",
+                        "Operations": "W",
+                        "MultipleInstances": "Multiple",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "To specify one or several targets for the wipe operation. This allows selecting specific data, or, memory areas for the wipe operation."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Lock or Wipe Operation Result",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..8",
+                        "Units": null,
+                        "Description": "Contains the result of a lock and wipe operation\n0: Default\n1: Partially Lock operation successful\n2: Fully Lock operation successful\n3: Unlock operation successful\n4: Wipe operation successful\n5: Partially Lock operation failed\n6: Fully Lock operation failed\n7: Unlock operation failed \n8: Wipe operation failed\nThis Resource MAY be reported by sending Observe operation."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "PagingDRX",
+            "Description1": "Paging DRX information",
+            "ObjectID": "3375",
+            "ObjectURN": "urn:oma:lwm2m:ext:3375",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "6032",
+                        "Name": "dlEarfcn",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "EARFCN - frequency"
+                    },
+                    {
+                        "@ID": "6034",
+                        "Name": "pci",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "PCI."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "pagingCycle",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Paging Cycle"
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "DrxNb",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "DRX NB"
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "ueID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "IMSI mod 1024"
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "drxSysFrameNumOffset",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "drxSysFrameNumOffset is used to obtain the starting system frame number for DRX cycle"
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "drxSubFrameNumOffset",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "drxSubFrameNumOffset is used to obtain the starting sub frame number for DRX cycle"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

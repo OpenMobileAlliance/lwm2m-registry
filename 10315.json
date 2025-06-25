@@ -1,0 +1,110 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Robot",
+            "Description1": "This LWM2M Object includes robot information and links to the location object.",
+            "ObjectID": "10315",
+            "ObjectURN": "urn:oma:lwm2m:x:10315",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Mandatory",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Robot ID",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..255",
+                        "Units": null,
+                        "Description": "The Robot identity."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Robot Type",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..63",
+                        "Units": null,
+                        "Description": "Robot Type, for example: Ginger, CloudCleanX, CloudPepper."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Robot Serial Number",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "String",
+                        "RangeEnumeration": "0..63",
+                        "Units": null,
+                        "Description": "Robot Type, for example: Ginger, CloudCleanX, CloudPepper."
+                    },
+                    {
+                        "@ID": "51",
+                        "Name": "Battery Level",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": "0..100",
+                        "Units": "%",
+                        "Description": "Current Battery Level of the robot."
+                    },
+                    {
+                        "@ID": "4",
+                        "Name": "Charging",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the robot is charging or not,the setting of which is a Boolean value (1,0) where 1 is Yes and 0 is No."
+                    },
+                    {
+                        "@ID": "5852",
+                        "Name": "On time",
+                        "Operations": "RW",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Integer",
+                        "RangeEnumeration": null,
+                        "Units": "s",
+                        "Description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter."
+                    },
+                    {
+                        "@ID": "5",
+                        "Name": "Positioning",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the robot is needed to be positioned, the setting of which is a Boolean value (1,0) where 1 is Yes and 0 is No."
+                    },
+                    {
+                        "@ID": "6",
+                        "Name": "Location",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "Objlnk",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The location of the robot, contains the reference to the Location object(6)."
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}

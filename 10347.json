@@ -1,0 +1,99 @@
+{
+    "LWM2M": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xsi:noNamespaceSchemaLocation": "http://openmobilealliance.org/tech/profiles/LWM2M.xsd",
+        "Object": {
+            "@ObjectType": "MODefinition",
+            "Name": "Screen",
+            "Description1": "This LWM2M Object includes robot screen information.",
+            "ObjectID": "10347",
+            "ObjectURN": "urn:oma:lwm2m:x:10347",
+            "LWM2MVersion": "1.0",
+            "ObjectVersion": "1.0",
+            "MultipleInstances": "Single",
+            "Mandatory": "Optional",
+            "Resources": {
+                "Item": [
+                    {
+                        "@ID": "1",
+                        "Name": "Screen Status",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": "Boolean",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The status of the camera, 1:On, 0:Off."
+                    },
+                    {
+                        "@ID": "2",
+                        "Name": "Startup Page",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "The Startup Page of the screen."
+                    },
+                    {
+                        "@ID": "3",
+                        "Name": "Current Displaying Page or Current Screen Play List",
+                        "Operations": "R",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Optional",
+                        "Type": "String",
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Current Displaying Page or Current Screen Play List."
+                    },
+                    {
+                        "@ID": "100",
+                        "Name": "Screen Control",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "If the screen is locked, Parameter: 1:Bright Screen, 0:Locked Screen"
+                    },
+                    {
+                        "@ID": "101",
+                        "Name": "Startup Page Set",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set startup page, Parameter:startup page"
+                    },
+                    {
+                        "@ID": "102",
+                        "Name": "Screen Page Set",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set screen page, Parameter:screen page"
+                    },
+                    {
+                        "@ID": "103",
+                        "Name": "Screen Play List Set",
+                        "Operations": "E",
+                        "MultipleInstances": "Single",
+                        "Mandatory": "Mandatory",
+                        "Type": null,
+                        "RangeEnumeration": null,
+                        "Units": null,
+                        "Description": "Set screen play list , Parameter:screen play list"
+                    }
+                ]
+            },
+            "Description2": null
+        }
+    }
+}
