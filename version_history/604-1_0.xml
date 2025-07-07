@@ -29,7 +29,7 @@
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Unit></Unit>
-				<Description>The hierarchy of the mesh router/end-device within the network. It may be expressed as the number of hops between the node and the border router/gateway or as the computed cost of the path connecting the node to the border-router/gateway.</Description>
+				<Description>The hierarchy of the mesh router, end-device within the network. It may be expressed as the number of hops between the node and the border router, gateway or as the computed cost of the path connecting the node to the border-router, gateway.</Description>
 			</Item>
 			<Item ID="3">
 				<Name>Root address</Name>
