@@ -5,7 +5,7 @@
 		<Name>LPWAN mesh mobility info</Name>
 		<Description1>This object enables monitoring and management of parameters related with mobility operations of the 802.15.4 based LP-WAN devices.</Description1>
 		<ObjectID>604</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:604</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:604</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
