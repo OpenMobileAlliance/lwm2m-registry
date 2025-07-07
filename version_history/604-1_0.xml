@@ -1,0 +1,168 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>LPWAN mesh mobility info</Name>
+		<Description1>This object enables monitoring and management of parameters related with mobility operations of the 802.15.4 based LP-WAN devices.</Description1>
+		<ObjectID>604</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:oma:604</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>Network role</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>0 - End-Device, 1 - Router, 2 - Border Router, 4 - Bridge, 5 - Gateway</Description>
+			</Item>
+			<Item ID="2">
+				<Name>Current rank</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The hierarchy of the mesh router/end-device within the network. It may be expressed as the number of hops between the node and the border router/gateway or as the computed cost of the path connecting the node to the border-router/gateway.</Description>
+			</Item>
+			<Item ID="3">
+				<Name>Root address</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Address or identifier of the border router/gateway node providing connectivity outside the mesh cluster.</Description>
+			</Item>
+			<Item ID="4">
+				<Name>Preferred parent</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Address or identifier of the nodes selected as the next hop on the optimal path towards the mesh root.</Description>
+			</Item>
+			<Item ID="28100">
+				<Name>Average communication interval</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description>Average amount of time elapsed between the usage of mesh interface for device-to-device or device-to-cloud, forwarding of messaging.</Description>
+			</Item>
+			<Item ID="28101">
+				<Name>Parent loss</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The number of times the node lost connection to its parent.</Description>
+			</Item>
+			<Item ID="28102">
+				<Name>Parent change</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The number of times the RPL node selected a different preferred parent.</Description>
+			</Item>
+			<Item ID="28103">
+				<Name>Lowest reported rank</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The lowest rank ever held by the device under the current mesh cluster.</Description>
+			</Item>
+			<Item ID="28104">
+				<Name>Highest reported rank</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The highest rank ever held by the device under the current mesh cluster.</Description>
+			</Item>
+			<Item ID="28105">
+				<Name>Primary root</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Address or identifier of the border router/gateway node selected as the primary root.</Description>
+			</Item>
+			<Item ID="28106">
+				<Name>Root backup 1</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Address or identifier of a border router/gateway node to be used as backup to the primary root in case of failure.</Description>
+			</Item>
+			<Item ID="28107">
+				<Name>Root backup 2</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Address or identifier of a border router/gateway node to be used as 2nd backup in case both the primary root and the 1st backup fail.</Description>
+			</Item>
+			<Item ID="28108">
+				<Name>Parent set list</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Ordered list of potential parent nodes in the format (address1 | address2 | address3).</Description>
+			</Item>
+			<Item ID="28109">
+				<Name>IPv6 prefix</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Specifies the IPv6 prefix of the parent device to preferably stay connected to.</Description>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+		</Resources>
+		<Description2></Description2>
+	</Object>
+</LWM2M>
