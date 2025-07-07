@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
@@ -159,7 +158,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>s</Units>
+				<Unit>s</Unit>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 		</Resources>
