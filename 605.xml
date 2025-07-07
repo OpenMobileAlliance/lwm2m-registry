@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Network routing tree</Name>
+		<Description1>This object provides visibility over the message routing path within a mesh cluster.</Description1>
+		<ObjectID>605</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:x:605</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>Node ID</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>ID or address that can uniquely identify a node of the mesh cluster.</Description>
+			</Item>
+			<Item ID="2">
+				<Name>Parent ID</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>ID or address that uniquely identifies the parent of the node identified on the corresponding Node ID resource instance, used for upstream routing in the mesh cluster.</Description>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>The timestamp of when the measurement was performed.</Description>
+			</Item>
+		</Resources>
+		<Description2></Description2>
+	</Object>
+</LWM2M>
