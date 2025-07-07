@@ -5,7 +5,7 @@
 		<Name>Network routing tree</Name>
 		<Description1>This object provides visibility over the message routing path within a mesh cluster.</Description1>
 		<ObjectID>605</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:x:605</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:605</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
