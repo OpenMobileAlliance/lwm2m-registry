@@ -158,7 +158,7 @@
 				<Mandatory>Optional</Mandatory>
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
-				<Units>s</Units>
+				<Units></Units>
 				<Description>The timestamp of when the measurement was performed.</Description>
 			</Item>
 		</Resources>
