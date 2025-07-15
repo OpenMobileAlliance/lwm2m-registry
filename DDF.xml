@@ -781,7 +781,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
 	<ObjectID>29</ObjectID>
         <URN>urn:oma:lwm2m:oma:29</URN>
         <Name>EDHOC</Name>
-        <Description>This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528.</Description>
+        <Description>This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528. These LwM2M Object Resources MUST only be
+changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
