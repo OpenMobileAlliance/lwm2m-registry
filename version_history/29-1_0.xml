@@ -60,7 +60,8 @@ LEGAL DISCLAIMER
 <LWM2M xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd" >
     <Object ObjectType="MODefinition">
         <Name>EDHOC</Name>
-        <Description1><![CDATA[This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528.]]></Description1>
+        <Description1><![CDATA[This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528. These LwM2M Object Resources MUST only be
+changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.]]></Description1>
         <ObjectID>29</ObjectID>
         <ObjectURN>urn:oma:lwm2m:oma:29</ObjectURN>
         <LWM2MVersion>1.1</LWM2MVersion>
