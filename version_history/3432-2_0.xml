@@ -43,12 +43,10 @@
 		<Resources>
 			<Item ID="0">
 				<Name>Vehicle type</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Description><![CDATA[Identifies the Vehicle type(s) detected in conformance with DATEX II v3 specifications.
 The resource instance ID used here should match, the remaining resource IDs under this object for measurement taken by the device for the specified vehicle type. 
 Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any type)
@@ -102,6 +100,7 @@ Instance 0 of this resource is reserved for Vehicle type = 1 (Vehicle of any typ
 46=Vehicle with odd numbered registration plate.
 99=Unknown.
 100=Other than as defined in this enumeration.]]></Description>
+				<Units></Units>
 			</Item>
 			<Item ID="1">
 				<Name>Cumulated number</Name>

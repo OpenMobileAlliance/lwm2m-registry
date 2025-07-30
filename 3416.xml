@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- BSD-3 Clause License
 
-  Copyright 2023 uCIFI Alliance
+  Copyright 2020-2024 uCIFI Alliance
+  Copyright 2025 Open Mobile Alliance
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -700,93 +701,23 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 			</Item>
 			<Item ID="64">
 				<Name>Lamp max operating hours threshold</Name>
-				<Type>Float</Type>
 				<Operations>RW</Operations>
-				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Maximum number of hours that a lamp could be on before triggering an alarm (end of life)]]></Description>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>				
 				<Units>h</Units>
+				<Description><![CDATA[Maximum number of hours that a lamp could be on before triggering an alarm (end of life)]]></Description>
 			</Item>
 			<Item ID="65">
 				<Name>Lamp max operating hours exceeded</Name>
-				<Type>Boolean</Type>
 				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
 				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
 				<Description><![CDATA[True if the maximum number of hours that a lamp could be on has been exceeded (end of life)]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="66">
-				<Name>Control Gear overall failure condition counter</Name>
-				<Type>Integer</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Overall counter of failure conditions detected on the Control Gear]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="67">
-				<Name>Control Gear external supply under voltage</Name>
-				<Type>Boolean</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[True if an under voltage condition is being currently detected on the external supply]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="68">
-				<Name>Control Gear external supply under voltage counter</Name>
-				<Type>Integer</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Counter of how many times an under voltage condition has been detected]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="69">
-				<Name>Control Gear external supply over voltage</Name>
-				<Type>Boolean</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[True if an over voltage condition is being currently detected on the external supply]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="70">
-				<Name>Control Gear external supply over voltage counter</Name>
-				<Type>Integer</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Counter of how many times an over voltage condition has been detected]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="71">
-				<Name>Control Gear output power limitation</Name>
-				<Type>Boolean</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[True if the output power is currently being limited]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="72">
-				<Name>Control Gear external output power limitation counter</Name>
-				<Type>Integer</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Counter of how many times the output power has been limited]]></Description>
-				<Units></Units>
-			</Item>
-			<Item ID="73">
-				<Name>Light Source overall failure condition counter</Name>
-				<Type>Integer</Type>
-				<Operations>R</Operations>
-				<Mandatory>Optional</Mandatory>
-				<MultipleInstances>Single</MultipleInstances>
-				<Description><![CDATA[Overall counter of failure conditions detected on the Light Source]]></Description>
-				<Units></Units>
 			</Item>
 			<Item ID="5518">
 				<Name>Timestamp</Name>
