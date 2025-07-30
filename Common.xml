@@ -171,8 +171,17 @@
         <RangeEnumeration>255</RangeEnumeration>       
         <Units></Units>        
         <Submitter>OMA</Submitter>
-        <Description> <![CDATA[ when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned. when retrieved by the Server, this Resource indicates which specific data format is used when the LogData Resource is returned to the Server 
-0  or Resource not present : no specific data format (sequence of bytes)1 : OMA-LwM2M TLV format2 : OMA-LwM2M JSON format3:  OMA-LwM2M CBOR format[4..99] reserved [100..255] vendor specific data format]]></Description>        
+        <Description> <![CDATA[ when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned
+. when retrieved by the Server, this Resource indicates which specific data format is used when the LogData Resource is returned to the Server 
+0  or Resource not present : no specific data format (sequence of bytes)
+1 : OMA-LwM2M TLV format (only container for logs; does not define any semantics for the logs themselve)
+2 : OMA-LwM2M JSON format (only container for logs; does not define any semantics for the logs themselve)
+3 : OMA-LwM2M CBOR format (only container for logs; does not define any semantics for the logs themselve)
+4 : Syslog Format(RFC5424)
+5 : Common Log Format(RFC6872)
+[6..99] reserved
+[100..255] vendor specific data format
+ ]]></Description>        
         <TS>http://www.openmobilealliance.org/documents/whitepapers/OMA-ORG-LightweightM2M_Guidelines_Logging_Reusable_Resources-V1_0-20171129-A.pdf</TS>       
         <TSLink>1</TSLink>
        </Item>
@@ -185,7 +194,7 @@
         <Submitter>OMA</Submitter>
         <Description><![CDATA[Log data collected since the last Send operation described for the LogDataIncremental Minimum Send Interval resource, or since that interval has been set to a positive value if the first Send operation has not yet been performed.
 The data shall have the same format as the LogData resource, but its collection and emptying is independent from it and from the LogStart/LogStop logic.
-This resource may only be included in a Send operation payload. Attempting to access it via the Device Management and Service Enablement Interface shall result in generating the Method Not Allowed error.]]></Description>        
+This resource may only be included in a Send operation payload. Attempting to access it via the Device Management and Service Enablement Interface shall result in generating the Method Not Allowed error.]]></Description>      
         <TS></TS>       
         <TSLink>1</TSLink>
        </Item>

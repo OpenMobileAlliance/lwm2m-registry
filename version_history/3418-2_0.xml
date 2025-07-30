@@ -109,7 +109,7 @@
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Reset cumulated active, reactive and apparent energy counters.</Description>
+				<Description>Reset both cumulated active and reactive energy counter.</Description>
 			</Item>
 			<Item ID="8">
 				<Name>Low power factor threshold</Name>
@@ -343,73 +343,48 @@
 			</Item>
 			<Item ID="31">
 				<Name>Low power threshold at custom dim level</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>W</Units>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>If the measured power when the dimming is between "Custom dim level min range" and "Custom dim level max range" is below this threshold, a low power alarm is set.</Description>
+				<Units>W</Units>
 			</Item>
 			<Item ID="32">
 				<Name>High power threshold at custom dim level</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>W</Units>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>If the measured power when the dimming is between "Custom dim level min range" and "Custom dim level max range" is above this threshold, a high power alarm is set.</Description>
+				<Units>W</Units>
 			</Item>
 			<Item ID="33">
 				<Name>Custom dim level min range</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>/100</Units>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>Custom dimming range (lower bound) to allow specification of finer grain thresholds and alarms.</Description>
+				<Units>/100</Units>
 			</Item>
 			<Item ID="34">
 				<Name>Custom dim level max range</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Multiple</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>/100</Units>
+				<Operations>RW</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Multiple</MultipleInstances>
 				<Description>Custom dimming range (upper bound) to allow specification of finer grain thresholds and alarms.</Description>
+				<Units>/100</Units>
 			</Item>
 			<Item ID="35">
 				<Name>Dimming level</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>/100</Units>
+				<Operations>R</Operations>
+				<Mandatory>Optional</Mandatory>
+				<MultipleInstances>Single</MultipleInstances>
 				<Description>Dimming level associated to current measurement.</Description>
-			</Item>
-			<Item ID="36">
-				<Name>Apparent Energy</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>VAh</Units>
-				<Description>Cumulated number of VAh measured by the device and its load since last energy counter reset.</Description>
-			</Item>
-			<Item ID="37">
-				<Name>Apparent Power</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Float</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units>VA</Units>
-				<Description>Apparent power consumed by the device and its electrical load.</Description>
+				<Units>/100</Units>
 			</Item>
 			<Item ID="5518">
 				<Name>Timestamp</Name>
