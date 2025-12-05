@@ -16,7 +16,7 @@
 				<MultipleInstances>Single</MultipleInstances>
 				<Mandatory>Mandatory</Mandatory>
 				<Type>String</Type>
-				<RangeEnumeration>original,repurposed,re-used,remanufacturedaste</RangeEnumeration>
+				<RangeEnumeration>original,repurposed,re-used,remanufactured,waste</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Description.]]></Description>
 			</Item>
