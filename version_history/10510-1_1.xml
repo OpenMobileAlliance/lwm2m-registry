@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Battery Passport Dynamic Data</Name>
+		<Description1><![CDATA[Dynamic part of a comprehensive set of data-attributes along the entire battery value chain, normalized in DIN DKE SPEC 99100.]]></Description1>
+		<ObjectID>10510</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:x:10510</ObjectURN>
+		<LWM2MVersion>1.0</LWM2MVersion>
+		<ObjectVersion>1.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>Battery status</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration>original,repurposed,re-used,remanufactured,waste</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Description.]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>Remaining capacity</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Ah</Units>
+				<Description><![CDATA[The remaining capacity is the corresponding in-use data attribute to rated capacity.]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>Remaining usable battery energy</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>kWh</Units>
+				<Description><![CDATA[The usable battery energy at the present point in the lifetime of a battery as determined according to the procedure in the UN GTR No 22.]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>State of certified energy (SOCE)</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%</Units>
+				<Description><![CDATA[The measured or on-board usable battery energy performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>State of Charge (SoC)</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%</Units>
+				<Description><![CDATA[The available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer. When the battery’s state of health is no longer equal to its initial condition, SoC refers to the maximum energy or charge that can be stored in the battery at the time of charging; (see BattReg Article 3, 1(27) and Standardization request M/579).]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Remaining round trip energy efficiency </Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%</Units>
+				<Description><![CDATA[The in-use analogy to the initial roundtrip energy the ratio of the net energy delivered by a battery during a discharge test to the total energy required to restore the initial state of charge by a standard charge.]]></Description>
+			</Item>
+			<Item ID="7">
+				<Name>Current self-discharge rate</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%</Units>
+				<Description><![CDATA[The change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.]]></Description>
+			</Item>
+			<Item ID="8">
+				<Name>Evolution of self-discharge rates</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration>0..100</RangeEnumeration>
+				<Units>%</Units>
+				<Description><![CDATA[The change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.]]></Description>
+			</Item>
+			<Item ID="9">
+				<Name>Number of full charging and discharging cycles</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Number of full charging and discharging cycles]]></Description>
+			</Item>
+			<Item ID="10">
+				<Name>Energy throughput  </Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Float</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>kWh</Units>
+				<Description><![CDATA[The overall sum of the energy throughput over the battery lifetime at a specific time during usage.]]></Description>
+			</Item>
+			<Item ID="11">
+				<Name>Capacity throughput</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Ah</Units>
+				<Description><![CDATA[The overall sum of the capacity throughput over the battery lifetime at a specific time during usage.]]></Description>
+			</Item>
+			<Item ID="12">
+				<Name>Temperature information</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>Cel</Units>
+				<Description><![CDATA[Periodically recorded information on the operating temperature.]]></Description>
+			</Item>
+			<Item ID="13">
+				<Name>Time spent in extreme temperatures above boundary</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>min</Units>
+				<Description><![CDATA[The aggregated time, in which temperatures above the upper boundary of the temperature range as defined in 'Temperature range idle state, upper boundary' are prevalent.]]></Description>
+			</Item>
+			<Item ID="14">
+				<Name>Time spent in extreme temperatures below boundary</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>min</Units>
+				<Description><![CDATA[The aggregated time, in which temperatures below the lower boundary of the temperature range as defined in 'Temperature range idle state, lower boundary' are prevalent.]]></Description>
+			</Item>
+			<Item ID="15">
+				<Name>Time spent charging during extreme temperatures above boundary</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>min</Units>
+				<Description><![CDATA[The aggregated time, in which the battery is charged, while temperatures above the upper boundary of the temperature range as defined in 'Temperature range idle state, upper boundary' are prevalent.]]></Description>
+			</Item>
+			<Item ID="16">
+				<Name>Time spent charging during extreme temperatures below boundary</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>min</Units>
+				<Description><![CDATA[The aggregated time, in which the battery is charged, while temperatures below the lower boundary of the temperature range as defined in 'Temperature range idle state, lower boundary' are prevalent.]]></Description>
+			</Item>
+			<Item ID="17">
+				<Name>Number of deep discharge events</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The number of occasions, in which voltage has dropped below the lower operational limit as provided in the battery passport ]]></Description>
+			</Item>
+			<Item ID="18">
+				<Name>Number of overcharge events</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[The number of occasions, in which voltage has increased above the upper operational limit as provided in the battery passport. ]]></Description>
+			</Item>
+			<Item ID="19">
+				<Name>Information on accidents</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Multiple</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Information and data resulting from its use such as accidents.]]></Description>
+			</Item>
+		</Resources>
+		<Description2><![CDATA[]]></Description2>
+	</Object>
+</LWM2M>
