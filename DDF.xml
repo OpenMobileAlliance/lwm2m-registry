@@ -6795,15 +6795,15 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
     <Item>
        <ObjectID>10510</ObjectID>
         <URN>urn:oma:lwm2m:x:10510</URN>
-        <Name>TBD</Name>
-        <Description>Reservation 10510
+        <Name>Battery Passport Dynamic Data</Name>
+	<Description>Dynamic part of a comprehensive set of data-attributes along the entire battery value chain, normalized in DIN DKE SPEC 99100.
         </Description>
-        <Owner>TBD</Owner>
+        <Owner>HK.Digital GmbH</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>10510.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
