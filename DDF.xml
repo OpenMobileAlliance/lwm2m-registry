@@ -176,14 +176,14 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <URN>urn:oma:lwm2m:oma:3:1.3</URN>
         <Name>TBD</Name>
         <Description>Reservation object 3_1.3</Description>
-        <Owner>TBD</Owner>
+        <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.3</Ver>
         <DDF></DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>
-        <TSLink></TSLink>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>4</ObjectID>
