@@ -171,7 +171,20 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3</ObjectID>
+        <URN>urn:oma:lwm2m:oma:3:1.3</URN>
+        <Name>TBD</Name>
+        <Description>Reservation object 3_1.3</Description>
+        <Owner>TBD</Owner>
+        <Source>0</Source>
+        <Ver>1.3</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink></TSLink>
+    </Item>
     <Item>
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4</URN>
@@ -7276,20 +7289,6 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Name>VPN Configuration</Name>
         <Description>VPN tunnel configuration. OpenVPN, WireGuard, IPsec support with connection management and status monitoring.</Description>
         <Owner>Walt Technologies</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
-    <Item>
-       <ObjectID>10538</ObjectID>
-        <URN>urn:oma:lwm2m:x:10538</URN>
-        <Name>Acceleration Tamper Alarm</Name>
-        <Description>This alarm is raised when acceleration is detected by e.g. an accelerometer</Description>
-        <Owner>South East Water Corporation</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
