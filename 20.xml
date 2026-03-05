@@ -67,7 +67,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
 		<ObjectID>20</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:20:3.0</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>3.0</ObjectVersion>
+		<ObjectVersion>3.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -161,7 +161,17 @@ This resource may only be included in a Send operation payload. Attempting to ac
 				<Units></Units>
 				<Description><![CDATA[Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.
 If the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server.]]></Description>
-			</Item></Resources>
+			</Item>
+			<Item ID="4050"><Name>AppID</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>2 bytes</RangeEnumeration>
+				<Units />
+				<Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
+			</Item>
+		</Resources>
 		<Description2><![CDATA[As an extension to the definition of resource 4013 (LogStatus), within the context of this Object starting with version 2.1, the 4th LSB, defined in the Resource Description as "reserved", shall mean: 1=LogDataIncremental collection active, 0=LogDataIncremental collection stopped.]]></Description2>
 	</Object>
 </LWM2M>
