@@ -635,7 +635,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>21</ObjectID>
