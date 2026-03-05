@@ -283,7 +283,7 @@ If the LwM2M client is connected to multiple servers, this resource SHOULD be ha
         <RangeEnumeration>2 bytes</RangeEnumeration>       
         <Units></Units>        
         <Submitter>OMA</Submitter>
-        <Description><![CDATA[Application ID index from a TBD LwM2M Application Registry.]]></Description>        
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>        
         <TS></TS>       
         <TSLink>0</TSLink>
        </Item>
