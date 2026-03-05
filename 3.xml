@@ -127,7 +127,10 @@ LEGAL DISCLAIMER
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Perform factory reset of the LwM2M Device to make the LwM2M Device to go through initial deployment sequence where provisioning and bootstrap sequence is performed. This requires client ensuring post factory reset to have minimal information to allow it to carry out one of the bootstrap methods specified in section 5.2.3. 
-When this Resource is executed, "De-register" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device.]]></Description>
+When this Resource is executed, "De-register" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device.
+No Argument or Argument = 0 indicates that the Client MUST preserve its IDevID upon factory reset.
+Argument = 1 indicates that the Client MUST preserve both IDevID and LDevID upon factory reset.
+]]></Description>
 			</Item>
 			<Item ID="6">
 				<Name>Available Power Sources</Name>
