@@ -64,7 +64,7 @@ LEGAL DISCLAIMER
 		<ObjectID>9</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:9</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
+		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -314,6 +314,54 @@ Key based mechanism can alternatively use for talking to the component server in
 				<RangeEnumeration>0..255</RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Software Component tree length indicates the number of instances existing for this software package in the Software Component Object.]]></Description>
+			</Item>
+			<Item ID="19">
+				<Name>Start</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This action Starts the software application if the Software Activation State Machine is currently in the ACTIVE state.]]></Description>
+			</Item>
+			<Item ID="20">
+				<Name>Stop</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This action Stops the software application if the Software Activation State Machine is currently in the ACTIVE state.]]></Description>
+			</Item>
+			<Item ID="21">
+				<Name>Operational State</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Mandatory</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<RangeEnumeration>0..15</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Indicates the current operational state of the software application:
+					0: Initializing
+					1: Running
+					2: Shutting Down
+					3: Stopped
+					4: Failed
+					5: Defunct
+					6-15: Reserved
+					]]></Description>
+			</Item>
+			<Item ID="22">
+				<Name>Purge</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type></Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[This action deletes existing local application data without modifying the application installation or activation states.]]></Description>
 			</Item>
 		</Resources>
 		<Description2><![CDATA[]]></Description2>
