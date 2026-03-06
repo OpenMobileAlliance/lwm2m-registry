@@ -63,7 +63,7 @@ LEGAL DISCLAIMER
 		<Description1><![CDATA[This LwM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance.]]></Description1>
 		<ObjectID>9</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:9:1.1</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>1.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
