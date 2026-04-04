@@ -616,26 +616,11 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>3.0</Ver>
-        <DDF>version_history/20-3_0.xml</DDF>
+        <DDF>20.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
-        <TSLink>1</TSLink>
-    </Item>
-    <Item>
-        <ObjectID>20</ObjectID>
-        <URN>urn:oma:lwm2m:oma:20:3.1</URN>
-        <Name>Event Log</Name>
-        <Description>The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
-The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
-        <Owner>OMA</Owner>
-        <Source>0</Source>
-        <Ver>3.1</Ver>
-        <DDF></DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS></TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>21</ObjectID>
