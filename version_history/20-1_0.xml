@@ -125,17 +125,22 @@ Arguments definitions are described in the table below.]]></Description>
 				<Units></Units>
 				<Description><![CDATA[Read Access on that Resource returns the Data Collection associated to the current Object Instance.  ]]></Description>
 			</Item>
-        <Description> <![CDATA[ when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned
+			<Item ID="4015"><Name>LogDataFormat</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>255</RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[ when set by the Server, this Resource indicates to the Client, what is the Server preferred data format to use when the LogData Resource is returned
 . when retrieved by the Server, this Resource indicates which specific data format is used when the LogData Resource is returned to the Server 
 0  or Resource not present : no specific data format (sequence of bytes)
-1 : OMA-LwM2M TLV format (only container for logs; does not define any semantics for the logs themselve)
-2 : OMA-LwM2M JSON format (only container for logs; does not define any semantics for the logs themselve)
-3 : OMA-LwM2M CBOR format (only container for logs; does not define any semantics for the logs themselve)
-4 : Syslog Format(RFC5424)
-5 : Common Log Format(RFC6872)
-[6..99] reserved
+1 : OMA-LwM2M TLV format
+2 : OMA-LwM2M JSON format
+3:  OMA-LwM2M CBOR format
+[4..99] reserved
 [100..255] vendor specific data format
-- ]]></Description>
+ ]]></Description>
 			</Item></Resources>
 		<Description2 />
 	</Object>
