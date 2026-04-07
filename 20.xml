@@ -137,7 +137,7 @@ Arguments definitions are described in the table below.]]></Description>
 5 : Common Log Format(RFC6872)
 [6..99] reserved
 [100..255] vendor specific data format
-- ]]></Description>
+ ]]></Description>
 			</Item>
 			<Item ID="4016">
 				<Name>LogDataIncremental</Name>
