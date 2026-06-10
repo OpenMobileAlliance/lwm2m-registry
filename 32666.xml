@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Mandatory>Optional</Mandatory>
 				<Type>Integer</Type>
 				<RangeEnumeration>1987..1987</RangeEnumeration>
-				<Units>yr</Units>
+				<Units></Units>
 				<Description>The year the song was released. This value is fixed and SHALL be 1987.</Description>
 			</Item>
 			<Item ID="5">
