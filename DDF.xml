@@ -977,6 +977,34 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>514</ObjectID>
+        <URN>urn:oma:lwm2m:oma:514</URN>
+        <Name>TBD</Name>
+        <Description>Reservation</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>515</ObjectID>
+        <URN>urn:oma:lwm2m:oma:515</URN>
+        <Name>TBD</Name>
+        <Description>Reservation</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>600</ObjectID>
         <URN>urn:oma:lwm2m:oma:600</URN>
         <Name>Cabinet Controller Status</Name>
