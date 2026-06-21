@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Type></Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description>Executes the Rick Roll operation. Upon execution, the device SHALL redirect any connected display to the Redirect URL, play "Never Gonna Give You Up" at the configured Volume, increment the Roll Count, and update the Current Lyric resource.</Description>
+				<Description>Executes the Rick Roll operation. Upon execution, the device SHALL redirect any connected display to the Redirect URL, play "Never Gonna Give You Up" at the configured Volume, increment the Roll Count by 1, and log the event with timestamp. The calling party will not have been given up, let down, run around, or deserted.</Description>
 			</Item>
 			<Item ID="10">
 				<Name>Reset Roll Count</Name>
@@ -153,6 +153,6 @@ POSSIBILITY OF SUCH DAMAGE.
 				<Description>Resets the Roll Count to zero. This operation does not undo any Rick Rolls that have already been delivered.</Description>
 			</Item>
 		</Resources>
-		<Description2>Note: This object is provided in the spirit of RFC 3514 (The Evil Bit) and RFC 2549 (IP over Avian Carriers). Implementors are reminded that while RFC compliance is important, the true spirit of this object lies in its execution.</Description2>
+		<Description2>Note: This object is provided in the spirit of RFC 3514 (The Evil Bit) and RFC 2549 (IP over Avian Carriers). Implementors are reminded that while RFC compliance is important, the target of a Rick Roll retains no recourse under any applicable telecommunications regulation. We could have told the target what we were going to do, but that would have been a lie.</Description2>
 	</Object>
 </LWM2M>
