@@ -204,7 +204,7 @@ Time at which the current or most recent execution of the component started, whe
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>restarts</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of component restarts during the current monitoring period.
 ]]></Description>
@@ -378,7 +378,7 @@ Timestamp of the most recent upstream send, handoff, delivery, or communication 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>errors</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of upstream send, handoff, delivery, or communication errors observed or retained by the platform during the current monitoring period.
 ]]></Description>
@@ -390,7 +390,7 @@ Count of upstream send, handoff, delivery, or communication errors observed or r
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>observations</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of active observe relationships for the monitored component, function, or path where such telemetry is available.
 ]]></Description>
@@ -402,7 +402,7 @@ Count of active observe relationships for the monitored component, function, or 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>notifications</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of failed Notify deliveries during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -414,7 +414,7 @@ Count of failed Notify deliveries during the current monitoring period where suc
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>events</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of events suppressed by policy, throttling, coalescing, backpressure, or other platform behavior during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -426,7 +426,7 @@ Count of events suppressed by policy, throttling, coalescing, backpressure, or o
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>events</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of events dropped due to queueing, transport, resource, policy, or delivery failure during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -459,7 +459,7 @@ Health state of the upstream queue or spool associated with this component.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>messages</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of pending upstream GEISA Platform messages currently queued or spooled for delivery.
 ]]></Description>
@@ -471,7 +471,7 @@ Number of pending upstream GEISA Platform messages currently queued or spooled f
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Total bytes currently queued or spooled for upstream GEISA Platform delivery.
 ]]></Description>
@@ -495,7 +495,7 @@ Timestamp of the oldest pending upstream or platform message in the monitored qu
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>messages</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of upstream GEISA Platform messages dropped during the current monitoring period.
 ]]></Description>
@@ -507,7 +507,7 @@ Number of upstream GEISA Platform messages dropped during the current monitoring
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>messages</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of queued or spooled upstream GEISA Platform messages that expired before successful delivery during the current monitoring period.
 ]]></Description>
@@ -539,7 +539,7 @@ Health state of the local GEISA API broker, when applicable.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>requests</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of API requests observed or retained by the monitored API or function during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also an API request counted by that monitored function.
 ]]></Description>
@@ -551,7 +551,7 @@ Count of API requests observed or retained by the monitored API or function duri
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>errors</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of API errors observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
@@ -563,7 +563,7 @@ Count of API errors observed or retained by the monitored API or function during
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>attempts</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
