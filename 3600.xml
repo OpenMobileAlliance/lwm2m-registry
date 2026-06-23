@@ -144,7 +144,7 @@ priority values when competing messages are otherwise eligible for delivery.
         <Units/>
         <Description><![CDATA[
 Classifies the app-message payload carried by this app-scoped messaging instance. Applies to both Client Message (Resource 1) and Server Message (Resource 0). Not all types apply in both directions.
-0: UNSPECIFIED – Message type is not specified or not yet classified.
+0: UNSPECIFIED - Message type is not specified or not yet classified.
 1: CONFIG – App-facing desired or effective configuration state.
 2: COMMAND – Action request to perform work now or soon.
 3: COMMAND_RESULT – Result of a COMMAND execution, distinct from
