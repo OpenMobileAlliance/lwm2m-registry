@@ -294,7 +294,7 @@ Current quota or policy summary state for the accounting class and scope represe
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Bytes remaining in the active collection or quota period for the accounting class and scope represented by this object instance.
 A value of zero indicates that the configured byte allowance has been exhausted or no bytes remain under the current policy.
@@ -307,7 +307,7 @@ A value of zero indicates that the configured byte allowance has been exhausted 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Configured message count limit for the active collection or quota period. This limit applies to messages accounted by the class and scope policy represented by this object instance, such as app messaging, platform-mediated communication, direct communication, local platform API use, service-flow communication, or other ADM or operator-defined accounting categories.
 It does not imply that all LwM2M protocol exchanges are counted unless policy explicitly defines that behavior.
@@ -320,7 +320,7 @@ It does not imply that all LwM2M protocol exchanges are counted unless policy ex
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Messages remaining in the active collection or quota period for messages accounted by the class and scope policy represented by this object instance.
 
@@ -334,7 +334,7 @@ This value may be unavailable when no authoritative quota, limit, or policy sour
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of messages transmitted so far during the current collection period for messages accounted by the class and scope policy represented by this object instance. This can include app messaging, platform-mediated communication, direct communication, local platform API use, service-flow communication, or other ADM or operator-defined accounting categories.
 It does not imply that all LwM2M protocol exchanges are counted unless policy explicitly defines that behavior.
@@ -347,7 +347,7 @@ It does not imply that all LwM2M protocol exchanges are counted unless policy ex
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of messages received so far during the current collection period for messages accounted by the class and scope policy represented by this object instance.
 RX message counts require an authoritative inbound accounting source and may be unavailable rather than inferred.
@@ -360,7 +360,7 @@ RX message counts require an authoritative inbound accounting source and may be 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Total number of messages transmitted plus received so far during the current collection period for messages accounted by the class and scope policy represented by this object instance.
 ]]></Description>
@@ -430,7 +430,7 @@ Summary reason code for the current throttled, blocked, disabled, or otherwise c
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Configured byte-per-second rate limit applied while this accounting instance is throttled.
 A value of zero indicates that communication covered by this accounting instance or scope is blocked rather than rate-limited.
@@ -538,7 +538,7 @@ The encoded value does not carry timezone metadata. Device-local accounting peri
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>byte</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Selected evidence summary resource for operations monitoring.
 This value records the count of accounting, communication, security, QoS, or enforcement policy violations associated with this scope during the active accounting period.

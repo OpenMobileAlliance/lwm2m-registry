@@ -297,7 +297,7 @@ Reason for the most recent application exit.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>restarts</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of application restarts during the current platform-defined monitoring period.
 ]]></Description>
@@ -309,7 +309,7 @@ Number of application restarts during the current platform-defined monitoring pe
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>restarts</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of application restarts observed across the lifetime of this application installation, subject to platform persistence policy.
 ]]></Description>
@@ -321,7 +321,7 @@ Number of application restarts observed across the lifetime of this application 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>crashes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of abnormal application exits during the current platform-defined monitoring period.
 ]]></Description>
@@ -357,7 +357,7 @@ Current watchdog timeout in seconds for this application instance.
         <Mandatory>Optional</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>events</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Number of missed application watchdog or keepalive intervals during the current platform-defined monitoring period.
 ]]></Description>
@@ -405,7 +405,7 @@ Peak CPU utilization for this application instance over the platform-defined mon
         <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Current memory used by this application instance, such as resident memory of the representative runtime process when that is the platform measurement basis.
 ]]></Description>
@@ -417,7 +417,7 @@ Current memory used by this application instance, such as resident memory of the
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Peak memory used by this application instance over the platform-defined monitoring window.
 ]]></Description>
@@ -429,7 +429,7 @@ Peak memory used by this application instance over the platform-defined monitori
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Memory limit currently enforced for this application instance.
 ]]></Description>
@@ -441,7 +441,7 @@ Memory limit currently enforced for this application instance.
         <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Persistent storage currently used by this application instance.
 ]]></Description>
@@ -453,7 +453,7 @@ Persistent storage currently used by this application instance.
         <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Persistent storage limit currently enforced for this application instance.
 ]]></Description>
@@ -465,7 +465,7 @@ Persistent storage limit currently enforced for this application instance.
         <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Non-persistent storage currently used by this application instance.
 ]]></Description>
@@ -477,7 +477,7 @@ Non-persistent storage currently used by this application instance.
         <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>bytes</Units>
+        <Units>B</Units>
         <Description><![CDATA[
 Non-persistent storage limit currently enforced for this application instance.
 ]]></Description>
@@ -489,7 +489,7 @@ Non-persistent storage limit currently enforced for this application instance.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>threads</Units>
+        <Units></Units>
         <Description><![CDATA[
 Current thread count associated with this application instance or representative runtime process, when the execution environment exposes that information.
 ]]></Description>
@@ -501,7 +501,7 @@ Current thread count associated with this application instance or representative
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>processes</Units>
+        <Units></Units>
         <Description><![CDATA[
 Current number of observed processes associated with this application instance, including directly associated child processes when exposed by the execution environment.
 ]]></Description>
@@ -611,8 +611,7 @@ Request that the platform ask the application to shut down cleanly. This operati
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
-        <Description><![CDATA[
-A local-scope numeric application identifier for distinguishing applications within an endpoint, platform, or deployment context. This value is not globally unique by itself. Upstream correlation requires endpoint or platform identity plus this AppID, and application-instance context where multiple local instances are possible.
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
 ]]></Description>
       </Item>
     </Resources>

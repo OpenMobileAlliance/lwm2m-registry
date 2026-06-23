@@ -4856,7 +4856,11 @@ This object may expose selected summary state derived from those sources for eas
         <ObjectID>3604</ObjectID>
         <URN>urn:oma:lwm2m:ext:3604</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3604 to 3614</Description>
+        <Description>This LwM2M Object provides app-scoped runtime monitoring and health visibility.
+
+Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
+
+Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
