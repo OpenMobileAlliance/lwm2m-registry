@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: TBD
+   Path:
+
+OMNA LwM2M Registry
+   File: 3605.xml
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+  TBD
+
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
+CHANGE HISTORY
+
+See TBD
+
+LEGAL DISCLAIMER
+
+Copyright 2019-2026 Open Mobile Alliance.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+The above license is used as a license under copyright only. Please
+reference the OMA IPR Policy for patent licensing terms:
+https://www.omaspecworks.org/about/intellectual-property-rights/
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>PlatformMonitoring</Name>
+    <Description1><![CDATA[
+This LwM2M Object provides platform-scoped monitoring state for GEISA-capable platform functions, components, services, queues, APIs, and operational paths.
+
+Each Object Instance represents the platform's monitoring view for one platform component or for an aggregate platform scope. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. This Object is intended for EMA health, LwM2M client health, registration and bootstrap state, upstream reporting health, local API broker or service health, app message bridge health, local monitoring function health, event log service health, and upstream queue or spool health.  Platform Implementors may have their own components mapped into this instance via the use of the vendor-specific reservation IDs.
+
+This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.
+]]></Description1>
+    <ObjectID>3605</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3605</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Component Type</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Type of GEISA Platform component represented by this Object Instance.
+
+0 = Unknown
+1 = Aggregate GEISA Platform
+2 = Edge Management Agent
+3 = LwM2M client
+4 = GEISA API broker
+5 = GEISA API service or function
+6 = App message bridge
+7 = Local monitoring function
+8 = Event log service
+9 = Upstream queue or spool service
+10 = Security or credential service
+11..127 = Reserved for future GEISA-defined component types
+128..255 = Reserved for vendor-specific or operator-specific component types
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>Component Name</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Human-readable component name assigned by the platform. This value is intended for display, diagnostics, and log correlation.
+]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>Component Instance ID</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Platform-local identifier for the component instance represented by this Object Instance. This value is intended for correlation with logs, events, and platform diagnostics.
+]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>Component Version</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Version of the GEISA Platform component, when available from runtime metadata, service metadata, manifest or package metadata, or platform-generated records.
+]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>Component Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current health state for this GEISA Platform component.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5 = Not reporting
+6 = Starting
+7 = Stopping
+8..127 = Reserved for future GEISA-defined health states
+128..255 = Reserved for vendor-specific or operator-specific health states
+]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>Health Reason</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short platform-generated reason associated with the current Component Health State.
+]]></Description>
+      </Item>
+      <Item ID="6">
+        <Name>Last Health Transition Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the Component Health State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="7">
+        <Name>Component Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the current or most recent execution of the component started, when available from the platform. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="8">
+        <Name>Restart Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>restarts</Units>
+        <Description><![CDATA[
+Number of component restarts during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="9">
+        <Name>Monitoring Window</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Monitoring window in seconds used for current-period counters and derived health evaluation for this component.
+]]></Description>
+      </Item>
+      <Item ID="10">
+        <Name>Monitoring Period Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Start time for the active monitoring period used by current-period counters and derived health state. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="11">
+        <Name>Last Update Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform most recently refreshed, generated, or updated the monitoring snapshot represented by this object instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="12">
+        <Name>LwM2M Registration State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current LwM2M registration state, when this Object Instance represents an EMA, LwM2M client, or aggregate GEISA Platform scope.
+
+0 = Unknown
+1 = Not registered
+2 = Registering
+3 = Registered
+4 = Registration update pending
+5 = Registration failed
+6 = Registration expired
+7 = Deregistering
+8..127 = Reserved for future GEISA-defined registration states
+128..255 = Reserved for vendor-specific or operator-specific registration states
+]]></Description>
+      </Item>
+      <Item ID="13">
+        <Name>Last Registration Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time of the most recent successful LwM2M registration, when known. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="14">
+        <Name>Last Registration Update Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time of the most recent successful LwM2M registration update, when known. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="15">
+        <Name>Registration Lifetime</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Current LwM2M registration lifetime in seconds.
+]]></Description>
+      </Item>
+      <Item ID="16">
+        <Name>Bootstrap State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current bootstrap state, when applicable.
+
+0 = Unknown
+1 = Not required
+2 = Required
+3 = In progress
+4 = Completed
+5 = Failed
+6..127 = Reserved for future GEISA-defined bootstrap states
+128..255 = Reserved for vendor-specific or operator-specific bootstrap states
+]]></Description>
+      </Item>
+      <Item ID="17">
+        <Name>Upstream Communication State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current upstream communication state for GEISA Platform reporting.
+
+0 = Unknown
+1 = Disabled
+2 = Enabled down
+3 = Enabled up
+4 = Degraded
+5 = Backlogged
+6 = Blocked by policy
+7..127 = Reserved for future GEISA-defined upstream communication states
+128..255 = Reserved for vendor-specific or operator-specific upstream communication states
+]]></Description>
+      </Item>
+      <Item ID="18">
+        <Name>Last Upstream Success Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Timestamp of the most recent successful upstream send, handoff, delivery, or communication observed or retained by the platform for this component, function, or path, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="19">
+        <Name>Last Upstream Error Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Timestamp of the most recent upstream send, handoff, delivery, or communication error observed or retained by the platform for this component, function, or path, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="20">
+        <Name>Upstream Error Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>errors</Units>
+        <Description><![CDATA[
+Count of upstream send, handoff, delivery, or communication errors observed or retained by the platform during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="21">
+        <Name>Active Observe Count</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>observations</Units>
+        <Description><![CDATA[
+Count of active observe relationships for the monitored component, function, or path where such telemetry is available.
+]]></Description>
+      </Item>
+      <Item ID="22">
+        <Name>Failed Notify Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>notifications</Units>
+        <Description><![CDATA[
+Count of failed Notify deliveries during the current monitoring period where such telemetry is available.
+]]></Description>
+      </Item>
+      <Item ID="23">
+        <Name>Suppressed Event Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>events</Units>
+        <Description><![CDATA[
+Count of events suppressed by policy, throttling, coalescing, backpressure, or other platform behavior during the current monitoring period where such telemetry is available.
+]]></Description>
+      </Item>
+      <Item ID="24">
+        <Name>Dropped Event Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>events</Units>
+        <Description><![CDATA[
+Count of events dropped due to queueing, transport, resource, policy, or delivery failure during the current monitoring period where such telemetry is available.
+]]></Description>
+      </Item>
+      <Item ID="25">
+        <Name>Queue Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Health state of the upstream queue or spool associated with this component.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Full
+4 = Failed
+5 = Disabled
+6..127 = Reserved for future GEISA-defined queue health states
+128..255 = Reserved for vendor-specific or operator-specific queue health states
+]]></Description>
+      </Item>
+      <Item ID="26">
+        <Name>Pending Upstream Messages</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>messages</Units>
+        <Description><![CDATA[
+Number of pending upstream GEISA Platform messages currently queued or spooled for delivery.
+]]></Description>
+      </Item>
+      <Item ID="27">
+        <Name>Pending Upstream Bytes</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Total bytes currently queued or spooled for upstream GEISA Platform delivery.
+]]></Description>
+      </Item>
+      <Item ID="28">
+        <Name>Oldest Pending Message Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Timestamp of the oldest pending upstream or platform message in the monitored queue or path when one exists. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="29">
+        <Name>Dropped Upstream Messages Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>messages</Units>
+        <Description><![CDATA[
+Number of upstream GEISA Platform messages dropped during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="30">
+        <Name>Expired Upstream Messages Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>messages</Units>
+        <Description><![CDATA[
+Number of queued or spooled upstream GEISA Platform messages that expired before successful delivery during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="31">
+        <Name>API Broker Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Health state of the local GEISA API broker, when applicable.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5..127 = Reserved for future GEISA-defined API broker health states
+128..255 = Reserved for vendor-specific or operator-specific API broker health states
+]]></Description>
+      </Item>
+      <Item ID="32">
+        <Name>API Request Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>requests</Units>
+        <Description><![CDATA[
+Count of API requests observed or retained by the monitored API or function during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also an API request counted by that monitored function.
+]]></Description>
+      </Item>
+      <Item ID="33">
+        <Name>API Error Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>errors</Units>
+        <Description><![CDATA[
+Count of API errors observed or retained by the monitored API or function during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="34">
+        <Name>Unauthorized API Attempt Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>attempts</Units>
+        <Description><![CDATA[
+Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="35">
+        <Name>App Message Bridge Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Health state of the local app message bridge that connects GEISA API messaging to ADM/LwM2M upstream or downstream handling, when applicable.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5..127 = Reserved for future GEISA-defined bridge health states
+128..255 = Reserved for vendor-specific or operator-specific bridge health states
+]]></Description>
+      </Item>
+      <Item ID="36">
+        <Name>Event Log Service Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Health state of the local event log service or durable event recording path, when applicable.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5..127 = Reserved for future GEISA-defined event log health states
+128..255 = Reserved for vendor-specific or operator-specific event log health states
+]]></Description>
+      </Item>
+      <Item ID="37">
+        <Name>Local Monitoring Function Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Health state of the local monitoring function responsible for producing, refreshing, or exposing platform monitoring data when such a function is present. This allows embedded implementations, standalone implementations, disabled profiles, and profiles where no separate local monitoring function exists.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5..127 = Reserved for future GEISA-defined monitoring function health states
+128..255 = Reserved for vendor-specific or operator-specific monitoring function health states
+]]></Description>
+      </Item>
+      <Item ID="38">
+        <Name>Last Durable Event Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which this component most recently wrote or caused a durable event or log record to be written. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="39">
+        <Name>Request Status Refresh</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request that the platform refresh the current status of this platform component and update this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="40">
+        <Name>Reset Monitoring Counters</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Reset current-period monitoring counters for this Object Instance and start a new monitoring period. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="41">
+        <Name>Flush Upstream Queue</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request immediate delivery of queued or spooled upstream messages associated with this component. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="42">
+        <Name>Restart Component</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request restart of the component represented by this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[
+
+]]></Description2>
+  </Object>
+</LWM2M>

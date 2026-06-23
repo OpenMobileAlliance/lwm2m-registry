@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: TBD
+   Path:
+
+OMNA LwM2M Registry
+   File: 3604.xml
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+  TBD
+
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
+CHANGE HISTORY
+
+See TBD
+
+LEGAL DISCLAIMER
+
+Copyright 2019-2026 Open Mobile Alliance.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+The above license is used as a license under copyright only. Please
+reference the OMA IPR Policy for patent licensing terms:
+https://www.omaspecworks.org/about/intellectual-property-rights/
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>AppMonitoring</Name>
+    <Description1><![CDATA[
+This LwM2M Object provides app-scoped runtime monitoring and health visibility.
+
+Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
+
+Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.
+]]></Description1>
+    <ObjectID>3604</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3604</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Application Package ID</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Reverse-DNS or package-style application identifier from the application manifest or platform catalog. This value identifies the application package andfor operator display, logs, and correlation. It is not a unique runtime application instance identifier.
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>Application Instance ID</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Platform-local application instance identifier assigned by the platform or registry. This value distinguishes multiple deployed or running instances of the same package on the same platform.  It is not globally unique by itself; upstream correlation requires endpoint or platform identity and, where needed, AppID or application-instance context.
+]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>Software Instance</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Objlnk</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Optional object link to the corresponding /9 Software Management instance for the installed application package or package lifecycle correlation. This resource does not replace AppID or Application Instance ID.
+]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>App Accounting Instances</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Objlnk</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+One or more object links to /3602 AppAccounting instance(s) associated with this application or application instance. Multiple /3602 instances may exist for different accounting classes, scopes, or accounting windows such as daily, since-reboot, rolling-window, lifetime, or operator-defined accounting. /3602 owns accounting counters, quota, throttle, block, disabled, and accounting-window state.
+]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>Application Name</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Human-readable application name from the application manifest or platform application catalog.
+]]></Description>
+      </Item>
+      <Item ID="6">
+        <Name>Application Version</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Application version from the application manifest or platform application catalog.
+]]></Description>
+      </Item>
+      <Item ID="7">
+        <Name>Execution Environment</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Execution environment used by this application instance.
+
+0 = Unknown
+1 = Linux Execution Environment
+2 = Virtual Execution Environment
+3 = Other or future GEISA execution environment
+4..127 = Reserved for future GEISA-defined execution environments
+128..255 = Reserved for vendor-specific execution environments
+]]></Description>
+      </Item>
+      <Item ID="8">
+        <Name>Lifecycle State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Platform lifecycle state for this application instance.
+
+0 = Unknown
+1 = Installed
+2 = Activated
+3 = Starting
+4 = Running
+5 = Stopping
+6 = Stopped
+7 = Failed
+8 = Quarantined or policy blocked
+9..127 = Reserved for future GEISA-defined lifecycle states
+128..255 = Reserved for vendor-specific or operator-specific lifecycle states
+
+This state is the platform's operational view and does not replace Software Management state.
+]]></Description>
+      </Item>
+      <Item ID="9">
+        <Name>Health State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current health summary for this application instance.
+
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Stopped
+5 = Policy blocked
+6 = Not reporting
+7..127 = Reserved for future GEISA-defined health states
+128..255 = Reserved for vendor-specific or operator-specific health states
+
+Health State is a summary. Detailed events, alarms, or log records SHOULD be reported through the GEISA message, event, alarm, or log mechanisms.
+]]></Description>
+      </Item>
+      <Item ID="10">
+        <Name>Health Reason</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short platform-generated reason associated with the current Health State.
+]]></Description>
+      </Item>
+      <Item ID="11">
+        <Name>Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the current or most recent application runtime execution started, when available from the platform. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="12">
+        <Name>Last Status Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform most recently received, generated, or refreshed application runtime status for this application instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="13">
+        <Name>Last Exit Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the application most recently exited or was terminated. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="14">
+        <Name>Last Exit Reason</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Reason for the most recent application exit.
+
+0 = None or not applicable
+1 = Unknown
+2 = Normal exit
+3 = App-requested restart
+4 = App-requested stop
+5 = Platform-requested stop
+6 = Watchdog timeout
+7 = Crash or abnormal exit
+8 = Resource limit exceeded
+9 = Policy or security violation
+10..127 = Reserved for future GEISA-defined exit reasons
+128..255 = Reserved for vendor-specific or operator-specific exit reasons
+]]></Description>
+      </Item>
+      <Item ID="15">
+        <Name>Restart Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>restarts</Units>
+        <Description><![CDATA[
+Number of application restarts during the current platform-defined monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="16">
+        <Name>Restart Count Lifetime</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>restarts</Units>
+        <Description><![CDATA[
+Number of application restarts observed across the lifetime of this application installation, subject to platform persistence policy.
+]]></Description>
+      </Item>
+      <Item ID="17">
+        <Name>Crash Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>crashes</Units>
+        <Description><![CDATA[
+Number of abnormal application exits during the current platform-defined monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="18">
+        <Name>Watchdog Enabled</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Boolean</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Indicates whether the platform is applying an application keepalive or watchdog policy to this application instance.
+]]></Description>
+      </Item>
+      <Item ID="19">
+        <Name>Watchdog Timeout</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Current watchdog timeout in seconds for this application instance.
+]]></Description>
+      </Item>
+      <Item ID="20">
+        <Name>Watchdog Missed Count</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>events</Units>
+        <Description><![CDATA[
+Number of missed application watchdog or keepalive intervals during the current platform-defined monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="21">
+        <Name>CPU Current Percent</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Float</Type>
+        <RangeEnumeration>0..100</RangeEnumeration>
+        <Units>%</Units>
+        <Description><![CDATA[
+Current or recent CPU utilization estimate for this application instance, reported as a percentage of the CPU allocation or platform basis defined by the platform. This is a bounded estimate, not a perfect platform-wide truth.
+]]></Description>
+      </Item>
+      <Item ID="22">
+        <Name>CPU Average Percent</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Float</Type>
+        <RangeEnumeration>0..100</RangeEnumeration>
+        <Units>%</Units>
+        <Description><![CDATA[
+Average CPU utilization for this application instance over the platform-defined monitoring window.
+]]></Description>
+      </Item>
+      <Item ID="23">
+        <Name>CPU Peak Percent</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Float</Type>
+        <RangeEnumeration>0..100</RangeEnumeration>
+        <Units>%</Units>
+        <Description><![CDATA[
+Peak CPU utilization for this application instance over the platform-defined monitoring window.
+]]></Description>
+      </Item>
+      <Item ID="24">
+        <Name>Memory Current</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Current memory used by this application instance, such as resident memory of the representative runtime process when that is the platform measurement basis.
+]]></Description>
+      </Item>
+      <Item ID="25">
+        <Name>Memory Peak</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Peak memory used by this application instance over the platform-defined monitoring window.
+]]></Description>
+      </Item>
+      <Item ID="26">
+        <Name>Memory Limit</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Memory limit currently enforced for this application instance.
+]]></Description>
+      </Item>
+      <Item ID="27">
+        <Name>Persistent Storage Used</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Persistent storage currently used by this application instance.
+]]></Description>
+      </Item>
+      <Item ID="28">
+        <Name>Persistent Storage Limit</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Persistent storage limit currently enforced for this application instance.
+]]></Description>
+      </Item>
+      <Item ID="29">
+        <Name>Non-Persistent Storage Used</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Non-persistent storage currently used by this application instance.
+]]></Description>
+      </Item>
+      <Item ID="30">
+        <Name>Non-Persistent Storage Limit</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bytes</Units>
+        <Description><![CDATA[
+Non-persistent storage limit currently enforced for this application instance.
+]]></Description>
+      </Item>
+      <Item ID="31">
+        <Name>Thread Count</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>threads</Units>
+        <Description><![CDATA[
+Current thread count associated with this application instance or representative runtime process, when the execution environment exposes that information.
+]]></Description>
+      </Item>
+      <Item ID="32">
+        <Name>Process Count</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>processes</Units>
+        <Description><![CDATA[
+Current number of observed processes associated with this application instance, including directly associated child processes when exposed by the execution environment.
+]]></Description>
+      </Item>
+      <Item ID="33">
+        <Name>Last Platform Action</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Most recent platform action taken for this application instance.
+
+0 = None
+1 = Requested status
+2 = Requested clean shutdown
+3 = Stopped
+4 = Killed or forcibly terminated
+5 = Restarted
+6 = Quarantined
+7 = Unquarantined
+8 = Purged local data
+9 = Policy changed
+10..127 = Reserved for future GEISA-defined platform actions
+128..255 = Reserved for vendor-specific or operator-specific platform actions
+]]></Description>
+      </Item>
+      <Item ID="34">
+        <Name>Last Platform Action Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform most recently took an action for this application instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="35">
+        <Name>Monitoring Window</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Platform-defined monitoring window in seconds used for average, peak, restart, crash, and watchdog-miss current-period metrics in this object instance.
+]]></Description>
+      </Item>
+      <Item ID="36">
+        <Name>Monitoring Period Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Start time for the active monitoring period used by current-period counters and windowed metrics. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="37">
+        <Name>Last Update Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform most recently refreshed or updated this AppMonitoring object snapshot for the application instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="38">
+        <Name>Request App Status</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request that the platform obtain or refresh application status. The platform MAY satisfy this by using local runtime state, by requesting status from the application, or both.
+]]></Description>
+      </Item>
+      <Item ID="39">
+        <Name>Request Clean Shutdown</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request that the platform ask the application to shut down cleanly. This operation is advisory and does not replace platform lifecycle enforcement through Software Management or platform execution control.
+]]></Description>
+      </Item>
+      <Item ID="4050">
+        <Name>AppID</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>2 bytes</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+A local-scope numeric application identifier for distinguishing applications within an endpoint, platform, or deployment context. This value is not globally unique by itself. Upstream correlation requires endpoint or platform identity plus this AppID, and application-instance context where multiple local instances are possible.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[
+
+]]></Description2>
+  </Object>
+</LWM2M>
