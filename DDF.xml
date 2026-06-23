@@ -4892,7 +4892,11 @@ This Object does not require continuous telemetry collection. It does not imply 
         <ObjectID>3606</ObjectID>
         <URN>urn:oma:lwm2m:ext:3606</URN>
         <Name>PlatformConfiguration</Name>
-        <Description>Reservation from 3604 to 3614</Description>
+        <Description>This LwM2M Object configures GEISA Platform behavior for local monitoring, reporting, logging, queueing, and app-message handling.
+
+This Object is single-instance per edge device. It represents requested and effective behavior of the GEISA Platform for one edge device and is intended for operator or EMS-visible configuration state rather than current operational health.
+
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads; app-domain configuration uses the GEISA App Messaging Object. It does not report current platform health; the GEISA Platform Monitoring Object reports current platform health, state, and counters. It does not store durable logs or event records; those remain in the Event Log Object.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
