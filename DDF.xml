@@ -4855,7 +4855,7 @@ This object may expose selected summary state derived from those sources for eas
     <Item>
         <ObjectID>3604</ObjectID>
         <URN>urn:oma:lwm2m:ext:3604</URN>
-        <Name>TBD</Name>
+        <Name>AppMonitoring</Name>
         <Description>This LwM2M Object provides app-scoped runtime monitoring and health visibility.
 
 Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
@@ -4872,9 +4872,13 @@ Accounting, quota, throttle, block, disabled, and accounting-window state are re
     </Item>
 	<Item>
         <ObjectID>3605</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3604</URN>
+        <URN>urn:oma:lwm2m:ext:3605</URN>
         <Name>TBD</Name>
-        <Description>Reservation from 3604 to 3614</Description>
+        <Description>This LwM2M Object provides platform-scoped monitoring state for GEISA-capable platform functions, components, services, queues, APIs, and operational paths.
+
+Each Object Instance represents the platform's monitoring view for one platform component or for an aggregate platform scope. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. This Object is intended for EMA health, LwM2M client health, registration and bootstrap state, upstream reporting health, local API broker or service health, app message bridge health, local monitoring function health, event log service health, and upstream queue or spool health.  Platform Implementors may have their own components mapped into this instance via the use of the vendor-specific reservation IDs.
+
+This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
