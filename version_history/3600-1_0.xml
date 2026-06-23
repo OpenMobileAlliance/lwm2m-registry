@@ -4,12 +4,12 @@ FILE INFORMATION
 
 OMA Permanent Document
    File: TBD
-   Path: 
+   Path:
 
 OMNA LwM2M Registry
    File: 3600.xml
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
-   
+
 
 NORMATIVE INFORMATION
 
@@ -27,7 +27,8 @@ See https://github.com/OpenMobileAlliance/app_messaging
 
 LEGAL DISCLAIMER
 
-Copyright 2019-2026 Open Mobile Alliance.
+Copyright 2026, Contributors to the Grid Edge Interoperability &
+Security Alliance (GEISA), a Series of LF Projects, LLC
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -60,77 +61,140 @@ reference the OMA IPR Policy for patent licensing terms:
 https://www.omaspecworks.org/about/intellectual-property-rights/
 
 -->
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
-	<Object ObjectType="MODefinition">
-		<Name>AppMessaging</Name>
-		<Description1><![CDATA[This LwM2M Object provides a bi-directional messaging facility for applications. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>AppMessaging</Name>
+    <Description1><![CDATA[
+This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+
+Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+
+This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+
+Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.
 ]]></Description1>
-		<ObjectID>3600</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
-		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
-		<MultipleInstances>Multiple</MultipleInstances>
-		<Mandatory>Optional</Mandatory>
-		<Resources>
-			<Item ID="0"><Name>Server Message</Name>
-				<Operations>W</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Opaque</Type>
-				<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Server to Client message.]]></Description>
-		   </Item>
-			<Item ID="1">
-				<Name>Client Message</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Opaque</Type>
-				<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Client to Server message.]]></Description>
-			</Item>
-			<Item ID="2">
-				<Name>Message Priority</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>0..255</RangeEnumeration>
-				<Units />
-				<Description><![CDATA[Indicates the message priority:
-0:Immediate
-1:BestEffort
-2:Latest
-3-100: Reserved for future use.
-101-254: Proprietary mode.]]></Description>
-			</Item>
-			<Item ID="3">
-				<Name>Message Description</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>1 bytes</RangeEnumeration>
-				<Units />
-				<Description><![CDATA[Indicates the message description:
-0:App Configuration
-1:App Data
-2-100: Reserved for future use.
-101-254: Proprietary use.]]></Description>
-			</Item>
-			<Item ID="4050">
-				<Name>AppID</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>2 bytes</RangeEnumeration>
-				<Units />
-				<Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
-			</Item>
-		</Resources>
-		<Description2><![CDATA[]]></Description2>
-	</Object>
+    <ObjectID>3600</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.1</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Server Message</Name>
+        <Operations>W</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Opaque</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Server to Client message. Write-only server-to-client message payload. Implementations that support /3600 SHALL support this resource as the inbound app-message write surface, subject to authorization and routing policy.
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>Client Message</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Opaque</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Client to Server message. Readable client-to-server message payload or current app-message slot. The resource may be unavailable when no current client message is pending; durable history belongs in /20.
+]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>Message Priority</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Indicates the app-message priority for this app-scoped messaging instance.
+
+Lower numeric values represent higher delivery priority. Edge platforms SHOULD use
+this value when ordering, scheduling, throttling, or selecting messages for
+delivery. Platforms MAY also map these priority values to local transport,
+queueing, or QoS policy mechanisms, including implementation-specific QoS
+codepoints or classes where available.
+
+Platforms SHOULD prefer lower numeric priority values before higher numeric
+priority values when competing messages are otherwise eligible for delivery.
+
+0: Unspecified
+1: Urgent - highest priority; send immediately when possible
+2: Immediate - high priority; send as soon as possible
+3: BestEffort - normal priority; send when resources are available
+4: Latest - lowest priority; retain/send only the latest applicable message
+5-100: Reserved for future GEISA use.
+101-254: Reserved for proprietary use.
+255: Reserved.
+]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>Message Type</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..254</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Classifies the app-message payload carried by this app-scoped messaging instance. Applies to both Client Message (Resource 1) and Server Message (Resource 0). Not all types apply in both directions.
+0: UNSPECIFIED - Message type is not specified or not yet classified.
+1: CONFIG - App-facing desired or effective configuration state.
+2: COMMAND - Action request to perform work now or soon.
+3: COMMAND_RESULT - Result of a COMMAND execution, distinct from
+transport-level response acceptance.
+4: STATUS - Current state, lifecycle, readiness, mode, or policy/quota state.
+5: EVENT - Operationally meaningful occurrence worth recording or routing.
+6: ALARM - Actionable, high-severity, security, safety, or policy condition requiring prompt attention or special handling.
+7: APP_DATA - Supplemental application-specific data that intentioally does not fit CONFIG, COMMAND, STATUS, EVENT, ALARM, COMMAND_RESULT, or TELEMETRY.
+8: TELEMETRY - Measurement-oriented numeric or structured observations, usually time-series, snapshot, interval, or resource metrics.
+9-100: Reserved for future GEISA use.
+101-254: Reserved for Proprietary use.
+]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>Message TTL</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Requested or default app-message time-to-live for this app-scoped messaging instance, in seconds. A value of 0 indicates no message-specific TTL and allows the platform or EMS to apply default policy. This resource is not event-log retention. Expired messages SHALL NOT be delivered as current app messages, though expiration may be recorded through event or log mechanisms where appropriate.
+]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>Content Type</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Media type for the app-message payload encoding, such as application/json, application/cbor, application/octet-stream, application/protobuf, or a GEISA or vendor-specific media type. This allows routing and interpretation without assuming all message payloads are opaque. This resource does not expose payload history. application/octet-stream may be used for opaque payloads.
+]]></Description>
+      </Item>
+      <Item ID="4050">
+        <Name>AppID</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>2 bytes</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[]]></Description2>
+  </Object>
 </LWM2M>

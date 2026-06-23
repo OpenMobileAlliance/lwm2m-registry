@@ -4,12 +4,12 @@ FILE INFORMATION
 
 OMA Permanent Document
    File: TBD
-   Path: 
+   Path:
 
 OMNA LwM2M Registry
    File: 3602.xml
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
-   
+
 
 NORMATIVE INFORMATION
 
@@ -60,119 +60,569 @@ reference the OMA IPR Policy for patent licensing terms:
 https://www.omaspecworks.org/about/intellectual-property-rights/
 
 -->
-<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M.xsd">
-	<Object ObjectType="MODefinition">
-		<Name>AppAccounting</Name>
-		<Description1><![CDATA[This LwM2M Object provides facilities for service flow level accounting and throttling per application.]]></Description1>
-		<ObjectID>3602</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3602</ObjectURN>
-		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.0</ObjectVersion>
-		<MultipleInstances>Multiple</MultipleInstances>
-		<Mandatory>Optional</Mandatory>
-		<Resources>
-			<Item ID="0">
-				<Name>Collection Period</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[A string in RFC 5545 Recurrence Rule (RRule) format defining the collection period (e.g., "RRULE:FREQ=MINUTELY;INTERVAL=60"). 
-          Collection period counters shall be automatically reset at the end of each collection period.]]></Description>
-			</Item>
-			<Item ID="1">
-				<Name>Maximum Bytes</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Hard limit maximum number of bytes allowed per collection period, above which the device initiates throttling of the app referenced in resource 4050 without direction from the Server.]]></Description>
-			</Item>
-			<Item ID="2">
-				<Name>TX Bytes</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Number of bytes transmitted so far during the collection period for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="3">
-				<Name>RX Bytes</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Number of bytes received so far during the collection period for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="4">
-				<Name>Total Bytes</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Number of bytes transmitted and received so far during the collection period for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="5">
-				<Name>TX Packets</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Number of packets transmitted so far during the collection period for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="6">
-				<Name>RX Packets</Name>
-				<Operations>R</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Number of packets received so far during the collection period for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="7">
-				<Name>Start Throttling</Name>
-				<Operations>E</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type />
-        		<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Start throttling traffic for the app referenced in resource 4050.]]></Description>
-			</Item>
-      		<Item ID="8">
-				<Name>Stop Throttling</Name>
-				<Operations>E</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type />
-				<RangeEnumeration />
-				<Units />
-				<Description><![CDATA[Stop throttling traffic for the app referenced in resource 4050.]]></Description>
-			</Item>
-			<Item ID="4050">
-				<Name>AppID</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Mandatory</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>2 bytes</RangeEnumeration>
-				<Units />
-				<Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
-			</Item>
-    	</Resources>
-		<Description2><![CDATA[]]></Description2>
-	</Object>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>AppAccounting</Name>
+    <Description1><![CDATA[
+This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+
+Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+
+Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
+
+Detailed behavoral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+]]></Description1>
+    <ObjectID>3602</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3602</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Collection Period</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+A string in RFC 5545 Recurrence Rule (RRule) format defining the configured recurring accounting period when the Accounting Window Type represents a configured or recurring period (e.g., "RRULE:FREQ=MINUTELY;INTERVAL=60").
+
+Counters are interpreted within the active collection period and reset or roll over according to the accounting policy or profile.
+
+For non-recurring windows such as Since reboot or Lifetime, Period Start Time identifies the beginning of the accounting window and Next Reset Time may be unavailable.
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>Maximum Bytes</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Hard limit maximum number of bytes allowed per collection period for the application or accounting scope represented by this object instance.
+
+Above this limit, the platform may initiate throttling or blocking without waiting for a Server command, subject to local policy and implementation support.
+]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>TX Bytes</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of bytes transmitted so far during the current collection period for the accounting class and scope represented by this object instance.
+TX bytes represent usage emitted by the application or accounting scope.
+]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>RX Bytes</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of bytes received so far during the current collection period for the accounting class and scope represented by this object instance.
+RX bytes represent usage directed to the application or accounting scope when an authoritative inbound accounting source exists.
+]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>Total Bytes</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Total number of bytes transmitted plus received so far during the current collection period for the accounting class and scope represented by this object instance.
+Total bytes are derived from TX Bytes plus RX Bytes for the modeled accounting scope.
+]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>TX Packets</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of packets transmitted so far during the current collection period for the accounting class and scope represented by this object instance. Packet counters are meaningful only for profiles or accounting classes with authoritative packet-level accounting.
+]]></Description>
+      </Item>
+      <Item ID="6">
+        <Name>RX Packets</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of packets received so far during the current collection period for the accounting class and scope represented by this object instance. Packet counters are meaningful only for profiles or accounting classes with authoritative packet-level accounting.
+]]></Description>
+      </Item>
+      <Item ID="7">
+        <Name>Start Throttling</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Apply constrained or rate-limited behavior for the application or accounting scope represented by this object instance.
+Platforms may deny this operation or leave it unsupported according to operator policy, authorization, implementation profile, or lack of an enforcement path.
+]]></Description>
+      </Item>
+      <Item ID="8">
+        <Name>Stop Throttling</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Remove explicit throttling for the application or accounting scope represented by this object instance.
+Platforms may deny this operation or leave it unsupported according to operator policy, authorization, implementation profile, or lack of an enforcement path.
+]]></Description>
+      </Item>
+      <Item ID="9">
+        <Name>Software Instance</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Objlnk</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Optional object link to a related LwM2M Software Management /9 instance for the installed application package associated with this accounting instance, when available. This link is secondary and does not replace resource 4050 AppID as the primary local application identity anchor for this object.
+]]></Description>
+      </Item>
+      <Item ID="10">
+        <Name>Accounting Class</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Accounting class whose counters, limits, quota state, throttle, block, disabled state, and evidence summary state are represented by this instance for the application identified by resource 4050 AppID.
+0 = Unspecified
+1 = App-message traffic
+2 = Direct IP traffic
+3 = Local traffic
+4 = Upstream WAN traffic
+5..127 = Reserved for future GEISA-defined accounting classes
+128..255 = Reserved for vendor-specific or operator-specific accounting classes
+
+Platform or application status messages, events, logs, and platform monitoring records may inform this summary state, but they are not a separate accounting class unless a GEISA-defined or operator-defined accounting policy explicitly assigns them to one.
+]]></Description>
+      </Item>
+      <Item ID="11">
+        <Name>Accounting Scope</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Boundary or scope for accounting associated with resource 4050 AppID.
+
+0 = Unspecified
+1 = Application
+2 = Application instance
+3 = Interface or bearer
+4 = Network class
+5 = Platform policy class
+6..127 = Reserved for future GEISA-defined accounting scopes
+128..255 = Reserved for vendor-specific or operator-specific accounting scopes
+This resource defines the scope boundary for the counters, limits, quota state, throttle, block, or disabled state, and enforcement or evidence summaries represented by this accounting instance.
+]]></Description>
+      </Item>
+      <Item ID="12">
+        <Name>Scope Label</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Optional human-readable or operator-assigned label describing the accounting scope when Accounting Scope is more specific than the application identified by resource 4050 AppID. Examples include an interface name, bearer label, network class, or operator policy bucket identifier.
+]]></Description>
+      </Item>
+      <Item ID="13">
+        <Name>Volume State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current quota or policy summary state for the accounting class and scope represented by this instance.
+0 = Unknown
+1 = Normal or available
+2 = Unlimited
+3 = Exhausted
+4 = Throttled
+5 = Blocked or policy restricted
+6..127 = Reserved for future GEISA-defined volume states
+128..255 = Reserved for vendor-specific or operator-specific volume states
+]]></Description>
+      </Item>
+      <Item ID="14">
+        <Name>Bytes Remaining</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Bytes remaining in the active collection or quota period for the accounting class and scope represented by this object instance.
+A value of zero indicates that the configured byte allowance has been exhausted or no bytes remain under the current policy.
+]]></Description>
+      </Item>
+      <Item ID="15">
+        <Name>Message Limit</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Configured message count limit for the active collection or quota period. This limit applies to messages accounted by the class and scope policy represented by this object instance, such as app messaging, platform-mediated communication, direct communication, local platform API use, service-flow communication, or other ADM or operator-defined accounting categories.
+It does not imply that all LwM2M protocol exchanges are counted unless policy explicitly defines that behavior.
+]]></Description>
+      </Item>
+      <Item ID="16">
+        <Name>Messages Remaining</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Messages remaining in the active collection or quota period for messages accounted by the class and scope policy represented by this object instance.
+
+This value may be unavailable when no authoritative quota, limit, or policy source exists.
+]]></Description>
+      </Item>
+      <Item ID="17">
+        <Name>TX Messages</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Number of messages transmitted so far during the current collection period for messages accounted by the class and scope policy represented by this object instance. This can include app messaging, platform-mediated communication, direct communication, local platform API use, service-flow communication, or other ADM or operator-defined accounting categories.
+It does not imply that all LwM2M protocol exchanges are counted unless policy explicitly defines that behavior.
+]]></Description>
+      </Item>
+      <Item ID="18">
+        <Name>RX Messages</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Number of messages received so far during the current collection period for messages accounted by the class and scope policy represented by this object instance.
+RX message counts require an authoritative inbound accounting source and may be unavailable rather than inferred.
+]]></Description>
+      </Item>
+      <Item ID="19">
+        <Name>Total Messages</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Total number of messages transmitted plus received so far during the current collection period for messages accounted by the class and scope policy represented by this object instance.
+]]></Description>
+      </Item>
+      <Item ID="20">
+        <Name>Throttle State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Summary state for the current throttled, blocked, disabled, or otherwise constrained condition of the application accounting scope represented by this instance.
+Throttled means activity is allowed but constrained.
+Blocked means enforcement prevents the scoped activity.
+Disabled means the scoped path, capability, application behavior, or accounting or
+enforcement function is administratively or configurationally disabled.
+0 = Not throttled
+1 = Throttled
+2 = Unknown
+3 = Blocked
+4 = Disabled
+5..127 = Reserved for future GEISA-defined throttle states
+128..255 = Reserved for vendor-specific or operator-specific throttle states
+]]></Description>
+      </Item>
+      <Item ID="21">
+        <Name>Throttle Reason</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Summary reason code for the current throttled, blocked, disabled, or otherwise constrained state of this application accounting scope.
+0 = None
+1 = Unknown
+2 = Byte quota exceeded
+3 = Message quota exceeded
+4 = Metered limit reached
+5 = Zero policy
+6 = Rate limited
+7 = Operator policy
+8 = QoS policy
+9 = Platform resource protection
+10 = Security or policy violation
+11 = Authorization or permission denied
+12 = Network unavailable
+13 = Connection disabled
+14 = Connection down
+15 = Dependency unavailable
+16 = Application unavailable or unhealthy
+17 = Application shutting down
+18 = Application requested restart
+19 = Application requested termination
+20 = Administrative disable
+21..127 = Reserved for future GEISA-defined throttle reasons
+128..255 = Reserved for vendor-specific or operator-specific throttle reasons
+]]></Description>
+      </Item>
+      <Item ID="22">
+        <Name>Throttle Rate Limit</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Configured byte-per-second rate limit applied while this accounting instance is throttled.
+A value of zero indicates that communication covered by this accounting instance or scope is blocked rather than rate-limited.
+This value may be unavailable when no policy-backed throttle source exists.
+Disabled state is represented by Throttle State and Throttle Reason where applicable.
+]]></Description>
+      </Item>
+      <Item ID="23">
+        <Name>Period Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Start time for the active collection period represented by the counters in this accounting instance.
+The value is encoded as LwM2M Time using Unix epoch time inseconds. The encoded value does not carry timezone metadata. Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, withfallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+For non-recurring windows such as Since reboot or Lifetime, this resource identifies the beginning of the accounting window.
+]]></Description>
+      </Item>
+      <Item ID="24">
+        <Name>Next Reset Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which current-period counters and remaining quota values are expected to reset for this accounting instance.
+The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata.
+Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+For non-recurring windows such as Since reboot or Lifetime, this resource may be unavailable.
+]]></Description>
+      </Item>
+      <Item ID="25">
+        <Name>Last Update Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform last generated, refreshed, or updated the
+accounting snapshot used to populate this object instance.
+The value is encoded as LwM2M Time using Unix epoch seconds.
+The encoded value does not carry timezone metadata.
+Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+This timestamp does not by itself prove that a new message, quota event, throttle transition, disabled transition, or policy violation occurred.
+]]></Description>
+      </Item>
+      <Item ID="26">
+        <Name>Last Throttle Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Selected evidence summary resource for operations monitoring.
+This value records the last known time the scope entered a throttled, blocked, disabled,
+or otherwise constrained state, when such evidence is available.
+It may be unavailable when no authoritative policy, quota, throttle, or enforcement evidence source exists.
+The value is encoded as LwM2M Time using Unix epoch seconds.
+The encoded value does not carry timezone metadata. Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+]]></Description>
+      </Item>
+      <Item ID="27">
+        <Name>Last Quota Exhausted Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Selected evidence summary resource for operations monitoring. This value records the last known time a quota or limit was exhausted for this scope.
+It may be unavailable when no authoritative quota, limit, or policy source exists.
+The value is encoded as LwM2M Time using Unix epoch seconds.
+The encoded value does not carry timezone metadata. Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+]]></Description>
+      </Item>
+      <Item ID="28">
+        <Name>Last Policy Violation Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Selected evidence summary resource for operations monitoring. This value records the last known time an accounting, communication, security, QoS, or enforcement policy violation associated with this scope was recorded.
+It may be unavailable when no authoritative policy or enforcement evidence source exists.
+The value is encoded as LwM2M Time using Unix epoch seconds.
+The encoded value does not carry timezone metadata. Device-local accounting period boundaries are interpreted using /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS accounting policy applies.
+]]></Description>
+      </Item>
+      <Item ID="29">
+        <Name>Violation Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Selected evidence summary resource for operations monitoring.
+This value records the count of accounting, communication, security, QoS, or enforcement policy violations associated with this scope during the active accounting period.
+It may be unavailable when no authoritative policy or enforcement evidence source exists.
+]]></Description>
+      </Item>
+      <Item ID="30">
+        <Name>Reset Accounting Period</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Reset current-period counters for the accounting class and scope represented by this object instance and start a new collection period.
+Platforms may deny this operation or leave it unsupported according to operator policy, authorization, implementation profile, or lack of an accounting or enforcement path.
+]]></Description>
+      </Item>
+      <Item ID="31">
+        <Name>Block Communication</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Block communication covered by this accounting instance and scope.
+This operation remains distinct from Start Throttling and applies only to the communication represented by this accounting instance unless the accounting scope explicitly covers a broader boundary.
+Platforms may deny this operation or leave it unsupported according to operator policy, authorization, implementation profile, or lack of an accounting or enforcement path.
+]]></Description>
+      </Item>
+      <Item ID="32">
+        <Name>Unblock Communication</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Remove an explicit communication block for the communication covered by this accounting instance and scope.
+This operation remains distinct from Stop Throttling and applies only to the communication represented by this accounting instance unless the accounting scope explicitly covers a broader boundary.
+Platforms may deny this operation or leave it unsupported according to operator policy, authorization, implementation profile, or lack of an accounting or enforcement path.
+]]></Description>
+      </Item>
+      <Item ID="33">
+        <Name>Accounting Window Type</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Identifies the accounting window represented by this AppAccounting object instance.
+Multiple AppAccounting instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+0 = Unspecified
+1 = Configured collection period
+2 = Daily
+3 = Since reboot
+4 = Rolling window
+5 = Lifetime
+6 = Operator-defined
+7..127 = Reserved for future GEISA-defined accounting window types
+128..255 = Reserved for vendor-specific or operator-specific accounting window types
+]]></Description>
+      </Item>
+      <Item ID="4050">
+        <Name>AppID</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>2 bytes</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[
+
+]]></Description2>
+  </Object>
 </LWM2M>
