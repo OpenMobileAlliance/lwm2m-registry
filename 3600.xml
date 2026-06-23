@@ -191,7 +191,7 @@ Media type for the app-message payload encoding, such as application/json, appli
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-A local-scope numeric application identity for distinguishing edge applications within a specific deployment environment. Resource 4050 AppID is not globally unique by itself. EMS or upstream correlation uses endpoint or platform identity together with resource 4050 AppID, and application instance identity where needed.
+A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
 ]]></Description>
       </Item>
     </Resources>

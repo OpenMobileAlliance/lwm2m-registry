@@ -4806,7 +4806,7 @@ Resource 4050 AppID is a local-scope application identity. Upstream or global co
         <ObjectID>3601</ObjectID>
         <URN>urn:oma:lwm2m:ext:3601</URN>
         <Name>HostMonitoring</Name>
-        <Description>This LwM2M Object provides a facility for monitoring resource utilization of a GEISA edge environment.</Description>
+        <Description>This LwM2M Object provides a facility for monitoring resource utilization of a host or device.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4820,7 +4820,15 @@ Resource 4050 AppID is a local-scope application identity. Upstream or global co
         <ObjectID>3602</ObjectID>
         <URN>urn:oma:lwm2m:ext:3602</URN>
         <Name>AppAccounting</Name>
-        <Description>This LwM2M Object provides facilities for service flow level accounting and throttling per application.</Description>
+        <Description>This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+
+Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+
+Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
+
+Detailed behavoral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4835,7 +4843,7 @@ Resource 4050 AppID is a local-scope application identity. Upstream or global co
         <URN>urn:oma:lwm2m:ext:3603</URN>
         <Name>TBD</Name>
         <Description>Reservation for 3603</Description>
-        <Owner>TBD</Owner>
+        <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
@@ -4849,10 +4857,38 @@ Resource 4050 AppID is a local-scope application identity. Upstream or global co
         <URN>urn:oma:lwm2m:ext:3604</URN>
         <Name>TBD</Name>
         <Description>Reservation from 3604 to 3614</Description>
-        <Owner>TBD</Owner>
+        <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3604.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	<Item>
+        <ObjectID>3605</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3604</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3604 to 3614</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3605.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	<Item>
+        <ObjectID>3606</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3604</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 3604 to 3614</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3606.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>0</DDFLink>
         <TS></TS>

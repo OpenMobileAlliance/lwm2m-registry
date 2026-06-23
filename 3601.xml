@@ -117,7 +117,7 @@ Processor model or CPU model string reported by the host.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>kHz</Units>
+        <Units>Hz</Units>
         <Description><![CDATA[
 Current CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
@@ -129,7 +129,7 @@ Current CPU frequency reported by the host for the monitored CPU or aggregate CP
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>kHz</Units>
+        <Units>Hz</Units>
         <Description><![CDATA[
 Minimum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
@@ -141,7 +141,7 @@ Minimum CPU frequency reported by the host for the monitored CPU or aggregate CP
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>kHz</Units>
+        <Units>Hz</Units>
         <Description><![CDATA[
 Maximum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
