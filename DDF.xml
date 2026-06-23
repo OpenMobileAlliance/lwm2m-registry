@@ -4890,8 +4890,8 @@ This Object does not require continuous telemetry collection. It does not imply 
     </Item>
 	<Item>
         <ObjectID>3606</ObjectID>
-        <URN>urn:oma:lwm2m:ext:3604</URN>
-        <Name>TBD</Name>
+        <URN>urn:oma:lwm2m:ext:3606</URN>
+        <Name>PlatformConfiguration</Name>
         <Description>Reservation from 3604 to 3614</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
