@@ -74,7 +74,7 @@ This Object is not a durable message, event, or log history store. Object 20 pro
 Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.
 ]]></Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.1</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
