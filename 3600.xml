@@ -74,7 +74,7 @@ This Object is not a durable message, event, or log history store. Object 20 pro
 Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.
 ]]></Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600:1.1</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.1</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
@@ -152,7 +152,7 @@ transport-level response acceptance.
 4: STATUS - Current state, lifecycle, readiness, mode, or policy/quota state.
 5: EVENT - Operationally meaningful occurrence worth recording or routing.
 6: ALARM - Actionable, high-severity, security, safety, or policy condition requiring prompt attention or special handling.
-7: APP_DATA - Supplemental application-specific data that intentioally does not fit CONFIG, COMMAND, STATUS, EVENT, ALARM, COMMAND_RESULT, or TELEMETRY.
+7: APP_DATA - Supplemental application-specific data that intentionally does not fit CONFIG, COMMAND, STATUS, EVENT, ALARM, COMMAND_RESULT, or TELEMETRY.
 8: TELEMETRY - Measurement-oriented numeric or structured observations, usually time-series, snapshot, interval, or resource metrics.
 9-100: Reserved for future GEISA use.
 101-254: Reserved for Proprietary use.
@@ -191,7 +191,7 @@ Media type for the app-message payload encoding, such as application/json, appli
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
+A unique local-scope identifier for distinguishing edge applications within a specific deployment environment. EMS or upstream correlation uses endpoint or platform identity together with resource 4050 AppID, and application instance identity where needed.
 ]]></Description>
       </Item>
     </Resources>

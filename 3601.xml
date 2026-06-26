@@ -65,7 +65,9 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
   <Object ObjectType="MODefinition">
     <Name>HostMonitoring</Name>
     <Description1><![CDATA[
-This LwM2M Object provides a facility for monitoring resource utilization of a host or device.
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.
 ]]></Description1>
     <ObjectID>3601</ObjectID>
     <ObjectURN>urn:oma:lwm2m:ext:3601</ObjectURN>
@@ -110,7 +112,7 @@ CPU architecture reported by the host, such as arm64, x86_64, or another platfor
 Processor model or CPU model string reported by the host.
 ]]></Description>
       </Item>
-      <Item ID="3">
+      <Item ID="10">
         <Name>CPU Current Frequency</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -122,7 +124,7 @@ Processor model or CPU model string reported by the host.
 Current CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
       </Item>
-      <Item ID="4">
+      <Item ID="11">
         <Name>CPU Minimum Frequency</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -134,7 +136,7 @@ Current CPU frequency reported by the host for the monitored CPU or aggregate CP
 Minimum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
       </Item>
-      <Item ID="5">
+      <Item ID="12">
         <Name>CPU Maximum Frequency</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -146,7 +148,7 @@ Minimum CPU frequency reported by the host for the monitored CPU or aggregate CP
 Maximum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
 ]]></Description>
       </Item>
-      <Item ID="6">
+      <Item ID="13">
         <Name>CPU Count</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -158,7 +160,7 @@ Maximum CPU frequency reported by the host for the monitored CPU or aggregate CP
 Number of CPU cores or logical processors available to the host or device.
 ]]></Description>
       </Item>
-      <Item ID="7">
+      <Item ID="14">
         <Name>CPU Load</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -170,7 +172,7 @@ Number of CPU cores or logical processors available to the host or device.
 One-minute CPU load average multiplied by 100. This is a scheduler-pressure metric, not CPU utilization percent, and it should not be confused with CPU Usage.
 ]]></Description>
       </Item>
-      <Item ID="8">
+      <Item ID="15">
         <Name>CPU Usage</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -182,7 +184,7 @@ One-minute CPU load average multiplied by 100. This is a scheduler-pressure metr
 Short-interval CPU utilization sample in deci-percent. This is a sampled utilization value, not the same concept as CPU Load. Divide by 10 to obtain percent usage.
 ]]></Description>
       </Item>
-      <Item ID="9">
+      <Item ID="20">
         <Name>Memory Total</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -194,7 +196,7 @@ Short-interval CPU utilization sample in deci-percent. This is a sampled utiliza
 Total physical memory in bytes.
 ]]></Description>
       </Item>
-      <Item ID="10">
+      <Item ID="21">
         <Name>Memory Available</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -206,7 +208,7 @@ Total physical memory in bytes.
 Available memory in bytes that can be used without swapping.
 ]]></Description>
       </Item>
-      <Item ID="11">
+      <Item ID="22">
         <Name>Processes Running</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -218,7 +220,7 @@ Available memory in bytes that can be used without swapping.
 Number of currently observed running processes or process entries on the host. This is a host process-count indicator, not a CPU run-queue or runnable-task metric.
 ]]></Description>
       </Item>
-      <Item ID="12">
+      <Item ID="23">
         <Name>Threads Running</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -230,7 +232,7 @@ Number of currently observed running processes or process entries on the host. T
 Number of currently observed running threads.
 ]]></Description>
       </Item>
-      <Item ID="13">
+      <Item ID="24">
         <Name>Context Switches</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -242,7 +244,7 @@ Number of currently observed running threads.
 Number of context switches per second.
 ]]></Description>
       </Item>
-      <Item ID="14">
+      <Item ID="25">
         <Name>Interrupts</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -254,7 +256,7 @@ Number of context switches per second.
 Number of interrupts per second.
 ]]></Description>
       </Item>
-      <Item ID="15">
+      <Item ID="30">
         <Name>Total Storage Capacity</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -266,7 +268,7 @@ Number of interrupts per second.
 Total storage capacity visible to or managed by the host or monitoring scope, in bytes.
 ]]></Description>
       </Item>
-      <Item ID="16">
+      <Item ID="31">
         <Name>Total Storage Used</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -278,7 +280,7 @@ Total storage capacity visible to or managed by the host or monitoring scope, in
 Total amount of storage currently used on the host.
 ]]></Description>
       </Item>
-      <Item ID="17">
+      <Item ID="32">
         <Name>App Storage Capacity</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -290,7 +292,7 @@ Total amount of storage currently used on the host.
 Total storage capacity allocated or available for hosted applications on this platform. This represents the total application storage allocation or partition capacity, not the portion currently used.
 ]]></Description>
       </Item>
-      <Item ID="18">
+      <Item ID="33">
         <Name>App Storage Used</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
@@ -302,7 +304,7 @@ Total storage capacity allocated or available for hosted applications on this pl
 Amount of the application storage capacity currently used by hosted applications.
 ]]></Description>
       </Item>
-      <Item ID="19">
+      <Item ID="34">
         <Name>Storage Devices</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -314,7 +316,7 @@ Amount of the application storage capacity currently used by hosted applications
 Storage device identifiers or labels for the host or device. Each Resource Instance identifies one included storage device.
 ]]></Description>
       </Item>
-      <Item ID="20">
+      <Item ID="35">
         <Name>Storage Partitions</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -326,7 +328,7 @@ Storage device identifiers or labels for the host or device. Each Resource Insta
 Storage partition identifiers, paths, mount points, or labels. The same Resource Instance index refers to the same storage partition as Storage Partition Available Space.
 ]]></Description>
       </Item>
-      <Item ID="21">
+      <Item ID="36">
         <Name>Storage Partition Available Space</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -338,7 +340,7 @@ Storage partition identifiers, paths, mount points, or labels. The same Resource
 Available space for the corresponding storage partition or partitions, in bytes. The same Resource Instance index refers to the same partition identified by Storage Partitions.
 ]]></Description>
       </Item>
-      <Item ID="22">
+      <Item ID="40">
         <Name>Network Devices</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -350,7 +352,7 @@ Available space for the corresponding storage partition or partitions, in bytes.
 Network device or interface identifiers or labels for the host or device. Each Resource Instance identifies one included network interface or device.
 ]]></Description>
       </Item>
-      <Item ID="23">
+      <Item ID="41">
         <Name>Network Device Type</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -362,7 +364,7 @@ Network device or interface identifiers or labels for the host or device. Each R
 Type of each included network interface or device, such as ethernet, wifi, virtual, loopback, or unknown.
 ]]></Description>
       </Item>
-      <Item ID="24">
+      <Item ID="42">
         <Name>Network Device Capacity</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
@@ -374,7 +376,7 @@ Type of each included network interface or device, such as ethernet, wifi, virtu
 Link or interface capacity for each included network interface or device, expressed in bits per second. The same Resource Instance index refers to the same network interface or device identified by the Network Devices resource.
 ]]></Description>
       </Item>
-      <Item ID="25">
+      <Item ID="43">
         <Name>Network Device Traffic Bytes</Name>
         <Operations>R</Operations>
         <MultipleInstances>Multiple</MultipleInstances>
