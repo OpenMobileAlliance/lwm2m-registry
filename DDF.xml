@@ -4785,9 +4785,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>3600</ObjectID>
         <URN>urn:oma:lwm2m:ext:3600</URN>
         <Name>AppMessaging</Name>
-        <Description>TThis object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability.
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
 
-Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.</Description>
+Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+
+This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+
+Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4801,7 +4806,10 @@ Resource identifiers are grouped logically with intentional gaps to keep related
         <ObjectID>3601</ObjectID>
         <URN>urn:oma:lwm2m:ext:3601</URN>
         <Name>HostMonitoring</Name>
-        <Description>This LwM2M Object provides a facility for monitoring resource utilization of a host or device.</Description>
+        <Description>
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4815,15 +4823,19 @@ Resource identifiers are grouped logically with intentional gaps to keep related
         <ObjectID>3602</ObjectID>
         <URN>urn:oma:lwm2m:ext:3602</URN>
         <Name>AppAccounting</Name>
-        <Description>This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+        <Description>
+This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
 
 Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
 
+Resource identifiers are intentionally grouped with gaps/reserved between logical sections to allow future GEISA-defined resources to be added near related identity, scope, accounting-window, counter, state, action, and evidence resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
 Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
 
-Detailed behavoral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+Detailed behavioral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
 
-This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.</Description>
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4853,9 +4865,12 @@ This object may expose selected summary state derived from those sources for eas
         <Name>AppMonitoring</Name>
         <Description>This LwM2M Object provides app-scoped runtime monitoring and health visibility.
 
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, health, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
 Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
 
-Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.</Description>
+Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4871,9 +4886,12 @@ Accounting, quota, throttle, block, disabled, and accounting-window state are re
         <Name>PlatformMonitoring</Name>
         <Description>This LwM2M Object provides platform-scoped monitoring state for GEISA-capable platform functions, components, services, queues, APIs, and operational paths.
 
-Each Object Instance represents the platform's monitoring view for one platform component or for an aggregate platform scope. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. This Object is intended for EMA health, LwM2M client health, registration and bootstrap state, upstream reporting health, local API broker or service health, app message bridge health, local monitoring function health, event log service health, and upstream queue or spool health.  Platform Implementors may have their own components mapped into this instance via the use of the vendor-specific reservation IDs.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component health, monitoring-window, LwM2M registration, upstream communication, queueing, API broker, platform-service health, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
-This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.</Description>
+Each Object Instance represents the platform's monitoring view for one platform component, service, function, operational path, or aggregate platform scope. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. This Object is intended for EMA health, LwM2M client health, registration and bootstrap state, upstream reporting health, local API broker or service health, app message bridge health, local monitoring function health, event log service health, and upstream queue or spool health. Platform implementers may map their own components using the vendor-specific or operator-specific Component Type reservation range when an exact match is not already provided.
+
+This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
@@ -4889,9 +4907,12 @@ This Object does not require continuous telemetry collection. It does not imply 
         <Name>PlatformConfiguration</Name>
         <Description>This LwM2M Object configures GEISA Platform behavior for local monitoring, reporting, logging, queueing, and app-message handling.
 
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related configuration state, sampling, monitoring-window, reporting, logging, queueing, app-message, retention, and app-accounting resources without renumbering existing resources. Requested configuration resources use even-numbered resource identifiers and their corresponding Effective resources use the immediately following odd-numbered resource identifiers. Undefined resource identifiers in those gaps are not implemented resources.
+
 This Object is single-instance per edge device. It represents requested and effective behavior of the GEISA Platform for one edge device and is intended for operator or EMS-visible configuration state rather than current operational health.
 
-This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads; app-domain configuration uses the GEISA App Messaging Object. It does not report current platform health; the GEISA Platform Monitoring Object reports current platform health, state, and counters. It does not store durable logs or event records; those remain in the Event Log Object.</Description>
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads; app-domain configuration uses the GEISA App Messaging Object. It does not report current platform health; the GEISA Platform Monitoring Object reports current platform health, state, and counters. It does not store durable logs or event records; those remain in the Event Log Object.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
