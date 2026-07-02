@@ -34,11 +34,8 @@
   https://www.omaspecworks.org/about/intellectual-property-rights/
 
 -->
-<LWM2MObject
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
-
-    <Object>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
         <Name>Radar Sensor</Name>
         <Description>
             Embedded radar sensor object providing presence, approach, and departure
