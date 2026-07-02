@@ -37,165 +37,149 @@
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
 	<Object ObjectType="MODefinition">
         <Name>Radar Sensor</Name>
-        <Description>
+        <Description1>
             Embedded radar sensor object providing presence, approach, and departure
             detection, with configurable sensitivity and response timing.
-        </Description>
+        </Description1>
         <ObjectID>607</ObjectID>
         <ObjectURN>urn:oma:lwm2m:oma:607</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
 		<ObjectVersion>1.0</ObjectVersion>
         <MultipleInstances>true</MultipleInstances>
         <Mandatory>false</Mandatory>
-    </Object>
-
-    <Resources>
-
-        <Item ID="0">
-            <Name>Detection State</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>true</Mandatory>
-            <Type>Integer</Type>
-            <RangeEnumeration>
-                <Enumeration Value="0">No detection</Enumeration>
-                <Enumeration Value="1">Approach</Enumeration>
-                <Enumeration Value="2">Leave</Enumeration>
-                <Enumeration Value="3">Generic detection</Enumeration>
-            </RangeEnumeration>
-            <Description>Current detection state of the radar sensor</Description>
-        </Item>
-
-        <Item ID="1">
-            <Name>Detection Counter</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Description>Total number of detection events</Description>
-        </Item>
-
-		<Item ID="5518">
-			<Name>Timestamp</Name>
-			<Operations>R</Operations>
-			<MultipleInstances>Single</MultipleInstances>
-			<Mandatory>Optional</Mandatory>
-			<Type>Time</Type>
-			<RangeEnumeration></RangeEnumeration>
-			<Units></Units>
-			<Description>Epoch timestamp (local time) of last detection</Description>
-		</Item>
-
-		<Item ID="5750">
-			<Name>Application Type</Name>
-			<Operations>RW</Operations>
-			<MultipleInstances>Single</MultipleInstances>
-			<Mandatory>Optional</Mandatory>
-			<Type>String</Type>
-			<RangeEnumeration></RangeEnumeration>
-			<Units></Units>
-			<Description>Application using this radar sensor</Description>
-		</Item>
-
-        <Item ID="4">
-            <Name>Approach Sensitivity</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Range>0..100</Range>
-            <Units>%</Units>
-            <Description>Sensitivity for approach detection</Description>
-        </Item>
-
-        <Item ID="5">
-            <Name>Leave Sensitivity</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Range>0..100</Range>
-            <Units>%</Units>
-            <Description>Sensitivity for leave detection</Description>
-        </Item>
-
-        <Item ID="6">
-            <Name>Approach Response Time</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Range>16..2048</Range>
-            <Units>ms</Units>
-            <Description>Response time for approach detection</Description>
-        </Item>
-
-        <Item ID="7">
-            <Name>Leave Response Time</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Range>16..2048</Range>
-            <Units>ms</Units>
-            <Description>Response time for leave detection</Description>
-        </Item>
-
-        <Item ID="8">
-            <Name>Target Velocity</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Float</Type>
-            <Units>m/s</Units>
-            <Description>Velocity threshold used by the radar sensor for detection</Description>
-        </Item>
-
-        <Item ID="9">
-            <Name>Environment Noise Filter</Name>
-            <Operations>RW</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Boolean</Type>
-            <Description>Enable or disable environmental noise filtering</Description>
-        </Item>
-
-        <Item ID="10">
-            <Name>Hourly Detection Counter</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Description>Number of detections within the last hour</Description>
-        </Item>
-
-        <Item ID="11">
-            <Name>Sensor Communication Failure</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Boolean</Type>
-            <Description>Indicates a radar sensor communication failure</Description>
-        </Item>
-
-        <Item ID="12">
-            <Name>Approach Detection Counter</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Description>Total number of approach detection events</Description>
-        </Item>
-		
-        <Item ID="13">
-            <Name>Leave Detection Counter</Name>
-            <Operations>R</Operations>
-            <MultipleInstances>false</MultipleInstances>
-            <Mandatory>false</Mandatory>
-            <Type>Unsigned Integer</Type>
-            <Description>Total number of leave detection events</Description>
-        </Item>
-
-    </Resources>
-
-</LWM2MObject>
+		<Resources>
+			<Item ID="0">
+				<Name>Detection State</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>true</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration>
+					<Enumeration Value="0">No detection</Enumeration>
+					<Enumeration Value="1">Approach</Enumeration>
+					<Enumeration Value="2">Leave</Enumeration>
+					<Enumeration Value="3">Generic detection</Enumeration>
+				</RangeEnumeration>
+				<Description>Current detection state of the radar sensor</Description>
+			</Item>
+			<Item ID="1">
+				<Name>Detection Counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Description>Total number of detection events</Description>
+			</Item>
+			<Item ID="4">
+				<Name>Approach Sensitivity</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Range>0..100</Range>
+				<Units>%</Units>
+				<Description>Sensitivity for approach detection</Description>
+			</Item>
+			<Item ID="5">
+				<Name>Leave Sensitivity</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Range>0..100</Range>
+				<Units>%</Units>
+				<Description>Sensitivity for leave detection</Description>
+			</Item>
+			<Item ID="6">
+				<Name>Approach Response Time</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Range>16..2048</Range>
+				<Units>ms</Units>
+				<Description>Response time for approach detection</Description>
+			</Item>
+			<Item ID="7">
+				<Name>Leave Response Time</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Range>16..2048</Range>
+				<Units>ms</Units>
+				<Description>Response time for leave detection</Description>
+			</Item>
+			<Item ID="8">
+				<Name>Target Velocity</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Float</Type>
+				<Units>m/s</Units>
+				<Description>Velocity threshold used by the radar sensor for detection</Description>
+			</Item>
+			<Item ID="9">
+				<Name>Environment Noise Filter</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Boolean</Type>
+				<Description>Enable or disable environmental noise filtering</Description>
+			</Item>
+			<Item ID="10">
+				<Name>Hourly Detection Counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Description>Number of detections within the last hour</Description>
+			</Item>
+			<Item ID="11">
+				<Name>Sensor Communication Failure</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Boolean</Type>
+				<Description>Indicates a radar sensor communication failure</Description>
+			</Item>
+			<Item ID="12">
+				<Name>Approach Detection Counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Description>Total number of approach detection events</Description>
+			</Item>
+			<Item ID="13">
+				<Name>Leave Detection Counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>false</MultipleInstances>
+				<Mandatory>false</Mandatory>
+				<Type>Unsigned Integer</Type>
+				<Description>Total number of leave detection events</Description>
+			</Item>
+			<Item ID="5518">
+				<Name>Timestamp</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Time</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Epoch timestamp (local time) of last detection</Description>
+			</Item>
+			<Item ID="5750">
+				<Name>Application Type</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>String</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description>Application using this radar sensor</Description>
+			</Item>
+		</Resources>
+		<Description2/>
+	</Object>
+</LWM2M>
