@@ -1022,7 +1022,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <ObjectID>607</ObjectID>
         <URN>urn:oma:lwm2m:oma:607</URN>
         <Name>Radar Sensor</Name>
-        <Description>Embedded radar sensor object providing presence, approach, and departure detection, with configurable sensitivity and response timing.</Description>
+                <Description>Embedded radar sensor object providing presence, approach, and departure detection, with configurable sensitivity and response timing.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
