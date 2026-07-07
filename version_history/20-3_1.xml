@@ -62,8 +62,7 @@ LEGAL DISCLAIMER
 	<Object ObjectType="MODefinition">
 		<Name>Event Log</Name>
 		<Description1><![CDATA[The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
-The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.
-]]></Description1>
+The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.]]></Description1>
 		<ObjectID>20</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:oma:20:3.1</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
