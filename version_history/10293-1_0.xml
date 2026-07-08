@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Integer</Type>
                 <RangeEnumeration>0..86399</RangeEnumeration>
                 <Units>s</Units>
-                <Description><![CDATA[The Interval Start Offset resource is a read-only resource representing the number of seconds past midnight for which the first interval is recorded. If this resource is empty, it is assumed that the intervals are midnight aligned. This can be used to adjust interval boundaries. As an example, an Interval Period of 3600 seconds and an Interval Start time of 300 represents hourly interval data, starting at 00:05.]]></Description>
+                <Description><![CDATA[The Interval Start Offset resource is a read only resource representing the number of seconds past midnight for which the first interval is recorded. If this resource is empty, it is assumed that the intervals are midnight aligned. This can be used to adjust interval boundaries. As an example, an Interval Period of 3600 seconds and an Interval Start time of 300 represents hourly interval data, starting at 00:05.]]></Description>
             </Item>
             <Item ID="6002">
                 <Name>Interval UTC Offset</Name>
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>String</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The Interval UTC Offset resource is a read-only resource representing the time zone offset for this Interval Data instance. If this resource is empty, the application should use the UTC offset provided in the Device [/3/0/14] object instance resource or UTC if not provided. UTC+X [ISO 8601].]]></Description>
+                <Description><![CDATA[The Interval UTC Offset resource is a read only resource representing the time zone offset for this Interval Data instance. If this resource is empty, the application should use the UTC offset provided in the Device [/3/0/14] object instance resource or UTC if not provided. UTC+X [ISO 8601].]]></Description>
             </Item>
             <Item ID="6003">
                 <Name>Interval Collection Start Time</Name>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The Collection Start Time resource is a read-only resource representing the time when the first interval was recorded on the device. Interval times represent the end of the interval, not the beginning. As an example, the first four hourly interval past midnight will have a timestamp of 04:00 (adjusting for UTC offset). ]]></Description>
+                <Description><![CDATA[The Collection Start Time resource is a read only resource representing the time when the first interval was recorded on the device. Interval times represent the end of the interval, not the beginning. As an example, the first four hourly interval past midnight will have a timestamp of 04:00 (adjusting for UTC offset). ]]></Description>
             </Item>
             <Item ID="6004">
                 <Name>Oldest Recorded Interval</Name>
@@ -109,7 +109,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Time</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The Last Delivered Interval is a readable and writable resource used to represent the last interval delivered to the LwM2M server. Interval times represent the end of the interval, not the beginning. The setting of this resource is implementation specific but should be updated based on, either a Read request of the Latest Payload from the LwM2M server or via a confirmed delivery of Notify operation of the Latest Payload resource. This resource is writable to allow the server to adjust the Last Delivered Interval value if the server and client are out of sync.]]></Description>
+                <Description><![CDATA[The Last Delivered Interval is a readable and writable resource used to represent the last interval delivered to the LwM2M server. Interval times represent the end of the interval, not the beginning. The setting of this resource is implementation specific but should be updated based on, either a Read request of the Latest Payload from the LwM2M server or via a confirmed delivery of Notify operation of the Latest Payload resource. This resource is writable to allow the server to adjust the Last Delivered Interval value if the server and client is out of sync.]]></Description>
             </Item>
             <Item ID="6006">
                 <Name>Latest Recorded Interval</Name>
@@ -129,7 +129,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type>Boolean</Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[The Interval Delivery Midnight Aligned resource is a readable and writable resource used to indicate if data is delivered only to the previous midnight (1) or if part-day data can be delivered (0). Calculating Midnight should consider the Interval UTC Offset resource, or if empty, the Device [/3/0/14] object instance resource.]]></Description>
+                <Description><![CDATA[The Delivery Midnight Aligned is a readable and writable resource used to indicate if data is delivered only to the previous midnight (1) or if part-day data can be delivered (0). Calculating Midnight should consider the Interval UTC Offset resource, or if empty, the Device [/3/0/14] object instance resource.]]></Description>
             </Item>
             <Item ID="6008">
                 <Name>Interval Historical Read</Name>
@@ -139,14 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
                 <Type></Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[Historical Interval Read is an executable resource designed to retrieve ad-hoc interval read data. The resource takes two arguments:-
-Argument 0: First Interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.
-Argument 1: Last interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone.
-The dates should be inclusive based on the end time of the interval. The data retrieved from this resource will be readable (or observable) from the Historical Read Payload Resource.
-
-As an example, the Argument List to retrieve data from Midnight 2nd March (UTC+10) to Midnight 6th March (UTC+10) for a specific instance of the interval data object, would be constructed as follows:-
-
-0='1488463200',1='1488808800']]></Description>
+                <Description><![CDATA[Historical Interval Read is an executable resource designed to retrieve ad-hoc interval read data. The resource takes two arguments:- Argument 0: First Interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone. Argument 1: Last interval time to Retrieve represented as number of seconds since Jan 1st, 1970 in the UTC time zone. The dates should be inclusive based on the end time of the interval. The data retrieved from this resource will be readable (or observable) from the Historical Read Payload Resource. As an example, the Argument List to retrieve data from Midnight 2nd March (UTC+10) to Midnight 6rd March (UTC+10) for a specific instance of the interval data object, would be constructed as follows:- 0='1488463200',1='1488808800']]></Description>
             </Item>
             <Item ID="6009">
                 <Name>Interval Historical Read Payload</Name>
@@ -166,16 +159,7 @@ As an example, the Argument List to retrieve data from Midnight 2nd March (UTC+1
                 <Type></Type>
                 <RangeEnumeration></RangeEnumeration>
                 <Units></Units>
-                <Description><![CDATA[Change Interval Configuration is an executable resource designed to allow the Interval Period, Interval Start Offset and Interval UTC Offset to be reconfigured. The resource takes three arguments:-
-Argument 0: [Mandatory] Interval Period represented as an integer as defined in the Interval Period Resource.
-Argument 1: [Optional] Interval start offset represented as an integer as defined in the Interval Start Offset Resource. If not provided, leave the value as per the current configuration
-Argument 2: [Optional] Interval UTC offset represented as a String as defined in the Interval UTC Offset Resource. If not provided, leave the value as per the current configuration.
-
-Depending on the specifics of the implementation of this object, reconfiguring the Interval data object may result in the removal of all historical data for this Interval Data Object Instance. Please consult with your device vendor as to the implications of reconfiguring an Interval Data Object Instance.
-
-As an example, the Argument List to change an interval data object instance from its existing values to one hour intervals, midnight aligned in UTC+10 time zone:-
-
-0='3600',1='0',2='UTC+10']]></Description>
+                <Description><![CDATA[Change Interval Configuration is an executable resource designed to allow the Interval Period, Interval Start Offset and Interval UTC Offset to be reconfigured. The resource takes three arguments:- Argument 0: [Mandatory] Interval Period represented as an integer as defined in the Interval Period Resource. Argument 1: [Optional] Interval start offset represented as an integer as defined in the Interval Start Offset Resource. If not provided, leave the value as per the current configuration Argument 2: [Optional] Interval UTC offset represented as a String as defined in the Interval UTC Offset Resource. If not provided, leave the value as per the current configuration. Depending on the specifics of the implementation of this object, reconfiguring the Interval data object may result in the removal of all historical data for this Interval Data Object Instance. Please consult with your device vendor as to the implications of reconfiguring an Interval Data Object Instance. As an example, the Argument List to change an interval data object instance from its existing values to one hour intervals, midnight aligned in UTC+10 time zone:- 0='3600',1='0',1='UTC+10']]></Description>
             </Item>
             <Item ID="6026">
                 <Name>Start</Name>
@@ -243,4 +227,3 @@ If for some implementation specific reason, there are missing intervals in the s
         <Description2></Description2>
     </Object>
 </LWM2M>
-
