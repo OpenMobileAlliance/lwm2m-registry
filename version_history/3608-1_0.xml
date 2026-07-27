@@ -7,7 +7,7 @@ OMA Permanent Document
    Path:
 
 OMNA LwM2M Registry
-   File: 3605.xml
+   File: 3608.xml
    Path: https://github.com/OpenMobileAlliance/lwm2m-registry
 
 NORMATIVE INFORMATION
@@ -62,25 +62,27 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
-    <Name>PlatformMonitoring</Name>
+    <Name>PlatformComponentMonitoring</Name>
     <Description1><![CDATA[
-This LwM2M Object provides aggregate platform-scoped monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
+This LwM2M Object provides logical component monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related platform identity, platform health, monitoring-window, LwM2M registration, upstream communication, queueing, API broker, platform-service health, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component health, monitoring-window, LwM2M registration, upstream communication, queueing, API broker, platform-service health, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
-The single Object Instance represents the platform's aggregate monitoring view. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained platform telemetry. This Object is intended for aggregate EMA health, LwM2M client health, registration and bootstrap state, upstream reporting health, local API broker or service health, app message bridge health, local monitoring function health, event log service health, and upstream queue or spool health.
+Each Object Instance represents one logical component, service, function, or operational path used by the implementation to realize the platform requirements covered by this Object. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. The model does not prescribe process, daemon, package, executable, container, service, or hardware boundaries. An implementation may expose separate logical component instances even when those logical components share an underlying software element.
 
-This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or aggregate platform state.
+When this Object is implemented, its Object Instances collectively represent the complete logical component set used by that implementation to realize the relevant platform requirements covered by this Object. This Object does not require every operating-system service, library, or helper process to be represented. Platform implementers may map their own components using the vendor-specific or operator-specific reservation ranges for Component Type and Component Role when an exact match is not already provided.
+
+This Object does not require continuous telemetry collection. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.
 ]]></Description1>
-    <ObjectID>3605</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3605</ObjectURN>
+    <ObjectID>3608</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3608</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
-    <MultipleInstances>Single</MultipleInstances>
-    <Mandatory>Mandatory</Mandatory>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
     <Resources>
       <Item ID="0">
-        <Name>Platform Type</Name>
+        <Name>Component Type</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -88,16 +90,16 @@ This Object does not require continuous telemetry collection. It does not imply 
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Type of platform represented by this Object Instance.
+Type of logical component represented by this Object Instance. A vendor-specific or operator-specific type may be used when no defined type accurately matches the component.
 
 0 = Unknown
-1 = Platform
-2..127 = Reserved for future GEISA-defined platform types
-128..255 = Reserved for vendor-specific or operator-specific platform types
+1 = Platform Component
+2..127 = Reserved for future component types
+128..255 = Reserved for vendor-specific or operator-specific component types
 ]]></Description>
       </Item>
       <Item ID="1">
-        <Name>Platform Name</Name>
+        <Name>Component Name</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -105,11 +107,11 @@ Type of platform represented by this Object Instance.
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Human-readable platform name assigned by the platform. This value is intended for display, diagnostics, and log correlation.
+Human-readable component name assigned by the platform. This value is intended for display, diagnostics, and log correlation.
 ]]></Description>
       </Item>
       <Item ID="2">
-        <Name>Platform Instance ID</Name>
+        <Name>Component Instance ID</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -117,11 +119,11 @@ Human-readable platform name assigned by the platform. This value is intended fo
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Platform-local identifier for the aggregate platform instance represented by this Object Instance. This value is intended for correlation with logs, events, and platform diagnostics.
+Platform-local identifier for the component instance represented by this Object Instance. This value is intended for correlation with logs, events, and platform diagnostics.
 ]]></Description>
       </Item>
       <Item ID="3">
-        <Name>Platform Version</Name>
+        <Name>Component Version</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -129,11 +131,11 @@ Platform-local identifier for the aggregate platform instance represented by thi
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Version of the GEISA Platform, when available from runtime metadata, service metadata, manifest or package metadata, or platform-generated records.
+Version of the platform component, when available from runtime metadata, service metadata, manifest or package metadata, or platform-generated records.
 ]]></Description>
       </Item>
       <Item ID="4">
-        <Name>Platform Health State</Name>
+        <Name>Component Health State</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -141,7 +143,7 @@ Version of the GEISA Platform, when available from runtime metadata, service met
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current aggregate health state for the GEISA Platform.
+Current health state for this platform component.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -150,8 +152,8 @@ Current aggregate health state for the GEISA Platform.
 5 = Not reporting
 6 = Starting
 7 = Stopping
-8..127 = Reserved for future GEISA-defined platform health states
-128..255 = Reserved for vendor-specific or operator-specific platform health states
+8..127 = Reserved for future GEISA-defined health states
+128..255 = Reserved for vendor-specific or operator-specific health states
 ]]></Description>
       </Item>
       <Item ID="5">
@@ -163,7 +165,7 @@ Current aggregate health state for the GEISA Platform.
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Short platform-generated reason associated with the current Platform Health State. When no specific reason is available, the platform may report an implementation-defined empty, none, or unknown reason.
+Short platform-generated reason associated with the current Component Health State. When no specific reason is available, the platform may report an implementation-defined empty, none, or unknown reason.
 ]]></Description>
       </Item>
       <Item ID="6">
@@ -175,11 +177,11 @@ Short platform-generated reason associated with the current Platform Health Stat
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Time at which the Platform Health State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Time at which the Component Health State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
       <Item ID="7">
-        <Name>Platform Start Time</Name>
+        <Name>Component Start Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -187,7 +189,33 @@ Time at which the Platform Health State most recently changed. The value is enco
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Time at which the current or most recent execution of the platform started, when available from the platform. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Time at which the current or most recent execution of the component started, when available from the platform. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="8">
+        <Name>Component Role</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Role performed by the logical component represented by this Object Instance. A vendor-specific or operator-specific role may be used when no defined role accurately describes the component's function.
+
+0 = Unknown
+1 = EMA Core
+2 = LwM2M Client
+3 = GEISA API Broker
+4 = GEISA API Service
+5 = App Message Bridge
+6 = Local Monitoring Function
+7 = Event Log Service
+8 = Upstream Queue or Spool
+9 = Security or Credential Service
+10 = Application Manager
+11..127 = Reserved for future component roles
+128..255 = Reserved for vendor-specific or operator-specific component roles
 ]]></Description>
       </Item>
       <Item ID="10">
@@ -199,7 +227,7 @@ Time at which the current or most recent execution of the platform started, when
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Number of platform-level restarts during the current monitoring period. This value is not defined as the sum of logical component restarts.
+Number of component restarts during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="11">
@@ -211,7 +239,7 @@ Number of platform-level restarts during the current monitoring period. This val
         <RangeEnumeration/>
         <Units>s</Units>
         <Description><![CDATA[
-Monitoring window in seconds used for current-period counters and derived health evaluation for the aggregate platform.
+Monitoring window in seconds used for current-period counters and derived health evaluation for this component.
 ]]></Description>
       </Item>
       <Item ID="12">
@@ -247,7 +275,7 @@ Time at which the platform most recently refreshed, generated, or updated the mo
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current LwM2M registration state for the aggregate platform scope, when applicable.
+Current LwM2M registration state, when this Object Instance represents an EMA or LwM2M client component.
 0 = Unknown
 1 = Not registered
 2 = Registering
@@ -346,7 +374,7 @@ Current upstream communication state for GEISA Platform reporting.
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Timestamp of the most recent successful upstream send, handoff, delivery, or communication observed or retained by the platform for the aggregate platform scope, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Timestamp of the most recent successful upstream send, handoff, delivery, or communication observed or retained by the platform for this component, function, or path, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
       <Item ID="32">
@@ -358,7 +386,7 @@ Timestamp of the most recent successful upstream send, handoff, delivery, or com
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Timestamp of the most recent upstream send, handoff, delivery, or communication error observed or retained by the platform for the aggregate platform scope, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Timestamp of the most recent upstream send, handoff, delivery, or communication error observed or retained by the platform for this component, function, or path, when available. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
       <Item ID="33">
@@ -382,7 +410,7 @@ Count of upstream send, handoff, delivery, or communication errors observed or r
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Count of active observe relationships for the aggregate platform where such telemetry is available.
+Count of active observe relationships for the monitored component, function, or path where such telemetry is available.
 ]]></Description>
       </Item>
       <Item ID="35">
@@ -430,7 +458,7 @@ Count of events dropped due to queueing, transport, resource, policy, or deliver
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Health state of the upstream queue or spool associated with the aggregate platform.
+Health state of the upstream queue or spool associated with this component.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -510,7 +538,7 @@ Number of queued or spooled upstream GEISA Platform messages that expired before
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Health state of the local GEISA API broker or API broker function within the aggregate platform scope, when applicable.
+Health state of the local GEISA API broker or API broker function represented by this component instance, when applicable.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -529,7 +557,7 @@ Health state of the local GEISA API broker or API broker function within the agg
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Count of API requests observed or retained across the aggregate platform during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also counted as an API request within the aggregate platform monitoring scope.
+Count of API requests observed or retained by the monitored API or function during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also an API request counted by that monitored function.
 ]]></Description>
       </Item>
       <Item ID="52">
@@ -541,7 +569,7 @@ Count of API requests observed or retained across the aggregate platform during 
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Count of API errors observed or retained across the aggregate platform during the current monitoring period.
+Count of API errors observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="53">
@@ -553,7 +581,7 @@ Count of API errors observed or retained across the aggregate platform during th
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Count of unauthorized API requests observed or retained across the aggregate platform during the current monitoring period.
+Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="60">
@@ -565,7 +593,7 @@ Count of unauthorized API requests observed or retained across the aggregate pla
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Health state of the local app message bridge function within the aggregate platform scope, when applicable.
+Health state of the local app message bridge function represented by this component instance, when applicable.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -584,7 +612,7 @@ Health state of the local app message bridge function within the aggregate platf
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Health state of the local event log service or durable event recording path within the aggregate platform scope, when applicable.
+Health state of the local event log service or durable event recording path represented by this component instance, when applicable.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -603,7 +631,7 @@ Health state of the local event log service or durable event recording path with
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Health state of the local monitoring function responsible for producing, refreshing, or exposing monitoring data for the aggregate platform scope, when such a function is present. This allows embedded implementations, standalone implementations, disabled profiles, and profiles where no separate local monitoring function exists.
+Health state of the local monitoring function represented by this component instance, when such a function is present. The monitoring function may be responsible for producing, refreshing, or exposing platform monitoring data. This allows embedded implementations, standalone implementations, disabled profiles, and profiles where no separate local monitoring function exists.
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -622,7 +650,7 @@ Health state of the local monitoring function responsible for producing, refresh
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Time at which a durable event or log record was most recently written within the aggregate platform scope. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Time at which this component most recently wrote or caused a durable event or log record to be written. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
       <Item ID="70">
@@ -634,7 +662,7 @@ Time at which a durable event or log record was most recently written within the
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Request that the platform refresh the current aggregate platform status and update this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, connectivity state, device state, safety considerations, or implementation profile.
+Request that the platform refresh the current status of this platform component and update this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
 ]]></Description>
       </Item>
       <Item ID="71">
@@ -646,7 +674,7 @@ Request that the platform refresh the current aggregate platform status and upda
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Reset current-period monitoring counters for this Object Instance and start a new monitoring period. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, connectivity state, device state, safety considerations, or implementation profile.
+Reset current-period monitoring counters for this Object Instance and start a new monitoring period. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
 ]]></Description>
       </Item>
       <Item ID="72">
@@ -658,7 +686,19 @@ Reset current-period monitoring counters for this Object Instance and start a ne
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Request immediate delivery of queued or spooled upstream messages associated with the aggregate platform. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, connectivity state, device state, safety considerations, or implementation profile.
+Request immediate delivery of queued or spooled upstream messages associated with this component. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="73">
+        <Name>Restart Component</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request restart of the component represented by this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
 ]]></Description>
       </Item>
     </Resources>
