@@ -66,7 +66,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
     <Description1><![CDATA[
 This LwM2M Object provides logical component monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component health, monitoring-window, LwM2M registration, upstream communication, queueing, API broker, platform-service health, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component monitoring state, reason detail, monitoring-window, LwM2M registration, upstream communication, queue, API, and event telemetry, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
 Each Object Instance represents one logical component, service, function, or operational path used by the implementation to realize the platform requirements covered by this Object. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. The model does not prescribe process, daemon, package, executable, container, service, or hardware boundaries. An implementation may expose separate logical component instances even when those logical components share an underlying software element.
 
@@ -135,7 +135,7 @@ Version of the platform component, when available from runtime metadata, service
 ]]></Description>
       </Item>
       <Item ID="4">
-        <Name>Component Health State</Name>
+        <Name>Component Monitoring State</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -143,7 +143,7 @@ Version of the platform component, when available from runtime metadata, service
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current health state for this platform component.
+Current monitoring state for this platform component:
 0 = Unknown
 1 = Healthy
 2 = Degraded
@@ -152,24 +152,57 @@ Current health state for this platform component.
 5 = Not reporting
 6 = Starting
 7 = Stopping
-8..127 = Reserved for future GEISA-defined health states
-128..255 = Reserved for vendor-specific or operator-specific health states
+8 = Stopped
+9 = Blocked by policy
+10..127 = Reserved for future GEISA-defined component monitoring states
+128..255 = Reserved for vendor-specific or operator-specific component monitoring states
 ]]></Description>
       </Item>
       <Item ID="5">
-        <Name>Health Reason</Name>
+        <Name>Monitoring Reason Code</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Short platform-generated reason associated with the current Component Health State. When no specific reason is available, the platform may report an implementation-defined empty, none, or unknown reason.
+Primary cause or contributing condition associated with the current Component Monitoring State:
+0 = Unspecified
+1 = None
+2 = Other
+3 = Component degraded
+4 = Component failed
+5 = Administratively disabled
+6 = Blocked by policy
+7 = Not reporting
+8 = Dependency unavailable
+9 = Temporarily unavailable
+10 = Startup in progress
+11 = Shutdown in progress
+12 = Restart limit exceeded
+13 = Monitoring data stale
+14 = Upstream communication unavailable
+15 = Registration failed
+16 = Registration expired
+17 = Queue backlog
+18 = Queue capacity exhausted
+19 = Resource pressure
+20 = Insufficient memory
+21 = Insufficient storage
+22 = Rate limited
+23 = Authorization denied
+24 = Security restriction
+25 = Internal error
+26 = Timeout
+27..127 = Reserved for future GEISA-defined monitoring reason codes
+128..255 = Reserved for vendor-specific or operator-specific monitoring reason codes
+
+None applies when no abnormal reason applies. Unspecified means no standardized reason was supplied. Other requires Reason Detail. Implementations SHOULD select the most specific applicable cause. Implementations SHOULD NOT use a reason code that merely repeats the current Monitoring State when a more specific cause is known.
 ]]></Description>
       </Item>
       <Item ID="6">
-        <Name>Last Health Transition Time</Name>
+        <Name>Last Monitoring State Transition Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -177,7 +210,7 @@ Short platform-generated reason associated with the current Component Health Sta
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Time at which the Component Health State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Time at which the Component Monitoring State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
       <Item ID="7">
@@ -206,8 +239,8 @@ Role performed by the logical component represented by this Object Instance. A v
 0 = Unknown
 1 = EMA Core
 2 = LwM2M Client
-3 = GEISA API Broker
-4 = GEISA API Service
+3 = API Broker
+4 = API Service
 5 = App Message Bridge
 6 = Local Monitoring Function
 7 = Event Log Service
@@ -216,6 +249,18 @@ Role performed by the logical component represented by this Object Instance. A v
 10 = Application Manager
 11..127 = Reserved for future component roles
 128..255 = Reserved for vendor-specific or operator-specific component roles
+]]></Description>
+      </Item>
+      <Item ID="9">
+        <Name>Reason Detail</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short human-readable diagnostic detail associated with Monitoring Reason Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. This Resource SHALL be present when Monitoring Reason Code is Other and MAY be present for any other reason when useful. It is not a log field and does not replace a defined reason code.
 ]]></Description>
       </Item>
       <Item ID="10">
@@ -275,7 +320,7 @@ Time at which the platform most recently refreshed, generated, or updated the mo
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current LwM2M registration state, when this Object Instance represents an EMA or LwM2M client component.
+Current LwM2M registration state, when this Object Instance represents an EMA or LwM2M client component:
 0 = Unknown
 1 = Not registered
 2 = Registering
@@ -333,7 +378,7 @@ Current LwM2M registration lifetime in seconds.
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current bootstrap state, when applicable.
+Current bootstrap state, when applicable:
 0 = Unknown
 1 = Not required
 2 = Required
@@ -353,7 +398,7 @@ Current bootstrap state, when applicable.
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current upstream communication state for GEISA Platform reporting.
+Current upstream communication state for Platform reporting:
 0 = Unknown
 1 = Disabled
 2 = Enabled down
@@ -449,26 +494,6 @@ Count of events suppressed by policy, throttling, coalescing, backpressure, or o
 Count of events dropped due to queueing, transport, resource, policy, or delivery failure during the current monitoring period where such telemetry is available.
 ]]></Description>
       </Item>
-      <Item ID="40">
-        <Name>Queue Health State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Health state of the upstream queue or spool associated with this component.
-0 = Unknown
-1 = Healthy
-2 = Degraded
-3 = Full
-4 = Failed
-5 = Disabled
-6..127 = Reserved for future GEISA-defined queue health states
-128..255 = Reserved for vendor-specific or operator-specific queue health states
-]]></Description>
-      </Item>
       <Item ID="41">
         <Name>Pending Upstream Messages</Name>
         <Operations>R</Operations>
@@ -478,7 +503,7 @@ Health state of the upstream queue or spool associated with this component.
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Number of pending upstream GEISA Platform messages currently queued or spooled for delivery.
+Number of pending upstream Platform messages currently queued or spooled for delivery.
 ]]></Description>
       </Item>
       <Item ID="42">
@@ -490,7 +515,7 @@ Number of pending upstream GEISA Platform messages currently queued or spooled f
         <RangeEnumeration/>
         <Units>B</Units>
         <Description><![CDATA[
-Total bytes currently queued or spooled for upstream GEISA Platform delivery.
+Total bytes currently queued or spooled for upstream Platform delivery.
 ]]></Description>
       </Item>
       <Item ID="43">
@@ -514,7 +539,7 @@ Timestamp of the oldest pending upstream or platform message in the monitored qu
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Number of upstream GEISA Platform messages dropped during the current monitoring period.
+Number of upstream Platform messages dropped during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="45">
@@ -526,26 +551,7 @@ Number of upstream GEISA Platform messages dropped during the current monitoring
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Number of queued or spooled upstream GEISA Platform messages that expired before successful delivery during the current monitoring period.
-]]></Description>
-      </Item>
-      <Item ID="50">
-        <Name>API Broker Health State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Health state of the local GEISA API broker or API broker function represented by this component instance, when applicable.
-0 = Unknown
-1 = Healthy
-2 = Degraded
-3 = Failed
-4 = Disabled
-5..127 = Reserved for future GEISA-defined API broker health states
-128..255 = Reserved for vendor-specific or operator-specific API broker health states
+Number of queued or spooled upstream Platform messages that expired before successful delivery during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="51">
@@ -582,63 +588,6 @@ Count of API errors observed or retained by the monitored API or function during
         <Units/>
         <Description><![CDATA[
 Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
-]]></Description>
-      </Item>
-      <Item ID="60">
-        <Name>App Message Bridge Health State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Health state of the local app message bridge function represented by this component instance, when applicable.
-0 = Unknown
-1 = Healthy
-2 = Degraded
-3 = Failed
-4 = Disabled
-5..127 = Reserved for future GEISA-defined bridge health states
-128..255 = Reserved for vendor-specific or operator-specific bridge health states
-]]></Description>
-      </Item>
-      <Item ID="61">
-        <Name>Event Log Service Health State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Health state of the local event log service or durable event recording path represented by this component instance, when applicable.
-0 = Unknown
-1 = Healthy
-2 = Degraded
-3 = Failed
-4 = Disabled
-5..127 = Reserved for future GEISA-defined event log health states
-128..255 = Reserved for vendor-specific or operator-specific event log health states
-]]></Description>
-      </Item>
-      <Item ID="62">
-        <Name>Local Monitoring Function Health State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Health state of the local monitoring function represented by this component instance, when such a function is present. The monitoring function may be responsible for producing, refreshing, or exposing platform monitoring data. This allows embedded implementations, standalone implementations, disabled profiles, and profiles where no separate local monitoring function exists.
-0 = Unknown
-1 = Healthy
-2 = Degraded
-3 = Failed
-4 = Disabled
-5..127 = Reserved for future GEISA-defined monitoring function health states
-128..255 = Reserved for vendor-specific or operator-specific monitoring function health states
 ]]></Description>
       </Item>
       <Item ID="63">
