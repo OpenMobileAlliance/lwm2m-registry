@@ -1064,14 +1064,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>607</ObjectID>
         <URN>urn:oma:lwm2m:oma:607</URN>
-        <Name>TBD</Name>
-        <Description>Reservation</Description>
+        <Name>Radar Sensor</Name>
+        <Description>Embedded radar sensor object providing presence, approach, and departure detection, with configurable sensitivity and response timing.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>607.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
