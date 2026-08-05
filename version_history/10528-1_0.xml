@@ -163,7 +163,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <Description><![CDATA[Indicates whether radar has been detected on the current DFS channel (true) or not (false). When radar is detected, the channel enters Non-Occupancy Period (NOP) and cannot be used for 30 minutes. The router must immediately vacate the channel and switch to a non-DFS or CAC-cleared DFS channel. Automatically cleared when switching channels or after NOP expires.]]></Description>
             </Item>
             <Item ID="12">
-                <Name>Best 2.4G Channel</Name>
+                <Name>Best 2p4G Channel</Name>
                 <Operations>R</Operations>
                 <MultipleInstances>Single</MultipleInstances>
                 <Mandatory>Optional</Mandatory>
