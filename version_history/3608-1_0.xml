@@ -270,7 +270,7 @@ Short human-readable diagnostic detail associated with Monitoring Reason Code. C
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of component restarts during the current monitoring period.
 ]]></Description>
@@ -441,7 +441,7 @@ Timestamp of the most recent upstream send, handoff, delivery, or communication 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of upstream send, handoff, delivery, or communication errors observed or retained by the platform during the current monitoring period.
 ]]></Description>
@@ -453,7 +453,7 @@ Count of upstream send, handoff, delivery, or communication errors observed or r
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of active observe relationships for the monitored component, function, or path where such telemetry is available.
 ]]></Description>
@@ -465,7 +465,7 @@ Count of active observe relationships for the monitored component, function, or 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of failed Notify deliveries during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -477,7 +477,7 @@ Count of failed Notify deliveries during the current monitoring period where suc
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of events suppressed by policy, throttling, coalescing, backpressure, or other platform behavior during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -489,7 +489,7 @@ Count of events suppressed by policy, throttling, coalescing, backpressure, or o
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of events dropped due to queueing, transport, resource, policy, or delivery failure during the current monitoring period where such telemetry is available.
 ]]></Description>
@@ -501,7 +501,7 @@ Count of events dropped due to queueing, transport, resource, policy, or deliver
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of pending upstream Platform messages currently queued or spooled for delivery.
 ]]></Description>
@@ -537,7 +537,7 @@ Timestamp of the oldest pending upstream or platform message in the monitored qu
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of upstream Platform messages dropped during the current monitoring period.
 ]]></Description>
@@ -549,7 +549,7 @@ Number of upstream Platform messages dropped during the current monitoring perio
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of queued or spooled upstream Platform messages that expired before successful delivery during the current monitoring period.
 ]]></Description>
@@ -561,7 +561,7 @@ Number of queued or spooled upstream Platform messages that expired before succe
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of API requests observed or retained by the monitored API or function during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also an API request counted by that monitored function.
 ]]></Description>
@@ -573,7 +573,7 @@ Count of API requests observed or retained by the monitored API or function duri
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of API errors observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
@@ -585,7 +585,7 @@ Count of API errors observed or retained by the monitored API or function during
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units/>
+        <Units>count</Units>
         <Description><![CDATA[
 Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
