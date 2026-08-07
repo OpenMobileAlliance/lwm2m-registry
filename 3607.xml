@@ -357,7 +357,7 @@ Requested default log level applied to GEISA applications when a more specific a
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum retained event or log record count for GEISA-managed durable event storage. A value of 0 indicates that no count limit is configured or that retention is unlimited according to platform policy.
 ]]></Description>
@@ -462,7 +462,7 @@ Requested setting indicating whether the GEISA Platform should buffer outbound u
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum number of messages that the upstream queue or spool should retain.
 ]]></Description>
@@ -624,7 +624,7 @@ Requested maximum retention age in seconds for eligible completed outbound app-m
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum retained count of eligible completed outbound app-message state records. The platform may remove eligible records when any applicable age, count, or byte limit is reached, but active or still-referenced records are not required to be removed.
 ]]></Description>
@@ -636,7 +636,7 @@ Requested maximum retained count of eligible completed outbound app-message stat
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum retained count of eligible local outbound queue recovery snapshots. The platform may remove eligible artifacts when any applicable age, count, or byte limit is reached, but active or still-referenced artifacts are not required to be removed.
 ]]></Description>
@@ -672,7 +672,7 @@ Requested maximum retention age in seconds for eligible inbound server-to-client
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum retained count of eligible inbound server-to-client mailbox records and mailbox-managed data. The platform may remove eligible records or artifacts when any applicable age, count, or byte limit is reached, but active or still-referenced records or artifacts are not required to be removed.
 ]]></Description>
@@ -813,7 +813,7 @@ Requested maximum bytes allowed during the accounting collection period. A value
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested maximum number of messages allowed during the accounting collection period. A value of zero means unlimited.
 ]]></Description>
@@ -825,7 +825,7 @@ Requested maximum number of messages allowed during the accounting collection pe
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Requested message limit used by throttling policy during the throttle period. A value of zero means unlimited.
 ]]></Description>
