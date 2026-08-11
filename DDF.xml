@@ -7471,7 +7471,8 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <ObjectID>32667</ObjectID>
         <URN>urn:oma:lwm2m:x:32667</URN>
         <Name>Big Lebowski Theme</Name>
-        <Description>A fictional LwM2M Object representing the thematic core of The Big Lebowski: abiding through chaos, mistaken identity, friendship, absurdity, and detachment.</Description>
+        <Description>A fictional LwM2M Object representing the thematic core of the film "The Big Lebowski":
+abiding through chaos, mistaken identity, friendship, absurdity, and detachment.</Description>
         <Owner>Example Submitter</Owner>
         <Source>2</Source>
         <Ver>1.0</Ver>
