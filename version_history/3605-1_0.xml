@@ -77,7 +77,7 @@ This Object does not require continuous telemetry collection. It does not imply 
     <LWM2MVersion>1.1</LWM2MVersion>
     <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Single</MultipleInstances>
-    <Mandatory>Mandatory</Mandatory>
+    <Mandatory>Optional</Mandatory>
     <Resources>
       <Item ID="0">
         <Name>Platform Type</Name>
