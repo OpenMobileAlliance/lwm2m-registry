@@ -185,9 +185,7 @@ Media type for the app-message payload encoding, such as application/json, appli
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
-        <Description><![CDATA[
-A unique local-scope identifier for distinguishing edge applications within a specific deployment environment. EMS or upstream correlation uses endpoint or platform identity together with resource 4050 AppID, and application instance identity where needed.
-]]></Description>
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
       </Item>
     </Resources>
     <Description2><![CDATA[]]></Description2>
