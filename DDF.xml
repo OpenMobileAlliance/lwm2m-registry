@@ -7576,19 +7576,5 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
-        <ObjectID>32666</ObjectID>
-        <URN>urn:oma:lwm2m:x:32666</URN>
-        <Name>Rick Roll</Name>
-        <Description>This object provides a standard interface for delivering an unexpected musical experience to unsuspecting IoT device operators. When triggered, the device will never give you up, never let you down, never run around and desert you. Compliant devices MUST implement the Trigger Rick Roll resource and SHOULD display appropriate lyrics.</Description>
-        <Owner>Individual</Owner>
-        <Source>2</Source>
-        <Ver>1.0</Ver>
-        <DDF>32666.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>1</DDFLink>
-        <TS></TS>
-        <TSLink>0</TSLink>
-    </Item>
 </DDFList>
  
