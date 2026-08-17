@@ -805,20 +805,6 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>	
-	<Item>
-        <ObjectID>29</ObjectID>
-        <URN>urn:oma:lwm2m:oma:29</URN>
-        <Name>Device RF Capabilities</Name>
-        <Description>This is a device management object that should be used for capturing the RF capabilities of the device.</Description>
-        <Owner>OMA</Owner>
-        <Source>0</Source>
-        <Ver>1.0</Ver>
-        <DDF>29.xml</DDF>
-        <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
-        <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
-        <TSLink>1</TSLink>
-    </Item>	
     <Item>
         <ObjectID>500</ObjectID>
         <URN>urn:oma:lwm2m:oma:500</URN>
@@ -1005,11 +991,11 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
+	<Item>
         <ObjectID>514</ObjectID>
         <URN>urn:oma:lwm2m:oma:514</URN>
         <Name>TBD</Name>
-        <Description>Reservation</Description>
+        <Description>TBD</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
@@ -1018,7 +1004,7 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>0</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
-    </Item>
+    </Item>	
     <Item>
         <ObjectID>515</ObjectID>
         <URN>urn:oma:lwm2m:oma:515</URN>
