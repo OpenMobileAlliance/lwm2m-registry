@@ -28,7 +28,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- 0 => if link to TS should not be visible, 1 => if link to TS should be visible (default) -->
         <TSLink>1</TSLink>
     </Item>
-
     <Item>
         <ObjectID>0</ObjectID>
         <URN>urn:oma:lwm2m:oma:0:1.1</URN>
