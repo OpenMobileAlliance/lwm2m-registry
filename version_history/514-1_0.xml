@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+FILE INFORMATION
+
+OMNA LwM2M Registry
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+   Name: 514.xml
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+    
+
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to helpdesk@omaorg.org
+
+CHANGE HISTORY
+
+    
+LEGAL DISCLAIMER
+
+  Copyright 2025 Open Mobile Alliance.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+  The above license is used as a license under copyright only.  Please
+  reference the OMA IPR Policy for patent licensing terms:
+  https://www.omaspecworks.org/about/intellectual-property-rights/
+
+
+-->
+
+<LWM2M xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd" >
+    <Object ObjectType="MODefinition">
+        <Name>EDHOC</Name>
+        <Description1><![CDATA[This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528. These LwM2M Object Resources MUST only be
+changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.]]></Description1>
+        <ObjectID>514</ObjectID>
+        <ObjectURN>urn:oma:lwm2m:oma:514</ObjectURN>
+        <LWM2MVersion>1.1</LWM2MVersion>
+        <ObjectVersion>1.0</ObjectVersion>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Resources>
+            <Item ID="0">
+                <Name>Peer Public Key Identifier</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The ID_CRED_x of the credential stored in Peer Public Key.]]></Description>
+            </Item>
+            <Item ID="1">
+                <Name>Peer Public Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the Peer's public credential.]]></Description>
+            </Item>
+            <Item ID="2">
+                <Name>Client Key Identifier</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The ID_CRED_x of the credential stored in Client Public Key. If this Resource is null or not instantiated, the LwM2M Client is to generate the ID_CRED_x matching the Client Public Key.]]></Description>
+            </Item>
+            <Item ID="3">
+                <Name>Client Public Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the LwM2M Client's public credential.
+If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the "Private Key" Resource must be null or not instantiated.]]></Description>
+            </Item>
+            <Item ID="4">
+                <Name>Private Key</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Opaque</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Stores the LwM2M Client's private key.
+If this Resource is null or not instantiated, the LwM2M Client is to use OOB credentials (e.g. by using EST), and the Client Public Key Resource must be null or not instantiated.]]></Description>
+            </Item>
+            <Item ID="5">
+                <Name>Method</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Mandatory</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The authentication method type value, as defined in https://www.iana.org/assignments/edhoc/edhoc.xhtml#edhoc-method-types.]]></Description>
+            </Item>
+            <Item ID="6">
+                <Name>Initiator</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Indicates if the LwM2M Client is the EDHOC Initiator.
+If this Resource is not instantiated, the default value is True.]]></Description>
+            </Item>
+            <Item ID="7">
+                <Name>Selected Cipher Suite</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Integer</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The label of the EDHOC cipher suite to use as the selected cipher suite. If the Initiator Resource is set to True, this Resource must be instantiated.]]></Description>
+            </Item>
+            <Item ID="8">
+                <Name>Peer EDHOC CoAP URI Path</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>String</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[The EDHOC CoAP URI path on the Server to use.
+If this Resource is not instantiated, the default value is "/.well-known/edhoc" when using CoAP.]]></Description>
+            </Item>
+            <Item ID="9">
+                <Name>EDHOC + OSCORE Combined Request Support</Name>
+                <Operations></Operations>
+                <MultipleInstances>Single</MultipleInstances>
+                <Mandatory>Optional</Mandatory>
+                <Type>Boolean</Type>
+                <RangeEnumeration></RangeEnumeration>
+                <Units></Units>
+                <Description><![CDATA[Indicates if the peer supports EDHOC + OSCORE combined requests as defined in RFC 9668.
+If this Resource is not instantiated, the default value is True.]]></Description>
+            </Item>
+        </Resources>
+        <Description2><![CDATA[Normative references:
+- RFC 9528: G. Selander, J. Preuß Mattsson, F. Palombini, "Ephemeral Diffie-Hellman Over COSE (EDHOC)", https://www.rfc-editor.org/rfc/rfc9528.html
+- RFC 9668: F. Palombini, M. Tiloca, R. Höglund, S. Hristozov, G. Selander, "Using Ephemeral Diffie-Hellman Over COSE (EDHOC) with the Constrained Application Protocol (CoAP) and Object Security for Constrained RESTful Environments (OSCORE)", https://www.rfc-editor.org/rfc/rfc9668.html]]></Description2>
+    </Object>
+</LWM2M>
