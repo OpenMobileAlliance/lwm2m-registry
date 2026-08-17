@@ -650,7 +650,7 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <TS>https://www.openmobilealliance.org/release/LwM2M_EventLog/V3_0-20250714-A/OMA-TS-LWM2M_EventLog-V3_0-20250714-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>20</ObjectID>
         <URN>urn:oma:lwm2m:oma:20:3.1</URN>
         <Name>Event Log</Name>
