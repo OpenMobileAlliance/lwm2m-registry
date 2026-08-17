@@ -172,7 +172,7 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-        <Item>
+    <Item>
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3:1.3</URN>
         <Name>Device</Name>
@@ -182,11 +182,10 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Ver>1.3</Ver>
         <DDF>3.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
-        <TSLink>1</TSLink>
+        <TSLink>0</TSLink>
     </Item>
-
     <Item>
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4</URN>
@@ -356,11 +355,25 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>9.xml</DDF>
+        <DDF>version_history/9-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>https://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_3-20240312-A/OMA-TS-LWM2M_SwMgmt-V1_0_3-20240312-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item>
+        <Item>
+        <ObjectID>9</ObjectID>
+        <URN>urn:oma:lwm2m:oma:9:1.1</URN>
+        <Name>LWM2M Software Management</Name>
+        <Description>This LwM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>9.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10</ObjectID>
