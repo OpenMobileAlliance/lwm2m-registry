@@ -64,9 +64,9 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
   <Object ObjectType="MODefinition">
     <Name>PlatformEffectiveConfiguration</Name>
     <Description1><![CDATA[
-This LwM2M Object reports the effective GEISA Platform configuration for one edge device and the reconciliation status of the most recently evaluated requested configuration. An EMS can compare Effective Configuration Hash with the requested configuration hash before deciding whether a larger Object read is needed. Individual effective configuration resources are optional according to supported capabilities.
+This LwM2M Object reports the effective GEISA Platform configuration for one edge device and the reconciliation status of the most recently evaluated requested configuration. An EMS can compare Effective Configuration Hash with the requested configuration hash before deciding whether a larger Object read is needed. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
 
-Before the first runtime configuration update, this Object SHALL represent the effective configuration corresponding to the System Owner-approved requested baseline represented by Object 3607. The platform SHALL generate the initial Effective Configuration Revision and compute Effective Configuration Hash. When the requested and effective hashes match, Reconciliation State SHALL be Synchronized and Reconciliation Reason Code SHALL be None. When the platform adjusts, partially applies, rejects, or reverts any part of the approved baseline, the effective hash and reconciliation resources SHALL report that result.
+Before the first runtime configuration update, this Object SHALL represent the effective configuration corresponding to the System Owner-approved requested baseline represented by Object 3607. The platform SHALL generate the initial Effective Configuration Revision and compute Effective Configuration Hash. When the requested and effective hashes match, Reconciliation State SHALL be Synchronized and Configuration Attempt Result Code SHALL be None. When the platform adjusts, partially applies, rejects, or reverts any part of the approved baseline, the effective hash and reconciliation resources SHALL report that result.
 
 Resource identifiers remain grouped with gaps for future GEISA-defined resources. Effective configuration-value resources retain their existing odd-numbered identifiers. Undefined identifiers in those gaps are not implemented resources.
 
@@ -88,7 +88,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[
-Platform-generated revision identifier for the effective configuration represented by this Object. The platform SHALL generate the initial Effective Configuration Revision for the effective configuration corresponding to the approved requested baseline. It is used for audit, synchronization, troubleshooting, and correlation; it is not a substitute for Effective Configuration Hash.
+Platform-generated revision identifier in YYYYMMDDHHMMSS long-form datetime format, optionally followed by an operator- or vendor-defined suffix.
 ]]></Description>
       </Item>
       <Item ID="1">
@@ -140,7 +140,7 @@ Time at which the effective GEISA Platform configuration was most recently updat
 ]]></Description>
       </Item>
       <Item ID="4">
-        <Name>Last Reconciliation Attempt Time</Name>
+        <Name>Last Configuration Update Attempt Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -148,11 +148,11 @@ Time at which the effective GEISA Platform configuration was most recently updat
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[
-Time at which the platform most recently evaluated or attempted to apply a requested configuration. Before the first runtime configuration update, it SHALL represent when the platform evaluated or applied the approved requested baseline. This may differ from Last Effective Configuration Update Time. The value is encoded as LwM2M Time using Unix epoch seconds and carries no timezone metadata. When presented or interpreted in platform-local operational context, use /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies. A zero or other sentinel timestamp value SHALL NOT be used.
+Time at which the platform most recently attempted to apply a requested configuration update. Before the first runtime configuration update, it SHALL represent when the platform attempted to apply the approved requested baseline. This may differ from Last Effective Configuration Update Time. The value is encoded as LwM2M Time using Unix epoch seconds and carries no timezone metadata. When presented or interpreted in platform-local operational context, use /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies. A zero or other sentinel timestamp value SHALL NOT be used.
 ]]></Description>
       </Item>
       <Item ID="5">
-        <Name>Reconciliation Reason Code</Name>
+        <Name>Configuration Attempt Result Code</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -160,7 +160,7 @@ Time at which the platform most recently evaluated or attempted to apply a reque
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[
-Reason associated with Reconciliation State.
+Result associated with the most recent configuration update attempt.
 0 = Unspecified
 1 = None
 2 = Other
@@ -176,14 +176,14 @@ Reason associated with Reconciliation State.
 12 = Dependency unavailable
 13 = Internal error
 14 = Timeout
-15..127 = Reserved for future GEISA-defined reconciliation reason codes
-128..255 = Reserved for vendor-specific or operator-specific reconciliation reason codes
+15..127 = Reserved for future GEISA-defined configuration attempt result codes
+128..255 = Reserved for vendor-specific or operator-specific configuration attempt result codes
 
-None applies when no abnormal reason applies. Unspecified means no standardized reason was supplied. Other requires Reason Detail. Implementations SHOULD choose the most specific applicable reason and SHOULD NOT use a generic reason when a more specific defined reason is known.
+None means the configuration update attempt completed successfully with no failure condition to report. Unspecified means no standardized result was supplied. Other requires Result Detail. Implementations SHOULD choose the most specific applicable result and SHOULD NOT use a generic result when a more specific defined result is known.
 ]]></Description>
       </Item>
       <Item ID="6">
-        <Name>Reason Detail</Name>
+        <Name>Result Detail</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -191,7 +191,7 @@ None applies when no abnormal reason applies. Unspecified means no standardized 
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[
-Short human-readable diagnostic detail associated with Reconciliation Reason Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. It SHALL be present when the reason is Other and MAY be present for any other reason. It is not a log field and does not replace a defined reason code.
+Short human-readable diagnostic detail associated with Configuration Attempt Result Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. It SHALL be present when the result is Other and MAY be present for any other result. It is not a log field and does not replace a defined result code.
 ]]></Description>
       </Item>
       <Item ID="7">
@@ -286,7 +286,7 @@ This cadence controls how often accounting state is collected, recomputed, or re
         <Name>Default Monitoring Window</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -300,7 +300,7 @@ This window controls over what duration samples are evaluated for derived values
         <Name>Host Monitoring Window</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -312,7 +312,7 @@ Effective aggregation or evaluation window in seconds currently used for host or
         <Name>Platform Monitoring Window</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -324,7 +324,7 @@ Effective aggregation or evaluation window in seconds currently used for GEISA P
         <Name>App Monitoring Window</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -413,7 +413,7 @@ Effective default reporting priority currently used when a more specific message
         <Name>Platform Log Level</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -435,7 +435,7 @@ Effective log level currently used for GEISA Platform services and components.
         <Name>App Log Level Default</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -457,7 +457,7 @@ Effective default log level currently applied to GEISA applications when a more 
         <Name>Event Log Retention Count</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>count</Units>
@@ -586,7 +586,7 @@ Effective maximum queued or spooled payload volume in bytes currently used for u
         <Name>Queue TTL</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -598,7 +598,7 @@ Effective time-to-live in seconds currently used for queued or spooled messages 
         <Name>Queue Drop Policy</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -615,44 +615,11 @@ Effective queue or spool drop policy currently used when buffering limits are re
 128..255 = Reserved for vendor-specific or operator-specific drop policies
 ]]></Description>
       </Item>
-      <Item ID="121">
-        <Name>Queue Coalescing Enabled</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Boolean</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective setting indicating whether the GEISA Platform is currently allowed to collapse eligible queued upstream messages before transmission or storage. This value reflects the platform-accepted behavior after validation, policy limits, or fallback handling have been applied.
-]]></Description>
-      </Item>
-      <Item ID="123">
-        <Name>Queue Coalescing Policy</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Effective policy used by the GEISA Platform to collapse eligible queued upstream messages when queue coalescing is enabled. This value reflects the platform-accepted policy after validation, policy limits, or fallback handling have been applied.
-
-0 = Unknown
-1 = Disabled
-2 = By app and message type
-3 = By app, message type, and subject
-4 = By explicit coalescing key
-5..127 = Reserved for future GEISA-defined coalescing policies
-128..255 = Reserved for vendor-specific or operator-specific
-coalescing policies
-]]></Description>
-      </Item>
       <Item ID="141">
         <Name>Default Message TTL</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -664,48 +631,12 @@ Effective default time-to-live in seconds currently used for messages buffered o
         <Name>Max App Message Payload Size</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>B</Units>
         <Description><![CDATA[
 Effective maximum GEISA application message payload size in bytes currently accepted by the platform before local rejection, truncation, or alternate handling according to platform policy.
-]]></Description>
-      </Item>
-      <Item ID="145">
-        <Name>App Message Priority Policy Reference</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective platform-defined policy reference currently used to map, adjust, or constrain GEISA application message priorities before local handling or upstream reporting. The reference may identify a local policy name, policy version, URI, or other operator-defined policy identifier.
-]]></Description>
-      </Item>
-      <Item ID="147">
-        <Name>App Message Routing Policy Reference</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective platform-defined policy reference currently used to route, constrain, or handle GEISA application messages before local processing or upstream reporting. The reference may identify a local policy name, policy version, URI, or other operator-defined policy identifier.
-]]></Description>
-      </Item>
-      <Item ID="149">
-        <Name>QoS Policy Reference</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective reference or identifier for the QoS policy currently associated with GEISA Platform behavior. Detailed bearer or flow QoS configuration remains in Object 10540 and related network or bearer objects.
 ]]></Description>
       </Item>
       <Item ID="161">
@@ -817,19 +748,19 @@ Effective maximum retained bytes currently used for eligible locally retained ap
 ]]></Description>
       </Item>
       <Item ID="201">
-        <Name>App Accounting Collection Period</Name>
+        <Name>Default Accounting Collection Period</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
         <RangeEnumeration/>
-        <Units>s</Units>
+        <Units/>
         <Description><![CDATA[
-Effective accounting collection period in seconds currently used to represent the app accounting counter window for the platform.
+Effective platform-wide default used for AppAccounting recurring collection periods. The value uses the RFC 5545 Recurrence Rule (RRULE) representation used by Object 3602 Collection Period.
 ]]></Description>
       </Item>
       <Item ID="203">
-        <Name>App Accounting Window Types</Name>
+        <Name>Supported Accounting Window Types</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -837,7 +768,7 @@ Effective accounting collection period in seconds currently used to represent th
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Effective bitmask of supported app accounting window types.
+Effective bitmask of accounting window types supported by the platform for AppAccounting.
 
 0 = Unspecified / implementation default
 1 = Configured collection period
@@ -850,7 +781,7 @@ Higher powers of two are reserved for future window type expansion.
 ]]></Description>
       </Item>
       <Item ID="205">
-        <Name>App Accounting Rolling Window Duration</Name>
+        <Name>Default Accounting Rolling Window Duration</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -858,11 +789,11 @@ Higher powers of two are reserved for future window type expansion.
         <RangeEnumeration/>
         <Units>s</Units>
         <Description><![CDATA[
-Effective rolling-window duration in seconds currently used for app accounting.
+Effective default rolling-window duration in seconds for AppAccounting.
 ]]></Description>
       </Item>
       <Item ID="207">
-        <Name>App Accounting Retention Count</Name>
+        <Name>Accounting Retention Count</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -870,35 +801,11 @@ Effective rolling-window duration in seconds currently used for app accounting.
         <RangeEnumeration/>
         <Units>count</Units>
         <Description><![CDATA[
-Effective retained history count for app accounting window instances or snapshots.
-]]></Description>
-      </Item>
-      <Item ID="209">
-        <Name>App Accounting Policy Reference</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective reference or identifier for the app accounting policy currently associated with the platform.
-]]></Description>
-      </Item>
-      <Item ID="211">
-        <Name>Per-App Accounting Overrides Enabled</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Boolean</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Effective flag indicating whether per-app accounting policy overrides are permitted in future runtime behavior.
+Effective retention count for AppAccounting window instances or snapshots.
 ]]></Description>
       </Item>
       <Item ID="221">
-        <Name>Default App Accounting Maximum Bytes</Name>
+        <Name>Default Accounting Maximum Bytes</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -910,7 +817,7 @@ Effective maximum bytes currently allowed during the accounting collection perio
 ]]></Description>
       </Item>
       <Item ID="223">
-        <Name>Default App Accounting Message Limit</Name>
+        <Name>Default Accounting Message Limit</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -922,7 +829,7 @@ Effective maximum number of messages currently allowed during the accounting col
 ]]></Description>
       </Item>
       <Item ID="225">
-        <Name>Default App Accounting Throttle Message Limit</Name>
+        <Name>Default Accounting Throttle Message Limit</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -934,7 +841,7 @@ Effective message limit currently used by throttling policy during the throttle 
 ]]></Description>
       </Item>
       <Item ID="227">
-        <Name>Default App Accounting Throttle Period</Name>
+        <Name>Default Accounting Throttle Period</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>

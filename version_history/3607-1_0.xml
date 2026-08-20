@@ -64,7 +64,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
   <Object ObjectType="MODefinition">
     <Name>PlatformRequestedConfiguration</Name>
     <Description1><![CDATA[
-This LwM2M Object reports the GEISA Platform configuration requested by an EMS or operator for one edge device. Writable requested configuration resources express the desired configuration, and the platform computes and exposes Requested Configuration Hash after accepting or updating those values. Object 3606 reports the effective result. Individual requested configuration resources are optional according to supported capabilities.
+This LwM2M Object reports the GEISA Platform configuration requested by an EMS or operator for one edge device. Writable requested configuration resources express the desired configuration, and the platform computes and exposes Requested Configuration Hash after accepting or updating those values. Object 3606 reports the effective result. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
 
 Before the first runtime configuration update, this Object SHALL represent the platform configuration baseline approved by the System Owner. When the Operator is acting as the System Owner or utility, the Operator-approved baseline satisfies this requirement. The baseline may have been established through manufacturing, commissioning, provisioning, deployment configuration, or another authorized process. Vendor defaults, firmware defaults, or locally selected defaults SHALL NOT be treated as the requested baseline unless approved by the System Owner or authorized Operator. The platform SHALL generate an initial Requested Configuration Revision when the approved baseline does not provide one, and SHALL compute Requested Configuration Hash from the requested configuration values represented by this Object. The platform does not independently choose the requested baseline.
 
@@ -183,7 +183,7 @@ This cadence controls how often accounting state is collected, recomputed, or re
         <Name>Default Monitoring Window</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -197,7 +197,7 @@ This window controls over what duration samples are evaluated for derived values
         <Name>Host Monitoring Window</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -209,7 +209,7 @@ Requested aggregation or evaluation window in seconds for host or device resourc
         <Name>Platform Monitoring Window</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -221,7 +221,7 @@ Requested aggregation or evaluation window in seconds for GEISA Platform monitor
         <Name>App Monitoring Window</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -310,7 +310,7 @@ Requested default reporting priority used when a more specific message or event 
         <Name>Platform Log Level</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -332,7 +332,7 @@ Requested log level for GEISA Platform services and components.
         <Name>App Log Level Default</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -354,7 +354,7 @@ Requested default log level applied to GEISA applications when a more specific a
         <Name>Event Log Retention Count</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>count</Units>
@@ -483,7 +483,7 @@ Requested maximum queued or spooled payload volume in bytes for upstream bufferi
         <Name>Queue TTL</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -495,7 +495,7 @@ Requested time-to-live in seconds for queued or spooled messages before expirati
         <Name>Queue Drop Policy</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -512,44 +512,11 @@ Requested queue or spool drop policy used when buffering limits are reached.
 128..255 = Reserved for vendor-specific or operator-specific drop policies
 ]]></Description>
       </Item>
-      <Item ID="120">
-        <Name>Queue Coalescing Enabled</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Boolean</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested setting indicating whether the GEISA Platform may collapse eligible queued upstream messages before transmission or storage. When enabled, the platform can reduce redundant or stale queued updates according to the configured queue coalescing policy, such as keeping the latest state update while preserving events or alarms that must be delivered individually.
-]]></Description>
-      </Item>
-      <Item ID="122">
-        <Name>Queue Coalescing Policy</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Requested policy for how the GEISA Platform should collapse eligible queued upstream messages when queue coalescing is enabled. The policy determines which queued messages may be combined, replaced, summarized, or preserved.
-
-0 = Unknown
-1 = Disabled
-2 = By app and message type
-3 = By app, message type, and subject
-4 = By explicit coalescing key
-5..127 = Reserved for future GEISA-defined coalescing policies
-128..255 = Reserved for vendor-specific or operator-specific
-coalescing policies
-]]></Description>
-      </Item>
       <Item ID="140">
         <Name>Default Message TTL</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
@@ -561,48 +528,12 @@ Requested default time-to-live in seconds for messages buffered or handled by th
         <Name>Max App Message Payload Size</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>B</Units>
         <Description><![CDATA[
 Requested maximum GEISA application message payload size in bytes accepted by the platform before local rejection, truncation, or alternate handling according to platform policy.
-]]></Description>
-      </Item>
-      <Item ID="144">
-        <Name>App Message Priority Policy Reference</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested platform-defined policy reference currently used to map, adjust, or constrain GEISA application message priorities before local handling or upstream reporting. The reference may identify a local policy name, policy version, URI, or other operator-defined policy identifier.
-]]></Description>
-      </Item>
-      <Item ID="146">
-        <Name>App Message Routing Policy Reference</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested platform-defined policy reference used to select how GEISA application messages are routed, constrained, or handled before local processing or upstream reporting. The reference may identify a local policy name, policy version, URI, or other operator-defined policy identifier.
-]]></Description>
-      </Item>
-      <Item ID="148">
-        <Name>QoS Policy Reference</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested reference or identifier for the QoS policy associated with GEISA Platform behavior. Detailed bearer or flow QoS configuration remains in Object 10540 and related network or bearer objects.
 ]]></Description>
       </Item>
       <Item ID="160">
@@ -714,19 +645,19 @@ Requested maximum retained bytes for eligible locally retained app-message paylo
 ]]></Description>
       </Item>
       <Item ID="200">
-        <Name>App Accounting Collection Period</Name>
+        <Name>Default Accounting Collection Period</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
         <RangeEnumeration/>
-        <Units>s</Units>
+        <Units/>
         <Description><![CDATA[
-Requested accounting collection period in seconds used to represent the app accounting counter window for the platform.
+Requested platform-wide default for AppAccounting recurring collection periods. The value uses the RFC 5545 Recurrence Rule (RRULE) representation used by Object 3602 Collection Period.
 ]]></Description>
       </Item>
       <Item ID="202">
-        <Name>App Accounting Window Types</Name>
+        <Name>Supported Accounting Window Types</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -734,7 +665,7 @@ Requested accounting collection period in seconds used to represent the app acco
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Requested bitmask of supported app accounting window types.
+Requested bitmask of accounting window types supported by the platform for AppAccounting.
 
 0 = Unspecified / implementation default
 1 = Configured collection period
@@ -747,7 +678,7 @@ Higher powers of two are reserved for future window types.
 ]]></Description>
       </Item>
       <Item ID="204">
-        <Name>App Accounting Rolling Window Duration</Name>
+        <Name>Default Accounting Rolling Window Duration</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -755,11 +686,11 @@ Higher powers of two are reserved for future window types.
         <RangeEnumeration/>
         <Units>s</Units>
         <Description><![CDATA[
-Requested rolling-window duration in seconds for app accounting.
+Requested default rolling-window duration in seconds for AppAccounting.
 ]]></Description>
       </Item>
       <Item ID="206">
-        <Name>App Accounting Retention Count</Name>
+        <Name>Accounting Retention Count</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -767,35 +698,11 @@ Requested rolling-window duration in seconds for app accounting.
         <RangeEnumeration/>
         <Units>count</Units>
         <Description><![CDATA[
-Requested retained history count for app accounting window instances or snapshots.
-]]></Description>
-      </Item>
-      <Item ID="208">
-        <Name>App Accounting Policy Reference</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested reference or identifier for the app accounting policy currently associated with the platform.
-]]></Description>
-      </Item>
-      <Item ID="210">
-        <Name>Per-App Accounting Overrides Enabled</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Boolean</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Requested flag indicating whether per-app accounting policy overrides are permitted in future runtime behavior.
+Requested retention count for AppAccounting window instances or snapshots.
 ]]></Description>
       </Item>
       <Item ID="220">
-        <Name>Default App Accounting Maximum Bytes</Name>
+        <Name>Default Accounting Maximum Bytes</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -807,7 +714,7 @@ Requested maximum bytes allowed during the accounting collection period. A value
 ]]></Description>
       </Item>
       <Item ID="222">
-        <Name>Default App Accounting Message Limit</Name>
+        <Name>Default Accounting Message Limit</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -819,7 +726,7 @@ Requested maximum number of messages allowed during the accounting collection pe
 ]]></Description>
       </Item>
       <Item ID="224">
-        <Name>Default App Accounting Throttle Message Limit</Name>
+        <Name>Default Accounting Throttle Message Limit</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
@@ -831,7 +738,7 @@ Requested message limit used by throttling policy during the throttle period. A 
 ]]></Description>
       </Item>
       <Item ID="226">
-        <Name>Default App Accounting Throttle Period</Name>
+        <Name>Default Accounting Throttle Period</Name>
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
