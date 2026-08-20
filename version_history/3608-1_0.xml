@@ -217,7 +217,7 @@ Time at which the Component Monitoring State most recently changed. The value is
         <Name>Component Start Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Time</Type>
         <RangeEnumeration/>
         <Units/>
@@ -311,84 +311,6 @@ Start time for the active monitoring period used by current-period counters and 
 Time at which the platform most recently refreshed, generated, or updated the monitoring snapshot represented by this object instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
 ]]></Description>
       </Item>
-      <Item ID="20">
-        <Name>LwM2M Registration State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Current LwM2M registration state, when this Object Instance represents an EMA or LwM2M client component:
-0 = Unknown
-1 = Not registered
-2 = Registering
-3 = Registered
-4 = Registration update pending
-5 = Registration failed
-6 = Registration expired
-7 = Deregistering
-8..127 = Reserved for future GEISA-defined registration states
-128..255 = Reserved for vendor-specific or operator-specific registration states
-]]></Description>
-      </Item>
-      <Item ID="21">
-        <Name>Last Registration Time</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Time</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Time of the most recent successful LwM2M registration, when known. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
-]]></Description>
-      </Item>
-      <Item ID="22">
-        <Name>Last Registration Update Time</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Time</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Time of the most recent successful LwM2M registration update, when known. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
-]]></Description>
-      </Item>
-      <Item ID="23">
-        <Name>Registration Lifetime</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration/>
-        <Units>s</Units>
-        <Description><![CDATA[
-Current LwM2M registration lifetime in seconds.
-]]></Description>
-      </Item>
-      <Item ID="24">
-        <Name>Bootstrap State</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
-        <RangeEnumeration>0..255</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[
-Current bootstrap state, when applicable:
-0 = Unknown
-1 = Not required
-2 = Required
-3 = In progress
-4 = Completed
-5 = Failed
-6..127 = Reserved for future GEISA-defined bootstrap states
-128..255 = Reserved for vendor-specific or operator-specific bootstrap states
-]]></Description>
-      </Item>
       <Item ID="30">
         <Name>Upstream Communication State</Name>
         <Operations>R</Operations>
@@ -446,30 +368,6 @@ Timestamp of the most recent upstream send, handoff, delivery, or communication 
 Count of upstream send, handoff, delivery, or communication errors observed or retained by the platform during the current monitoring period.
 ]]></Description>
       </Item>
-      <Item ID="34">
-        <Name>Active Observe Count</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Count of active observe relationships for the monitored component, function, or path where such telemetry is available.
-]]></Description>
-      </Item>
-      <Item ID="35">
-        <Name>Failed Notify Count Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Count of failed Notify deliveries during the current monitoring period where such telemetry is available.
-]]></Description>
-      </Item>
       <Item ID="36">
         <Name>Suppressed Event Count Current Period</Name>
         <Operations>R</Operations>
@@ -492,102 +390,6 @@ Count of events suppressed by policy, throttling, coalescing, backpressure, or o
         <Units>count</Units>
         <Description><![CDATA[
 Count of events dropped due to queueing, transport, resource, policy, or delivery failure during the current monitoring period where such telemetry is available.
-]]></Description>
-      </Item>
-      <Item ID="41">
-        <Name>Pending Upstream Messages</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Number of pending upstream Platform messages currently queued or spooled for delivery.
-]]></Description>
-      </Item>
-      <Item ID="42">
-        <Name>Pending Upstream Bytes</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>B</Units>
-        <Description><![CDATA[
-Total bytes currently queued or spooled for upstream Platform delivery.
-]]></Description>
-      </Item>
-      <Item ID="43">
-        <Name>Oldest Pending Message Time</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Time</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Timestamp of the oldest pending upstream or platform message in the monitored queue or path when one exists. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
-]]></Description>
-      </Item>
-      <Item ID="44">
-        <Name>Dropped Upstream Messages Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Number of upstream Platform messages dropped during the current monitoring period.
-]]></Description>
-      </Item>
-      <Item ID="45">
-        <Name>Expired Upstream Messages Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Number of queued or spooled upstream Platform messages that expired before successful delivery during the current monitoring period.
-]]></Description>
-      </Item>
-      <Item ID="51">
-        <Name>API Request Count Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Count of API requests observed or retained by the monitored API or function during the current monitoring period. Generic event-log activity does not by itself satisfy this resource unless it is also an API request counted by that monitored function.
-]]></Description>
-      </Item>
-      <Item ID="52">
-        <Name>API Error Count Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Count of API errors observed or retained by the monitored API or function during the current monitoring period.
-]]></Description>
-      </Item>
-      <Item ID="53">
-        <Name>Unauthorized API Attempt Count Current Period</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration/>
-        <Units>count</Units>
-        <Description><![CDATA[
-Count of unauthorized API requests observed or retained by the monitored API or function during the current monitoring period.
 ]]></Description>
       </Item>
       <Item ID="63">
