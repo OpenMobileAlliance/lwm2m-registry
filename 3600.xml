@@ -69,9 +69,9 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
     This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
     Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.</Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.1</ObjectVersion>
+    <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
@@ -185,9 +185,7 @@ Media type for the app-message payload encoding, such as application/json, appli
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
-        <Description><![CDATA[
-A unique local-scope identifier for distinguishing edge applications within a specific deployment environment. EMS or upstream correlation uses endpoint or platform identity together with resource 4050 AppID, and application instance identity where needed.
-]]></Description>
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
       </Item>
     </Resources>
     <Description2><![CDATA[]]></Description2>

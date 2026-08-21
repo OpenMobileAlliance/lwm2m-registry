@@ -88,7 +88,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <RangeEnumeration></RangeEnumeration>
         <Units></Units>
         <Description><![CDATA[
-Platform-generated revision identifier in YYYYMMDDHHMMSS long-form datetime format, optionally followed by an operator- or vendor-defined suffix.
+Platform-generated revision identifier for the effective configuration represented by this Object. The value SHALL begin with a UTC timestamp in YYYYMMDDHHMMSS format and MAY be followed by a hyphen and an implementation-defined suffix.
 ]]></Description>
       </Item>
       <Item ID="1">
