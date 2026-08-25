@@ -4923,7 +4923,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <Name>PlatformComponentMonitoring</Name>
         <Description>This LwM2M Object provides logical component monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component monitoring state, reason detail, monitoring-window, LwM2M registration, upstream communication, queue, API, and event telemetry, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component monitoring state, reason detail, monitoring-window, queue, API, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
 Each Object Instance represents one logical component, service, function, or operational path used by the implementation to realize the platform requirements covered by this Object. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. The model does not prescribe process, daemon, package, executable, container, service, or hardware boundaries. An implementation may expose separate logical component instances even when those logical components share an underlying software element.
 
