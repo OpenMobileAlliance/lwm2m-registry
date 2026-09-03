@@ -64,15 +64,9 @@ LEGAL DISCLAIMER
 		<Description1><![CDATA[The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
 The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.]]></Description1>
 		<ObjectID>20</ObjectID>
-<<<<<<< HEAD
-		<ObjectURN>urn:oma:lwm2m:oma:20:3.2</ObjectURN>
-		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>3.2</ObjectVersion>
-=======
 		<ObjectURN>urn:oma:lwm2m:oma:20:3.1</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>3.1</ObjectVersion>
->>>>>>> prod
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -167,90 +161,6 @@ This resource may only be included in a Send operation payload. Attempting to ac
 				<Description><![CDATA[Minimum number of seconds between consecutive Send operations containing the LogDataIncremental resource. If this resource is zero or not present, then LogDataIncremental shall never be sent in a Send operation. If set to a positive number, a Send operation containing the LogDataIncremental resource shall be performed after the specified number of seconds since the previous one or when a new log information is generated, whichever happens later, and the data collection shall be atomically emptied upon successful delivery.
 If the LwM2M client is connected to multiple servers, this resource SHOULD be handled independently for each server.]]></Description>
 			</Item>
-<<<<<<< HEAD
-			<Item ID="4018"><Name>Source Type</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration>0..255</RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Identifies the source scope associated with the log or event record stream represented by this Object Instance.
-0 = Unknown
-1 = Host or device
-2 = GEISA Platform
-3 = Edge Management Agent
-4 = LwM2M client
-5 = GEISA application
-6 = EMS
-7 = Network or bearer
-8 = Security or credential service
-9 = Operator or administrative actor
-10..127 = Reserved for future GEISA-defined source types
-128..255 = Reserved for vendor-specific or operator-specific source types]]></Description>
-			</Item>
-			<Item ID="4019"><Name>Source ID</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Platform-local source identifier for the component, app instance, subsystem, interface, or service that produced or owns the log or event record or log stream represented by this Object Instance.]]></Description>
-			</Item>
-			<Item ID="4050"><Name>AppID</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Unsigned Integer</Type>
-				<RangeEnumeration>2 bytes</RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Numeric GEISA application identifier associated with this event or log record or log stream when the source or subject is a GEISA application. Absent or zero means no application is associated.]]></Description>
-			</Item>
-			<Item ID="4051"><Name>RemoteLogServer</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>String</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[URI of the remote log, event, or operational record collector associated with this Event Log instance.
-The URI scheme identifies the transport or protocol profile where applicable.
-This resource is not limited to syslog. Transport, security, authentication, buffering, and delivery behavior are defined by platform policy, ADM/EMS policy, or the selected URI scheme/profile.]]></Description>
-			</Item>
-			<Item ID="4052"><Name>RemoteLoggingEnabled</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Boolean</Type>
-				<RangeEnumeration></RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Enables or disables forwarding records from this Event Log instance to the configured RemoteLogServer.
-This flag does not by itself guarantee remote delivery. Forwarding may still depend on policy, authorization, transport availability, security state, buffering, queue state, and platform state.]]></Description>
-			</Item>
-			<Item ID="4053"><Name>LogLevel</Name>
-				<Operations>RW</Operations>
-				<MultipleInstances>Single</MultipleInstances>
-				<Mandatory>Optional</Mandatory>
-				<Type>Integer</Type>
-				<RangeEnumeration>0..7</RangeEnumeration>
-				<Units></Units>
-				<Description><![CDATA[Minimum severity level for records stored locally and/or forwarded remotely by this Event Log instance.
-This resource applies to the Event Log object instance, so different instances may use different severity filters.
-Lower numeric values represent higher severity.
-For non-syslog records, the platform maps event or log severity to this severity scale.
-Use RFC 5424 severity values if this resource already uses or should use that mapping.
-
-0 = Emergency
-1 = Alert
-2 = Critical
-3 = Error
-4 = Warning
-5 = Notice
-6 = Informational
-7 = Debug]]></Description>
-			</Item></Resources>
-=======
 			<Item ID="4050"><Name>AppID</Name>
 				<Operations>RW</Operations>
 				<MultipleInstances>Single</MultipleInstances>
@@ -261,7 +171,6 @@ Use RFC 5424 severity values if this resource already uses or should use that ma
 				<Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
 			</Item>
 		</Resources>
->>>>>>> prod
 		<Description2><![CDATA[As an extension to the definition of resource 4013 (LogStatus), within the context of this Object starting with version 2.1, the 4th LSB, defined in the Resource Description as "reserved", shall mean: 1=LogDataIncremental collection active, 0=LogDataIncremental collection stopped.]]></Description2>
 	</Object>
 </LWM2M>
