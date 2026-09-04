@@ -4943,14 +4943,15 @@ This Object does not require continuous telemetry collection. It does not imply 
 	<Item>
         <ObjectID>3606</ObjectID>
         <URN>urn:oma:lwm2m:ext:3606</URN>
-        <Name>PlatformConfiguration</Name>
-        <Description>This LwM2M Object configures GEISA Platform behavior for local monitoring, reporting, logging, queueing, and app-message handling.
+        <Name>PlatformEffectiveConfiguration</Name>
+        <Description>
+This LwM2M Object reports the effective GEISA Platform configuration for one edge device and the reconciliation status of the most recently evaluated requested configuration. An EMS can compare Effective Configuration Hash with the requested configuration hash before deciding whether a larger Object read is needed. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related configuration state, sampling, monitoring-window, reporting, logging, queueing, app-message, retention, and app-accounting resources without renumbering existing resources. Requested configuration resources use even-numbered resource identifiers and their corresponding Effective resources use the immediately following odd-numbered resource identifiers. Undefined resource identifiers in those gaps are not implemented resources.
+Before the first runtime configuration update, this Object SHALL represent the effective configuration corresponding to the System Owner-approved requested baseline represented by Object 3607. The platform SHALL generate the initial Effective Configuration Revision and compute Effective Configuration Hash. When the requested and effective hashes match, Reconciliation State SHALL be Synchronized and Configuration Attempt Result Code SHALL be None. When the platform adjusts, partially applies, rejects, or reverts any part of the approved baseline, the effective hash and reconciliation resources SHALL report that result.
 
-This Object is single-instance per edge device. It represents requested and effective behavior of the GEISA Platform for one edge device and is intended for operator or EMS-visible configuration state rather than current operational health.
+Resource identifiers remain grouped with gaps for future GEISA-defined resources. Effective configuration-value resources retain their existing odd-numbered identifiers. Undefined identifiers in those gaps are not implemented resources.
 
-This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads; app-domain configuration uses the GEISA App Messaging Object. It does not report current platform health; the GEISA Platform Monitoring Object reports current platform health, state, and counters. It does not store durable logs or event records; those remain in the Event Log Object.
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads, report current platform health, or store durable logs or event records. It does not define package-source reconciliation.
 </Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
@@ -4962,6 +4963,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <TSLink>0</TSLink>
     </Item>
     <Item>
+<<<<<<< HEAD
         <ObjectID>3608</ObjectID>
         <URN>urn:oma:lwm2m:ext:3608</URN>
         <Name>PlatformComponentMonitoring</Name>
@@ -4979,6 +4981,24 @@ This Object does not require continuous telemetry collection. Optional resources
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF>3608.xml</DDF>
+=======
+        <ObjectID>3607</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3607</URN>
+        <Name>PlatformRequestedConfiguration</Name>
+        <Description>
+This LwM2M Object reports the GEISA Platform configuration requested by an EMS or operator for one edge device. Writable requested configuration resources express the desired configuration, and the platform computes and exposes Requested Configuration Hash after accepting or updating those values. Object 3606 reports the effective result. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
+
+Before the first runtime configuration update, this Object SHALL represent the platform configuration baseline approved by the System Owner. When the Operator is acting as the System Owner or utility, the Operator-approved baseline satisfies this requirement. The baseline may have been established through manufacturing, commissioning, provisioning, deployment configuration, or another authorized process. Vendor defaults, firmware defaults, or locally selected defaults SHALL NOT be treated as the requested baseline unless approved by the System Owner or authorized Operator. The platform SHALL generate an initial Requested Configuration Revision when the approved baseline does not provide one, and SHALL compute Requested Configuration Hash from the requested configuration values represented by this Object. The platform does not independently choose the requested baseline.
+
+Resource identifiers remain grouped with gaps for future GEISA-defined resources. Requested configuration-value resources retain their existing even-numbered identifiers. Undefined identifiers in those gaps are not implemented resources.
+
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads, report current platform health, or store durable logs or event records. It does not define package-source reconciliation.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3607.xml</DDF>
+>>>>>>> GEISA-LwM2M-Objects
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>

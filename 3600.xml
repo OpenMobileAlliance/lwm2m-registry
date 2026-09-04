@@ -56,9 +56,7 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-The above license is used as a license under copyright only. Please
-reference the OMA IPR Policy for patent licensing terms:
-https://www.omaspecworks.org/about/intellectual-property-rights/
+
 
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
@@ -69,9 +67,9 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
     This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
     Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.</Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.1</ObjectVersion>
+    <ObjectVersion>1.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
@@ -185,9 +183,7 @@ Media type for the app-message payload encoding, such as application/json, appli
         <Type>Unsigned Integer</Type>
         <RangeEnumeration>2 bytes</RangeEnumeration>
         <Units/>
-        <Description><![CDATA[
-A unique local-scope identifier for distinguishing edge applications within a specific deployment environment. EMS or upstream correlation uses endpoint or platform identity together with resource 4050 AppID, and application instance identity where needed.
-]]></Description>
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
       </Item>
     </Resources>
     <Description2><![CDATA[]]></Description2>
