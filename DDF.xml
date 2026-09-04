@@ -4984,7 +4984,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    </Item>
+    <Item>
         <ObjectID>3608</ObjectID>
         <URN>urn:oma:lwm2m:ext:3608</URN>
         <Name>PlatformComponentMonitoring</Name>
