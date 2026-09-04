@@ -4,7 +4,7 @@
 FILE INFORMATION
 
 OMA Permanent Document
-   File: OMA-SUP-XML_3-V1_2-20201110-A.xml
+   File: OMA-SUP-XML_3-V1_3-20260505-A.xml
    Path: http://www.openmobilealliance.org/release/ObjLwM2M_Device/
 
 OMNA LwM2M Registry
@@ -15,7 +15,7 @@ NORMATIVE INFORMATION
 
   Information about this file can be found in the latest revision of
 
-    OMA-TS-LightweightM2M_Core-V1_2
+    OMA-TS-LightweightM2M_Core-V1_3
 
   This is available at http://www.openmobilealliance.org/release/LightweightM2M/
 
@@ -23,7 +23,7 @@ NORMATIVE INFORMATION
 
 LEGAL DISCLAIMER
 
-  Copyright 2020 Open Mobile Alliance.
+  Copyright 2020, 2026 Open Mobile Alliance.
 
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
@@ -62,9 +62,9 @@ LEGAL DISCLAIMER
 		<Name>Device</Name>
 		<Description1><![CDATA[This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.]]></Description1>
 		<ObjectID>3</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:oma:3:1.2</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:oma:3:1.3</ObjectURN>
 		<LWM2MVersion>1.1</LWM2MVersion>
-		<ObjectVersion>1.2</ObjectVersion>
+		<ObjectVersion>1.3</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Mandatory</Mandatory>
 		<Resources>
@@ -127,7 +127,10 @@ LEGAL DISCLAIMER
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
 				<Description><![CDATA[Perform factory reset of the LwM2M Device to make the LwM2M Device to go through initial deployment sequence where provisioning and bootstrap sequence is performed. This requires client ensuring post factory reset to have minimal information to allow it to carry out one of the bootstrap methods specified in section 5.2.3. 
-When this Resource is executed, "De-register" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device.]]></Description>
+When this Resource is executed, "De-register" operation MAY be sent to the LwM2M Server(s) before factory reset of the LwM2M Device.
+No Argument or Argument = 0 indicates that the Client MUST preserve its IDevID upon factory reset.
+Argument = 1 indicates that the Client MUST preserve both IDevID and LDevID upon factory reset.
+]]></Description>
 			</Item>
 			<Item ID="6">
 				<Name>Available Power Sources</Name>
