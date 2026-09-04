@@ -4962,8 +4962,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
-    <Item>
-    <Item>
+     <Item>
         <ObjectID>3607</ObjectID>
         <URN>urn:oma:lwm2m:ext:3607</URN>
         <Name>PlatformRequestedConfiguration</Name>
@@ -4984,6 +4983,7 @@ This Object does not replace native LwM2M configuration for firmware, applicatio
         <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
+    </Item>
     </Item>
         <ObjectID>3608</ObjectID>
         <URN>urn:oma:lwm2m:ext:3608</URN>
