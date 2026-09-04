@@ -283,8 +283,20 @@ If the LwM2M client is connected to multiple servers, this resource SHOULD be ha
         <RangeEnumeration>2 bytes</RangeEnumeration>       
         <Units></Units>        
         <Submitter>OMA</Submitter>
-        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>        
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
         <TS></TS>       
+        <TSLink>0</TSLink>
+       </Item>
+
+       <Item ID="4051">
+        <Name>Software Instance</Name>
+        <Operations>R</Operations>
+        <Type>Objlnk</Type>
+        <RangeEnumeration></RangeEnumeration>
+        <Units></Units>
+        <Submitter>GEISA</Submitter>
+        <Description><![CDATA[Object link to the corresponding LwM2M Software Management /9 instance for the installed application. Together with AppID, this link correlates the logical application identity with the specific installed software instance on this endpoint.]]></Description>
+        <TS></TS>
         <TSLink>0</TSLink>
        </Item>
 
