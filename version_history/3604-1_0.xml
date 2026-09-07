@@ -55,18 +55,20 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-
+The above license is used as a license under copyright only. Please
+reference the OMA IPR Policy for patent licensing terms:
+https://www.omaspecworks.org/about/intellectual-property-rights/
 
 -->
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
     <Name>AppMonitoring</Name>
     <Description1><![CDATA[
-This LwM2M Object provides app-scoped runtime monitoring and health visibility.
+This LwM2M Object provides app-scoped runtime monitoring visibility.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, health, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, monitoring state, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
-Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
+Each Object Instance represents the platform view of one installed or running application instance. This Object reports the platform's runtime lifecycle view, current application monitoring state, exit history, resource consumption, restart behavior, watchdog state, and platform actions. Application package lifecycle remains in Object 9, and accounting state remains in Object 3602.
 
 Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.
 ]]></Description1>
@@ -77,6 +79,26 @@ Accounting, quota, throttle, block, disabled, and accounting-window state are re
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
+      <Item ID="4050">
+        <Name>AppID</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>2 bytes</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.]]></Description>
+      </Item>
+      <Item ID="4051">
+        <Name>Software Instance</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Objlnk</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[Object link to the corresponding LwM2M Software Management /9 instance for the installed application. Together with AppID, this link correlates the logical application identity with the specific installed software instance on this endpoint.]]></Description>
+      </Item>
       <Item ID="0">
         <Name>Application Package ID</Name>
         <Operations>R</Operations>
@@ -86,7 +108,7 @@ Accounting, quota, throttle, block, disabled, and accounting-window state are re
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Reverse-DNS or package-style application identifier from the application manifest or platform catalog. This value identifies the application package for operator display, logs, and correlation. It is not a unique runtime application instance identifier.
+Package, manifest, or catalog identifier for the installed application, such as a reverse-DNS identifier. This identifies the base application package, not a deployed application instance or software version.
 ]]></Description>
       </Item>
       <Item ID="1">
@@ -98,19 +120,7 @@ Reverse-DNS or package-style application identifier from the application manifes
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Platform-local application instance identifier assigned by the platform or registry. This value distinguishes multiple deployed or running instances of the same package on the same platform.  It is not globally unique by itself; upstream correlation requires endpoint or platform identity and, where needed, AppID or application-instance context.
-]]></Description>
-      </Item>
-      <Item ID="2">
-        <Name>Software Instance</Name>
-        <Operations>R</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Objlnk</Type>
-        <RangeEnumeration/>
-        <Units/>
-        <Description><![CDATA[
-Optional object link to the corresponding /9 Software Management instance for the installed application package or package lifecycle correlation. This link provides package-management context for the monitored application. Resource 4050 AppID provides the local application identifier used by GEISA application monitoring. End-to-end uniqueness requires the EMS to interpret these identifiers in the context of the LwM2M endpoint, platform identity, and available Software Management package metadata.
+Platform-local identifier for this deployed application instance. This distinguishes multiple deployed instances of the same application package on the platform.
 ]]></Description>
       </Item>
       <Item ID="3">
@@ -123,17 +133,6 @@ Optional object link to the corresponding /9 Software Management instance for th
         <Units/>
         <Description><![CDATA[
 One or more object links to /3602 AppAccounting instance(s) associated with this application or application instance. Multiple /3602 instances may exist for different accounting classes, scopes, or accounting windows such as daily, since-reboot, rolling-window, lifetime, or operator-defined accounting. /3602 owns accounting counters, quota, throttle, block, disabled, and accounting-window state.
-]]></Description>
-      </Item>
-      <Item ID="4050">
-        <Name>AppID</Name>
-        <Operations>RW</Operations>
-        <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Mandatory</Mandatory>
-        <Type>Unsigned Integer</Type>
-        <RangeEnumeration>2 bytes</RangeEnumeration>
-        <Units/>
-        <Description><![CDATA[A unique local-scope identifier for distinguishing edge applications within a specific deployment environment.
 ]]></Description>
       </Item>
       <Item ID="10">
@@ -206,46 +205,77 @@ This state is the platform's operational view and does not replace Software Mana
 ]]></Description>
       </Item>
       <Item ID="21">
-        <Name>Health State</Name>
+        <Name>Application Monitoring State</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
-        <Type>Integer</Type>
+        <Type>Unsigned Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Current health summary for this application instance.
-
+Current monitoring state for this application instance:
 0 = Unknown
 1 = Healthy
 2 = Degraded
 3 = Failed
-4 = Stopped
-5 = Policy blocked
-6 = Not reporting
-7..127 = Reserved for future GEISA-defined health states
-128..255 = Reserved for vendor-specific or operator-specific health states
-
-Health State is a summary. Detailed events, alarms, or log records SHOULD be reported through the GEISA message, event, alarm, or log mechanisms.
+4 = Disabled
+5 = Not reporting
+6 = Starting
+7 = Stopping
+8 = Stopped
+9 = Blocked by policy
+10..127 = Reserved for future GEISA-defined monitoring states
+128..255 = Reserved for vendor-specific or operator-specific monitoring states
 ]]></Description>
       </Item>
       <Item ID="22">
-        <Name>Health Reason</Name>
+        <Name>Monitoring Reason Code</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
-        <Type>String</Type>
-        <RangeEnumeration/>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
         <Description><![CDATA[
-Short platform-generated reason associated with the current Health State.
+Primary cause or contributing condition associated with the current Application Monitoring State:
+0 = Unspecified
+1 = None
+2 = Other
+3 = Component degraded
+4 = Component failed
+5 = Administratively disabled
+6 = Blocked by policy
+7 = Not reporting
+8 = Dependency unavailable
+9 = Temporarily unavailable
+10 = Startup in progress
+11 = Shutdown in progress
+12 = Restart limit exceeded
+13 = Monitoring data stale
+14 = Upstream communication unavailable
+15 = Registration failed
+16 = Registration expired
+17 = Queue backlog
+18 = Queue capacity exhausted
+19 = Resource pressure
+20 = Insufficient memory
+21 = Insufficient storage
+22 = Rate limited
+23 = Authorization denied
+24 = Security restriction
+25 = Internal error
+26 = Timeout
+27..127 = Reserved for future GEISA-defined monitoring reason codes
+128..255 = Reserved for vendor-specific or operator-specific monitoring reason codes
+
+None applies when no abnormal reason applies. Unspecified means no standardized reason was supplied. Other requires Reason Detail. Implementations SHOULD select the most specific applicable cause. Implementations SHOULD NOT use a reason code that merely repeats Application Monitoring State when a more specific cause is known.
 ]]></Description>
       </Item>
       <Item ID="23">
-        <Name>Start Time</Name>
+        <Name>Application Start Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Time</Type>
         <RangeEnumeration/>
         <Units/>
@@ -254,7 +284,7 @@ Time at which the current or most recent application runtime execution started, 
 ]]></Description>
       </Item>
       <Item ID="24">
-        <Name>Last Status Time</Name>
+        <Name>Last Monitoring State Transition Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
@@ -262,14 +292,14 @@ Time at which the current or most recent application runtime execution started, 
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Time at which the platform most recently received, generated, or refreshed application runtime status for this application instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+Time at which the Application Monitoring State most recently changed. When the Object Instance is initialized, this Resource SHALL represent the time at which the initial Application Monitoring State was established. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies. This Resource SHALL always report a valid time at which the current state was established.
 ]]></Description>
       </Item>
       <Item ID="25">
         <Name>Last Exit Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Time</Type>
         <RangeEnumeration/>
         <Units/>
@@ -281,7 +311,7 @@ Time at which the application most recently exited or was terminated. The value 
         <Name>Last Exit Reason</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -302,6 +332,30 @@ Reason for the most recent application exit.
 128..255 = Reserved for vendor-specific or operator-specific exit reasons
 ]]></Description>
       </Item>
+      <Item ID="27">
+        <Name>Reason Detail</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short human-readable diagnostic detail associated with Monitoring Reason Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. This Resource SHALL be present when Monitoring Reason Code is Other and MAY be present for any other reason when useful. It is not a log field and does not replace a defined reason code.
+]]></Description>
+      </Item>
+      <Item ID="28">
+        <Name>Last Lifecycle State Transition Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which Lifecycle State most recently changed. When the Object Instance is initialized, this Resource SHALL represent the time at which the initial Lifecycle State was established. It is distinct from Last Monitoring State Transition Time. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies. This Resource SHALL always report a valid time at which the current state was established.
+]]></Description>
+      </Item>
       <Item ID="30">
         <Name>Restart Count Current Period</Name>
         <Operations>R</Operations>
@@ -309,7 +363,7 @@ Reason for the most recent application exit.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of application restarts during the current platform-defined monitoring period.
 ]]></Description>
@@ -321,7 +375,7 @@ Number of application restarts during the current platform-defined monitoring pe
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of application restarts observed across the lifetime of this application installation, subject to platform persistence policy.
 ]]></Description>
@@ -333,7 +387,7 @@ Number of application restarts observed across the lifetime of this application 
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of abnormal application exits during the current platform-defined monitoring period.
 ]]></Description>
@@ -342,7 +396,7 @@ Number of abnormal application exits during the current platform-defined monitor
         <Name>Watchdog Enabled</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Boolean</Type>
         <RangeEnumeration/>
         <Units/>
@@ -354,8 +408,8 @@ Indicates whether the platform is applying an application keepalive or watchdog 
         <Name>Watchdog Timeout</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
         <Description><![CDATA[
@@ -367,9 +421,9 @@ Current watchdog timeout in seconds for this application instance.
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
+        <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units>B</Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Number of missed application watchdog or keepalive intervals during the current platform-defined monitoring period.
 ]]></Description>
@@ -463,7 +517,7 @@ Persistent storage currently used by this application instance.
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Mandatory</Mandatory>
-        <Type>Integer</Type>
+        <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>B</Units>
         <Description><![CDATA[
@@ -501,7 +555,7 @@ Non-persistent storage limit currently enforced for this application instance.
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units></Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Current thread count associated with this application instance or representative runtime process, when the execution environment exposes that information.
 ]]></Description>
@@ -513,7 +567,7 @@ Current thread count associated with this application instance or representative
         <Mandatory>Optional</Mandatory>
         <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
-        <Units></Units>
+        <Units>count</Units>
         <Description><![CDATA[
 Current number of observed processes associated with this application instance, including directly associated child processes when exposed by the execution environment.
 ]]></Description>
@@ -522,7 +576,7 @@ Current number of observed processes associated with this application instance, 
         <Name>Last Platform Action</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Integer</Type>
         <RangeEnumeration>0..255</RangeEnumeration>
         <Units/>
@@ -547,7 +601,7 @@ Most recent platform action taken for this application instance.
         <Name>Last Platform Action Time</Name>
         <Operations>R</Operations>
         <MultipleInstances>Single</MultipleInstances>
-        <Mandatory>Optional</Mandatory>
+        <Mandatory>Mandatory</Mandatory>
         <Type>Time</Type>
         <RangeEnumeration/>
         <Units/>
@@ -584,7 +638,7 @@ Request that the platform ask the application to shut down cleanly. This operati
         <Operations>RW</Operations>
         <MultipleInstances>Single</MultipleInstances>
         <Mandatory>Optional</Mandatory>
-        <Type>Integer</Type>
+        <Type>Unsigned Integer</Type>
         <RangeEnumeration/>
         <Units>s</Units>
         <Description><![CDATA[

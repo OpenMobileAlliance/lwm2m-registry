@@ -4828,13 +4828,31 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <ObjectID>3600</ObjectID>
         <URN>urn:oma:lwm2m:ext:3600</URN>
         <Name>AppMessaging</Name>
-        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging. 
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
     Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
     This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
     Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3600-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3600</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3600:1.1</URN>
+        <Name>AppMessaging</Name>
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+    Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+    This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+    Resource 4050 AppID is a system-unique identifier for the logical application within the applicable management domain. AppID identifies the application independently of software version or endpoint-specific Software Management instance.</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3600.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4852,6 +4870,24 @@ Resource identifiers are grouped logically with intentional gaps to keep related
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3601-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3601</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3601:1.1</URN>
+        <Name>HostMonitoring</Name>
+        <Description>
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability. It also reports the aggregate monitoring state of the host environment, the reason for that state, optional diagnostic detail, and the time of the last state transition.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3601.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4878,6 +4914,33 @@ This object may expose selected summary state derived from those sources for eas
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3602-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3602</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3602:1.1</URN>
+        <Name>AppAccounting</Name>
+        <Description>
+This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+
+Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+
+Resource identifiers are intentionally grouped with gaps/reserved between logical sections to allow future GEISA-defined resources to be added near related identity, scope, accounting-window, counter, state, action, and evidence resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
+
+Detailed behavioral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3602.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4902,11 +4965,11 @@ This object may expose selected summary state derived from those sources for eas
         <ObjectID>3604</ObjectID>
         <URN>urn:oma:lwm2m:ext:3604</URN>
         <Name>AppMonitoring</Name>
-        <Description>This LwM2M Object provides app-scoped runtime monitoring and health visibility.
+        <Description>This LwM2M Object provides app-scoped runtime monitoring visibility.
 
-Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, health, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, monitoring state, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
 
-Each Object Instance represents the platform view of one installed or running application instance. This Object provides application operational health, lifecycle visibility, resource consumption, restart behavior, watchdog state, and platform actions.
+Each Object Instance represents the platform view of one installed or running application instance. This Object reports the platform's runtime lifecycle view, current application monitoring state, exit history, resource consumption, restart behavior, watchdog state, and platform actions. Application package lifecycle remains in Object 9, and accounting state remains in Object 3602.
 
 Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.
 </Description>
