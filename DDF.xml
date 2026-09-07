@@ -28,7 +28,6 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <!-- 0 => if link to TS should not be visible, 1 => if link to TS should be visible (default) -->
         <TSLink>1</TSLink>
     </Item>
-
     <Item>
         <ObjectID>0</ObjectID>
         <URN>urn:oma:lwm2m:oma:0:1.1</URN>
@@ -4829,10 +4828,31 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <ObjectID>3600</ObjectID>
         <URN>urn:oma:lwm2m:ext:3600</URN>
         <Name>AppMessaging</Name>
-        <Description>This LwM2M Object provides a bi-directional messaging facility for applications. Distinct resources are defined for Client to Server messaging and Server to Client messaging.</Description>
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+    Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+    This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+    Resource 4050 AppID is a local-scope application identity. Upstream or global correlation requires endpoint or platform identity together with resource 4050 AppID, and application instance identity where multiple instances are possible.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3600-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3600</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3600:1.1</URN>
+        <Name>AppMessaging</Name>
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+    Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+    This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+    Resource 4050 AppID is a system-unique identifier for the logical application within the applicable management domain. AppID identifies the application independently of software version or endpoint-specific Software Management instance.</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3600.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4843,10 +4863,31 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <ObjectID>3601</ObjectID>
         <URN>urn:oma:lwm2m:ext:3601</URN>
         <Name>HostMonitoring</Name>
-        <Description>This LwM2M Object provides a facility for monitoring resource utilization of a GEISA edge environment.</Description>
+        <Description>
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3601-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3601</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3601:1.1</URN>
+        <Name>HostMonitoring</Name>
+        <Description>
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability. It also reports the aggregate monitoring state of the host environment, the reason for that state, optional diagnostic detail, and the time of the last state transition.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3601.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4857,10 +4898,49 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <ObjectID>3602</ObjectID>
         <URN>urn:oma:lwm2m:ext:3602</URN>
         <Name>AppAccounting</Name>
-        <Description>This LwM2M Object provides facilities for service flow level accounting and throttling per application.</Description>
+        <Description>
+This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+
+Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+
+Resource identifiers are intentionally grouped with gaps/reserved between logical sections to allow future GEISA-defined resources to be added near related identity, scope, accounting-window, counter, state, action, and evidence resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
+
+Detailed behavioral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+</Description>
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
+        <DDF>version_history/3602-1_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+
+    <Item>
+        <ObjectID>3602</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3602:1.1</URN>
+        <Name>AppAccounting</Name>
+        <Description>
+This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
+
+Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
+
+Resource identifiers are intentionally grouped with gaps/reserved between logical sections to allow future GEISA-defined resources to be added near related identity, scope, accounting-window, counter, state, action, and evidence resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
+
+Detailed behavioral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
+
+This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.1</Ver>
         <DDF>3602.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -4872,7 +4952,7 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <URN>urn:oma:lwm2m:ext:3603</URN>
         <Name>TBD</Name>
         <Description>Reservation for 3603</Description>
-        <Owner>TBD</Owner>
+        <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
         <DDF></DDF>
@@ -4884,14 +4964,109 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
     <Item>
         <ObjectID>3604</ObjectID>
         <URN>urn:oma:lwm2m:ext:3604</URN>
-        <Name>TBD</Name>
-        <Description>Reservation from 3604 to 3614</Description>
-        <Owner>TBD</Owner>
+        <Name>AppMonitoring</Name>
+        <Description>This LwM2M Object provides app-scoped runtime monitoring visibility.
+
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related identity, metadata, lifecycle, monitoring state, watchdog, resource-use, platform-action, and monitoring resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Each Object Instance represents the platform view of one installed or running application instance. This Object reports the platform's runtime lifecycle view, current application monitoring state, exit history, resource consumption, restart behavior, watchdog state, and platform actions. Application package lifecycle remains in Object 9, and accounting state remains in Object 3602.
+
+Accounting, quota, throttle, block, disabled, and accounting-window state are represented by linked /3602 AppAccounting instances, not duplicated in /3604.
+</Description>
+        <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>3604.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	<Item>
+        <ObjectID>3605</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3605</URN>
+        <Name>PlatformMonitoring</Name>
+        <Description>This LwM2M Object provides aggregate platform-scoped monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
+
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related platform identity, platform monitoring state, related component, monitoring-window, upstream communication, queue, API, and event telemetry, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+The single Object Instance represents the platform's aggregate monitoring view. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained platform telemetry. This Object is intended for authoritative aggregate platform monitoring together with upstream communication, queue, API, and event telemetry.
+
+This Object does not require continuous telemetry collection. It does not imply a daemon, service, process, or engine architecture. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or aggregate platform state.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3605.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	<Item>
+        <ObjectID>3606</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3606</URN>
+        <Name>PlatformEffectiveConfiguration</Name>
+        <Description>
+This LwM2M Object reports the effective GEISA Platform configuration for one edge device and the reconciliation status of the most recently evaluated requested configuration. An EMS can compare Effective Configuration Hash with the requested configuration hash before deciding whether a larger Object read is needed. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
+
+Before the first runtime configuration update, this Object SHALL represent the effective configuration corresponding to the System Owner-approved requested baseline represented by Object 3607. The platform SHALL generate the initial Effective Configuration Revision and compute Effective Configuration Hash. When the requested and effective hashes match, Reconciliation State SHALL be Synchronized and Configuration Attempt Result Code SHALL be None. When the platform adjusts, partially applies, rejects, or reverts any part of the approved baseline, the effective hash and reconciliation resources SHALL report that result.
+
+Resource identifiers remain grouped with gaps for future GEISA-defined resources. Effective configuration-value resources retain their existing odd-numbered identifiers. Undefined identifiers in those gaps are not implemented resources.
+
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads, report current platform health, or store durable logs or event records. It does not define package-source reconciliation.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3606.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+     <Item>
+        <ObjectID>3607</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3607</URN>
+        <Name>PlatformRequestedConfiguration</Name>
+        <Description>
+This LwM2M Object reports the GEISA Platform configuration requested by an EMS or operator for one edge device. Writable requested configuration resources express the desired configuration, and the platform computes and exposes Requested Configuration Hash after accepting or updating those values. Object 3606 reports the effective result. Each configuration resource follows its defined Mandatory or Optional status. Optional resources depend on supported capabilities.
+
+Before the first runtime configuration update, this Object SHALL represent the platform configuration baseline approved by the System Owner. When the Operator is acting as the System Owner or utility, the Operator-approved baseline satisfies this requirement. The baseline may have been established through manufacturing, commissioning, provisioning, deployment configuration, or another authorized process. Vendor defaults, firmware defaults, or locally selected defaults SHALL NOT be treated as the requested baseline unless approved by the System Owner or authorized Operator. The platform SHALL generate an initial Requested Configuration Revision when the approved baseline does not provide one, and SHALL compute Requested Configuration Hash from the requested configuration values represented by this Object. The platform does not independently choose the requested baseline.
+
+Resource identifiers remain grouped with gaps for future GEISA-defined resources. Requested configuration-value resources retain their existing even-numbered identifiers. Undefined identifiers in those gaps are not implemented resources.
+
+This Object does not replace native LwM2M configuration for firmware, application lifecycle, cellular, APN, WLAN, bearer selection, remote SIM, or QoS. It does not carry app-domain configuration payloads, report current platform health, or store durable logs or event records. It does not define package-source reconciliation.
+</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3607.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3608</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3608</URN>
+        <Name>PlatformComponentMonitoring</Name>
+        <Description>This LwM2M Object provides logical component monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
+
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component monitoring state, reason detail, monitoring-window, queue, API, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Each Object Instance represents one logical component, service, function, or operational path used by the implementation to realize the platform requirements covered by this Object. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. The model does not prescribe process, daemon, package, executable, container, service, or hardware boundaries. An implementation may expose separate logical component instances even when those logical components share an underlying software element.
+
+When this Object is implemented, its Object Instances collectively represent the complete logical component set used by that implementation to realize the relevant platform requirements covered by this Object. This Object does not require every operating-system service, library, or helper process to be represented. Platform implementers may map their own components using the vendor-specific or operator-specific reservation ranges for Component Type and Component Role when an exact match is not already provided.
+
+This Object does not require continuous telemetry collection. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.
+        </Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.0</Ver>
+        <DDF>3608.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
