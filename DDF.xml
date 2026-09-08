@@ -4147,6 +4147,20 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.2</Ver>
+        <DDF>version_history/3431-1_2.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3431</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3431:1.3</URN>
+        <Name>Parking Sensor</Name>
+        <Description>The uCIFI parking sensor provides actual and cumulated occupancy duration as well as forbidden parking detection.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.3</Ver>
         <DDF>3431.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
