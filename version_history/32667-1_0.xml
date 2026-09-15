@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>Big Lebowski Theme</Name>
+    <Description1><![CDATA[
+A fictional LwM2M Object representing the thematic core of the film "The Big Lebowski":
+abiding through chaos, mistaken identity, friendship, absurdity, and detachment.
+    ]]></Description1>
+    <ObjectID>32667</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:x:32667</ObjectURN>
+    <LWM2MVersion>1.2</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Single</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+
+    <Resources>
+      <Item ID="0">
+        <Name>AbidesLevel</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..10</RangeEnumeration>
+        <Units>score</Units>
+        <Description><![CDATA[
+Measures how strongly the object embodies calm persistence in the face of disorder.
+0 means not abiding at all; 10 means complete serenity amid chaos.
+        ]]></Description>
+      </Item>
+
+      <Item ID="1">
+        <Name>ChaosIndex</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..10</RangeEnumeration>
+        <Units>score</Units>
+        <Description><![CDATA[
+Represents the surrounding level of absurdity, confusion, and narrative instability.
+        ]]></Description>
+      </Item>
+
+      <Item ID="2">
+        <Name>MistakenIdentity</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Boolean</Type>
+        <Description><![CDATA[
+Indicates whether mistaken identity is a defining driver of the scenario.
+        ]]></Description>
+      </Item>
+
+      <Item ID="3">
+        <Name>FriendshipStrength</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..10</RangeEnumeration>
+        <Units>score</Units>
+        <Description><![CDATA[
+Captures the emotional and narrative importance of companionship and group ritual.
+        ]]></Description>
+      </Item>
+
+      <Item ID="4">
+        <Name>RugSignificance</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <Description><![CDATA[
+Symbolic description of comfort, dignity, and the desire for order.
+        ]]></Description>
+      </Item>
+
+      <Item ID="5">
+        <Name>BowlingRitualEnabled</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Boolean</Type>
+        <Description><![CDATA[
+Indicates whether recurring communal ritual is part of the object's thematic model.
+        ]]></Description>
+      </Item>
+
+      <Item ID="6">
+        <Name>DreamSequenceIntensity</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..10</RangeEnumeration>
+        <Units>score</Units>
+        <Description><![CDATA[
+Represents how strongly fantasy, subconscious imagery, and surreal detours shape meaning.
+        ]]></Description>
+      </Item>
+
+      <Item ID="7">
+        <Name>ThemeSummary</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <Description><![CDATA[
+Human-readable summary of the theme: life is chaotic and often senseless, but identity,
+friendship, and relaxed endurance provide a way through it.
+        ]]></Description>
+      </Item>
+
+      <Item ID="8">
+        <Name>DonnySTFU</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Boolean</Type>
+        <Description><![CDATA[
+Indicates whether Donny is being told to be quiet.
+true means the thematic state includes the recurring "shut the f*** up, Donny" dynamic.
+        ]]></Description>
+      </Item>
+
+      <Item ID="9">
+        <Name>WalterResource</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <Description><![CDATA[
+Represents the volatile, absolutist, and aggressively principled energy embodied by Walter.
+May be used to describe rule enforcement, combativeness, or escalation of trivial situations.
+        ]]></Description>
+      </Item>
+    </Resources>
+  </Object>
+</LWM2M>
