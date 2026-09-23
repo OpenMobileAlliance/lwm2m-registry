@@ -4707,6 +4707,20 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
+        <DDF>version_history/3460-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3460</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3460:2.0</URN>
+        <Name>Distributed Sensor Message</Name>
+        <Description>The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>2.0</Ver>
         <DDF>3460.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -7595,4 +7609,3 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <TSLink>0</TSLink>
     </Item>
 </DDFList>
- 
