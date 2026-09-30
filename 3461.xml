@@ -37,7 +37,7 @@
 		<Description1>This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.</Description1>
 		<ObjectID>3461</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3461:2.0</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>

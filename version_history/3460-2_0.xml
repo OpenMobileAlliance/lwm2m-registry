@@ -37,7 +37,7 @@
 		<Description1>The uCIFI Distributed Sensor Message provides the format of data being exchanged within the Distributed Sensor Group communication.</Description1>
 		<ObjectID>3460</ObjectID>
 		<ObjectURN>urn:oma:lwm2m:ext:3460:2.0</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
+		<LWM2MVersion>1.1</LWM2MVersion>
 		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>

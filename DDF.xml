@@ -4679,6 +4679,20 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>2.0</Ver>
+        <DDF>version_history/3459-2_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3459</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3459:3.0</URN>
+        <Name>Distributed Sensor Group</Name>
+        <Description>The uCIFI Distributed Sensor Group allows to configure a device to publish or subscribe to device-to-device communication.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>3.0</Ver>
         <DDF>3459.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
