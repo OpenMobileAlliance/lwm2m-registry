@@ -51,7 +51,7 @@
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description><![CDATA[The identifier of the group. This resource can be used to filter the incoming message.
-This resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address.
+This resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address this specific message is addressed to.
 Note: in versions of this Object prior to 2.0 this resource was defined as Integer, so implementations of earlier versions may be limited to numerical Group IDs.]]></Description>
 			</Item>
 			<Item ID="1">
@@ -72,7 +72,7 @@ Note: in versions of this Object prior to 2.0 this resource was defined as Integ
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
-				<Description><![CDATA[URI of the resource that contains the status information, to be used for data fusion and to be eventually filtered upon reception]]></Description>
+				<Description><![CDATA[URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) of the resource that contains the status information, to be used for data fusion and to be eventually filtered upon reception]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Publisher ID</Name>
