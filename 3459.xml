@@ -70,7 +70,7 @@
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
-				<Description><![CDATA[SUBSCRIBER ONLY URI for the last sensor state value published within the group , in the format of </Object/Instance/Resource> (using Core Link syntax), retrieved from the "Remote Sensor State URI" field of the last received or sent group message. [default=empty]]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY URI in the format of </Object/Instance/Resource(/ResourceInstance)> (using Core Link syntax) for the last sensor state value published within the group , in the format of </Object/Instance/Resource> (using Core Link syntax), retrieved from the "Remote Sensor State URI" field of the last received or sent group message. [default=empty]]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Most recent Sensor Publisher ID</Name>
