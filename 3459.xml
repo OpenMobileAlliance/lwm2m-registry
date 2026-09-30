@@ -222,7 +222,7 @@ Note: in versions of this Object prior to 2.0 only one address was supported [de
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
-				<Description><![CDATA[SUBSCRIBER ONLY The data fusion operation to be performed between resources pointed by local sensor state URIs and remote sensor state URIs (or their implicitly allocated equivalent value). To be noted that the operation is normally applicable to numerical values only (for Boolean values, 0 = false, 1 = true) 0: No fusion is to be performed 1: OR 2: AND 3: ADD 4: MAX 5: MIN 6: LAST - The last value reported by any sensor in the group becomes the group state value 7: Reserved (Custom 1) 8: Reserved (Custom 2)]]></Description>
+				<Description><![CDATA[SUBSCRIBER ONLY The data fusion operation to be performed between resources pointed by local sensor state URIs and remote sensor state URIs (or their implicitly allocated equivalent value). To be noted that the operation is normally applicable to numerical values only (for Boolean values, 0 = false, else = true) 0: No fusion is to be performed 1: OR 2: AND 3: ADD 4: MAX 5: MIN 6: LAST - The last value reported by any sensor in the group (based on order of reception) becomes the group state value 7: Reserved (Custom 1) 8: Reserved (Custom 2)]]></Description>
 			</Item>
 			<Item ID="18">
 				<Name>Remote Sensors Dynamic Mapping</Name>
