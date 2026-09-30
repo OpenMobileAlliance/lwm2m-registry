@@ -51,7 +51,7 @@
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description><![CDATA[The identifier of the group. This resource can be used to filter the incoming message.
-This resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address.
+This resource should match the Group ID resource of the Distributed Sensor Group or, if not specified, the Group Address this specific message is addressed to.
 Note: in versions of this Object prior to 2.0 this resource was defined as Integer, so implementations of earlier versions may be limited to numerical Group IDs.]]></Description>
 			</Item>
 			<Item ID="1">

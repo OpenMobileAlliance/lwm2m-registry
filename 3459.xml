@@ -90,7 +90,9 @@
 				<Type>String</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
-				<Description><![CDATA[PUBLISHER SUBSCRIBER The address where all devices that wish to be part of the group, need to communicate with, either by publishing sensor data to the address or by subscribing to sensor data from the address. In case IP multicast is used for exchange of data within a distributed sensor group, than this resource would be used to store the IPv4 or IPv6 multicast group address [default=empty]]]></Description>
+				<Description><![CDATA[PUBLISHER SUBSCRIBER The addresses (either multicast or unicast) that all devices belonging to the group need to communicate with, 
+either by publishing sensor data to them or by subscribing to sensor data from them.
+Note: in versions of this Object prior to 2.0 only one address was supported [default=empty]]]></Description>
 			</Item>
 			<Item ID="5">
 				<Name>Group ID</Name>
