@@ -3727,6 +3727,20 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>3.0</Ver>
+        <DDF>version_history/3416-3_0.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3416</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3416:3.1</URN>
+        <Name>Outdoor lamp controller</Name>
+        <Description>The uCIFI outdoor lamp controller object provides attributes to control, command and monitor outdoor luminaires in streets, in tunnels, on roads and for illumination of park and gardens.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>3.1</Ver>
         <DDF>3416.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
