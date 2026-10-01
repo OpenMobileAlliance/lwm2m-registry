@@ -242,7 +242,6 @@ Can be eventually adjusted in order to reserve more or less memory]]></Descripti
 				<Units/>
 				<Description><![CDATA[When executed, trigger a complete wipe of schedules already commissioned]]></Description>
 			</Item>
-		</Resources>
 			<Item ID="100">
 				<Name>Transaction start</Name>
 				<Operations>RW</Operations>
@@ -288,6 +287,7 @@ If a timeout happens the device will set an alarm status and may eventually reve
 				<Units/>
 				<Description><![CDATA[This resource is set to true when a transaction is aborted and is automatically cleared when a new transaction is started]]></Description>
 			</Item>
+		</Resources>
 		<Description2/>
 	</Object>
 </LWM2M>

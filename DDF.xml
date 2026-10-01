@@ -157,7 +157,8 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>3</ObjectID>
         <URN>urn:oma:lwm2m:oma:3:1.2</URN>
         <Name>Device</Name>
@@ -165,13 +166,26 @@ These LwM2M Object Resources MUST only be changed by a LwM2M Bootstrap-Server or
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.2</Ver>
-        <DDF>3.xml</DDF>
+        <DDF>version_history/3-1_2.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>3</ObjectID>
+        <URN>urn:oma:lwm2m:oma:3:1.3</URN>
+        <Name>Device</Name>
+        <Description>This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.3</Ver>
+        <DDF>3.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>4</ObjectID>
         <URN>urn:oma:lwm2m:oma:4</URN>
@@ -341,11 +355,25 @@ A LwM2M Server MUST support block-wise transfer. Other protocols, such as HTTP/H
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF>9.xml</DDF>
+        <DDF>version_history/9-1_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>https://www.openmobilealliance.org/release/LWM2M_SWMGMT/V1_0_3-20240312-A/OMA-TS-LWM2M_SwMgmt-V1_0_3-20240312-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item>
+        <Item>
+        <ObjectID>9</ObjectID>
+        <URN>urn:oma:lwm2m:oma:9:1.1</URN>
+        <Name>LWM2M Software Management</Name>
+        <Description>This LwM2M objects provides the resources needed to perform software management on the device. Each software component is managed via a dedicated Software Management Object instance.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.1</Ver>
+        <DDF>9.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>10</ObjectID>
@@ -616,11 +644,26 @@ The Resources of that Object are based on the OMA LwM2M set of reusable Resource
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>3.0</Ver>
-        <DDF>20.xml</DDF>
+        <DDF>version_history/20-3_0.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS>https://www.openmobilealliance.org/release/LwM2M_EventLog/V3_0-20250714-A/OMA-TS-LWM2M_EventLog-V3_0-20250714-A.pdf</TS>
         <TSLink>1</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>20</ObjectID>
+        <URN>urn:oma:lwm2m:oma:20:3.1</URN>
+        <Name>Event Log</Name>
+        <Description>The Event Log Object is a multiple Instances Object defined for logging data in a straightforward and generic way.
+The Resources of that Object are based on the OMA LwM2M set of reusable Resources dedicated to logging event activity.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>3.1</Ver>
+        <DDF>20.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
     </Item>
     <Item>
         <ObjectID>21</ObjectID>
@@ -977,6 +1020,35 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>514</ObjectID>
+        <URN>urn:oma:lwm2m:oma:514</URN>
+        <Name>EDHOC</Name>
+        <Description>This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528. These LwM2M Object Resources MUST only be
+changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>514.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>515</ObjectID>
+        <URN>urn:oma:lwm2m:oma:515</URN>
+        <Name>TBD</Name>
+        <Description>Reservation</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>600</ObjectID>
         <URN>urn:oma:lwm2m:oma:600</URN>
         <Name>Cabinet Controller Status</Name>
@@ -1021,14 +1093,14 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
     <Item>
         <ObjectID>607</ObjectID>
         <URN>urn:oma:lwm2m:oma:607</URN>
-        <Name>TBD</Name>
-        <Description>Reservation</Description>
+        <Name>Radar Sensor</Name>
+        <Description>Embedded radar sensor object providing presence, approach, and departure detection, with configurable sensitivity and response timing.</Description>
         <Owner>OMA</Owner>
         <Source>0</Source>
         <Ver>1.0</Ver>
-        <DDF></DDF>
+        <DDF>607.xml</DDF>
         <Vorto></Vorto>
-        <DDFLink>0</DDFLink>
+        <DDFLink>1</DDFLink>
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
@@ -4089,6 +4161,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <Owner>uCIFI</Owner>
         <Source>1</Source>
         <Ver>1.2</Ver>
+        <DDF>version_history/3431-1_2.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3431</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3431:1.3</URN>
+        <Name>Parking Sensor</Name>
+        <Description>The uCIFI parking sensor provides actual and cumulated occupancy duration as well as forbidden parking detection.</Description>
+        <Owner>uCIFI</Owner>
+        <Source>1</Source>
+        <Ver>1.3</Ver>
         <DDF>3431.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
@@ -5512,6 +5598,20 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <TS></TS>
         <TSLink>0</TSLink>
     </Item>
+     <Item>
+        <ObjectID>10287</ObjectID>
+        <URN>urn:oma:lwm2m:x:10287</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10287</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>10288</ObjectID>
         <URN>urn:oma:lwm2m:x:10288</URN>
@@ -5568,7 +5668,34 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
          <TS></TS>
          <TSLink>0</TSLink>
     </Item>
-
+    <Item>
+        <ObjectID>10293</ObjectID>
+        <URN>urn:oma:lwm2m:x:10293</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10293</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+	<Item>
+        <ObjectID>10294</ObjectID>
+        <URN>urn:oma:lwm2m:x:10294</URN>
+        <Name>TBD</Name>
+        <Description>Reservation 10294</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>10299</ObjectID>
         <URN>urn:oma:lwm2m:x:10299</URN>
@@ -7412,6 +7539,34 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <TSLink>0</TSLink>
     </Item>
     <Item>
+        <ObjectID>10666</ObjectID>
+        <URN>urn:oma:lwm2m:x:10666</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10666 to 10715</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+<Item>
+        <ObjectID>10715</ObjectID>
+        <URN>urn:oma:lwm2m:x:10715</URN>
+        <Name>TBD</Name>
+        <Description>Reservation from 10666 to 10715</Description>
+        <Owner>TBD</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF></DDF>
+        <Vorto></Vorto>
+        <DDFLink>0</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
         <ObjectID>18830</ObjectID>
         <URN>urn:oma:lwm2m:x:18830</URN>
         <Name>MQTT Broker</Name>
@@ -7434,6 +7589,20 @@ The Object also allows steering the device towards a particular PLMN, or, to a p
         <Source>2</Source>
         <Ver>1.0</Ver>
         <DDF>18831.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>32666</ObjectID>
+        <URN>urn:oma:lwm2m:x:32666</URN>
+        <Name>Rick Roll</Name>
+        <Description>This object provides a standard interface for delivering an unexpected musical experience to unsuspecting IoT device operators. When triggered, the device will never give you up, never let you down, never run around and desert you. Compliant devices MUST implement the Trigger Rick Roll resource and SHOULD display appropriate lyrics.</Description>
+        <Owner>Individual</Owner>
+        <Source>2</Source>
+        <Ver>1.0</Ver>
+        <DDF>32666.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>
         <TS></TS>
