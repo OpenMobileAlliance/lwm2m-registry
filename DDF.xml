@@ -4853,6 +4853,23 @@ changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be 
         <Owner>GEISA</Owner>
         <Source>1</Source>
         <Ver>1.1</Ver>
+        <DDF>version_history/3600-1_1.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
+    <Item>
+        <ObjectID>3600</ObjectID>
+        <URN>urn:oma:lwm2m:ext:3600:1.2</URN>
+        <Name>AppMessaging</Name>
+        <Description>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
+    Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
+    This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
+    Resource 4050 AppID is a system-unique identifier for the logical application within the applicable management domain. AppID identifies the application independently of software version or endpoint-specific Software Management instance.</Description>
+        <Owner>GEISA</Owner>
+        <Source>1</Source>
+        <Ver>1.2</Ver>
         <DDF>3600.xml</DDF>
         <Vorto></Vorto>
         <DDFLink>1</DDFLink>

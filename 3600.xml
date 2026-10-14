@@ -69,9 +69,9 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
     This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
     Resource 4050 AppID is a system-unique identifier for the logical application within the applicable management domain. AppID identifies the application independently of software version or endpoint-specific Software Management instance.</Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600:1.2</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.1</ObjectVersion>
+    <ObjectVersion>1.2</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
@@ -196,6 +196,26 @@ Requested or default app-message time-to-live for this app-scoped messaging inst
         <Description><![CDATA[
 Media type for the app-message payload encoding, such as application/json, application/cbor, application/octet-stream, application/protobuf, or a GEISA or vendor-specific media type. This allows routing and interpretation without assuming all message payloads are opaque. This resource does not expose payload history. application/octet-stream may be used for opaque payloads.
 ]]></Description>
+      </Item>
+      <Item ID="6">
+        <Name>Request ID</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[Sender-assigned identifier for the application message. The Platform and EMS preserve it across application-message transport. It applies to both Client to Server and Server to Client messages.]]></Description>
+      </Item>
+      <Item ID="7">
+        <Name>Message Timestamp</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[UTC epoch time in microseconds when the sender created the application message. This is the origin timestamp, not Platform receipt time or EMS receipt time. It applies to both Client to Server and Server to Client messages.]]></Description>
       </Item>
     </Resources>
     <Description2><![CDATA[]]></Description2>
