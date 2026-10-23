@@ -64,14 +64,11 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
 <LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
   <Object ObjectType="MODefinition">
     <Name>AppMessaging</Name>
-    <Description1>This LwM2M Object provides an app-scoped messaging exchange and defaults surface for a specific application or application instance. Distinct resources are defined for Client to Server messaging and Server to Client messaging.
-    Each Object Instance represents the messaging surface for one managed application instance. This Object is intended for application-facing message configuration and transport metadata, not for durable event history, accounting, runtime health, or platform configuration.
-    This Object is not a durable message, event, or log history store. Object 20 provides durable event, message, and log history. Object 3602 provides accounting and quota state, Object 3604 provides application runtime monitoring, and Object 3606 provides platform configuration.
-    Resource 4050 AppID is a system-unique identifier for the logical application within the applicable management domain. AppID identifies the application independently of software version or endpoint-specific Software Management instance.</Description1>
+    <Description1>Provides application messaging and configuration between an LwM2M Server and applications on an LwM2M Client. Separate Resources carry Server to Client and Client to Server messages. Each Object Instance identifies an application through Resource 4050 (AppID). Resource 4051 links to the corresponding Software Management /9 instance.</Description1>
     <ObjectID>3600</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3600:1.2</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3600:2.0</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.2</ObjectVersion>
+    <ObjectVersion>2.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
@@ -104,7 +101,7 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Server to Client message. Write-only server-to-client message payload. Implementations that support /3600 SHALL support this resource as the inbound app-message write surface, subject to authorization and routing policy.
+Write-only payload for a Server to Client message. Implementations that support /3600 SHALL support this resource as the inbound application-message write surface, subject to authorization and routing policy.
 ]]></Description>
       </Item>
       <Item ID="1">
@@ -116,7 +113,7 @@ Server to Client message. Write-only server-to-client message payload. Implement
         <RangeEnumeration/>
         <Units/>
         <Description><![CDATA[
-Client to Server message. Readable client-to-server message payload or current app-message slot. The resource may be unavailable when no current client message is pending; durable history belongs in /20.
+Readable payload for a Client to Server message or the current app-message slot. The resource may be unavailable when no message is pending; durable history is provided by Object /20.
 ]]></Description>
       </Item>
       <Item ID="2">
@@ -130,14 +127,15 @@ Client to Server message. Readable client-to-server message payload or current a
         <Description><![CDATA[
 Indicates the app-message priority for this app-scoped messaging instance.
 
-Lower numeric values represent higher delivery priority. Edge platforms SHOULD use
-this value when ordering, scheduling, throttling, or selecting messages for
+For values 1 through 4, lower numeric values represent higher delivery priority.
+Value 0 (Unspecified) MUST NOT be interpreted as a higher priority than Urgent.
+Edge platforms SHOULD use this value when ordering, scheduling, throttling, or selecting messages for
 delivery. Platforms MAY also map these priority values to local transport,
 queueing, or QoS policy mechanisms, including implementation-specific QoS
 codepoints or classes where available.
 
-Platforms SHOULD prefer lower numeric priority values before higher numeric
-priority values when competing messages are otherwise eligible for delivery.
+Platforms SHOULD use this priority order when competing
+messages are otherwise eligible for delivery.
 
 0: Unspecified
 1: Urgent - highest priority; send immediately when possible

@@ -64,14 +64,12 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
   <Object ObjectType="MODefinition">
     <Name>HostMonitoring</Name>
     <Description1><![CDATA[
-This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability. It also reports the aggregate monitoring state of the host environment, the reason for that state, optional diagnostic detail, and the time of the last state transition.
-
-Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.
+Reports host CPU, memory, storage, process, scheduler, and network-interface metrics. It also reports aggregate host monitoring state, its reason, optional diagnostic detail, and the last state-transition time. Resource IDs are grouped by function, with gaps reserved for future resources.
 ]]></Description1>
     <ObjectID>3601</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3601:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3601:2.0</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.1</ObjectVersion>
+    <ObjectVersion>2.0</ObjectVersion>
     <MultipleInstances>Single</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>

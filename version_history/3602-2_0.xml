@@ -65,22 +65,17 @@ https://www.omaspecworks.org/about/intellectual-property-rights/
   <Object ObjectType="MODefinition">
     <Name>AppAccounting</Name>
     <Description1><![CDATA[
-This LwM2M Object provides operations-facing application accounting and policy summary state for an application or application accounting scope. It exposes current-period usage counters, quotas and limits, throttle, block, or disabled state, selected enforcement evidence, operator or EMS/ADM action resources, and application or accounting-scope operational monitoring.
-
-Multiple AppAccounting object instances may exist for the same AppID, Accounting Class, and Accounting Scope to expose different accounting windows such as configured collection period, daily, since-reboot, rolling-window, lifetime, or operator-defined accounting.
-
-Resource identifiers are intentionally grouped with gaps/reserved between logical sections to allow future GEISA-defined resources to be added near related identity, scope, accounting-window, counter, state, action, and evidence resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
-
-Usage counters remain relevant even when the effective policy is unlimited; unlimited policy means no active quota exhaustion is expected, not that observed usage is irrelevant.
-
-Detailed behavioral application issues, platform-detected anomalies, configuration-state problems, platform health signals, and policy evaluation details are surfaced through platform messaging, platform monitoring or configuration resources, and durable event, log, or message history where supported.
-
-This object may expose selected summary state derived from those sources for ease of operations monitoring, but it is not the definitive source for all application behavioral detail.
+Reports application usage, quotas, limits, throttling and blocking
+state, enforcement evidence, administrative actions, and related
+monitoring information. Multiple Object Instances may represent
+different accounting windows for the same AppID, Accounting Class,
+and Accounting Scope. Usage counters remain relevant even when the
+policy is unlimited.
 ]]></Description1>
     <ObjectID>3602</ObjectID>
-    <ObjectURN>urn:oma:lwm2m:ext:3602:1.1</ObjectURN>
+    <ObjectURN>urn:oma:lwm2m:ext:3602:2.0</ObjectURN>
     <LWM2MVersion>1.1</LWM2MVersion>
-    <ObjectVersion>1.1</ObjectVersion>
+    <ObjectVersion>2.0</ObjectVersion>
     <MultipleInstances>Multiple</MultipleInstances>
     <Mandatory>Optional</Mandatory>
     <Resources>
