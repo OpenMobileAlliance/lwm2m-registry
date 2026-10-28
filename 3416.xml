@@ -217,7 +217,7 @@ The following bit mask can be used to differentiate the reason of the failure:
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Number of times the lamp was switched from ON to OFF since the last lamp switch counter reset.]]></Description>
+				<Description><![CDATA[Number of times the lamp was switched from OFF to ON since the last lamp switch counter reset.]]></Description>
 			</Item>
 			<Item ID="19">
 				<Name>Lamp switch counter reset</Name>
