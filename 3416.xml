@@ -36,9 +36,9 @@
 		<Name>Outdoor lamp controller</Name>
 		<Description1>The uCIFI outdoor lamp controller object provides attributes to control, command and monitor outdoor luminaires in streets, in tunnels, on roads and for illumination of park and gardens.</Description1>
 		<ObjectID>3416</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3416:3.0</ObjectURN>
+		<ObjectURN>urn:oma:lwm2m:ext:3416:3.1</ObjectURN>
 		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>3.0</ObjectVersion>
+		<ObjectVersion>3.1</ObjectVersion>
 		<MultipleInstances>Multiple</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -62,7 +62,7 @@ A command equal to 67 means ON at 67% dimming level.]]></Description>
 				<RangeEnumeration>0..100</RangeEnumeration>
 				<Units>/100</Units>
 				<Description><![CDATA[For outdoor lighting applications, the command in action (this resource) may differ from a command that was sent (resource ID: 1), due to LPWAN network constraints and/or light adjustments within the lamp’s control gear (e.g. virtual power settings).
-The command in action is the actual value of the command in action in the outdoor lamp controller which could have been set by a manual overide command, a scheduled action (e.g. control program) or any other mechanism.]]></Description>
+The command in action is the actual value of the command in action in the outdoor lamp controller which could have been set by a manual override command, a scheduled action (e.g. control program) or any other mechanism.]]></Description>
 			</Item>
 			<Item ID="3">
 				<Name>Dimming level</Name>
@@ -217,7 +217,7 @@ The following bit mask can be used to differentiate the reason of the failure:
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Number of times the lamp was switched from ON to OFF since the last lamp switch counter reset.]]></Description>
+				<Description><![CDATA[Number of times the lamp was switched from OFF to ON since the last lamp switch counter reset.]]></Description>
 			</Item>
 			<Item ID="19">
 				<Name>Lamp switch counter reset</Name>
@@ -561,7 +561,7 @@ Default = 0]]></Description>
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored.
+				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currently active, the default values of dimming, color temperature and fade time would be restored.
 Default = 0]]></Description>
 			</Item>
 			<Item ID="51">
@@ -572,7 +572,7 @@ Default = 0]]></Description>
 				<Type>Time</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currenlty active, the default values of dimming, color temperature and fade time would be restored. Setting this resource to 0 would in fact clear any pending override command. If this resource is not explicitly written, the device shall adjust this resource according to the default duration (when the command will expire).
+				<Description><![CDATA[If the current timestamp is greater than the configured start time and below the configured end time, the manual command specified in resource 1 is applied, overriding any schedule. Otherwise, if no schedule is currently active, the default values of dimming, color temperature and fade time would be restored. Setting this resource to 0 would in fact clear any pending override command. If this resource is not explicitly written, the device shall adjust this resource according to the default duration (when the command will expire).
 Default = 0]]></Description>
 			</Item>
 			<Item ID="52">
@@ -626,7 +626,7 @@ Default = vendor specific (e.g. 7200)]]></Description>
 				<Type>Float</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units>h</Units>
-				<Description><![CDATA[Cumulated number of hours during which the driver controlling the LED pannel has been powered.
+				<Description><![CDATA[Cumulated number of hours during which the driver controlling the LED panel has been powered.
 This resource MUST be used as a direct mapping for the Control Gear Operating Time extracted from the Memory bank 205 of any D4i driver being connected to the DALI bus, and supporting DALI part 253]]></Description>
 			</Item>
 			<Item ID="57">
@@ -719,6 +719,96 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Units></Units>
 				<Description><![CDATA[True if the maximum number of hours that a lamp could be on has been exceeded (end of life)]]></Description>
 			</Item>
+			<Item ID="66">
+				<Name>Control Gear overall failure condition counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[Overall counter of failure conditions detected on the Control Gear]]></Description>
+			</Item>
+			<Item ID="67">
+				<Name>Control Gear external supply under voltage</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[True if an under voltage condition is being currently detected on the external supply]]></Description>
+			</Item>
+			<Item ID="68">
+				<Name>Control Gear external supply under voltage counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[Counter of how many times an under voltage condition has been detected]]></Description>
+			</Item>
+			<Item ID="69">
+				<Name>Control Gear external supply over voltage</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[True if an over voltage condition is being currently detected on the external supply]]></Description>
+			</Item>
+			<Item ID="70">
+				<Name>Control Gear external supply over voltage counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[Counter of how many times an over voltage condition has been detected]]></Description>
+			</Item>
+			<Item ID="71">
+				<Name>Control Gear output power limitation</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>				
+				<Units></Units>
+				<Description><![CDATA[True if the output power is currently being limited]]></Description>
+			</Item>
+			<Item ID="72">
+				<Name>Control Gear output power limitation counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Counter of how many times the output power has been limited]]></Description>
+			</Item>
+			<Item ID="73">
+				<Name>Light Source overall failure condition counter</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Overall counter of failure conditions detected on the Light Source]]></Description>
+			</Item>
+			<Item ID="74">
+				<Name>Dimming Curve Linearity</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units></Units>
+				<Description><![CDATA[Reports if the dimming curve is linear.]]></Description>
+			</Item>			
 			<Item ID="5518">
 				<Name>Timestamp</Name>
 				<Operations>R</Operations>
