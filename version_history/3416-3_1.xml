@@ -217,7 +217,8 @@ The following bit mask can be used to differentiate the reason of the failure:
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Number of times the lamp was switched from OFF to ON since the last lamp switch counter reset.]]></Description>
+				<Description><![CDATA[Number of times the lamp was switched from OFF to ON since the last lamp switch counter reset
+(to be noted that it used to be "from ON to OFF" up to version 3.0)]]></Description>
 			</Item>
 			<Item ID="19">
 				<Name>Lamp switch counter reset</Name>
@@ -727,7 +728,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[Overall counter of failure conditions detected on the Control Gear]]></Description>
+				<Description><![CDATA[Overall counter of failure conditions detected on the Control Gear (cannot be reset)]]></Description>
 			</Item>
 			<Item ID="67">
 				<Name>Control Gear external supply under voltage</Name>
@@ -737,7 +738,8 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[True if an under voltage condition is being currently detected on the external supply]]></Description>
+				<Description><![CDATA[True if an under voltage condition is being currently detected on the external supply.
+In this case, bit 3 of resource 8 (Control gear failure reason) must be set.]]></Description>
 			</Item>
 			<Item ID="68">
 				<Name>Control Gear external supply under voltage counter</Name>
@@ -747,7 +749,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[Counter of how many times an under voltage condition has been detected]]></Description>
+				<Description><![CDATA[Counter of how many times an under voltage condition has been detected (cannot be reset)]]></Description>
 			</Item>
 			<Item ID="69">
 				<Name>Control Gear external supply over voltage</Name>
@@ -757,7 +759,8 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[True if an over voltage condition is being currently detected on the external supply]]></Description>
+				<Description><![CDATA[True if an over voltage condition is being currently detected on the external supply.
+In this case, bit 4 of resource 8 (Control gear failure reason) must be set.]]></Description>
 			</Item>
 			<Item ID="70">
 				<Name>Control Gear external supply over voltage counter</Name>
@@ -767,7 +770,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[Counter of how many times an over voltage condition has been detected]]></Description>
+				<Description><![CDATA[Counter of how many times an over voltage condition has been detected (cannot be reset)]]></Description>
 			</Item>
 			<Item ID="71">
 				<Name>Control Gear output power limitation</Name>
@@ -777,7 +780,8 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>				
 				<Units></Units>
-				<Description><![CDATA[True if the output power is currently being limited]]></Description>
+				<Description><![CDATA[True if the output power is currently being limited.
+In this case, bit 5 of resource 8 (Control gear failure reason) must be set.]]></Description>
 			</Item>
 			<Item ID="72">
 				<Name>Control Gear output power limitation counter</Name>
@@ -787,7 +791,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Counter of how many times the output power has been limited]]></Description>
+				<Description><![CDATA[Counter of how many times the output power has been limited (cannot be reset)]]></Description>
 			</Item>
 			<Item ID="73">
 				<Name>Light Source overall failure condition counter</Name>
@@ -797,7 +801,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Integer</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Overall counter of failure conditions detected on the Light Source]]></Description>
+				<Description><![CDATA[Overall counter of failure conditions detected on the Light Source (cannot be reset)]]></Description>
 			</Item>
 			<Item ID="74">
 				<Name>Dimming Curve Linearity</Name>
@@ -807,7 +811,7 @@ bit 7: Sensor Ready Power Type: Apparent Energy]]></Description>
 				<Type>Boolean</Type>
 				<RangeEnumeration></RangeEnumeration>
 				<Units></Units>
-				<Description><![CDATA[Reports if the dimming curve is linear.]]></Description>
+				<Description><![CDATA[Dimming curve linearity (true = linear, false = logarithmic).]]></Description>
 			</Item>			
 			<Item ID="5518">
 				<Name>Timestamp</Name>
