@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BSD-3 Clause License
+
+  Copyright 2023-2024 uCIFI Alliance
+  Copyright 2025-2026 Open Mobile Alliance
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+  COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M.xsd">
+	<Object ObjectType="MODefinition">
+		<Name>Sensor Group Device Capabilities</Name>
+		<Description1>This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.</Description1>
+		<ObjectID>3461</ObjectID>
+		<ObjectURN>urn:oma:lwm2m:ext:3461:2.0</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>2.0</ObjectVersion>
+		<MultipleInstances>Single</MultipleInstances>
+		<Mandatory>Optional</Mandatory>
+		<Resources>
+			<Item ID="1">
+				<Name>Remote Sensor Management capabilities</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[Specifies the capabilities supported by the device to manage and store remote sensors information retrieved from the sensor group as a Bit Mask:
+Bit 0: Dynamic mapping support - Remote sensors can be discovered as new messages are received. If explicit mapping is required, new corresponding object instances will be automatically created
+Bit 1: Implicit mapping support - Sensor state is maintained on an implementation specific internal database instead of being reflected into local objects
+Bit 2: Auto clear support - Automatic clear to the default value is supported after validity time is expired
+Bit 3: Transaction support
+Bit 4: Transaction support - Automatic fallback
+]]></Description>
+			</Item>
+			<Item ID="2">
+				<Name>Max number of explicit sensors</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[The maximum number of sensors and sensor states the device can instantiate.
+This value is calculated by the count of all different sensor objects associated with a sensor groups.
+This value shall be set to 0 if explicit mapping is not supported
+On uCiFi compliant devices support for static explicit mapping is mandatory.]]></Description>
+			</Item>
+			<Item ID="3">
+				<Name>Max number of implicit sensors</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[The maximum number of sensors and sensor states the device can keep in memory.
+This value is calculated by the count of all different sensor objects associated with a sensor groups.
+This value shall be set to 0 if implicit mapping is not supported.]]></Description>
+			</Item>
+			<Item ID="4">
+				<Name>Data Fusion Capabilities</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[Specifies the data fusion algorithms supported by the device represented as a bitmask:
+Bit 0: OR
+Bit 1: AND
+Bit 2: ADD
+Bit 3: MAX
+Bit 4: MIN
+Bit 5: LAST - The last value reported by any sensor in the group becomes the group state value
+Bit 6: Reserved (Custom 1)
+Bit 7: Reserved (Custom 2)
+If the device supports no fusion capabilities, this resource should be set to 0.]]></Description>
+			</Item>
+			<Item ID="5">
+				<Name>Reset DSG objects</Name>
+				<Operations>E</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type/>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[When executed, trigger a complete wipe of the distributed sensor groups already commissioned]]></Description>
+			</Item>
+			<Item ID="6">
+				<Name>Supported implementations</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[Specifies the underlying implementations supported by the device to transfer the distributed messages using a Bit Mask:
+Bit 0: implementation supported: IPv6 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 1: implementation supported: IPv6 - Unicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 2: implementation supported: IPv6 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 3: implementation supported: IPv4 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 4: implementation supported: IPv4 - Unicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 5: implementation supported: IPv4 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+]]></Description>
+			</Item>
+			<Item ID="7">
+				<Name>Implementation</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[Set which implementation to use among the supported ones.
+The value should correspond to the bit in resource Supported implementations
+e.g.
+0 = IPv6 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+5 = IPv4 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Setting a value that is not supported shall be rejected
+]]></Description>
+			</Item>
+			<Item ID="100">
+				<Name>Transaction start</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[If this resource is implemented, before altering any Distributed Sensor Group instance
+using a create, delete, or write operation, a transaction shall be initiated by writing a random value in this resource.
+If the transaction end is not written with the same value before the timeout expires, the transaction shall be aborted.]]></Description>
+			</Item>
+			<Item ID="101">
+				<Name>Transaction end</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[If this resource is implemented, it shall be written with the same value that has been previously written
+to the transaction start resource in order to close the current transaction]]></Description>
+			</Item>
+			<Item ID="102">
+				<Name>Transaction timeout</Name>
+				<Operations>RW</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Integer</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units>s</Units>
+				<Description><![CDATA[The timeout in seconds after which a transaction that has not been closed shall be aborted. Default = 600 s
+If a timeout happens the device will set an alarm status and may eventually revert, if supported, to the previous state]]></Description>
+			</Item>
+			<Item ID="103">
+				<Name>Transaction error</Name>
+				<Operations>R</Operations>
+				<MultipleInstances>Single</MultipleInstances>
+				<Mandatory>Optional</Mandatory>
+				<Type>Boolean</Type>
+				<RangeEnumeration></RangeEnumeration>
+				<Units/>
+				<Description><![CDATA[This resource is set to true when a transaction is aborted and is automatically cleared when a new transaction is started]]></Description>
+			</Item>
+		</Resources>
+		<Description2/>
+	</Object>
+</LWM2M>

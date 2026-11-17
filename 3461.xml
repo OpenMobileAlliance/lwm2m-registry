@@ -36,9 +36,9 @@
 		<Name>Sensor Group Device Capabilities</Name>
 		<Description1>This object is used to notify the user about the capabilities supported by the device in respect to Distributed Sensot Group functionality.</Description1>
 		<ObjectID>3461</ObjectID>
-		<ObjectURN>urn:oma:lwm2m:ext:3461:1.2</ObjectURN>
-		<LWM2MVersion>1.0</LWM2MVersion>
-		<ObjectVersion>1.2</ObjectVersion>
+		<ObjectURN>urn:oma:lwm2m:ext:3461:2.0</ObjectURN>
+		<LWM2MVersion>1.1</LWM2MVersion>
+		<ObjectVersion>2.0</ObjectVersion>
 		<MultipleInstances>Single</MultipleInstances>
 		<Mandatory>Optional</Mandatory>
 		<Resources>
@@ -121,12 +121,12 @@ If the device supports no fusion capabilities, this resource should be set to 0.
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description><![CDATA[Specifies the underlying implementations supported by the device to transfer the distributed messages using a Bit Mask:
-Bit 0: implementation supported: IPv6 - Multicast only - NoSec
-Bit 1: implementation supported: IPv6 - Unicast only - NoSec
-Bit 2: implementation supported: IPv6 - Multicast + Unicast - NoSec
-Bit 3: implementation supported: IPv4 - Multicast only - NoSec
-Bit 4: implementation supported: IPv4 - Unicast only - NoSec
-Bit 5: implementation supported: IPv4 - Multicast + Unicast - NoSec
+Bit 0: implementation supported: IPv6 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 1: implementation supported: IPv6 - Unicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 2: implementation supported: IPv6 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 3: implementation supported: IPv4 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 4: implementation supported: IPv4 - Unicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+Bit 5: implementation supported: IPv4 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
 ]]></Description>
 			</Item>
 			<Item ID="7">
@@ -140,8 +140,8 @@ Bit 5: implementation supported: IPv4 - Multicast + Unicast - NoSec
 				<Description><![CDATA[Set which implementation to use among the supported ones.
 The value should correspond to the bit in resource Supported implementations
 e.g.
-0 = IPv6 - Multicast only - NoSec
-5 = IPv4 - Multicast + Unicast - NoSec
+0 = IPv6 - Multicast only - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
+5 = IPv4 - Multicast + Unicast - CoAP NON POST to /ucifi/dsg, UDP port 5683 (NoSec), SenML-CBOR (Content-Format 112)
 Setting a value that is not supported shall be rejected
 ]]></Description>
 			</Item>
@@ -166,7 +166,7 @@ If the transaction end is not written with the same value before the timeout exp
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description><![CDATA[If this resource is implemented, it shall be written with the same value that has been previously written
-to the transaction start resorce in order to close the current transaction]]></Description>
+to the transaction start resource in order to close the current transaction]]></Description>
 			</Item>
 			<Item ID="102">
 				<Name>Transaction timeout</Name>
