@@ -166,7 +166,7 @@ If the transaction end is not written with the same value before the timeout exp
 				<RangeEnumeration></RangeEnumeration>
 				<Units/>
 				<Description><![CDATA[If this resource is implemented, it shall be written with the same value that has been previously written
-to the transaction start resorce in order to close the current transaction]]></Description>
+to the transaction start resource in order to close the current transaction]]></Description>
 			</Item>
 			<Item ID="102">
 				<Name>Transaction timeout</Name>
