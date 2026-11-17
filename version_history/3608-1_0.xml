@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: TBD
+   Path:
+
+OMNA LwM2M Registry
+   File: 3608.xml
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+  TBD
+
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
+CHANGE HISTORY
+
+See TBD
+
+LEGAL DISCLAIMER
+
+Copyright 2026, Contributors to the Grid Edge Interoperability &
+Security Alliance (GEISA), a Series of LF Projects, LLC
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+The above license is used as a license under copyright only. Please
+reference the OMA IPR Policy for patent licensing terms:
+https://www.omaspecworks.org/about/intellectual-property-rights/
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>PlatformComponentMonitoring</Name>
+    <Description1><![CDATA[
+This LwM2M Object provides logical component monitoring state for GEISA-capable platform functions, services, queues, APIs, and operational paths.
+
+Resource identifiers are intentionally grouped with gaps between logical sections to allow future GEISA-defined resources to be added near related component identity, component role, component monitoring state, reason detail, monitoring-window, queue, API, and execute-action resources without renumbering existing resources. Undefined resource identifiers in those gaps are not implemented resources.
+
+Each Object Instance represents one logical component, service, function, or operational path used by the implementation to realize the platform requirements covered by this Object. Values may be produced from bounded read-time checks, recently cached local checks, platform status snapshots, or retained component telemetry. The model does not prescribe process, daemon, package, executable, container, service, or hardware boundaries. An implementation may expose separate logical component instances even when those logical components share an underlying software element.
+
+When this Object is implemented, its Object Instances collectively represent the complete logical component set used by that implementation to realize the relevant platform requirements covered by this Object. This Object does not require every operating-system service, library, or helper process to be represented. Platform implementers may map their own components using the vendor-specific or operator-specific reservation ranges for Component Type and Component Role when an exact match is not already provided.
+
+This Object does not require continuous telemetry collection. Optional resources may be unavailable when the platform does not implement, expose, or retain the corresponding function, counter, timestamp, or component state.
+]]></Description1>
+    <ObjectID>3608</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3608</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.0</ObjectVersion>
+    <MultipleInstances>Multiple</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Component Type</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Type of logical component represented by this Object Instance. A vendor-specific or operator-specific type may be used when no defined type accurately matches the component.
+
+0 = Unknown
+1 = Platform Component
+2..127 = Reserved for future component types
+128..255 = Reserved for vendor-specific or operator-specific component types
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>Component Name</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Human-readable component name assigned by the platform. This value is intended for display, diagnostics, and log correlation.
+]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>Component Instance ID</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Platform-local identifier for the component instance represented by this Object Instance. This value is intended for correlation with logs, events, and platform diagnostics.
+]]></Description>
+      </Item>
+      <Item ID="3">
+        <Name>Component Version</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Version of the platform component, when available from runtime metadata, service metadata, manifest or package metadata, or platform-generated records.
+]]></Description>
+      </Item>
+      <Item ID="4">
+        <Name>Component Monitoring State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current monitoring state for this platform component:
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5 = Not reporting
+6 = Starting
+7 = Stopping
+8 = Stopped
+9 = Blocked by policy
+10..127 = Reserved for future GEISA-defined component monitoring states
+128..255 = Reserved for vendor-specific or operator-specific component monitoring states
+]]></Description>
+      </Item>
+      <Item ID="5">
+        <Name>Monitoring Reason Code</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Primary cause or contributing condition associated with the current Component Monitoring State:
+0 = Unspecified
+1 = None
+2 = Other
+3 = Component degraded
+4 = Component failed
+5 = Administratively disabled
+6 = Blocked by policy
+7 = Not reporting
+8 = Dependency unavailable
+9 = Temporarily unavailable
+10 = Startup in progress
+11 = Shutdown in progress
+12 = Restart limit exceeded
+13 = Monitoring data stale
+14 = Upstream communication unavailable
+15 = Registration failed
+16 = Registration expired
+17 = Queue backlog
+18 = Queue capacity exhausted
+19 = Resource pressure
+20 = Insufficient memory
+21 = Insufficient storage
+22 = Rate limited
+23 = Authorization denied
+24 = Security restriction
+25 = Internal error
+26 = Timeout
+27..127 = Reserved for future GEISA-defined monitoring reason codes
+128..255 = Reserved for vendor-specific or operator-specific monitoring reason codes
+
+None applies when no abnormal reason applies. Unspecified means no standardized reason was supplied. Other requires Reason Detail. Implementations SHOULD select the most specific applicable cause. Implementations SHOULD NOT use a reason code that merely repeats the current Monitoring State when a more specific cause is known.
+]]></Description>
+      </Item>
+      <Item ID="6">
+        <Name>Last Monitoring State Transition Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the Component Monitoring State most recently changed. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="7">
+        <Name>Component Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the current or most recent execution of the component started, when available from the platform. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="8">
+        <Name>Component Role</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Role performed by the logical component represented by this Object Instance. A vendor-specific or operator-specific role may be used when no defined role accurately describes the component's function.
+
+0 = Unknown
+1 = EMA Core
+2 = LwM2M Client
+3 = API Broker
+4 = API Service
+5 = App Message Bridge
+6 = Local Monitoring Function
+7 = Event Log Service
+8 = Upstream Queue or Spool
+9 = Security or Credential Service
+10 = Application Manager
+11..127 = Reserved for future component roles
+128..255 = Reserved for vendor-specific or operator-specific component roles
+]]></Description>
+      </Item>
+      <Item ID="9">
+        <Name>Reason Detail</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short human-readable diagnostic detail associated with Monitoring Reason Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. This Resource SHALL be present when Monitoring Reason Code is Other and MAY be present for any other reason when useful. It is not a log field and does not replace a defined reason code.
+]]></Description>
+      </Item>
+      <Item ID="10">
+        <Name>Restart Count Current Period</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>count</Units>
+        <Description><![CDATA[
+Number of component restarts during the current monitoring period.
+]]></Description>
+      </Item>
+      <Item ID="11">
+        <Name>Monitoring Window</Name>
+        <Operations>RW</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>s</Units>
+        <Description><![CDATA[
+Monitoring window in seconds used for current-period counters and derived health evaluation for this component.
+]]></Description>
+      </Item>
+      <Item ID="12">
+        <Name>Monitoring Period Start Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Start time for the active monitoring period used by current-period counters and derived health state. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="13">
+        <Name>Last Update Timestamp</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the platform most recently refreshed, generated, or updated the monitoring snapshot represented by this object instance. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="63">
+        <Name>Last Durable Event Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which this component most recently wrote or caused a durable event or log record to be written. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies.
+]]></Description>
+      </Item>
+      <Item ID="70">
+        <Name>Request Status Refresh</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request that the platform refresh the current status of this platform component and update this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="71">
+        <Name>Reset Monitoring Counters</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Reset current-period monitoring counters for this Object Instance and start a new monitoring period. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="72">
+        <Name>Flush Upstream Queue</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request immediate delivery of queued or spooled upstream messages associated with this component. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+      <Item ID="73">
+        <Name>Restart Component</Name>
+        <Operations>E</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type/>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Request restart of the component represented by this Object Instance. Platforms may deny this operation or leave it unsupported according to operator policy, authorization, component type, connectivity state, device state, safety considerations, or implementation profile.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[
+
+]]></Description2>
+  </Object>
+</LWM2M>

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FILE INFORMATION
+
+OMA Permanent Document
+   File: TBD
+   Path:
+
+OMNA LwM2M Registry
+   File: 3601.xml
+   Path: https://github.com/OpenMobileAlliance/lwm2m-registry
+
+
+NORMATIVE INFORMATION
+
+  Information about this file can be found in the latest revision of
+
+  TBD
+  This is available at http://www.openmobilealliance.org/
+
+  Send comments to https://github.com/OpenMobileAlliance/OMA_LwM2M_for_Developers/issues
+
+CHANGE HISTORY
+
+See https://github.com/OpenMobileAlliance/app_messaging
+
+LEGAL DISCLAIMER
+
+Copyright 2026, Contributors to the Grid Edge Interoperability &
+Security Alliance (GEISA), a Series of LF Projects, LLC
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+The above license is used as a license under copyright only. Please
+reference the OMA IPR Policy for patent licensing terms:
+https://www.omaspecworks.org/about/intellectual-property-rights/
+
+-->
+<LWM2M xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.openmobilealliance.org/tech/profiles/LWM2M-v1_1.xsd">
+  <Object ObjectType="MODefinition">
+    <Name>HostMonitoring</Name>
+    <Description1><![CDATA[
+This object provides host-level monitoring information for the GEISA platform, including CPU, memory, storage, process, scheduler, and network interface observability. It also reports the aggregate monitoring state of the host environment, the reason for that state, optional diagnostic detail, and the time of the last state transition.
+
+Resource identifiers are grouped logically with intentional gaps to keep related host monitoring resources together and to allow for future compatible expansion within those groups.
+]]></Description1>
+    <ObjectID>3601</ObjectID>
+    <ObjectURN>urn:oma:lwm2m:ext:3601:1.1</ObjectURN>
+    <LWM2MVersion>1.1</LWM2MVersion>
+    <ObjectVersion>1.1</ObjectVersion>
+    <MultipleInstances>Single</MultipleInstances>
+    <Mandatory>Optional</Mandatory>
+    <Resources>
+      <Item ID="0">
+        <Name>Host Uptime</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>4 bytes</RangeEnumeration>
+        <Units>s</Units>
+        <Description><![CDATA[
+Duration since the last boot, in integer seconds.
+]]></Description>
+      </Item>
+      <Item ID="1">
+        <Name>CPU Architecture</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+CPU architecture reported by the host, such as arm64, x86_64, or another platform architecture label.
+]]></Description>
+      </Item>
+      <Item ID="2">
+        <Name>Processor Model</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Processor model or CPU model string reported by the host.
+]]></Description>
+      </Item>
+      <Item ID="10">
+        <Name>CPU Current Frequency</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>Hz</Units>
+        <Description><![CDATA[
+Current CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
+]]></Description>
+      </Item>
+      <Item ID="11">
+        <Name>CPU Minimum Frequency</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>Hz</Units>
+        <Description><![CDATA[
+Minimum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
+]]></Description>
+      </Item>
+      <Item ID="12">
+        <Name>CPU Maximum Frequency</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>Hz</Units>
+        <Description><![CDATA[
+Maximum CPU frequency reported by the host for the monitored CPU or aggregate CPU reporting scope.
+]]></Description>
+      </Item>
+      <Item ID="13">
+        <Name>CPU Count</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>1 bytes</RangeEnumeration>
+        <Units>count</Units>
+        <Description><![CDATA[
+Number of CPU cores or logical processors available to the host or device.
+]]></Description>
+      </Item>
+      <Item ID="14">
+        <Name>CPU Load</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+One-minute CPU load average multiplied by 100. This is a scheduler-pressure metric, not CPU utilization percent, and it should not be confused with CPU Usage.
+]]></Description>
+      </Item>
+      <Item ID="15">
+        <Name>CPU Usage</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>%</Units>
+        <Description><![CDATA[
+Short-interval CPU utilization sample in deci-percent. This is a sampled utilization value, not the same concept as CPU Load. Divide by 10 to obtain percent usage.
+]]></Description>
+      </Item>
+      <Item ID="20">
+        <Name>Memory Total</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Total physical memory in bytes.
+]]></Description>
+      </Item>
+      <Item ID="21">
+        <Name>Memory Available</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Available memory in bytes that can be used without swapping.
+]]></Description>
+      </Item>
+      <Item ID="22">
+        <Name>Processes Running</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>count</Units>
+        <Description><![CDATA[
+Number of currently observed running processes or process entries on the host. This is a host process-count indicator, not a CPU run-queue or runnable-task metric.
+]]></Description>
+      </Item>
+      <Item ID="23">
+        <Name>Threads Running</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>count</Units>
+        <Description><![CDATA[
+Number of currently observed running threads.
+]]></Description>
+      </Item>
+      <Item ID="24">
+        <Name>Context Switches</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of context switches per second.
+]]></Description>
+      </Item>
+      <Item ID="25">
+        <Name>Interrupts</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Number of interrupts per second.
+]]></Description>
+      </Item>
+      <Item ID="30">
+        <Name>Total Storage Capacity</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Total storage capacity visible to or managed by the host or monitoring scope, in bytes.
+]]></Description>
+      </Item>
+      <Item ID="31">
+        <Name>Total Storage Used</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Total amount of storage currently used on the host.
+]]></Description>
+      </Item>
+      <Item ID="32">
+        <Name>App Storage Capacity</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Total storage capacity allocated or available for hosted applications on this platform. This represents the total application storage allocation or partition capacity, not the portion currently used.
+]]></Description>
+      </Item>
+      <Item ID="33">
+        <Name>App Storage Used</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Amount of the application storage capacity currently used by hosted applications.
+]]></Description>
+      </Item>
+      <Item ID="34">
+        <Name>Storage Devices</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Storage device identifiers or labels for the host or device. Each Resource Instance identifies one included storage device.
+]]></Description>
+      </Item>
+      <Item ID="35">
+        <Name>Storage Partitions</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Storage partition identifiers, paths, mount points, or labels. The same Resource Instance index refers to the same storage partition as Storage Partition Available Space.
+]]></Description>
+      </Item>
+      <Item ID="36">
+        <Name>Storage Partition Available Space</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Available space for the corresponding storage partition or partitions, in bytes. The same Resource Instance index refers to the same partition identified by Storage Partitions.
+]]></Description>
+      </Item>
+      <Item ID="40">
+        <Name>Network Devices</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Network device or interface identifiers or labels for the host or device. Each Resource Instance identifies one included network interface or device.
+]]></Description>
+      </Item>
+      <Item ID="41">
+        <Name>Network Device Type</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Type of each included network interface or device, such as ethernet, wifi, virtual, loopback, or unknown.
+]]></Description>
+      </Item>
+      <Item ID="42">
+        <Name>Network Device Capacity</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>bit/s</Units>
+        <Description><![CDATA[
+Link or interface capacity for each included network interface or device, expressed in bits per second. The same Resource Instance index refers to the same network interface or device identified by the Network Devices resource.
+]]></Description>
+      </Item>
+      <Item ID="43">
+        <Name>Network Device Traffic Bytes</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Multiple</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration/>
+        <Units>B</Units>
+        <Description><![CDATA[
+Cumulative received plus transmitted byte counter, in bytes, for the included network interface. The same Resource Instance index refers to the same network interface or device identified by the Network Devices resource. This is observed traffic volume, not link utilization percentage or rate.
+]]></Description>
+      </Item>
+      <Item ID="60">
+        <Name>Host Monitoring State</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Current aggregate monitoring state for the host environment represented by this Object:
+0 = Unknown
+1 = Healthy
+2 = Degraded
+3 = Failed
+4 = Disabled
+5 = Not reporting
+6 = Starting
+7 = Stopping
+8 = Stopped
+9 = Blocked by policy
+10..127 = Reserved for future GEISA-defined monitoring states
+128..255 = Reserved for vendor-specific or operator-specific monitoring states
+]]></Description>
+      </Item>
+      <Item ID="61">
+        <Name>Monitoring Reason Code</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Unsigned Integer</Type>
+        <RangeEnumeration>0..255</RangeEnumeration>
+        <Units/>
+        <Description><![CDATA[
+Primary cause or contributing condition associated with the current Host Monitoring State:
+0 = Unspecified
+1 = None
+2 = Other
+3 = Component degraded
+4 = Component failed
+5 = Administratively disabled
+6 = Blocked by policy
+7 = Not reporting
+8 = Dependency unavailable
+9 = Temporarily unavailable
+10 = Startup in progress
+11 = Shutdown in progress
+12 = Restart limit exceeded
+13 = Monitoring data stale
+14 = Upstream communication unavailable
+15 = Registration failed
+16 = Registration expired
+17 = Queue backlog
+18 = Queue capacity exhausted
+19 = Resource pressure
+20 = Insufficient memory
+21 = Insufficient storage
+22 = Rate limited
+23 = Authorization denied
+24 = Security restriction
+25 = Internal error
+26 = Timeout
+27..127 = Reserved for future GEISA-defined monitoring reason codes
+128..255 = Reserved for vendor-specific or operator-specific monitoring reason codes
+
+None applies when no abnormal reason applies. Unspecified means no standardized reason was supplied. Other requires Reason Detail. Implementations SHOULD select the most specific applicable cause. Implementations SHOULD NOT use a reason code that merely repeats Host Monitoring State when a more specific cause is known.
+]]></Description>
+      </Item>
+      <Item ID="62">
+        <Name>Reason Detail</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Optional</Mandatory>
+        <Type>String</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Short human-readable diagnostic detail associated with Monitoring Reason Code. Consumers SHALL NOT parse or depend on it for interoperable behavior. This Resource SHALL be present when Monitoring Reason Code is Other and MAY be present for any other reason when useful. It is not a log field and does not replace a defined reason code.
+]]></Description>
+      </Item>
+      <Item ID="63">
+        <Name>Last Monitoring State Transition Time</Name>
+        <Operations>R</Operations>
+        <MultipleInstances>Single</MultipleInstances>
+        <Mandatory>Mandatory</Mandatory>
+        <Type>Time</Type>
+        <RangeEnumeration/>
+        <Units/>
+        <Description><![CDATA[
+Time at which the Host Monitoring State most recently changed. When the Object is initialized, this Resource SHALL represent the time at which the initial Host Monitoring State was established. The value is encoded as LwM2M Time using Unix epoch seconds. The encoded value does not carry timezone metadata. Platform-local interpretation uses /3/0/15 Timezone, with fallback to /3/0/14 UTC Offset when Timezone is unavailable, unless a more specific ADM or EMS policy applies. This Resource SHALL always report a valid time at which the current state was established.
+]]></Description>
+      </Item>
+    </Resources>
+    <Description2><![CDATA[
+
+]]></Description2>
+  </Object>
+</LWM2M>
