@@ -806,7 +806,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>27</ObjectID>
         <URN>urn:oma:lwm2m:oma:27</URN>
         <Name>5GNR Connectivity</Name>
@@ -819,7 +820,8 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item><Item>
+    </Item>
+    <Item>
         <ObjectID>28</ObjectID>
         <URN>urn:oma:lwm2m:oma:28</URN>
         <Name>Device RF Capabilities</Name>
@@ -832,7 +834,22 @@ Instances of this Object are linked from Instances of Object 0 using the OSCORE 
         <DDFLink>1</DDFLink>
         <TS>http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Core-V1_2-20201110-A.pdf</TS>
         <TSLink>1</TSLink>
-    </Item>	
+    </Item>
+    <Item>
+	<ObjectID>29</ObjectID>
+        <URN>urn:oma:lwm2m:oma:29</URN>
+        <Name>EDHOC</Name>
+        <Description>This LwM2M Object provides the keying material and configuration to derive a security context using Ephemeral Diffie-Hellman Over COSE (EDHOC) defined in RFC 9528. These LwM2M Object Resources MUST only be
+changed by a LwM2M Bootstrap-Server or Bootstrap from Smartcard and MUST NOT be accessible by any other LwM2M Server.</Description>
+        <Owner>OMA</Owner>
+        <Source>0</Source>
+        <Ver>1.0</Ver>
+        <DDF>29.xml</DDF>
+        <Vorto></Vorto>
+        <DDFLink>1</DDFLink>
+        <TS></TS>
+        <TSLink>0</TSLink>
+    </Item>
     <Item>
         <ObjectID>500</ObjectID>
         <URN>urn:oma:lwm2m:oma:500</URN>
